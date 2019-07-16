@@ -15,13 +15,8 @@ before_script:
 script:
 - yarn export
 - touch out/.nojekyll
-# for heroku deploy static website
-- touch out/index.php
-- echo '<?php include_once("index.html"); ?>' > out/index.php
-- touch out/composer.json
-- echo '{}' > out/composer.json
 env:
-- DEPLOY_ENV=heroku PROJ_NAME=0x1Certificate-web
+- DEPLOY_ENV=github PROJ_NAME=0x1cert.turingchain.tech
 deploy:
   provider: pages
   skip_cleanup: true
