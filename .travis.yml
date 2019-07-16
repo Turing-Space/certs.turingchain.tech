@@ -1,0 +1,32 @@
+sudo: false
+language: node_js
+node_js:
+- '8.9.0'
+cache: yarn
+branches:
+  only:
+  - master
+notifications:
+  email: false
+  slack:
+    on_success: always
+before_script:
+- yarn clean
+script:
+- yarn export
+- touch out/.nojekyll
+# for heroku deploy static website
+- touch out/index.php
+- echo '<?php include_once("index.html"); ?>' > out/index.php
+- touch out/composer.json
+- echo '{}' > out/composer.json
+env:
+- DEPLOY_ENV=heroku PROJ_NAME=0x1Certificate-web
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  local_dir: ./out
+  on:
+    branch: master

@@ -1,0 +1,8 @@
+{
+  "extends": ["@visuallylab/tslint-config-frontend", "tslint-react-hooks"],
+  "rules": {
+    "no-console": [true, "log"],
+    "react-hooks-nesting": "error",
+    "jsx-boolean-value": ["never"]
+  }
+}
