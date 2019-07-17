@@ -43,7 +43,8 @@
     "lint-staged": "^8.2.1",
     "tslint": "^5.18.0",
     "tslint-react-hooks": "^2.1.1",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.2",
+    "typescript-tslint-plugin": "^0.5.4"
   },
   "husky": {
     "hooks": {

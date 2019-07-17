@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export default styled.p`
-  letter-spacing: .5px;
-  line-height: 2em;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
 
   &.cn {
     font-family: ${p => p.theme.fontFamily.NotoSansTC};

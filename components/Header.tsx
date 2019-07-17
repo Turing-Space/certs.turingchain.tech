@@ -83,12 +83,11 @@ const Header: SFC = () => {
         </LogoWrapper>
       </Link>
       <SectionWrapper>
-        <p onClick={() => scrollToID('section-service')}>Service</p>
-        <p onClick={() => scrollToID('section-team')}>Team</p>
-        <p onClick={() => scrollToID('section-collaborations')}>
-          Collaborations
-        </p>
-        <StyledButton onClick={() => alert('尚未開啟')}>Start</StyledButton>
+        <p onClick={() => scrollToID('section-service')}>區塊鏈成就履歷</p>
+        <p onClick={() => scrollToID('section-team')}>技術白皮書</p>
+        <p onClick={() => scrollToID('section-collaborations')}>合作機構</p>
+        <p onClick={() => scrollToID('section-collaborations')}>已上鏈案例</p>
+        <StyledButton onClick={() => alert('尚未開啟')}>體驗 →</StyledButton>
       </SectionWrapper>
     </Wrapper>
   );

@@ -1,6 +1,5 @@
 import Head from 'next/head';
 
-import Section from '@/components/Section';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import GlobalStyles from '@/themes/GlobalStyles';

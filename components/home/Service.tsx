@@ -73,9 +73,8 @@ const IconDescription = styled.p`
 const Service: FC<{ id: string }> = ({ id }) => {
   return (
     <Section justifyContent="flex-start" id={id} fullscreen>
-      <Title>SERVICE</Title>
+      <Title>區塊鏈成就履歷</Title>
       <StyledDescription className="cn">
-        0x1 Certificate
         透過區塊鏈不可篡改、無國界的優勢，重新定義傳統教育，創造穩定永續的學習旅程追蹤，強化官方證書的最高信任與真實價值。
       </StyledDescription>
       <IconGroupWrapper>

@@ -17,19 +17,19 @@ const theme: Theme = {
   },
 
   fontFamily: {
-    SFDisplay: '-apple-system, BlinkMacSystemFont, \'SF Display\', sans-serif',
+    SFDisplay: "-apple-system, BlinkMacSystemFont, 'SF Display', sans-serif",
     SFText: 'SF Text',
-    NotoSansTC: '\'Noto Sans TC\', sans-serif',
+    NotoSansTC: "'Noto Sans TC', sans-serif",
   },
 
   fontSize: {
     h1: '3.8em',
     h2: '2.5em',
-    h3: '1.5em',
+    h3: '2em',
     bigger: '1.25em',
-    smaller: '.875em', 
+    smaller: '.875em',
     small: '.75em',
-  }
+  },
 };
 
 export default theme;
