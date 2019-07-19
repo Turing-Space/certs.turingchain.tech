@@ -16,8 +16,10 @@ before_script:
 script:
 - yarn export
 - touch out/.nojekyll
+- touch out/CNAME
+- echo "certs.turingchain.tech" > out/CNAME
 env:
-- DEPLOY_ENV=github PROJ_NAME=0x1cert.turingchain.tech
+- DEPLOY_ENV=production PROJ_NAME=certs.turingchain.tech
 deploy:
   provider: pages
   skip_cleanup: true
