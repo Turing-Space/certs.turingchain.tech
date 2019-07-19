@@ -42,6 +42,7 @@ const MoreInfoWrapper = styled(Wrapper)<{ open: boolean }>`
 `;
 
 const Name = styled.div`
+  will-change: transform;
   position: absolute;
   display: flex;
   align-items: center;
@@ -54,11 +55,12 @@ const Name = styled.div`
   background: rgba(0, 0, 0, 0.8);
   letter-spacing: 0.64px;
   font-size: ${p => p.theme.fontSize.smaller};
-  transform: translateY(100%);
+  transform: translate3d(0, 100%, 0);
   transition: transform 0.2s ease-in;
 `;
 
 const Certificate = styled.div<{ src: string }>`
+  will-change: transform;
   cursor: pointer;
   position: relative;
   width: 30%;
@@ -66,11 +68,12 @@ const Certificate = styled.div<{ src: string }>`
   background: url(${p => p.src}) center top no-repeat/cover;
   margin-bottom: 3%;
   overflow: hidden;
+  transform: scale(1);
   transition: transform 0.2s ease-in-out;
 
   &:hover {
     ${Name} {
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
     }
     transform: scale(1.1);
   }
@@ -207,6 +210,9 @@ const Examples: FC<{ id: string }> = ({ id }) => {
             setPhotoIdx(
               (photoIdx + certificates.length + 1) % certificates.length,
             )
+          }
+          onImageLoadError={
+            ((a: any, b: any, c: any) => console.error(a, b, c)) as any
           }
         />
       )}

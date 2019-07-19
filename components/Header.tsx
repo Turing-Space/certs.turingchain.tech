@@ -44,7 +44,7 @@ const LogoWrapper = styled.div`
 `;
 
 const Logo = styled.img`
-  height: 50%;
+  height: 67%;
   margin-right: 1em;
 `;
 
