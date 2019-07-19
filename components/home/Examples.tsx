@@ -1,10 +1,11 @@
 import { FC, useState } from 'react';
 import styled from 'styled-components';
+import ScrollAnimation from 'react-animate-on-scroll';
+import Lightbox from 'react-image-lightbox';
 import Section from '@/components/Section';
 import H2 from '@/components/H2';
 import Button from '@/components/Button';
 import { getRelativePath } from '@/utils';
-import ScrollAnimation from 'react-animate-on-scroll';
 
 type TData = {
   name: string;
@@ -141,6 +142,8 @@ const certificates: TData[] = [
 
 const Examples: FC<{ id: string }> = ({ id }) => {
   const [open, setOpen] = useState<boolean>(false);
+  const [openLightbox, setOpenLightbox] = useState<boolean>(false);
+  const [photoIdx, setPhotoIdx] = useState<number>(0);
   return (
     <Section id={id}>
       <ScrollAnimation
@@ -151,16 +154,30 @@ const Examples: FC<{ id: string }> = ({ id }) => {
         <Title>案例展示</Title>
       </ScrollAnimation>
       <AnimatedWrapper animateIn="fadeIn" animateOnce offset={0}>
-        {certificates.slice(0, 6).map(d => (
-          <Certificate key={d.src} src={d.src}>
+        {certificates.slice(0, 6).map((d, idx) => (
+          <Certificate
+            key={d.src}
+            src={d.src}
+            onClick={() => {
+              setOpenLightbox(true);
+              setPhotoIdx(idx);
+            }}
+          >
             <Name>{d.name}</Name>
           </Certificate>
         ))}
         {!open && <Shadow />}
       </AnimatedWrapper>
       <MoreInfoWrapper open={open}>
-        {certificates.slice(6).map(d => (
-          <Certificate key={d.src} src={d.src}>
+        {certificates.slice(6).map((d, idx) => (
+          <Certificate
+            key={d.src}
+            src={d.src}
+            onClick={() => {
+              setOpenLightbox(true);
+              setPhotoIdx(idx + 6);
+            }}
+          >
             <Name>{d.name}</Name>
           </Certificate>
         ))}
@@ -168,6 +185,31 @@ const Examples: FC<{ id: string }> = ({ id }) => {
       <StyledButton onClick={() => setOpen(p => !p)}>
         {open ? '隱藏' : '更多'}案例
       </StyledButton>
+
+      {openLightbox && (
+        <Lightbox
+          imagePadding={50}
+          imageTitle={certificates[photoIdx].name}
+          mainSrc={certificates[photoIdx].src}
+          nextSrc={certificates[(photoIdx + 1) % certificates.length].src}
+          prevSrc={
+            certificates[
+              (photoIdx + certificates.length - 1) % certificates.length
+            ].src
+          }
+          onCloseRequest={() => setOpenLightbox(false)}
+          onMovePrevRequest={() =>
+            setPhotoIdx(
+              (photoIdx + certificates.length - 1) % certificates.length,
+            )
+          }
+          onMoveNextRequest={() =>
+            setPhotoIdx(
+              (photoIdx + certificates.length + 1) % certificates.length,
+            )
+          }
+        />
+      )}
     </Section>
   );
 };

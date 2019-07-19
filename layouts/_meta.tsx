@@ -28,5 +28,10 @@ export default () => (
       type="text/css"
       href={getRelativePath('/static/css/animate.min.css')}
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href={getRelativePath('/static/css/react-image-light-box.css')}
+    />
   </>
 );
