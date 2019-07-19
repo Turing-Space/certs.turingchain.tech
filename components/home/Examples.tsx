@@ -2,9 +2,9 @@ import { FC, useState } from 'react';
 import styled from 'styled-components';
 import Section from '@/components/Section';
 import H2 from '@/components/H2';
-import { media } from '@/utils/theme';
 import Button from '@/components/Button';
 import { getRelativePath } from '@/utils';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 type TData = {
   name: string;
@@ -16,6 +16,15 @@ const Title = styled(H2)`
 `;
 
 const Wrapper = styled.div`
+  position: relative;
+  display: flex;
+  margin-top: 3%;
+  width: 60%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`;
+
+const AnimatedWrapper = styled(ScrollAnimation)`
   position: relative;
   display: flex;
   margin-top: 3%;
@@ -134,18 +143,24 @@ const Examples: FC<{ id: string }> = ({ id }) => {
   const [open, setOpen] = useState<boolean>(false);
   return (
     <Section id={id}>
-      <Title>案例展示</Title>
-      <Wrapper>
+      <ScrollAnimation
+        animateIn="fadeInUp"
+        animateOnce
+        style={{ width: '100%', textAlign: 'center' }}
+      >
+        <Title>案例展示</Title>
+      </ScrollAnimation>
+      <AnimatedWrapper animateIn="fadeIn" animateOnce offset={0}>
         {certificates.slice(0, 6).map(d => (
-          <Certificate src={d.src}>
+          <Certificate key={d.src} src={d.src}>
             <Name>{d.name}</Name>
           </Certificate>
         ))}
         {!open && <Shadow />}
-      </Wrapper>
+      </AnimatedWrapper>
       <MoreInfoWrapper open={open}>
         {certificates.slice(6).map(d => (
-          <Certificate src={d.src}>
+          <Certificate key={d.src} src={d.src}>
             <Name>{d.name}</Name>
           </Certificate>
         ))}

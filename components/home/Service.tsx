@@ -8,6 +8,11 @@ import Description from '@/components/Description';
 import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
 
+const AnimatedWrapper = styled(ScrollAnimation)`
+  width: 100%;
+  text-align: center;
+`;
+
 const Title = styled(H2)`
   margin-top: 18vh;
 
@@ -21,6 +26,7 @@ const StyledDescription = styled(Description)`
   text-align: center;
   letter-spacing: 0.5px;
   line-height: 2em;
+  margin: 0 auto;
 `;
 
 const IconGroupWrapper = styled.div`
@@ -73,10 +79,12 @@ const IconDescription = styled.p`
 const Service: FC<{ id: string }> = ({ id }) => {
   return (
     <Section justifyContent="flex-start" id={id} fullscreen>
-      <Title>區塊鏈成就履歷</Title>
-      <StyledDescription className="cn">
-        透過區塊鏈不可篡改、無國界的優勢，重新定義傳統教育，創造穩定永續的學習旅程追蹤，強化官方證書的最高信任與真實價值。
-      </StyledDescription>
+      <AnimatedWrapper animateIn="fadeInUp" animateOnce>
+        <Title>區塊鏈成就履歷</Title>
+        <StyledDescription className="cn">
+          透過區塊鏈不可篡改、無國界的優勢，重新定義傳統教育，創造穩定永續的學習旅程追蹤，強化官方證書的最高信任與真實價值。
+        </StyledDescription>
+      </AnimatedWrapper>
       <IconGroupWrapper>
         <IconWrapper animateIn="zoomIn" duration={0.5} animateOnce>
           <Icon>

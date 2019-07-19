@@ -1,5 +1,6 @@
 import { FC, useState } from 'react';
 import styled from 'styled-components';
+import ScrollAnimation from 'react-animate-on-scroll';
 import Section from '@/components/Section';
 import H2 from '@/components/H2';
 import { getRelativePath } from '@/utils';
@@ -16,6 +17,17 @@ const Title = styled(H2)`
 `;
 
 const Wrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 720px;
+  margin: 5% auto 0;
+  ${media('largeDesktop')} {
+    width: 840px;
+  }
+`;
+
+const AnimatedWrapper = styled(ScrollAnimation)`
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -112,17 +124,23 @@ const Collaborations: FC<{ id: string }> = ({ id }) => {
   const [open, setOpen] = useState<boolean>(false);
   return (
     <Section id={id} justifyContent="flex-start" fullscreen>
-      <Title>合作機構</Title>
-      <Wrapper>
+      <ScrollAnimation
+        animateIn="fadeInUp"
+        animateOnce
+        style={{ width: '100%', textAlign: 'center' }}
+      >
+        <Title>合作機構</Title>
+      </ScrollAnimation>
+      <AnimatedWrapper animateIn="fadeIn" animateOnce delay={300}>
         {logos.slice(0, 12).map(logo => (
-          <LogoWrapper>
+          <LogoWrapper key={logo.src}>
             <Logo key={logo.name} src={logo.src} />
           </LogoWrapper>
         ))}
-      </Wrapper>
+      </AnimatedWrapper>
       <MoreInfoWrapper open={open}>
         {logos.slice(12).map(logo => (
-          <LogoWrapper>
+          <LogoWrapper key={logo.src}>
             <Logo key={logo.name} src={logo.src} />
           </LogoWrapper>
         ))}

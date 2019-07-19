@@ -1,5 +1,6 @@
 import { FC, useState } from 'react';
 import styled from 'styled-components';
+import ScrollAnimation from 'react-animate-on-scroll';
 import Section from '@/components/Section';
 import H2 from '@/components/H2';
 import H3 from '@/components/H3';
@@ -17,6 +18,12 @@ const Title = styled(H2)`
 `;
 
 const Wrapper = styled.div`
+  position: relative;
+  margin-top: 3%;
+  width: 40%;
+`;
+
+const AnimatedWrapper = styled(ScrollAnimation)`
   position: relative;
   margin-top: 3%;
   width: 40%;
@@ -85,8 +92,14 @@ const Techonology: FC<{ id: string }> = ({ id }) => {
   const [open, setOpen] = useState<boolean>(false);
   return (
     <Section id={id}>
-      <Title>技術白皮書</Title>
-      <Wrapper>
+      <ScrollAnimation
+        animateOnce
+        animateIn="fadeInUp"
+        style={{ width: '100%', textAlign: 'center' }}
+      >
+        <Title>技術白皮書</Title>
+      </ScrollAnimation>
+      <AnimatedWrapper animateOnce animateIn="fadeInUp" delay={300}>
         <SubTitle className="cn">基礎階段</SubTitle>
         <Divider />
         <Content className="cn">
@@ -101,7 +114,7 @@ const Techonology: FC<{ id: string }> = ({ id }) => {
             '/static/elements/logo-ipfs@2x.png',
           )} 2x, ${getRelativePath('/static/elements/logo-ipfs@3x.png')} 3x`}
         />
-      </Wrapper>
+      </AnimatedWrapper>
       {
         <MoreInfoWrapper open={open}>
           <InfoWrapper>

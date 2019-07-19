@@ -44,7 +44,7 @@ const LogoWrapper = styled.div`
 `;
 
 const Logo = styled.img`
-  height: 67.5%;
+  height: 50%;
   margin-right: 1em;
 `;
 
@@ -74,12 +74,14 @@ const Header: SFC = () => {
       <Link href="/">
         <LogoWrapper>
           <Logo
-            src={getRelativePath('/static/logo/logo-tc-light.png')}
+            src={getRelativePath('/static/logo/logo-0-x-1-light.png')}
             srcSet={`${getRelativePath(
-              '/static/logo/logo-tc-light@2x.png',
-            )} 2x, ${getRelativePath('/static/logo/logo-tc-light@3x.png')} 3x`}
+              '/static/logo/logo-0-x-1-light@2x.png',
+            )} 2x, ${getRelativePath(
+              '/static/logo/logo-0-x-1-light@3x.png',
+            )} 3x`}
           />
-          <p>TURING CHAIN</p>
+          <p>0x1Certificate</p>
         </LogoWrapper>
       </Link>
       <SectionWrapper>
