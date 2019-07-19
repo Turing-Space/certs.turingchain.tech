@@ -3,9 +3,8 @@ import Home from '@/components/home/Home';
 import Service from '@/components/home/Service';
 import Demo from '@/components/home/Demo';
 import Technology from '@/components/home/Technology';
-import AboutUs from '@/components/home/AboutUs';
-import Team from '@/components/home/Team';
 import Collaborations from '@/components/home/Collaborations';
+import Examples from '@/components/home/Examples';
 
 import { SITE_TITLE } from '@/constants';
 
@@ -16,9 +15,10 @@ const Index = () => {
       <Service id="section-service" />
       <Technology id="section-technology" />
       <Demo id="section-demo" />
-      <AboutUs id="section-about" />
-      <Team id="section-team" />
       <Collaborations id="section-collaborations" />
+      <Examples id="section-examples" />
+      {/* <AboutUs id="section-about" />
+      <Team id="section-team" /> */}
     </HomeLayout>
   );
 };

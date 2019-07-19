@@ -5,7 +5,7 @@ const theme: Theme = {
     primary: '#a80100',
     grey: '#e0e0e0',
     white: '#ffffff',
-    backgroundBlack: '#000',
+    backgroundBlack: 'rgb(22, 22, 22)',
   },
 
   borderRadius: '6px',

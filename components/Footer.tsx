@@ -16,7 +16,7 @@ const Bg = styled.div`
   height: 100%;
   bottom: -10%;
   width: 100%;
-  opacity: .9;
+  opacity: 0.9;
 `;
 
 const InfoWrapper = styled.div`
@@ -42,7 +42,7 @@ const Divider = styled.div`
   width: 100%;
   height: 1px;
   background-color: #d8d8d8;
-  opacity: .4;
+  opacity: 0.4;
   margin: 9% 0 5%;
 `;
 
@@ -51,10 +51,10 @@ const CopyRight = styled.p`
 `;
 
 const Footer: FC = () => (
-  <Wrapper>
+  <Wrapper id="section-contact">
     <Bg />
     <InfoWrapper>
-      <Title>CONTACT</Title>
+      <Title>合作洽談</Title>
       <IconWrapper>
         <img
           src={getRelativePath('/static/icon/icon-mail.png')}
@@ -62,12 +62,18 @@ const Footer: FC = () => (
             '/static/icon/icon-mail@2x.png',
           )} 2x, ${getRelativePath('/static/icon/icon-mail@3x.png')} 3x`}
         />
-        <img src={getRelativePath('/static/icon/icon-fb.png')} srcSet={`${getRelativePath(
+        <img
+          src={getRelativePath('/static/icon/icon-fb.png')}
+          srcSet={`${getRelativePath(
             '/static/icon/icon-fb@2x.png',
-          )} 2x, ${getRelativePath('/static/icon/icon-fb@3x.png')} 3x`}/>
-        <img src={getRelativePath('/static/icon/icon-linkedin.png')} srcSet={`${getRelativePath(
+          )} 2x, ${getRelativePath('/static/icon/icon-fb@3x.png')} 3x`}
+        />
+        <img
+          src={getRelativePath('/static/icon/icon-linkedin.png')}
+          srcSet={`${getRelativePath(
             '/static/icon/icon-linkedin@2x.png',
-          )} 2x, ${getRelativePath('/static/icon/icon-linkedin@3x.png')} 3x`}/>
+          )} 2x, ${getRelativePath('/static/icon/icon-linkedin@3x.png')} 3x`}
+        />
       </IconWrapper>
       <Divider />
       <CopyRight>© Turing Chain Limited. All rights reserved</CopyRight>

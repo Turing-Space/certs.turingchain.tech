@@ -81,7 +81,7 @@ const Demo: FC<{ id: string }> = ({ id }) => {
       </Bg>
       <Wrapper>
         <div style={{ width: '40%' }}>
-          <InfoTitle>START NOW</InfoTitle>
+          <InfoTitle>開啟新成就世代！</InfoTitle>
           <InfoDescription className="cn">
             一機裝載所有金融、教育、醫療證書，完善區塊鏈驗證體驗，防偽真實，高速零學習曲線。
           </InfoDescription>

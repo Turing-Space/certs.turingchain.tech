@@ -11,7 +11,7 @@ const Title = styled(H2)`
   margin-top: 18vh;
 
   ${media('largeDesktop')} {
-    margin-top: 22vh;
+    margin-top: 20vh;
   }
 `;
 
@@ -67,7 +67,7 @@ const QuestionTitle = styled.p`
 `;
 
 const StyledButton = styled(Button)`
-  margin: 5% 0;
+  margin: 5% 0 8%;
 `;
 
 const Techonology: FC<{ id: string }> = ({ id }) => {

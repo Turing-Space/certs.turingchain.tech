@@ -11,7 +11,7 @@ const Title = styled(H2)`
   margin-top: 18vh;
 
   ${media('largeDesktop')} {
-    margin-top: 22vh;
+    margin-top: 20vh;
   }
 `;
 
