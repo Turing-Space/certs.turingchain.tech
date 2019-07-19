@@ -33,8 +33,35 @@ const IconWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   width: 150px;
-  > img {
+  img {
     width: 2.5em;
+    transition: opacity ease-in 0.1s;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+`;
+
+const CompanyWrapper = styled.div`
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin: 3% 0;
+  transition: opacity ease-in 0.1s;
+
+  > img {
+    width: 1.75em;
+    margin-right: 1em;
+  }
+
+  > p {
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+  &:hover {
+    opacity: 0.75;
   }
 `;
 
@@ -43,7 +70,7 @@ const Divider = styled.div`
   height: 1px;
   background-color: #d8d8d8;
   opacity: 0.4;
-  margin: 9% 0 5%;
+  margin: 5% 0;
 `;
 
 const CopyRight = styled.p`
@@ -56,25 +83,43 @@ const Footer: FC = () => (
     <InfoWrapper>
       <Title>合作洽談</Title>
       <IconWrapper>
-        <img
-          src={getRelativePath('/static/icon/icon-mail.png')}
-          srcSet={`${getRelativePath(
-            '/static/icon/icon-mail@2x.png',
-          )} 2x, ${getRelativePath('/static/icon/icon-mail@3x.png')} 3x`}
-        />
-        <img
-          src={getRelativePath('/static/icon/icon-fb.png')}
-          srcSet={`${getRelativePath(
-            '/static/icon/icon-fb@2x.png',
-          )} 2x, ${getRelativePath('/static/icon/icon-fb@3x.png')} 3x`}
-        />
-        <img
-          src={getRelativePath('/static/icon/icon-linkedin.png')}
-          srcSet={`${getRelativePath(
-            '/static/icon/icon-linkedin@2x.png',
-          )} 2x, ${getRelativePath('/static/icon/icon-linkedin@3x.png')} 3x`}
-        />
+        <a href="mailto:0x1cert@gmail.com?subject=[合作邀約]">
+          <img
+            src={getRelativePath('/static/icon/icon-mail.png')}
+            srcSet={`${getRelativePath(
+              '/static/icon/icon-mail@2x.png',
+            )} 2x, ${getRelativePath('/static/icon/icon-mail@3x.png')} 3x`}
+          />
+        </a>
+        <a href="https://www.facebook.com/0x1certificate/" target="_blank">
+          <img
+            src={getRelativePath('/static/icon/icon-fb.png')}
+            srcSet={`${getRelativePath(
+              '/static/icon/icon-fb@2x.png',
+            )} 2x, ${getRelativePath('/static/icon/icon-fb@3x.png')} 3x`}
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/company/turing-chain-limited/"
+          target="_blank"
+        >
+          <img
+            src={getRelativePath('/static/icon/icon-linkedin.png')}
+            srcSet={`${getRelativePath(
+              '/static/icon/icon-linkedin@2x.png',
+            )} 2x, ${getRelativePath('/static/icon/icon-linkedin@3x.png')} 3x`}
+          />
+        </a>
       </IconWrapper>
+      <CompanyWrapper onClick={() => window.open('https://turingchain.tech/')}>
+        <img
+          src={getRelativePath('/static/logo/logo-tc-light.png')}
+          srcSet={`${getRelativePath(
+            '/static/logo/logo-tc-light@2x.png',
+          )} 2x, ${getRelativePath('/static/logo/logo-tc-light@3x.png')} 3x`}
+        />
+        <p>TURING CHAIN LIMITED</p>
+      </CompanyWrapper>
       <Divider />
       <CopyRight>© Turing Chain Limited. All rights reserved</CopyRight>
     </InfoWrapper>

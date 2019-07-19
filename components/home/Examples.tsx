@@ -13,10 +13,6 @@ type TData = {
 
 const Title = styled(H2)`
   margin-top: 14vh;
-
-  ${media('largeDesktop')} {
-    margin-top: 18vh;
-  }
 `;
 
 const Wrapper = styled.div`

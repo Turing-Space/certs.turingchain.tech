@@ -6,6 +6,7 @@ import H3 from '@/components/H3';
 import { media } from '@/utils/theme';
 import Description from '@/components/Description';
 import Button from '@/components/Button';
+import { getRelativePath } from '@/utils';
 
 const Title = styled(H2)`
   margin-top: 18vh;
@@ -16,6 +17,7 @@ const Title = styled(H2)`
 `;
 
 const Wrapper = styled.div`
+  position: relative;
   margin-top: 3%;
   width: 40%;
 `;
@@ -27,6 +29,7 @@ const MoreInfoWrapper = styled(Wrapper)<{ open: boolean }>`
 `;
 
 const InfoWrapper = styled(Wrapper)`
+  margin-top: 9%;
   width: 100%;
 `;
 
@@ -70,6 +73,14 @@ const StyledButton = styled(Button)`
   margin: 5% 0 8%;
 `;
 
+const IPFSIcon = styled.img`
+  position: absolute;
+  width: 2.5em;
+  right: 0;
+  bottom: 0;
+  transform: translateY(50%);
+`;
+
 const Techonology: FC<{ id: string }> = ({ id }) => {
   const [open, setOpen] = useState<boolean>(false);
   return (
@@ -84,6 +95,12 @@ const Techonology: FC<{ id: string }> = ({ id }) => {
           (IPFS) 做大型數位證書圖像的保存。
         </Content>
         <Divider />
+        <IPFSIcon
+          src={getRelativePath('/static/elements/logo-ipfs.png')}
+          srcSet={`${getRelativePath(
+            '/static/elements/logo-ipfs@2x.png',
+          )} 2x, ${getRelativePath('/static/elements/logo-ipfs@3x.png')} 3x`}
+        />
       </Wrapper>
       {
         <MoreInfoWrapper open={open}>

@@ -111,7 +111,7 @@ const logos = [
 const Collaborations: FC<{ id: string }> = ({ id }) => {
   const [open, setOpen] = useState<boolean>(false);
   return (
-    <Section id={id} justifyContent="flex-start">
+    <Section id={id} justifyContent="flex-start" fullscreen>
       <Title>合作機構</Title>
       <Wrapper>
         {logos.slice(0, 12).map(logo => (
