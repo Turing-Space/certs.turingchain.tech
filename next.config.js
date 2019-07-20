@@ -38,7 +38,10 @@ module.exports = withBundleAnalyzer(
     },
     webpack: (config, { isServer, buildId, dev }) => {
       config.plugins = config.plugins || [];
-      config.resolve.extensions = config.resolve.extensions.concat(['.less']);
+      config.resolve.extensions = config.resolve.extensions.concat([
+        '.mjs',
+        '.less',
+      ]);
 
       config.plugins = [
         ...config.plugins,

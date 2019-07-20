@@ -60,6 +60,7 @@ export default createGlobalStyle`
 
   html {
     font-size: 14px;
+    font-weight: 300;
 
     /**
      * use apple system for default
@@ -84,13 +85,15 @@ export default createGlobalStyle`
 
   p {
     margin: 0;
-    font-weight: 300;
   }
 
-  button {
+  input, button {
     outline: none;
     border: none;
-    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   .cn {

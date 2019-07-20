@@ -40,7 +40,7 @@ const NameWrapper = styled.div`
     font-weight: bold;
     letter-spacing: 1px;
     font-size: ${p => p.theme.fontSize.bigger};
-    margin-bottom: 5px;
+    margin-bottom: 2px;
   }
 
   .join-date {
@@ -64,7 +64,7 @@ const IconWrapper = styled.div`
 const AnimatedNumber = styled(animated.p)`
   color: ${p => p.theme.colors.primary};
   margin-top: 3px;
-  font-size: 2.5em;
+  font-size: 3em;
   font-weight: bold;
   font-family: ${p => p.theme.fontFamily.SFText};
 `;
