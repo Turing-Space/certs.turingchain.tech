@@ -1,5 +1,5 @@
 {
-  "name": "0x1cert.turingchain.tech",
+  "name": "certs.turingchain.tech",
   "version": "0.0.1",
   "scripts": {
     "dev": "node server.js",
