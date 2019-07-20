@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import Link from 'next/link';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
 import H2 from '@/components/H2';
@@ -99,13 +100,11 @@ const Demo: FC<{ id: string }> = ({ id }) => {
             delay={500}
             offset={0}
           >
-            <StyledButton
-              shadow
-              onClick={() => alert('尚未開啟')}
-              className="cn"
-            >
-              體驗網頁版 →
-            </StyledButton>
+            <Link href="/demo">
+              <StyledButton shadow className="cn">
+                體驗網頁版 →
+              </StyledButton>
+            </Link>
             <IconWrapper>
               <img
                 onClick={() => alert('敬請期待 ^_^')}

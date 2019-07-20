@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 type TSectionProps = {
+  width?: string;
   row?: boolean;
   alignItems?: 'center' | 'flex-start' | 'flex-end';
   justifyContent?: 'center' | 'flex-start' | 'flex-end';
@@ -9,7 +10,7 @@ type TSectionProps = {
 
 export default styled.section<TSectionProps>`
   position: relative;
-  width: 100%;
+  width: ${p => p.width || '100%'};
   display: flex;
   flex-direction: ${({ row = false }) => (row ? 'row' : 'column')};
   justify-content: ${p => p.justifyContent || 'center'};

@@ -2,8 +2,9 @@ import { SFC } from 'react';
 import Link from 'next/link';
 import styled, { css } from 'styled-components';
 import Button from '@/components/Button';
+import HeaderLogo from '@/components/HeaderLogo';
 import useWindowScroll from '@/hooks/useWindowScroll';
-import { getRelativePath, scrollToID } from '@/utils';
+import { scrollToID } from '@/utils';
 import { media } from '@/utils/theme';
 
 const Wrapper = styled.header<{ hideUp?: boolean }>`
@@ -28,24 +29,9 @@ const Wrapper = styled.header<{ hideUp?: boolean }>`
     `}
 
   ${media('largeDesktop')} {
-    height: 80px;
+    height: 70px;
     padding: 3px 5em;
   }
-`;
-
-const LogoWrapper = styled.div`
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  > p {
-    font-weight: 500;
-  }
-`;
-
-const Logo = styled.img`
-  height: 67%;
-  margin-right: 1em;
 `;
 
 const SectionWrapper = styled.div`
@@ -71,26 +57,16 @@ const Header: SFC = () => {
   const { y, oldY } = useWindowScroll();
   return (
     <Wrapper hideUp={y > oldY}>
-      <Link href="/">
-        <LogoWrapper onClick={() => scrollToID('section-home')}>
-          <Logo
-            src={getRelativePath('/static/logo/logo-0-x-1-light.png')}
-            srcSet={`${getRelativePath(
-              '/static/logo/logo-0-x-1-light@2x.png',
-            )} 2x, ${getRelativePath(
-              '/static/logo/logo-0-x-1-light@3x.png',
-            )} 3x`}
-          />
-          <p>0x1Certificate</p>
-        </LogoWrapper>
-      </Link>
+      <HeaderLogo />
       <SectionWrapper>
         <p onClick={() => scrollToID('section-service')}>區塊鏈成就履歷</p>
         <p onClick={() => scrollToID('section-technology')}>技術白皮書</p>
         <p onClick={() => scrollToID('section-collaborations')}>合作機構</p>
         <p onClick={() => scrollToID('section-examples')}>案例展示</p>
         <p onClick={() => scrollToID('section-contact')}>合作洽談</p>
-        <StyledButton onClick={() => alert('尚未開啟')}>體驗 →</StyledButton>
+        <Link href="/demo">
+          <StyledButton>體驗 →</StyledButton>
+        </Link>
       </SectionWrapper>
     </Wrapper>
   );

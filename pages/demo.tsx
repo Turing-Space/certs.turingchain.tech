@@ -1,13 +1,15 @@
-import HomeLayout from '@/layouts/Home';
-import Collaborations from '@/components/home/Collaborations';
+import DemoLayout from '@/layouts/Demo';
 
 import { SITE_TITLE } from '@/constants';
+import AboutMe from '@/components/product/AboutMe';
+import MyCerts from '@/components/product/MyCerts';
 
 const DemoPage = () => {
   return (
-    <HomeLayout title={'0x1Certificate | ' + SITE_TITLE}>
-      <Collaborations id="section-collaborations"/>
-    </HomeLayout>
+    <DemoLayout title={'Demo | ' + SITE_TITLE}>
+      <AboutMe />
+      <MyCerts />
+    </DemoLayout>
   );
 };
 

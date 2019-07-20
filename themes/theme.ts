@@ -1,11 +1,18 @@
 import { Theme } from '@/typings/styled';
 
 const theme: Theme = {
+  background: '#161616',
+  color: '#ffffff',
+  font: "'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif", // default: Noto
+
   colors: {
     primary: '#a80100',
     grey: '#e0e0e0',
+    darkGrey: '#9e9e9e',
     white: '#ffffff',
-    backgroundBlack: 'rgb(22, 22, 22)',
+    smokyBlack: '#424242',
+    backgroundBlack: '#161616',
+    backgroundWhite: '#fbfbfb',
   },
 
   borderRadius: '6px',
@@ -18,8 +25,8 @@ const theme: Theme = {
 
   fontFamily: {
     SFDisplay: "-apple-system, BlinkMacSystemFont, 'SF Display', sans-serif",
-    SFText: 'SF Text',
-    NotoSansTC: "'Noto Sans TC', sans-serif",
+    SFText: "-apple-system, BlinkMacSystemFont, 'SF Text', sans-serif",
+    NotoSansTC: "'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif",
   },
 
   fontSize: {

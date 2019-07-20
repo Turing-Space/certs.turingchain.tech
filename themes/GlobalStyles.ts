@@ -32,6 +32,14 @@ export default createGlobalStyle`
 
   @font-face {
     font-family: 'Noto Sans TC';
+    font-weight: 300;
+    src: url("https://fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff2") format('woff2'),
+        url("https://fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff") format('woff'),
+        url("https://fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.otf") format('opentype');
+  }
+
+  @font-face {
+    font-family: 'Noto Sans TC';
     font-weight: 400;
     src: url("https://fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff2") format('woff2'),
         url("https://fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff") format('woff'),
@@ -51,22 +59,22 @@ export default createGlobalStyle`
   }
 
   html {
-    /* set em 14px */
     font-size: 14px;
 
     /**
      * use apple system for default
      * @see https://stackoverflow.com/questions/32660748/how-to-use-apples-new-san-francisco-font-on-a-webpage
      */
-    font-family: -apple-system, BlinkMacSystemFont, 'SF Text', sans-serif;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans TC', sans-serif; */
+    font-family: ${p => p.theme.font};
     
     ${media('largeDesktop')} {
       font-size: 16px;
     }
   }
   body {
-    background-color: ${p => p.theme.colors.backgroundBlack};
-    color: ${p => p.theme.colors.white};
+    background-color: ${p => p.theme.background};
+    color: ${p => p.theme.color};
     overflow-x: hidden;
   }
 

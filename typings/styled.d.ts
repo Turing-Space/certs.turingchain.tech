@@ -1,11 +1,18 @@
 import 'styled-components';
 
 export interface Theme {
+  color: string;
+  background: string;
+  font: string;
+
   colors: {
     primary: string;
     white: string;
     grey: string;
+    darkGrey: string;
+    smokyBlack: string;
     backgroundBlack: string;
+    backgroundWhite: string;
   };
 
   borderRadius: string;
