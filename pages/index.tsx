@@ -10,7 +10,7 @@ import { SITE_TITLE } from '@/constants';
 
 const Index = () => {
   return (
-    <HomeLayout title={'0x1Certificate | ' + SITE_TITLE}>
+    <HomeLayout title={'TuringCerts | ' + SITE_TITLE}>
       <Home id="section-home" />
       <Service id="section-service" />
       <Technology id="section-technology" />

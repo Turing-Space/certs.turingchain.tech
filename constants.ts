@@ -3,7 +3,7 @@ import { getRelativePath } from '@/utils';
 /* head meta tag data */
 export const SITE_TITLE = 'Turing Chain';
 export const SITE_DESC =
-  '圖靈鏈是一個屢獲殊榮，敏捷且國際化的團隊，主導開發區塊鏈項目，囊括紐約新聞媒體、台灣電影產業、與俄羅斯及澳門博彩集團。\nTuring Chain is an award-winning, agile, and international team. We developed blockchains for New York news media, Taiwanese movie production, and Russia & Macao-based casinos.';
+  '區塊鏈成就履歷。不可篡改、無國界的優勢，重新定義傳統教育，創造穩定永續的學習旅程追蹤，強化官方證書的最高信任與真實價值。';
 export const SITE_URL = 'www.0x1Certificate.com';
 export const FAVICON_PATH = getRelativePath('/static/favicon.ico');
 export const LARGE_ICON_PATH = getRelativePath('/static/large-icon.png');

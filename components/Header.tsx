@@ -72,7 +72,7 @@ const Header: SFC = () => {
   return (
     <Wrapper hideUp={y > oldY}>
       <Link href="/">
-        <LogoWrapper>
+        <LogoWrapper onClick={() => scrollToID('section-home')}>
           <Logo
             src={getRelativePath('/static/logo/logo-0-x-1-light.png')}
             srcSet={`${getRelativePath(
