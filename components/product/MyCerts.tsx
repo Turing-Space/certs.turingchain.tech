@@ -1,6 +1,5 @@
 import { FC, useMemo, useState, useContext } from 'react';
 import styled from 'styled-components';
-import debounce from 'lodash/debounce';
 import { UserContext } from '@/contexts/user';
 
 import Title from './Title';

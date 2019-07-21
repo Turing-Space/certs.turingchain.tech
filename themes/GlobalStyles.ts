@@ -99,4 +99,34 @@ export default createGlobalStyle`
   .cn {
     font-family: ${p => p.theme.fontFamily.NotoSansTC};
   }
+
+  .en {
+    font-family: ${p => p.theme.fontFamily.SFText};
+  }
+
+  .ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+
+  .ReactModal__Overlay--after-open{
+    opacity: 1;
+  }
+
+  .ReactModal__Overlay--before-close{
+    opacity: 0;
+  }
+
+  .ReactModal__Content {
+    transform: scale3d(.3, .3, .3) translate3d(-50%, -50%, 0);
+    transition: transform 200ms ease-in-out;
+  }
+
+  .ReactModal__Content--after-open{
+    transform: scale3d(1, 1, 1) translate3d(-50%, -50%, 0);
+  }
+
+  .ReactModal__Content--before-close{
+    transform: scale3d(.3, .3, .3) translate3d(-50%, -50%, 0);
+  }
 `;

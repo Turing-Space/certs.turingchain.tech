@@ -67,6 +67,23 @@ module.exports = withBundleAnalyzer(
         return entries;
       };
 
+      config.module.rules.push({
+        test: /\.svg$/,
+        use: ['@svgr/webpack', 'url-loader'],
+      });
+
+      config.module.rules.push({
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
+        ],
+      });
+
       return config;
     },
   }),

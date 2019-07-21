@@ -5,6 +5,7 @@ type TButtonProps = {
 };
 
 const Button = styled.button<TButtonProps>`
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;

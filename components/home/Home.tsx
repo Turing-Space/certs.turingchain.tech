@@ -67,9 +67,9 @@ const Home: FC<{ id: string }> = ({ id }) => {
         style={{ textAlign: 'center' }}
         delay={400}
       >
-        <Title>0x1 CERTIFICATE</Title>
+        <Title>TuringCerts</Title>
         <Text>BlockChain Certificate Ecosystem</Text>
-        <CNText className="cn">區塊鏈證書生態系</CNText>
+        <CNText className="cn"> 圖靈區塊鏈證書生態系</CNText>
       </ScrollAnimation>
       <ScrollInfo />
     </Section>

@@ -29,7 +29,7 @@ const HeaderLogo: FC = () => {
             '/static/logo/logo-tc-light@2x.png',
           )} 2x, ${getRelativePath('/static/logo/logo-tc-light@3x.png')} 3x`}
         />
-        <p>Turing Certs</p>
+        <p className="en">Turing Certs</p>
       </LogoWrapper>
     </Link>
   );
