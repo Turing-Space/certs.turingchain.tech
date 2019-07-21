@@ -219,19 +219,20 @@ const Certs: FC<TProps> = ({ certs }) => {
       ))}
       {openIdx >= 0 && (
         <Modal
+          className="ReactModal__Cert_Content"
           isOpen={openIdx >= 0}
           onRequestClose={() => setOpenIdx(-1)}
           style={{
             overlay: {
               background: 'rgba(0, 0, 0, 0.7)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
             },
             content: {
+              position: 'relative',
               borderRadius: '10px',
               backgroundColor: '#fafafa',
-              left: '50%',
-              top: '50%',
-              bottom: 'unset',
-              right: 'unset',
               padding: '2em',
             },
           }}

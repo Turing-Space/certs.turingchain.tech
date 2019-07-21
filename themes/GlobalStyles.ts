@@ -117,16 +117,19 @@ export default createGlobalStyle`
     opacity: 0;
   }
 
-  .ReactModal__Content {
-    transform: scale3d(.3, .3, .3) translate3d(-50%, -50%, 0);
+  .ReactModal__Cert_Content {
+    transform: scale3d(.3, .3, .3);
     transition: transform 200ms ease-in-out;
+    &:focus {
+      outline: none;
+    }
   }
 
   .ReactModal__Content--after-open{
-    transform: scale3d(1, 1, 1) translate3d(-50%, -50%, 0);
+    transform: scale3d(1, 1, 1);
   }
 
   .ReactModal__Content--before-close{
-    transform: scale3d(.3, .3, .3) translate3d(-50%, -50%, 0);
+    transform: scale3d(.3, .3, .3);
   }
 `;
