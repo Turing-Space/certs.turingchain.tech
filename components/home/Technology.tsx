@@ -97,7 +97,7 @@ const Techonology: FC<{ id: string }> = ({ id }) => {
         animateIn="fadeInUp"
         style={{ width: '100%', textAlign: 'center' }}
       >
-        <Title>技術白皮書</Title>
+        <Title>技術架構</Title>
       </ScrollAnimation>
       <AnimatedWrapper animateOnce animateIn="fadeInUp" delay={300}>
         <SubTitle className="cn">基礎階段</SubTitle>

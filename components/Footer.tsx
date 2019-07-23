@@ -58,6 +58,7 @@ const CompanyWrapper = styled.div`
   > p {
     font-weight: 500;
     letter-spacing: 1px;
+    font-family: ${p => p.theme.fontFamily.SFText};
   }
 
   &:hover {
