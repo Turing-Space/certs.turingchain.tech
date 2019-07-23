@@ -53,7 +53,6 @@ const LogoWrapper = styled.div`
 `;
 
 const Logo = styled.div<{ src: string; size: number }>`
-  cursor: pointer;
   background: url(${p => p.src}) center no-repeat/contain;
   width: ${p => `calc(100px * ${p.size})`};
   height: ${p => `calc(100px * ${p.size})`};
@@ -61,11 +60,6 @@ const Logo = styled.div<{ src: string; size: number }>`
   ${media('largeDesktop')} {
     width: ${p => `calc(120px * ${p.size})`};
     height: ${p => `calc(120px * ${p.size})`};
-  }
-
-  &:hover {
-    background: url(${p => p.src.replace('.svg', '.png')}) center
-      no-repeat/contain;
   }
 `;
 

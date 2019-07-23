@@ -56,7 +56,7 @@ const StyledButton = styled(Button)`
 const Header: SFC = () => {
   const { y, oldY } = useWindowScroll();
   return (
-    <Wrapper hideUp={y > oldY}>
+    <Wrapper hideUp={y > 0 && y > oldY}>
       <HeaderLogo />
       <SectionWrapper>
         <p onClick={() => scrollToID('section-service')}>區塊鏈成就履歷</p>
