@@ -22,7 +22,7 @@ const Title = styled(H2)`
 `;
 
 const StyledDescription = styled(Description)`
-  width: 40%;
+  width: 47%;
   text-align: center;
   letter-spacing: 0.5px;
   line-height: 2em;
@@ -70,6 +70,7 @@ const Icon = styled.div`
 `;
 
 const IconDescription = styled.p`
+  white-space: nowrap;
   font-size: ${p => p.theme.fontSize.bigger};
   font-family: ${p => p.theme.fontFamily.NotoSansTC};
   font-weight: 500;
@@ -82,7 +83,7 @@ const Service: FC<{ id: string }> = ({ id }) => {
       <AnimatedWrapper animateIn="fadeInUp" animateOnce>
         <Title>區塊鏈成就履歷</Title>
         <StyledDescription className="cn">
-          透過區塊鏈不可篡改、無國界的優勢，重新定義傳統教育，創造穩定永續的學習旅程追蹤，強化官方證書的最高信任與真實價值。
+          透過區塊鏈不可篡改、可追溯、成本節省、跨國界的優勢，重新定義傳統教育認證，創造穩定永續的學習旅程追蹤，保證用戶絕對資料掌控權與隱私優先策略，強化官方權威證書的最高信任與真實價值。
         </StyledDescription>
       </AnimatedWrapper>
       <IconGroupWrapper>
@@ -97,7 +98,7 @@ const Service: FC<{ id: string }> = ({ id }) => {
               )} 3x`}
             />
           </Icon>
-          <IconDescription>可追蹤的個人學習歷程</IconDescription>
+          <IconDescription>個人學習成就歷程追溯</IconDescription>
         </IconWrapper>
         <IconWrapper animateIn="zoomIn" duration={0.5} animateOnce delay={300}>
           <Icon>
@@ -108,7 +109,7 @@ const Service: FC<{ id: string }> = ({ id }) => {
               )} 2x, ${getRelativePath('/static/icon/icon-secure@3x.png')} 3x`}
             />
           </Icon>
-          <IconDescription>區塊鏈等級的安全性</IconDescription>
+          <IconDescription>W3C DID 去中心身份協定</IconDescription>
         </IconWrapper>
         <IconWrapper animateIn="zoomIn" duration={0.5} animateOnce delay={600}>
           <Icon>
@@ -121,7 +122,7 @@ const Service: FC<{ id: string }> = ({ id }) => {
               )} 3x`}
             />
           </Icon>
-          <IconDescription>穩定及永續的系統</IconDescription>
+          <IconDescription>最高隱私保留演算法</IconDescription>
         </IconWrapper>
       </IconGroupWrapper>
       <ScrollInfo />

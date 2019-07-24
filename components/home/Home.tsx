@@ -39,6 +39,17 @@ const CircleRight = styled.img`
   width: 45vw;
 `;
 
+const SubLogo = styled.div<{ src: string }>`
+  background: url(${p => p.src}) no-repeat center/contain;
+  width: 7vw;
+  height: 5em;
+  margin-left: 1em;
+
+  &:first-child {
+    margin-left: 0;
+  }
+`;
+
 const Home: FC<{ id: string }> = ({ id }) => {
   return (
     <Section fullscreen id={id}>
@@ -67,9 +78,24 @@ const Home: FC<{ id: string }> = ({ id }) => {
         style={{ textAlign: 'center' }}
         delay={400}
       >
-        <Title>TuringCerts</Title>
-        <Text>BlockChain Certificate Ecosystem</Text>
+        <Title>TuringCerts 圖靈證書</Title>
+        <Text className="en">BlockChain Certificate Ecosystem</Text>
         <CNText className="cn"> 圖靈區塊鏈證書生態系</CNText>
+      </ScrollAnimation>
+      <ScrollAnimation
+        animateIn="fadeInUp"
+        delay={600}
+        style={{
+          position: 'absolute',
+          bottom: '12vh',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          textAlign: 'center',
+        }}
+      >
+        <SubLogo src={getRelativePath('/static/partners/Berkeley.png')} />
+        <SubLogo src={getRelativePath('/static/partners/Scet_white.png')} />
       </ScrollAnimation>
       <ScrollInfo />
     </Section>

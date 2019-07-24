@@ -88,10 +88,9 @@ const Demo: FC<{ id: string }> = ({ id }) => {
             animateOnce
             style={{ width: '100%' }}
           >
-            <InfoTitle>開啟新成就世代！</InfoTitle>
+            <InfoTitle>開啟新履歷世代！</InfoTitle>
             <InfoDescription className="cn">
-              一機裝載所有金融、教育、醫療證書，完善
-              區塊鏈驗證體驗，防偽真實，高速零學習曲線。
+              一機裝載所有教育相關證書，從在學成績、能力認證、線上課程、競賽獎項、至所有成就紀錄，完善區塊鏈秒速認證體驗，防偽真實，溯源查證，零學習曲線。
             </InfoDescription>
           </ScrollAnimation>
           <ScrollAnimation

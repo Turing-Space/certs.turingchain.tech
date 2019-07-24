@@ -144,7 +144,7 @@ const Collaborations: FC<{ id: string }> = ({ id }) => {
         animateOnce
         style={{ width: '100%', textAlign: 'center' }}
       >
-        <Title>合作機構</Title>
+        <Title>已協助發證機構</Title>
       </ScrollAnimation>
       <AnimatedWrapper animateIn="fadeIn" animateOnce delay={300}>
         {logos.map(logo => (
