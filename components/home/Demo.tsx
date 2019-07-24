@@ -47,6 +47,7 @@ const IconWrapper = styled.div`
     cursor: pointer;
     margin-right: 3%;
     width: 35%;
+    height: intrinsic;
   }
 `;
 
