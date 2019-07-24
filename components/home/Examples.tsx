@@ -144,7 +144,7 @@ const certificates: TData[] = [
 ];
 
 const Examples: FC<{ id: string }> = ({ id }) => {
-  const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useState<boolean>(true);
   const [openLightbox, setOpenLightbox] = useState<boolean>(false);
   const [photoIdx, setPhotoIdx] = useState<number>(0);
   return (
