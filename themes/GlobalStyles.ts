@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
 
 export default createGlobalStyle`
@@ -6,28 +7,36 @@ export default createGlobalStyle`
   @font-face {
     font-family: "SF Display";
     font-weight: 800;
-    src: url("https://sf.abarba.me/SF-UI-Display-Heavy.otf");
+    src: url(${getRelativePath(
+      '/static/font/SF-UI-Display-Heavy.otf',
+    )}) format("opentype");
   }
 
   /** Bold */
   @font-face {
     font-family: "SF Display";
     font-weight: 700;
-    src: url("https://sf.abarba.me/SF-UI-Display-Bold.otf");
+    src: url(${getRelativePath(
+      '/static/font/SF-UI-Display-Bold.otf',
+    )}) format("opentype");
   }
 
   /** Medium */
   @font-face {
     font-family: "SF Text";
     font-weight: 500;
-    src: url("https://sf.abarba.me/SF-UI-Text-Medium.otf");
+    src: url(${getRelativePath(
+      '/static/font/SF-UI-Display-Medium.otf',
+    )}) format("opentype");
   }
 
   /** Regular */
   @font-face {
     font-family: "SF Text";
     font-weight: 400;
-    src: url("https://sf.abarba.me/SF-UI-Text-Regular.otf");
+    src: url(${getRelativePath(
+      '/static/font/SF-UI-Display-Regular.otf',
+    )}) format("opentype");
   }
 
   @font-face {
