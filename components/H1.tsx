@@ -4,10 +4,10 @@ import { media } from '@/utils/theme';
 export default styled.h1`
   font-family: ${p => p.theme.fontFamily.SFDisplay};
   font-weight: 800;
-  font-size: 3.2em;
+  font-size: 3rem;
   letter-spacing: 1.5px;
 
-  ${media('desktop')} {
+  ${media('tablet')} {
     font-size: ${p => p.theme.fontSize.h1};
   }
 `;

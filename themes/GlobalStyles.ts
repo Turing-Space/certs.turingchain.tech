@@ -117,6 +117,12 @@ export default createGlobalStyle`
     font-family: ${p => p.theme.fontFamily.SFText};
   }
 
+  ${media('phone', 'max')} {
+    .ril-image-current.ril__image {
+      transform: none !important;
+    }
+  }
+
   .ReactModal__Overlay {
     opacity: 0;
     transition: opacity 300ms ease-in-out;

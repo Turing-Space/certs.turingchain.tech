@@ -19,6 +19,7 @@ const Button = styled.button<TButtonProps>`
   &:hover {
     background-color: rgb(193, 76, 76);
   }
+
   ${p =>
     p.shadow &&
     `

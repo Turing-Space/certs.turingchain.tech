@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import Link from 'next/link';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
 import H2 from '@/components/H2';
@@ -13,11 +12,15 @@ const Bg = styled.div`
   position: absolute;
   background-color: #fafafa;
   width: 100vw;
-  height: 112vh;
+  height: 127vh;
   transform: skewY(3deg);
   top: 3%;
   left: 0;
   overflow: hidden;
+
+  ${media('phone')} {
+    height: 110vh;
+  }
 
   ${media('tablet')} {
     height: 102vh;
@@ -39,7 +42,11 @@ const Wrapper = styled.div`
   flex-direction: column;
   margin-top: 5vh;
   width: 90%;
-  height: 110vh;
+  height: 125vh;
+
+  ${media('phone')} {
+    height: 108vh;
+  }
 
   ${media('tablet')} {
     flex-direction: row;
@@ -57,15 +64,19 @@ const IconWrapper = styled.div`
   margin-top: 2em;
 
   > img {
+    width: 43%;
     cursor: pointer;
     margin-right: 3%;
-    width: 35%;
     height: intrinsic;
   }
 
   ${media('tablet')} {
     margin-top: 4em;
     justify-content: flex-start;
+
+    > img {
+      width: 35%;
+    }
   }
 `;
 

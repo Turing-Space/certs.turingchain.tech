@@ -4,7 +4,6 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import Lightbox from 'react-image-lightbox';
 import Section from '@/components/Section';
 import H2 from '@/components/H2';
-import Button from '@/components/Button';
 import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
 
@@ -41,12 +40,12 @@ const AnimatedWrapper = styled(ScrollAnimation)`
   }
 `;
 
-const MoreInfoWrapper = styled(Wrapper)<{ open: boolean }>`
-  margin: 0;
-  overflow: hidden;
-  max-height: ${p => (p.open ? '100vh' : 0)};
-  transition: max-height ease-in 0.3s;
-`;
+// const MoreInfoWrapper = styled(Wrapper)<{ open: boolean }>`
+//   margin: 0;
+//   overflow: hidden;
+//   max-height: ${p => (p.open ? '100vh' : 0)};
+//   transition: max-height ease-in 0.3s;
+// `;
 
 const Name = styled.div`
   will-change: transform;
@@ -71,7 +70,7 @@ const Certificate = styled.div<{ src: string }>`
   cursor: pointer;
   position: relative;
   width: 47%;
-  height: 24vh;
+  height: 22vh;
   background: url(${p => p.src}) center top no-repeat/cover;
   margin-bottom: 3%;
   overflow: hidden;
@@ -95,23 +94,23 @@ const Certificate = styled.div<{ src: string }>`
   }
 `;
 
-const Shadow = styled.div`
-  position: absolute;
-  width: 120%;
-  height: 12vh;
-  bottom: 0;
-  left: -10%;
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0), #161616);
+// const Shadow = styled.div`
+//   position: absolute;
+//   width: 120%;
+//   height: 12vh;
+//   bottom: 0;
+//   left: -10%;
+//   background: linear-gradient(to bottom, rgba(22, 22, 22, 0), #161616);
 
-  ${media('desktop')} {
-    bottom: -3vh;
-    height: 18vh;
-  }
-`;
+//   ${media('desktop')} {
+//     bottom: -3vh;
+//     height: 18vh;
+//   }
+// `;
 
-const StyledButton = styled(Button)`
-  margin: 3% 0 5%;
-`;
+// const StyledButton = styled(Button)`
+//   margin: 3% 0 5%;
+// `;
 
 const certificates: TData[] = [
   {
@@ -165,7 +164,7 @@ const certificates: TData[] = [
 ];
 
 const Examples: FC<{ id: string }> = ({ id }) => {
-  const [open, setOpen] = useState<boolean>(true);
+  // const [open, setOpen] = useState<boolean>(true);
   const [openLightbox, setOpenLightbox] = useState<boolean>(false);
   const [photoIdx, setPhotoIdx] = useState<number>(0);
   return (
@@ -177,8 +176,14 @@ const Examples: FC<{ id: string }> = ({ id }) => {
       >
         <Title>案例展示</Title>
       </ScrollAnimation>
-      <AnimatedWrapper animateIn="fadeIn" animateOnce offset={0}>
-        {certificates.slice(0, 6).map((d, idx) => (
+      <AnimatedWrapper
+        animateIn="fadeInUp"
+        animateOnce
+        offset={0}
+        style={{ marginBottom: '8%' }}
+        delay={100}
+      >
+        {certificates.map((d, idx) => (
           <Certificate
             key={d.src}
             src={d.src}
@@ -190,9 +195,9 @@ const Examples: FC<{ id: string }> = ({ id }) => {
             <Name>{d.name}</Name>
           </Certificate>
         ))}
-        {!open && <Shadow />}
+        {/* {!open && <Shadow />} */}
       </AnimatedWrapper>
-      <MoreInfoWrapper open={open}>
+      {/* <MoreInfoWrapper open={open}>
         {certificates.slice(6).map((d, idx) => (
           <Certificate
             key={d.src}
@@ -208,7 +213,7 @@ const Examples: FC<{ id: string }> = ({ id }) => {
       </MoreInfoWrapper>
       <StyledButton onClick={() => setOpen(p => !p)}>
         {open ? '隱藏' : '更多'}案例
-      </StyledButton>
+      </StyledButton> */}
 
       {openLightbox && (
         <Lightbox

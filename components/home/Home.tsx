@@ -57,10 +57,37 @@ const SubLogo = styled.div<{ src: string }>`
 `;
 
 const TitleWrapper = styled(ScrollAnimation)`
+  display: none;
   width: 80%;
   text-align: center;
   ${media('desktop')} {
+    display: block;
     width: 100%;
+  }
+`;
+
+const MobileTitleWrapper = styled(TitleWrapper)`
+  display: block;
+  span {
+    &.cn {
+      font-size: 2.3rem;
+    }
+  }
+  ${media('desktop')} {
+    display: none;
+  }
+`;
+
+const BottomLogoWrapper = styled(ScrollAnimation)`
+  position: absolute;
+  bottom: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  ${media('tablet')} {
+    bottom: 12vh;
   }
 `;
 
@@ -87,26 +114,22 @@ const Home: FC<{ id: string }> = ({ id }) => {
           )} 2x, ${getRelativePath('/static/logo/logo-0-x-1-light@3x.png')} 3x`}
         />
       </ScrollAnimation>
-      <TitleWrapper animateIn="fadeInUp" delay={400}>
+      <TitleWrapper animateIn="fadeInUp" delay={400} offset={0}>
         <Title>TuringCerts 圖靈證書</Title>
         <Text className="en">BlockChain Certificate Ecosystem</Text>
         <CNText className="cn"> 圖靈區塊鏈證書生態系</CNText>
       </TitleWrapper>
-      <ScrollAnimation
-        animateIn="fadeInUp"
-        delay={600}
-        style={{
-          position: 'absolute',
-          bottom: '12vh',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          textAlign: 'center',
-        }}
-      >
+      <MobileTitleWrapper animateIn="fadeInUp" delay={400} offset={0}>
+        <Title>
+          TuringCerts <br />
+          <span className="cn">圖靈證書</span>
+        </Title>
+        <CNText className="cn"> 圖靈區塊鏈證書生態系</CNText>
+      </MobileTitleWrapper>
+      <BottomLogoWrapper animateIn="fadeInUp" delay={600} offset={0}>
         <SubLogo src={getRelativePath('/static/partners/Berkeley.png')} />
         <SubLogo src={getRelativePath('/static/partners/Scet_white.png')} />
-      </ScrollAnimation>
+      </BottomLogoWrapper>
       <ScrollInfo />
     </Section>
   );

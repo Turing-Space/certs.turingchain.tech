@@ -30,12 +30,12 @@ const theme: Theme = {
   },
 
   fontSize: {
-    h1: '3.8em',
-    h2: '2.5em',
-    h3: '2em',
-    bigger: '1.25em',
-    smaller: '.875em',
-    small: '.75em',
+    h1: '3.8rem',
+    h2: '2.5rem',
+    h3: '2rem',
+    bigger: '1.25rem',
+    smaller: '.875rem',
+    small: '.75rem',
   },
 };
 

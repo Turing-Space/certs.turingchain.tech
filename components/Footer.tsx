@@ -6,12 +6,8 @@ import { media } from '@/utils/theme';
 
 const Wrapper = styled.footer`
   position: relative;
-  height: 60vh;
+  height: 70vh;
   overflow: hidden;
-
-  ${media('tablet')} {
-    height: 80vh;
-  }
 `;
 
 const Bg = styled.div`
@@ -26,11 +22,12 @@ const Bg = styled.div`
 
 const InfoWrapper = styled.div`
   position: relative;
-  width: 62.5%;
-  margin: 20vh auto 0;
+  width: 80%;
+  margin: 18vh auto 0;
 
   ${media('tablet')} {
-    margin-top: 12.5vh;
+    width: 62.5%;
+    margin-top: 12.5%;
   }
 `;
 

@@ -39,7 +39,7 @@ const AnimatedWrapper = styled(ScrollAnimation)`
 
 const MoreInfoWrapper = styled(Wrapper)<{ open: boolean }>`
   overflow: hidden;
-  max-height: ${p => (p.open ? '100vh' : 0)};
+  max-height: ${p => (p.open ? '200vh' : 0)};
   transition: max-height ease-in 0.3s;
 `;
 
