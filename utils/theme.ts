@@ -1,4 +1,5 @@
 export const breakpoints = {
+  phone: '380',
   pad: '530',
   tablet: '790',
   desktop: '1024',
@@ -10,7 +11,7 @@ export const breakpoints = {
  * @param {string} displayWay 'max' or 'min'
  */
 export const media = (
-  threshold: 'pad' | 'tablet' | 'desktop' | 'largeDesktop',
+  threshold: 'phone' | 'pad' | 'tablet' | 'desktop' | 'largeDesktop',
   displayWay: 'max' | 'min' = 'min',
 ) => {
   const breakpoint = breakpoints[threshold];

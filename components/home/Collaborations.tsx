@@ -31,8 +31,12 @@ const AnimatedWrapper = styled(ScrollAnimation)`
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  width: 720px;
+  width: 90%;
   margin: 5% auto 10%;
+
+  ${media('tablet')} {
+    width: 720px;
+  }
   ${media('largeDesktop')} {
     width: 840px;
   }
@@ -46,16 +50,31 @@ const AnimatedWrapper = styled(ScrollAnimation)`
 // `;
 
 const LogoWrapper = styled.div`
-  width: 20%;
+  width: 25%;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  ${media('tablet')} {
+    width: 20%;
+  }
 `;
 
 const Logo = styled.div<{ src: string; size: number }>`
   background: url(${p => p.src}) center no-repeat/contain;
-  width: ${p => `calc(100px * ${p.size})`};
-  height: ${p => `calc(100px * ${p.size})`};
+
+  width: ${p => `calc(65px * ${p.size})`};
+  height: ${p => `calc(65px * ${p.size})`};
+
+  ${media('phone')} {
+    width: ${p => `calc(80px * ${p.size})`};
+    height: ${p => `calc(80px * ${p.size})`};
+  }
+
+  ${media('tablet')} {
+    width: ${p => `calc(100px * ${p.size})`};
+    height: ${p => `calc(100px * ${p.size})`};
+  }
 
   ${media('largeDesktop')} {
     width: ${p => `calc(120px * ${p.size})`};

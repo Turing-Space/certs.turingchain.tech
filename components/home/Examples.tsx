@@ -6,6 +6,7 @@ import Section from '@/components/Section';
 import H2 from '@/components/H2';
 import Button from '@/components/Button';
 import { getRelativePath } from '@/utils';
+import { media } from '@/utils/theme';
 
 type TData = {
   name: string;
@@ -20,18 +21,24 @@ const Wrapper = styled.div`
   position: relative;
   display: flex;
   margin-top: 3%;
-  width: 60%;
   justify-content: space-between;
   flex-wrap: wrap;
+  width: 90%;
+  ${media('desktop')} {
+    width: 60%;
+  }
 `;
 
 const AnimatedWrapper = styled(ScrollAnimation)`
   position: relative;
   display: flex;
   margin-top: 3%;
-  width: 60%;
+  width: 90%;
   justify-content: space-between;
   flex-wrap: wrap;
+  ${media('desktop')} {
+    width: 60%;
+  }
 `;
 
 const MoreInfoWrapper = styled(Wrapper)<{ open: boolean }>`
@@ -63,7 +70,7 @@ const Certificate = styled.div<{ src: string }>`
   will-change: transform;
   cursor: pointer;
   position: relative;
-  width: 30%;
+  width: 47%;
   height: 24vh;
   background: url(${p => p.src}) center top no-repeat/cover;
   margin-bottom: 3%;
@@ -77,15 +84,29 @@ const Certificate = styled.div<{ src: string }>`
     }
     transform: scale(1.1);
   }
+
+  ${media('tablet')} {
+    height: 32vh;
+  }
+
+  ${media('desktop')} {
+    width: 30%;
+    height: 24vh;
+  }
 `;
 
 const Shadow = styled.div`
   position: absolute;
   width: 120%;
-  height: 18vh;
-  bottom: -3vh;
+  height: 12vh;
+  bottom: 0;
   left: -10%;
   background: linear-gradient(to bottom, rgba(22, 22, 22, 0), #161616);
+
+  ${media('desktop')} {
+    bottom: -3vh;
+    height: 18vh;
+  }
 `;
 
 const StyledButton = styled(Button)`

@@ -2,11 +2,16 @@ import { FC } from 'react';
 import styled from 'styled-components';
 import H2 from '@/components/H2';
 import { getRelativePath } from '@/utils';
+import { media } from '@/utils/theme';
 
 const Wrapper = styled.footer`
   position: relative;
-  height: 80vh;
+  height: 60vh;
   overflow: hidden;
+
+  ${media('tablet')} {
+    height: 80vh;
+  }
 `;
 
 const Bg = styled.div`
@@ -22,17 +27,27 @@ const Bg = styled.div`
 const InfoWrapper = styled.div`
   position: relative;
   width: 62.5%;
-  margin: 12.5% auto 0;
+  margin: 20vh auto 0;
+
+  ${media('tablet')} {
+    margin-top: 12.5vh;
+  }
 `;
 
 const Title = styled(H2)`
   margin-bottom: 1em;
+  text-align: center;
+  ${media('tablet')} {
+    text-align: left;
+  }
 `;
 
 const IconWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   width: 150px;
+  margin: auto;
+
   img {
     width: 2.5em;
     transition: opacity ease-in 0.1s;
@@ -41,13 +56,17 @@ const IconWrapper = styled.div`
       opacity: 0.75;
     }
   }
+  ${media('tablet')} {
+    margin: 0;
+  }
 `;
 
 const CompanyWrapper = styled.div`
   cursor: pointer;
   display: flex;
   align-items: center;
-  margin: 3% 0;
+  justify-content: center;
+  margin: 8% 0;
   transition: opacity ease-in 0.1s;
 
   > img {
@@ -64,6 +83,11 @@ const CompanyWrapper = styled.div`
   &:hover {
     opacity: 0.75;
   }
+
+  ${media('tablet')} {
+    margin: 3% 0;
+    justify-content: flex-start;
+  }
 `;
 
 const Divider = styled.div`
@@ -75,7 +99,13 @@ const Divider = styled.div`
 `;
 
 const CopyRight = styled.p`
-  font-size: ${p => p.theme.fontSize.smaller};
+  margin-top: 10%;
+  font-size: 1em;
+
+  ${media('tablet')} {
+    margin-top: 0;
+    font-size: ${p => p.theme.fontSize.smaller};
+  }
 `;
 
 const Footer: FC = () => (

@@ -157,13 +157,46 @@ const Header: SFC = () => {
           <div />
         </MobileHeader>
         <MobileList style={style}>
-          <li onClick={() => scrollToID('section-service')}>區塊鏈成就履歷</li>
-          <li onClick={() => scrollToID('section-technology')}>技術架構</li>
-          <li onClick={() => scrollToID('section-collaborations')}>
+          <li
+            onClick={() => {
+              scrollToID('section-service');
+              setOpenMobileList(false);
+            }}
+          >
+            區塊鏈成就履歷
+          </li>
+          <li
+            onClick={() => {
+              scrollToID('section-technology');
+              setOpenMobileList(false);
+            }}
+          >
+            技術架構
+          </li>
+          <li
+            onClick={() => {
+              scrollToID('section-collaborations');
+              setOpenMobileList(false);
+            }}
+          >
             已協助發證機構
           </li>
-          <li onClick={() => scrollToID('section-examples')}>案例展示</li>
-          <li onClick={() => scrollToID('section-contact')}>合作洽談</li>
+          <li
+            onClick={() => {
+              scrollToID('section-examples');
+              setOpenMobileList(false);
+            }}
+          >
+            案例展示
+          </li>
+          <li
+            onClick={() => {
+              scrollToID('section-contact');
+              setOpenMobileList(false);
+            }}
+          >
+            合作洽談
+          </li>
 
           <li className="red" onClick={() => alert('敬請期待！')}>
             體驗

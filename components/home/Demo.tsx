@@ -80,12 +80,23 @@ const InfoDescription = styled(Description)`
 `;
 
 const Mock = styled.img`
-  width: 100%;
+  width: 90%;
   max-height: 65vh;
-  margin: 10% 0;
+  margin: 10% 5%;
+
+  ${media('pad')} {
+    width: 80%;
+    margin: 10%;
+  }
 
   ${media('tablet')} {
+    width: 100%;
+    margin: 30% auto;
     margin-left: -5%;
+  }
+
+  ${media('desktop')} {
+    margin-top: 10%;
   }
 `;
 
