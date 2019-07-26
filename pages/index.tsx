@@ -1,3 +1,4 @@
+import { NextFC } from 'next';
 import HomeLayout from '@/layouts/Home';
 import Home from '@/components/home/Home';
 import Service from '@/components/home/Service';
@@ -8,7 +9,7 @@ import Examples from '@/components/home/Examples';
 
 import { SITE_TITLE } from '@/constants';
 
-const Index = () => {
+const Index: NextFC = () => {
   return (
     <HomeLayout title={'TuringCerts | ' + SITE_TITLE}>
       <Home id="section-home" />
@@ -22,5 +23,9 @@ const Index = () => {
     </HomeLayout>
   );
 };
+
+Index.getInitialProps = async () => ({
+  namespacesRequired: ['common', 'home'],
+});
 
 export default Index;

@@ -16,17 +16,17 @@ const Title = styled(H2)`
   margin-top: 14vh;
 `;
 
-const Wrapper = styled.div`
-  position: relative;
-  display: flex;
-  margin-top: 3%;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 90%;
-  ${media('desktop')} {
-    width: 60%;
-  }
-`;
+// const Wrapper = styled.div`
+//   position: relative;
+//   display: flex;
+//   margin-top: 3%;
+//   justify-content: space-between;
+//   flex-wrap: wrap;
+//   width: 90%;
+//   ${media('desktop')} {
+//     width: 60%;
+//   }
+// `;
 
 const AnimatedWrapper = styled(ScrollAnimation)`
   position: relative;

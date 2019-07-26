@@ -6,9 +6,11 @@ import Modal from 'react-modal';
 import GlobalStateProvider from '@/contexts/GlobalStateProvider';
 import theme from '@/themes/theme';
 
+import { appWithTranslation } from '@/i18n';
+
 Modal.setAppElement('#__next');
 
-export default class MyApp extends App {
+class MyApp extends App {
   static async getInitialProps({ Component, ctx }: any) {
     let pageProps = {};
 
@@ -32,3 +34,5 @@ export default class MyApp extends App {
     );
   }
 }
+
+export default appWithTranslation(MyApp);

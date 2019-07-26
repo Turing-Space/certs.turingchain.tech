@@ -16,6 +16,7 @@
     "express": "^4.16.4",
     "lodash": "^4.17.14",
     "next": "^8.1.0",
+    "next-i18next": "^0.52.0",
     "react": "^16.8.6",
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.8.6",
