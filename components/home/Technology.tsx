@@ -20,13 +20,21 @@ const Title = styled(H2)`
 const Wrapper = styled.div`
   position: relative;
   margin-top: 3%;
-  width: 40%;
+  width: 75%;
+
+  ${media('desktop')} {
+    width: 50%;
+  }
 `;
 
 const AnimatedWrapper = styled(ScrollAnimation)`
   position: relative;
   margin-top: 3%;
-  width: 40%;
+  width: 75%;
+
+  ${media('desktop')} {
+    width: 50%;
+  }
 `;
 
 const MoreInfoWrapper = styled(Wrapper)<{ open: boolean }>`
@@ -35,7 +43,8 @@ const MoreInfoWrapper = styled(Wrapper)<{ open: boolean }>`
   transition: max-height ease-in 0.3s;
 `;
 
-const InfoWrapper = styled(Wrapper)`
+const InfoWrapper = styled.div`
+  position: relative;
   margin-top: 9%;
   width: 100%;
 `;

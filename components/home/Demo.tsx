@@ -13,11 +13,15 @@ const Bg = styled.div`
   position: absolute;
   background-color: #fafafa;
   width: 100vw;
-  height: 102vh;
+  height: 112vh;
   transform: skewY(3deg);
   top: 3%;
   left: 0;
   overflow: hidden;
+
+  ${media('tablet')} {
+    height: 102vh;
+  }
 `;
 
 const Wave = styled.img`
@@ -31,23 +35,37 @@ const Wave = styled.img`
 const Wrapper = styled.div`
   position: relative;
   display: flex;
-  justify-content: center;
-  margin-top: 18vh;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 5vh;
   width: 90%;
-  padding-left: 5%;
-  ${media('desktop')} {
+  height: 110vh;
+
+  ${media('tablet')} {
+    flex-direction: row;
+    justify-content: center;
+    height: 102vh;
     width: 75%;
+    padding-left: 5%;
+    margin-top: 18vh;
   }
 `;
 
 const IconWrapper = styled.div`
   display: flex;
-  margin-top: 4em;
+  justify-content: center;
+  margin-top: 2em;
+
   > img {
     cursor: pointer;
     margin-right: 3%;
     width: 35%;
     height: intrinsic;
+  }
+
+  ${media('tablet')} {
+    margin-top: 4em;
+    justify-content: flex-start;
   }
 `;
 
@@ -64,11 +82,53 @@ const InfoDescription = styled(Description)`
 const Mock = styled.img`
   width: 100%;
   max-height: 65vh;
-  margin-left: -5%;
+  margin: 10% 0;
+
+  ${media('tablet')} {
+    margin-left: -5%;
+  }
 `;
 
 const StyledButton = styled(Button)`
   font-weight: 500;
+`;
+
+const InfoWrapper = styled.div`
+  display: none;
+  ${media('tablet')} {
+    width: 40%;
+    display: block;
+  }
+`;
+
+const MockWrapper = styled(ScrollAnimation)`
+  width: 100%;
+  ${media('tablet')} {
+    width: 60%;
+  }
+`;
+
+const MobileHeader = styled(ScrollAnimation)`
+  width: 100%;
+  text-align: center;
+
+  ${InfoDescription} {
+    margin-bottom: 0;
+  }
+
+  ${media('tablet')} {
+    display: none;
+  }
+`;
+
+const MobileActionWrapper = styled(ScrollAnimation)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  ${media('tablet')} {
+    display: none;
+  }
 `;
 
 const Demo: FC<{ id: string }> = ({ id }) => {
@@ -83,7 +143,7 @@ const Demo: FC<{ id: string }> = ({ id }) => {
         />
       </Bg>
       <Wrapper>
-        <div style={{ width: '40%' }}>
+        <InfoWrapper>
           <ScrollAnimation
             animateIn="fadeIn"
             animateOnce
@@ -100,11 +160,15 @@ const Demo: FC<{ id: string }> = ({ id }) => {
             delay={500}
             offset={0}
           >
-            <Link href="/demo">
-              <StyledButton shadow className="cn">
-                體驗網頁版 →
-              </StyledButton>
-            </Link>
+            {/* <Link href="/demo"> */}
+            <StyledButton
+              shadow
+              className="cn"
+              onClick={() => alert('敬請期待！')}
+            >
+              體驗網頁版 →
+            </StyledButton>
+            {/* </Link> */}
             <IconWrapper>
               <img
                 onClick={() => alert('敬請期待 ^_^')}
@@ -126,20 +190,57 @@ const Demo: FC<{ id: string }> = ({ id }) => {
               />
             </IconWrapper>
           </ScrollAnimation>
-        </div>
-        <ScrollAnimation
-          animateIn="fadeIn"
-          animateOnce
-          delay={300}
-          style={{ width: '60%' }}
-        >
+        </InfoWrapper>
+        <MobileHeader animateIn="fadeIn" animateOnce>
+          <InfoTitle>開啟新履歷世代！</InfoTitle>
+          <InfoDescription className="cn">
+            一機裝載所有教育相關證書，從在學成績、能力認證、線上課程、競賽獎項、至所有成就紀錄，完善區塊鏈秒速認證體驗，防偽真實，溯源查證，零學習曲線。
+          </InfoDescription>
+        </MobileHeader>
+        <MockWrapper animateIn="fadeIn" animateOnce delay={300}>
           <Mock
             src={getRelativePath('/static/elements/image-mock.png')}
             srcSet={`${getRelativePath(
               '/static/elements/image-mock@2x.png',
             )} 2x, ${getRelativePath('/static/elements/image-mock@3x.png')} 3x`}
           />
-        </ScrollAnimation>
+        </MockWrapper>
+        <MobileActionWrapper
+          animateIn="fadeIn"
+          animateOnce
+          delay={500}
+          offset={0}
+        >
+          {/* <Link href="/demo"> */}
+          <StyledButton
+            shadow
+            className="cn"
+            onClick={() => alert('敬請期待！')}
+          >
+            體驗網頁版 →
+          </StyledButton>
+          {/* </Link> */}
+          <IconWrapper>
+            <img
+              onClick={() => alert('敬請期待 ^_^')}
+              src={getRelativePath('/static/elements/logo-app-store.png')}
+              srcSet={`${getRelativePath(
+                '/static/elements/logo-app-store@2x.png',
+              )} 2x, ${getRelativePath(
+                '/static/elements/logo-app-store@3x.png',
+              )} 3x`}
+            />
+            <img
+              onClick={() => alert('敬請期待 ^_^')}
+              src={getRelativePath('/static/elements/logo-google-play.png')}
+              srcSet={`${getRelativePath(
+                '/static/elements/logo-google-play@2x.png',
+              )} 2x, ${getRelativePath(
+                '/static/elements/logo-google-play@3x.png',
+              )} 3x`}
+            />
+          </IconWrapper>
+        </MobileActionWrapper>
       </Wrapper>
     </Section>
   );

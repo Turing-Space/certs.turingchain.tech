@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import { getRelativePath, scrollToID } from '@/utils';
+import { media } from '@/utils/theme';
 
 const LogoWrapper = styled.div`
   cursor: pointer;
@@ -10,13 +11,24 @@ const LogoWrapper = styled.div`
   align-items: center;
   height: 100%;
   > p {
+    font-size: ${p => p.theme.fontSize.bigger};
     font-weight: 500;
+  }
+
+  ${media('desktop')} {
+    > p {
+      font-size: 1em;
+    }
   }
 `;
 
 const Logo = styled.img`
-  height: 67%;
+  height: 80%;
   margin-right: 1em;
+
+  ${media('desktop')} {
+    height: 67%;
+  }
 `;
 
 const HeaderLogo: FC = () => {

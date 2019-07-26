@@ -5,6 +5,7 @@ import Section from '@/components/Section';
 import { getRelativePath } from '@/utils';
 import H1 from '@/components/H1';
 import ScrollInfo from '@/components/ScollInfo';
+import { media } from '@/utils/theme';
 
 const Text = styled.p`
   margin-bottom: 8px;
@@ -23,6 +24,7 @@ const Logo = styled.img`
 const Title = styled(H1)`
   color: ${p => p.theme.colors.primary};
   margin: 0.6em 0 0.3em 0;
+  white-space: pre-line;
 `;
 
 const CircleLeft = styled.img`
@@ -41,12 +43,24 @@ const CircleRight = styled.img`
 
 const SubLogo = styled.div<{ src: string }>`
   background: url(${p => p.src}) no-repeat center/contain;
-  width: 7vw;
+  width: 15vw;
   height: 5em;
   margin-left: 1em;
 
   &:first-child {
     margin-left: 0;
+  }
+
+  ${media('desktop')} {
+    width: 7vw;
+  }
+`;
+
+const TitleWrapper = styled(ScrollAnimation)`
+  width: 80%;
+  text-align: center;
+  ${media('desktop')} {
+    width: 100%;
   }
 `;
 
@@ -73,15 +87,11 @@ const Home: FC<{ id: string }> = ({ id }) => {
           )} 2x, ${getRelativePath('/static/logo/logo-0-x-1-light@3x.png')} 3x`}
         />
       </ScrollAnimation>
-      <ScrollAnimation
-        animateIn="fadeInUp"
-        style={{ textAlign: 'center' }}
-        delay={400}
-      >
+      <TitleWrapper animateIn="fadeInUp" delay={400}>
         <Title>TuringCerts 圖靈證書</Title>
         <Text className="en">BlockChain Certificate Ecosystem</Text>
         <CNText className="cn"> 圖靈區塊鏈證書生態系</CNText>
-      </ScrollAnimation>
+      </TitleWrapper>
       <ScrollAnimation
         animateIn="fadeInUp"
         delay={600}

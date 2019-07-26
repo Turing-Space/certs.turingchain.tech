@@ -22,21 +22,29 @@ const Title = styled(H2)`
 `;
 
 const StyledDescription = styled(Description)`
-  width: 47%;
+  width: 70%;
   text-align: center;
   letter-spacing: 0.5px;
   line-height: 2em;
   margin: 0 auto;
+
+  ${media('desktop')} {
+    width: 47%;
+  }
 `;
 
 const IconGroupWrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 55%;
-  margin-top: 7.5em;
+  width: 80%;
+  margin: 7.5em 0;
   ${media('pad')} {
     justify-content: space-between;
+  }
+
+  ${media('desktop')} {
+    width: 55%;
   }
 `;
 

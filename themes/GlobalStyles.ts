@@ -81,6 +81,10 @@ export default createGlobalStyle`
 
   ol, ul {
     list-style: none;
+
+    &:focus, &:active {
+      outline: none;
+    }
   }
 
   p {
