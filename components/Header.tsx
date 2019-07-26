@@ -17,7 +17,7 @@ const Wrapper = styled.header<{ hideUp?: boolean; openMobile: boolean }>`
   align-items: center;
   justify-content: space-between;
   height: 50px;
-  padding: 0.3em 4em;
+  padding: 0.3em 2.5rem;
   background-color: ${p =>
     p.openMobile ? 'rgb(33, 33, 33)' : p.theme.colors.backgroundBlack};
   z-index: ${p => p.theme.z.high};
@@ -30,13 +30,19 @@ const Wrapper = styled.header<{ hideUp?: boolean; openMobile: boolean }>`
       transform: translateY(-100%);
     `}
 
+  ${media('tablet')} {
+    padding: 0.3em 3.5rem;
+    height: 60px;
+  }
+
   ${media('desktop')} {
+    padding: 0.3em 4rem;
     height: 60px;
   }
 
   ${media('largeDesktop')} {
     height: 70px;
-    padding: 3px 5em;
+    padding: 3px 5rem;
   }
 
   a {
