@@ -70,6 +70,9 @@
     "title": "已協助發證機構"
   },
   "examples": {
+    "hidden": "隱藏",
+    "more": "更多",
+    "showcases": "案例",
     "title": "案例展示",
     "certificates": {
       "0": "國際 GBP 區塊鏈能力考核證書",

@@ -12,10 +12,12 @@ import { getRelativePath } from '@/utils';
 import { i18nNamespace } from '@/constants';
 
 const Title = styled(H2)`
-  margin-top: 18vh;
+  margin: 18vh auto 0;
+  max-width: 70vw;
 
   ${media('largeDesktop')} {
-    margin-top: 20vh;
+    max-width: 55vw;
+    margin: 20vh auto 0;
   }
 `;
 
@@ -41,7 +43,7 @@ const AnimatedWrapper = styled(ScrollAnimation)`
 
 const MoreInfoWrapper = styled(Wrapper)<{ open: boolean }>`
   overflow: hidden;
-  max-height: ${p => (p.open ? '200vh' : 0)};
+  max-height: ${p => (p.open ? '250vh' : 0)};
   transition: max-height ease-in 0.3s;
 `;
 

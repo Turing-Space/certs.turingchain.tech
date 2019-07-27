@@ -14,7 +14,7 @@ const Bg = styled.div`
   position: absolute;
   background-color: #fafafa;
   width: 100vw;
-  height: 127vh;
+  height: 130vh;
   transform: skewY(3deg);
   top: 3%;
   left: 0;
@@ -44,7 +44,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   margin-top: 5vh;
   width: 90%;
-  height: 125vh;
+  height: 128vh;
 
   ${media('phone')} {
     height: 108vh;
@@ -55,8 +55,11 @@ const Wrapper = styled.div`
     justify-content: center;
     height: 102vh;
     width: 75%;
-    padding-left: 5%;
     margin-top: 18vh;
+  }
+
+  ${media('desktop')} {
+    padding-left: 5%;
   }
 `;
 
@@ -85,6 +88,10 @@ const IconWrapper = styled.div`
 const InfoTitle = styled(H2)`
   color: ${p => p.theme.colors.primary};
   letter-spacing: 1.5px;
+
+  ${media('tablet')} {
+    white-space: nowrap;
+  }
 `;
 
 const InfoDescription = styled(Description)`
@@ -105,11 +112,10 @@ const Mock = styled.img`
   ${media('tablet')} {
     width: 100%;
     margin: 30% auto;
-    margin-left: -5%;
   }
 
   ${media('desktop')} {
-    margin-top: 10%;
+    margin-top: 13%;
   }
 `;
 
@@ -183,11 +189,9 @@ const Demo: FC<{ id: string }> = ({ id }) => {
             delay={500}
             offset={0}
           >
-            {/* <Link href="/demo"> */}
             <StyledButton shadow onClick={() => alert(t('alertText'))}>
               {t('demo.start')}
             </StyledButton>
-            {/* </Link> */}
             <IconWrapper>
               <img
                 onClick={() => t('alertText')}

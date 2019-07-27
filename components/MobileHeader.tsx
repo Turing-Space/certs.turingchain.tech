@@ -31,7 +31,7 @@ const LanguageWrapper = styled.li<{ open: boolean }>`
   align-items: center;
 
   > img {
-    height: 50%;
+    width: 16px;
     margin-right: 0.75em;
   }
 
@@ -41,7 +41,7 @@ const LanguageWrapper = styled.li<{ open: boolean }>`
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 9px 5px 0px 5px;
+    border-width: 8px 4px 0px 4px;
     border-color: #9e9e9e transparent transparent;
     line-height: 0px;
     margin-top: 2px;
@@ -81,7 +81,7 @@ const MobileList = styled(animated.ul)`
     }
 
     &.small {
-      padding-left: 5em;
+      padding-left: 5.2em;
       font-size: ${p => p.theme.fontSize.smaller};
     }
 

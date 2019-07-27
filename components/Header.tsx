@@ -92,7 +92,7 @@ const LanguageWrapper = styled.div<{ open: boolean }>`
   background-color: ${p => p.theme.colors.backgroundBlack};
 
   > img {
-    height: 35%;
+    width: 20px;
     margin-right: 0.75em;
   }
 
@@ -123,6 +123,7 @@ const LanguageChooseWrapper = styled(animated.div)`
   border: solid 1px #424242;
   color: #9e9e9e;
   z-index: -1;
+  background: ${p => p.theme.background};
 
   > div {
     width: 100%;

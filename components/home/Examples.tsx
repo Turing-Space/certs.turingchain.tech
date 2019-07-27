@@ -227,7 +227,8 @@ const Examples: FC<{ id: string }> = ({ id }) => {
         ))}
       </MoreInfoWrapper>
       <StyledButton onClick={() => setOpen(p => !p)}>
-        {open ? '隱藏' : '更多'}案例
+        {open ? t('examples.hidden') : t('examples.more')}
+        {t('examples.showcases')}
       </StyledButton>
 
       {openLightbox && (

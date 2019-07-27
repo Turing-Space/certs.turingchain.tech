@@ -12,6 +12,8 @@ import { i18nNamespace } from '@/constants';
 
 const Title = styled(H2)`
   margin-top: 18vh;
+  width: 80vw;
+  margin-left: 10vw;
 
   ${media('largeDesktop')} {
     margin-top: 20vh;

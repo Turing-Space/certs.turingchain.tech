@@ -18,11 +18,12 @@ if (typeof require !== 'undefined') {
 
 module.exports = withBundleAnalyzer(
   withTypescript({
-    // exportPathMap: function() {
-    //   return {
-    //     '/': { page: '/' },
-    //   };
-    // },
+    exportPathMap: function() {
+      return {
+        '/': { page: '/' },
+        '/demo': { page: '/demo' },
+      };
+    },
     assetPrefix: GITHUB ? `/${PROJ_NAME}/` : '',
     analyzeServer: ['server', 'both'].includes(process.env.BUNDLE_ANALYZE),
     analyzeBrowser: ['browser', 'both'].includes(process.env.BUNDLE_ANALYZE),

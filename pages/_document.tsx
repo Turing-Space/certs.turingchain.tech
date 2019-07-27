@@ -32,7 +32,7 @@ export default class MyDocument extends Document {
   }
   public render() {
     return (
-      <Html>
+      <Html lang={this.props.__NEXT_DATA__.props.initialLanguage}>
         <Head>
           <Meta />
         </Head>

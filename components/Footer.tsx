@@ -10,6 +10,9 @@ const Wrapper = styled.footer`
   position: relative;
   height: 70vh;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Bg = styled.div`
@@ -25,11 +28,10 @@ const Bg = styled.div`
 const InfoWrapper = styled.div`
   position: relative;
   width: 80%;
-  margin: 18vh auto 0;
+  height: 60%;
 
   ${media('tablet')} {
     width: 62.5%;
-    margin-top: 12.5%;
   }
 `;
 
