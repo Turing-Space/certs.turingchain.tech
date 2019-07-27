@@ -38,8 +38,8 @@
     "info": "Info",
     "subs": {
       "0": {
-        "title": "Foundamental Phase",
-        "content": "TuringCerts in the foundamental phase are executed on the second generation blockchain - Ethereum, and are supervised and operated by multiple sophisticated Smart Contracts. IPFS is leveraged to parallelly keep huge-sizing digital images of certificates."
+        "title": "Fundamental Phase",
+        "content": "TuringCerts in the fundamental phase are executed on the second generation blockchain - Ethereum, and are supervised and operated by multiple sophisticated Smart Contracts. IPFS is leveraged to parallelly keep huge-sizing digital images of certificates."
       },
       "1": {
         "title": "Advanced Stage",
@@ -48,28 +48,31 @@
     },
     "question": {
       "0": {
-        "title": "(1) 如何確保證書唯一真實性？",
-        "content": "TuringCerts 將使用全球網際網路標準 W3C 提出之 DID 分布式身份標準，賦予每位證書持有者獨特唯一之身份證明，另以哈希值阻擋內容竄改或謬誤，除防偽特徵為更有利於證書的長期保管與追蹤。"
+        "title": "(1) How to ensure the uniqueness and authenticity?",
+        "content": "TuringCerts adopts Decentralized Identifier Standard (DID) proposed by the World Wide Web Consortium (W3C). TuringCerts serves each certificate holder with an unique identifier via a hash value to prevent tampering with. Its anti-counterfeiting feature is the cornerstone to a sustainable certificate ecosystem."
       },
       "1": {
-        "title": "(2) 如何確實保護使用者隱私？",
-        "content": "TuringCerts 採用 MIT Media Lab 於早期開源證書體系 BlockCerts 所考量的“最小權限原則”，僅授與認證方最少但充足的認證資源，以RSA非對稱加密反向保護用戶提供資料極高隱私性。"
+        "title": "(2) How to upgrade privacy?",
+        "content": "TuringCerts merges MIT Media Lab's early open-source certificate infrastructure - BlockCerts, and consider EU GDPR's Least Privilege Principle to  grants the verification party with the least but sufficient information. TuringCerts employs asymmetric encryption scheme such as RSA to guarantee high privacy for information transferral."
       },
       "2": {
-        "title": "(3) 如何讓 TuringCerts 在全球保有領先地位？",
-        "content": "TuringCerts 將由創辦人於 UC Berkeley Blockchain Lab 的加速器持續吸收並整合矽谷區塊鏈圈內的技術創新，保持其安全性與應用特性在全球的技術與落地領先地位，並藉由香港與台灣的教育體系進行有效社會實驗案例。"
+        "title": "(3) How to make TuringCerts a global leader?",
+        "content": "TuringCerts is afiliated with the Xccelerator of UC Berkeley Blockchain Lab, who will continue to absorb and integrate technical breakthroughs in the Silicon Valley, which maintains its impregnable security and adoptive application characteristics. TuringCerts will leverage its geographical advantage to conduct educational experiments in campuses of Hong Kong and Taiwan."
       }
     }
   },
   "demo": {
     "title": "The New Era of Resumes!",
-    "description": "All certificates in one place. From academic achievement, competency certification, online courses, competition & awards, to all worth-noting records. TuringCerts improve the certification experience, ensuring the characteristics of anti-counterfeit, traceability, and minimized learning curve.",
+    "description": "All certificates in one place.\n From academic achievement, competency certification, online courses, competition & awards, to all worth-noting records.\n TuringCerts improve the certification experience, ensuring the characteristics of anti-counterfeit, traceability, and minimized learning curve.",
     "start": "Start"
   },
   "collaborations": {
     "title": "Collaboration Issuer"
   },
   "examples": {
+    "hidden": "Hidden ",
+    "more": "More ",
+    "showcases": "showcases",
     "title": "Showcases",
     "certificates": {
       "0": "國際 GBP 區塊鏈能力考核證書",
