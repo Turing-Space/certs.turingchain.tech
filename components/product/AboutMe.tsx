@@ -1,7 +1,8 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
-import { UserContext, CertStatus } from '@/contexts/user';
+import { UserContext } from '@/contexts/user';
+import { CertsContext } from '@/contexts/certs';
 import Title from './Title';
 
 const Wrapper = styled.div`
@@ -71,15 +72,12 @@ const AnimatedNumber = styled(animated.p)`
 
 const AboutMe = () => {
   const { user } = useContext(UserContext);
-  const certificatedCount = user.certs.filter(
-    d => d.status === CertStatus.Certificated,
-  ).length;
-  const certificatingCount = user.certs.filter(
-    d => d.status === CertStatus.Certificating,
-  ).length;
+  const { certs } = useContext(CertsContext);
+  const certificatedCount = certs.filter(d => !!d.verified).length;
+  const certificatingCount = certs.length - certificatedCount;
 
   const certsProps = useSpring({
-    number: user.certs.length,
+    number: certs.length,
     from: { number: 0 },
   });
   const certificatedProps = useSpring({
@@ -94,7 +92,7 @@ const AboutMe = () => {
   const icons = [
     {
       name: '認證數量',
-      count: user.certs.length,
+      count: certs.length,
       props: certsProps,
     },
     {

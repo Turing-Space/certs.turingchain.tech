@@ -1,6 +1,6 @@
 import { FC, useMemo, useState, useContext } from 'react';
 import styled from 'styled-components';
-import { UserContext } from '@/contexts/user';
+import { CertsContext } from '@/contexts/certs';
 
 import Title from './Title';
 import SortControl from './SortControl';
@@ -18,15 +18,12 @@ const ControlWrapper = styled.div`
 `;
 
 const MyCerts: FC = () => {
-  const { user } = useContext(UserContext);
+  const { certs, updateCert } = useContext(CertsContext);
   const [searchText, setSearchText] = useState('');
 
   const filteredCerts = useMemo(
-    () =>
-      searchText
-        ? user.certs.filter(c => c.name.includes(searchText))
-        : user.certs,
-    [user.certs, searchText],
+    () => (searchText ? certs.filter(c => c.name.includes(searchText)) : certs),
+    [certs, searchText],
   );
   return (
     <Wrapper>
@@ -39,7 +36,7 @@ const MyCerts: FC = () => {
             setValue={e => setSearchText(e.target.value)}
           />
         </ControlWrapper>
-        <Certs certs={filteredCerts} />
+        <Certs certs={filteredCerts} updateCert={updateCert} />
       </div>
     </Wrapper>
   );

@@ -4,7 +4,7 @@ import { TiPin } from 'react-icons/ti';
 import { FaShareSquare, FaCheck } from 'react-icons/fa';
 import Modal from 'react-modal';
 
-import { TCerts } from '@/contexts/user';
+import { TCert } from '@/contexts/certs';
 import { getRelativePath } from '@/utils';
 import theme from '@/themes/theme';
 
@@ -188,20 +188,42 @@ const Progress = styled.div<{ success: boolean }>`
   }
 `;
 
+const progress = [
+  {
+    key: 'connect',
+    name: 'Connected To The Blockchain',
+  },
+  {
+    key: 'retrive',
+    name: 'Retrieved Credentials',
+  },
+  {
+    key: 'verify-account',
+    name: 'Verified Account Info',
+  },
+  {
+    key: 'verify-cert',
+    name: 'Verified Certificate Integrity',
+  },
+  {
+    key: 'verify-source',
+    name: 'Verified Source Authenticity',
+  },
+];
+
 type TProps = {
-  certs: TCerts[];
+  certs: TCert[];
+  updateCert: (ipfs: string, cert: TCert) => void;
 };
 
-const Certs: FC<TProps> = ({ certs }) => {
+const Certs: FC<TProps> = ({ certs, updateCert }) => {
   const [openIdx, setOpenIdx] = useState<number>(-1);
+  const selectedCert = certs[openIdx];
 
   return (
     <Wrapper>
       {certs.map((cert, idx) => (
-        <CertWrapper
-          key={cert.issuer + cert.name}
-          onClick={() => setOpenIdx(idx)}
-        >
+        <CertWrapper key={cert.ipfs} onClick={() => setOpenIdx(idx)}>
           <CertCover src={cert.coverUri} />
           <p className="issuer">{cert.issuer}</p>
           <p className="name">{cert.name}</p>
@@ -238,15 +260,24 @@ const Certs: FC<TProps> = ({ certs }) => {
           }}
         >
           <ModalWrapper>
-            <CertCover src={certs[openIdx].coverUri} />
-            <p className="issuer">{certs[openIdx].issuer}</p>
-            <p className="name">{certs[openIdx].name}1</p>
+            <CertCover src={selectedCert.coverUri} />
+            <p className="issuer">{selectedCert.issuer}</p>
+            <p className="name">{selectedCert.name}1</p>
             <p className="create-data">June 2019</p>
             <Divider />
             <ModalProgressTitleWrapper>
               <p className="title">認證進度</p>
               <div className="icon-wrapper">
-                <StyledModalIcon pin={certs[openIdx].pin}>
+                <StyledModalIcon
+                  pin={selectedCert.pin}
+                  onClick={() => {
+                    console.log(123);
+                    updateCert(selectedCert.ipfs, {
+                      ...selectedCert,
+                      pin: !selectedCert.pin,
+                    });
+                  }}
+                >
                   <TiPin size="1.3em" color={theme.colors.darkGrey} />
                 </StyledModalIcon>
                 <StyledModalIcon>
@@ -255,38 +286,12 @@ const Certs: FC<TProps> = ({ certs }) => {
               </div>
             </ModalProgressTitleWrapper>
             <div>
-              {[
-                {
-                  key: 'connect',
-                  name: 'Connected To The Blockchain',
-                  success: true,
-                },
-                {
-                  key: 'retrive',
-                  name: 'Retrieved Credentials',
-                  success: false,
-                },
-                {
-                  key: 'verify-account',
-                  name: 'Verified Account Info',
-                  success: false,
-                },
-                {
-                  key: 'verify-cert',
-                  name: 'Verified Certificate Integrity',
-                  success: false,
-                },
-                {
-                  key: 'verify-source',
-                  name: 'Verified Source Authenticity',
-                  success: false,
-                },
-              ].map(progress => (
-                <Progress key={progress.key} success={progress.success}>
+              {progress.map((p, idx) => (
+                <Progress key={p.key} success={selectedCert.progress[idx]}>
                   <div className="icon-wrapper">
                     <FaCheck size=".8em" color="white" />
                   </div>
-                  <p>{progress.name}</p>
+                  <p>{p.name}</p>
                 </Progress>
               ))}
             </div>
