@@ -26,7 +26,7 @@ export default createGlobalStyle`
     font-family: "SF Text";
     font-weight: 500;
     src: url(${getRelativePath(
-      '/static/font/SF-UI-Display-Medium.otf',
+      '/static/font/SF-UI-Text-Medium.otf',
     )}) format("opentype");
   }
 
@@ -35,7 +35,7 @@ export default createGlobalStyle`
     font-family: "SF Text";
     font-weight: 400;
     src: url(${getRelativePath(
-      '/static/font/SF-UI-Display-Regular.otf',
+      '/static/font/SF-UI-Text-Regular.otf',
     )}) format("opentype");
   }
 

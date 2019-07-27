@@ -1,4 +1,5 @@
 import { FC, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Section from '@/components/Section';
@@ -8,6 +9,7 @@ import { media } from '@/utils/theme';
 import Description from '@/components/Description';
 import Button from '@/components/Button';
 import { getRelativePath } from '@/utils';
+import { i18nNamespace } from '@/constants';
 
 const Title = styled(H2)`
   margin-top: 18vh;
@@ -112,6 +114,7 @@ const IPFSIcon = styled.img`
 
 const Technology: FC<{ id: string }> = ({ id }) => {
   const [open, setOpen] = useState<boolean>(false);
+  const { t } = useTranslation(i18nNamespace.Home);
   return (
     <Section id={id}>
       <ScrollAnimation
@@ -119,16 +122,12 @@ const Technology: FC<{ id: string }> = ({ id }) => {
         animateIn="fadeInUp"
         style={{ width: '100%', textAlign: 'center' }}
       >
-        <Title>矽谷 X 柏克萊頂尖技術架構</Title>
+        <Title>{t('technology.title')}</Title>
       </ScrollAnimation>
       <AnimatedWrapper animateOnce animateIn="fadeInUp" delay={300} offset={0}>
-        <SubTitle>基礎階段</SubTitle>
+        <SubTitle>{t('technology.subs.0.title')}</SubTitle>
         <Divider />
-        <Content>
-          基礎測試階段的 TuringCerts 運行於第二代區塊鏈以太坊 (Ethereum)
-          之上，由多個智能合約 (Smart Contract) 所監管與運行，並採用星際文件系統
-          (IPFS) 做大型數位證書圖像的保存。
-        </Content>
+        <Content>{t('technology.subs.0.content')}</Content>
         <Divider />
         <IPFSIcon
           src={getRelativePath('/static/elements/logo-ipfs.png')}
@@ -138,15 +137,9 @@ const Technology: FC<{ id: string }> = ({ id }) => {
         />
       </AnimatedWrapper>
       <AnimatedWrapper animateOnce animateIn="fadeInUp" delay={600} offset={0}>
-        <AdvancedTitle>進階階段</AdvancedTitle>
+        <AdvancedTitle>{t('technology.subs.1.title')}</AdvancedTitle>
         <Divider />
-        <Content>
-          TuringCerts
-          已經與國立成功大學及BiiLabs達成技術合作共識，並與世界知名主鏈基金會
-          IOTA Foundation 積極合作洽談技術協作，將於此階段將系統遷移至 IOTA
-          區塊鏈，並架接於開源的 TangelID
-          加速層，促成極低發證手續費與低延遲的有效特性。
-        </Content>
+        <Content>{t('technology.subs.1.content')}</Content>
         <Divider />
         <IPFSIcon
           src={getRelativePath('/static/elements/logo-ipfs.png')}
@@ -157,41 +150,22 @@ const Technology: FC<{ id: string }> = ({ id }) => {
       </AnimatedWrapper>
       {
         <MoreInfoWrapper open={open}>
-          <InfoWrapper>
-            <QuestionTitle>(1) 如何確保證書唯一真實性？</QuestionTitle>
-            <Divider />
-            <Content>
-              TuringCerts 將使用全球網際網路標準 W3C 提出之 DID
-              分布式身份標準，賦予每位證書持有者獨特唯一之身份證明，另以哈希值阻擋內容竄改或謬誤，除防偽特徵為更有利於證書的長期保管與追蹤。
-            </Content>
-            <Divider />
-          </InfoWrapper>
-          <InfoWrapper>
-            <QuestionTitle>(2) 如何確實保護使用者隱私？</QuestionTitle>
-            <Divider />
-            <Content>
-              TuringCerts 採用 MIT Media Lab 於早期開源證書體系 BlockCerts
-              所考量的
-              “最小權限原則”，僅授與認證方最少但充足的認證資源，以RSA非對稱加密反向保護用戶提供資料極高隱私性。
-            </Content>
-            <Divider />
-          </InfoWrapper>
-          <InfoWrapper>
-            <QuestionTitle>
-              (3) 如何讓 TuringCerts 在全球保有領先地位？
-            </QuestionTitle>
-            <Divider />
-            <Content>
-              TuringCerts 將由創辦人於 UC Berkeley Blockchain Lab
-              的加速器持續吸收並整合矽谷區塊鏈圈內的技術創新，保持其安全性與應用特性在全球的技術與落地領先地位，並藉由香港與台灣的教育體系進行有效社會實驗案例。
-            </Content>
-            <Divider />
-          </InfoWrapper>
+          {[0, 1, 2].map(k => (
+            <InfoWrapper key={k}>
+              <QuestionTitle>
+                {t(`technology.question.${k}.title`)}
+              </QuestionTitle>
+              <Divider />
+              <Content>{t(`technology.question.${k}.content`)}</Content>
+              <Divider />
+            </InfoWrapper>
+          ))}
         </MoreInfoWrapper>
       }
 
       <StyledButton onClick={() => setOpen(p => !p)}>
-        {open ? '隱藏' : '更多'}細節
+        {open ? t('technology.hidden') : t('technology.more')}{' '}
+        {t('technology.info')}
       </StyledButton>
     </Section>
   );

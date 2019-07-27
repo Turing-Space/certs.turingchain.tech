@@ -7,6 +7,8 @@ import ScrollInfo from '@/components/ScollInfo';
 import Description from '@/components/Description';
 import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
+import { i18nNamespace } from '@/constants';
+import { useTranslation } from 'react-i18next';
 
 const AnimatedWrapper = styled(ScrollAnimation)`
   width: 100%;
@@ -77,22 +79,24 @@ const Icon = styled.div`
   }
 `;
 
-const IconDescription = styled.p`
-  white-space: nowrap;
+const IconDescription = styled.p<{ isEn: boolean }>`
+  white-space: ${p => (p.isEn ? 'pre-line' : 'nowrap')};
   font-size: ${p => p.theme.fontSize.bigger};
   font-family: ${p => p.theme.fontFamily.NotoSansTC};
   font-weight: 500;
+  line-height: 1.2;
   letter-spacing: 1px;
+  text-align: center;
 `;
 
 const Service: FC<{ id: string }> = ({ id }) => {
+  const { t, i18n } = useTranslation(i18nNamespace.Home);
+  const isEn = i18n.language === 'en';
   return (
     <Section justifyContent="flex-start" id={id} fullscreen>
       <AnimatedWrapper animateIn="fadeInUp" animateOnce>
-        <Title>區塊鏈成就履歷</Title>
-        <StyledDescription className="cn">
-          透過區塊鏈不可篡改、可追溯、成本節省、跨國界的優勢，重新定義傳統教育認證，創造穩定永續的學習旅程追蹤，保證用戶絕對資料掌控權與隱私優先策略，強化官方權威證書的最高信任與真實價值。
-        </StyledDescription>
+        <Title>{t('service.title')}</Title>
+        <StyledDescription>{t('service.description')}</StyledDescription>
       </AnimatedWrapper>
       <IconGroupWrapper>
         <IconWrapper animateIn="zoomIn" duration={0.5} animateOnce>
@@ -106,7 +110,7 @@ const Service: FC<{ id: string }> = ({ id }) => {
               )} 3x`}
             />
           </Icon>
-          <IconDescription>個人學習成就歷程追溯</IconDescription>
+          <IconDescription isEn={isEn}>{t('service.icons.0')}</IconDescription>
         </IconWrapper>
         <IconWrapper animateIn="zoomIn" duration={0.5} animateOnce delay={300}>
           <Icon>
@@ -117,7 +121,7 @@ const Service: FC<{ id: string }> = ({ id }) => {
               )} 2x, ${getRelativePath('/static/icon/icon-secure@3x.png')} 3x`}
             />
           </Icon>
-          <IconDescription>W3C DID 去中心身份協定</IconDescription>
+          <IconDescription isEn={isEn}>{t('service.icons.1')}</IconDescription>
         </IconWrapper>
         <IconWrapper animateIn="zoomIn" duration={0.5} animateOnce delay={600}>
           <Icon>
@@ -130,7 +134,7 @@ const Service: FC<{ id: string }> = ({ id }) => {
               )} 3x`}
             />
           </Icon>
-          <IconDescription>GDPR 最高隱私保留演算法</IconDescription>
+          <IconDescription isEn={isEn}>{t('service.icons.2')}</IconDescription>
         </IconWrapper>
       </IconGroupWrapper>
       <ScrollInfo />

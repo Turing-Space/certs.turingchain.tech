@@ -1,12 +1,15 @@
 import { SFC, useState } from 'react';
-import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 import styled, { css } from 'styled-components';
 import { animated, useSpring } from 'react-spring';
 import Button from '@/components/Button';
 import HeaderLogo from '@/components/HeaderLogo';
 import useWindowScroll from '@/hooks/useWindowScroll';
-import { scrollToID } from '@/utils';
+import { scrollToID, getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
+import { i18nNamespace } from '@/constants';
+
+import MobileHeader from './MobileHeader';
 
 const Wrapper = styled.header<{ hideUp?: boolean; openMobile: boolean }>`
   position: fixed;
@@ -36,13 +39,13 @@ const Wrapper = styled.header<{ hideUp?: boolean; openMobile: boolean }>`
   }
 
   ${media('desktop')} {
-    padding: 0.3em 4rem;
+    padding: 0.3em 0 0.3em 4rem;
     height: 60px;
   }
 
   ${media('largeDesktop')} {
     height: 70px;
-    padding: 3px 5rem;
+    padding-left: 5rem;
   }
 
   a {
@@ -54,6 +57,7 @@ const Wrapper = styled.header<{ hideUp?: boolean; openMobile: boolean }>`
 const SectionWrapper = styled.ul`
   display: none;
   align-items: center;
+  height: 100%;
 
   > li {
     cursor: pointer;
@@ -69,146 +73,125 @@ const SectionWrapper = styled.ul`
   }
 `;
 
-const MobileHeader = styled.div`
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 70%;
-
-  > div {
-    width: 2em;
-    height: 3px;
-    background: ${p => p.theme.colors.white};
-  }
-
-  ${media('desktop')} {
-    display: none;
-  }
-`;
-
-const MobileList = styled(animated.ul)`
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 100vw;
-  height: calc(100vh - 50px);
-  top: 50px;
-  left: 0;
-  padding-left: 0;
-  margin: 0;
-  background: rgba(0, 0, 0, 0.85);
-  z-index: -1;
-
-  > li {
-    cursor: pointer;
-    padding: 1em 4em;
-    font-size: ${p => p.theme.fontSize.bigger};
-    background: rgb(33, 33, 33);
-
-    &.red {
-      background: ${p => p.theme.colors.primary};
-      color: ${p => p.theme.colors.white};
-      text-align: center;
-
-      &:focus {
-        background: #a80100;
-      }
-    }
-
-    &:focus,
-    &:active {
-      background: rgb(26, 26, 26);
-    }
-  }
-`;
-
 const StyledButton = styled(Button)`
   width: 8em;
   padding: 0.7em 1em;
 `;
 
+const LanguageWrapper = styled.div<{ open: boolean }>`
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: ${p => p.theme.fontSize.smaller};
+  border-left: solid 1px #424242;
+  padding: 0 2.5rem 0 1.5rem;
+  color: #9e9e9e;
+  cursor: pointer;
+  transition: color 0.1s ease-in;
+  background-color: ${p => p.theme.colors.backgroundBlack};
+
+  > img {
+    height: 35%;
+    margin-right: 0.75em;
+  }
+
+  > .triangle {
+    will-change: transform;
+    transition: transform 0.2s ease-in;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 9px 5px 0px 5px;
+    border-color: #9e9e9e transparent transparent;
+    line-height: 0px;
+    margin-top: 2px;
+    margin-left: 0.5em;
+    transform: ${p => (p.open ? 'rotateZ(-180deg)' : 'rotateZ(0deg)')};
+  }
+`;
+
+const LanguageChooseWrapper = styled(animated.div)`
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px #424242;
+  color: #9e9e9e;
+  z-index: -1;
+
+  > div {
+    width: 100%;
+    padding: 0.5rem 0.25rem;
+    text-align: center;
+    &:hover {
+      color: ${p => p.theme.colors.white};
+    }
+  }
+`;
+
 const Header: SFC = () => {
   const { y, oldY } = useWindowScroll();
   const [openMobileList, setOpenMobileList] = useState<boolean>(false);
+  const [openLanguage, setOpenLanguage] = useState<boolean>(false);
 
-  const style = useSpring({
-    transform: `translate3d(0, ${openMobileList ? '0%' : '100vh'}, 0)`,
-    opacity: openMobileList ? 1 : 0,
+  const languageWrapperStyle = useSpring({
+    transform: `translate3d(0, ${openLanguage ? '100%' : '0%'}, 0)`,
+    opacity: openLanguage ? 1 : 0,
   });
+
+  const { t, i18n } = useTranslation(i18nNamespace.Home);
   return (
     <>
       <Wrapper hideUp={y > 0 && y > oldY} openMobile={openMobileList}>
         <HeaderLogo />
         <SectionWrapper>
-          <li onClick={() => scrollToID('section-service')}>區塊鏈成就履歷</li>
-          <li onClick={() => scrollToID('section-technology')}>技術架構</li>
-          <li onClick={() => scrollToID('section-collaborations')}>
-            已協助發證機構
+          <li onClick={() => scrollToID('section-service')}>
+            {t('header.service')}
           </li>
-          <li onClick={() => scrollToID('section-examples')}>案例展示</li>
-          <li onClick={() => scrollToID('section-contact')}>合作洽談</li>
+          <li onClick={() => scrollToID('section-technology')}>
+            {t('header.technology')}
+          </li>
+          <li onClick={() => scrollToID('section-collaborations')}>
+            {t('header.collaborations')}
+          </li>
+          <li onClick={() => scrollToID('section-examples')}>
+            {t('header.examples')}
+          </li>
+          <li onClick={() => scrollToID('section-contact')}>
+            {t('header.contact')}
+          </li>
 
           <li onClick={() => alert('敬請期待！')}>
-            {/* <Link href="/demo"> */}
-            <StyledButton>體驗 →</StyledButton>
-            {/* </Link> */}
+            <StyledButton>{t('start')}</StyledButton>
           </li>
+          <LanguageWrapper
+            open={openLanguage}
+            onClick={() => setOpenLanguage(t => !t)}
+          >
+            <img
+              src={getRelativePath('/static/icon/icon-earth.png')}
+              srcSet={`${getRelativePath(
+                '/static/icon/icon-earth@2x.png',
+              )} 2x, ${getRelativePath('/static/icon/icon-earth@3x.png')} 3x`}
+            />
+            <p>{t(`common:language.${i18n.language}`)}</p>
+            <div className="triangle" />
+            <LanguageChooseWrapper style={languageWrapperStyle}>
+              <div onClick={() => i18n.changeLanguage('zh-TW')}>
+                <p>{t(`common:language.zh-TW`)}</p>
+              </div>
+              <div onClick={() => i18n.changeLanguage('en')}>
+                <p>{t(`common:language.en`)}</p>
+              </div>
+            </LanguageChooseWrapper>
+          </LanguageWrapper>
         </SectionWrapper>
-        <MobileHeader onClick={() => setOpenMobileList(o => !o)}>
-          <div />
-          <div />
-          <div />
-        </MobileHeader>
-        <MobileList style={style}>
-          <li
-            onClick={() => {
-              scrollToID('section-service');
-              setOpenMobileList(false);
-            }}
-          >
-            區塊鏈成就履歷
-          </li>
-          <li
-            onClick={() => {
-              scrollToID('section-technology');
-              setOpenMobileList(false);
-            }}
-          >
-            技術架構
-          </li>
-          <li
-            onClick={() => {
-              scrollToID('section-collaborations');
-              setOpenMobileList(false);
-            }}
-          >
-            已協助發證機構
-          </li>
-          <li
-            onClick={() => {
-              scrollToID('section-examples');
-              setOpenMobileList(false);
-            }}
-          >
-            案例展示
-          </li>
-          <li
-            onClick={() => {
-              scrollToID('section-contact');
-              setOpenMobileList(false);
-            }}
-          >
-            合作洽談
-          </li>
-
-          <li className="red" onClick={() => alert('敬請期待！')}>
-            體驗
-            {/* <Link href="/demo">體驗</Link> */}
-          </li>
-        </MobileList>
+        <MobileHeader open={openMobileList} setOpen={setOpenMobileList} />
       </Wrapper>
     </>
   );

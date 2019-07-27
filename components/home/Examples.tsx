@@ -7,9 +7,10 @@ import Button from '@/components/Button';
 import H2 from '@/components/H2';
 import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
+import { i18nNamespace } from '@/constants';
+import { useTranslation } from 'react-i18next';
 
 type TData = {
-  name: string;
   src: string;
 };
 
@@ -125,51 +126,39 @@ const StyledButton = styled(Button)`
 
 const certificates: TData[] = [
   {
-    name: '國際 GBP 區塊鏈能力考核證書',
     src: getRelativePath('/static/certificate/GBP.png'),
   },
   {
-    name: '加州柏克萊 X 香港科大 X Flowchain 區塊鏈集訓',
     src: getRelativePath('/static/certificate/flowchain.png'),
   },
   {
-    name: '國際駭客松競賽 AngelHack 舊金山場 2019',
     src: getRelativePath('/static/certificate/AngelHackCerts.png'),
   },
   {
-    name: '德國柏林 IOTA 基金會區塊鏈論壇 - 臺北場 2019',
     src: getRelativePath('/static/certificate/IOTA_Dominik.png'),
   },
   {
-    name: '矽谷最大區塊鏈社群 ABC Crypto Night',
     src: getRelativePath('/static/certificate/ABC_Crypto_Night.png'),
   },
   {
-    name: '臺北科技大學 區塊鏈微學分課程 2019',
     src: getRelativePath('/static/certificate/0x1Academy.jpg'),
   },
   {
-    name: '美國矽谷德屬化工巨頭 BASF 區塊鏈論壇 2019',
     src: getRelativePath('/static/certificate/BASF.png'),
   },
   {
-    name: '圖靈鏈科技 區塊鏈教育獎助學金計畫 2019',
     src: getRelativePath('/static/certificate/turing_scholarship.png'),
   },
   {
-    name: '臺灣大學 進階軟體開發專題課程 (CSX 5001)',
     src: getRelativePath('/static/certificate/NTU_Pecu.png'),
   },
   {
-    name: '史丹佛大學 美國創業哲學論壇 2019',
     src: getRelativePath('/static/certificate/stanford.png'),
   },
   {
-    name: 'Berlerley',
     src: getRelativePath('/static/certificate/Berkeley.png'),
   },
   {
-    name: '商總會證書',
     src: getRelativePath('/static/certificate/ROC_COC.png'),
   },
 ];
@@ -178,6 +167,7 @@ const Examples: FC<{ id: string }> = ({ id }) => {
   const [open, setOpen] = useState<boolean>(false);
   const [openLightbox, setOpenLightbox] = useState<boolean>(false);
   const [photoIdx, setPhotoIdx] = useState<number>(0);
+  const { t } = useTranslation(i18nNamespace.Home);
   return (
     <Section id={id}>
       <ScrollAnimation
@@ -185,7 +175,7 @@ const Examples: FC<{ id: string }> = ({ id }) => {
         animateOnce
         style={{ width: '100%', textAlign: 'center' }}
       >
-        <Title>案例展示</Title>
+        <Title>{t('examples.title')}</Title>
       </ScrollAnimation>
       <AnimatedWrapper
         animateIn="fadeInUp"
@@ -203,7 +193,7 @@ const Examples: FC<{ id: string }> = ({ id }) => {
               setPhotoIdx(idx);
             }}
           >
-            <Name>{d.name}</Name>
+            <Name>{t(`examples.certificates.${idx}`)}</Name>
           </Certificate>
         ))}
       </AnimatedWrapper>
@@ -217,7 +207,7 @@ const Examples: FC<{ id: string }> = ({ id }) => {
               setPhotoIdx(idx);
             }}
           >
-            <Name>{d.name}</Name>
+            <Name>{t(`examples.certificates.${idx}`)}</Name>
           </Certificate>
         ))}
         {!open && <Shadow />}
@@ -232,7 +222,7 @@ const Examples: FC<{ id: string }> = ({ id }) => {
               setPhotoIdx(idx + 6);
             }}
           >
-            <Name>{d.name}</Name>
+            <Name>{t(`examples.certificates.${idx}`)}</Name>
           </Certificate>
         ))}
       </MoreInfoWrapper>
@@ -243,7 +233,7 @@ const Examples: FC<{ id: string }> = ({ id }) => {
       {openLightbox && (
         <Lightbox
           imagePadding={50}
-          imageTitle={certificates[photoIdx].name}
+          imageTitle={t(`examples.certificates.${photoIdx}`)}
           mainSrc={certificates[photoIdx].src}
           nextSrc={certificates[(photoIdx + 1) % certificates.length].src}
           prevSrc={

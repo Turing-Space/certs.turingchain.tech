@@ -6,6 +6,8 @@ import { getRelativePath } from '@/utils';
 import H1 from '@/components/H1';
 import ScrollInfo from '@/components/ScollInfo';
 import { media } from '@/utils/theme';
+import { useTranslation } from 'react-i18next';
+import { i18nNamespace } from '@/constants';
 
 const Text = styled.p`
   margin-bottom: 8px;
@@ -92,6 +94,7 @@ const BottomLogoWrapper = styled(ScrollAnimation)`
 `;
 
 const Home: FC<{ id: string }> = ({ id }) => {
+  const { t, i18n } = useTranslation(i18nNamespace.Home);
   return (
     <Section fullscreen id={id}>
       <CircleLeft
@@ -115,16 +118,23 @@ const Home: FC<{ id: string }> = ({ id }) => {
         />
       </ScrollAnimation>
       <TitleWrapper animateIn="fadeInUp" delay={400} offset={0}>
-        <Title>TuringCerts 圖靈證書</Title>
-        <Text className="en">Blockchain Certificate Ecosystem</Text>
-        <CNText className="cn"> 圖靈區塊鏈證書生態系</CNText>
+        <Title>
+          {t('home.title.en')}
+          {i18n.language === 'zh-TW' ? ` ${t('home.title.cn')}` : ''}
+        </Title>
+        <Text className="en">{t('home.subTitle.en')}</Text>
+        {i18n.language === 'zh-TW' && (
+          <CNText className="cn">{t('home.subTitle.cn')}</CNText>
+        )}
       </TitleWrapper>
       <MobileTitleWrapper animateIn="fadeInUp" delay={400} offset={0}>
         <Title>
-          TuringCerts <br />
-          <span className="cn">圖靈證書</span>
+          {t('home.title.en')} <br />
+          {i18n.language === 'zh-TW' && (
+            <span className="cn">{t('home.title.cn')}</span>
+          )}
         </Title>
-        <CNText className="cn"> 圖靈區塊鏈證書生態系</CNText>
+        <CNText>{t('home.mobileSubTitle')}</CNText>
       </MobileTitleWrapper>
       <BottomLogoWrapper animateIn="fadeInUp" delay={600} offset={0}>
         <SubLogo src={getRelativePath('/static/partners/Berkeley.png')} />

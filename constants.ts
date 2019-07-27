@@ -8,3 +8,9 @@ export const SITE_URL = 'www.0x1Certificate.com';
 export const FAVICON_PATH = getRelativePath('/static/favicon.ico');
 export const LARGE_ICON_PATH = getRelativePath('/static/large-icon.png');
 export const NAV_TITLE = 'nav title';
+
+export enum i18nNamespace {
+  Common = 'common',
+  Home = 'home',
+  Demo = 'demo',
+}

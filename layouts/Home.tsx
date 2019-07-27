@@ -1,11 +1,12 @@
 import Head from 'next/head';
+import { ThemeProvider } from 'styled-components';
+import { useTranslation } from 'react-i18next';
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import GlobalStyles from '@/themes/GlobalStyles';
 import NormalizeStyles from '@/themes/NormalizeStyles';
 import { SITE_TITLE } from '@/constants';
-import { ThemeProvider } from 'styled-components';
 
 type TProps = {
   title?: string;
@@ -16,12 +17,19 @@ const HomeLayout: React.FunctionComponent<TProps> = ({
   children,
   title = SITE_TITLE,
 }) => {
+  const { i18n } = useTranslation();
   return (
     <ThemeProvider
       theme={theme => {
         // dark theme
         theme.color = theme.colors.white;
         theme.background = theme.colors.backgroundBlack;
+
+        // language
+        theme.font =
+          i18n.language === 'en'
+            ? theme.fontFamily.SFText
+            : theme.fontFamily.NotoSansTC;
         return theme;
       }}
     >

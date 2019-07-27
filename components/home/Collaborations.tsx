@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Section from '@/components/Section';
@@ -6,6 +7,7 @@ import H2 from '@/components/H2';
 import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
 import ScrollInfo from '@/components/ScollInfo';
+import { i18nNamespace } from '@/constants';
 // import Button from '@/components/Button';
 
 const Title = styled(H2)`
@@ -196,6 +198,7 @@ const logos = [
 
 const Collaborations: FC<{ id: string }> = ({ id }) => {
   // const [open, setOpen] = useState<boolean>(false);
+  const { t } = useTranslation(i18nNamespace.Home);
   return (
     <Section id={id} justifyContent="flex-start" fullscreen>
       <ScrollAnimation
@@ -203,7 +206,7 @@ const Collaborations: FC<{ id: string }> = ({ id }) => {
         animateOnce
         style={{ width: '100%', textAlign: 'center' }}
       >
-        <Title>已協助發證機構</Title>
+        <Title>{t('collaborations.title')}</Title>
       </ScrollAnimation>
       <AnimatedWrapper animateIn="fadeIn" animateOnce delay={300}>
         {logos.map(logo => (

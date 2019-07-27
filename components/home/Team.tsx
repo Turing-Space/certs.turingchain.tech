@@ -134,8 +134,8 @@ const Team: FC<{ id: string }> = ({ id }) => {
           >
             <Avatar src="https://unsplash.it/300/720?gravity=center" />
             <InfoWrapper>
-              <Name className="cn">{member.name}</Name>
-              <PositionTitle className="cn">{member.title}</PositionTitle>
+              <Name>{member.name}</Name>
+              <PositionTitle>{member.title}</PositionTitle>
               <ShadowTitle>{member.shadowTitle}</ShadowTitle>
             </InfoWrapper>
           </MemberWrapper>

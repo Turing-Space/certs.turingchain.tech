@@ -7,6 +7,8 @@ import Description from '@/components/Description';
 import Button from '@/components/Button';
 import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
+import { useTranslation } from 'react-i18next';
+import { i18nNamespace } from '@/constants';
 
 const Bg = styled.div`
   position: absolute;
@@ -154,6 +156,7 @@ const MobileActionWrapper = styled(ScrollAnimation)`
 `;
 
 const Demo: FC<{ id: string }> = ({ id }) => {
+  const { t } = useTranslation(i18nNamespace.Home);
   return (
     <Section justifyContent="flex-start" fullscreen id={id}>
       <Bg>
@@ -171,10 +174,8 @@ const Demo: FC<{ id: string }> = ({ id }) => {
             animateOnce
             style={{ width: '100%' }}
           >
-            <InfoTitle>開啟新履歷世代！</InfoTitle>
-            <InfoDescription className="cn">
-              一機裝載所有教育相關證書，從在學成績、能力認證、線上課程、競賽獎項、至所有成就紀錄，完善區塊鏈秒速認證體驗，防偽真實，溯源查證，零學習曲線。
-            </InfoDescription>
+            <InfoTitle>{t('demo.title')}</InfoTitle>
+            <InfoDescription>{t('demo.description')}</InfoDescription>
           </ScrollAnimation>
           <ScrollAnimation
             animateIn="fadeIn"
@@ -183,17 +184,13 @@ const Demo: FC<{ id: string }> = ({ id }) => {
             offset={0}
           >
             {/* <Link href="/demo"> */}
-            <StyledButton
-              shadow
-              className="cn"
-              onClick={() => alert('敬請期待！')}
-            >
-              體驗網頁版 →
+            <StyledButton shadow onClick={() => alert(t('alertText'))}>
+              {t('demo.start')}
             </StyledButton>
             {/* </Link> */}
             <IconWrapper>
               <img
-                onClick={() => alert('敬請期待 ^_^')}
+                onClick={() => t('alertText')}
                 src={getRelativePath('/static/elements/logo-app-store.png')}
                 srcSet={`${getRelativePath(
                   '/static/elements/logo-app-store@2x.png',
@@ -202,7 +199,7 @@ const Demo: FC<{ id: string }> = ({ id }) => {
                 )} 3x`}
               />
               <img
-                onClick={() => alert('敬請期待 ^_^')}
+                onClick={() => t('alertText')}
                 src={getRelativePath('/static/elements/logo-google-play.png')}
                 srcSet={`${getRelativePath(
                   '/static/elements/logo-google-play@2x.png',
@@ -214,10 +211,8 @@ const Demo: FC<{ id: string }> = ({ id }) => {
           </ScrollAnimation>
         </InfoWrapper>
         <MobileHeader animateIn="fadeIn" animateOnce>
-          <InfoTitle>開啟新履歷世代！</InfoTitle>
-          <InfoDescription className="cn">
-            一機裝載所有教育相關證書，從在學成績、能力認證、線上課程、競賽獎項、至所有成就紀錄，完善區塊鏈秒速認證體驗，防偽真實，溯源查證，零學習曲線。
-          </InfoDescription>
+          <InfoTitle>{t('demo.title')}</InfoTitle>
+          <InfoDescription>{t('demo.description')}</InfoDescription>
         </MobileHeader>
         <MockWrapper animateIn="fadeIn" animateOnce delay={300}>
           <Mock
@@ -234,17 +229,13 @@ const Demo: FC<{ id: string }> = ({ id }) => {
           offset={0}
         >
           {/* <Link href="/demo"> */}
-          <StyledButton
-            shadow
-            className="cn"
-            onClick={() => alert('敬請期待！')}
-          >
-            體驗網頁版 →
+          <StyledButton shadow onClick={() => t('alertText')}>
+            {t('demo.start')}
           </StyledButton>
           {/* </Link> */}
           <IconWrapper>
             <img
-              onClick={() => alert('敬請期待 ^_^')}
+              onClick={() => t('alertText')}
               src={getRelativePath('/static/elements/logo-app-store.png')}
               srcSet={`${getRelativePath(
                 '/static/elements/logo-app-store@2x.png',
@@ -253,7 +244,7 @@ const Demo: FC<{ id: string }> = ({ id }) => {
               )} 3x`}
             />
             <img
-              onClick={() => alert('敬請期待 ^_^')}
+              onClick={() => t('alertText')}
               src={getRelativePath('/static/elements/logo-google-play.png')}
               srcSet={`${getRelativePath(
                 '/static/elements/logo-google-play@2x.png',
