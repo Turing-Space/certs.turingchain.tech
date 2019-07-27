@@ -99,7 +99,7 @@ const logos = [
   },
   {
     name: '聖荷西州立大學',
-    src: getRelativePath('/static/partners/san.svg'),
+    src: getRelativePath('/static/partners/san.png'),
     scale: 1,
   },
   {
@@ -149,8 +149,48 @@ const logos = [
   },
   {
     name: '',
+    src: getRelativePath('/static/partners/business.png'),
+    scale: 0.8,
+  },
+  {
+    name: '',
     src: getRelativePath('/static/partners/chimin.svg'),
     scale: 1.2,
+  },
+  {
+    name: '',
+    src: getRelativePath('/static/partners/ABC-Blockchain.png'),
+    scale: 1,
+  },
+  {
+    name: '',
+    src: getRelativePath('/static/partners/ACER.png'),
+    scale: 1,
+  },
+  {
+    name: '',
+    src: getRelativePath('/static/partners/angelhack.png'),
+    scale: 1,
+  },
+  {
+    name: '',
+    src: getRelativePath('/static/partners/BASF.png'),
+    scale: 1,
+  },
+  {
+    name: '',
+    src: getRelativePath('/static/partners/KPMG.png'),
+    scale: 1,
+  },
+  {
+    name: '',
+    src: getRelativePath('/static/partners/Maincoin.png'),
+    scale: 1,
+  },
+  {
+    name: '',
+    src: getRelativePath('/static/partners/yanmin.png'),
+    scale: 1,
   },
 ];
 
