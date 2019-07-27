@@ -1,0 +1,89 @@
+{
+  "alertText": "Coming soon... ^_^",
+  "start": "Start",
+  "header": {
+    "service": "Service",
+    "technology": "Technology Architecture",
+    "collaborations": "Collaborations",
+    "examples": "Showcases",
+    "contact": "Contact"
+  },
+  "footer": {
+    "title": "Contact Us"
+  },
+  "home": {
+    "title": {
+      "en": "TuringCerts",
+      "cn": "圖靈證書"
+    },
+    "subTitle": {
+      "cn": "圖靈區塊鏈證書生態系",
+      "en": "Blockchain Certificate Ecosystem"
+    },
+    "mobileSubTitle": "Blockchain Certificate Ecosystem"
+  },
+  "service": {
+    "title": "Blockchain Achievement Resume",
+    "description": "Through its novel blockchain technology, TuringCerts is incorruptible, traceable, cost-effective, and borderless, which redefines traditional educational certificates to create a sustainable academic records tracking. TuringCerts guarantees the 100% control of data for users with a rigorous privacy policy and strengthens the highest trust of source and true value of official authorized certificates.",
+    "icons": {
+      "0": "Personal Achievement Bookeeping",
+      "1": "W3C DID Decentral Identifier Protocol",
+      "2": "GDPR Principle of Least Privilege"
+    }
+  },
+  "technology": {
+    "title": "Silicon Valley Technology Architecture",
+    "hidden": "Hidden ",
+    "more": "More ",
+    "info": "Info",
+    "subs": {
+      "0": {
+        "title": "Foundamental Phase",
+        "content": "TuringCerts in the foundamental phase are executed on the second generation blockchain - Ethereum, and are supervised and operated by multiple sophisticated Smart Contracts. IPFS is leveraged to parallelly keep huge-sizing digital images of certificates."
+      },
+      "1": {
+        "title": "Advanced Stage",
+        "content": "TuringCerts has reached a strategic collaboration with National Cheng Kung University and BiiLabs on technical infrastructures. TuringCerts is actively cooperating with the world-renowned IOTA Foundation for in-depth global adoptions. At this stage, TuringCerts will be migrated to the IOTA blockchain, with connection to the open source TangelID acceleration layer, in order to serve a extremely low commission fee and latency."
+      }
+    },
+    "question": {
+      "0": {
+        "title": "(1) 如何確保證書唯一真實性？",
+        "content": "TuringCerts 將使用全球網際網路標準 W3C 提出之 DID 分布式身份標準，賦予每位證書持有者獨特唯一之身份證明，另以哈希值阻擋內容竄改或謬誤，除防偽特徵為更有利於證書的長期保管與追蹤。"
+      },
+      "1": {
+        "title": "(2) 如何確實保護使用者隱私？",
+        "content": "TuringCerts 採用 MIT Media Lab 於早期開源證書體系 BlockCerts 所考量的“最小權限原則”，僅授與認證方最少但充足的認證資源，以RSA非對稱加密反向保護用戶提供資料極高隱私性。"
+      },
+      "2": {
+        "title": "(3) 如何讓 TuringCerts 在全球保有領先地位？",
+        "content": "TuringCerts 將由創辦人於 UC Berkeley Blockchain Lab 的加速器持續吸收並整合矽谷區塊鏈圈內的技術創新，保持其安全性與應用特性在全球的技術與落地領先地位，並藉由香港與台灣的教育體系進行有效社會實驗案例。"
+      }
+    }
+  },
+  "demo": {
+    "title": "The New Era of Resumes!",
+    "description": "All certificates in one place. From academic achievement, competency certification, online courses, competition & awards, to all worth-noting records. TuringCerts improve the certification experience, ensuring the characteristics of anti-counterfeit, traceability, and minimized learning curve.",
+    "start": "Start"
+  },
+  "collaborations": {
+    "title": "Collaboration Issuer"
+  },
+  "examples": {
+    "title": "Showcases",
+    "certificates": {
+      "0": "國際 GBP 區塊鏈能力考核證書",
+      "1": "加州柏克萊 X 香港科大 X Flowchain 區塊鏈集訓",
+      "2": "國際駭客松競賽 AngelHack 舊金山場 2019",
+      "3": "德國柏林 IOTA 基金會區塊鏈論壇 - 臺北場 2019",
+      "4": "矽谷最大區塊鏈社群 ABC Crypto Night",
+      "5": "臺北科技大學 區塊鏈微學分課程 2019",
+      "6": "美國矽谷德屬化工巨頭 BASF 區塊鏈論壇 2019",
+      "7": "圖靈鏈科技 區塊鏈教育獎助學金計畫 2019",
+      "8": "臺灣大學 進階軟體開發專題課程 (CSX 5001)",
+      "9": "史丹佛大學 美國創業哲學論壇 2019",
+      "10": "柏克萊大學",
+      "11": "商總會證書"
+    }
+  }
+}
