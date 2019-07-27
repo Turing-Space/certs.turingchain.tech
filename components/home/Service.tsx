@@ -130,7 +130,7 @@ const Service: FC<{ id: string }> = ({ id }) => {
               )} 3x`}
             />
           </Icon>
-          <IconDescription>最高隱私保留演算法</IconDescription>
+          <IconDescription>GDPR 最高隱私保留演算法</IconDescription>
         </IconWrapper>
       </IconGroupWrapper>
       <ScrollInfo />

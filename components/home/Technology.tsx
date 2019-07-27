@@ -119,7 +119,7 @@ const Technology: FC<{ id: string }> = ({ id }) => {
         animateIn="fadeInUp"
         style={{ width: '100%', textAlign: 'center' }}
       >
-        <Title>矽谷技術架構</Title>
+        <Title>矽谷 X 柏克萊頂尖技術架構</Title>
       </ScrollAnimation>
       <AnimatedWrapper animateOnce animateIn="fadeInUp" delay={300} offset={0}>
         <SubTitle>基礎階段</SubTitle>

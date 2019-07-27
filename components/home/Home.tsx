@@ -116,7 +116,7 @@ const Home: FC<{ id: string }> = ({ id }) => {
       </ScrollAnimation>
       <TitleWrapper animateIn="fadeInUp" delay={400} offset={0}>
         <Title>TuringCerts 圖靈證書</Title>
-        <Text className="en">BlockChain Certificate Ecosystem</Text>
+        <Text className="en">Blockchain Certificate Ecosystem</Text>
         <CNText className="cn"> 圖靈區塊鏈證書生態系</CNText>
       </TitleWrapper>
       <MobileTitleWrapper animateIn="fadeInUp" delay={400} offset={0}>
