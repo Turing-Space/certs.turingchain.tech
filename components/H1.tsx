@@ -5,7 +5,7 @@ export default styled.h1`
   font-family: ${p => p.theme.fontFamily.SFDisplay};
   font-weight: 800;
   font-size: 3rem;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
 
   ${media('tablet')} {
     font-size: ${p => p.theme.fontSize.h1};

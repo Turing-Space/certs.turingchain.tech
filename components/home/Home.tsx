@@ -18,7 +18,7 @@ const CNText = styled(Text)`
 `;
 
 const Logo = styled.img`
-  height: 20vh;
+  height: 23vh;
 `;
 
 const Title = styled(H1)`
@@ -108,10 +108,10 @@ const Home: FC<{ id: string }> = ({ id }) => {
       />
       <ScrollAnimation animateIn="fadeInUp">
         <Logo
-          src={getRelativePath('/static/logo/logo-0-x-1-light.png')}
+          src={getRelativePath('/static/logo/logo-tc-title.png')}
           srcSet={`${getRelativePath(
-            '/static/logo/logo-0-x-1-light@2x.png',
-          )} 2x, ${getRelativePath('/static/logo/logo-0-x-1-light@3x.png')} 3x`}
+            '/static/logo/logo-tc-title@2x.png',
+          )} 2x, ${getRelativePath('/static/logo/logo-tc-title@3x.png')} 3x`}
         />
       </ScrollAnimation>
       <TitleWrapper animateIn="fadeInUp" delay={400} offset={0}>
