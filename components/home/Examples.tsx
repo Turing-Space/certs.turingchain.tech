@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Lightbox from 'react-image-lightbox';
 import Section from '@/components/Section';
+import Button from '@/components/Button';
 import H2 from '@/components/H2';
 import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
@@ -16,36 +17,48 @@ const Title = styled(H2)`
   margin-top: 14vh;
 `;
 
-// const Wrapper = styled.div`
-//   position: relative;
-//   display: flex;
-//   margin-top: 3%;
-//   justify-content: space-between;
-//   flex-wrap: wrap;
-//   width: 90%;
-//   ${media('desktop')} {
-//     width: 60%;
-//   }
-// `;
-
-const AnimatedWrapper = styled(ScrollAnimation)`
+const Wrapper = styled.div`
   position: relative;
   display: flex;
   margin-top: 3%;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 90%;
+`;
+
+const MobileWrapper = styled(ScrollAnimation)`
+  position: relative;
+  display: flex;
+  margin-top: 3%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  ${media('desktop')} {
+    display: none;
+  }
+`;
+
+const AnimatedWrapper = styled(ScrollAnimation)`
+  position: relative;
+  display: none;
+  margin-top: 3%;
   justify-content: space-between;
   flex-wrap: wrap;
   ${media('desktop')} {
     width: 60%;
+    display: flex;
   }
 `;
 
-// const MoreInfoWrapper = styled(Wrapper)<{ open: boolean }>`
-//   margin: 0;
-//   overflow: hidden;
-//   max-height: ${p => (p.open ? '100vh' : 0)};
-//   transition: max-height ease-in 0.3s;
-// `;
+const MoreInfoWrapper = styled(Wrapper)<{ open: boolean }>`
+  margin: 0;
+  overflow: hidden;
+  max-height: ${p => (p.open ? '100vh' : 0)};
+  transition: max-height ease-in 0.3s;
+  ${media('desktop')} {
+    display: none;
+  }
+`;
 
 const Name = styled.div`
   will-change: transform;
@@ -94,23 +107,21 @@ const Certificate = styled.div<{ src: string }>`
   }
 `;
 
-// const Shadow = styled.div`
-//   position: absolute;
-//   width: 120%;
-//   height: 12vh;
-//   bottom: 0;
-//   left: -10%;
-//   background: linear-gradient(to bottom, rgba(22, 22, 22, 0), #161616);
+const Shadow = styled.div`
+  position: absolute;
+  width: 120%;
+  height: 12vh;
+  bottom: 0;
+  left: -10%;
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0), #161616);
+`;
 
-//   ${media('desktop')} {
-//     bottom: -3vh;
-//     height: 18vh;
-//   }
-// `;
-
-// const StyledButton = styled(Button)`
-//   margin: 3% 0 5%;
-// `;
+const StyledButton = styled(Button)`
+  margin: 3% 0 5%;
+  ${media('desktop')} {
+    display: none;
+  }
+`;
 
 const certificates: TData[] = [
   {
@@ -164,7 +175,7 @@ const certificates: TData[] = [
 ];
 
 const Examples: FC<{ id: string }> = ({ id }) => {
-  // const [open, setOpen] = useState<boolean>(true);
+  const [open, setOpen] = useState<boolean>(false);
   const [openLightbox, setOpenLightbox] = useState<boolean>(false);
   const [photoIdx, setPhotoIdx] = useState<number>(0);
   return (
@@ -195,9 +206,23 @@ const Examples: FC<{ id: string }> = ({ id }) => {
             <Name>{d.name}</Name>
           </Certificate>
         ))}
-        {/* {!open && <Shadow />} */}
       </AnimatedWrapper>
-      {/* <MoreInfoWrapper open={open}>
+      <MobileWrapper animateIn="fadeInUp" animateOnce offset={0} delay={100}>
+        {certificates.slice(0, 6).map((d, idx) => (
+          <Certificate
+            key={d.src}
+            src={d.src}
+            onClick={() => {
+              setOpenLightbox(true);
+              setPhotoIdx(idx);
+            }}
+          >
+            <Name>{d.name}</Name>
+          </Certificate>
+        ))}
+        {!open && <Shadow />}
+      </MobileWrapper>
+      <MoreInfoWrapper open={open}>
         {certificates.slice(6).map((d, idx) => (
           <Certificate
             key={d.src}
@@ -213,7 +238,7 @@ const Examples: FC<{ id: string }> = ({ id }) => {
       </MoreInfoWrapper>
       <StyledButton onClick={() => setOpen(p => !p)}>
         {open ? '隱藏' : '更多'}案例
-      </StyledButton> */}
+      </StyledButton>
 
       {openLightbox && (
         <Lightbox
