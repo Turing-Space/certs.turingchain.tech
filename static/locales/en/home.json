@@ -3,7 +3,7 @@
   "start": "Start",
   "header": {
     "service": "Service",
-    "technology": "Technology Architecture",
+    "technology": "Technology",
     "collaborations": "Collaborations",
     "examples": "Showcases",
     "contact": "Contact"
@@ -27,12 +27,12 @@
     "description": "Through its novel blockchain technology, TuringCerts is incorruptible, traceable, cost-effective, and borderless, which redefines traditional educational certificates to create a sustainable academic records tracking. TuringCerts guarantees the 100% control of data for users with a rigorous privacy policy and strengthens the highest trust of source and true value of official authorized certificates.",
     "icons": {
       "0": "Personal Achievement Bookeeping",
-      "1": "W3C DID Decentral Identifier Protocol",
+      "1": "W3C DID Protocol",
       "2": "GDPR Principle of Least Privilege"
     }
   },
   "technology": {
-    "title": "Silicon Valley Technology Architecture",
+    "title": "Technology Architecture",
     "hidden": "Hidden ",
     "more": "More ",
     "info": "Info",
