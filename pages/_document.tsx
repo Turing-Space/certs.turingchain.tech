@@ -3,6 +3,8 @@ import { ServerStyleSheet } from 'styled-components';
 
 import Meta from '@/layouts/_meta';
 
+const GA_ID = process.env.GA_ID;
+
 // @ts-ignore
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: any) {
@@ -30,10 +32,35 @@ export default class MyDocument extends Document {
       sheet.seal();
     }
   }
+
+  setGoogleTags() {
+    return {
+      __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', ${GA_ID});
+      `,
+    };
+  }
+
   public render() {
+    const isProduction = process.env.NODE_ENV === 'production';
+
     return (
       <Html lang={this.props.__NEXT_DATA__.props.initialLanguage}>
         <Head>
+          {isProduction && (
+            <>
+              <script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              />
+              <script dangerouslySetInnerHTML={this.setGoogleTags()} />
+            </>
+          )}
+
           <Meta />
         </Head>
         <body>

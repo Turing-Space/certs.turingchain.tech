@@ -15,3 +15,5 @@ export const GITHUB =
   })();
 
 export const PROJ_NAME = env('PROJ_NAME');
+
+export const PRODUCTION = process.env.NODE_ENV === 'production';
