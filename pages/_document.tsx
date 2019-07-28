@@ -41,6 +41,7 @@ export default class MyDocument extends Document {
         gtag('js', new Date());
       
         gtag('config', '${GA_ID}');
+        console.log('gtag start!');
       `,
     };
   }

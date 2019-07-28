@@ -19,7 +19,7 @@ script:
 - touch out/CNAME
 - echo "certs.turingchain.tech" > out/CNAME
 env:
-- DEPLOY_ENV=production PROJ_NAME=certs.turingchain.tech NODE_ENV=production
+- DEPLOY_ENV=production PROJ_NAME=certs.turingchain.tech
 deploy:
   provider: pages
   skip_cleanup: true
