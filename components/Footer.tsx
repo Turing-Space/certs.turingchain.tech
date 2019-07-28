@@ -5,6 +5,7 @@ import H2 from '@/components/H2';
 import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
 import { i18nNamespace } from '@/constants';
+import { trackOutboundLink } from '@/utils/gtag';
 
 const Wrapper = styled.footer`
   position: relative;
@@ -125,7 +126,13 @@ const Footer: FC = () => {
               )} 2x, ${getRelativePath('/static/icon/icon-mail@3x.png')} 3x`}
             />
           </a>
-          <a href="https://www.facebook.com/turingcerts/" target="_blank">
+          <a
+            href="https://www.facebook.com/turingcerts/"
+            target="_blank"
+            onClick={() =>
+              trackOutboundLink('https://www.facebook.com/turingcerts/')
+            }
+          >
             <img
               src={getRelativePath('/static/icon/icon-fb.png')}
               srcSet={`${getRelativePath(
@@ -136,6 +143,11 @@ const Footer: FC = () => {
           <a
             href="https://www.linkedin.com/company/turing-chain-limited/"
             target="_blank"
+            onClick={() =>
+              trackOutboundLink(
+                'https://www.linkedin.com/company/turing-chain-limited/',
+              )
+            }
           >
             <img
               src={getRelativePath('/static/icon/icon-linkedin.png')}

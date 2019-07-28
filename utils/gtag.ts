@@ -15,3 +15,12 @@ export function trackPageView(url: string) {
     }
   }
 }
+
+export function trackOutboundLink(url: string) {
+  // @ts-ignore
+  window.gtag('event', 'click', {
+    event_category: 'outbound',
+    event_label: url,
+    transport_type: 'beacon',
+  });
+}

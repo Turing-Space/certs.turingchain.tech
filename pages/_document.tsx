@@ -40,7 +40,7 @@ export default class MyDocument extends Document {
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
       
-        gtag('config', ${GA_ID});
+        gtag('config', '${GA_ID}');
       `,
     };
   }
