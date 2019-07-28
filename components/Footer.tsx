@@ -125,7 +125,7 @@ const Footer: FC = () => {
               )} 2x, ${getRelativePath('/static/icon/icon-mail@3x.png')} 3x`}
             />
           </a>
-          <a href="https://www.facebook.com/0x1certificate/" target="_blank">
+          <a href="https://www.facebook.com/turingcerts/" target="_blank">
             <img
               src={getRelativePath('/static/icon/icon-fb.png')}
               srcSet={`${getRelativePath(

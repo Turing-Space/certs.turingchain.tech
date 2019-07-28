@@ -184,7 +184,7 @@ const MobileHeader: FC<TProps> = ({ open, setOpen }) => {
                 setOpenLanguage(false);
               }}
             >
-              {t('common:language.zh-TW')}
+              <span style={{ marginRight: '.5rem' }}>(ZH)</span>中文
             </li>
             <li
               className="small"
@@ -193,7 +193,7 @@ const MobileHeader: FC<TProps> = ({ open, setOpen }) => {
                 setOpenLanguage(false);
               }}
             >
-              {t('common:language.en')}
+              <span style={{ marginRight: '.5rem' }}>(EN)</span>English
             </li>
           </>
         )}

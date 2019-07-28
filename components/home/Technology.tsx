@@ -166,7 +166,7 @@ const Technology: FC<{ id: string }> = ({ id }) => {
       }
 
       <StyledButton onClick={() => setOpen(p => !p)}>
-        {open ? t('technology.hidden') : t('technology.more')}{' '}
+        {open ? t('technology.hidden') : t('technology.more')}
         {t('technology.info')}
       </StyledButton>
     </Section>

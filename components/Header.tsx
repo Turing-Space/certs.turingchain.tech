@@ -126,12 +126,18 @@ const LanguageChooseWrapper = styled(animated.div)`
   background: ${p => p.theme.background};
 
   > div {
+    display: flex;
     width: 100%;
-    padding: 0.5rem 0.25rem;
-    text-align: center;
+    padding: 0.5rem;
     &:hover {
       color: ${p => p.theme.colors.white};
     }
+  }
+
+  .lang-prefix {
+    width: 30%;
+    text-align: center;
+    margin-right: 5px;
   }
 `;
 
@@ -184,10 +190,16 @@ const Header: SFC = () => {
             <div className="triangle" />
             <LanguageChooseWrapper style={languageWrapperStyle}>
               <div onClick={() => i18n.changeLanguage('zh-TW')}>
-                <p>{t(`common:language.zh-TW`)}</p>
+                <div className="lang-prefix">
+                  <p>(ZH)</p>
+                </div>
+                <p>中文</p>
               </div>
               <div onClick={() => i18n.changeLanguage('en')}>
-                <p>{t(`common:language.en`)}</p>
+                <div className="lang-prefix">
+                  <p>(EN)</p>
+                </div>
+                <p>English</p>
               </div>
             </LanguageChooseWrapper>
           </LanguageWrapper>
