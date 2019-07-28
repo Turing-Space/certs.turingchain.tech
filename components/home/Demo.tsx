@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import Link from 'next/link';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
 import H2 from '@/components/H2';
@@ -189,9 +190,9 @@ const Demo: FC<{ id: string }> = ({ id }) => {
             delay={500}
             offset={0}
           >
-            <StyledButton shadow onClick={() => alert(t('alertText'))}>
-              {t('demo.start')}
-            </StyledButton>
+            <Link href="/demo">
+              <StyledButton shadow>{t('demo.start')}</StyledButton>
+            </Link>
             <IconWrapper>
               <img
                 onClick={() => t('alertText')}

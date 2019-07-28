@@ -13,6 +13,7 @@ const theme: Theme = {
     smokyBlack: '#424242',
     backgroundBlack: '#161616',
     backgroundWhite: '#fbfbfb',
+    blue: '#0035ad',
   },
 
   borderRadius: '6px',

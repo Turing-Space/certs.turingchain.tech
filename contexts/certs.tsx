@@ -27,7 +27,7 @@ const defaultCerts: TCert[] = [
     pin: true,
     ipfs: '1',
     timestamp: 1564133361,
-    progress: [true, false, false, false, false],
+    progress: [true, true, true, true, true],
   },
   {
     issuer: '國立臺灣大學',

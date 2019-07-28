@@ -5,8 +5,9 @@ import { FaShareSquare, FaCheck } from 'react-icons/fa';
 import Modal from 'react-modal';
 
 import { TCert } from '@/contexts/certs';
-import { getRelativePath } from '@/utils';
 import theme from '@/themes/theme';
+
+import VerifiedProgressChart from './VerifiedProgressChart';
 
 const Wrapper = styled.div`
   display: flex;
@@ -21,7 +22,7 @@ const CertWrapper = styled.div`
   width: 31%;
   margin: 0 1.75% 3%;
   background: ${p => p.theme.colors.white};
-  padding: 1em 1.5em;
+  padding: 2em 1.5em;
   font-weight: 400;
   border-radius: 10px;
   box-shadow: 0px 0px 15px 0px rgb(0, 0, 0, 0.1);
@@ -63,13 +64,6 @@ const CertCover = styled.div<{ src: string }>`
   margin-bottom: 1em;
 `;
 
-const Icon = styled.img`
-  position: absolute;
-  width: 2em;
-  bottom: 1em;
-  right: 1.5em;
-`;
-
 const PinIcon = styled(TiPin)`
   position: absolute;
   top: 1em;
@@ -77,6 +71,7 @@ const PinIcon = styled(TiPin)`
 `;
 
 const ModalWrapper = styled.div`
+  position: relative;
   width: 35vw;
   min-width: 300px;
   display: flex;
@@ -182,13 +177,18 @@ const Progress = styled.div<{ success: boolean }>`
     border-radius: 50%;
     width: 1.2em;
     height: 1.2em;
-    background-color: ${p => (p.success ? '#0035ad' : '#bdbdbd')};
+    background-color: ${p => (p.success ? p.theme.colors.blue : '#bdbdbd')};
     margin-right: 1em;
     margin-top: 3px;
   }
 `;
 
-const progress = [
+const SmallVerifiedProgressChart = styled(VerifiedProgressChart)`
+  bottom: 1em;
+  right: 1.5em;
+`;
+
+const progressMap = [
   {
     key: 'connect',
     name: 'Connected To The Blockchain',
@@ -219,26 +219,36 @@ type TProps = {
 const Certs: FC<TProps> = ({ certs, updateCert }) => {
   const [openIdx, setOpenIdx] = useState<number>(-1);
   const selectedCert = certs[openIdx];
+  let selectedProgressPercent = 0;
+
+  if (selectedCert) {
+    selectedProgressPercent = Math.round(
+      (selectedCert.progress.reduce((acc, cur) => Number(cur) + acc, 0) / 5) *
+        100,
+    );
+  }
 
   return (
     <Wrapper>
-      {certs.map((cert, idx) => (
-        <CertWrapper key={cert.ipfs} onClick={() => setOpenIdx(idx)}>
-          <CertCover src={cert.coverUri} />
-          <p className="issuer">{cert.issuer}</p>
-          <p className="name">{cert.name}</p>
-          <p className="create-data">June 2019</p>
-          <Icon
-            src={getRelativePath('/static/icon/icon-certicheck.png')}
-            srcSet={`${getRelativePath(
-              '/static/icon/icon-certicheck@2x.png',
-            )} 2x, ${getRelativePath(
-              '/static/icon/icon-certicheck@3x.png',
-            )} 3x`}
-          />
-          {cert.pin && <PinIcon color={theme.colors.primary} size="1.1em" />}
-        </CertWrapper>
-      ))}
+      {certs.map((cert, idx) => {
+        const progressPercent = Math.round(
+          (cert.progress.reduce((acc, cur) => Number(cur) + acc, 0) / 5) * 100,
+        );
+        return (
+          <CertWrapper key={cert.ipfs} onClick={() => setOpenIdx(idx)}>
+            <CertCover src={cert.coverUri} />
+            <p className="issuer">{cert.issuer}</p>
+            <p className="name">{cert.name}</p>
+            <p className="create-data">June 2019</p>
+            <SmallVerifiedProgressChart
+              size={50}
+              verified={cert.verified}
+              progress={progressPercent}
+            />
+            {cert.pin && <PinIcon color={theme.colors.primary} size="1.3em" />}
+          </CertWrapper>
+        );
+      })}
       {openIdx >= 0 && (
         <Modal
           className="ReactModal__Cert_Content"
@@ -271,7 +281,6 @@ const Certs: FC<TProps> = ({ certs, updateCert }) => {
                 <StyledModalIcon
                   pin={selectedCert.pin}
                   onClick={() => {
-                    console.log(123);
                     updateCert(selectedCert.ipfs, {
                       ...selectedCert,
                       pin: !selectedCert.pin,
@@ -286,7 +295,7 @@ const Certs: FC<TProps> = ({ certs, updateCert }) => {
               </div>
             </ModalProgressTitleWrapper>
             <div>
-              {progress.map((p, idx) => (
+              {progressMap.map((p, idx) => (
                 <Progress key={p.key} success={selectedCert.progress[idx]}>
                   <div className="icon-wrapper">
                     <FaCheck size=".8em" color="white" />
@@ -295,6 +304,10 @@ const Certs: FC<TProps> = ({ certs, updateCert }) => {
                 </Progress>
               ))}
             </div>
+            <VerifiedProgressChart
+              verified={selectedCert.verified}
+              progress={selectedProgressPercent}
+            />
           </ModalWrapper>
         </Modal>
       )}

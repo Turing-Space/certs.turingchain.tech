@@ -1,4 +1,5 @@
 import { SFC, useState } from 'react';
+import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import styled, { css } from 'styled-components';
 import { animated, useSpring } from 'react-spring';
@@ -173,8 +174,10 @@ const Header: SFC = () => {
             {t('header.contact')}
           </li>
 
-          <li onClick={() => alert('敬請期待！')}>
-            <StyledButton>{t('start')}</StyledButton>
+          <li>
+            <Link href="/demo">
+              <StyledButton>{t('start')}</StyledButton>
+            </Link>
           </li>
           <LanguageWrapper
             open={openLanguage}

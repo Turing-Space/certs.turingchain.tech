@@ -13,6 +13,7 @@ export interface Theme {
     smokyBlack: string;
     backgroundBlack: string;
     backgroundWhite: string;
+    blue: string;
   };
 
   borderRadius: string;
