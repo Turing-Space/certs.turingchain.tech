@@ -7,6 +7,7 @@ export default createGlobalStyle`
   @font-face {
     font-family: "SF Display";
     font-weight: 800;
+    font-display: swap;
     src: url(${getRelativePath(
       '/static/font/SF-UI-Display-Heavy.otf',
     )}) format("opentype");
@@ -16,6 +17,7 @@ export default createGlobalStyle`
   @font-face {
     font-family: "SF Display";
     font-weight: 700;
+    font-display: swap;
     src: url(${getRelativePath(
       '/static/font/SF-UI-Display-Bold.otf',
     )}) format("opentype");
@@ -25,6 +27,7 @@ export default createGlobalStyle`
   @font-face {
     font-family: "SF Text";
     font-weight: 500;
+    font-display: swap;
     src: url(${getRelativePath(
       '/static/font/SF-UI-Text-Medium.otf',
     )}) format("opentype");
@@ -34,33 +37,10 @@ export default createGlobalStyle`
   @font-face {
     font-family: "SF Text";
     font-weight: 400;
+    font-display: swap;
     src: url(${getRelativePath(
       '/static/font/SF-UI-Text-Regular.otf',
     )}) format("opentype");
-  }
-
-  @font-face {
-    font-family: 'Noto Sans TC';
-    font-weight: 300;
-    src: url("https://fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff2") format('woff2'),
-        url("https://fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff") format('woff'),
-        url("https://fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.otf") format('opentype');
-  }
-
-  @font-face {
-    font-family: 'Noto Sans TC';
-    font-weight: 400;
-    src: url("https://fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff2") format('woff2'),
-        url("https://fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff") format('woff'),
-        url("https://fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.otf") format('opentype');
-  }
-
-  @font-face {
-    font-family: 'Noto Sans TC';
-    font-weight: 500;
-    src: url("https://fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.woff2") format('woff2'),
-        url("https://fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.woff") format('woff'),
-        url("https://fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.otf") format('opentype');
   }
 
   * {
