@@ -85,7 +85,7 @@ const Certificate = styled.div<{ src: string }>`
   position: relative;
   width: 47%;
   height: 22vh;
-  background: url(${p => p.src}) center top no-repeat/cover;
+  background: transparent center top no-repeat/cover;
   margin-bottom: 3%;
   overflow: hidden;
   transform: scale(1);
@@ -126,40 +126,40 @@ const StyledButton = styled(Button)`
 
 const certificates: TData[] = [
   {
-    src: getRelativePath('/static/certificate/GBP.png'),
+    src: require('/static/certificate/GBP.png'),
   },
   {
-    src: getRelativePath('/static/certificate/flowchain.png'),
+    src: require('/static/certificate/flowchain.png'),
   },
   {
-    src: getRelativePath('/static/certificate/AngelHackCerts.png'),
+    src: require('/static/certificate/AngelHackCerts.png'),
   },
   {
-    src: getRelativePath('/static/certificate/IOTA_Dominik.png'),
+    src: require('/static/certificate/IOTA_Dominik.png'),
   },
   {
-    src: getRelativePath('/static/certificate/ABC_Crypto_Night.png'),
+    src: require('/static/certificate/ABC_Crypto_Night.png'),
   },
   {
-    src: getRelativePath('/static/certificate/0x1Academy.jpg'),
+    src: require('/static/certificate/0x1Academy.jpg'),
   },
   {
-    src: getRelativePath('/static/certificate/BASF.png'),
+    src: require('/static/certificate/BASF.png'),
   },
   {
-    src: getRelativePath('/static/certificate/turing_scholarship.png'),
+    src: require('/static/certificate/turing_scholarship.png'),
   },
   {
-    src: getRelativePath('/static/certificate/NTU_Pecu.png'),
+    src: require('/static/certificate/NTU_Pecu.png'),
   },
   {
-    src: getRelativePath('/static/certificate/stanford.png'),
+    src: require('/static/certificate/stanford.png'),
   },
   {
-    src: getRelativePath('/static/certificate/Berkeley.png'),
+    src: require('/static/certificate/Berkeley.png'),
   },
   {
-    src: getRelativePath('/static/certificate/ROC_COC.png'),
+    src: require('/static/certificate/ROC_COC.png'),
   },
 ];
 
@@ -187,12 +187,21 @@ const Examples: FC<{ id: string }> = ({ id }) => {
         {certificates.map((d, idx) => (
           <Certificate
             key={d.src}
-            src={d.src}
+            src={d.src.placeholder}
             onClick={() => {
               setOpenLightbox(true);
               setPhotoIdx(idx);
             }}
           >
+            <img
+              src={d.src.src}
+              srcSet={d.src.srcSet}
+              style={{
+                position: 'relative',
+                width: '100%',
+                minHeight: '100%',
+              }}
+            />
             <Name>{t(`examples.certificates.${idx}`)}</Name>
           </Certificate>
         ))}

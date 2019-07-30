@@ -5,6 +5,7 @@ const Dotenv = require('dotenv-webpack');
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
+const withOptimizedImages = require('next-optimized-images');
 
 require('dotenv').config();
 
@@ -17,75 +18,92 @@ if (typeof require !== 'undefined') {
 }
 
 module.exports = withBundleAnalyzer(
-  withTypescript({
-    exportPathMap: function() {
-      return {
-        '/': { page: '/' },
-        '/demo': { page: '/demo' },
-      };
-    },
-    assetPrefix: GITHUB ? `/${PROJ_NAME}/` : '',
-    analyzeServer: ['server', 'both'].includes(process.env.BUNDLE_ANALYZE),
-    analyzeBrowser: ['browser', 'both'].includes(process.env.BUNDLE_ANALYZE),
-    bundleAnalyzerConfig: {
-      server: {
-        analyzerMode: 'static',
-        reportFilename: '../bundles/server.html',
+  withTypescript(
+    withOptimizedImages({
+      exportPathMap: function() {
+        return {
+          '/': { page: '/' },
+          '/demo': { page: '/demo' },
+        };
       },
-      browser: {
-        analyzerMode: 'static',
-        reportFilename: '../bundles/client.html',
+      assetPrefix: GITHUB ? `/${PROJ_NAME}/` : '',
+      analyzeServer: ['server', 'both'].includes(process.env.BUNDLE_ANALYZE),
+      analyzeBrowser: ['browser', 'both'].includes(process.env.BUNDLE_ANALYZE),
+      bundleAnalyzerConfig: {
+        server: {
+          analyzerMode: 'static',
+          reportFilename: '../bundles/server.html',
+        },
+        browser: {
+          analyzerMode: 'static',
+          reportFilename: '../bundles/client.html',
+        },
       },
-    },
-    webpack: (config, { isServer, buildId, dev }) => {
-      config.plugins = config.plugins || [];
-      config.resolve.extensions = config.resolve.extensions.concat([
-        '.mjs',
-        '.less',
-      ]);
 
-      config.plugins = [
-        ...config.plugins,
+      // next-images: default values
+      // but you can overwrite them here with any valid value you want.
+      inlineImageLimit: 8192,
+      imagesFolder: 'images',
+      imagesName: '[name]-[hash].[ext]',
+      handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
+      optimizeImages: true,
+      optimizeImagesInDev: false,
+      defaultImageLoader: 'responsive-loader',
+      mozjpeg: {
+        quality: 80,
+      },
+      optipng: {
+        optimizationLevel: 3,
+      },
+      pngquant: false,
+      gifsicle: {
+        interlaced: true,
+        optimizationLevel: 3,
+      },
+      svgo: {
+        plugins: [{ removeComments: true }],
+      },
+      webp: {
+        preset: 'default',
+        quality: 75,
+      },
+      responsive: {
+        placeholder: true,
+      },
 
-        // Read the .env file
-        new Dotenv({
-          path: path.join(__dirname, '.env'),
-          systemvars: true,
-        }),
-      ];
+      webpack: (config, { isServer, buildId, dev }) => {
+        config.plugins = config.plugins || [];
+        config.resolve.extensions = config.resolve.extensions.concat([
+          '.mjs',
+          '.less',
+        ]);
 
-      const originalEntry = config.entry;
-      config.entry = async () => {
-        const entries = await originalEntry();
+        config.plugins = [
+          ...config.plugins,
 
-        if (
-          entries['main.js'] &&
-          !entries['main.js'].includes('./polyfill.js')
-        ) {
-          entries['main.js'].unshift('./polyfill.js');
-        }
+          // Read the .env file
+          new Dotenv({
+            path: path.join(__dirname, '.env'),
+            systemvars: true,
+          }),
+        ];
 
-        return entries;
-      };
+        const originalEntry = config.entry;
+        config.entry = async () => {
+          const entries = await originalEntry();
 
-      config.module.rules.push({
-        test: /\.svg$/,
-        use: ['@svgr/webpack', 'url-loader'],
-      });
+          if (
+            entries['main.js'] &&
+            !entries['main.js'].includes('./polyfill.js')
+          ) {
+            entries['main.js'].unshift('./polyfill.js');
+          }
 
-      config.module.rules.push({
-        test: /\.(png|jpg|gif)$/i,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192,
-            },
-          },
-        ],
-      });
+          return entries;
+        };
 
-      return config;
-    },
-  }),
+        return config;
+      },
+    }),
+  ),
 );
