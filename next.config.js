@@ -48,7 +48,6 @@ module.exports = withBundleAnalyzer(
       handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
       optimizeImages: true,
       optimizeImagesInDev: false,
-      defaultImageLoader: 'responsive-loader',
       mozjpeg: {
         quality: 80,
       },
@@ -69,6 +68,7 @@ module.exports = withBundleAnalyzer(
       },
       responsive: {
         placeholder: true,
+        adapter: require('responsive-loader/sharp'),
       },
 
       webpack: (config, { isServer, buildId, dev }) => {

@@ -5,13 +5,12 @@ import Lightbox from 'react-image-lightbox';
 import Section from '@/components/Section';
 import Button from '@/components/Button';
 import H2 from '@/components/H2';
-import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
 import { i18nNamespace } from '@/constants';
 import { useTranslation } from 'react-i18next';
 
 type TData = {
-  src: string;
+  src: TResponsiveImage;
 };
 
 const Title = styled(H2)`
@@ -79,13 +78,12 @@ const Name = styled.div`
   transition: transform 0.2s ease-in;
 `;
 
-const Certificate = styled.div<{ src: string }>`
+const Certificate = styled.div`
   will-change: transform;
   cursor: pointer;
   position: relative;
   width: 47%;
   height: 22vh;
-  background: transparent center top no-repeat/cover;
   margin-bottom: 3%;
   overflow: hidden;
   transform: scale(1);
@@ -124,42 +122,48 @@ const StyledButton = styled(Button)`
   }
 `;
 
+const ResponsiveImg = styled.img`
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+`;
+
 const certificates: TData[] = [
   {
-    src: require('/static/certificate/GBP.png'),
+    src: require('../../static/certificate/GBP.png?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
   {
-    src: require('/static/certificate/flowchain.png'),
+    src: require('../../static/certificate/flowchain.png?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
   {
-    src: require('/static/certificate/AngelHackCerts.png'),
+    src: require('../../static/certificate/AngelHackCerts.png?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
   {
-    src: require('/static/certificate/IOTA_Dominik.png'),
+    src: require('../../static/certificate/IOTA_Dominik.png?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
   {
-    src: require('/static/certificate/ABC_Crypto_Night.png'),
+    src: require('../../static/certificate/ABC_Crypto_Night.png?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
   {
-    src: require('/static/certificate/0x1Academy.jpg'),
+    src: require('../../static/certificate/0x1Academy.jpg?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
   {
-    src: require('/static/certificate/BASF.png'),
+    src: require('../../static/certificate/BASF.png?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
   {
-    src: require('/static/certificate/turing_scholarship.png'),
+    src: require('../../static/certificate/turing_scholarship.png?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
   {
-    src: require('/static/certificate/NTU_Pecu.png'),
+    src: require('../../static/certificate/NTU_Pecu.png?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
   {
-    src: require('/static/certificate/stanford.png'),
+    src: require('../../static/certificate/stanford.png?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
   {
-    src: require('/static/certificate/Berkeley.png'),
+    src: require('../../static/certificate/Berkeley.png?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
   {
-    src: require('/static/certificate/ROC_COC.png'),
+    src: require('../../static/certificate/ROC_COC.png?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
 ];
 
@@ -184,38 +188,31 @@ const Examples: FC<{ id: string }> = ({ id }) => {
         style={{ marginBottom: '8%' }}
         delay={100}
       >
-        {certificates.map((d, idx) => (
-          <Certificate
-            key={d.src}
-            src={d.src.placeholder}
-            onClick={() => {
-              setOpenLightbox(true);
-              setPhotoIdx(idx);
-            }}
-          >
-            <img
-              src={d.src.src}
-              srcSet={d.src.srcSet}
-              style={{
-                position: 'relative',
-                width: '100%',
-                minHeight: '100%',
+        {certificates.map((d, idx) => {
+          return (
+            <Certificate
+              key={d.src.toString()}
+              onClick={() => {
+                setOpenLightbox(true);
+                setPhotoIdx(idx);
               }}
-            />
-            <Name>{t(`examples.certificates.${idx}`)}</Name>
-          </Certificate>
-        ))}
+            >
+              <ResponsiveImg src={d.src.src} srcSet={d.src.srcSet} />
+              <Name>{t(`examples.certificates.${idx}`)}</Name>
+            </Certificate>
+          );
+        })}
       </AnimatedWrapper>
       <MobileWrapper animateIn="fadeInUp" animateOnce offset={0} delay={100}>
         {certificates.slice(0, 6).map((d, idx) => (
           <Certificate
-            key={d.src}
-            src={d.src}
+            key={d.src.toString()}
             onClick={() => {
               setOpenLightbox(true);
               setPhotoIdx(idx);
             }}
           >
+            <ResponsiveImg src={d.src.src} srcSet={d.src.srcSet} />
             <Name>{t(`examples.certificates.${idx}`)}</Name>
           </Certificate>
         ))}
@@ -224,13 +221,13 @@ const Examples: FC<{ id: string }> = ({ id }) => {
       <MoreInfoWrapper open={open}>
         {certificates.slice(6).map((d, idx) => (
           <Certificate
-            key={d.src}
-            src={d.src}
+            key={d.src.toString()}
             onClick={() => {
               setOpenLightbox(true);
               setPhotoIdx(idx + 6);
             }}
           >
+            <ResponsiveImg src={d.src.src} srcSet={d.src.srcSet} />
             <Name>{t(`examples.certificates.${idx}`)}</Name>
           </Certificate>
         ))}
@@ -244,12 +241,15 @@ const Examples: FC<{ id: string }> = ({ id }) => {
         <Lightbox
           imagePadding={50}
           imageTitle={t(`examples.certificates.${photoIdx}`)}
-          mainSrc={certificates[photoIdx].src}
-          nextSrc={certificates[(photoIdx + 1) % certificates.length].src}
+          mainSrc={certificates[photoIdx].src.images[2].path}
+          nextSrc={
+            certificates[(photoIdx + 1) % certificates.length].src.images[2]
+              .path
+          }
           prevSrc={
             certificates[
               (photoIdx + certificates.length - 1) % certificates.length
-            ].src
+            ].src.images[2].path
           }
           onCloseRequest={() => setOpenLightbox(false)}
           onMovePrevRequest={() =>
