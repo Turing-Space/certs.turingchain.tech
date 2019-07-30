@@ -68,7 +68,6 @@ module.exports = withBundleAnalyzer(
       },
       responsive: {
         placeholder: true,
-        adapter: require('responsive-loader/sharp'),
       },
 
       webpack: (config, { isServer, buildId, dev }) => {
