@@ -137,8 +137,8 @@ const Home: FC<{ id: string }> = ({ id }) => {
         <CNText>{t('home.mobileSubTitle')}</CNText>
       </MobileTitleWrapper>
       <BottomLogoWrapper animateIn="fadeInUp" delay={600} offset={0}>
-        <SubLogo src={getRelativePath('/static/partners/Berkeley.png')} />
-        <SubLogo src={getRelativePath('/static/partners/Scet_white.png')} />
+        <SubLogo src={require('../../static/partners/Berkeley.png')} />
+        <SubLogo src={require('../../static/partners/Scet_white.png')} />
       </BottomLogoWrapper>
       <ScrollInfo />
     </Section>
