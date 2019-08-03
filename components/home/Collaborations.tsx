@@ -194,7 +194,12 @@ const logos = [
   {
     name: '',
     src: getRelativePath('/static/partners/yanmin.png'),
-    scale: 1,
+    scale: 1.1,
+  },
+  {
+    name: '',
+    src: getRelativePath('/static/partners/TABF.svg'),
+    scale: 1.1,
   },
 ];
 
