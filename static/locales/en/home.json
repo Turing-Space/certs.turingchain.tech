@@ -23,10 +23,10 @@
     "mobileSubTitle": "Blockchain Certificate Ecosystem"
   },
   "service": {
-    "title": "Blockchain Achievement Resume",
-    "description": "Through its novel blockchain technology, TuringCerts is incorruptible, traceable, cost-effective, and borderless, which redefines traditional educational certificates to create a sustainable academic records tracking. TuringCerts guarantees the 100% control of data for users with a rigorous privacy policy and strengthens the highest trust of source and true value of official authorized certificates.",
+    "title": "Certified Blockchain Achievement Resume",
+    "description": "By leveraging the incorruptible, traceable, cost-effective, and borderless characteristics of blockchain technology, TuringCerts is capable of redefining traditional educational certificates and eventually enabling unified and sustainable records tracking for educational industry. TuringCerts not only ensures full data coverage, control, and maintenance for users, but also promises a rigorous privacy policy and upholds highest trust of source as well as the dignity of authorized certificates.",
     "icons": {
-      "0": "Personal Achievement Bookeeping",
+      "0": "Personal Milestone Book-keeping",
       "1": "W3C DID Protocol",
       "2": "GDPR Principle of Least Privilege"
     }
@@ -39,31 +39,31 @@
     "subs": {
       "0": {
         "title": "Fundamental Phase",
-        "content": "TuringCerts in the fundamental phase are executed on the second generation blockchain - Ethereum, and are supervised and operated by multiple sophisticated Smart Contracts. IPFS is leveraged to parallelly keep huge-sizing digital images of certificates."
+        "content": "TuringCerts, which is in its fundamental testing phase, are being executed on the second generation blockchain - Ethereum, and are being supervised and operated by multiple sophisticated Smart Contracts. On top of that, IPFS is utilized to parallelly store digital images of certificates in large sizes."
       },
       "1": {
         "title": "Advanced Stage",
-        "content": "TuringCerts has reached a strategic collaboration with National Cheng Kung University and BiiLabs on technical infrastructures. TuringCerts is actively cooperating with the world-renowned IOTA Foundation for in-depth global adoptions. At this stage, TuringCerts will be migrated to the IOTA blockchain, with connection to the open source TangelID acceleration layer, in order to serve a extremely low commission fee and latency."
+        "content": "TuringCerts has built a high level strategic coopeartion in regard of technical infrastructures with National Cheng Kung University and BiiLabs. On the other hand, it is actively collaborating with the world-renowned IOTA Foundation for in-depth global adoptions. In order to achieve low latency and cost effectiveness, TuringCerts is currently being migrated to the IOTA blockchain and connected to the open source TangelID acceleration layer."
       }
     },
     "question": {
       "0": {
         "title": "(1) How to ensure the uniqueness and authenticity?",
-        "content": "TuringCerts adopts Decentralized Identifier Standard (DID) proposed by the World Wide Web Consortium (W3C). TuringCerts serves each certificate holder with an unique identifier via a hash value to prevent tampering with. Its anti-counterfeiting feature is the cornerstone to a sustainable certificate ecosystem."
+        "content": "1. TuringCerts adopts Decentralized Identifier Standard (DID) proposed by the World Wide Web Consortium (W3C).\n2. TuringCerts provides each certificate holder with an unique identifier via a hash value to prevent being tampered with.\n3. Its anti-counterfeiting feature is the cornerstone that leads to a sustainable certificate storage and tracking ecosystem."
       },
       "1": {
-        "title": "(2) How to upgrade privacy?",
-        "content": "TuringCerts merges MIT Media Lab's early open-source certificate infrastructure - BlockCerts, and consider EU GDPR's Least Privilege Principle to  grants the verification party with the least but sufficient information. TuringCerts employs asymmetric encryption scheme such as RSA to guarantee high privacy for information transferral."
+        "title": "(2) How to safeguard user privacy?",
+        "content": "TuringCerts adopts the “BlockCerts” developed by MIT Media Lab's early opensourced certificate infrastructure, which is inspired by the “EU GDPR's Least Privilege Principle” so as to grant the verification party with least yet most sufficient information. In addition, TuringCerts utilizes asymmetric encryption scheme such as RSA, which guarantees high privacy even during information transfer."
       },
       "2": {
-        "title": "(3) How to make TuringCerts a global leader?",
-        "content": "TuringCerts is afiliated with the Xccelerator of UC Berkeley Blockchain Lab, who will continue to absorb and integrate technical breakthroughs in the Silicon Valley, which maintains its impregnable security and adoptive application characteristics. TuringCerts will leverage its geographical advantage to conduct educational experiments in campuses of Hong Kong and Taiwan."
+        "title": "(3) How to sustain TuringCerts's footprint as the global leader?",
+        "content": "TuringCerts is afiliated with the Xccelerator from UC Berkeley Blockchain Lab, from whom will continuously on-board and integrate the latest technical breakthroughs in Silicon Valley. This collaboration enables TuringCerts to maintain its industry-leading technology evolutions and security characteristics. Finally, TuringCerts is being supported by its geographical advantage and relevant user pool to conduct social experiments in Hong Kong and Taiwan campuses."
       }
     }
   },
   "demo": {
     "title": "The New Era of Resumes!",
-    "description": "All certificates in one place.\n From academic achievement, competency certification, online courses, competition & awards, to all worth-noting records.\n TuringCerts improve the certification experience, ensuring the characteristics of anti-counterfeit, traceability, and minimized learning curve.",
+    "description": "All certificates in one device.\n From academic transcript, competency certification, online courses, competition & awards, to all achievements records are being covered.\n TuringCerts improves the user experiences for certificate keeping, and promises the characteristics of anti-counterfeit, source traceability, and minimal learning curves.",
     "start": "Start"
   },
   "collaborations": {
