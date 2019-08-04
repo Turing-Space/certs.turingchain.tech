@@ -201,6 +201,11 @@ const logos = [
     src: getRelativePath('/static/partners/TABF.svg'),
     scale: 1.1,
   },
+  {
+    name: '',
+    src: getRelativePath('/static/partners/sin.png'),
+    scale: 1,
+  },
 ];
 
 const Collaborations: FC<{ id: string }> = ({ id }) => {
