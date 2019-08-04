@@ -43,7 +43,7 @@ const AnimatedWrapper = styled(ScrollAnimation)`
 
 const MoreInfoWrapper = styled(Wrapper)<{ open: boolean }>`
   overflow: hidden;
-  max-height: ${p => (p.open ? '250vh' : 0)};
+  max-height: ${p => (p.open ? '700vh' : 0)};
   transition: max-height ease-in 0.3s;
 `;
 
@@ -152,7 +152,7 @@ const Technology: FC<{ id: string }> = ({ id }) => {
       </AnimatedWrapper>
       {
         <MoreInfoWrapper open={open}>
-          {[0, 1, 2].map(k => (
+          {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(k => (
             <InfoWrapper key={k}>
               <QuestionTitle>
                 {t(`technology.question.${k}.title`)}
