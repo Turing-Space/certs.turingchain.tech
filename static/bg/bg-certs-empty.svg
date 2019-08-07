@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+    <g fill="none" fill-rule="nonzero" transform="translate(6.307 12)">
+        <path fill="#FAFAFA" stroke="#EEE" stroke-dasharray="6,3" stroke-linejoin="round" stroke-width="2" d="M48.67 12l38.637 10.353-13.977 52.16L34.693 64.16 48.67 12z"/>
+        <path fill="#FAFAFA" stroke="#EEE" stroke-dasharray="6,3" stroke-linejoin="round" stroke-width="2" d="M.693 22.353L39.33 12l13.977 52.16L14.67 74.513.693 22.353z"/>
+        <rect width="38" height="52" x="24.693" y="10" fill="#FAFAFA" stroke="#EEE" stroke-width="2" rx="2"/>
+        <path fill="#E0E0E0" d="M34.809 30.077h-1.116a1 1 0 0 1-1-1v-4.154a1 1 0 0 1 1-1h1.116l-.125-1.373 1.959-1.317.815-2.252 2.323-.315L41.468 17l2.225.75L45.92 17l1.687 1.666 2.322.315.816 2.252 1.96 1.317-.126 1.373h1.115a1 1 0 0 1 1 1v4.154a1 1 0 0 1-1 1h-1.115l.125 1.373-1.96 1.317-.815 2.252-2.322.315L45.92 37l-2.226-.75-2.225.75-1.687-1.666-2.323-.315-.815-2.252-1.96-1.317.126-1.373zm2.558 0c1.123 2.426 3.534 4.103 6.326 4.103 2.793 0 5.203-1.677 6.327-4.103H37.367zm0-6.154H50.02c-1.124-2.426-3.534-4.103-6.327-4.103-2.792 0-5.203 1.677-6.326 4.103z"/>
+        <rect width="24" height="2" x="31.693" y="45" fill="#EEE" rx="1"/>
+        <rect width="24" height="2" x="31.693" y="50" fill="#EEE" rx="1"/>
+        <g fill="#EEE" transform="rotate(15 30.453 254.995)">
+            <rect width="2" height="6" x="8.172" rx="1"/>
+            <rect width="2" height="6" x="2" y="1.828" rx="1" transform="rotate(-45 3 4.828)"/>
+            <rect width="2" height="6" x="14" y="1.828" rx="1" transform="rotate(45 15 4.828)"/>
+        </g>
+    </g>
+</svg>
