@@ -1,5 +1,6 @@
 import { FC, useMemo, useState, useContext } from 'react';
 import styled from 'styled-components';
+
 import { CertsContext } from '@/contexts/certs';
 import Button from '@/components/Button';
 
@@ -8,6 +9,7 @@ import SortControl from './SortControl';
 import SearchControl from './SearchControl';
 import Certs from './Certs';
 import CertsNull from './CertsNull';
+import IssueCertModal from './IssueCertModal';
 
 const Wrapper = styled.div`
   margin-top: 8%;
@@ -33,6 +35,7 @@ const TitleWrapper = styled.div`
 const MyCerts: FC = () => {
   const { certs, updateCert } = useContext(CertsContext);
   const [searchText, setSearchText] = useState('');
+  const [modalVisible, setModalVisible] = useState(false);
 
   const filteredCerts = useMemo(
     () => (searchText ? certs.filter(c => c.name.includes(searchText)) : certs),
@@ -43,7 +46,9 @@ const MyCerts: FC = () => {
     <Wrapper>
       <TitleWrapper>
         <Title>我的證書</Title>
-        <Button mode="white">新增證書</Button>
+        <Button mode="white" onClick={() => setModalVisible(true)}>
+          新增證書
+        </Button>
       </TitleWrapper>
       <div>
         <ControlWrapper>
@@ -59,6 +64,10 @@ const MyCerts: FC = () => {
           <Certs certs={filteredCerts} updateCert={updateCert} />
         )}
       </div>
+      <IssueCertModal
+        visible={modalVisible}
+        onClose={() => setModalVisible(false)}
+      />
     </Wrapper>
   );
 };

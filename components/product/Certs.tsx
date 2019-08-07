@@ -251,7 +251,7 @@ const Certs: FC<TProps> = ({ certs, updateCert }) => {
       })}
       {openIdx >= 0 && (
         <Modal
-          className="ReactModal__Cert_Content"
+          className="ReactModal__Custom_Content"
           isOpen={openIdx >= 0}
           onRequestClose={() => setOpenIdx(-1)}
           style={{

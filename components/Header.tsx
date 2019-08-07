@@ -175,7 +175,7 @@ const Header: SFC = () => {
           </li>
 
           <li>
-            <Link href="/demo">
+            <Link href="/product">
               <StyledButton>{t('start')}</StyledButton>
             </Link>
           </li>

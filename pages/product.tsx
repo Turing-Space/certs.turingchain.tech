@@ -1,20 +1,20 @@
 import { NextFC } from 'next';
-import DemoLayout from '@/layouts/Demo';
+import ProductLayout from '@/layouts/Product';
 import { SITE_TITLE } from '@/constants';
 import AboutMe from '@/components/product/AboutMe';
 import MyCerts from '@/components/product/MyCerts';
 
-const DemoPage: NextFC = () => {
+const ProductPage: NextFC = () => {
   return (
-    <DemoLayout title={'Demo | ' + SITE_TITLE}>
+    <ProductLayout title={'Demo | ' + SITE_TITLE}>
       <AboutMe />
       <MyCerts />
-    </DemoLayout>
+    </ProductLayout>
   );
 };
 
-DemoPage.getInitialProps = async () => ({
+ProductPage.getInitialProps = async () => ({
   namespacesRequired: ['common', 'demo'],
 });
 
-export default DemoPage;
+export default ProductPage;

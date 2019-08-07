@@ -6,10 +6,14 @@ import NormalizeStyles from '@/themes/NormalizeStyles';
 import { SITE_TITLE } from '@/constants';
 import Header from '@/components/product/Header';
 import Footer from '@/components/product/Footer';
+import { media } from '@/utils/theme';
 
 const Main = styled.main`
-  width: 65%;
+  width: 75%;
   margin: auto;
+  ${media('largeDesktop')} {
+    width: 65%;
+  }
 `;
 
 type TProps = {

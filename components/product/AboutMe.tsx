@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 import { UserContext } from '@/contexts/user';
 import { CertsContext } from '@/contexts/certs';
+import { media } from '@/utils/theme';
 import Title from './Title';
 
 const Wrapper = styled.div`
@@ -15,7 +16,11 @@ const InfoWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: ${p => p.theme.colors.white};
-  padding: 2em 8%;
+  padding: 2em 5%;
+
+  ${media('largeDesktop')} {
+    padding: 2em 8%;
+  }
 `;
 
 const UserWrapper = styled.div`
@@ -55,11 +60,19 @@ const IconWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 8em;
-  height: 8em;
+  width: 8.2em;
+  height: 8.2em;
   border-radius: 50%;
   border: solid 6px ${p => p.theme.colors.primary};
   margin-left: 2em;
+  > p {
+    letter-spacing: 0.67px;
+  }
+
+  ${media('largeDesktop')} {
+    width: 8.5em;
+    height: 8.5em;
+  }
 `;
 
 const AnimatedNumber = styled(animated.p)`

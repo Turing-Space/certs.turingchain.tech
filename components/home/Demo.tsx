@@ -190,7 +190,7 @@ const Demo: FC<{ id: string }> = ({ id }) => {
             delay={500}
             offset={0}
           >
-            <Link href="/demo">
+            <Link href="/product">
               <StyledButton shadow>{t('demo.start')}</StyledButton>
             </Link>
             <IconWrapper>
@@ -233,7 +233,7 @@ const Demo: FC<{ id: string }> = ({ id }) => {
           delay={500}
           offset={0}
         >
-          {/* <Link href="/demo"> */}
+          {/* <Link href="/product"> */}
           <StyledButton shadow onClick={() => t('alertText')}>
             {t('demo.start')}
           </StyledButton>

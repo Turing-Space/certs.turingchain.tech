@@ -110,7 +110,7 @@ export default createGlobalStyle`
     opacity: 0;
   }
 
-  .ReactModal__Cert_Content {
+  .ReactModal__Custom_Content {
     transform: scale3d(.3, .3, .3);
     transition: transform 200ms ease-in-out;
     &:focus {
@@ -124,5 +124,28 @@ export default createGlobalStyle`
 
   .ReactModal__Content--before-close{
     transform: scale3d(.3, .3, .3);
+  }
+
+  
+  .DayPicker {
+    div, span {
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+    background-color: #a80100;
+    color: #fff;
+  }
+
+  .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside):hover {
+    background-color: #ffd6d5;
+  }
+
+  .DayPicker:not(.DayPicker--interactionDisabled)
+  .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover {
+    background-color: #ffd6d5;
   }
 `;
