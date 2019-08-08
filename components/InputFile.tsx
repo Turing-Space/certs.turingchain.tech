@@ -31,9 +31,10 @@ type TProps = {
   file: File | null;
   onChange: (file: File) => void;
   buttonText?: string;
+  accept?: string;
 };
 
-const InputFile: FC<TProps> = ({ file, onChange, buttonText }) => {
+const InputFile: FC<TProps> = ({ file, onChange, buttonText, accept }) => {
   return (
     <Wrapper>
       <InputWrapper>
@@ -47,6 +48,7 @@ const InputFile: FC<TProps> = ({ file, onChange, buttonText }) => {
             height: '100%',
             cursor: 'pointer',
           }}
+          accept={accept}
           type="file"
           name="file"
           // @ts-ignore

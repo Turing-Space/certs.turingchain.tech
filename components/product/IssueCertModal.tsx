@@ -1,4 +1,4 @@
-import { useState, FC, useCallback } from 'react';
+import { useState, FC, useCallback, useContext } from 'react';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import Modal from 'react-modal';
 import styled from 'styled-components';
@@ -7,6 +7,7 @@ import dayjs from 'dayjs';
 import { media } from '@/utils/theme';
 import DayPickerInputComponent from '@/components/DayPickerInputComponent';
 import Button from '@/components/Button';
+import { CertsContext } from '@/contexts/certs';
 
 import Title from './Title';
 import TextInput from './TextInput';
@@ -51,6 +52,7 @@ const IssueCertModal: FC<TProps> = ({ visible, onClose }) => {
   const [certName, setCertName] = useState('');
   const [date, setDate] = useState<Date | undefined>(new Date());
   const [file, setFile] = useState<File | null>(null);
+  const { updateCerts } = useContext(CertsContext);
 
   const onCancel = useCallback(() => {
     setIssuer('');
@@ -58,7 +60,38 @@ const IssueCertModal: FC<TProps> = ({ visible, onClose }) => {
     setDate(new Date());
     setFile(null);
     onClose();
-  }, ['un-change']);
+  }, []);
+
+  const onAddCert = () => {
+    if (issuer && certName && date && file) {
+      // generate a new FileReader object
+      const reader = new FileReader();
+      let coverUri = '';
+
+      reader.onload = (e: any) => {
+        if (e && e.target && e.target.readyState === 2) {
+          coverUri = e.target.result;
+          updateCerts(certs => [
+            ...certs,
+            {
+              issuer,
+              name: certName,
+              coverUri,
+              verified: false,
+              ipfs: String(Math.random() * 1000),
+              timestamp: date.getTime(),
+              pin: false,
+              progress: [true, false, false, false, false],
+            },
+          ]);
+        }
+        onClose();
+      };
+
+      // when the file is read it triggers the onload event above.
+      reader.readAsDataURL(file);
+    }
+  };
 
   return (
     <Modal
@@ -112,14 +145,19 @@ const IssueCertModal: FC<TProps> = ({ visible, onClose }) => {
           <LabelWrapper>
             <label>上傳證書</label>
           </LabelWrapper>
-          <InputFile file={file} onChange={setFile} buttonText={'上傳圖檔'} />
+          <InputFile
+            file={file}
+            onChange={setFile}
+            buttonText={'上傳圖檔'}
+            accept=".png,.jpg,.jpeg"
+          />
         </div>
 
         <Row>
           <Button mode="white" onClick={onCancel}>
             取消
           </Button>
-          <Button>新增</Button>
+          <Button onClick={onAddCert}>新增</Button>
         </Row>
       </Wrapper>
     </Modal>

@@ -27,12 +27,12 @@ const CertWrapper = styled.div`
   border-radius: 10px;
   box-shadow: 0px 0px 15px 0px rgb(0, 0, 0, 0.1);
 
-  &:first-child {
-    margin-left: 0;
-  }
-
   &:nth-child(3n) {
     margin-right: 0;
+  }
+
+  &:nth-child(3n + 1) {
+    margin-left: 0;
   }
 
   > .issuer {
