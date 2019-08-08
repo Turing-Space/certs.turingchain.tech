@@ -131,6 +131,14 @@ const MobileHeader: FC<TProps> = ({ open, setOpen }) => {
         </li>
         <li
           onClick={() => {
+            scrollToID('section-product');
+            setOpen(false);
+          }}
+        >
+          {t('header.product')}
+        </li>
+        <li
+          onClick={() => {
             scrollToID('section-collaborations');
             setOpen(false);
           }}

@@ -162,7 +162,7 @@ const MobileActionWrapper = styled(ScrollAnimation)`
   }
 `;
 
-const Demo: FC<{ id: string }> = ({ id }) => {
+const Demo: FC<{ id?: string }> = ({ id }) => {
   const { t } = useTranslation(i18nNamespace.Home);
   return (
     <Section justifyContent="flex-start" fullscreen id={id}>

@@ -6,6 +6,7 @@ import Demo from '@/components/home/Demo';
 import Technology from '@/components/home/Technology';
 import Collaborations from '@/components/home/Collaborations';
 import Examples from '@/components/home/Examples';
+import DemoVideo from '@/components/home/DemoVideo';
 
 import { SITE_TITLE } from '@/constants';
 
@@ -15,7 +16,8 @@ const Index: NextFC = () => {
       <Home id="section-home" />
       <Service id="section-service" />
       <Technology id="section-technology" />
-      <Demo id="section-demo" />
+      <DemoVideo id="section-product" />
+      <Demo />
       <Collaborations id="section-collaborations" />
       <Examples id="section-examples" />
       {/* <AboutUs id="section-about" />

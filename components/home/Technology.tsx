@@ -10,6 +10,7 @@ import Description from '@/components/Description';
 import Button from '@/components/Button';
 import { getRelativePath } from '@/utils';
 import { i18nNamespace } from '@/constants';
+import ScrollInfo from '../ScollInfo';
 
 const Title = styled(H2)`
   margin: 18vh auto 0;
@@ -169,6 +170,7 @@ const Technology: FC<{ id: string }> = ({ id }) => {
         {open ? t('technology.hidden') : t('technology.more')}
         {t('technology.info')}
       </StyledButton>
+      <ScrollInfo />
     </Section>
   );
 };
