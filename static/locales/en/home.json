@@ -6,7 +6,8 @@
     "technology": "Technology",
     "collaborations": "Collaborations",
     "examples": "Showcases",
-    "contact": "Contact"
+    "contact": "Contact",
+    "product": "Product"
   },
   "footer": {
     "title": "Contact Us"
@@ -64,7 +65,10 @@
   "demo": {
     "title": "The New Era of Resumes!",
     "description": "All certificates in one device.\n From academic transcript, competency certification, online courses, competition & awards, to all achievements records are being covered.\n TuringCerts improves the user experiences for certificate keeping, and promises the characteristics of anti-counterfeit, source traceability, and minimal learning curves.",
-    "start": "Start"
+    "start": "Start",
+    "video": {
+      "title": "Product"
+    }
   },
   "collaborations": {
     "title": "Collaboration Issuer"

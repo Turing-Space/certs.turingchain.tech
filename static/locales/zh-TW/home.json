@@ -3,10 +3,11 @@
   "start": "體驗 →",
   "header": {
     "service": "區塊鏈成就履歷",
-    "technology": "頂尖技術架構",
+    "technology": "技術架構",
     "collaborations": "已發證機構",
     "examples": "案例展示",
-    "contact": "合作洽談"
+    "contact": "合作洽談",
+    "product": "產品演示"
   },
   "footer": {
     "title": "合作洽談"
@@ -92,7 +93,10 @@
   "demo": {
     "title": "開啟新履歷世代！",
     "description": "一機裝載所有教育相關證書，從在學成績、能力認證、線上課程、競賽獎項、至所有成就紀錄，完善區塊鏈秒速認證體驗，防偽真實，溯源查證，零學習曲線。",
-    "start": "體驗網頁版 →"
+    "start": "體驗網頁版 →",
+    "video": {
+      "title": "產品演示"
+    }
   },
   "collaborations": {
     "title": "已協助發證機構"
