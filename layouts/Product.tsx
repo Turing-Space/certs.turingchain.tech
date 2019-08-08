@@ -39,6 +39,10 @@ const DemoLayout: React.FunctionComponent<TProps> = ({
         <GlobalStyles />
         <Head>
           <title>{title}</title>
+          <link
+            rel="stylesheet"
+            href="https://unpkg.com/react-day-picker/lib/style.css"
+          />
         </Head>
         <Header />
         <Main>{children}</Main>

@@ -61,7 +61,6 @@ export default class MyDocument extends Document {
               <script dangerouslySetInnerHTML={this.setGoogleTags()} />
             </>
           )}
-
           <Meta />
         </Head>
         <body>
