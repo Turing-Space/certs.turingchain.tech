@@ -1,12 +1,12 @@
 import { FC } from 'react';
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Section from '@/components/Section';
 import { getRelativePath } from '@/utils';
 import H1 from '@/components/H1';
 import ScrollInfo from '@/components/ScollInfo';
 import { media } from '@/utils/theme';
-import { useTranslation } from 'react-i18next';
 import { i18nNamespace } from '@/constants';
 
 const Text = styled.p`
@@ -20,7 +20,10 @@ const CNText = styled(Text)`
 `;
 
 const Logo = styled.img`
-  height: 23vh;
+  height: 25vh;
+  ${media('desktop')} {
+    height: 28vh;
+  }
 `;
 
 const Title = styled(H1)`
@@ -111,10 +114,10 @@ const Home: FC<{ id: string }> = ({ id }) => {
       />
       <ScrollAnimation animateIn="fadeInUp">
         <Logo
-          src={getRelativePath('/static/logo/logo-tc-title.png')}
-          srcSet={`${getRelativePath(
-            '/static/logo/logo-tc-title@2x.png',
-          )} 2x, ${getRelativePath('/static/logo/logo-tc-title@3x.png')} 3x`}
+          src={require('../../static/logo/logo-new.svg')}
+          // srcSet={`${getRelativePath(
+          //   '/static/logo/logo-tc-title@2x.png',
+          // )} 2x, ${getRelativePath('/static/logo/logo-tc-title@3x.png')} 3x`}
         />
       </ScrollAnimation>
       <TitleWrapper animateIn="fadeInUp" delay={400} offset={0}>

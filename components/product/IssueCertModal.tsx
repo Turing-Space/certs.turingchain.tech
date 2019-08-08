@@ -42,6 +42,10 @@ const LabelWrapper = styled.div`
   letter-spacing: 1px;
 `;
 
+const ItemWrapper = styled.div`
+  margin: 1.25em 0;
+`;
+
 type TProps = {
   visible: boolean;
   onClose: () => void;
@@ -52,44 +56,34 @@ const IssueCertModal: FC<TProps> = ({ visible, onClose }) => {
   const [certName, setCertName] = useState('');
   const [date, setDate] = useState<Date | undefined>(new Date());
   const [file, setFile] = useState<File | null>(null);
+  const [certUri, setCertUri] = useState<string>('');
   const { updateCerts } = useContext(CertsContext);
 
   const onCancel = useCallback(() => {
     setIssuer('');
     setCertName('');
     setDate(new Date());
+    setCertUri('');
     setFile(null);
     onClose();
   }, []);
 
   const onAddCert = () => {
     if (issuer && certName && date && file) {
-      // generate a new FileReader object
-      const reader = new FileReader();
-      let coverUri = '';
-
-      reader.onload = (e: any) => {
-        if (e && e.target && e.target.readyState === 2) {
-          coverUri = e.target.result;
-          updateCerts(certs => [
-            ...certs,
-            {
-              issuer,
-              name: certName,
-              coverUri,
-              verified: false,
-              ipfs: String(Math.random() * 1000),
-              timestamp: date.getTime(),
-              pin: false,
-              progress: [true, false, false, false, false],
-            },
-          ]);
-        }
-        onClose();
-      };
-
-      // when the file is read it triggers the onload event above.
-      reader.readAsDataURL(file);
+      updateCerts(certs => [
+        ...certs,
+        {
+          issuer,
+          name: certName,
+          coverUri: certUri,
+          verified: false,
+          ipfs: String(Math.random() * 1000),
+          timestamp: date.getTime(),
+          pin: false,
+          progress: [true, false, false, false, false],
+        },
+      ]);
+      onClose();
     }
   };
 
@@ -127,7 +121,7 @@ const IssueCertModal: FC<TProps> = ({ visible, onClose }) => {
           onChange={value => setCertName(value)}
           placeholder="區塊鏈集訓證書"
         />
-        <div style={{ margin: '1.25em 0' }}>
+        <ItemWrapper>
           <LabelWrapper>
             <label>發證日期</label>
           </LabelWrapper>
@@ -140,18 +134,34 @@ const IssueCertModal: FC<TProps> = ({ visible, onClose }) => {
             keepFocus={false}
             component={DayPickerInputComponent}
           />
-        </div>
-        <div style={{ margin: '1.25em 0' }}>
+        </ItemWrapper>
+        <ItemWrapper>
           <LabelWrapper>
             <label>上傳證書</label>
           </LabelWrapper>
           <InputFile
             file={file}
-            onChange={setFile}
+            onChange={f => {
+              setFile(f);
+              if (f) {
+                const reader = new FileReader();
+                reader.onload = (e: any) => {
+                  if (e && e.target && e.target.readyState === 2) {
+                    setCertUri(e.target.result);
+                  }
+                };
+
+                // when the file is read it triggers the onload event above.
+                reader.readAsDataURL(f);
+              }
+            }}
             buttonText={'上傳圖檔'}
             accept=".png,.jpg,.jpeg"
           />
-        </div>
+        </ItemWrapper>
+        {/* {certUri && (
+          <img style={{ width: '100%', maxHeight: '200px' }} src={certUri} />
+        )} */}
 
         <Row>
           <Button mode="white" onClick={onCancel}>

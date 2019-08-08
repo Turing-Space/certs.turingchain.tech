@@ -2,7 +2,7 @@ import { FC } from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import { getRelativePath, scrollToID } from '@/utils';
+import { scrollToID } from '@/utils';
 import { media } from '@/utils/theme';
 
 const LogoWrapper = styled.div`
@@ -23,11 +23,11 @@ const LogoWrapper = styled.div`
 `;
 
 const Logo = styled.img`
-  height: 80%;
-  margin-right: 1em;
+  height: 97%;
+  margin-right: 0.5em;
 
   ${media('desktop')} {
-    height: 67%;
+    height: 90%;
   }
 `;
 
@@ -35,12 +35,7 @@ const HeaderLogo: FC = () => {
   return (
     <Link href="/">
       <LogoWrapper onClick={() => scrollToID('section-home')}>
-        <Logo
-          src={getRelativePath('/static/logo/logo-tc-light.png')}
-          srcSet={`${getRelativePath(
-            '/static/logo/logo-tc-light@2x.png',
-          )} 2x, ${getRelativePath('/static/logo/logo-tc-light@3x.png')} 3x`}
-        />
+        <Logo src={require('../static/logo/logo-new-white.svg')} />
         <p className="en">TuringCerts</p>
       </LogoWrapper>
     </Link>
