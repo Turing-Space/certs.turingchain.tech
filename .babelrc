@@ -17,9 +17,12 @@
     ["@babel/plugin-proposal-decorators", { "decoratorsBeforeExport": true }],
     ["@babel/plugin-proposal-class-properties"],
     [
-      "styled-components",
+      "babel-plugin-styled-components",
       {
-        "ssr": true
+        "ssr": true,
+        "displayName": false,
+        "pure": true,
+        "minify": true
       }
     ],
     [
