@@ -5,6 +5,9 @@ import styled from 'styled-components';
 import { scrollToID } from '@/utils';
 import { media } from '@/utils/theme';
 
+import DarkWhiteLogo from '@/static/logo/logo-new-dark-white.svg';
+import PrimaryWhiteLogo from '@/static/logo/logo-new-white.svg';
+
 const LogoWrapper = styled.div`
   cursor: pointer;
   display: flex;
@@ -31,11 +34,16 @@ const Logo = styled.img`
   }
 `;
 
-const HeaderLogo: FC = () => {
+const modeSrcMap = {
+  dark: DarkWhiteLogo,
+  primary: PrimaryWhiteLogo,
+};
+
+const HeaderLogo: FC<{ mode?: 'primary' | 'dark' }> = ({ mode = 'dark' }) => {
   return (
     <Link href="/">
       <LogoWrapper onClick={() => scrollToID('section-home')}>
-        <Logo src={require('../static/logo/logo-new-white.svg')} />
+        <Logo src={modeSrcMap[mode] as any} />
         <p className="en">TuringCerts</p>
       </LogoWrapper>
     </Link>

@@ -9,17 +9,21 @@ const Wrapper = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
-  padding: 0.3em 4em;
+  height: 50px;
+  padding: 0.3em 4rem;
   background-color: ${p => p.theme.colors.primary};
   z-index: ${p => p.theme.z.high};
   transform: translateY(0);
   transition: all 0.3s ease-in;
   color: ${p => p.theme.colors.white};
 
+  ${media('tablet')} {
+    height: 60px;
+  }
+
   ${media('largeDesktop')} {
     height: 70px;
-    padding: 3px 5em;
+    padding: 0.3em 5rem;
   }
 `;
 
@@ -44,7 +48,7 @@ const ProductHeader: SFC = () => {
   const { user } = useContext(UserContext);
   return (
     <Wrapper>
-      <HeaderLogo />
+      <HeaderLogo mode="primary" />
       <SectionWrapper>
         <p>{user.name}</p>
         <Avatar src={user.avatarUri} />
