@@ -7,6 +7,8 @@ declare module '*.svg' {
   export default content;
 }
 
+declare module 'react-lazy-load-image-component';
+
 type TResponsiveImage = {
   toString: () => string;
   src: string;

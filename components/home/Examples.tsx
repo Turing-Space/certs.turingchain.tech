@@ -2,14 +2,18 @@ import { FC, useState } from 'react';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Lightbox from 'react-image-lightbox';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { useTranslation } from 'react-i18next';
 import Section from '@/components/Section';
 import Button from '@/components/Button';
 import H2 from '@/components/H2';
 import { media } from '@/utils/theme';
 import { i18nNamespace } from '@/constants';
-import { useTranslation } from 'react-i18next';
+
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 type TData = {
+  preSrc: string;
   src: TResponsiveImage;
 };
 
@@ -122,7 +126,7 @@ const StyledButton = styled(Button)`
   }
 `;
 
-const ResponsiveImg = styled.img`
+const LazyImage = styled(LazyLoadImage)`
   position: relative;
   width: 100%;
   min-height: 100%;
@@ -130,39 +134,51 @@ const ResponsiveImg = styled.img`
 
 const certificates: TData[] = [
   {
+    preSrc: require('../../static/certificate/GBP.png?lqip'),
     src: require('../../static/certificate/GBP.png?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
   {
+    preSrc: require('../../static/certificate/flowchain.png?lqip'),
     src: require('../../static/certificate/flowchain.png?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
   {
+    preSrc: require('../../static/certificate/AngelHackCerts.png?lqip'),
     src: require('../../static/certificate/AngelHackCerts.png?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
   {
+    preSrc: require('../../static/certificate/IOTA_Dominik.png?lqip'),
     src: require('../../static/certificate/IOTA_Dominik.png?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
   {
+    preSrc: require('../../static/certificate/ABC_Crypto_Night.png?lqip'),
     src: require('../../static/certificate/ABC_Crypto_Night.png?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
   {
+    preSrc: require('../../static/certificate/0x1Academy.jpg?lqip'),
     src: require('../../static/certificate/0x1Academy.jpg?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
   {
+    preSrc: require('../../static/certificate/BASF.png?lqip'),
     src: require('../../static/certificate/BASF.png?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
   {
+    preSrc: require('../../static/certificate/turing_scholarship.png?lqip'),
     src: require('../../static/certificate/turing_scholarship.png?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
   {
+    preSrc: require('../../static/certificate/NTU_Pecu.png?lqip'),
     src: require('../../static/certificate/NTU_Pecu.png?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
   {
+    preSrc: require('../../static/certificate/stanford.png?lqip'),
     src: require('../../static/certificate/stanford.png?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
   {
+    preSrc: require('../../static/certificate/Berkeley.png?lqip'),
     src: require('../../static/certificate/Berkeley.png?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
   {
+    preSrc: require('../../static/certificate/ROC_COC.png?lqip'),
     src: require('../../static/certificate/ROC_COC.png?resize&sizes[]=300&sizes[]=600&sizes[]=1336'),
   },
 ];
@@ -197,25 +213,39 @@ const Examples: FC<{ id: string }> = ({ id }) => {
                 setPhotoIdx(idx);
               }}
             >
-              <ResponsiveImg src={d.src.src} srcSet={d.src.srcSet} />
+              <LazyImage
+                effect="blur"
+                visibleByDefault
+                placeholderSrc={d.preSrc}
+                src={d.src.src}
+                srcSet={d.src.srcSet}
+              />
               <Name>{t(`examples.certificates.${idx}`)}</Name>
             </Certificate>
           );
         })}
       </AnimatedWrapper>
       <MobileWrapper animateIn="fadeInUp" animateOnce offset={0} delay={100}>
-        {certificates.slice(0, 6).map((d, idx) => (
-          <Certificate
-            key={d.src.toString()}
-            onClick={() => {
-              setOpenLightbox(true);
-              setPhotoIdx(idx);
-            }}
-          >
-            <ResponsiveImg src={d.src.src} srcSet={d.src.srcSet} />
-            <Name>{t(`examples.certificates.${idx}`)}</Name>
-          </Certificate>
-        ))}
+        {certificates.slice(0, 6).map((d, idx) => {
+          return (
+            <Certificate
+              key={d.src.toString()}
+              onClick={() => {
+                setOpenLightbox(true);
+                setPhotoIdx(idx);
+              }}
+            >
+              <LazyImage
+                effect="blur"
+                visibleByDefault
+                placeholderSrc={d.preSrc}
+                src={d.src.src}
+                srcSet={d.src.srcSet}
+              />
+              <Name>{t(`examples.certificates.${idx}`)}</Name>
+            </Certificate>
+          );
+        })}
         {!open && <Shadow />}
       </MobileWrapper>
       <MoreInfoWrapper open={open}>
@@ -227,7 +257,13 @@ const Examples: FC<{ id: string }> = ({ id }) => {
               setPhotoIdx(idx + 6);
             }}
           >
-            <ResponsiveImg src={d.src.src} srcSet={d.src.srcSet} />
+            <LazyImage
+              effect="blur"
+              visibleByDefault
+              placeholderSrc={d.preSrc}
+              src={d.src.src}
+              srcSet={d.src.srcSet}
+            />
             <Name>{t(`examples.certificates.${idx}`)}</Name>
           </Certificate>
         ))}

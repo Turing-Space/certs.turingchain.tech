@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import GlobalStyles from '@/themes/GlobalStyles';
 import NormalizeStyles from '@/themes/NormalizeStyles';
 import { SITE_TITLE } from '@/constants';
+import { getRelativePath } from '@/utils';
 
 type TProps = {
   title?: string;
@@ -36,6 +37,11 @@ const HomeLayout: React.FunctionComponent<TProps> = ({
       <>
         <Head>
           <title>{title}</title>
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href={getRelativePath('/static/css/react-image-light-box.css')}
+          />
         </Head>
         <Header />
         {children}

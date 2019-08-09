@@ -5,6 +5,7 @@
     "module": "esnext",
     "jsx": "preserve",
     "lib": ["dom", "es2017"],
+    "typeRoots": ["node_modules/@types", "./typings"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]

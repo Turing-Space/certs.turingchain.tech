@@ -29,11 +29,6 @@ export default () => (
       href={getRelativePath('/static/css/animate.min.css')}
     />
     <link
-      rel="stylesheet"
-      type="text/css"
-      href={getRelativePath('/static/css/react-image-light-box.css')}
-    />
-    <link
       href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500&display=swap"
       rel="stylesheet"
     />
