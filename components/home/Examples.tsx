@@ -100,6 +100,12 @@ const Certificate = styled.div`
     transform: scale(1.1);
   }
 
+  span.lazy-load-image-background {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   ${media('tablet')} {
     height: 32vh;
   }
@@ -215,7 +221,6 @@ const Examples: FC<{ id: string }> = ({ id }) => {
             >
               <LazyImage
                 effect="blur"
-                visibleByDefault
                 placeholderSrc={d.preSrc}
                 src={d.src.src}
                 srcSet={d.src.srcSet}
@@ -237,7 +242,6 @@ const Examples: FC<{ id: string }> = ({ id }) => {
             >
               <LazyImage
                 effect="blur"
-                visibleByDefault
                 placeholderSrc={d.preSrc}
                 src={d.src.src}
                 srcSet={d.src.srcSet}
@@ -249,24 +253,26 @@ const Examples: FC<{ id: string }> = ({ id }) => {
         {!open && <Shadow />}
       </MobileWrapper>
       <MoreInfoWrapper open={open}>
-        {certificates.slice(6).map((d, idx) => (
-          <Certificate
-            key={d.src.toString()}
-            onClick={() => {
-              setOpenLightbox(true);
-              setPhotoIdx(idx + 6);
-            }}
-          >
-            <LazyImage
-              effect="blur"
-              visibleByDefault
-              placeholderSrc={d.preSrc}
-              src={d.src.src}
-              srcSet={d.src.srcSet}
-            />
-            <Name>{t(`examples.certificates.${idx}`)}</Name>
-          </Certificate>
-        ))}
+        {certificates.slice(6).map((d, idx) => {
+          console.log(t(`examples.certificates.${idx + 6}`));
+          return (
+            <Certificate
+              key={d.src.toString()}
+              onClick={() => {
+                setOpenLightbox(true);
+                setPhotoIdx(idx + 6);
+              }}
+            >
+              <LazyImage
+                effect="blur"
+                placeholderSrc={d.preSrc}
+                src={d.src.src}
+                srcSet={d.src.srcSet}
+              />
+              <Name>{t(`examples.certificates.${idx + 6}`)}</Name>
+            </Certificate>
+          );
+        })}
       </MoreInfoWrapper>
       <StyledButton onClick={() => setOpen(p => !p)}>
         {open ? t('examples.hidden') : t('examples.more')}
