@@ -254,7 +254,6 @@ const Examples: FC<{ id: string }> = ({ id }) => {
       </MobileWrapper>
       <MoreInfoWrapper open={open}>
         {certificates.slice(6).map((d, idx) => {
-          console.log(t(`examples.certificates.${idx + 6}`));
           return (
             <Certificate
               key={d.src.toString()}
