@@ -12,6 +12,7 @@ const NextI18NextInstance = new NextI18Next({
 });
 
 // For next export static
+NextI18NextInstance.i18n.language = 'zh-TW';
 NextI18NextInstance.i18n.languages = ['zh-TW', 'en'];
 
 module.exports = NextI18NextInstance;

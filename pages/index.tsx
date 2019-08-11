@@ -8,7 +8,7 @@ import Collaborations from '@/components/home/Collaborations';
 import Examples from '@/components/home/Examples';
 import DemoVideo from '@/components/home/DemoVideo';
 
-import { SITE_TITLE } from '@/constants';
+import { SITE_TITLE, i18nNamespace } from '@/constants';
 
 const Index: NextFC = () => {
   return (
@@ -27,7 +27,7 @@ const Index: NextFC = () => {
 };
 
 Index.getInitialProps = async () => ({
-  namespacesRequired: ['common', 'home'],
+  namespacesRequired: [i18nNamespace.Common, i18nNamespace.Home],
 });
 
 export default Index;

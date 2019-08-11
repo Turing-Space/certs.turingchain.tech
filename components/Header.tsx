@@ -152,7 +152,11 @@ const Header: SFC = () => {
     opacity: openLanguage ? 1 : 0,
   });
 
-  const { t, i18n } = useTranslation(i18nNamespace.Home);
+  const { t, i18n } = useTranslation([
+    i18nNamespace.Home,
+    i18nNamespace.Common,
+  ]);
+
   return (
     <>
       <Wrapper hideUp={y > 0 && y > oldY} openMobile={openMobileList}>
