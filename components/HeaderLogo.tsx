@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import Link from 'next/link';
 import styled from 'styled-components';
 
 import { scrollToID } from '@/utils';
 import { media } from '@/utils/theme';
+import { Router } from '@/i18n';
 
 import DarkWhiteLogo from '@/static/logo/logo-new-dark-white.svg';
 import PrimaryWhiteLogo from '@/static/logo/logo-new-white.svg';
@@ -41,12 +41,15 @@ const modeSrcMap = {
 
 const HeaderLogo: FC<{ mode?: 'primary' | 'dark' }> = ({ mode = 'dark' }) => {
   return (
-    <Link href="/">
-      <LogoWrapper onClick={() => scrollToID('section-home')}>
-        <Logo src={modeSrcMap[mode] as any} />
-        <p className="en">TuringCerts</p>
-      </LogoWrapper>
-    </Link>
+    <LogoWrapper
+      onClick={() => {
+        Router.push('/');
+        scrollToID('section-home');
+      }}
+    >
+      <Logo src={modeSrcMap[mode] as any} />
+      <p className="en">TuringCerts</p>
+    </LogoWrapper>
   );
 };
 

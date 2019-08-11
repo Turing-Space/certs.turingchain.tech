@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import Link from 'next/link';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { Router } from '@/i18n';
 import H2 from '@/components/H2';
 import Section from '@/components/Section';
 import Description from '@/components/Description';
@@ -190,9 +190,9 @@ const Demo: FC<{ id?: string }> = ({ id }) => {
             delay={500}
             offset={0}
           >
-            <Link href="/product">
-              <StyledButton shadow>{t('demo.start')}</StyledButton>
-            </Link>
+            <StyledButton onClick={() => Router.push('/product')} shadow>
+              {t('demo.start')}
+            </StyledButton>
             <IconWrapper>
               <img
                 onClick={() => t('alertText')}
@@ -233,11 +233,16 @@ const Demo: FC<{ id?: string }> = ({ id }) => {
           delay={500}
           offset={0}
         >
-          {/* <Link href="/product"> */}
-          <StyledButton shadow onClick={() => t('alertText')}>
+          <StyledButton
+            shadow
+            onClick={() => {
+              t('alertText');
+              // Router.push('/product');
+            }}
+          >
             {t('demo.start')}
           </StyledButton>
-          {/* </Link> */}
+
           <IconWrapper>
             <img
               onClick={() => t('alertText')}

@@ -1,5 +1,4 @@
 import { SFC, useState } from 'react';
-import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import styled, { css } from 'styled-components';
 import { animated, useSpring } from 'react-spring';
@@ -9,6 +8,7 @@ import useWindowScroll from '@/hooks/useWindowScroll';
 import { scrollToID, getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
 import { i18nNamespace } from '@/constants';
+import { Router } from '@/i18n';
 
 import MobileHeader from './MobileHeader';
 
@@ -178,9 +178,9 @@ const Header: SFC = () => {
           </li>
 
           <li>
-            <Link href="/product">
-              <StyledButton>{t('start')}</StyledButton>
-            </Link>
+            <StyledButton onClick={() => Router.push('/product')}>
+              {t('start')}
+            </StyledButton>
           </li>
           <LanguageWrapper
             open={openLanguage}
