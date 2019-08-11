@@ -9,7 +9,6 @@ const NextI18NextInstance = new NextI18Next({
     wait: true,
     useSuspense: false,
   },
-  debug: true,
 });
 
 // For next export static

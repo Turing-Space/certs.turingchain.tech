@@ -8,11 +8,14 @@ import GlobalStateProvider from '@/contexts/GlobalStateProvider';
 import theme from '@/themes/theme';
 import { trackPageView } from '@/utils/gtag';
 
-import { appWithTranslation } from '@/i18n';
+import { appWithTranslation, i18n } from '@/i18n';
+import { langsMap } from '@/constants';
 
 Modal.setAppElement('#__next');
 
-class MyApp extends App {
+const DEFAULT_LANG = 'zh-TW';
+
+class MyApp extends App<{ router: { query: { lng: string } } }> {
   static async getInitialProps({ Component, ctx }: any) {
     let pageProps = {};
 
@@ -23,7 +26,31 @@ class MyApp extends App {
     return { pageProps };
   }
 
+  getUserLanguage = (defaultLang: string = DEFAULT_LANG): string => {
+    // 1st see path query(from server or exportPathMap)
+    if (this.props.router.query.lng) {
+      return this.props.router.query.lng;
+    }
+
+    // 2rd see navigator
+    const { languages = [] } = navigator || {};
+    const userLanguage = (navigator as any).userLanguage; // ts thinks navigator has no userLanguage
+    const navigatorLang = languages.find(l => langsMap[l]) || userLanguage;
+    if (navigatorLang) {
+      return navigatorLang;
+    }
+
+    // 3th return default
+    return defaultLang;
+  };
+
   componentDidMount() {
+    // cause static export will always redirect fallback lang,
+    // use a custom getUserLanguage to determine lang
+    const lang = this.getUserLanguage();
+    i18n.changeLanguage(lang);
+    setTimeout(() => i18n.changeLanguage(lang), 0);
+
     Router.onRouteChangeComplete = url => {
       trackPageView(url);
     };

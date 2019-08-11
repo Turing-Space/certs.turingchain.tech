@@ -24,10 +24,12 @@ module.exports = withBundleAnalyzer(
       withOptimizedImages({
         exportPathMap: function() {
           return {
-            '/': { page: '/' },
-            '/product': { page: '/product' },
-            '/en': { page: '/' },
-            '/en/product': { page: '/product' },
+            '/': { page: '/', query: { lng: '' } },
+            '/product': { page: '/product', query: { lng: '' } },
+            '/zh-TW': { page: '/', query: { lng: 'zh-TW' } },
+            '/zh-TW/product': { page: '/product', query: { lng: 'zh-TW' } },
+            '/en': { page: '/', query: { lng: 'en' } },
+            '/en/product': { page: '/product', query: { lng: 'en' } },
           };
         },
         assetPrefix: GITHUB ? `/${PROJ_NAME}/` : '',

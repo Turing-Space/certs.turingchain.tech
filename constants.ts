@@ -16,3 +16,8 @@ export enum i18nNamespace {
 }
 
 export const GA_ID = process.env.GA_ID;
+
+export const langsMap: { [key: string]: boolean } = {
+  'zh-TW': true,
+  en: true,
+};
