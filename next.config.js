@@ -26,6 +26,8 @@ module.exports = withBundleAnalyzer(
           return {
             '/': { page: '/' },
             '/product': { page: '/product' },
+            '/en': { page: '/' },
+            '/en/product': { page: '/product' },
           };
         },
         assetPrefix: GITHUB ? `/${PROJ_NAME}/` : '',
