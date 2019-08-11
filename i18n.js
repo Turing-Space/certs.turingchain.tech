@@ -9,10 +9,10 @@ const NextI18NextInstance = new NextI18Next({
     wait: true,
     useSuspense: false,
   },
+  debug: true,
 });
 
 // For next export static
-NextI18NextInstance.i18n.language = 'zh-TW';
 NextI18NextInstance.i18n.languages = ['zh-TW', 'en'];
 
 module.exports = NextI18NextInstance;
