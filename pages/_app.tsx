@@ -45,11 +45,12 @@ class MyApp extends App<{ router: { query: { lng: string } } }> {
   };
 
   componentDidMount() {
-    // cause static export will always redirect fallback lang,
+    // cause static export's i18n.language is undefined,
     // use a custom getUserLanguage to determine lang
-    const lang = this.getUserLanguage();
-    i18n.changeLanguage(lang);
-    setTimeout(() => i18n.changeLanguage(lang), 0);
+    if (!i18n.language) {
+      const lang = this.getUserLanguage();
+      setTimeout(() => i18n.changeLanguage(lang), 0);
+    }
 
     Router.onRouteChangeComplete = url => {
       trackPageView(url);
