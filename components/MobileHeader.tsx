@@ -161,14 +161,6 @@ const MobileHeader: FC<TProps> = ({ open, setOpen }) => {
         >
           {t('header.contact')}
         </li>
-        <li
-          onClick={() => {
-            scrollToID('section-contact');
-            setOpen(false);
-          }}
-        >
-          {t('header.contact')}
-        </li>
         <LanguageWrapper
           className="small"
           open={openLanguage}
