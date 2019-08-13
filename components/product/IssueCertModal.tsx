@@ -10,7 +10,7 @@ import Button from '@/components/Button';
 import { CertsContext } from '@/contexts/certs';
 
 import Title from './Title';
-import TextInput from './TextInput';
+import TextInput from '../TextInput';
 import InputFile from '../InputFile';
 
 const Wrapper = styled.div`

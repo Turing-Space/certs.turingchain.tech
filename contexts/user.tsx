@@ -4,6 +4,7 @@ type TUser = {
   name: string;
   email: string;
   avatarUri: string;
+  loginMode: 'user' | 'issuer' | '';
 };
 
 type TUserContext = {
@@ -12,6 +13,7 @@ type TUserContext = {
 };
 
 const defaultUser: TUser = {
+  loginMode: '',
   name: 'Henry Hang',
   email: 'trump@turing.tech',
   avatarUri: 'https://source.unsplash.com/300x300/?baby',

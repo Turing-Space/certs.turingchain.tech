@@ -13,6 +13,7 @@ export enum i18nNamespace {
   Common = 'common',
   Home = 'home',
   Demo = 'demo',
+  Issuer = 'issuer',
 }
 
 export const GA_ID = process.env.GA_ID;

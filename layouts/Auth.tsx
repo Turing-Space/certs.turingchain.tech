@@ -9,20 +9,12 @@ import Footer from '@/components/product/Footer';
 import { media } from '@/utils/theme';
 import { i18n } from '@/i18n';
 
-const Main = styled.main`
-  width: 75%;
-  margin: auto;
-  ${media('largeDesktop')} {
-    width: 65%;
-  }
-`;
-
 type TProps = {
   title?: string;
   children: React.ReactNode;
 };
 
-const ProductLayout: React.FunctionComponent<TProps> = ({
+const AuthLayout: React.FunctionComponent<TProps> = ({
   children,
   title = SITE_TITLE,
 }) => {
@@ -46,17 +38,12 @@ const ProductLayout: React.FunctionComponent<TProps> = ({
         <GlobalStyles />
         <Head>
           <title>{title}</title>
-          <link
-            rel="stylesheet"
-            href="https://unpkg.com/react-day-picker/lib/style.css"
-          />
         </Head>
         <Header />
-        <Main>{children}</Main>
-        <Footer />
+        <main>{children}</main>
       </>
     </ThemeProvider>
   );
 };
 
-export default ProductLayout;
+export default AuthLayout;

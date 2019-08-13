@@ -5,7 +5,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import Section from '@/components/Section';
 import { getRelativePath } from '@/utils';
 import H1 from '@/components/H1';
-import ScrollInfo from '@/components/ScollInfo';
+import ScrollInfo from '@/components/ScrollInfo';
 import { media } from '@/utils/theme';
 import { i18nNamespace } from '@/constants';
 
@@ -113,12 +113,7 @@ const Home: FC<{ id: string }> = ({ id }) => {
         )} 2x, ${getRelativePath('/static/bg/bg-home-cover-right@3x.png')} 3x`}
       />
       <ScrollAnimation animateIn="fadeInUp">
-        <Logo
-          src={require('../../static/logo/logo-new.svg')}
-          // srcSet={`${getRelativePath(
-          //   '/static/logo/logo-tc-title@2x.png',
-          // )} 2x, ${getRelativePath('/static/logo/logo-tc-title@3x.png')} 3x`}
-        />
+        <Logo src={require('../../static/logo/logo-new.svg')} />
       </ScrollAnimation>
       <TitleWrapper animateIn="fadeInUp" delay={400} offset={0}>
         <Title>

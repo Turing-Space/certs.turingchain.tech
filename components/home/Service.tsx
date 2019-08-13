@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Section from '@/components/Section';
 import H2 from '@/components/H2';
-import ScrollInfo from '@/components/ScollInfo';
+import ScrollInfo from '@/components/ScrollInfo';
 import Description from '@/components/Description';
 import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';

@@ -26,6 +26,8 @@ module.exports = withBundleAnalyzer(
           return {
             '/': { page: '/', query: { lng: '' } },
             '/product': { page: '/product', query: { lng: '' } },
+            '/auth/login': { page: '/auth/login', query: { mode: 'issuer' } },
+            '/issuer': { page: '/issuer', query: { lng: '' } },
             '/zh-TW': { page: '/', query: { lng: 'zh-TW' } },
             '/zh-TW/product': { page: '/product', query: { lng: 'zh-TW' } },
             '/en': { page: '/', query: { lng: 'en' } },

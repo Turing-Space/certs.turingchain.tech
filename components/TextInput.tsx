@@ -1,5 +1,5 @@
+import React, { FC } from 'react';
 import styled from 'styled-components';
-import { FC } from 'react';
 
 const Wrapper = styled.div`
   margin: 1.25em 0;
@@ -19,6 +19,7 @@ const Input = styled.input`
   padding: 0.5rem 12px;
   color: #616161;
   width: 100%;
+  line-height: initial;
 
   &::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -42,32 +43,30 @@ type TProps = {
   placeholder?: string;
   value: string;
   onChange: (e: string) => void;
+  input?: React.InputHTMLAttributes<HTMLInputElement>;
 };
 
-const TextInput: FC<TProps> = ({
-  className,
-  value,
-  onChange,
-  label,
-  placeholder,
-}) => {
-  return (
-    <Wrapper className={className}>
-      {label && (
-        <LabelWrapper>
-          <label>{label}</label>
-        </LabelWrapper>
-      )}
-      <Input
-        type="text"
-        placeholder={placeholder}
-        value={value}
-        onChange={e => {
-          onChange(e.target.value);
-        }}
-      />
-    </Wrapper>
-  );
-};
+const TextInput: FC<TProps> = React.memo(
+  ({ className, value, onChange, label, placeholder, input }) => {
+    return (
+      <Wrapper className={className}>
+        {label && (
+          <LabelWrapper>
+            <label>{label}</label>
+          </LabelWrapper>
+        )}
+        <Input
+          type="text"
+          placeholder={placeholder}
+          value={value}
+          onChange={e => {
+            onChange(e.target.value);
+          }}
+          {...input}
+        />
+      </Wrapper>
+    );
+  },
+);
 
 export default TextInput;

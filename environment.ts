@@ -17,3 +17,8 @@ export const GITHUB =
 export const PROJ_NAME = env('PROJ_NAME');
 
 export const PRODUCTION = process.env.NODE_ENV === 'production';
+
+export const MVP = {
+  account: env('MVP_ACCOUNT'),
+  password: env('MVP_PASSWORD'),
+};
