@@ -1,10 +1,13 @@
-// runtime env
+import getConfig from 'next/config';
 
-export const env = (key: string, defaultValue = '') =>
+const { publicRuntimeConfig } = getConfig();
+
+// system env
+export const processEnv = (key: string, defaultValue = '') =>
   process.env[key] || defaultValue;
 
 export const GITHUB =
-  env('DEPLOY_ENV') === 'github' ||
+  processEnv('DEPLOY_ENV') === 'github' ||
   (() => {
     // if run `yarn start`, that will get window is reference error
     try {
@@ -14,11 +17,10 @@ export const GITHUB =
     }
   })();
 
-export const PROJ_NAME = env('PROJ_NAME');
+export const PROJ_NAME = processEnv('PROJ_NAME');
 
-export const PRODUCTION = process.env.NODE_ENV === 'production';
+export const PRODUCTION = processEnv('NODE_ENV') === 'production';
 
-export const MVP = {
-  account: env('MVP_ACCOUNT'),
-  password: env('MVP_PASSWORD'),
-};
+// runtime env
+
+export const getMVP = () => publicRuntimeConfig.MVP;

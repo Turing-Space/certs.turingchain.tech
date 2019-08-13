@@ -9,7 +9,7 @@ import H1 from '@/components/H1';
 import TextInput from '@/components/TextInput';
 import Button from '@/components/Button';
 import { emailValidator } from '@/utils/validator';
-import { MVP } from '@/environment';
+import { getMVP } from '@/environment';
 import { Router } from '@/i18n';
 import { UserContext } from '@/contexts/user';
 
@@ -94,11 +94,7 @@ const ErrorMessage = styled.p`
   color: ${p => p.theme.colors.primary};
 `;
 
-type TProps = {
-  fakeInfo: typeof MVP;
-};
-
-const Login: FC<TProps> = ({ fakeInfo }) => {
+const Login: FC = () => {
   const { query } = useRouter();
   const { updateUser } = useContext(UserContext);
   const [account, setAccount] = useState<string>('');
@@ -120,6 +116,7 @@ const Login: FC<TProps> = ({ fakeInfo }) => {
 
     setLoading(true);
     if (query.mode === 'issuer') {
+      const fakeInfo = getMVP();
       if (account === fakeInfo.account && password === fakeInfo.password) {
         setTimeout(() => {
           updateUser(u => ({ ...u, loginMode: 'issuer' }));
@@ -148,7 +145,7 @@ const Login: FC<TProps> = ({ fakeInfo }) => {
     },
     [onLogin],
   );
-  console.log(fakeInfo, account, password);
+  console.log(query, account, password);
   return (
     <StyledSection width="100vw" justifyContent="flex-start" row fullscreen>
       <img

@@ -5,12 +5,13 @@ const LoadingWrapper = styled.div`
   display: inline-block;
   position: relative;
   width: 64px;
-  height: 11px;
+  height: 8px;
+  margin: 5px;
 
   div {
     position: absolute;
-    width: 11px;
-    height: 11px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: #fff;
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
