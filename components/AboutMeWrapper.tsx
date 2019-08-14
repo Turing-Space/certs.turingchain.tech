@@ -2,7 +2,7 @@ import { useContext, FC } from 'react';
 import styled from 'styled-components';
 import { UserContext } from '@/contexts/user';
 import { media } from '@/utils/theme';
-import Title from './product/Title';
+import Title from './Cert/Title';
 
 const Wrapper = styled.div`
   margin-top: 10%;
@@ -53,11 +53,15 @@ const NameWrapper = styled.div`
   }
 `;
 
-const AboutMeWrapper: FC = ({ children }) => {
+type TProps = {
+  title: string;
+};
+
+const AboutMeWrapper: FC<TProps> = ({ children, title }) => {
   const { user } = useContext(UserContext);
   return (
     <Wrapper>
-      <Title>關於我</Title>
+      <Title>{title}</Title>
       <InfoWrapper>
         <UserWrapper>
           <Avatar src={user.avatarUri} />

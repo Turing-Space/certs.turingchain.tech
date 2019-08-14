@@ -18,6 +18,8 @@ export enum i18nNamespace {
 
 export const GA_ID = process.env.GA_ID;
 
+export const API_ENDPOINT = 'https://x1certificate-aqkcbxdduq-uc.a.run.app/api';
+
 export const langsMap: { [key: string]: boolean } = {
   'zh-TW': true,
   en: true,

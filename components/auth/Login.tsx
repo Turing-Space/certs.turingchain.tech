@@ -118,6 +118,7 @@ const Login: FC = () => {
     if (query.mode === 'issuer') {
       const fakeInfo = getMVP();
       if (account === fakeInfo.account && password === fakeInfo.password) {
+        // TODO: login api
         setTimeout(() => {
           updateUser(u => ({ ...u, loginMode: 'issuer' }));
           Router.push('/issuer');
@@ -145,7 +146,7 @@ const Login: FC = () => {
     },
     [onLogin],
   );
-  console.log(query, account, password);
+
   return (
     <StyledSection width="100vw" justifyContent="flex-start" row fullscreen>
       <img

@@ -25,10 +25,10 @@ const CertsNull: FC<TMyCertsRenderComponentProps> = ({ openModal }) => {
   return (
     <Wrapper>
       <NUllImg src={require('../../static/bg/bg-certs-empty.svg')} />
-      <p>Oops！你的證書還沒有受到保障</p>
-      <p>讓我們開始吧！</p>
+      <p>你尚未發行證書，請先完成基本資料填寫，</p>
+      <p>即可開始發證！</p>
       <StyledButton mode="white" onClick={openModal}>
-        新增證書
+        發行證書
       </StyledButton>
     </Wrapper>
   );

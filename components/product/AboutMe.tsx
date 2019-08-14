@@ -69,7 +69,7 @@ const AboutMe = () => {
     },
   ];
   return (
-    <AboutMeWrapper>
+    <AboutMeWrapper title={'關於我'}>
       <div
         style={{
           display: 'flex',

@@ -46,30 +46,21 @@ const AboutMe = () => {
     number: certificatedCount,
     from: { number: 0 },
   });
-  const certificatingProps = useSpring({
-    number: certificatingCount,
-    from: { number: 0 },
-  });
 
   const icons = [
     {
-      name: '認證數量',
+      name: '證書種類',
       count: certs.length,
       props: certsProps,
     },
     {
-      name: '已完成認證',
+      name: '已發出數量',
       count: certificatedCount,
       props: certificatedProps,
     },
-    {
-      name: '認證中',
-      count: certificatingCount,
-      props: certificatingProps,
-    },
   ];
   return (
-    <AboutMeWrapper>
+    <AboutMeWrapper title="發證單位">
       <div
         style={{
           display: 'flex',

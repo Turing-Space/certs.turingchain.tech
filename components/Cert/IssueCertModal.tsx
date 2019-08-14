@@ -8,8 +8,8 @@ import { media } from '@/utils/theme';
 import DayPickerInputComponent from '@/components/DayPickerInputComponent';
 import Button from '@/components/Button';
 import { CertsContext } from '@/contexts/certs';
+import Title from '@/components/Cert/Title';
 
-import Title from './Title';
 import TextInput from '../TextInput';
 import InputFile from '../InputFile';
 
