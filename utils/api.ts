@@ -4,7 +4,7 @@ import axios from 'axios';
 // default axios config
 axios.defaults.baseURL = API_ENDPOINT;
 
-export function call<D, E = any>(
+export function call<D, E = Error>(
   promise: Promise<D>,
 ): Promise<[E | null, D | null]> {
   return promise
@@ -18,7 +18,8 @@ type TGetCertsParams = {
   holder?: string;
 };
 
-type TAPICert = {
+export type TAPICert = {
+  filePath: string;
   timestamp: number;
   holder: string;
   issuer: string;
@@ -27,11 +28,27 @@ type TAPICert = {
   type: string;
 };
 
-export const getCerts = async (d?: TGetCertsParams) => {
-  const [err, data] = await call(
+// TODO: refactor to abstract
+export const getCerts = async (
+  d?: TGetCertsParams,
+): Promise<[string, TAPICert[] | null]> => {
+  const [err, axiosData] = await call(
     axios.get<IAPIResponseInterface<TAPICert[]>>('/certs', {
-      data: d,
+      params: d,
     }),
   );
-  return [err, data];
+
+  let error: string = '';
+  let data: TAPICert[] | null = null;
+  if (axiosData) {
+    if (axiosData.data.success) {
+      data = axiosData.data.content;
+    } else {
+      error = axiosData.data.message;
+    }
+  } else {
+    error = err.message;
+  }
+
+  return [error, data];
 };

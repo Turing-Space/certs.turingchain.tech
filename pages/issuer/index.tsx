@@ -1,21 +1,29 @@
-import { useEffect, FC } from 'react';
+import { useEffect, FC, useContext } from 'react';
 
 import { i18nNamespace } from '@/constants';
 import ProductLayout from '@/layouts/Product';
 import AboutMe from '@/components/issuer/AboutMe';
 import MyCertsTitleRight from '@/components/issuer/MyCertsTitleRight';
-import withAuth from '@/hoc/withAuth';
-import { getCerts } from '@/utils/api';
 import MyCerts from '@/components/Cert/MyCerts';
 import CertsNull from '@/components/issuer/CertsNull';
+import { CertsContext } from '@/contexts/certs';
+import { getCerts } from '@/utils/api';
+import notify from '@/utils/notify';
+import { preparedCerts } from '@/utils/certs';
+import withAuth from '@/hoc/withAuth';
 
 const IssuerPage: FC = () => {
+  const { updateCerts } = useContext(CertsContext);
   useEffect(() => {
-    const api = async () => {
-      const a = await getCerts({ issuer: 'betty' });
-      console.log(a);
+    const fetch = async () => {
+      const [err, certs] = await getCerts({ issuer: 'betty' });
+      if (!certs) {
+        notify.error({ msg: err });
+      } else {
+        updateCerts(preparedCerts(certs));
+      }
     };
-    api();
+    fetch();
   }, []);
   return (
     <ProductLayout>

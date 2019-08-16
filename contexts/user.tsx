@@ -13,9 +13,9 @@ type TUserContext = {
 };
 
 const defaultUser: TUser = {
-  loginMode: '',
-  name: 'Henry Hang',
-  email: 'trump@turing.tech',
+  loginMode: 'issuer',
+  name: '',
+  email: '',
   avatarUri: 'https://source.unsplash.com/300x300/?baby',
 };
 

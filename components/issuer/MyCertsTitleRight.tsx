@@ -5,7 +5,20 @@ import { Router } from '@/i18n';
 
 const MyCertsTitleRight: FC<TMyCertsRenderComponentProps> = () => {
   return (
-    <Button mode="white" onClick={() => Router.push('/issuer/issue-cert')}>
+    <Button
+      mode="white"
+      onClick={() =>
+        Router.push(
+          {
+            pathname: '/issuer/issue-cert/[page]',
+            query: {
+              page: 1,
+            },
+          },
+          '/issuer/issue-cert/1',
+        )
+      }
+    >
       發行證書
     </Button>
   );

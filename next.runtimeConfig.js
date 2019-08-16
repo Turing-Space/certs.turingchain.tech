@@ -4,6 +4,7 @@ const publicRuntimeConfig = {
   MVP: {
     account: process.env.MVP_ACCOUNT,
     password: process.env.MVP_PASSWORD,
+    issuePassword: process.env.MVP_ISSUE_CERT_PASSWORD,
   },
 };
 

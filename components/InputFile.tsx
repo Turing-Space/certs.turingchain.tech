@@ -30,11 +30,18 @@ const InputWrapper = styled.button`
 type TProps = {
   file: File | null;
   onChange: (file: File) => void;
+  description?: string;
   buttonText?: string;
   accept?: string;
 };
 
-const InputFile: FC<TProps> = ({ file, onChange, buttonText, accept }) => {
+const InputFile: FC<TProps> = ({
+  file,
+  onChange,
+  buttonText,
+  description,
+  accept,
+}) => {
   return (
     <Wrapper>
       <InputWrapper>
@@ -56,7 +63,7 @@ const InputFile: FC<TProps> = ({ file, onChange, buttonText, accept }) => {
         />
         {buttonText || '上傳圖檔'}
       </InputWrapper>
-      <p>* 檔案限制 1 M</p>
+      {description && <p>{description}</p>}
       {file && <p>( {file.name} )</p>}
     </Wrapper>
   );

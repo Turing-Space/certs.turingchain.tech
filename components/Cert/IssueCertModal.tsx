@@ -155,6 +155,7 @@ const IssueCertModal: FC<TProps> = ({ visible, onClose }) => {
                 reader.readAsDataURL(f);
               }
             }}
+            description="* 檔案限制 1 M"
             buttonText={'上傳圖檔'}
             accept=".png,.jpg,.jpeg"
           />

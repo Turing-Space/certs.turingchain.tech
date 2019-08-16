@@ -9,7 +9,7 @@ import H1 from '@/components/H1';
 import TextInput from '@/components/TextInput';
 import Button from '@/components/Button';
 import { emailValidator } from '@/utils/validator';
-import { getMVP } from '@/environment';
+import { runtimeEnv } from '@/environment';
 import { Router } from '@/i18n';
 import { UserContext } from '@/contexts/user';
 
@@ -116,11 +116,11 @@ const Login: FC = () => {
 
     setLoading(true);
     if (query.mode === 'issuer') {
-      const fakeInfo = getMVP();
+      const fakeInfo = runtimeEnv.MVP;
       if (account === fakeInfo.account && password === fakeInfo.password) {
         // TODO: login api
         setTimeout(() => {
-          updateUser(u => ({ ...u, loginMode: 'issuer' }));
+          updateUser(u => ({ ...u, name: 'betty', loginMode: 'issuer' }));
           Router.push('/issuer');
         }, 1500);
       } else {

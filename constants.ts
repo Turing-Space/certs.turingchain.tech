@@ -24,3 +24,8 @@ export const langsMap: { [key: string]: boolean } = {
   'zh-TW': true,
   en: true,
 };
+
+export enum CertTemplate {
+  Activity = 'ACTIVITY',
+  Completion = 'COMPLETION',
+}

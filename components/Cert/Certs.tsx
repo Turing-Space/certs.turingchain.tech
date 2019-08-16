@@ -272,7 +272,7 @@ const Certs: FC<TProps> = ({ certs, updateCert }) => {
           <ModalWrapper>
             <CertCover src={selectedCert.coverUri} />
             <p className="issuer">{selectedCert.issuer}</p>
-            <p className="name">{selectedCert.name}1</p>
+            <p className="name">{selectedCert.name}</p>
             <p className="create-data">June 2019</p>
             <Divider />
             <ModalProgressTitleWrapper>

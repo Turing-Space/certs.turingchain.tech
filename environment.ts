@@ -23,4 +23,4 @@ export const PRODUCTION = processEnv('NODE_ENV') === 'production';
 
 // runtime env
 
-export const getMVP = () => publicRuntimeConfig.MVP;
+export const runtimeEnv = publicRuntimeConfig;
