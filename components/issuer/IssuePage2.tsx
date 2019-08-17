@@ -41,7 +41,7 @@ const SectionTitle = styled.p`
 const StyledButton = styled(Button)`
   min-width: 10rem;
   padding: 0.7em 1em;
-  margin: 3% auto;
+  margin: 3% auto 10px;
 `;
 
 const CertImg = styled.img`
@@ -59,9 +59,14 @@ const Error = styled.p`
   color: ${p => p.theme.colors.primary};
 `;
 
+const LoadingText = styled.p`
+  text-align: center;
+  font-size: ${p => p.theme.fontSize.smaller};
+`;
+
 const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
   const { user } = useContext(UserContext);
-  const [loadingText, setLoadingText] = useState('');
+  const [loadingText, setLoadingText] = useState('以 CSV 發證...');
   const [password, setPassword] = useState('');
   const [error, setError] = useState({
     message: '',
@@ -91,7 +96,7 @@ const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
       templateFormData.append('certFile', dataURItoBlob(cert!.uri));
       await uploadCertTemplate(templateFormData);
       if (value.csv) {
-        setLoadingText('以 CSV 發證...');
+        setLoadingText('發證中...');
         // issue cert by csv
         const formData = new FormData();
         formData.append('issueFile', value.csv);
@@ -148,14 +153,9 @@ const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
       </IssueTitleSection>
       {error.count ? <Error>{error.message}</Error> : null}
       <StyledButton style={{ marginTop: '10%' }} onClick={onSubmit}>
-        {loadingText ? (
-          <>
-            <Loading /> {loadingText}
-          </>
-        ) : (
-          '發行證書'
-        )}
+        {loadingText ? <Loading /> : '發行證書'}
       </StyledButton>
+      <LoadingText>({loadingText})</LoadingText>
     </>
   );
 };
