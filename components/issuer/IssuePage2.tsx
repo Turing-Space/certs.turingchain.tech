@@ -88,21 +88,21 @@ const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
       templateFormData.append('issuer', user.name);
       templateFormData.append('type', value.type);
       templateFormData.append('itemsCount', '1');
-      templateFormData.append('fontFamily', 'Songti TC');
-      templateFormData.append('fontSize', '60');
-      templateFormData.append('color', 'black');
-      templateFormData.append('height', '460');
-      templateFormData.append('width', '450');
+      templateFormData.append('fontFamily[0]', 'Songti TC');
+      templateFormData.append('fontSize[0]', '60');
+      templateFormData.append('color[0]', 'black');
+      templateFormData.append('height[0]', '460');
+      templateFormData.append('width[0]', '450');
       templateFormData.append('certFile', dataURItoBlob(cert!.uri));
       await uploadCertTemplate(templateFormData);
       if (value.csv) {
-        setLoadingText('發證中...');
         // issue cert by csv
+        setLoadingText('發證中...');
         const formData = new FormData();
         formData.append('issueFile', value.csv);
         await issueCertByCSV(formData);
       }
-      notify.success({ msg: '上傳成功！' });
+      notify.success({ msg: `恭喜成功！ ${value.type} 已發證` });
       Router.push('/issuer');
     } else {
       setError({

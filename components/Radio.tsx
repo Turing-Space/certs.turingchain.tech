@@ -5,6 +5,7 @@ const Wrapper = styled.button`
   cursor: pointer;
   display: flex;
   align-items: center;
+  background: none;
 `;
 
 const RadioBox = styled.div<{ checked: boolean }>`

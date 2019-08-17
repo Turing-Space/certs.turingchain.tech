@@ -1,6 +1,7 @@
 import { useState, useCallback, FC, KeyboardEvent, useContext } from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
+import qs from 'qs';
 
 import Section from '@/components/Section';
 import { media } from '@/utils/theme';
@@ -101,7 +102,6 @@ const Login: FC = () => {
   const [password, setPassword] = useState<string>('');
   const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
-
   const onLogin = useCallback(() => {
     const validate = () => {
       if (!account || !password) {
@@ -115,7 +115,10 @@ const Login: FC = () => {
     };
 
     setLoading(true);
-    if (query.mode === 'issuer') {
+
+    const mode =
+      query.mode || qs.parse(location.search, { ignoreQueryPrefix: true }).mode;
+    if (mode === 'issuer') {
       const fakeInfo = runtimeEnv.MVP;
       if (account === fakeInfo.account && password === fakeInfo.password) {
         // TODO: login api
