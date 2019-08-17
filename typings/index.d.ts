@@ -15,3 +15,9 @@ type TResponsiveImage = {
   images: Array<{ height: number; path: string; width: number }>;
   srcSet: string;
 };
+
+interface IAPIResponseInterface<T> {
+  success: 'true' | 'false' | boolean;
+  message: string;
+  content: T;
+}

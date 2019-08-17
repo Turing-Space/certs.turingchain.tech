@@ -97,6 +97,7 @@ export default createGlobalStyle`
     font-family: ${p => p.theme.fontFamily.SFText};
   }
 
+  /**** React Modal ****/
   .ReactModal__Overlay {
     opacity: 0;
     transition: opacity 300ms ease-in-out;
@@ -126,7 +127,7 @@ export default createGlobalStyle`
     transform: scale3d(.3, .3, .3);
   }
 
-  
+  /**** Day Picker ****/
   .DayPicker {
     div, span {
       &:focus {
@@ -147,5 +148,13 @@ export default createGlobalStyle`
   .DayPicker:not(.DayPicker--interactionDisabled)
   .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover {
     background-color: #ffd6d5;
+  }
+
+  /**** Cogo Toast ****/
+  .ct-toast {
+    .ct-text {
+      font-size: 1rem;
+      line-height: 1.3;
+    }
   }
 `;

@@ -10,8 +10,9 @@ const withOptimizedImages = require('next-optimized-images');
 
 require('dotenv').config();
 
-const GITHUB = process.env.DEPLOY_ENV === 'github';
-const PROJ_NAME = process.env.PROJ_NAME;
+const { publicRuntimeConfig } = require('./next.runtimeConfig');
+
+const { GITHUB, PROJ_NAME } = publicRuntimeConfig;
 
 // fix: prevents error when .less files are required by node
 if (typeof require !== 'undefined') {
@@ -26,6 +27,17 @@ module.exports = withBundleAnalyzer(
           return {
             '/': { page: '/', query: { lng: '' } },
             '/product': { page: '/product', query: { lng: '' } },
+            '/auth/login': { page: '/auth/login', query: { mode: '' } },
+            '/issuer': { page: '/issuer', query: { lng: '' } },
+            '/issuer/issue-cert/1': {
+              page: '/issuer/issue-cert/[page]',
+              query: { page: '1' },
+            },
+            '/issuer/issue-cert/2': {
+              page: '/issuer/issue-cert/[page]',
+              query: { page: '2' },
+            },
+
             '/zh-TW': { page: '/', query: { lng: 'zh-TW' } },
             '/zh-TW/product': { page: '/product', query: { lng: 'zh-TW' } },
             '/en': { page: '/', query: { lng: 'en' } },
@@ -111,6 +123,7 @@ module.exports = withBundleAnalyzer(
 
           return config;
         },
+        publicRuntimeConfig,
       }),
     ),
   ),

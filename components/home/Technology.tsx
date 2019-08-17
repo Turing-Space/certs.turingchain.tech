@@ -10,7 +10,7 @@ import Description from '@/components/Description';
 import Button from '@/components/Button';
 import { getRelativePath } from '@/utils';
 import { i18nNamespace } from '@/constants';
-import ScrollInfo from '../ScollInfo';
+import ScrollInfo from '../ScrollInfo';
 
 const Title = styled(H2)`
   margin: 18vh auto 0;

@@ -15,7 +15,7 @@ const Bar = styled.div`
   width: 1px;
   height: 4rem;
   background: ${p => p.theme.colors.white};
-  margin-top: .5em;
+  margin-top: 0.5em;
 `;
 
 const Text = styled.p`

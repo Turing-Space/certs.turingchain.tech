@@ -6,7 +6,7 @@ import Section from '@/components/Section';
 import H2 from '@/components/H2';
 import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
-import ScrollInfo from '@/components/ScollInfo';
+import ScrollInfo from '@/components/ScrollInfo';
 import { i18nNamespace } from '@/constants';
 // import Button from '@/components/Button';
 

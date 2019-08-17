@@ -39,14 +39,12 @@ const modeSrcMap = {
   primary: PrimaryWhiteLogo,
 };
 
-const HeaderLogo: FC<{ mode?: 'primary' | 'dark' }> = ({ mode = 'dark' }) => {
+const HeaderLogo: FC<{ mode?: 'primary' | 'dark'; onClick: () => void }> = ({
+  mode = 'dark',
+  onClick,
+}) => {
   return (
-    <LogoWrapper
-      onClick={() => {
-        Router.push('/');
-        scrollToID('section-home');
-      }}
-    >
+    <LogoWrapper onClick={onClick}>
       <Logo src={modeSrcMap[mode] as any} />
       <p className="en">TuringCerts</p>
     </LogoWrapper>

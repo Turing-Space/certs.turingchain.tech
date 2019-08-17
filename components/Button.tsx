@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 type TButtonProps = {
+  disabled?: boolean;
   shadow?: boolean;
   mode?: 'primary' | 'white';
 };
@@ -21,6 +22,8 @@ const Button = styled.button<TButtonProps>`
   &:hover {
     background-color: rgb(193, 76, 76);
   }
+
+  opacity: ${p => (p.disabled ? 0.7 : 1)};
 
   ${p =>
     p.mode === 'white' &&

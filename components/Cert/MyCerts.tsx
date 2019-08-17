@@ -1,4 +1,11 @@
-import { FC, useMemo, useState, useContext } from 'react';
+import {
+  FC,
+  useCallback,
+  useMemo,
+  useState,
+  useContext,
+  ComponentType,
+} from 'react';
 import styled from 'styled-components';
 
 import { CertsContext } from '@/contexts/certs';
@@ -8,8 +15,6 @@ import Title from './Title';
 import SortControl from './SortControl';
 import SearchControl from './SearchControl';
 import Certs from './Certs';
-import CertsNull from './CertsNull';
-import IssueCertModal from './IssueCertModal';
 
 const Wrapper = styled.div`
   margin-top: 8%;
@@ -32,7 +37,18 @@ const TitleWrapper = styled.div`
   }
 `;
 
-const MyCerts: FC = () => {
+export type TMyCertsRenderComponentProps = {
+  openModal: () => void;
+};
+
+type TProps = {
+  title: string;
+  Empty?: ComponentType<TMyCertsRenderComponentProps>;
+  TitleRight?: ComponentType<TMyCertsRenderComponentProps>;
+  Modal?: ComponentType<{ visible: boolean; onClose: () => void }>;
+};
+
+const MyCerts: FC<TProps> = ({ title, Modal, TitleRight, Empty }) => {
   const { certs, updateCert } = useContext(CertsContext);
   const [searchText, setSearchText] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
@@ -42,13 +58,18 @@ const MyCerts: FC = () => {
     [certs, searchText],
   );
 
+  const openModal = useCallback(() => setModalVisible(true), []);
+  const closeModal = useCallback(() => setModalVisible(false), []);
+  const EmptyComponent = useMemo(
+    () => (Empty ? <Empty openModal={openModal} /> : null),
+    [],
+  );
+
   return (
     <Wrapper>
       <TitleWrapper>
-        <Title>我的證書</Title>
-        <Button mode="white" onClick={() => setModalVisible(true)}>
-          新增證書
-        </Button>
+        <Title>{title}</Title>
+        {TitleRight && <TitleRight openModal={openModal} />}
       </TitleWrapper>
       <div>
         <ControlWrapper>
@@ -59,15 +80,12 @@ const MyCerts: FC = () => {
           />
         </ControlWrapper>
         {certs.length === 0 ? (
-          <CertsNull />
+          EmptyComponent
         ) : (
           <Certs certs={filteredCerts} updateCert={updateCert} />
         )}
       </div>
-      <IssueCertModal
-        visible={modalVisible}
-        onClose={() => setModalVisible(false)}
-      />
+      {Modal && <Modal visible={modalVisible} onClose={closeModal} />}
     </Wrapper>
   );
 };

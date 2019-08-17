@@ -8,9 +8,9 @@ import { media } from '@/utils/theme';
 import DayPickerInputComponent from '@/components/DayPickerInputComponent';
 import Button from '@/components/Button';
 import { CertsContext } from '@/contexts/certs';
+import Title from '@/components/Cert/Title';
 
-import Title from './Title';
-import TextInput from './TextInput';
+import TextInput from '../TextInput';
 import InputFile from '../InputFile';
 
 const Wrapper = styled.div`
@@ -155,6 +155,7 @@ const IssueCertModal: FC<TProps> = ({ visible, onClose }) => {
                 reader.readAsDataURL(f);
               }
             }}
+            description="* 檔案限制 1 M"
             buttonText={'上傳圖檔'}
             accept=".png,.jpg,.jpeg"
           />

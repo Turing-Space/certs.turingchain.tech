@@ -7,24 +7,14 @@ import { SITE_TITLE } from '@/constants';
 import Header from '@/components/ProductHeader';
 import Footer from '@/components/product/Footer';
 import { media } from '@/utils/theme';
-import { i18n, Router } from '@/i18n';
-
-const Main = styled.main`
-  width: 75%;
-  margin: auto;
-  ${media('largeDesktop')} {
-    width: 65%;
-  }
-`;
+import { i18n } from '@/i18n';
 
 type TProps = {
-  routePath: string;
   title?: string;
   children: React.ReactNode;
 };
 
-const ProductLayout: React.FunctionComponent<TProps> = ({
-  routePath,
+const AuthLayout: React.FunctionComponent<TProps> = ({
   children,
   title = SITE_TITLE,
 }) => {
@@ -48,17 +38,12 @@ const ProductLayout: React.FunctionComponent<TProps> = ({
         <GlobalStyles />
         <Head>
           <title>{title}</title>
-          <link
-            rel="stylesheet"
-            href="https://unpkg.com/react-day-picker/lib/style.css"
-          />
         </Head>
-        <Header onClick={() => Router.push(routePath)} />
-        <Main>{children}</Main>
-        <Footer />
+        <Header />
+        <main>{children}</main>
       </>
     </ThemeProvider>
   );
 };
 
-export default ProductLayout;
+export default AuthLayout;

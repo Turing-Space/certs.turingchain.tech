@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
-import { useContext } from 'react';
+import { useContext, memo } from 'react';
 import { CertsContext } from '@/contexts/certs';
 import AboutMeWrapper from '@/components/AboutMeWrapper';
 import { media } from '@/utils/theme';
@@ -33,43 +33,36 @@ const AnimatedNumber = styled(animated.p)`
   font-family: ${p => p.theme.fontFamily.SFText};
 `;
 
-const AboutMe = () => {
+const AboutMe = memo(() => {
   const { certs } = useContext(CertsContext);
-  const certificatedCount = certs.filter(d => !!d.verified).length;
-  const certificatingCount = certs.length - certificatedCount;
+  const typeCount = certs.reduce<string[]>((acc, c) => {
+    if (!acc.includes(c.name)) {
+      acc.push(c.name);
+    }
+    return acc;
+  }, []).length;
 
+  const typeCountProps = useSpring({
+    number: typeCount,
+    from: { number: 0 },
+  });
   const certsProps = useSpring({
     number: certs.length,
-    from: { number: 0 },
-  });
-  const certificatedProps = useSpring({
-    number: certificatedCount,
-    from: { number: 0 },
-  });
-  const certificatingProps = useSpring({
-    number: certificatingCount,
     from: { number: 0 },
   });
 
   const icons = [
     {
-      name: '認證數量',
-      count: certs.length,
+      name: '證書種類',
+      props: typeCountProps,
+    },
+    {
+      name: '已發出數量',
       props: certsProps,
-    },
-    {
-      name: '已完成認證',
-      count: certificatedCount,
-      props: certificatedProps,
-    },
-    {
-      name: '認證中',
-      count: certificatingCount,
-      props: certificatingProps,
     },
   ];
   return (
-    <AboutMeWrapper title={'關於我'}>
+    <AboutMeWrapper title="發證單位">
       <div
         style={{
           display: 'flex',
@@ -88,6 +81,6 @@ const AboutMe = () => {
       </div>
     </AboutMeWrapper>
   );
-};
+});
 
 export default AboutMe;
