@@ -66,7 +66,7 @@ const LoadingText = styled.p`
 
 const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
   const { user } = useContext(UserContext);
-  const [loadingText, setLoadingText] = useState('以 CSV 發證...');
+  const [loadingText, setLoadingText] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState({
     message: '',
@@ -155,7 +155,7 @@ const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
       <StyledButton style={{ marginTop: '10%' }} onClick={onSubmit}>
         {loadingText ? <Loading /> : '發行證書'}
       </StyledButton>
-      <LoadingText>({loadingText})</LoadingText>
+      {loadingText && <LoadingText>({loadingText})</LoadingText>}
     </>
   );
 };
