@@ -29,4 +29,6 @@ export default {
     toast.error(msg, createOptions({ onClick, customOpts: opts })),
   info: ({ msg, onClick }: TNotifyProps, opts?: Options) =>
     toast.info(msg, createOptions({ onClick, customOpts: opts })),
+  success: ({ msg, onClick }: TNotifyProps, opts?: Options) =>
+    toast.success(msg, createOptions({ onClick, customOpts: opts })),
 };

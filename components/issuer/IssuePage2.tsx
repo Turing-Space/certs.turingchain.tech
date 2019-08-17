@@ -7,14 +7,15 @@ import { runtimeEnv } from '@/environment';
 import { Router } from '@/i18n';
 import { uploadCertTemplate, issueCertByCSV } from '@/utils/api';
 import { dataURItoBlob } from '@/utils';
+import { UserContext } from '@/contexts/user';
+import notify from '@/utils/notify';
 
 import BackPage from '../BackPage';
 import IssueTitleSection from './TitleSection';
 import Button from '../Button';
 import Step from '../Step';
 import TextInput from '../TextInput';
-import { UserContext } from '@/contexts/user';
-import notify from '@/utils/notify';
+import Loading from '../Loading';
 
 const StyledBackPage = styled(BackPage)`
   margin-top: 7%;
@@ -38,7 +39,7 @@ const SectionTitle = styled.p`
 `;
 
 const StyledButton = styled(Button)`
-  width: 10rem;
+  min-width: 10rem;
   padding: 0.7em 1em;
   margin: 3% auto;
 `;
@@ -60,6 +61,7 @@ const Error = styled.p`
 
 const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
   const { user } = useContext(UserContext);
+  const [loadingText, setLoadingText] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState({
     message: '',
@@ -68,12 +70,14 @@ const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
 
   const cert = templateStyles.find(t => t.key === value.template);
 
-  const useSubmit = useCallback(async () => {
+  const onSubmit = useCallback(async () => {
     if (error.count >= 3) {
       notify.error({ msg: '密碼錯誤 3 次，請洽詢服務人員重新設定...' });
+      window.scrollTo({ top: 0 });
       Router.push('/issuer');
       return;
     } else if (password === runtimeEnv.MVP.issuePassword) {
+      setLoadingText('上傳模板...');
       // upload template cert
       const templateFormData = new FormData();
       templateFormData.append('issuer', user.name);
@@ -87,11 +91,14 @@ const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
       templateFormData.append('certFile', dataURItoBlob(cert!.uri));
       await uploadCertTemplate(templateFormData);
       if (value.csv) {
+        setLoadingText('以 CSV 發證...');
         // issue cert by csv
         const formData = new FormData();
         formData.append('issueFile', value.csv);
         await issueCertByCSV(formData);
       }
+      notify.success({ msg: '上傳成功！' });
+      Router.push('/issuer');
     } else {
       setError({
         message: `發證密碼錯誤 ${error.count +
@@ -140,8 +147,14 @@ const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
         </SectionWrapper>
       </IssueTitleSection>
       {error.count ? <Error>{error.message}</Error> : null}
-      <StyledButton style={{ marginTop: '10%' }} onClick={useSubmit}>
-        發行證書
+      <StyledButton style={{ marginTop: '10%' }} onClick={onSubmit}>
+        {loadingText ? (
+          <>
+            <Loading /> {loadingText}
+          </>
+        ) : (
+          '發行證書'
+        )}
       </StyledButton>
     </>
   );
