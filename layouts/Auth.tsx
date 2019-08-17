@@ -4,7 +4,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import GlobalStyles from '@/themes/GlobalStyles';
 import NormalizeStyles from '@/themes/NormalizeStyles';
 import { SITE_TITLE } from '@/constants';
-import Header from '@/components/product/Header';
+import Header from '@/components/ProductHeader';
 import Footer from '@/components/product/Footer';
 import { media } from '@/utils/theme';
 import { i18n } from '@/i18n';

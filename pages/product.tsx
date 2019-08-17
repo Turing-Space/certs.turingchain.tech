@@ -9,7 +9,7 @@ import CertsNull from '@/components/product/CertsNull';
 
 const ProductPage: NextFC = () => {
   return (
-    <ProductLayout title={'Demo | ' + SITE_TITLE}>
+    <ProductLayout title={'Demo | ' + SITE_TITLE} routePath="/product">
       <AboutMe />
       <MyCerts
         title="我的證書"

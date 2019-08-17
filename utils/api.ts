@@ -1,5 +1,5 @@
 import { API_ENDPOINT } from '@/constants';
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 
 // default axios config
 axios.defaults.baseURL = API_ENDPOINT;
@@ -10,6 +10,24 @@ export function call<D, E = Error>(
   return promise
     .then<[null, D]>((data: D) => [null, data])
     .catch<[E, null]>(err => [err, null]);
+}
+
+export function formatAPIRes<R = any>(
+  res: [Error | null, AxiosResponse<IAPIResponseInterface<R>> | null],
+): [string, R | null] {
+  const [err, axiosData] = res;
+  let error: string = '';
+  let data: R | null = null;
+  if (axiosData) {
+    if (axiosData.data.success) {
+      data = axiosData.data.content;
+    } else {
+      error = axiosData.data.message;
+    }
+  } else {
+    error = err!.message;
+  }
+  return [error, data];
 }
 
 type TGetCertsParams = {
@@ -28,27 +46,35 @@ export type TAPICert = {
   type: string;
 };
 
-// TODO: refactor to abstract
-export const getCerts = async (
-  d?: TGetCertsParams,
-): Promise<[string, TAPICert[] | null]> => {
-  const [err, axiosData] = await call(
-    axios.get<IAPIResponseInterface<TAPICert[]>>('/certs', {
+export const getCerts = async (d?: TGetCertsParams) => {
+  const res = await call(
+    axios.get('/certs', {
       params: d,
     }),
   );
+  return formatAPIRes<TAPICert[]>(res);
+};
 
-  let error: string = '';
-  let data: TAPICert[] | null = null;
-  if (axiosData) {
-    if (axiosData.data.success) {
-      data = axiosData.data.content;
-    } else {
-      error = axiosData.data.message;
-    }
-  } else {
-    error = err.message;
-  }
+export const uploadCertTemplate = async (body: FormData) => {
+  const res = await call(
+    axios.post('/upload', body, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    }),
+  );
+  console.log('[upload cert]', res);
+  return formatAPIRes<any>(res);
+};
 
-  return [error, data];
+export const issueCertByCSV = async (body: FormData) => {
+  const res = await call(
+    axios.post('/issue/csv', body, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    }),
+  );
+  console.log('[issue by csv]', res);
+  return formatAPIRes<any>(res);
 };

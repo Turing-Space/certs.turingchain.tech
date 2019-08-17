@@ -1,16 +1,20 @@
-import { FC, useState } from 'react';
+import { FC, useState, useCallback, useContext } from 'react';
 import styled from 'styled-components';
 import { TRenderComponentProps } from '@/pages/issuer/issue-cert/[page]';
 
-import { getRelativePath } from '@/utils';
-import { CertTemplate } from '@/constants';
+import { templateStyles } from '@/constants';
 import { runtimeEnv } from '@/environment';
+import { Router } from '@/i18n';
+import { uploadCertTemplate, issueCertByCSV } from '@/utils/api';
+import { dataURItoBlob } from '@/utils';
 
 import BackPage from '../BackPage';
 import IssueTitleSection from './TitleSection';
 import Button from '../Button';
 import Step from '../Step';
 import TextInput from '../TextInput';
+import { UserContext } from '@/contexts/user';
+import notify from '@/utils/notify';
 
 const StyledBackPage = styled(BackPage)`
   margin-top: 7%;
@@ -54,28 +58,73 @@ const Error = styled.p`
   color: ${p => p.theme.colors.primary};
 `;
 
-const getTemplateUri = {
-  [CertTemplate.Activity]: getRelativePath('/static/certificate/stanford.png'),
-  [CertTemplate.Completion]: getRelativePath(
-    '/static/certificate/turing_scholarship.png',
-  ),
-};
-
 const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
+  const { user } = useContext(UserContext);
   const [password, setPassword] = useState('');
   const [error, setError] = useState({
     message: '',
     count: 0,
   });
+
+  const cert = templateStyles.find(t => t.key === value.template);
+
+  const useSubmit = useCallback(async () => {
+    if (error.count >= 3) {
+      notify.error({ msg: '密碼錯誤 3 次，請洽詢服務人員重新設定...' });
+      Router.push('/issuer');
+      return;
+    } else if (password === runtimeEnv.MVP.issuePassword) {
+      // upload template cert
+      const templateFormData = new FormData();
+      templateFormData.append('issuer', user.name);
+      templateFormData.append('type', value.type);
+      templateFormData.append('itemsCount', '1');
+      templateFormData.append('fontFamily', 'Songti TC');
+      templateFormData.append('fontSize', '60');
+      templateFormData.append('color', 'black');
+      templateFormData.append('height', '460');
+      templateFormData.append('width', '450');
+      templateFormData.append('certFile', dataURItoBlob(cert!.uri));
+      await uploadCertTemplate(templateFormData);
+      if (value.csv) {
+        // issue cert by csv
+        const formData = new FormData();
+        formData.append('issueFile', value.csv);
+        await issueCertByCSV(formData);
+      }
+    } else {
+      setError({
+        message: `發證密碼錯誤 ${error.count +
+          1} 次。答錯 3 次請洽詢服務人員重新設定密碼`,
+        count: error.count + 1,
+      });
+    }
+  }, [password, value, error]);
+
   return (
     <>
       <StyledBackPage />
       <Step>STEP 3</Step>
       <IssueTitleSection title="預覽證書">
         <SectionWrapper style={{ textAlign: 'center' }}>
-          <CertImg src={getTemplateUri[value.template]} />
+          {cert && <CertImg src={cert.uri} />}
           <CertName>{value.type}</CertName>
-          <StyledButton mode="white">修改證書</StyledButton>
+          <StyledButton
+            mode="white"
+            onClick={() =>
+              Router.push(
+                {
+                  pathname: '/issuer/issue-cert/[page]',
+                  query: {
+                    page: 1,
+                  },
+                },
+                '/issuer/issue-cert/1',
+              )
+            }
+          >
+            修改證書
+          </StyledButton>
         </SectionWrapper>
       </IssueTitleSection>
       <Step>STEP 4</Step>
@@ -91,23 +140,7 @@ const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
         </SectionWrapper>
       </IssueTitleSection>
       {error.count ? <Error>{error.message}</Error> : null}
-      <StyledButton
-        style={{ marginTop: '10%' }}
-        onClick={() => {
-          if (error.count > 3) {
-            alert('密碼錯誤超過 3 次，請洽詢服務人員重新設定');
-            return;
-          } else if (password === runtimeEnv.issuePassword) {
-            alert('發行');
-          } else {
-            setError({
-              message: `發證密碼錯誤 ${error.count +
-                1} 次。答錯超過三次請洽詢服務人員重新設定密碼`,
-              count: error.count + 1,
-            });
-          }
-        }}
-      >
+      <StyledButton style={{ marginTop: '10%' }} onClick={useSubmit}>
         發行證書
       </StyledButton>
     </>

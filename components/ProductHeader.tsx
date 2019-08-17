@@ -44,11 +44,11 @@ const Avatar = styled.div<{ src: string }>`
   margin-left: 1em;
 `;
 
-const ProductHeader: SFC = () => {
+const ProductHeader: SFC<{ onClick: () => void }> = ({ onClick }) => {
   const { user } = useContext(UserContext);
   return (
     <Wrapper>
-      <HeaderLogo mode="primary" />
+      <HeaderLogo mode="primary" onClick={onClick} />
       <SectionWrapper>
         <p>{user.name}</p>
         <Avatar src={user.avatarUri} />

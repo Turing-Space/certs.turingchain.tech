@@ -4,10 +4,10 @@ import styled, { ThemeProvider } from 'styled-components';
 import GlobalStyles from '@/themes/GlobalStyles';
 import NormalizeStyles from '@/themes/NormalizeStyles';
 import { SITE_TITLE } from '@/constants';
-import Header from '@/components/product/Header';
+import Header from '@/components/ProductHeader';
 import Footer from '@/components/product/Footer';
 import { media } from '@/utils/theme';
-import { i18n } from '@/i18n';
+import { i18n, Router } from '@/i18n';
 
 const Main = styled.main`
   width: 75%;
@@ -18,11 +18,13 @@ const Main = styled.main`
 `;
 
 type TProps = {
+  routePath: string;
   title?: string;
   children: React.ReactNode;
 };
 
 const ProductLayout: React.FunctionComponent<TProps> = ({
+  routePath,
   children,
   title = SITE_TITLE,
 }) => {
@@ -51,7 +53,7 @@ const ProductLayout: React.FunctionComponent<TProps> = ({
             href="https://unpkg.com/react-day-picker/lib/style.css"
           />
         </Head>
-        <Header />
+        <Header onClick={() => Router.push(routePath)} />
         <Main>{children}</Main>
         <Footer />
       </>

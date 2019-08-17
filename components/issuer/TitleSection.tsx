@@ -10,9 +10,13 @@ const StyledTitle = styled(Title)`
   margin-bottom: 1em;
 `;
 
-const IssueTitleSection: FC<{ title: string }> = ({ title, children }) => {
+const IssueTitleSection: FC<{ title: string; id?: string }> = ({
+  title,
+  children,
+  id,
+}) => {
   return (
-    <Wrapper>
+    <Wrapper id={id}>
       <StyledTitle>{title}</StyledTitle>
       {children}
     </Wrapper>

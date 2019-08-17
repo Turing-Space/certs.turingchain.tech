@@ -17,7 +17,7 @@ type TResponsiveImage = {
 };
 
 interface IAPIResponseInterface<T> {
-  success: boolean;
+  success: 'true' | 'false' | boolean;
   message: string;
   content: T;
 }

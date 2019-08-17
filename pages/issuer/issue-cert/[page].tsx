@@ -28,7 +28,7 @@ const IssueCertPage: FC = () => {
   const Component = query!.page === '1' ? IssuePage1 : IssuePage2;
   
   return (
-    <ProductLayout>
+    <ProductLayout routePath="/issuer">
       <Component value={formValue} setValue={setFormValue}/>
     </ProductLayout>
   );

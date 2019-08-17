@@ -26,7 +26,7 @@ const IssuerPage: FC = () => {
     fetch();
   }, []);
   return (
-    <ProductLayout>
+    <ProductLayout routePath="/issuer">
       <AboutMe />
       <MyCerts
         title="已發行證書"

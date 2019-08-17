@@ -16,6 +16,11 @@ export enum i18nNamespace {
   Issuer = 'issuer',
 }
 
+export enum CertTemplate {
+  Activity = 'ACTIVITY',
+  Completion = 'COMPLETION',
+}
+
 export const GA_ID = process.env.GA_ID;
 
 export const API_ENDPOINT = 'https://x1certificate-aqkcbxdduq-uc.a.run.app/api';
@@ -25,7 +30,15 @@ export const langsMap: { [key: string]: boolean } = {
   en: true,
 };
 
-export enum CertTemplate {
-  Activity = 'ACTIVITY',
-  Completion = 'COMPLETION',
-}
+export const templateStyles = [
+  {
+    key: CertTemplate.Activity,
+    uri: require('./static/certificate/template/turingCertsPioneer.png?inline'),
+    name: '活動證書',
+  },
+  {
+    key: CertTemplate.Completion,
+    uri: require('./static/certificate/template/turingScholarship.jpg?inline'),
+    name: '結業證書',
+  },
+];

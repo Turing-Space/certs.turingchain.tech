@@ -1,4 +1,4 @@
-import { SFC, useState } from 'react';
+import { SFC, useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import styled, { css } from 'styled-components';
 import { animated, useSpring } from 'react-spring';
@@ -157,10 +157,15 @@ const Header: SFC = () => {
     i18nNamespace.Common,
   ]);
 
+  const onHeaderLogoClick = useCallback(() => {
+    Router.push('/');
+    scrollToID('section-home');
+  }, []);
+
   return (
     <>
       <Wrapper hideUp={y > 0 && y > oldY} openMobile={openMobileList}>
-        <HeaderLogo />
+        <HeaderLogo onClick={onHeaderLogoClick} />
         <SectionWrapper>
           <li onClick={() => scrollToID('section-service')}>
             {t('header.service')}

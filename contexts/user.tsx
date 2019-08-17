@@ -15,7 +15,7 @@ type TUserContext = {
 const defaultUser: TUser = {
   loginMode: 'issuer',
   name: '',
-  email: '',
+  email: 'betty@turingchain.com',
   avatarUri: 'https://source.unsplash.com/300x300/?baby',
 };
 

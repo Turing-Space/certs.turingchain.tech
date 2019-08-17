@@ -5,11 +5,16 @@ type TNotifyProps = {
   onClick?: () => void;
 };
 
-const createOptions: (props: { onClick?: () => void }) => Options = ({
-  onClick,
-}) => ({
-  hideAfter: 2,
+const createOptions: (props: {
+  onClick?: () => void;
+  customOpts?: Options;
+}) => Options = ({ onClick, customOpts = {} }) => ({
+  hideAfter: 2.5,
+  bar: {
+    size: '5px',
+  },
   position: 'top-center',
+  ...customOpts,
   onClick: hide => {
     if (onClick) {
       onClick();
@@ -20,8 +25,8 @@ const createOptions: (props: { onClick?: () => void }) => Options = ({
 });
 
 export default {
-  error: ({ msg, onClick }: TNotifyProps) =>
-    toast.error(msg, createOptions({ onClick })),
-  info: ({ msg, onClick }: TNotifyProps) =>
-    toast.info(msg, createOptions({ onClick })),
+  error: ({ msg, onClick }: TNotifyProps, opts?: Options) =>
+    toast.error(msg, createOptions({ onClick, customOpts: opts })),
+  info: ({ msg, onClick }: TNotifyProps, opts?: Options) =>
+    toast.info(msg, createOptions({ onClick, customOpts: opts })),
 };

@@ -1,7 +1,7 @@
 import { memo, FC } from 'react';
 import styled from 'styled-components';
-import { CertTemplate } from '@/constants';
-import { getRelativePath } from '@/utils';
+import { CertTemplate, templateStyles } from '@/constants';
+
 import Radio from '../Radio';
 
 const TemplateWrapper = styled.div`
@@ -31,19 +31,6 @@ const StyledRadio = styled(Radio)`
   margin: 0.5rem auto;
   color: ${p => p.theme.colors.primary};
 `;
-
-const templateStyles = [
-  {
-    key: CertTemplate.Activity,
-    uri: getRelativePath('/static/certificate/stanford.png'),
-    name: '活動參加證書',
-  },
-  {
-    key: CertTemplate.Completion,
-    uri: getRelativePath('/static/certificate/turing_scholarship.png'),
-    name: '結業證書',
-  },
-];
 
 type TProps = {
   selected: CertTemplate;
