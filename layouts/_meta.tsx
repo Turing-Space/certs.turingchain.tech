@@ -15,7 +15,7 @@ export default () => (
     <meta name="language" content="en" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={SITE_DESC} />
-    <link rel="icon" type="image/x-icon" href={FAVICON_PATH} />
+    <link rel="shortcut icon" type="image/x-icon" href={FAVICON_PATH} />
     <link rel="apple-touch-icon" href={LARGE_ICON_PATH} />
     <meta property="og:url" content={SITE_URL} />
     <meta property="og:title" content={SITE_TITLE} />
