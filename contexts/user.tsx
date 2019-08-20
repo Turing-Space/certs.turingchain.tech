@@ -1,6 +1,7 @@
 import { createContext, useState, FC } from 'react';
 
 type TUser = {
+  id: string;
   name: string;
   email: string;
   avatarUri: string;
@@ -14,6 +15,7 @@ type TUserContext = {
 
 const defaultUser: TUser = {
   loginMode: '',
+  id: '',
   name: '',
   email: 'betty@turingchain.com',
   avatarUri: 'https://source.unsplash.com/300x300/?baby',

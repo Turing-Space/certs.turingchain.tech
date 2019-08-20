@@ -38,9 +38,11 @@ type TGetCertsParams = {
 
 export type TAPICert = {
   filePath: string;
+  holder: string; // uid
+  holderName: string;
   timestamp: number;
-  holder: string;
-  issuer: string;
+  issuer: string; // uid
+  issuerName: string;
   isVerified: boolean;
   ipfs: string;
   type: string;
@@ -63,7 +65,6 @@ export const uploadCertTemplate = async (body: FormData) => {
       },
     }),
   );
-  console.log('[upload cert]', res);
   return formatAPIRes<any>(res);
 };
 
@@ -75,6 +76,5 @@ export const issueCertByCSV = async (body: FormData) => {
       },
     }),
   );
-  console.log('[issue by csv]', res);
   return formatAPIRes<any>(res);
 };

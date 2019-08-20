@@ -4,30 +4,34 @@ import { UserContext } from '@/contexts/user';
 import isFunction from 'lodash/isFunction';
 import { Router } from '@/i18n';
 
-const withAuth = (
+function withAuth<P = {}>(
   mode: 'user' | 'issuer',
   getInitialProps?: GetInitialProps<any, any>,
-) => (Component: React.ComponentType) =>
-  class WithAuthComponent extends React.Component {
-    static contextType = UserContext;
+) {
+  return (Component: React.ComponentType<P>) =>
+    class WithAuthComponent extends React.Component<P> {
+      static contextType = UserContext;
 
-    static getInitialProps(ctx: NextContext) {
-      if (getInitialProps) {
-        return isFunction(getInitialProps)
-          ? getInitialProps(ctx)
-          : getInitialProps;
+      static getInitialProps(ctx: NextContext) {
+        if (getInitialProps) {
+          return isFunction(getInitialProps)
+            ? getInitialProps(ctx)
+            : getInitialProps;
+        }
       }
-    }
 
-    componentDidMount() {
-      if (this.context.user.loginMode !== mode) {
-        Router.push(`/auth/login?mode=${mode}`);
+      componentDidMount() {
+        if (this.context.user.loginMode !== mode) {
+          Router.push(`/auth/login?mode=${mode}`);
+        }
       }
-    }
 
-    render() {
-      return this.context.user.loginMode === mode ? <Component /> : null;
-    }
-  };
+      render() {
+        return this.context.user.loginMode === mode ? (
+          <Component {...this.props} />
+        ) : null;
+      }
+    };
+}
 
 export default withAuth;

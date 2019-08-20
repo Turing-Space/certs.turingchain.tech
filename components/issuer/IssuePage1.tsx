@@ -102,7 +102,8 @@ const IssuePage1: FC<TRenderComponentProps> = ({ value, setValue }) => {
       <IssueTitleSection title="欄位內容">
         <SectionWrapper>
           <SectionTitle>
-            issuer（發證機關） / type（證書名稱） / holder（名字）
+            issuer（發證機關） / type（證書名稱） / holder（名字）/
+            email（電子信箱）
           </SectionTitle>
         </SectionWrapper>
       </IssueTitleSection>

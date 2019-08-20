@@ -123,7 +123,12 @@ const Login: FC = () => {
       if (account === fakeInfo.account && password === fakeInfo.password) {
         // TODO: login api
         setTimeout(() => {
-          updateUser(u => ({ ...u, name: 'betty', loginMode: 'issuer' }));
+          updateUser(u => ({
+            ...u,
+            id: 'sSZp4hqA71PlAS6HTAFp8oWMhos1',
+            name: 'HenryGod',
+            loginMode: 'issuer',
+          }));
           Router.push('/issuer');
         }, 1500);
       } else {

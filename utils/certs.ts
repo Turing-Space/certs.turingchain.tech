@@ -8,7 +8,7 @@ export function preparedCerts(certs: TAPICert[]): TCert[] {
       : [true, false, false, false, false];
     return {
       ipfs: c.ipfs, // hash
-      issuer: c.issuer,
+      issuer: c.issuerName,
       name: c.type,
       timestamp: c.timestamp, // sec
       coverUri: `https://ipfs.io/ipfs/${c.ipfs}`,
