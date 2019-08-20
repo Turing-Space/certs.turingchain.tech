@@ -1,5 +1,4 @@
-import { animateScroll } from 'react-scroll';
-import { FC, useCallback, useState } from 'react';
+import { FC, useCallback } from 'react';
 import styled from 'styled-components';
 import { TRenderComponentProps } from '@/pages/issuer/issue-cert/[page]';
 import { Router } from '@/i18n';

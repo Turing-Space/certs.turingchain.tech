@@ -88,7 +88,7 @@ const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
       templateFormData.append('issuer', user.id);
       templateFormData.append('type', value.type);
       templateFormData.append('itemsCount', '1');
-      templateFormData.append('fontFamily[0]', 'Songti TC');
+      templateFormData.append('fontFamily[0]', 'Georgia');
       templateFormData.append('fontSize[0]', '60');
       templateFormData.append('color[0]', 'black');
       templateFormData.append('height[0]', '460');
@@ -101,6 +101,20 @@ const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
         const formData = new FormData();
         formData.append('issueFile', value.csv);
         await issueCertByCSV(formData);
+        // updateCerts(certs => [
+        //   ...certs,
+        //   {
+        //     type: value.type,
+        //     ipfs: '',
+        //     issuer: user.id,
+        //     name: value.type,
+        //     timestamp: 0,
+        //     coverUri: cert!.uri,
+        //     verified: false,
+        //     pin: false,
+        //     progress: [false, false, false, false, false],
+        //   },
+        // ]);
       }
       notify.success({ msg: `恭喜成功！ ${value.type} 已發證` });
       Router.push('/issuer');
