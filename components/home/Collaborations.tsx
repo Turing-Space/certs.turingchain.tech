@@ -196,11 +196,12 @@ const logos = [
     src: getRelativePath('/static/partners/yanmin.png'),
     scale: 1.1,
   },
-  {
-    name: '',
-    src: getRelativePath('/static/partners/TABF.svg'),
-    scale: 1.1,
-  },
+  // 金融研訓院
+  // {
+  //   name: '',
+  //   src: getRelativePath('/static/partners/TABF.svg'),
+  //   scale: 1.1,
+  // },
   {
     name: '',
     src: getRelativePath('/static/partners/sin.png'),
