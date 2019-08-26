@@ -125,8 +125,9 @@ const Login: FC = () => {
         setTimeout(() => {
           updateUser(u => ({
             ...u,
-            id: 'sSZp4hqA71PlAS6HTAFp8oWMhos1',
-            name: 'HenryGod',
+            email: 'tinatina@gmail.com',
+            id: 'gysWmvO3V8ZhVwUdvnhQcAAIrWj1',
+            name: 'testIssuer',
             loginMode: 'issuer',
           }));
           Router.push('/issuer');
