@@ -131,7 +131,7 @@ const Login: FC = () => {
         const [err, users] = await getUsers({ displayName: 'testIssuer' });
         if (!users) {
           notify.error({ msg: err });
-        } else if (!users[0].isIssuer) {
+        } else if (users.length === 0 || !users[0].isIssuer) {
           notify.error({ msg: '此帳號並不是發證機關帳號，請確認使用帳號' });
         } else {
           const { user, certs } = preparedUser(users[0]);

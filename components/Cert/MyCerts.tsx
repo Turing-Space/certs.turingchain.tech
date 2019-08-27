@@ -49,7 +49,7 @@ type TProps = {
 };
 
 const MyCerts: FC<TProps> = ({ title, Modal, TitleRight, Empty }) => {
-  const { certs, updateCert } = useContext(CertsContext);
+  const { certs } = useContext(CertsContext);
   const [searchText, setSearchText] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
 
