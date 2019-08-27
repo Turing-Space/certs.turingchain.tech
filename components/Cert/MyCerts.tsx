@@ -79,11 +79,7 @@ const MyCerts: FC<TProps> = ({ title, Modal, TitleRight, Empty }) => {
             setValue={e => setSearchText(e.target.value)}
           />
         </ControlWrapper>
-        {certs.length === 0 ? (
-          EmptyComponent
-        ) : (
-          <Certs certs={filteredCerts} updateCert={updateCert} />
-        )}
+        {certs.length === 0 ? EmptyComponent : <Certs certs={filteredCerts} />}
       </div>
       {Modal && <Modal visible={modalVisible} onClose={closeModal} />}
     </Wrapper>

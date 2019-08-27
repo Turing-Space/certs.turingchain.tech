@@ -1,4 +1,4 @@
-import { FC, useContext, useCallback } from 'react';
+import { FC, useContext, useCallback, useEffect } from 'react';
 import styled, { css } from 'styled-components';
 import { useSprings, animated } from 'react-spring';
 import { FaShareSquare, FaCheck } from 'react-icons/fa';
@@ -111,24 +111,23 @@ const Divider = styled.div`
   margin-bottom: 1em;
 `;
 
-const Progress = styled(animated.div)<{ success: boolean }>`
+const Progress = styled(animated.div)`
   display: flex;
   align-items: center;
   font-size: ${p => p.theme.fontSize.smaller};
   margin-bottom: 1em;
-  color: ${p => (p.success ? p.theme.color : '#bdbdbd')};
+`;
 
-  .icon-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    width: 1.2em;
-    height: 1.2em;
-    background-color: ${p => (p.success ? p.theme.colors.blue : '#bdbdbd')};
-    margin-right: 1em;
-    margin-top: 3px;
-  }
+const ProgressIconWrapper = styled(animated.div)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 1.2em;
+  height: 1.2em;
+  background-color: #bdbdbd;
+  margin-right: 1em;
+  margin-top: 3px;
 `;
 
 type TProps = {
@@ -162,15 +161,22 @@ const progressMap = [
 
 const ViewCertModal: FC<TProps> = ({ cert, isOpen, onClose }) => {
   const { updateCert } = useContext(CertsContext);
-  const [springs] = useSprings(progressMap.length, index => ({
-    opacity: 1,
-    from: {
-      opacity: 0,
-    },
-    config: {
-      delay: index * 500,
-    },
+  const [springs, set] = useSprings(progressMap.length, () => ({
+    textColor: '#bdbdbd',
+    iconBgColor: '#bdbdbd',
   }));
+
+  useEffect(() => {
+    // @ts-ignore
+    set((index: number) => {
+      return {
+        delay: (index + 1) * 300,
+        textColor: cert.progress[index] ? '#414141' : '#bdbdbd',
+        iconBgColor: cert.progress[index] ? theme.colors.blue : '#bdbdbd',
+      };
+    });
+  }, []);
+
   const progressPercent = Math.round(
     (cert.progress.reduce((acc, cur) => Number(cur) + acc, 0) / 5) * 100,
   );
@@ -220,17 +226,14 @@ const ViewCertModal: FC<TProps> = ({ cert, isOpen, onClose }) => {
         </ModalProgressTitleWrapper>
         <div>
           {springs.map((style, idx) => {
-            console.log(style);
             const progress = progressMap[idx];
             return (
-              <Progress
-                style={style}
-                key={progress.key}
-                success={!!cert.progress[idx]}
-              >
-                <div className="icon-wrapper">
+              <Progress style={{ color: style.textColor }} key={progress.key}>
+                <ProgressIconWrapper
+                  style={{ backgroundColor: style.iconBgColor }}
+                >
                   <FaCheck size=".8em" color="white" />
-                </div>
+                </ProgressIconWrapper>
                 <p>{progress.name}</p>
               </Progress>
             );
