@@ -1,6 +1,6 @@
 import { createContext, useState, FC } from 'react';
 
-type TUser = {
+export type TUser = {
   id: string;
   name: string;
   email: string;
@@ -17,7 +17,7 @@ const defaultUser: TUser = {
   loginMode: '',
   id: '',
   name: '',
-  email: 'betty@turingchain.com',
+  email: '',
   avatarUri: 'https://source.unsplash.com/300x300/?baby',
 };
 

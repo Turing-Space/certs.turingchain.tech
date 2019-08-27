@@ -85,7 +85,7 @@ const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
       setLoadingText('上傳模板...');
       // upload template cert
       const templateFormData = new FormData();
-      templateFormData.append('issuer', user.id);
+      templateFormData.append('issuer', user.name);
       templateFormData.append('type', value.type);
       templateFormData.append('itemsCount', '1');
       templateFormData.append('fontFamily[0]', 'Georgia');

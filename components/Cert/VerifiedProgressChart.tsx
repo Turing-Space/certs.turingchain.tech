@@ -64,6 +64,7 @@ type TProps = {
 
 const COLORS = [theme.colors.blue, '#d9d9d9'];
 
+// animation 1s circle end and 0.5s to shield
 const VerifiedPiechart: FC<TProps> = ({
   size = 70,
   className,
