@@ -10,10 +10,9 @@ import H1 from '@/components/H1';
 import TextInput from '@/components/TextInput';
 import Button from '@/components/Button';
 import { emailValidator } from '@/utils/validator';
-import { runtimeEnv } from '@/environment';
 import { Router } from '@/i18n';
 import { UserContext } from '@/contexts/user';
-import { getUsers } from '@/utils/api';
+import { signIn } from '@/utils/api';
 import { preparedUser } from '@/utils/user';
 import notify from '@/utils/notify';
 import { CertsContext } from '@/contexts/certs';
@@ -124,26 +123,25 @@ const Login: FC = () => {
     const mode =
       query.mode || qs.parse(location.search, { ignoreQueryPrefix: true }).mode;
 
-    // TODO: connect firebase login api
     if (mode === 'issuer') {
-      const fakeInfo = runtimeEnv.MVP;
-      if (account === fakeInfo.account && password === fakeInfo.password) {
-        const [err, users] = await getUsers({ displayName: 'testIssuer' });
-        if (!users) {
-          notify.error({ msg: err });
-        } else if (users.length === 0 || !users[0].isIssuer) {
-          notify.error({ msg: '此帳號並不是發證機關帳號，請確認使用帳號' });
-        } else {
-          const { user, certs } = preparedUser(users[0]);
-          updateUser({
-            ...user,
-            loginMode: 'issuer',
-          });
-          updateCerts(certs);
-          Router.push('/issuer');
-        }
+      const [err, issuer] = await signIn({
+        userInfo: {
+          email: account,
+          password,
+        },
+      });
+      if (!issuer || issuer.length === 0) {
+        notify.error({ msg: err || '此帳號並不存在' });
+      } else if (!issuer[0].isIssuer) {
+        notify.error({ msg: '此帳號並不是發證機關帳號，請確認使用帳號' });
       } else {
-        setError('帳號密碼有誤');
+        const { user, certs } = preparedUser(issuer[0]);
+        updateUser({
+          ...user,
+          loginMode: 'issuer',
+        });
+        updateCerts(certs);
+        Router.push('/issuer');
       }
     } else if (validate()) {
       setError('系統尚未開啟，請耐心等待，謝謝！');

@@ -82,6 +82,18 @@ export const getUsers = async (d?: TGetUsersParams) => {
   return formatAPIRes<TAPIUser[]>(res);
 };
 
+type TSignInParams = {
+  userInfo: {
+    email: string;
+    password: string;
+  };
+};
+
+export const signIn = async (body: TSignInParams) => {
+  const res = await call(axios.post('/authorization/singin', body));
+  return formatAPIRes<TAPIUser[]>(res);
+};
+
 export const uploadCertTemplate = async (body: FormData) => {
   const res = await call(
     axios.post('/upload', body, {

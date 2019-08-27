@@ -9,6 +9,7 @@ import { uploadCertTemplate, issueCertByCSV } from '@/utils/api';
 import { dataURItoBlob } from '@/utils';
 import { UserContext } from '@/contexts/user';
 import notify from '@/utils/notify';
+import { CertsContext } from '@/contexts/certs';
 
 import BackPage from '../BackPage';
 import IssueTitleSection from './TitleSection';
@@ -66,6 +67,7 @@ const LoadingText = styled.p`
 
 const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
   const { user } = useContext(UserContext);
+  const { updateCerts } = useContext(CertsContext);
   const [loadingText, setLoadingText] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState({
@@ -101,20 +103,26 @@ const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
         const formData = new FormData();
         formData.append('issueFile', value.csv);
         await issueCertByCSV(formData);
-        // updateCerts(certs => [
-        //   ...certs,
-        //   {
-        //     type: value.type,
-        //     ipfs: '',
-        //     issuer: user.id,
-        //     name: value.type,
-        //     timestamp: 0,
-        //     coverUri: cert!.uri,
-        //     verified: false,
-        //     pin: false,
-        //     progress: [false, false, false, false, false],
-        //   },
-        // ]);
+
+        // FIXME: temporary use setTimeout to add new cert
+        setTimeout(
+          () =>
+            updateCerts(certs => [
+              ...certs,
+              {
+                type: value.type,
+                ipfs: '',
+                issuer: user.name,
+                name: value.type,
+                timestamp: 0,
+                coverUri: cert!.uri,
+                verified: false,
+                pin: false,
+                progress: [true, false, false, false, false],
+              },
+            ]),
+          1000,
+        );
       }
       notify.success({ msg: `恭喜成功！ ${value.type} 已發證` });
       Router.push('/issuer');

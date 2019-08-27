@@ -1,7 +1,7 @@
 import { TCert } from '@/contexts/certs';
 import { TAPICert } from './api';
 
-export function preparedCerts(certs: TAPICert[]): TCert[] {
+export function preparedCerts(certs: TAPICert[] = []): TCert[] {
   return certs.map(c => {
     const progress = c.isVerified
       ? [true, true, true, true, true]

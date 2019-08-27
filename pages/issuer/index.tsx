@@ -17,7 +17,7 @@ type TProps = {
   syncTrigger: number;
 };
 
-const IssuerPage: FC<TProps> = ({ syncTrigger }) => {
+const IssuerPage: FC<TProps> = () => {
   const { user } = useContext(UserContext);
   const { updateCerts } = useContext(CertsContext);
 
@@ -27,12 +27,11 @@ const IssuerPage: FC<TProps> = ({ syncTrigger }) => {
       if (!certs) {
         notify.error({ msg: err });
       } else {
-        console.log('certs', err, certs);
         updateCerts(preparedCerts(certs));
       }
     };
     fetch();
-  }, [syncTrigger]);
+  }, []);
   return (
     <ProductLayout routePath="/issuer">
       <AboutMe />
@@ -47,7 +46,6 @@ const IssuerPage: FC<TProps> = ({ syncTrigger }) => {
 
 export default withAuth<TProps>('issuer', async () => {
   return {
-    syncTrigger: +new Date(),
     namespacesRequired: [i18nNamespace.Common, i18nNamespace.Issuer],
   };
 })(IssuerPage);
