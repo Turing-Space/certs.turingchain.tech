@@ -50,11 +50,36 @@ export type TAPICert = {
 
 export const getCerts = async (d?: TGetCertsParams) => {
   const res = await call(
-    axios.get('/certs', {
+    axios.get('/view/certs', {
       params: d,
     }),
   );
   return formatAPIRes<TAPICert[]>(res);
+};
+
+type TGetUsersParams = {
+  displayName: string;
+  uid?: string;
+  email?: string;
+  did?: string;
+};
+
+export type TAPIUser = {
+  displayName: string;
+  uid: string;
+  email: string;
+  did: string;
+  isIssuer: boolean;
+  certs: TAPICert[];
+};
+
+export const getUsers = async (d?: TGetUsersParams) => {
+  const res = await call(
+    axios.get('/view/users', {
+      params: d,
+    }),
+  );
+  return formatAPIRes<TAPIUser[]>(res);
 };
 
 export const uploadCertTemplate = async (body: FormData) => {

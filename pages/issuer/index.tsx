@@ -27,6 +27,7 @@ const IssuerPage: FC<TProps> = ({ syncTrigger }) => {
       if (!certs) {
         notify.error({ msg: err });
       } else {
+        console.log('certs', err, certs);
         updateCerts(preparedCerts(certs));
       }
     };

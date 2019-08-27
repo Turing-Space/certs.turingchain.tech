@@ -13,6 +13,10 @@ import { emailValidator } from '@/utils/validator';
 import { runtimeEnv } from '@/environment';
 import { Router } from '@/i18n';
 import { UserContext } from '@/contexts/user';
+import { getUsers } from '@/utils/api';
+import { preparedUser } from '@/utils/user';
+import notify from '@/utils/notify';
+import { CertsContext } from '@/contexts/certs';
 
 import Loading from '../Loading';
 
@@ -98,11 +102,12 @@ const ErrorMessage = styled.p`
 const Login: FC = () => {
   const { query } = useRouter();
   const { updateUser } = useContext(UserContext);
+  const { updateCerts } = useContext(CertsContext);
   const [account, setAccount] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
-  const onLogin = useCallback(() => {
+  const onLogin = useCallback(async () => {
     const validate = () => {
       if (!account || !password) {
         setError('帳號密碼不可為空');
@@ -118,29 +123,33 @@ const Login: FC = () => {
 
     const mode =
       query.mode || qs.parse(location.search, { ignoreQueryPrefix: true }).mode;
+
+    // TODO: connect firebase login api
     if (mode === 'issuer') {
       const fakeInfo = runtimeEnv.MVP;
       if (account === fakeInfo.account && password === fakeInfo.password) {
-        // TODO: login api
-        setTimeout(() => {
-          updateUser(u => ({
-            ...u,
-            email: 'tinatina@gmail.com',
-            id: 'gysWmvO3V8ZhVwUdvnhQcAAIrWj1',
-            name: 'testIssuer',
+        const [err, users] = await getUsers({ displayName: 'testIssuer' });
+        if (!users) {
+          notify.error({ msg: err });
+        } else if (!users[0].isIssuer) {
+          notify.error({ msg: '此帳號並不是發證機關帳號，請確認使用帳號' });
+        } else {
+          const { user, certs } = preparedUser(users[0]);
+          updateUser({
+            ...user,
             loginMode: 'issuer',
-          }));
+          });
+          updateCerts(certs);
           Router.push('/issuer');
-        }, 1500);
+        }
       } else {
         setError('帳號密碼有誤');
-        setLoading(false);
       }
     } else if (validate()) {
       setError('系統尚未開啟，請耐心等待，謝謝！');
-    } else {
-      setLoading(false);
     }
+
+    setLoading(false);
   }, [account, password]);
 
   const onKeyDown = useCallback(

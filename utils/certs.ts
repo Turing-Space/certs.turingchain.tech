@@ -11,7 +11,7 @@ export function preparedCerts(certs: TAPICert[]): TCert[] {
       issuer: c.issuerName,
       name: c.type,
       timestamp: c.timestamp, // sec
-      coverUri: `https://ipfs.io/ipfs/${c.ipfs}`,
+      coverUri: c.filePath,
       verified: c.isVerified,
       pin: false,
       progress,
