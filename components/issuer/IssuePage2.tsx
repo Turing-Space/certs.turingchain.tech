@@ -121,7 +121,7 @@ const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
                 progress: [true, false, false, false, false],
               },
             ]),
-          1000,
+          2000,
         );
       }
       notify.success({ msg: `恭喜成功！ ${value.type} 已發證` });
