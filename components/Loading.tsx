@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { FC } from 'react';
 
-const LoadingWrapper = styled.div`
+const LoadingWrapper = styled.div<{ color?: string }>`
   display: inline-block;
   position: relative;
   width: 64px;
@@ -13,7 +13,7 @@ const LoadingWrapper = styled.div`
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #fff;
+    background: ${p => p.color || '#fff'};
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
   }
   div:nth-child(1) {
@@ -60,11 +60,12 @@ const LoadingWrapper = styled.div`
 
 type TProps = {
   className?: string;
+  color?: string;
 };
 
-const Loading: FC<TProps> = ({ className }) => {
+const Loading: FC<TProps> = ({ className, color }) => {
   return (
-    <LoadingWrapper className={className}>
+    <LoadingWrapper className={className} color={color}>
       <div />
       <div />
       <div />

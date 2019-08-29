@@ -7,6 +7,7 @@ import theme from '@/themes/theme';
 
 import VerifiedProgressChart from './VerifiedProgressChart';
 import ViewCertModal from './ViewCertModal';
+import Spinner from '../Spinner';
 
 const Wrapper = styled.div`
   display: flex;
@@ -74,6 +75,20 @@ const SmallVerifiedProgressChart = styled(VerifiedProgressChart)`
   right: 1.5em;
 `;
 
+const IssuingMask = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: ${p => p.theme.colors.primary};
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+`;
+
 type TProps = {
   certs: TCert[];
 };
@@ -89,7 +104,10 @@ const Certs: FC<TProps> = ({ certs }) => {
           (cert.progress.reduce((acc, cur) => Number(cur) + acc, 0) / 5) * 100,
         );
         return (
-          <CertWrapper key={cert.ipfs} onClick={() => setOpenIdx(idx)}>
+          <CertWrapper
+            key={cert.ipfs}
+            onClick={() => !cert.issuing && setOpenIdx(idx)}
+          >
             <CertCover src={cert.coverUri} />
             <p className="issuer">{cert.issuer}</p>
             <p className="name">{cert.name}</p>
@@ -100,6 +118,12 @@ const Certs: FC<TProps> = ({ certs }) => {
               progress={progressPercent}
             />
             {cert.pin && <PinIcon color={theme.colors.primary} size="1.3em" />}
+            {cert.issuing && (
+              <IssuingMask>
+                <Spinner color={theme.colors.primary} scale={2} />
+                <p style={{ marginTop: '1rem' }}>發證中...</p>
+              </IssuingMask>
+            )}
           </CertWrapper>
         );
       })}

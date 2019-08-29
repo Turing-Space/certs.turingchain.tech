@@ -101,7 +101,6 @@ const ErrorMessage = styled.p`
 const Login: FC = () => {
   const { query } = useRouter();
   const { updateUser } = useContext(UserContext);
-  const { updateCerts } = useContext(CertsContext);
   const [account, setAccount] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [error, setError] = useState<string>('');
@@ -135,12 +134,10 @@ const Login: FC = () => {
       } else if (!issuer[0].isIssuer) {
         notify.error({ msg: '此帳號並不是發證機關帳號，請確認使用帳號' });
       } else {
-        const { user, certs } = preparedUser(issuer[0]);
         updateUser({
-          ...user,
+          ...preparedUser(issuer[0]),
           loginMode: 'issuer',
         });
-        updateCerts(certs);
         Router.push('/issuer');
       }
     } else if (validate()) {

@@ -10,6 +10,7 @@ export type TCert = {
   verified: boolean;
   pin: boolean;
   progress: boolean[];
+  issuing: boolean;
 };
 
 type TCertsContext = {

@@ -119,6 +119,7 @@ const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
                 verified: false,
                 pin: false,
                 progress: [true, false, false, false, false],
+                issuing: true,
               },
             ]),
           2000,

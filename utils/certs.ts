@@ -15,6 +15,7 @@ export function preparedCerts(certs: TAPICert[] = []): TCert[] {
       verified: c.isVerified,
       pin: false,
       progress,
+      issuing: false,
     };
   });
 }

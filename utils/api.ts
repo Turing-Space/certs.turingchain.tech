@@ -70,7 +70,6 @@ export type TAPIUser = {
   email: string;
   did: string;
   isIssuer: boolean;
-  certs: TAPICert[];
 };
 
 export const getUsers = async (d?: TGetUsersParams) => {
