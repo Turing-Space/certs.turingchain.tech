@@ -122,23 +122,23 @@ const Login: FC = () => {
     const mode =
       query.mode || qs.parse(location.search, { ignoreQueryPrefix: true }).mode;
 
-    if (mode === 'issuer') {
-      const [err, issuer] = await signIn({
+    if (mode === 'issuer' || mode === 'user') {
+      const [err, user] = await signIn({
         userInfo: {
           email: account,
           password,
         },
       });
-      if (!issuer || issuer.length === 0) {
+      if (!user || user.length === 0) {
         notify.error({ msg: err || '此帳號並不存在' });
-      } else if (!issuer[0].isIssuer) {
+      } else if (!user[0].isIssuer) {
         notify.error({ msg: '此帳號並不是發證機關帳號，請確認使用帳號' });
       } else {
         updateUser({
-          ...preparedUser(issuer[0]),
-          loginMode: 'issuer',
+          ...preparedUser(user[0]),
+          loginMode: mode,
         });
-        Router.push('/issuer');
+        Router.push(user[0].isIssuer === true ? '/issuer' : '/product');
       }
     } else if (validate()) {
       setError('系統尚未開啟，請耐心等待，謝謝！');

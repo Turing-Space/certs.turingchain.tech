@@ -9,6 +9,7 @@ import CertsNull from '@/components/product/CertsNull';
 import { useEffect, useContext } from 'react';
 import { UserContext } from '@/contexts/user';
 import { CertsContext } from '@/contexts/certs';
+import withAuth from '@/hoc/withAuth';
 
 const ProductPage: NextFC = () => {
   const { updateUser } = useContext(UserContext);
@@ -71,4 +72,6 @@ ProductPage.getInitialProps = async () => ({
   namespacesRequired: [i18nNamespace.Common, i18nNamespace.Demo],
 });
 
-export default ProductPage;
+export default withAuth('user', () => {
+  return { namespacesRequired: [i18nNamespace.Common] };
+})(ProductPage);
