@@ -73,5 +73,5 @@ ProductPage.getInitialProps = async () => ({
 });
 
 export default withAuth('user', () => {
-  return { namespacesRequired: [i18nNamespace.Common] };
+  return { namespacesRequired: [i18nNamespace.Common, i18nNamespace.Demo] };
 })(ProductPage);

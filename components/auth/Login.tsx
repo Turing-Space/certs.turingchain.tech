@@ -131,14 +131,14 @@ const Login: FC = () => {
       });
       if (!user || user.length === 0) {
         notify.error({ msg: err || '此帳號並不存在' });
-      } else if (!user[0].isIssuer) {
+      } else if (mode === 'issuer' && !user[0].isIssuer) {
         notify.error({ msg: '此帳號並不是發證機關帳號，請確認使用帳號' });
       } else {
         updateUser({
           ...preparedUser(user[0]),
           loginMode: mode,
         });
-        Router.push(user[0].isIssuer === true ? '/issuer' : '/product');
+        Router.push(user[0].isIssuer ? '/issuer' : '/product');
       }
     } else if (validate()) {
       setError('系統尚未開啟，請耐心等待，謝謝！');
