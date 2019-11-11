@@ -101,27 +101,43 @@ const ErrorMessage = styled.p`
 const Login: FC = () => {
   const { query } = useRouter();
   const { updateUser } = useContext(UserContext);
+  // user global props
   const [account, setAccount] = useState<string>('');
+  // init account = ''
+  const [email, setEmail] = useState<string>('')
   const [password, setPassword] = useState<string>('');
+  // init password = ''
   const [error, setError] = useState<string>('');
+  // init errorMessage = ''
   const [loading, setLoading] = useState<boolean>(false);
+  // init loading = false
+
+
+  const onRegister = () => {
+    Router.push('/auth/register')
+  }
+  
+
   const onLogin = useCallback(async () => {
     const validate = () => {
       if (!account || !password) {
         setError('帳號密碼不可為空');
         return false;
+        // verify !account || !password
       } else if (!emailValidator(account)) {
         setError('信箱有誤');
         return false;
+        // verify e-mail
       }
       return true;
     };
 
     setLoading(true);
+    // verify finish loading = true
 
     const mode =
       query.mode || qs.parse(location.search, { ignoreQueryPrefix: true }).mode;
-
+    
     if (mode === 'issuer') {
       const [err, issuer] = await signIn({
         userInfo: {
@@ -131,7 +147,7 @@ const Login: FC = () => {
       });
       if (!issuer || issuer.length === 0) {
         notify.error({ msg: err || '此帳號並不存在' });
-      } else if (!issuer[0].isIssuer) {
+      } else if (issuer[0].isIssuer) {
         notify.error({ msg: '此帳號並不是發證機關帳號，請確認使用帳號' });
       } else {
         updateUser({
@@ -140,12 +156,37 @@ const Login: FC = () => {
         });
         Router.push('/issuer');
       }
+      // -----------user------------ //
+
+    } else if( mode === 'user' ) {
+      const [err, user] = await signIn({
+        userInfo: {
+          email: account,
+          password,
+        },
+      });
+      if (!user || user.length === 0) {
+        notify.error({msg: err || '此帳號不存在' });
+      } else if (!user[0].isIssuer) {
+        notify.error({ msg: '此帳號不是使用者帳號，請確認使用者帳號'})
+      } else {
+        updateUser({
+          ...preparedUser(user[0]),
+          loginMode: 'user',
+        });
+        // useContext update(Change) User
+        Router.push('/pages/issuer/product');
+      }
+      
+      // -----------user------------ //
     } else if (validate()) {
       setError('系統尚未開啟，請耐心等待，謝謝！');
     }
 
     setLoading(false);
   }, [account, password]);
+
+
 
   const onKeyDown = useCallback(
     (e: KeyboardEvent<HTMLInputElement>) => {
@@ -187,6 +228,9 @@ const Login: FC = () => {
         <ErrorMessage>{error}</ErrorMessage>
         <StyledButton disabled={loading} onClick={onLogin}>
           {loading ? <Loading /> : '登入'}
+        </StyledButton>
+        <StyledButton disabled={loading} onClick={onRegister}>
+          {loading ? <Loading /> : '註冊'}
         </StyledButton>
       </MobileWrapper>
       <InfoWrapper>
