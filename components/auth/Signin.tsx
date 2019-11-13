@@ -5,17 +5,16 @@ import qs from 'qs';
 
 import Section from '@/components/Section';
 import { media } from '@/utils/theme';
-import { getRelativePath } from '@/utils';
+// import { getRelativePath } from '@/utils';
 import TextInput from '@/components/TextInput';
 import Button from '@/components/Button';
 import { emailValidator } from '@/utils/validator';
-import { Router } from '@/i18n';
+// import { Router } from '@/i18n';
 import { UserContext } from '@/contexts/user';
 import { signIn } from '@/utils/api';
-import { preparedUser } from '@/utils/user';
-import notify from '@/utils/notify';
-import { CertsContext } from '@/contexts/certs';
-import RegisterEmailVerify from '@/components/auth/RegisterEmailVerify';
+// import { preparedUser } from '@/utils/user';
+// import notify from '@/utils/notify';
+// import { CertsContext } from '@/contexts/certs';
 
 import Loading from '../Loading';
 
@@ -83,55 +82,70 @@ const ErrorMessage = styled.p`
   color: ${p => p.theme.colors.primary};
 `;
 
-const Register: FC = () => {
+type TProps = {
+  setPageState: string;
+  onChange: (e: any) => void;
+}
+
+const SignIn: FC<TProps> = (setPageState) => {
   const { query } = useRouter();
   const { updateUser } = useContext(UserContext);
   const [email, setEmail] = useState<string>('');
   const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
-  const [account,setAccount] = useState<string>('');
-  const [password,setPassword] = useState<string>('');
-  const [checkPassword,setCheckPassword] = useState<string>('');
+  const [account, setAccount] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [checkPassword, setCheckPassword] = useState<string>('');
 
+  
 
-
-  const [emailVerify, setEmailVerify] = useState<boolean>(false);
-  const [inputName, setInputName] = useState<boolean>(false);
-  const [nameVerify, setNameVerify] = useState<boolean>(false);
-  const [phone, setPhone] = useState<boolean>(false);
-  const [phoneVerify, setPhoneVerify] = useState<boolean>(false);
-  const [signin, setSignin] = useState<boolean>(false);
-  const [finsh, setFinish] = useState<boolean>(false);
-
-
-  const onRegister = useCallback(async () => {
-    const validate = () => {};
-    
-   
-
-
-
-
-
-
-
+  const onSignin = useCallback(async () => {
+    setPageState.onChange('FinshPage')
+    const validate = () => {
+       // call API
+      if (!account || !password) {
+        setError('帳號密碼不可為空');
+        return false
+      } else if (!emailValidator(account)) {
+        setError('信箱有誤');
+        return false;
+      }  else if (!checkPassword) {
+        setError('再次確認密碼');
+        return false;
+      } else {
+        // setPageState.onChange('FinshPage')
+        return true;
+      }
+    }
     setLoading(true);
+
+
     const mode =
       query.mode || qs.parse(location.search, { ignoreQueryPrefix: true }).mode;
+
+      if (mode === 'register') {
+        const [err, register] = await signIn({
+          userInfo: {
+            email: account,
+            password,
+          },
+        });
+      }
+
     setLoading(false);
-  }, []);
+  }, [account, password]);
 
   const onKeyDown = useCallback(
     (e: KeyboardEvent<HTMLInputElement>) => {
       switch (e.keyCode) {
         // press enter
         case 13: {
-          onRegister();
+          onSignin();
           break;
         }
       }
     },
-    [onRegister],
+    [onSignin],
   );
 
   return (
@@ -166,7 +180,7 @@ const Register: FC = () => {
             type: 'text',
             onKeyDown,
           }}/>
-          <StyledButton disabled={loading} onClick={onRegister}>
+          <StyledButton disabled={loading} onClick={onSignin}>
             { loading ? <Loading /> : '下一步' }
           </StyledButton>
         </InfoWrapper>
@@ -175,4 +189,4 @@ const Register: FC = () => {
   );
 };
 
-export default Register;
+export default SignIn;

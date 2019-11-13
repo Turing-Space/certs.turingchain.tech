@@ -2,7 +2,7 @@ import { useContext, useEffect } from 'react';
 import { UserContext } from '@/contexts/user';
 import { Router } from '@/i18n';
 
-const useLoginMode = (mode: 'user' | 'issuer') => {
+const useLoginMode = (mode: 'user' | 'issuer' | 'register') => {
   const { user } = useContext(UserContext);
   useEffect(() => {
     if (user.loginMode !== mode) {

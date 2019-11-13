@@ -41,10 +41,10 @@ const StyledSection = styled(Section)`
     height: 100%;
   }
 `;
-const Logo = styled.img`
-  width: 21vw;
-  margin-top: 2%;
-`;
+// const Logo = styled.img`
+//   width: 21vw;
+//   margin-top: 2%;
+// `;
 const RegisterWrapper = styled.div`
   position: relative;
   display: flex;
@@ -58,60 +58,59 @@ const RegisterWrapper = styled.div`
   }
 `;
 
-const StyledTextInput = styled(TextInput)`
-  && {
-    width: 50%;
-    margin-bottom: 60px;
-  }
-`;
+// const StyledTextInput = styled(TextInput)`
+//   && {
+//     width: 50%;
+//     margin-bottom: 60px;
+//   }
+// `;
 
-const StyledButton = styled(Button)`
-  padding: 20px 0;
-  font-size: 18px;
-`;
-const PageComponent = styled.div`
-`;
-const InfoWrapper = styled.div`
-  max-width: 650px;
-  width: 100%;
-  padding: 40px 40px 72px 40px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  > .textBox {
-    color: #424242;
-    font-size: 4vmin;
-    text-align: center;
-    line-height: 1.3;
-    letter-spacing: 1.3px;
-    display: block;
-    max-width: 310px;
-    width: 100%;
-    margin: 35px 0 40px 0;
-    p {
-      > span {
-        color: ${p => p.theme.colors.primary};
-      }
-    }
-    ${media('desktop')} {
-      font-size: 24px;
-    }
-  }
-`;
+// const StyledButton = styled(Button)`
+//   padding: 20px 0;
+//   font-size: 18px;
+// `;
 
-const ErrorMessage = styled.p`
-  font-size: ${p => p.theme.fontSize.smaller};
-  color: ${p => p.theme.colors.primary};
-`;
+// const InfoWrapper = styled.div`
+//   max-width: 650px;
+//   width: 100%;
+//   padding: 40px 40px 72px 40px;
+//   background-color: #ffffff;
+//   border-radius: 10px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   > .textBox {
+//     color: #424242;
+//     font-size: 4vmin;
+//     text-align: center;
+//     line-height: 1.3;
+//     letter-spacing: 1.3px;
+//     display: block;
+//     max-width: 310px;
+//     width: 100%;
+//     margin: 35px 0 40px 0;
+//     p {
+//       > span {
+//         color: ${p => p.theme.colors.primary};
+//       }
+//     }
+//     ${media('desktop')} {
+//       font-size: 24px;
+//     }
+//   }
+// `;
+
+// const ErrorMessage = styled.p`
+//   font-size: ${p => p.theme.fontSize.smaller};
+//   color: ${p => p.theme.colors.primary};
+// `;
 
 const routes: any = {
-  ['RegisterEmail']: RegisterEmail,
-  ['RegisterPhone']: RegisterPhone,
-  ['RegisterEmailVerify']: RegisterEmailVerify,
-  ['RegisterPhoneVerify']: RegisterPhoneVerify,
+  // ['RegisterEmail']: RegisterEmail,
+  // ['RegisterPhone']: RegisterPhone,
+  // ['RegisterEmailVerify']: RegisterEmailVerify,
+  // ['RegisterPhoneVerify']: RegisterPhoneVerify,
   ['RegisterInput']: RegisterInput,
   ['Signin']: Signin,
   ['FinshPage']: FinshPage,
@@ -119,27 +118,21 @@ const routes: any = {
 
 const Register: FC = () => {
   const { query } = useRouter();
-  const { updateUser } = useContext(UserContext);
-  const [email, setEmail] = useState<string>('');
-  const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
-  const [account,setAccount] = useState<string>('');
-  const [password,setPassword] = useState<string>('');
-  const [checkPassword,setCheckPassword] = useState<string>('');
+  // const { updateUser } = useContext(UserContext);
+  // const [email, setEmail] = useState<string>('');
+  // const [error, setError] = useState<string>('');
+  // const [account,setAccount] = useState<string>('');
+  // const [password,setPassword] = useState<string>('');
+  // const [checkPassword,setCheckPassword] = useState<string>('');
 
-  const [pageState,setPageState] = useState<string>('RegisterEmail');
-  
+  const [pageState,setPageState] = useState<string>('RegisterInput');
+  // PageState
+  const PageComponent = routes[pageState];
+  // use pageComponent in the routes
 
   const onRegister = useCallback(async () => {
     const validate = () => {};
-    const PageComponent = routes[pageState];
-
-    
-  
-
-
-
-
 
     setLoading(true);
     const mode =
@@ -163,9 +156,7 @@ const Register: FC = () => {
   return (
     <StyledSection width="100vw" justifyContent="flex-start" row fullscreen>
       <RegisterWrapper>
-        <InfoWrapper>
-        <PageComponent></PageComponent>
-        </InfoWrapper>
+          <PageComponent onChange={setPageState}></PageComponent>
       </RegisterWrapper>
     </StyledSection>
   );

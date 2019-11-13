@@ -5,7 +5,7 @@ import isFunction from 'lodash/isFunction';
 import { Router } from '@/i18n';
 
 function withAuth<P = {}>(
-  mode: 'user' | 'issuer',
+  mode: 'user' | 'issuer' | 'register',
   getInitialProps?: GetInitialProps<any, any>,
 ) {
   return (Component: React.ComponentType<P>) =>

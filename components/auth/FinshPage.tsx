@@ -17,10 +17,6 @@ import notify from '@/utils/notify';
 import { CertsContext } from '@/contexts/certs';
 
 
-import RegisterEmail from '@/components/auth/RegisterEmail';
-import RegisterPhone from '@/components/auth/RegisterPhone';
-
-
 import Loading from '../Loading';
 
 const StyledSection = styled(Section)`
@@ -54,12 +50,12 @@ const RegisterWrapper = styled.div`
   }
 `;
 
-const StyledTextInput = styled(TextInput)`
-  && {
-    width: 50%;
-    margin-bottom: 60px;
-  }
-`;
+// const StyledTextInput = styled(TextInput)`
+//   && {
+//     width: 50%;
+//     margin-bottom: 60px;
+//   }
+// `;
 
 const StyledButton = styled(Button)`
   padding: 20px 0;
@@ -102,29 +98,17 @@ const ErrorMessage = styled.p`
   color: ${p => p.theme.colors.primary};
 `;
 
-const routes = {
-  ['RegisterEmail']: RegisterEmail,
-  ['RegisterPhone']: RegisterPhone,
-}
-
-const Register: FC = () => {
+const FinishPage: FC = () => {
   const { query } = useRouter();
   const { updateUser } = useContext(UserContext);
-  const [email, setEmail] = useState<string>('');
-  const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
-  const [account,setAccount] = useState<string>('');
-  const [password,setPassword] = useState<string>('');
-  const [checkPassword,setCheckPassword] = useState<string>('');
 
-  const [pageState,setPageState] = useState<string>('RegisterEmail');
-
-
-  const onRegister = useCallback(async () => {
+  const product = () => {
+    Router.push('/product')
+  }
+  const onFinish = useCallback(async () => {
     const validate = () => {};
-  
-
-
+    
 
 
 
@@ -141,12 +125,12 @@ const Register: FC = () => {
       switch (e.keyCode) {
         // press enter
         case 13: {
-          onRegister();
+          onFinish();
           break;
         }
       }
     },
-    [onRegister],
+    [onFinish],
   );
 
   return (
@@ -163,11 +147,11 @@ const Register: FC = () => {
           <p>獲得<span>「創世玩家證書」</span></p>
           <p>—歡迎加入Turing Certs！</p>
         </div>
-          <StyledButton>確認</StyledButton>
+          <StyledButton onClick={product}>確認</StyledButton>
         </InfoWrapper>
       </RegisterWrapper>
     </StyledSection>
   );
 };
 
-export default Register;
+export default FinishPage;

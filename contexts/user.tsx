@@ -5,7 +5,7 @@ export type TUser = {
   name: string;
   email: string;
   avatarUri: string;
-  loginMode: 'user' | 'issuer' | '';
+  loginMode: 'user' | 'issuer' | 'register' | '';
 };
 
 type TUserContext = {

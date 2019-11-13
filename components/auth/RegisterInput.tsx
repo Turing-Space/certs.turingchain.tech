@@ -5,17 +5,16 @@ import qs from 'qs';
 
 import Section from '@/components/Section';
 import { media } from '@/utils/theme';
-import { getRelativePath } from '@/utils';
+// import { getRelativePath } from '@/utils';
 import TextInput from '@/components/TextInput';
 import Button from '@/components/Button';
-import { emailValidator } from '@/utils/validator';
-import { Router } from '@/i18n';
+// import { Router } from '@/i18n';
 import { UserContext } from '@/contexts/user';
-import { signIn } from '@/utils/api';
-import { preparedUser } from '@/utils/user';
-import notify from '@/utils/notify';
-import { CertsContext } from '@/contexts/certs';
-import RegisterEmailVerify from '@/components/auth/RegisterEmailVerify';
+// import { signIn } from '@/utils/api';
+// import { preparedUser } from '@/utils/user';
+// import notify from '@/utils/notify';
+// import { CertsContext } from '@/contexts/certs';
+
 
 import Loading from '../Loading';
 
@@ -83,33 +82,34 @@ const ErrorMessage = styled.p`
   color: ${p => p.theme.colors.primary};
 `;
 
-const Register: FC = () => {
+type TProps = {
+  setPageState: string;
+  onChange: (e: any) => void;
+}
+
+
+const InputName: FC<TProps> = (setPageState) => {
   const { query } = useRouter();
   const { updateUser } = useContext(UserContext);
-  const [email, setEmail] = useState<string>('');
+  const [name, setName] = useState<string>('');
+  const [user, setUser] = useState<string>('');
   const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
 
+  const onInputName = useCallback(async () => {
+    const validate = () => {}
 
-  const [emailVerify, setEmailVerify] = useState<boolean>(false);
-  const [inputName, setInputName] = useState<boolean>(false);
-  const [nameVerify, setNameVerify] = useState<boolean>(false);
-  const [phone, setPhone] = useState<boolean>(false);
-  const [phoneVerify, setPhoneVerify] = useState<boolean>(false);
-  const [signin, setSignin] = useState<boolean>(false);
-  const [finsh, setFinish] = useState<boolean>(false);
-
-
-  const onRegister = useCallback(async () => {
-    const validate = () => {};
-    
-   
-
-
-
-
-
-
+     // call API
+    const result = 'fakeUser';
+    if (result) {
+      // handle success
+      setUser(result);
+      setPageState.onChange('Signin');
+    } else {
+      // handle error
+      return false
+      setError('姓名不得為空')
+    }
 
     setLoading(true);
     const mode =
@@ -122,12 +122,12 @@ const Register: FC = () => {
       switch (e.keyCode) {
         // press enter
         case 13: {
-          onRegister();
+          onInputName();
           break;
         }
       }
     },
-    [onRegister],
+    [onInputName],
   );
 
   return (
@@ -137,13 +137,13 @@ const Register: FC = () => {
           <p>你好，請問你的真實姓名是？</p>
           <StyledTextInput 
           placeholder="請輸入真實姓名"
-          value={email}
-          onChange={setEmail}
+          value={name}
+          onChange={setName}
           input={{
-            type: 'email',
+            type: 'name',
             onKeyDown,
           }}/>
-          <StyledButton disabled={loading} onClick={onRegister}>
+          <StyledButton disabled={loading} onClick={onInputName}>
             { loading ? <Loading /> : '下一步' }
           </StyledButton>
         </InfoWrapper>
@@ -152,4 +152,4 @@ const Register: FC = () => {
   );
 };
 
-export default Register;
+export default InputName;
