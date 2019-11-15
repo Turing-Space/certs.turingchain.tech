@@ -15,7 +15,6 @@ import { UserContext } from '@/contexts/user';
 import { signIn } from '@/utils/api';
 import { preparedUser } from '@/utils/user';
 import notify from '@/utils/notify';
-import { CertsContext } from '@/contexts/certs';
 
 import Loading from '../Loading';
 
@@ -98,67 +97,39 @@ const ErrorMessage = styled.p`
   color: ${p => p.theme.colors.primary};
 `;
 
+
 const Login: FC = () => {
   const { query } = useRouter();
   const { updateUser } = useContext(UserContext);
-  // user global props
   const [account, setAccount] = useState<string>('');
-  // init account = ''
-  const [email, setEmail] = useState<string>('')
   const [password, setPassword] = useState<string>('');
-  // init password = ''
   const [error, setError] = useState<string>('');
-  // init errorMessage = ''
   const [loading, setLoading] = useState<boolean>(false);
-  // init loading = false
 
 
   const onRegister = () => {
     Router.push('/auth/register')
   }
-  
+  // change register
 
   const onLogin = useCallback(async () => {
     const validate = () => {
       if (!account || !password) {
         setError('帳號密碼不可為空');
         return false;
-        // verify !account || !password
       } else if (!emailValidator(account)) {
         setError('信箱有誤');
         return false;
-        // verify e-mail
       }
       return true;
     };
 
     setLoading(true);
-    // verify finish loading = true
 
     const mode =
       query.mode || qs.parse(location.search, { ignoreQueryPrefix: true }).mode;
-    
-    if (mode === 'issuer') {
-      const [err, issuer] = await signIn({
-        userInfo: {
-          email: account,
-          password,
-        },
-      });
-      if (!issuer || issuer.length === 0) {
-        notify.error({ msg: err || '此帳號並不存在' });
-      } else if (issuer[0].isIssuer) {
-        notify.error({ msg: '此帳號並不是發證機關帳號，請確認使用帳號' });
-      } else {
-        updateUser({
-          ...preparedUser(issuer[0]),
-          loginMode: 'issuer',
-        });
-        Router.push('/issuer');
-      }
-      // -----------user------------ //
 
-    } else if( mode === 'user' ) {
+    if (mode === 'issuer' || mode === 'user') {
       const [err, user] = await signIn({
         userInfo: {
           email: account,
@@ -166,27 +137,22 @@ const Login: FC = () => {
         },
       });
       if (!user || user.length === 0) {
-        notify.error({msg: err || '此帳號不存在' });
-      } else if (!user[0].isIssuer) {
-        notify.error({ msg: '此帳號不是使用者帳號，請確認使用者帳號'})
+        notify.error({ msg: err || '此帳號並不存在' });
+      } else if (mode === 'issuer' && !user[0].isIssuer) {
+        notify.error({ msg: '此帳號並不是發證機關帳號，請確認使用帳號' });
       } else {
         updateUser({
           ...preparedUser(user[0]),
-          loginMode: 'user',
+          loginMode: mode,
         });
-        // useContext update(Change) User
-        Router.push('/pages/issuer/product');
+        Router.push(user[0].isIssuer ? '/issuer' : '/product');
       }
-      
-      // -----------user------------ //
     } else if (validate()) {
       setError('系統尚未開啟，請耐心等待，謝謝！');
     }
 
     setLoading(false);
   }, [account, password]);
-
-
 
   const onKeyDown = useCallback(
     (e: KeyboardEvent<HTMLInputElement>) => {

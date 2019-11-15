@@ -1,23 +1,12 @@
-import { useState, useCallback, FC, KeyboardEvent, useContext } from 'react';
+import { FC } from 'react';
 import styled from 'styled-components';
-import { useRouter } from 'next/router';
-import qs from 'qs';
-
 import Section from '@/components/Section';
 import { media } from '@/utils/theme';
 import { getRelativePath } from '@/utils';
-import TextInput from '@/components/TextInput';
 import Button from '@/components/Button';
-import { emailValidator } from '@/utils/validator';
 import { Router } from '@/i18n';
-import { UserContext } from '@/contexts/user';
-import { signIn } from '@/utils/api';
-import { preparedUser } from '@/utils/user';
-import notify from '@/utils/notify';
-import { CertsContext } from '@/contexts/certs';
-
-
-import Loading from '../Loading';
+// import { useRouter } from 'next/router';
+// import Loading from '../Loading';
 
 const StyledSection = styled(Section)`
   position: absolute;
@@ -49,13 +38,6 @@ const RegisterWrapper = styled.div`
     width: 100%;
   }
 `;
-
-// const StyledTextInput = styled(TextInput)`
-//   && {
-//     width: 50%;
-//     margin-bottom: 60px;
-//   }
-// `;
 
 const StyledButton = styled(Button)`
   padding: 20px 0;
@@ -93,45 +75,14 @@ const InfoWrapper = styled.div`
   }
 `;
 
-const ErrorMessage = styled.p`
-  font-size: ${p => p.theme.fontSize.smaller};
-  color: ${p => p.theme.colors.primary};
-`;
-
 const FinishPage: FC = () => {
-  const { query } = useRouter();
-  const { updateUser } = useContext(UserContext);
-  const [loading, setLoading] = useState<boolean>(false);
+  // const { query } = useRouter();
+  // const { updateUser } = useContext(UserContext);
+  // const [loading, setLoading] = useState<boolean>(false);
 
-  const product = () => {
+  const onConfirm = () => {
     Router.push('/product')
   }
-  const onFinish = useCallback(async () => {
-    const validate = () => {};
-    
-
-
-
-
-
-    setLoading(true);
-    const mode =
-      query.mode || qs.parse(location.search, { ignoreQueryPrefix: true }).mode;
-    setLoading(false);
-  }, []);
-
-  const onKeyDown = useCallback(
-    (e: KeyboardEvent<HTMLInputElement>) => {
-      switch (e.keyCode) {
-        // press enter
-        case 13: {
-          onFinish();
-          break;
-        }
-      }
-    },
-    [onFinish],
-  );
 
   return (
     <StyledSection width="100vw" justifyContent="flex-start" row fullscreen>
@@ -147,7 +98,7 @@ const FinishPage: FC = () => {
           <p>獲得<span>「創世玩家證書」</span></p>
           <p>—歡迎加入Turing Certs！</p>
         </div>
-          <StyledButton onClick={product}>確認</StyledButton>
+          <StyledButton onClick={onConfirm}>確認</StyledButton>
         </InfoWrapper>
       </RegisterWrapper>
     </StyledSection>
