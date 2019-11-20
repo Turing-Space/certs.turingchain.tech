@@ -1,18 +1,9 @@
-import { useState, useCallback, FC, KeyboardEvent, useContext } from 'react';
+import { useState, useCallback, FC, KeyboardEvent } from 'react';
 import styled from 'styled-components';
-import { useRouter } from 'next/router';
-import qs from 'qs';
-
 import Section from '@/components/Section';
 import { media } from '@/utils/theme';
 import TextInput from '@/components/TextInput';
 import Button from '@/components/Button';
-import { UserContext } from '@/contexts/user';
-// import { Router } from '@/i18n';
-// import { signIn } from '@/utils/api';
-// import { preparedUser } from '@/utils/user';
-// import notify from '@/utils/notify';
-
 
 import Loading from '../Loading';
 
@@ -75,45 +66,37 @@ const InfoWrapper = styled.div`
   }
 `;
 
-const ErrorMessage = styled.p`
-  font-size: ${p => p.theme.fontSize.smaller};
-  color: ${p => p.theme.colors.primary};
-`;
-
-type TProps = {
-  setPageState: string;
-  onChange: (e: any) => void;
+export enum RegisterPageState {
+  RegisterSignIn = 'REGISTER_SIGNIN',
 }
 
+type TProps = {
+  setPageState: any;
+  setUserName: any;
+  userName: any;
+  initUserName: (e: any) => void;
+  onChangePageState: (e: any) => void;
+  onChangeUserName: (e: any) => void;
+}
 
-const InputName: FC<TProps> = (setPageState) => {
-  const { query } = useRouter();
-  const { updateUser } = useContext(UserContext);
-  const [name, setName] = useState<string>('');
-  const [user, setUser] = useState<string>('');
-  const [error, setError] = useState<string>('');
+const inputName: FC<TProps> = (props) => {
+  // const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
-
-  const onInputName = useCallback(async () => {
-    const validate = () => {}
-
-     // call API
-    const result = 'fakeUser';
-    if (result) {
-      // handle success
-      setUser(result);
-      setPageState.onChange('Signin');
-    } else {
-      // handle error
-      return false
-      setError('姓名不得為空')
-    }
-
+  const onInputName = () => {
+    // --------validate--------- //
+    // const validate = () => {
+    //   if (!props.userName) {
+    //     // handle error
+    //     // setError('姓名不得為空')
+    //     return false
+    //   } else {
+    //     // handle success
+    //     props.onChangePageState(RegisterPageState.RegisterSignIn);
+    //     return true
+    //   }
+    // }
     setLoading(true);
-    const mode =
-      query.mode || qs.parse(location.search, { ignoreQueryPrefix: true }).mode;
-    setLoading(false);
-  }, []);
+  }
 
   const onKeyDown = useCallback(
     (e: KeyboardEvent<HTMLInputElement>) => {
@@ -132,11 +115,11 @@ const InputName: FC<TProps> = (setPageState) => {
     <StyledSection width="100vw" justifyContent="flex-start" row fullscreen>
       <RegisterWrapper>
         <InfoWrapper>
-          <p>你好，請問你的真實姓名是？</p>
+          <p>你好，請問您的真實姓名是？</p>
           <StyledTextInput 
           placeholder="請輸入真實姓名"
-          value={name}
-          onChange={setName}
+          value={props.userName}
+          onChange={props.setUserName}
           input={{
             type: 'name',
             onKeyDown,
@@ -150,4 +133,4 @@ const InputName: FC<TProps> = (setPageState) => {
   );
 };
 
-export default InputName;
+export default inputName;

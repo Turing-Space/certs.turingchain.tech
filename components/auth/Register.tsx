@@ -2,16 +2,10 @@ import { useState, FC } from 'react';
 import styled from 'styled-components';
 import Section from '@/components/Section';
 import { media } from '@/utils/theme';
-
+// page component
 import RegisterInputName from '@/components/auth/RegisterInputName';
 import RegisterSignIn from '@/components/auth/RegisterSignIn';
-import FinshPage from '@/components/auth/FinshPage';
-// import RegisterEmail from '@/components/auth/RegisterEmail';
-// import RegisterPhone from '@/components/auth/RegisterPhone';
-// import RegisterEmailVerify from '@/components/auth/RegisterEmailVerify';
-// import RegisterPhoneVerify from '@/components/auth/RegisterPhoneVerify';
-// ----all pageState component----- //
-
+import FinishPage from '@/components/auth/FinishPage';
 
 const StyledSection = styled(Section)`
   position: absolute;
@@ -40,25 +34,32 @@ const RegisterWrapper = styled.div`
   }
 `;
 
+// page component enum
+export enum RegisterPageState {
+  RegisterInputName = 'REGISTER_INPUT_NAME',
+  RegisterSignIn = 'REGISTER_SIGNIN',
+  FinishPage = 'FINISHPAGE'
+}
+
+// page component routes
 const routes: any = {
-  // ['RegisterEmail']: RegisterEmail,
-  // ['RegisterPhone']: RegisterPhone,
-  // ['RegisterEmailVerify']: RegisterEmailVerify,
-  // ['RegisterPhoneVerify']: RegisterPhoneVerify,
-  ['RegisterInputName']: RegisterInputName,
-  ['Signin']: RegisterSignIn,
-  ['FinshPage']: FinshPage,
+  [RegisterPageState.RegisterInputName]: RegisterInputName,
+  [RegisterPageState.RegisterSignIn]: RegisterSignIn,
+  [RegisterPageState.FinishPage]: FinishPage,
 }
 
 const Register: FC = () => {
-  const [pageState,setPageState] = useState<string>('RegisterInputName');
-  // set PageState
-  const PageComponent = routes[pageState];
+  // set pageState
+  const [pageState,setPageState] = useState<RegisterPageState>(RegisterPageState.RegisterInputName);
+  // set userInfo
+  const [userName, setUserName] = useState<string>('');
   // use pageComponent in the routes
+  const PageComponent = routes[pageState];
+
   return (
     <StyledSection width="100vw" justifyContent="flex-start" row fullscreen>
       <RegisterWrapper>
-          <PageComponent onChange={setPageState}></PageComponent>
+          <PageComponent onChangeUserName={setUserName} initUserName={userName} onChangePageState={setPageState}/>
       </RegisterWrapper>
     </StyledSection>
   );

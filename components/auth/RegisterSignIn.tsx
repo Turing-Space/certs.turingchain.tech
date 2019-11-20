@@ -1,13 +1,10 @@
 import { useState, useCallback, FC, KeyboardEvent } from 'react';
 import styled from 'styled-components';
-import { useRouter } from 'next/router';
-import qs from 'qs';
+// import qs from 'qs';
 import Section from '@/components/Section';
 import { media } from '@/utils/theme';
 import TextInput from '@/components/TextInput';
 import Button from '@/components/Button';
-// import { UserContext } from '@/contexts/user';
-// import { signIn } from '@/utils/api';
 import Loading from '../Loading';
 
 const StyledSection = styled(Section)`
@@ -68,19 +65,23 @@ const InfoWrapper = styled.div`
   }
 `;
 
-// const ErrorMessage = styled.p`
-//   font-size: ${p => p.theme.fontSize.smaller};
-//   color: ${p => p.theme.colors.primary};
-// `;
+const ErrorMessage = styled.p`
+  font-size: ${p => p.theme.fontSize.smaller};
+  color: ${p => p.theme.colors.primary};
+`;
 
-type TProps = {
-  setPageState: string;
-  onChange: (e: any) => void;
+export enum RegisterPageState {
+  FinishPage = 'FINISHPAGE'
 }
 
-const SignIn: FC<TProps> = (setPageState) => {
-  const { query } = useRouter();
-  // const [error, setError] = useState<string>('');
+type TProps = {
+  setPageState: any;
+  setUserName: any;
+  onChangePageState: (e: any) => void;
+}
+
+const SignIn: FC<TProps> = (props) => {
+  const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const [account, setAccount] = useState<string>('');
   const [password, setPassword] = useState<string>('');
@@ -88,40 +89,41 @@ const SignIn: FC<TProps> = (setPageState) => {
 
   
 
-  const onSignin = useCallback(async () => {
-    setPageState.onChange('FinshPage')
+  const onRegister = useCallback(async () => {
+    // -----------call API---------- //
     const validate = () => {
-       // call API
       if (!account || !password) {
-        // setError('帳號密碼不可為空');
+        setError('帳號密碼不可為空');
         return false
       } else if (!checkPassword) {
-        // setError('再次確認密碼');
+        setError('請再次確認密碼');
         return false;
       } else {
-        // setPageState.onChange('FinshPage')
+        // success change finishPage
+        props.onChangePageState(RegisterPageState.FinishPage)
         return true;
       }
     }
-    setLoading(true);
-
-    const mode =
-      query.mode || qs.parse(location.search, { ignoreQueryPrefix: true }).mode;
+    setLoading(true)
+    
+    validate()
+    // const mode =
+    //   query.mode || qs.parse(location.search, { ignoreQueryPrefix: true }).mode;
 
     setLoading(false);
-  }, [account, password]);
+  }, [props.setUserName ,account, password]);
 
   const onKeyDown = useCallback(
     (e: KeyboardEvent<HTMLInputElement>) => {
       switch (e.keyCode) {
         // press enter
         case 13: {
-          onSignin();
+          onRegister();
           break;
         }
       }
     },
-    [onSignin],
+    [onRegister],
   );
 
   return (
@@ -156,7 +158,8 @@ const SignIn: FC<TProps> = (setPageState) => {
             type: 'text',
             onKeyDown,
           }}/>
-          <StyledButton disabled={loading} onClick={onSignin}>
+          <ErrorMessage>{error}</ErrorMessage>
+          <StyledButton disabled={loading} onClick={onRegister}>
             { loading ? <Loading /> : '下一步' }
           </StyledButton>
         </InfoWrapper>

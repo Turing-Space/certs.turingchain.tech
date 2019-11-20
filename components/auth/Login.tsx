@@ -106,11 +106,10 @@ const Login: FC = () => {
   const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
 
-
+  // SignIn Button
   const onRegister = () => {
     Router.push('/auth/register')
   }
-  // change register
 
   const onLogin = useCallback(async () => {
     const validate = () => {
