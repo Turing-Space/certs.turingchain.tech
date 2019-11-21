@@ -62,8 +62,8 @@ const Register: FC = () => {
     <StyledSection width="100vw" justifyContent="flex-start" row fullscreen>
       <RegisterWrapper>
         <PageComponent
-          onChangeUserName={setUserName}
           userName={userName}
+          onChangeUserName={setUserName}
           onChangePageState={setPageState}
         />
       </RegisterWrapper>

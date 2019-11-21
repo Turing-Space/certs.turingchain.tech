@@ -6,6 +6,7 @@ import { media } from '@/utils/theme';
 import TextInput from '@/components/TextInput';
 import Button from '@/components/Button';
 import Loading from '../Loading';
+import { RegisterPageState } from './Register';
 
 const StyledSection = styled(Section)`
   position: absolute;
@@ -41,7 +42,7 @@ const StyledTextInput = styled(TextInput)`
 `;
 
 const StyledButton = styled(Button)`
-  padding: ;
+  padding: 0.7em 1em;
   margin-top: 2em;
 `;
 
@@ -70,48 +71,51 @@ const ErrorMessage = styled.p`
   color: ${p => p.theme.colors.primary};
 `;
 
-export enum RegisterPageState {
-  FinishPage = 'FINISHPAGE'
-}
-
 type TProps = {
-  setPageState: any;
-  setUserName: any;
-  onChangePageState: (e: any) => void;
-}
+  userName: string;
+  onChangePageState: (route: RegisterPageState) => void;
+};
 
-const SignIn: FC<TProps> = (props) => {
+const SignIn: FC<TProps> = ({ userName, onChangePageState }) => {
   const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const [account, setAccount] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [checkPassword, setCheckPassword] = useState<string>('');
 
-  
-
-  const onRegister = useCallback(async () => {
-    // -----------call API---------- //
+  const onRegister = async () => {
     const validate = () => {
       if (!account || !password) {
         setError('帳號密碼不可為空');
-        return false
-      } else if (!checkPassword) {
-        setError('請再次確認密碼');
         return false;
-      } else {
-        // success change finishPage
-        props.onChangePageState(RegisterPageState.FinishPage)
-        return true;
+      } else if (password !== checkPassword) {
+        setError('密碼不一致');
+        return false;
+      }
+      return true;
+    };
+
+    if (validate()) {
+      setLoading(true);
+      try {
+        // call api
+        const userInfo = {
+          name: userName,
+          account,
+          password,
+        };
+        alert(JSON.stringify(userInfo));
+
+        // success
+        onChangePageState(RegisterPageState.FinishPage);
+      } catch (err) {
+        // error
+        setError(err.message);
+      } finally {
+        setLoading(false);
       }
     }
-    setLoading(true)
-    
-    validate()
-    // const mode =
-    //   query.mode || qs.parse(location.search, { ignoreQueryPrefix: true }).mode;
-
-    setLoading(false);
-  }, [props.setUserName ,account, password]);
+  };
 
   const onKeyDown = useCallback(
     (e: KeyboardEvent<HTMLInputElement>) => {
@@ -131,36 +135,39 @@ const SignIn: FC<TProps> = (props) => {
       <RegisterWrapper>
         <InfoWrapper>
           <p>接下來，設定一組帳號與密碼吧！</p>
-          <StyledTextInput 
-          placeholder="登入帳號"
-          value={account}
-          onChange={setAccount}
-          label="登入帳號"
-          input={{
-            type: 'text',
-            onKeyDown,
-          }}/>
-          <StyledTextInput 
-          placeholder="登入密碼"
-          value={password}
-          onChange={setPassword}
-          label="登入密碼"
-          input={{
-            type: 'text',
-            onKeyDown,
-          }}/>
-          <StyledTextInput 
-          placeholder="再輸入一次密碼"
-          value={checkPassword}
-          onChange={setCheckPassword}
-          label="再輸入一次密碼"
-          input={{
-            type: 'text',
-            onKeyDown,
-          }}/>
+          <StyledTextInput
+            placeholder="登入帳號"
+            value={account}
+            onChange={setAccount}
+            label="登入帳號"
+            input={{
+              type: 'text',
+              onKeyDown,
+            }}
+          />
+          <StyledTextInput
+            placeholder="登入密碼"
+            value={password}
+            onChange={setPassword}
+            label="登入密碼"
+            input={{
+              type: 'text',
+              onKeyDown,
+            }}
+          />
+          <StyledTextInput
+            placeholder="再輸入一次密碼"
+            value={checkPassword}
+            onChange={setCheckPassword}
+            label="再輸入一次密碼"
+            input={{
+              type: 'text',
+              onKeyDown,
+            }}
+          />
           <ErrorMessage>{error}</ErrorMessage>
           <StyledButton disabled={loading} onClick={onRegister}>
-            { loading ? <Loading /> : '下一步' }
+            {loading ? <Loading /> : '下一步'}
           </StyledButton>
         </InfoWrapper>
       </RegisterWrapper>
