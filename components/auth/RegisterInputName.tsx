@@ -42,7 +42,7 @@ const StyledTextInput = styled(TextInput)`
 `;
 
 const StyledButton = styled(Button)`
-  padding: ;
+  padding: 0.7em 1em;
   margin-top: 2em;
 `;
 
@@ -77,9 +77,9 @@ type TProps = {
   initUserName: (e: any) => void;
   onChangePageState: (e: any) => void;
   onChangeUserName: (e: any) => void;
-}
+};
 
-const inputName: FC<TProps> = (props) => {
+const InputName: FC<TProps> = props => {
   // const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const onInputName = () => {
@@ -96,7 +96,7 @@ const inputName: FC<TProps> = (props) => {
     //   }
     // }
     setLoading(true);
-  }
+  };
 
   const onKeyDown = useCallback(
     (e: KeyboardEvent<HTMLInputElement>) => {
@@ -116,16 +116,17 @@ const inputName: FC<TProps> = (props) => {
       <RegisterWrapper>
         <InfoWrapper>
           <p>你好，請問您的真實姓名是？</p>
-          <StyledTextInput 
-          placeholder="請輸入真實姓名"
-          value={props.userName}
-          onChange={props.setUserName}
-          input={{
-            type: 'name',
-            onKeyDown,
-          }}/>
+          <StyledTextInput
+            placeholder="請輸入真實姓名"
+            value={props.userName}
+            onChange={props.setUserName}
+            input={{
+              type: 'name',
+              onKeyDown,
+            }}
+          />
           <StyledButton disabled={loading} onClick={onInputName}>
-            { loading ? <Loading /> : '下一步' }
+            {loading ? <Loading /> : '下一步'}
           </StyledButton>
         </InfoWrapper>
       </RegisterWrapper>
@@ -133,4 +134,4 @@ const inputName: FC<TProps> = (props) => {
   );
 };
 
-export default inputName;
+export default InputName;
