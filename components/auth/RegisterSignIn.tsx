@@ -36,9 +36,7 @@ const RegisterWrapper = styled.div`
 `;
 
 const StyledTextInput = styled(TextInput)`
-  && {
-    width: 50%;
-  }
+  width: 50%;
 `;
 
 const StyledButton = styled(Button)`
@@ -54,21 +52,18 @@ const InfoWrapper = styled.div`
   font-weight: bold;
   > p {
     color: #a80100;
-    font-size: 4vmin;
     letter-spacing: 1.7px;
     display: block;
     max-width: 397px;
     width: 100%;
     margin-bottom: 64px;
-    ${media('desktop')} {
-      font-size: 24px;
-    }
   }
 `;
 
 const ErrorMessage = styled.p`
   font-size: ${p => p.theme.fontSize.smaller};
   color: ${p => p.theme.colors.primary};
+  font-weight: 300;
 `;
 
 type TProps = {
@@ -97,23 +92,21 @@ const SignIn: FC<TProps> = ({ userName, onChangePageState }) => {
 
     if (validate()) {
       setLoading(true);
-      try {
-        // call api
-        const userInfo = {
-          name: userName,
-          account,
-          password,
-        };
-        alert(JSON.stringify(userInfo));
 
-        // success
-        onChangePageState(RegisterPageState.FinishPage);
-      } catch (err) {
-        // error
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
+      // call api
+      const userInfo = {
+        name: userName,
+        account,
+        password,
+      };
+      alert(JSON.stringify(userInfo));
+
+      // if success
+      onChangePageState(RegisterPageState.FinishPage);
+
+      // if error
+      // setError(err.message);
+      setLoading(false);
     }
   };
 
@@ -134,7 +127,7 @@ const SignIn: FC<TProps> = ({ userName, onChangePageState }) => {
     <StyledSection width="100vw" justifyContent="flex-start" row fullscreen>
       <RegisterWrapper>
         <InfoWrapper>
-          <p>接下來，設定一組帳號與密碼吧！</p>
+          <p style={{ fontSize: '24px' }}>接下來，設定一組帳號與密碼吧！</p>
           <StyledTextInput
             placeholder="登入帳號"
             value={account}
@@ -151,7 +144,7 @@ const SignIn: FC<TProps> = ({ userName, onChangePageState }) => {
             onChange={setPassword}
             label="登入密碼"
             input={{
-              type: 'text',
+              type: 'password',
               onKeyDown,
             }}
           />
@@ -161,7 +154,7 @@ const SignIn: FC<TProps> = ({ userName, onChangePageState }) => {
             onChange={setCheckPassword}
             label="再輸入一次密碼"
             input={{
-              type: 'text',
+              type: 'password',
               onKeyDown,
             }}
           />

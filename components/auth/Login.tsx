@@ -97,7 +97,6 @@ const ErrorMessage = styled.p`
   color: ${p => p.theme.colors.primary};
 `;
 
-
 const Login: FC = () => {
   const { query } = useRouter();
   const { updateUser } = useContext(UserContext);
@@ -108,8 +107,8 @@ const Login: FC = () => {
 
   // SignIn Button
   const onRegister = () => {
-    Router.push('/auth/register')
-  }
+    Router.push('/auth/register');
+  };
 
   const onLogin = useCallback(async () => {
     const validate = () => {
@@ -123,34 +122,34 @@ const Login: FC = () => {
       return true;
     };
 
-    setLoading(true);
-
     const mode =
       query.mode || qs.parse(location.search, { ignoreQueryPrefix: true }).mode;
 
-    if (mode === 'issuer' || mode === 'user') {
-      const [err, user] = await signIn({
-        userInfo: {
-          email: account,
-          password,
-        },
-      });
-      if (!user || user.length === 0) {
-        notify.error({ msg: err || '此帳號並不存在' });
-      } else if (mode === 'issuer' && !user[0].isIssuer) {
-        notify.error({ msg: '此帳號並不是發證機關帳號，請確認使用帳號' });
-      } else {
-        updateUser({
-          ...preparedUser(user[0]),
-          loginMode: mode,
+    if (validate()) {
+      if (mode === 'issuer' || mode === 'user') {
+        setLoading(true);
+        const [err, user] = await signIn({
+          userInfo: {
+            email: account,
+            password,
+          },
         });
-        Router.push(user[0].isIssuer ? '/issuer' : '/product');
+        if (!user || user.length === 0) {
+          notify.error({ msg: err || '此帳號並不存在' });
+        } else if (mode === 'issuer' && !user[0].isIssuer) {
+          notify.error({ msg: '此帳號並不是發證機關帳號，請確認使用帳號' });
+        } else {
+          updateUser({
+            ...preparedUser(user[0]),
+            loginMode: mode,
+          });
+          Router.push(user[0].isIssuer ? '/issuer' : '/product');
+        }
+        setLoading(false);
+      } else {
+        setError('系統尚未開啟，請耐心等待，謝謝！');
       }
-    } else if (validate()) {
-      setError('系統尚未開啟，請耐心等待，謝謝！');
     }
-
-    setLoading(false);
   }, [account, password]);
 
   const onKeyDown = useCallback(
