@@ -19,11 +19,18 @@ const Button = styled.button<TButtonProps>`
   letter-spacing: 0.92px;
   padding: 1em;
   transition: all 0.1s ease-in;
-  &:hover {
-    background-color: rgb(193, 76, 76);
-  }
 
-  opacity: ${p => (p.disabled ? 0.7 : 1)};
+  ${p =>
+    p.disabled
+      ? `
+    opacity: 0.7;
+  `
+      : `
+    opacity: 1;
+    &:hover {
+      background-color: rgb(193, 76, 76);
+    }
+  `}
 
   ${p =>
     p.mode === 'white' &&

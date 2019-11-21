@@ -36,21 +36,23 @@ const RegisterWrapper = styled.div`
 
 // page component enum
 export enum RegisterPageState {
-  RegisterInputName = 'REGISTER_INPUT_NAME',
-  RegisterSignIn = 'REGISTER_SIGNIN',
-  FinishPage = 'FINISHPAGE'
+  InputName = 'REGISTER_INPUT_NAME',
+  SignIn = 'REGISTER_SIGNIN',
+  FinishPage = 'REGISTER_FINISHPAGE',
 }
 
 // page component routes
 const routes: any = {
-  [RegisterPageState.RegisterInputName]: RegisterInputName,
-  [RegisterPageState.RegisterSignIn]: RegisterSignIn,
+  [RegisterPageState.InputName]: RegisterInputName,
+  [RegisterPageState.SignIn]: RegisterSignIn,
   [RegisterPageState.FinishPage]: FinishPage,
-}
+};
 
 const Register: FC = () => {
   // set pageState
-  const [pageState,setPageState] = useState<RegisterPageState>(RegisterPageState.RegisterInputName);
+  const [pageState, setPageState] = useState<RegisterPageState>(
+    RegisterPageState.InputName,
+  );
   // set userInfo
   const [userName, setUserName] = useState<string>('');
   // use pageComponent in the routes
@@ -59,7 +61,11 @@ const Register: FC = () => {
   return (
     <StyledSection width="100vw" justifyContent="flex-start" row fullscreen>
       <RegisterWrapper>
-          <PageComponent onChangeUserName={setUserName} initUserName={userName} onChangePageState={setPageState}/>
+        <PageComponent
+          onChangeUserName={setUserName}
+          userName={userName}
+          onChangePageState={setPageState}
+        />
       </RegisterWrapper>
     </StyledSection>
   );

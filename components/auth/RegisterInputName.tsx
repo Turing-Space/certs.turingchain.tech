@@ -1,11 +1,11 @@
-import { useState, useCallback, FC, KeyboardEvent } from 'react';
+import { useCallback, FC, KeyboardEvent } from 'react';
 import styled from 'styled-components';
 import Section from '@/components/Section';
 import { media } from '@/utils/theme';
 import TextInput from '@/components/TextInput';
 import Button from '@/components/Button';
 
-import Loading from '../Loading';
+import { RegisterPageState } from './Register';
 
 const StyledSection = styled(Section)`
   position: absolute;
@@ -66,36 +66,17 @@ const InfoWrapper = styled.div`
   }
 `;
 
-export enum RegisterPageState {
-  RegisterSignIn = 'REGISTER_SIGNIN',
-}
-
 type TProps = {
-  setPageState: any;
-  setUserName: any;
-  userName: any;
-  initUserName: (e: any) => void;
-  onChangePageState: (e: any) => void;
-  onChangeUserName: (e: any) => void;
+  userName: string;
+  onChangePageState: (route: RegisterPageState) => void;
+  onChangeUserName: (name: string) => void;
 };
 
 const InputName: FC<TProps> = props => {
-  // const [error, setError] = useState<string>('');
-  const [loading, setLoading] = useState<boolean>(false);
   const onInputName = () => {
-    // --------validate--------- //
-    // const validate = () => {
-    //   if (!props.userName) {
-    //     // handle error
-    //     // setError('姓名不得為空')
-    //     return false
-    //   } else {
-    //     // handle success
-    //     props.onChangePageState(RegisterPageState.RegisterSignIn);
-    //     return true
-    //   }
-    // }
-    setLoading(true);
+    if (props.userName) {
+      props.onChangePageState(RegisterPageState.SignIn);
+    }
   };
 
   const onKeyDown = useCallback(
@@ -119,14 +100,14 @@ const InputName: FC<TProps> = props => {
           <StyledTextInput
             placeholder="請輸入真實姓名"
             value={props.userName}
-            onChange={props.setUserName}
+            onChange={props.onChangeUserName}
             input={{
               type: 'name',
               onKeyDown,
             }}
           />
-          <StyledButton disabled={loading} onClick={onInputName}>
-            {loading ? <Loading /> : '下一步'}
+          <StyledButton disabled={!props.userName} onClick={onInputName}>
+            下一步
           </StyledButton>
         </InfoWrapper>
       </RegisterWrapper>
