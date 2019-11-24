@@ -1,12 +1,12 @@
 import { useState, useCallback, FC, KeyboardEvent } from 'react';
 import styled from 'styled-components';
-// import qs from 'qs';
 import Section from '@/components/Section';
 import { media } from '@/utils/theme';
 import TextInput from '@/components/TextInput';
 import Button from '@/components/Button';
 import Loading from '../Loading';
 import { RegisterPageState } from './Register';
+import { signIn } from '@/utils/api';
 
 const StyledSection = styled(Section)`
   position: absolute;
@@ -71,15 +71,16 @@ type TProps = {
   onChangePageState: (route: RegisterPageState) => void;
 };
 
-const SignIn: FC<TProps> = ({ userName, onChangePageState }) => {
+const SignIn: FC<TProps> = ({ onChangePageState }) => {
   const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const [account, setAccount] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [checkPassword, setCheckPassword] = useState<string>('');
 
-  const onRegister = async () => {
+  const onRegister = useCallback(async () => {
     const validate = () => {
+      // console.log(password, checkPassword)
       if (!account || !password) {
         setError('帳號密碼不可為空');
         return false;
@@ -92,23 +93,27 @@ const SignIn: FC<TProps> = ({ userName, onChangePageState }) => {
 
     if (validate()) {
       setLoading(true);
-
       // call api
-      const userInfo = {
-        name: userName,
-        account,
-        password,
-      };
-      alert(JSON.stringify(userInfo));
-
+      const [err, issuer] = await signIn({
+        userInfo: {
+          email: account,
+          password,
+        },
+      });
+      if (!issuer) {
+        // if error
+        // console.log('err', err)
+        setError(err);
+        setLoading(false);
+        return false
+      } else {
       // if success
+      // console.log('issuer',issuer)
       onChangePageState(RegisterPageState.FinishPage);
-
-      // if error
-      // setError(err.message);
-      setLoading(false);
+      return true
+      }
     }
-  };
+  }, [account, password, checkPassword]);
 
   const onKeyDown = useCallback(
     (e: KeyboardEvent<HTMLInputElement>) => {
