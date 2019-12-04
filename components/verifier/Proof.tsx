@@ -1,6 +1,7 @@
 import React from 'react';
 import { FC } from 'react';
 import styled from 'styled-components';
+import { getRelativePath } from '@/utils';
 
 const certicheckDoneIcon = 'static/icon/icon-certicheck.svg';
 const hideIcon = 'static/icon/icon-hide.svg';
@@ -108,11 +109,11 @@ const Proof: FC<TProps> = props => {
             <TitleBox><Title>CERTIFICATION</Title></TitleBox>
             <Hide>
                 <span>收起</span>
-                <img src={hideIcon} alt="" />
+                <img src={getRelativePath(hideIcon)} alt="" />
             </Hide>
             <Status>
                 <Rectangle />
-                <img src={certicheckDoneIcon} alt="" />
+                <img src={getRelativePath(certicheckDoneIcon)} alt="" />
                 <VSA>Verified Source Authenticity</VSA>
 
                 <a href={'https://thetangle.org/transaction/' + props.iota}>
