@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 import queryString from 'query-string';
 
+import Head from 'next/head';
 import Side from '@/components/verifier/Proof';
 import Certificate from '@/components/verifier/Certificate';
 
@@ -28,12 +29,6 @@ const Root = styled.div`
   background: $fafafa;
 `
 
-const getIpfsHash = (window: any) => {
-  const value = queryString.parse(window.location.search);
-  const hash = value.hash;
-  return hash
-}
-
 const Ipfs: NextFC = () => {
   const [date, setDate] = useState("-");
   const [issuerName, setIssuerName] = useState("-");
@@ -42,12 +37,11 @@ const Ipfs: NextFC = () => {
   const [holderEmail, setEmail] = useState("-");
   const [IPFS, setIPFS] = useState("-");
   const [IOTA, setIOTA] = useState("-");
-  const [hash] = useState("-");
-
 
   useEffect(() => {
     async function fetchCertsAPI() {
-      let hash = getIpfsHash(window)
+      const value = queryString.parse(window.location.search);
+      const hash = value.hash;
       console.log(hash);
       await fetch(`https://x1certificate-aqkcbxdduq-uc.a.run.app/v1/view/certs?ipfs=${hash}`)
         .then(res => res.json())
@@ -68,6 +62,9 @@ const Ipfs: NextFC = () => {
 
   return (
     <Root>
+      <Head>
+        <title>TuringVerifier</title>
+      </Head>
       <Side date={date}
         issuerName={issuerName}
         type={type}
@@ -75,7 +72,7 @@ const Ipfs: NextFC = () => {
         holderEmail={holderEmail}
         ipfs={IPFS}
         iota={IOTA} />
-      <Certificate ipfs={hash} />
+      <Certificate ipfs={IPFS} />
     </Root>
   );
 }
