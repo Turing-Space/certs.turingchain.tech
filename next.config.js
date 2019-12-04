@@ -27,6 +27,7 @@ module.exports = withBundleAnalyzer(
           return {
             '/': { page: '/', query: { lng: '' } },
             '/product': { page: '/product', query: { lng: '' } },
+            '/ipfs': { page: '/ipfs', query: { hash: '' } },
             '/auth/login': { page: '/auth/login', query: { mode: '' } },
             '/issuer': { page: '/issuer', query: { lng: '' } },
             '/issuer/issue-cert/1': {
