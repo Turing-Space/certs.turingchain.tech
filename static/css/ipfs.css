@@ -5,20 +5,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* zoom: 0.67; 
+  -moz-transform: scale(0.67); 
+  -moz-transform-origin: 0 0; */
 }
 
-/* @media screen and (max-width: 1440px) and (min-width: 1080px) {
+@media screen and (max-width: 1440px) {
   body {
-    zoom: 0.6; 
-    -moz-transform: scale(0.6); 
+    zoom: 0.663; 
+    -moz-transform: scale(0.663); 
     -moz-transform-origin: 0 0;
   }
-} */
+}
 
-@media screen and (max-width: 1080px) {
+@media screen and (min-width: 1440px) and (max-width: 1920px) {
   body {
-    zoom: 0.67; 
-    -moz-transform: scale(0.67); 
+    zoom: 0.9; 
+    -moz-transform: scale(0.9); 
     -moz-transform-origin: 0 0;
   }
 }
