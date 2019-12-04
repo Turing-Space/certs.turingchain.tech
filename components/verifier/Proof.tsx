@@ -50,7 +50,7 @@ const Rectangle = styled.div`
   width: 8px;
   height: 72px;
   background-color: #0035ad;
-  margin-right: 54px;
+  margin-right: 40px;
 `
 const VSA = styled.span`
   font-family: ${p => p.theme.fontFamily.SFCompactDisplay};
