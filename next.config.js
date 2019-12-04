@@ -16,14 +16,14 @@ const { GITHUB, PROJ_NAME } = publicRuntimeConfig;
 
 // fix: prevents error when .less files are required by node
 if (typeof require !== 'undefined') {
-  require.extensions['.less'] = file => {};
+  require.extensions['.less'] = file => { };
 }
 
 module.exports = withBundleAnalyzer(
   withTypescript(
     withCSS(
       withOptimizedImages({
-        exportPathMap: function() {
+        exportPathMap: function () {
           return {
             '/': { page: '/', query: { lng: '' } },
             '/product': { page: '/product', query: { lng: '' } },

@@ -9,8 +9,8 @@ export default createGlobalStyle`
     font-weight: 800;
     font-display: swap;
     src: url(${getRelativePath(
-      '/static/font/SF-UI-Display-Heavy.otf',
-    )}) format("opentype");
+  '/static/font/SF-UI-Display-Heavy.otf',
+)}) format("opentype");
   }
 
   /** Bold */
@@ -19,8 +19,8 @@ export default createGlobalStyle`
     font-weight: 700;
     font-display: swap;
     src: url(${getRelativePath(
-      '/static/font/SF-UI-Display-Bold.otf',
-    )}) format("opentype");
+  '/static/font/SF-UI-Display-Bold.otf',
+)}) format("opentype");
   }
 
   /** Medium */
@@ -29,8 +29,8 @@ export default createGlobalStyle`
     font-weight: 500;
     font-display: swap;
     src: url(${getRelativePath(
-      '/static/font/SF-UI-Text-Medium.otf',
-    )}) format("opentype");
+  '/static/font/SF-UI-Text-Medium.otf',
+)}) format("opentype");
   }
 
   /** Regular */
@@ -39,8 +39,8 @@ export default createGlobalStyle`
     font-weight: 400;
     font-display: swap;
     src: url(${getRelativePath(
-      '/static/font/SF-UI-Text-Regular.otf',
-    )}) format("opentype");
+  '/static/font/SF-UI-Text-Regular.otf',
+)}) format("opentype");
   }
 
   * {

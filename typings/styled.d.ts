@@ -28,6 +28,10 @@ export interface Theme {
     SFDisplay: string;
     SFText: string;
     NotoSansTC: string;
+    SFProText: string;
+    SFCompactText: string;
+    PingFangSC: string;
+    SFCompactDisplay: string
   };
 
   fontSize: {
@@ -42,5 +46,5 @@ export interface Theme {
 
 // and extend them!
 declare module 'styled-components' {
-  export interface DefaultTheme extends Theme {}
+  export interface DefaultTheme extends Theme { }
 }

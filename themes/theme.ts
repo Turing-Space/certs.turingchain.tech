@@ -28,6 +28,10 @@ const theme: Theme = {
     SFDisplay: "-apple-system, BlinkMacSystemFont, 'SF Display', sans-serif",
     SFText: "-apple-system, BlinkMacSystemFont, 'SF Text', sans-serif",
     NotoSansTC: "'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif",
+    SFProText: "-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif",
+    SFCompactText: "-apple-system, BlinkMacSystemFont, 'SF Compact Text', sans-serif",
+    PingFangSC: "-apple-system, BlinkMacSystemFont, 'Ping Fang SC', sans-serif",
+    SFCompactDisplay: "-apple-system, BlinkMacSystemFont, 'SF Compact Display', sans-serif"
   },
 
   fontSize: {
