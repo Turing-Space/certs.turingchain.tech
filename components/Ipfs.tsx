@@ -2,13 +2,12 @@ import { NextFC } from 'next';
 import React, { useState, useEffect } from "react";
 
 import styled from 'styled-components';
+import { getRelativePath } from '@/utils';
 import queryString from 'query-string';
 
 import Head from 'next/head';
 import Side from '@/components/verifier/Proof';
 import Certificate from '@/components/verifier/Certificate';
-
-import 'static/css/ipfs.css'
 
 function timeConverter(UNIX_timestamp: number) {
   var a = new Date(UNIX_timestamp * 1000);
@@ -64,6 +63,11 @@ const Ipfs: NextFC = () => {
     <Root>
       <Head>
         <title>TuringVerifier</title>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href={getRelativePath('/static/css/ipfs.css')}
+        />
       </Head>
       <Side date={date}
         issuerName={issuerName}

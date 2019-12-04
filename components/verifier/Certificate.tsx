@@ -56,7 +56,7 @@ const Certificate: FC<TProps> = props => {
                         <Title>TuringCerts</Title>
                     </a>
                     <a href={'https://ipfs.io/ipfs/' + props.ipfs} target="_blank" rel="noopener noreferrer">
-                        <img src={shareIcon} alt="" />
+                        <img src={getRelativePath(shareIcon)} alt="" />
                     </a>
                 </TitleInfo>
             </TitleBar>

@@ -1,7 +1,5 @@
 import React from 'react';
-
 import styled from 'styled-components';
-
 import Ipfs from '@/components/Ipfs';
 
 import { i18nNamespace } from '@/constants';
