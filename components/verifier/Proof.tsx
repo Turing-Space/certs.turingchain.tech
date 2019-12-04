@@ -3,8 +3,8 @@ import { FC } from 'react';
 import styled from 'styled-components';
 import { getRelativePath } from '@/utils';
 
-const certicheckDoneIcon = 'static/icon/icon-certicheck.svg';
-const hideIcon = 'static/icon/icon-hide.svg';
+const certicheckDoneIcon = '/static/icon/icon-certicheck.svg';
+const hideIcon = '/static/icon/icon-hide.svg';
 
 const Root = styled.div`
   width: 480px;
