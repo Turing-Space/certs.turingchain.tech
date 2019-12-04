@@ -5,10 +5,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
 
-  zoom: 0.95; 
-  -moz-transform: scale(0.95); 
-  -moz-transform-origin: 0 0;
+/* @media screen and (max-width: 1440px) and (min-width: 1080px) {
+  body {
+    zoom: 0.6; 
+    -moz-transform: scale(0.6); 
+    -moz-transform-origin: 0 0;
+  }
+} */
+
+@media screen and (max-width: 1080px) {
+  body {
+    zoom: 0.67; 
+    -moz-transform: scale(0.67); 
+    -moz-transform-origin: 0 0;
+  }
 }
 
 code {
