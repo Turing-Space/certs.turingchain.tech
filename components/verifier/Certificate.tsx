@@ -24,7 +24,7 @@ const TitleInfo = styled.div`
   align-items: center;
   margin-left: 60px;
   margin-right: 60px;
-  width: 360px; //
+  width: 100%; // 360px
   height: 100px;
   border-bottom: 1px solid #bdbdbd;
 `
@@ -55,7 +55,7 @@ const Certificate: FC<TProps> = props => {
     return (
         <Root>
             <TitleBar>
-                <TitleInfo style={{ width: window.innerWidth > 600 ? window.innerWidth + 60 : 360 }}>
+                <TitleInfo>
                     <Logo src={getRelativePath(logoIcon)} />
                     <a href={'http://certs.turingchain.tech'}>
                         <Title>TuringCerts</Title>
