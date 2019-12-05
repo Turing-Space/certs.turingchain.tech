@@ -4,9 +4,9 @@ import Ipfs from '@/components/Ipfs';
 
 import { i18nNamespace } from '@/constants';
 
-const Root = styled.div`
-  width: 1980px;
-  height: 1080px;
+let Root = styled.div`
+  width: 100vw;
+  height: 100vh;
   background: #fafafa;
 `
 
