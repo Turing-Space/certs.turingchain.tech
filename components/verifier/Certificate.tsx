@@ -27,6 +27,10 @@ const TitleInfo = styled.div`
   width: 100%; // 360px
   height: 100px;
   border-bottom: 1px solid #bdbdbd;
+
+  @media (max-width: 600px) {
+    width: 360px
+  }
 `
 const Logo = styled.img`
   padding-right: 16px;
@@ -81,7 +85,7 @@ const PDFF: FC<TProps> = props => {
                             url: 'https://ipfs.io/ipfs/' + props.ipfs
                         }}
                             hideNavbar
-                            scale={window.innerWidth > 600 ? window.innerWidth / 1200 : window.innerWidth / (1152 + 630)}
+                            scale={window.innerWidth > 600 ? window.innerWidth / 1700 : window.innerWidth / (1152 + 630)}
                         />
                     </a>
                 </PDF >
