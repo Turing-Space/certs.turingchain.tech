@@ -95,60 +95,60 @@ const InfoContent = styled.div`
   word-break:break-all;
 `
 type TProps = {
-    ipfs: string,
-    iota: string,
-    date: string,
-    holderEmail: string,
-    holderName: string,
-    type: string,
-    issuerName: string
+  ipfs: string,
+  iota: string,
+  date: string,
+  holderEmail: string,
+  holderName: string,
+  type: string,
+  issuerName: string
 };
 
 const Proof: FC<TProps> = props => {
-    return (
-        <Root>
-            <TitleBox><Title>CERTIFICATION</Title></TitleBox>
-            <Hide>
-                <span>收起</span>
-                <img src={getRelativePath(hideIcon)} alt="" />
-            </Hide>
-            <Status>
-                <Rectangle />
-                <img src={getRelativePath(certicheckDoneIcon)} alt="" />
-                <VSA>Verified Source Authenticity</VSA>
+  return (
+    <Root>
+      <TitleBox><Title>CERTIFICATION</Title></TitleBox>
+      <Hide>
+        {/* <span>收起</span>
+        <img src={getRelativePath(hideIcon)} alt="" /> */}
+      </Hide>
+      <Status>
+        <Rectangle />
+        <img src={getRelativePath(certicheckDoneIcon)} alt="" />
+        <VSA>Verified Source Authenticity</VSA>
 
-                <a href={'https://thetangle.org/transaction/' + props.iota}>
-                    <More>
-                        More
+        <a href={'https://thetangle.org/transaction/' + props.iota}>
+          <More>
+            More
           </More>
-                </a>
+        </a>
 
-            </Status>
-            <Info>
-                <InfoH1>ISSUER</InfoH1>
-                <InfoH2>Date</InfoH2>
-                <InfoContent>{props.date}</InfoContent>
-                <InfoH2>Name</InfoH2>
-                <InfoContent>{props.issuerName}</InfoContent>
-                <InfoH2>Type</InfoH2>
-                <InfoContent>{props.type}</InfoContent>
-                <InfoH1>HOLDER</InfoH1>
-                <InfoH2>Name</InfoH2>
-                <InfoContent>{props.holderName}</InfoContent>
-                <InfoH2>E-mail</InfoH2>
-                <InfoContent>{props.holderEmail}</InfoContent>
-                <InfoH1>Blockchain Footprint</InfoH1>
-                <InfoH2>IPFS</InfoH2>
-                <a href={'https://ipfs.io/ipfs/' + props.ipfs}>
-                    <InfoContent>{props.ipfs}</InfoContent>
-                </a>
-                <InfoH2>IOTA</InfoH2>
-                <a href={'https://thetangle.org/transaction/' + props.iota}>
-                    <InfoContent>{props.iota}</InfoContent>
-                </a>
-            </Info>
-        </Root>
-    );
+      </Status>
+      <Info>
+        <InfoH1>ISSUER</InfoH1>
+        <InfoH2>Date</InfoH2>
+        <InfoContent>{props.date}</InfoContent>
+        <InfoH2>Name</InfoH2>
+        <InfoContent>{props.issuerName}</InfoContent>
+        <InfoH2>Type</InfoH2>
+        <InfoContent>{props.type}</InfoContent>
+        <InfoH1>HOLDER</InfoH1>
+        <InfoH2>Name</InfoH2>
+        <InfoContent>{props.holderName}</InfoContent>
+        <InfoH2>E-mail</InfoH2>
+        <InfoContent>{props.holderEmail}</InfoContent>
+        <InfoH1>Blockchain Footprint</InfoH1>
+        <InfoH2>IPFS</InfoH2>
+        <a href={'https://ipfs.io/ipfs/' + props.ipfs}>
+          <InfoContent>{props.ipfs}</InfoContent>
+        </a>
+        <InfoH2>IOTA</InfoH2>
+        <a href={'https://thetangle.org/transaction/' + props.iota}>
+          <InfoContent>{props.iota}</InfoContent>
+        </a>
+      </Info>
+    </Root>
+  );
 }
 
 export default Proof;

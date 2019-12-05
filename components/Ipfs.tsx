@@ -10,7 +10,7 @@ import Side from '@/components/verifier/Proof';
 import Certificate from '@/components/verifier/Certificate';
 
 function timeConverter(UNIX_timestamp: number) {
-  var a = new Date(UNIX_timestamp * 1000);
+  var a = new Date(UNIX_timestamp * 600);
   var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   var year = a.getFullYear();
   var month = months[a.getMonth()];
@@ -23,8 +23,8 @@ function timeConverter(UNIX_timestamp: number) {
 }
 
 let Root = styled.div`
-  width: 1920px;
-  height: 1170px;
+  width: 100%;
+  height: 100%;
   background: $fafafa;
 `
 
@@ -41,7 +41,10 @@ const Ipfs: NextFC = () => {
   const [height, setHeight] = useState(1170);
 
   useEffect(() => {
-    setZoomLevel(Math.min(window.innerWidth / 1920, window.innerHeight / 1170))
+    if (window.innerWidth > 600)
+      setZoomLevel(Math.min(window.innerWidth / 1920, window.innerHeight / 1170))
+    else
+      setZoomLevel(window.innerWidth / 480)
 
     async function fetchCertsAPI() {
       const value = queryString.parse(window.location.search);
@@ -66,7 +69,10 @@ const Ipfs: NextFC = () => {
     function handleResize() {
       setWidth(window.innerWidth)
       setHeight(window.innerHeight)
-      setZoomLevel(Math.min(window.innerWidth / 1920, window.innerHeight / 1170))
+      if (window.innerWidth > 600)
+        setZoomLevel(Math.min(window.innerWidth / 1920, window.innerHeight / 1170))
+      else
+        setZoomLevel(window.innerWidth / 480)
     }
 
     window.addEventListener('resize', handleResize)
@@ -74,14 +80,14 @@ const Ipfs: NextFC = () => {
   }, []);
 
   let RootStyle
-  if (width > 1000) {
+  if (width > 600) {
     RootStyle = {
       zoom: zoomLevel
     }
   }
   else {
     RootStyle = {
-      zoom: height / 1170
+      zoom: width / 480
     }
   }
   return (

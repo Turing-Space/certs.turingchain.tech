@@ -5,9 +5,11 @@ import Ipfs from '@/components/Ipfs';
 import { i18nNamespace } from '@/constants';
 
 let Root = styled.div`
-  width: 100vw;
-  height: 100vh;
   background: #fafafa;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 `
 
 VerifyPage.getInitialProps = async () => ({

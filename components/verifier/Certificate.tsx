@@ -14,9 +14,9 @@ const Root = styled.div`
   vertical-align: top;
 `
 const TitleBar = styled.div`
-  display:flex;
-  align-items:center;
-  width: 1440px;
+  display: flex;
+  align-items: center;
+  width: 100%;
   height: 100px;
 `
 const TitleInfo = styled.div`
@@ -37,10 +37,15 @@ const Title = styled.div`
   font-weight: 600;
   color: #a80100;
   color: #a80100;
-  padding-right: 1047px;
+  align-items: right;
+  display: flex; 
+  padding-right: 200px;
 `
-const PDF = styled.div`
-  padding-top: 60px;
+let PDF = styled.div`
+  padding-top: 50px;  
+  display: flex; 
+  margin-left: 60px;
+  padding-bottom: 60px;
 `
 type TProps = {
     ipfs: string
@@ -55,9 +60,9 @@ const Certificate: FC<TProps> = props => {
                     <a href={'http://certs.turingchain.tech'}>
                         <Title>TuringCerts</Title>
                     </a>
-                    <a href={'https://ipfs.io/ipfs/' + props.ipfs} target="_blank" rel="noopener noreferrer">
-                        <img src={getRelativePath(shareIcon)} alt="" />
-                    </a>
+                    {/* <a href={'https://ipfs.io/ipfs/' + props.ipfs} target="_blank" rel="noopener noreferrer">
+                        <img src={getRelativePath(shareIcon)} alt="" style={{ paddingLeft: '1000px' }} />
+                    </a> */}
                 </TitleInfo>
             </TitleBar>
             {PDFF(props)}
@@ -66,16 +71,21 @@ const Certificate: FC<TProps> = props => {
 }
 
 const PDFF: FC<TProps> = props => {
+
     if (props.ipfs !== "-") {
         return (
-            <PDF>
-                <PDFViewer document={{
-                    url: 'https://ipfs.io/ipfs/' + props.ipfs
-                }}
-                    hideNavbar
-                    scale={0.9}
-                />
-            </PDF>
+            <div>
+                <PDF>
+                    <a href={'https://ipfs.io/ipfs/' + props.ipfs}>
+                        <PDFViewer document={{
+                            url: 'https://ipfs.io/ipfs/' + props.ipfs
+                        }}
+                            hideNavbar
+                            scale={window.innerWidth > 600 ? window.innerWidth / 1500 : window.innerWidth / (1152 + 630)}
+                        />
+                    </a>
+                </PDF >
+            </div >
         );
     } else {
         return (
