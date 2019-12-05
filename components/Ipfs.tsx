@@ -24,7 +24,7 @@ function timeConverter(UNIX_timestamp: number) {
 
 let Root = styled.div`
   width: 1920px;
-  height: 1080px;
+  height: 1170px;
   background: $fafafa;
 `
 
@@ -37,6 +37,8 @@ const Ipfs: NextFC = () => {
   const [IPFS, setIPFS] = useState("-");
   const [IOTA, setIOTA] = useState("-");
   const [zoomLevel, setZoomLevel] = useState(0.7);
+  const [width, setWidth] = useState(1920);
+  // const [height, setHeight] = useState(1170);
 
   useEffect(() => {
     setZoomLevel(Math.min(window.innerWidth / 1920, window.innerHeight / 1170))
@@ -62,6 +64,7 @@ const Ipfs: NextFC = () => {
     fetchCertsAPI();
 
     function handleResize() {
+      setWidth(window.innerWidth)
       setZoomLevel(Math.min(window.innerWidth / 1920, window.innerHeight / 1170))
     }
 
@@ -69,8 +72,19 @@ const Ipfs: NextFC = () => {
 
   }, []);
 
+  let RootStyle
+  if (width > 1000) {
+    RootStyle = {
+      zoom: zoomLevel
+    }
+  }
+  else {
+    RootStyle = {
+      zoom: 0.67
+    }
+  }
   return (
-    <Root style={{ zoom: zoomLevel }}>
+    <Root style={RootStyle}>
       <Head>
         <title>TuringVerifier</title>
         <link
@@ -88,7 +102,8 @@ const Ipfs: NextFC = () => {
         iota={IOTA} />
       <Certificate ipfs={IPFS} />
     </Root >
-  );
+  )
+
 }
 
 export default Ipfs;
