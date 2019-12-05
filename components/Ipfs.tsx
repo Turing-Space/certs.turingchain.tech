@@ -38,7 +38,7 @@ const Ipfs: NextFC = () => {
   const [IOTA, setIOTA] = useState("-");
   const [zoomLevel, setZoomLevel] = useState(0.7);
   const [width, setWidth] = useState(1920);
-  // const [height, setHeight] = useState(1170);
+  const [height, setHeight] = useState(1170);
 
   useEffect(() => {
     setZoomLevel(Math.min(window.innerWidth / 1920, window.innerHeight / 1170))
@@ -65,6 +65,7 @@ const Ipfs: NextFC = () => {
 
     function handleResize() {
       setWidth(window.innerWidth)
+      setHeight(window.innerHeight)
       setZoomLevel(Math.min(window.innerWidth / 1920, window.innerHeight / 1170))
     }
 
@@ -80,7 +81,7 @@ const Ipfs: NextFC = () => {
   }
   else {
     RootStyle = {
-      zoom: 0.67
+      zoom: height / 1170
     }
   }
   return (

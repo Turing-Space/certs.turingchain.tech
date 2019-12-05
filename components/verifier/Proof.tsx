@@ -66,6 +66,7 @@ const More = styled.span`
   font-weight: 500;
   color: #bdbdbd;
   border-bottom: 1px solid #bdbdbd;
+  margin-right: 10px
 `
 const Info = styled.div`
   width: 360px;
