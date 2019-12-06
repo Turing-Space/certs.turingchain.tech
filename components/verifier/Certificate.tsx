@@ -24,11 +24,11 @@ const TitleInfo = styled.div`
   align-items: center;
   margin-left: 60px;
   margin-right: 60px;
-  width: 100%; // 360px
+  width: 100%; 
   height: 100px;
   border-bottom: 1px solid #bdbdbd;
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     width: 360px
   }
 `
@@ -60,7 +60,9 @@ const Certificate: FC<TProps> = props => {
         <Root>
             <TitleBar>
                 <TitleInfo>
-                    <Logo src={getRelativePath(logoIcon)} />
+                    <a href={'http://certs.turingchain.tech'}>
+                        <Logo src={getRelativePath(logoIcon)} />
+                    </a>
                     <a href={'http://certs.turingchain.tech'}>
                         <Title>TuringCerts</Title>
                     </a>
@@ -85,7 +87,7 @@ const PDFF: FC<TProps> = props => {
                             url: 'https://ipfs.io/ipfs/' + props.ipfs
                         }}
                             hideNavbar
-                            scale={window.innerWidth > 600 ? window.innerWidth / 1500 : window.innerWidth / (1152 + 570)}
+                            scale={window.innerWidth > 800 ? (window.innerWidth - 800) / 1100 : window.innerWidth / (1600 + window.innerWidth)}
                         />
                     </a>
                 </PDF >

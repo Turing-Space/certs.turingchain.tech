@@ -70,7 +70,7 @@ const More = styled.span`
 `
 const Info = styled.div`
   width: 360px;
-  margin: 0px 60px;
+  margin: 20px 60px;
 `
 const InfoH1 = styled.div`
   font-family: ${p => p.theme.fontFamily.SFProText};
@@ -101,7 +101,8 @@ type TProps = {
   holderEmail: string,
   holderName: string,
   type: string,
-  issuerName: string
+  issuerName: string,
+  issuerWebsite: string
 };
 
 const Proof: FC<TProps> = props => {
@@ -129,7 +130,9 @@ const Proof: FC<TProps> = props => {
         <InfoH2>Date</InfoH2>
         <InfoContent>{props.date}</InfoContent>
         <InfoH2>Name</InfoH2>
-        <InfoContent>{props.issuerName}</InfoContent>
+        <a href={props.issuerWebsite}>
+          <InfoContent>{props.issuerName}</InfoContent>
+        </a>
         <InfoH2>Type</InfoH2>
         <InfoContent>{props.type}</InfoContent>
         <InfoH1>HOLDER</InfoH1>

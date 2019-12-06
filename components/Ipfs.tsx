@@ -36,12 +36,13 @@ const Ipfs: NextFC = () => {
   const [holderEmail, setEmail] = useState("-");
   const [IPFS, setIPFS] = useState("-");
   const [IOTA, setIOTA] = useState("-");
+  const [issuerWebsite, setIssuerWebsite] = useState("-");
   const [zoomLevel, setZoomLevel] = useState(0.7);
   const [width, setWidth] = useState(1920);
   const [height, setHeight] = useState(1170);
 
   useEffect(() => {
-    if (window.innerWidth > 600)
+    if (window.innerWidth > 800)
       setZoomLevel(Math.min(window.innerWidth / 1920, window.innerHeight / 1170))
     else
       setZoomLevel(window.innerWidth / 480)
@@ -61,6 +62,7 @@ const Ipfs: NextFC = () => {
           setIOTA(returnData.content.iOTAhash);
           setHolderName(returnData.content.holderName);
           setEmail(returnData.content.emailHolder);
+          setIssuerWebsite(returnData.content.issuerWebsite);
         })
         .catch(console.log)
     };
@@ -69,7 +71,7 @@ const Ipfs: NextFC = () => {
     function handleResize() {
       setWidth(window.innerWidth)
       setHeight(window.innerHeight)
-      if (window.innerWidth > 600)
+      if (window.innerWidth > 800)
         setZoomLevel(Math.min(window.innerWidth / 1920, window.innerHeight / 1170))
       else
         setZoomLevel(window.innerWidth / 480)
@@ -80,7 +82,7 @@ const Ipfs: NextFC = () => {
   }, []);
 
   let RootStyle
-  if (width > 600) {
+  if (width > 800) {
     RootStyle = {
       zoom: zoomLevel
     }
@@ -106,7 +108,8 @@ const Ipfs: NextFC = () => {
         holderName={holderName}
         holderEmail={holderEmail}
         ipfs={IPFS}
-        iota={IOTA} />
+        iota={IOTA}
+        issuerWebsite={issuerWebsite} />
       <Certificate ipfs={IPFS} />
     </Root >
   )
