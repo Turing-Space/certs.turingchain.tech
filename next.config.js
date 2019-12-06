@@ -43,6 +43,7 @@ module.exports = withBundleAnalyzer(
             '/zh-TW/product': { page: '/product', query: { lng: 'zh-TW' } },
             '/en': { page: '/', query: { lng: 'en' } },
             '/en/product': { page: '/product', query: { lng: 'en' } },
+            '/en/ipfs': { page: '/ipfs', query: { hash: '' } },
           };
         },
         assetPrefix: GITHUB ? `/${PROJ_NAME}/` : '',
