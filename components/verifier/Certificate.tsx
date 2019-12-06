@@ -87,7 +87,7 @@ const PDFF: FC<TProps> = props => {
                             url: 'https://ipfs.io/ipfs/' + props.ipfs
                         }}
                             hideNavbar
-                            scale={window.innerWidth > 800 ? (window.innerWidth - 500) / 1100 : window.innerWidth / (1400 + window.innerWidth)}
+                            scale={window.innerWidth > 800 ? window.innerWidth / 1500 : window.innerWidth / (1152 + 570)}
                         />
                     </a>
                 </PDF >
