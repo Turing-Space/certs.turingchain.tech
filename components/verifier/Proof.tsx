@@ -142,7 +142,7 @@ const Proof: FC<TProps> = props => {
         <InfoContent>{props.holderEmail}</InfoContent>
         <InfoH1>Blockchain Footprint</InfoH1>
         <InfoH2>IPFS</InfoH2>
-        <a href={'https://ipfs.io/ipfs/' + props.ipfs}>
+        <a href={'104.198.69.140:8080/ipfs/' + props.ipfs}>
           <InfoContent>{props.ipfs}</InfoContent>
         </a>
         <InfoH2>IOTA</InfoH2>
