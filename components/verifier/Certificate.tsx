@@ -84,7 +84,7 @@ const PDFF: FC<TProps> = props => {
                 <PDF>
                     <a href={'http://ipfs.turingchain.tech/ipfs/' + props.ipfs}>
                         <PDFViewer document={{
-                            url: 'http://35.226.63.76/ipfs/' + props.ipfs
+                            url: 'http://ipfs.turingchain.tech/ipfs/' + props.ipfs
                         }}
                             hideNavbar
                             scale={window.innerWidth > 800 ? window.innerWidth / 1500 : window.innerWidth / (1152 + 570)}
