@@ -66,7 +66,7 @@ const Certificate: FC<TProps> = props => {
                     <a href={'http://certs.turingchain.tech'}>
                         <Title>TuringCerts</Title>
                     </a>
-                    {/* <a href={'https://ipfs.io/ipfs/' + props.ipfs} target="_blank" rel="noopener noreferrer">
+                    {/* <a href={'https://ipfs.certs.turingchain.tech/ipfs/' + props.ipfs} target="_blank" rel="noopener noreferrer">
                         <img src={getRelativePath(shareIcon)} alt="" style={{ paddingLeft: '1000px' }} />
                     </a> */}
                 </TitleInfo>
@@ -82,9 +82,9 @@ const PDFF: FC<TProps> = props => {
         return (
             <div>
                 <PDF>
-                    <a href={'https://ipfs.io/ipfs/' + props.ipfs}>
+                    <a href={'https://ipfs.certs.turingchain.tech/ipfs/' + props.ipfs}>
                         <PDFViewer document={{
-                            url: 'https://ipfs.io/ipfs/' + props.ipfs
+                            url: 'https://ipfs.certs.turingchain.tech/ipfs/' + props.ipfs
                         }}
                             hideNavbar
                             scale={window.innerWidth > 800 ? window.innerWidth / 1500 : window.innerWidth / (1152 + 570)}
