@@ -16,7 +16,7 @@ const Index: NextFC = () => {
       <Home id="section-home" />
       <Service id="section-service" />
       <Technology id="section-technology" />
-      <DemoVideo id="section-product" />
+      {/* <DemoVideo id="section-product" /> */}
       <Demo />
       <Collaborations id="section-collaborations" />
       <Examples id="section-examples" />
