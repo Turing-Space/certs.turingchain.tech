@@ -118,7 +118,7 @@ const Footer: FC = () => {
       <InfoWrapper>
         <Title>{t('footer.title')}</Title>
         <IconWrapper>
-          <a href="mailto:0x1cert@gmail.com?subject=[合作邀約]">
+          <a href="mailto:berkeley@turingchain.tech?subject=[Collaboration]">
             <img
               src={getRelativePath('/static/icon/icon-mail.png')}
               srcSet={`${getRelativePath(
@@ -127,10 +127,10 @@ const Footer: FC = () => {
             />
           </a>
           <a
-            href="https://www.facebook.com/turingcerts/"
+            href="https://www.facebook.com/tci.works/"
             target="_blank"
             onClick={() =>
-              trackOutboundLink('https://www.facebook.com/turingcerts/')
+              trackOutboundLink('https://www.facebook.com/tci.works/')
             }
           >
             <img
