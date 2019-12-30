@@ -1,8 +1,6 @@
 import { useState, useCallback, FC, KeyboardEvent, useContext } from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
-import qs from 'qs';
 
 import Section from '@/components/Section';
 import { media } from '@/utils/theme';
@@ -204,11 +202,11 @@ const Login: FC = () => {
         <StyledButton disabled={loading} onClick={onRegister}>
           {loading ? <Loading /> : '註冊'}
         </StyledButton>
-        <Link href='/'>
+        <a href='https://certs.turingchain.tech'>
           <StyledLink>
             &lt;&lt; 回到首頁
           </StyledLink>
-        </Link>
+        </a>
       </MobileWrapper>
       <InfoWrapper>
         <H1>
