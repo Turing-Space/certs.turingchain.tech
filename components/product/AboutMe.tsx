@@ -5,6 +5,19 @@ import { CertsContext } from '@/contexts/certs';
 import AboutMeWrapper from '@/components/AboutMeWrapper';
 import { media } from '@/utils/theme';
 
+const AboutMeWrapperExtend = styled(AboutMeWrapper)`
+  justify-content: center;
+  align-items: center;
+
+  ${media('desktop')} {
+    display: flex;
+  }
+
+  ${media('phone')} {
+    display: inline;
+  }
+`;
+
 const IconWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -13,7 +26,6 @@ const IconWrapper = styled.div`
   width: 8.2em;
   height: 8.2em;
   border-radius: 50%;
-  border: solid 6px ${p => p.theme.colors.primary};
   margin-left: 2em;
   > p {
     letter-spacing: 0.67px;
@@ -22,15 +34,36 @@ const IconWrapper = styled.div`
   ${media('largeDesktop')} {
     width: 8.5em;
     height: 8.5em;
+    border: solid 6px ${p => p.theme.colors.primary};
+  }
+
+  ${media('desktop')} {
+    width: 8.2em;
+    height: 8.2em;
+    border: solid 6px ${p => p.theme.colors.primary};
+  }
+
+  ${media('phone')} {
+    width: 7em;
+    height: 7em;
+    font-size: 0.61em;
   }
 `;
 
 const AnimatedNumber = styled(animated.p)`
   color: ${p => p.theme.colors.primary};
   margin-top: 3px;
-  font-size: 3em;
   font-weight: bold;
   font-family: ${p => p.theme.fontFamily.SFText};
+  
+  ${media('phone')} {
+    font-size: 2em;
+    float: right
+  }
+
+  ${media('desktop')} {
+    font-size: 3em;
+  }
 `;
 
 const AboutMe = () => {
@@ -53,12 +86,12 @@ const AboutMe = () => {
 
   const icons = [
     {
-      name: '認證數量',
+      name: '認證量',
       count: certs.length,
       props: certsProps,
     },
     {
-      name: '已完成認證',
+      name: '已認證',
       count: certificatedCount,
       props: certificatedProps,
     },
@@ -69,24 +102,24 @@ const AboutMe = () => {
     },
   ];
   return (
-    <AboutMeWrapper title={'關於我'}>
-      <div
+    <AboutMeWrapperExtend title={'關於我'}>
+      {/* <div
         style={{
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
         }}
-      >
-        {icons.map(icon => (
-          <IconWrapper key={icon.name}>
-            <p>{icon.name}</p>
-            <AnimatedNumber>
-              {icon.props.number.interpolate(x => x.toFixed(0))}
-            </AnimatedNumber>
-          </IconWrapper>
-        ))}
-      </div>
-    </AboutMeWrapper>
+      > */}
+      {icons.map(icon => (
+        <IconWrapper key={icon.name}>
+          <p>{icon.name}</p>
+          <AnimatedNumber>
+            {icon.props.number.interpolate(x => x.toFixed(0))}
+          </AnimatedNumber>
+        </IconWrapper>
+      ))}
+      {/* </div> */}
+    </AboutMeWrapperExtend>
   );
 };
 

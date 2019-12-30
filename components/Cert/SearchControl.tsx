@@ -17,6 +17,7 @@ const Input = styled.input<{ show: boolean }>`
   border-bottom: solid 2px #e0e0e0;
   background: transparent;
   margin-left: 0.5em;
+  margin-top: 0.9em;
   color: ${p => p.theme.colors.darkGrey};
   transition: max-width ease-in 0.3s;
   letter-spacing: 0.67px;

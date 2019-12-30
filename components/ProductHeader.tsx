@@ -5,7 +5,7 @@ import { media } from '@/utils/theme';
 import { UserContext } from '@/contexts/user';
 
 const Wrapper = styled.header`
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -36,12 +36,20 @@ const SectionWrapper = styled.div`
 `;
 
 const Avatar = styled.div<{ src: string }>`
-  width: 3.2rem;
-  height: 3.2rem;
   background: url(${p => p.src}) no-repeat center/cover;
   border: solid 1px #e5e5e5;
   border-radius: 50%;
   margin-left: 1em;
+
+  ${media('phone')} {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  ${media('desktop')} {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
 `;
 
 const ProductHeader: SFC<{ onClick: () => void }> = ({ onClick }) => {

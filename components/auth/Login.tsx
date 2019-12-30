@@ -1,6 +1,5 @@
 import { useState, useCallback, FC, KeyboardEvent, useContext } from 'react';
 import styled from 'styled-components';
-import { useRouter } from 'next/router';
 
 import Section from '@/components/Section';
 import { media } from '@/utils/theme';
@@ -110,7 +109,6 @@ const StyledLink = styled.span`
 `
 
 const Login: FC = () => {
-  const { query } = useRouter();
   const { updateUser } = useContext(UserContext);
   const [account, setAccount] = useState<string>('');
   const [password, setPassword] = useState<string>('');

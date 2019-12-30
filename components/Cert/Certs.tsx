@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { TiPin } from 'react-icons/ti';
 
 import { TCert } from '@/contexts/certs';
+import { media } from '@/utils/theme';
 import theme from '@/themes/theme';
 
 import VerifiedProgressChart from './VerifiedProgressChart';
@@ -19,21 +20,12 @@ const Wrapper = styled.div`
 const CertWrapper = styled.div`
   cursor: pointer;
   position: relative;
-  width: 31%;
   margin: 0 1.75% 3%;
   background: ${p => p.theme.colors.white};
   padding: 2em 1.5em;
   font-weight: 400;
   border-radius: 10px;
   box-shadow: 0px 0px 15px 0px rgb(0, 0, 0, 0.1);
-
-  &:nth-child(3n) {
-    margin-right: 0;
-  }
-
-  &:nth-child(3n + 1) {
-    margin-left: 0;
-  }
 
   > .issuer {
     color: ${p => p.theme.colors.primary};
@@ -54,6 +46,25 @@ const CertWrapper = styled.div`
     font-size: ${p => p.theme.fontSize.smaller};
     color: #bdbdbd;
   }
+
+  ${media('phone')} {
+    width: 100%;
+    align-itmes: center;
+    margin-left: 0;
+  }
+
+  ${media('desktop')} {
+    width: 31%;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(3n + 1) {
+      margin-left: 0;
+    }
+  }
+
 `;
 
 const CertCover = styled.div<{ src: string }>`
