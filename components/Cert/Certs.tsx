@@ -108,7 +108,7 @@ const Certs: FC<TProps> = ({ certs }) => {
             key={cert.ipfs}
             onClick={() => !cert.issuing && setOpenIdx(idx)}
           >
-            <CertCover src={cert.coverUri} />
+            <CertCover src={'https://ipfs.certs.turingchain.tech/ipfs/' + cert.ipfs} />
             <p className="issuer">{cert.issuer}</p>
             <p className="name">{cert.name}</p>
             <p className="create-data">June 2019</p>

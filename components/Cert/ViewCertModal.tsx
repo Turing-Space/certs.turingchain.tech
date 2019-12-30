@@ -39,12 +39,18 @@ const ModalWrapper = styled.div`
     margin-bottom: 0.75em;
   }
 
+  .smartLink {
+    color: ${p => p.theme.colors.primary};
+    right: 0;
+    top: 3 em;
+    position: absolute;
+  }
+
   > .name {
     width: 100%;
     font-size: ${p => p.theme.fontSize.bigger};
     font-weight: 500;
     letter-spacing: 0.6px;
-    margin-bottom: 1em;
     height: 2.5em;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -208,9 +214,12 @@ const ViewCertModal: FC<TProps> = ({ cert, isOpen, onClose }) => {
       }}
     >
       <ModalWrapper>
-        <CertCover src={cert.coverUri} />
+        {/* <a href={'https://certs.turingchain.tech/ipfs/?hash=' + cert.ipfs}> */}
+        <CertCover src={'https://ipfs.certs.turingchain.tech/ipfs/' + cert.ipfs} />
+        {/* </a> */}
         <p className="issuer">{cert.issuer}</p>
         <p className="name">{cert.name}</p>
+        <p className="smartLink"><a href={'https://certs.turingchain.tech/ipfs/?hash=' + cert.ipfs}>SmartLink</a></p>
         <p className="create-data">June 2019</p>
         <Divider />
         <ModalProgressTitleWrapper>

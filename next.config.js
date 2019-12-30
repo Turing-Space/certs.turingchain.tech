@@ -26,7 +26,7 @@ module.exports = withBundleAnalyzer(
         exportPathMap: function () {
           return {
             '/': { page: '/', query: { lng: '' } },
-            '/product': { page: '/product', query: { lng: '' } },
+            '/product': { page: '/product', query: { lng: '', id: '' } },
             '/ipfs': { page: '/ipfs', query: { hash: '' } },
             '/auth/login': { page: '/auth/login', query: { mode: '' } },
             '/issuer': { page: '/issuer', query: { lng: '' } },
@@ -42,7 +42,7 @@ module.exports = withBundleAnalyzer(
             '/zh-TW': { page: '/', query: { lng: 'zh-TW' } },
             '/zh-TW/product': { page: '/product', query: { lng: 'zh-TW' } },
             '/en': { page: '/', query: { lng: 'en' } },
-            '/en/product': { page: '/product', query: { lng: 'en' } },
+            '/en/product': { page: '/product', query: { lng: 'en', id: '' } },
             '/en/ipfs': { page: '/ipfs', query: { hash: '' } },
           };
         },
