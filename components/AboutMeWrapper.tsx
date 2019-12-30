@@ -1,4 +1,6 @@
 import { useContext, FC } from 'react';
+import { Router } from '@/i18n';
+import Button from '@/components/Button';
 import styled from 'styled-components';
 import { UserContext } from '@/contexts/user';
 import { media } from '@/utils/theme';
@@ -6,6 +8,17 @@ import Title from './Cert/Title';
 
 const Wrapper = styled.div`
   margin-top: 10%;
+`;
+
+const TitleWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  ${Button} {
+    width: 6em;
+    padding: 0.7em 1em;
+  }
 `;
 
 const InfoWrapper = styled.div`
@@ -61,7 +74,17 @@ const AboutMeWrapper: FC<TProps> = ({ children, title }) => {
   const { user } = useContext(UserContext);
   return (
     <Wrapper>
-      <Title>{title}</Title>
+      <TitleWrapper>
+        <Title>{title}</Title>
+        <Button
+          mode="white"
+          onClick={() =>
+            Router.push('/auth/login/?mode=user')
+          }
+        >
+          登出
+    </Button>
+      </TitleWrapper>
       <InfoWrapper>
         <UserWrapper>
           <Avatar src={user.avatarUri} />
@@ -72,6 +95,7 @@ const AboutMeWrapper: FC<TProps> = ({ children, title }) => {
         </UserWrapper>
         {children}
       </InfoWrapper>
+
     </Wrapper>
   );
 };

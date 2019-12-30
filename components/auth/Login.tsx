@@ -134,16 +134,17 @@ const Login: FC = () => {
             password,
           },
         });
-        if (!user || user.length === 0) {
+        if (!user) {
           notify.error({ msg: err || '此帳號並不存在' });
-        } else if (mode === 'issuer' && !user[0].isIssuer) {
+        } else if (mode === 'issuer' && !user.isIssuer) {
           notify.error({ msg: '此帳號並不是發證機關帳號，請確認使用帳號' });
         } else {
+          console.log(user)
           updateUser({
-            ...preparedUser(user[0]),
+            ...preparedUser(user),
             loginMode: mode,
           });
-          Router.push(user[0].isIssuer ? '/issuer' : '/product');
+          Router.push(user.isIssuer ? '/issuer' : '/product');
         }
         setLoading(false);
       } else {

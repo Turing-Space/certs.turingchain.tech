@@ -6,7 +6,7 @@ import Demo from '@/components/home/Demo';
 import Technology from '@/components/home/Technology';
 import Collaborations from '@/components/home/Collaborations';
 import Examples from '@/components/home/Examples';
-import DemoVideo from '@/components/home/DemoVideo';
+// import DemoVideo from '@/components/home/DemoVideo';
 
 import { SITE_TITLE, i18nNamespace } from '@/constants';
 

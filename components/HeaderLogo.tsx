@@ -46,7 +46,11 @@ const HeaderLogo: FC<{ mode?: 'primary' | 'dark'; onClick: () => void }> = ({
   return (
     <LogoWrapper onClick={onClick}>
       <Logo src={modeSrcMap[mode] as any} />
-      <p className="en">TuringCerts</p>
+      <p className="en">
+        {/* <a href={'http://certs.turingchain.tech'}> */}
+        TuringCerts
+      {/* </a> */}
+      </p>
     </LogoWrapper>
   );
 };

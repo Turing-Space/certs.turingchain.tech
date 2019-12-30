@@ -89,8 +89,8 @@ type TSignInParams = {
 };
 
 export const signIn = async (body: TSignInParams) => {
-  const res = await call(axios.post('/authorization/singin', body));
-  return formatAPIRes<TAPIUser[]>(res);
+  const res = await call(axios.post('/authorization/signin', body));
+  return formatAPIRes<TAPIUser>(res);
 };
 
 export const uploadCertTemplate = async (body: FormData) => {
