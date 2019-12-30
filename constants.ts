@@ -26,6 +26,7 @@ export enum CertTemplate {
 export const GA_ID = process.env.GA_ID;
 
 export const API_ENDPOINT = 'https://x1certificate-aqkcbxdduq-uc.a.run.app/v1';
+// export const API_ENDPOINT = 'http://localhost:4000/v1';
 
 export const langsMap: { [key: string]: boolean } = {
   'zh-TW': true,

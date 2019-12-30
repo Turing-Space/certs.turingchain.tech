@@ -69,7 +69,7 @@ export type TAPIUser = {
   uid: string;
   email: string;
   did: string;
-  isIssuer: boolean;
+  isIssuer: string;
 };
 
 export const getUsers = async (d?: TGetUsersParams) => {

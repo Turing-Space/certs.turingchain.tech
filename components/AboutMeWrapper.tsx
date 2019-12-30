@@ -79,7 +79,7 @@ const AboutMeWrapper: FC<TProps> = ({ children, title }) => {
         <Button
           mode="white"
           onClick={() =>
-            Router.push('/auth/login/?mode=user')
+            Router.push('/auth/login')
           }
         >
           登出

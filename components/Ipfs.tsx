@@ -50,11 +50,10 @@ const Ipfs: NextFC = () => {
     async function fetchCertsAPI() {
       const value = queryString.parse(window.location.search);
       const hash = value.hash;
-      console.log(hash);
+      (hash);
       await fetch(`https://x1certificate-aqkcbxdduq-uc.a.run.app/v1/view/certs?ipfs=${hash}`)
         .then(res => res.json())
         .then((returnData) => {
-          console.log(returnData);
           setDate(timeConverter(returnData.content.timestamp));
           setIssuerName(returnData.content.issuerName);
           setType(returnData.content.type);

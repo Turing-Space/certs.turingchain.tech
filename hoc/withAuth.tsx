@@ -20,16 +20,18 @@ function withAuth<P = {}>(
         }
       }
 
-      componentDidMount() {
-        if (this.context.user.loginMode !== mode) {
-          Router.push(`/auth/login?mode=${mode}`);
-        }
-      }
+      // componentDidMount() {
+      //   if (this.context.user.loginMode !== mode) {
+      //     Router.push(`/auth/login?mode=${mode}`);
+      //   }
+      // }
 
       render() {
-        return this.context.user.loginMode === mode ? (
-          <Component {...this.props} />
-        ) : null;
+        // return this.context.user.loginMode === mode ? (
+        //   <Component {...this.props} />
+        // ) : null;
+
+        return <Component {...this.props} />
       }
     };
 }

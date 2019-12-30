@@ -20,7 +20,6 @@ const ProductPage: NextFC = () => {
       ...u,
       id: 'sSZp4hqA71PlAS6HTAFp8oWMhos1',
       name: 'HenryGod',
-      loginMode: 'user',
     }));
     updateCerts([
       {

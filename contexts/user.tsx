@@ -5,7 +5,6 @@ export type TUser = {
   name: string;
   email: string;
   avatarUri: string;
-  loginMode: 'user' | 'issuer' | '';
 };
 
 type TUserContext = {
@@ -14,7 +13,6 @@ type TUserContext = {
 };
 
 const defaultUser: TUser = {
-  loginMode: '',
   id: '',
   name: '',
   email: '',
