@@ -102,7 +102,9 @@ type TProps = {
   holderName: string,
   type: string,
   issuerName: string,
-  issuerWebsite: string
+  issuerWebsite: string,
+  holderId: string,
+  issuerId: string
 };
 
 const Proof: FC<TProps> = props => {
@@ -137,7 +139,9 @@ const Proof: FC<TProps> = props => {
         <InfoContent>{props.type}</InfoContent>
         <InfoH1>HOLDER</InfoH1>
         <InfoH2>Name</InfoH2>
-        <InfoContent>{props.holderName}</InfoContent>
+        <a href={'https://certs.turingchain.tech/product?id=' + props.holderId}>
+          <InfoContent>{props.holderName}</InfoContent>
+        </a>
         {/* <InfoH2>E-mail</InfoH2>
         <InfoContent>{props.holderEmail}</InfoContent> */}
         <InfoH1>Blockchain Footprint</InfoH1>

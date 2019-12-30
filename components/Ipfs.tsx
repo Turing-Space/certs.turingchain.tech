@@ -40,6 +40,8 @@ const Ipfs: NextFC = () => {
   const [zoomLevel, setZoomLevel] = useState(0.7);
   const [width, setWidth] = useState(1920);
   const [height, setHeight] = useState(1170);
+  const [holderId, setHolderId] = useState("-");
+  const [issuerId, setIssuerId] = useState("-");
 
   useEffect(() => {
     if (window.innerWidth > 800)
@@ -62,6 +64,8 @@ const Ipfs: NextFC = () => {
           setHolderName(returnData.content.holderName);
           setEmail(returnData.content.emailHolder);
           setIssuerWebsite(returnData.content.issuerWebsite);
+          setHolderId(returnData.content.holder);
+          setIssuerId(returnData.content.issuer);
         })
         .catch(console.log)
     };
@@ -108,7 +112,9 @@ const Ipfs: NextFC = () => {
         holderEmail={holderEmail}
         ipfs={IPFS}
         iota={IOTA}
-        issuerWebsite={issuerWebsite} />
+        issuerWebsite={issuerWebsite}
+        issuerId={issuerId}
+        holderId={holderId} />
       <Certificate ipfs={IPFS} />
     </Root >
   )
