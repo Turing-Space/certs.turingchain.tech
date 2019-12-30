@@ -1,6 +1,7 @@
 import { useState, useCallback, FC, KeyboardEvent, useContext } from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 import qs from 'qs';
 
 import Section from '@/components/Section';
@@ -97,6 +98,19 @@ const ErrorMessage = styled.p`
   color: ${p => p.theme.colors.primary};
 `;
 
+const StyledLink = styled.span`
+  font-family: ${p => p.theme.fontFamily.SFProText};
+  font-weight: 500;
+  color: ${p => p.theme.colors.primary};
+  margin-left: 2em;
+  margin-bottom: 2em;
+  cursor: pointer;
+  
+  position:absolute;
+  bottom:0;
+  left:0;
+`
+
 const Login: FC = () => {
   const { query } = useRouter();
   const { updateUser } = useContext(UserContext);
@@ -190,6 +204,11 @@ const Login: FC = () => {
         <StyledButton disabled={loading} onClick={onRegister}>
           {loading ? <Loading /> : '註冊'}
         </StyledButton>
+        <Link href='/'>
+          <StyledLink>
+            &lt;&lt; 回到首頁
+          </StyledLink>
+        </Link>
       </MobileWrapper>
       <InfoWrapper>
         <H1>

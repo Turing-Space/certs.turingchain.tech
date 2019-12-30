@@ -187,7 +187,7 @@ const Header: SFC = () => {
           </li>
 
           <li>
-            <StyledButton onClick={() => Router.push('/product')}>
+            <StyledButton onClick={() => Router.push('/auth/login')}>
               {t('start')}
             </StyledButton>
           </li>

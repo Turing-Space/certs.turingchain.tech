@@ -190,7 +190,7 @@ const Demo: FC<{ id?: string }> = ({ id }) => {
             delay={500}
             offset={0}
           >
-            <StyledButton onClick={() => Router.push('/product')} shadow>
+            <StyledButton onClick={() => Router.push('/auth/login')} shadow>
               {t('demo.start')}
             </StyledButton>
             <IconWrapper>
