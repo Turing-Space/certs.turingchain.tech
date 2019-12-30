@@ -16,6 +16,7 @@ const CertCover = styled.div<{ src: string }>`
   background: ${p => p.theme.colors.white} url(${p => p.src}) no-repeat
     center/contain;
   margin-bottom: 1em;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 `;
 
 const ModalWrapper = styled.div`

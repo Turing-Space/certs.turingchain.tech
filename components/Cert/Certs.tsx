@@ -33,15 +33,6 @@ const CertWrapper = styled.div`
     margin-bottom: 0.5em;
   }
 
-  > .name {
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    margin-bottom: 1em;
-    height: 2.5em;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
   .create-data {
     font-size: ${p => p.theme.fontSize.smaller};
     color: #bdbdbd;
@@ -51,6 +42,15 @@ const CertWrapper = styled.div`
     width: 100%;
     align-itmes: center;
     margin-left: 0;
+
+    > .name {
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      margin-bottom: -0.5em;
+      height: 2.5em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 
   ${media('desktop')} {
@@ -62,6 +62,15 @@ const CertWrapper = styled.div`
 
     &:nth-child(3n + 1) {
       margin-left: 0;
+    }
+
+    > .name {
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      margin-bottom: 1em;
+      height: 2.5em;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 
@@ -104,25 +113,40 @@ type TProps = {
   certs: TCert[];
 };
 
+function timeConverter(UNIX_timestamp: number) {
+  var a = new Date(UNIX_timestamp * 1000);
+  var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var year = a.getFullYear();
+  var month = months[a.getMonth()];
+  var date = a.getDate();
+  // var hour = a.getHours();
+  // var min = a.getMinutes();
+  // var sec = a.getSeconds();
+  var time = date + ' ' + month + ' ' + year;
+  return time;
+}
+
 const Certs: FC<TProps> = ({ certs }) => {
   const [openIdx, setOpenIdx] = useState<number>(-1);
   const onCloseViewCertModal = useCallback(() => setOpenIdx(-1), []);
 
   return (
     <Wrapper>
-      {certs.map((cert, idx) => {
+      {certs.map(async (cert, idx) => {
+        console.log(cert.issuer, idx)
+        const ipfsImg = 'https://ipfs.certs.turingchain.tech/ipfs/' + cert.ipfs;
         const progressPercent = Math.round(
           (cert.progress.reduce((acc, cur) => Number(cur) + acc, 0) / 5) * 100,
-        );
+        )
         return (
           <CertWrapper
             key={cert.ipfs}
             onClick={() => !cert.issuing && setOpenIdx(idx)}
           >
-            <CertCover src={'https://ipfs.certs.turingchain.tech/ipfs/' + cert.ipfs} />
+            <CertCover src={ipfsImg} />
             <p className="issuer">{cert.issuer}</p>
             <p className="name">{cert.name}</p>
-            <p className="create-data">June 2019</p>
+            <p className="create-data">{timeConverter(cert.timestamp)}</p>
             <SmallVerifiedProgressChart
               size={50}
               verified={cert.verified}
