@@ -1,6 +1,8 @@
 import { memo, FC } from 'react';
 import styled from 'styled-components';
 import { CertTemplate, templateStyles } from '@/constants';
+import { useTranslation } from 'react-i18next';
+import { i18nNamespace } from '@/constants';
 
 import Radio from '../Radio';
 
@@ -38,16 +40,17 @@ type TProps = {
 };
 
 const TemplateStyles: FC<TProps> = memo(({ selected, onChange }) => {
+  const { t } = useTranslation(i18nNamespace.Issuer);
   return (
     <TemplateWrapper>
-      {templateStyles.map(t => {
+      {templateStyles.map(template => {
         return (
-          <Template key={t.key}>
-            <Img src={t.uri} />
+          <Template key={template.key}>
+            <Img src={template.uri} />
             <StyledRadio
-              checked={t.key === selected}
-              label={t.name}
-              onClick={() => onChange(t.key)}
+              checked={template.key === selected}
+              label={t(`Issue.step1.${template.name}`)}
+              onClick={() => onChange(template.key)}
             />
           </Template>
         );

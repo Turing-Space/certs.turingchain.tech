@@ -106,13 +106,6 @@ const AboutMe = () => {
   ];
   return (
     <AboutMeWrapperExtend title={t('AboutMe.title')}>
-      {/* <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      > */}
       {icons.map(icon => (
         <IconWrapper key={icon.name}>
           <p>{icon.name}</p>
@@ -121,7 +114,6 @@ const AboutMe = () => {
           </AnimatedNumber>
         </IconWrapper>
       ))}
-      {/* </div> */}
     </AboutMeWrapperExtend>
   );
 };

@@ -2,8 +2,11 @@ import { FC } from 'react';
 import Button from '@/components/Button';
 import { TMyCertsRenderComponentProps } from '@/components/Cert/MyCerts';
 import { Router } from '@/i18n';
+import { useTranslation } from 'react-i18next';
+import { i18nNamespace } from '@/constants';
 
 const MyCertsTitleRight: FC<TMyCertsRenderComponentProps> = () => {
+  const { t } = useTranslation(i18nNamespace.Issuer);
   return (
     <Button
       mode="white"
@@ -19,7 +22,7 @@ const MyCertsTitleRight: FC<TMyCertsRenderComponentProps> = () => {
         )
       }
     >
-      發行證書
+      {t('Issue.issue')}
     </Button>
   );
 };

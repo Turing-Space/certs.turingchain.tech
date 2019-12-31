@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import Button from '@/components/Button';
 import { TMyCertsRenderComponentProps } from '@/components/Cert/MyCerts';
 import { Router } from '@/i18n';
+import { useTranslation } from 'react-i18next';
+import { i18nNamespace } from '@/constants';
 
 const Wrapper = styled.div`
   display: flex;
@@ -23,11 +25,12 @@ const StyledButton = styled(Button)`
 `;
 
 const CertsNull: FC<TMyCertsRenderComponentProps> = () => {
+  const { t } = useTranslation(i18nNamespace.Issuer);
   return (
     <Wrapper>
       <NUllImg src={require('../../static/bg/bg-certs-empty.svg')} />
-      <p>你尚未發行證書，請先完成基本資料填寫，</p>
-      <p>即可開始發證！</p>
+      <p>{t('Issue.notice.0')}</p>
+      <p>{t('Issue.notice.1')}</p>
       <StyledButton
         mode="white"
         onClick={() =>
@@ -42,7 +45,7 @@ const CertsNull: FC<TMyCertsRenderComponentProps> = () => {
           )
         }
       >
-        發行證書
+        {t('Issue.issue')}
       </StyledButton>
     </Wrapper>
   );

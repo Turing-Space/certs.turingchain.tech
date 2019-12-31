@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import { UserContext } from '@/contexts/user';
 import { media } from '@/utils/theme';
 import Title from './Cert/Title';
+import { useTranslation } from 'react-i18next';
+import { i18nNamespace } from '@/constants';
 
 const Wrapper = styled.div`
   margin-top: 10%;
@@ -72,6 +74,8 @@ type TProps = {
 
 const AboutMeWrapper: FC<TProps> = ({ children, title }) => {
   const { user } = useContext(UserContext);
+  const { t } = useTranslation(i18nNamespace.Product);
+
   return (
     <Wrapper>
       <TitleWrapper>
@@ -82,8 +86,8 @@ const AboutMeWrapper: FC<TProps> = ({ children, title }) => {
             Router.push('/auth/login')
           }
         >
-          登出
-    </Button>
+          {t('AboutMe.logout')}
+        </Button>
       </TitleWrapper>
       <InfoWrapper>
         <UserWrapper>

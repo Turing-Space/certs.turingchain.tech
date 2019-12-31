@@ -18,6 +18,9 @@ import Step from '../Step';
 import TextInput from '../TextInput';
 import Loading from '../Loading';
 
+import { useTranslation } from 'react-i18next';
+import { i18nNamespace } from '@/constants';
+
 const StyledBackPage = styled(BackPage)`
   margin-top: 7%;
 `;
@@ -74,17 +77,18 @@ const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
     message: '',
     count: 0,
   });
+  const { t } = useTranslation(i18nNamespace.Issuer);
 
   const cert = templateStyles.find(t => t.key === value.template);
 
   const onSubmit = useCallback(async () => {
     if (error.count >= 3) {
-      notify.error({ msg: '密碼錯誤 3 次，請洽詢服務人員重新設定...' });
+      notify.error({ msg: t('Issue.errorPwd') });
       window.scrollTo({ top: 0 });
       Router.push('/issuer');
       return;
     } else if (password === runtimeEnv.MVP.issuePassword) {
-      setLoadingText('上傳模板...');
+      setLoadingText(t('Issue.uploadTemplate'));
       // upload template cert
       const templateFormData = new FormData();
       templateFormData.append('issuer', user.name);
@@ -99,7 +103,7 @@ const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
       await uploadCertTemplate(templateFormData);
       if (value.csv) {
         // issue cert by csv
-        setLoadingText('發證中...');
+        setLoadingText(t('Issue.step4.issuing'));
         const formData = new FormData();
         formData.append('issueFile', value.csv);
         await issueCertByCSV(formData);
@@ -125,12 +129,11 @@ const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
           2000,
         );
       }
-      notify.success({ msg: `恭喜成功！ ${value.type} 已發證` });
+      notify.success({ msg: `${t('Issue.step4.success0')} ${value.type} ${t('Issue.step4.success1')}` });
       Router.push('/issuer');
     } else {
       setError({
-        message: `發證密碼錯誤 ${error.count +
-          1} 次。答錯 3 次請洽詢服務人員重新設定密碼`,
+        message: `${t('Issue.step4.notice0')} ${3 - error.count} ${t('Issue.step4.notice1')}`,
         count: error.count + 1,
       });
     }
@@ -140,7 +143,7 @@ const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
     <>
       <StyledBackPage />
       <Step>STEP 3</Step>
-      <IssueTitleSection title="預覽證書">
+      <IssueTitleSection title={t('Issue.step3.preview')}>
         <SectionWrapper style={{ textAlign: 'center' }}>
           {cert && <CertImg src={cert.uri} />}
           <CertName>{value.type}</CertName>
@@ -158,16 +161,16 @@ const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
               )
             }
           >
-            修改證書
+            {t('Issue.step3.edit')}
           </StyledButton>
         </SectionWrapper>
       </IssueTitleSection>
       <Step>STEP 4</Step>
-      <IssueTitleSection title="輸入發證密碼">
+      <IssueTitleSection title={t('Issue.step4.enterPwd')}>
         <SectionWrapper>
-          <SectionTitle>發證密碼</SectionTitle>
+          <SectionTitle>{t('Issue.step4.pwd')}</SectionTitle>
           <StyledTextInput
-            placeholder="6 ~ 12 位英文數字密碼"
+            placeholder={t('Issue.step4.pwdFormat')}
             value={password}
             onChange={setPassword}
             input={{ type: 'password' }}
@@ -176,7 +179,7 @@ const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
       </IssueTitleSection>
       {error.count ? <Error>{error.message}</Error> : null}
       <StyledButton style={{ marginTop: '10%' }} onClick={onSubmit}>
-        {loadingText ? <Loading /> : '發行證書'}
+        {loadingText ? <Loading /> : t('Issue.issue')}
       </StyledButton>
       {loadingText && <LoadingText>({loadingText})</LoadingText>}
     </>

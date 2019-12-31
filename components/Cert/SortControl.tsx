@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
+import { i18nNamespace } from '@/constants';
 
 const Wrapper = styled.div`
   display: flex;
@@ -19,10 +21,11 @@ const Button = styled.div`
 `;
 
 const SortControl = () => {
+  const { t } = useTranslation(i18nNamespace.Common);
   return (
     <Wrapper>
-      <p>排序</p>
-      <Button>依時間</Button>
+      <p>{t('sort')}</p>
+      <Button>{t('byTime')}</Button>
     </Wrapper>
   );
 };

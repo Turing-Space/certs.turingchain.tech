@@ -1,6 +1,5 @@
 import { useEffect, FC, useContext } from 'react';
 
-import { i18nNamespace } from '@/constants';
 import ProductLayout from '@/layouts/Product';
 import AboutMe from '@/components/issuer/AboutMe';
 import MyCertsTitleRight from '@/components/issuer/MyCertsTitleRight';
@@ -12,6 +11,9 @@ import notify from '@/utils/notify';
 import { preparedCerts } from '@/utils/certs';
 import withAuth from '@/hoc/withAuth';
 import { UserContext } from '@/contexts/user';
+import { useTranslation } from 'react-i18next';
+import { i18nNamespace } from '@/constants';
+
 
 type TProps = {
   syncTrigger: number;
@@ -20,6 +22,7 @@ type TProps = {
 const IssuerPage: FC<TProps> = () => {
   const { user } = useContext(UserContext);
   const { updateCerts } = useContext(CertsContext);
+  const { t } = useTranslation(i18nNamespace.Issuer);
 
   useEffect(() => {
     const fetch = async () => {
@@ -36,7 +39,7 @@ const IssuerPage: FC<TProps> = () => {
     <ProductLayout routePath="/issuer">
       <AboutMe />
       <MyCerts
-        title="已發行證書"
+        title={t('MyCerts.title')}
         TitleRight={MyCertsTitleRight}
         Empty={CertsNull}
       />

@@ -3,5 +3,8 @@
     "zh-TW": "Chinese",
     "en": "English",
     "undefined": ""
-  }
+  },
+  "back": "Back",
+  "sort": "Sort",
+  "byTime": "by Time"
 }

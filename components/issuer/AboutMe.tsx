@@ -4,6 +4,21 @@ import { useContext, memo } from 'react';
 import { CertsContext } from '@/contexts/certs';
 import AboutMeWrapper from '@/components/AboutMeWrapper';
 import { media } from '@/utils/theme';
+import { useTranslation } from 'react-i18next';
+import { i18nNamespace } from '@/constants';
+
+const AboutMeWrapperExtend = styled(AboutMeWrapper)`
+  justify-content: center;
+  align-items: center;
+
+  ${media('desktop')} {
+    display: flex;
+  }
+
+  ${media('phone')} {
+    display: inline;
+  }
+`;
 
 const IconWrapper = styled.div`
   display: flex;
@@ -13,7 +28,6 @@ const IconWrapper = styled.div`
   width: 8.2em;
   height: 8.2em;
   border-radius: 50%;
-  border: solid 6px ${p => p.theme.colors.primary};
   margin-left: 2em;
   > p {
     letter-spacing: 0.67px;
@@ -22,15 +36,37 @@ const IconWrapper = styled.div`
   ${media('largeDesktop')} {
     width: 8.5em;
     height: 8.5em;
+    border: solid 6px ${p => p.theme.colors.primary};
+  }
+
+  ${media('desktop')} {
+    width: 8.2em;
+    height: 8.2em;
+    border: solid 6px ${p => p.theme.colors.primary};
+  }
+
+  ${media('phone')} {
+    width: 7em;
+    height: 7em;
+    font-size: 0.61em;
   }
 `;
 
 const AnimatedNumber = styled(animated.p)`
   color: ${p => p.theme.colors.primary};
   margin-top: 3px;
-  font-size: 3em;
   font-weight: bold;
   font-family: ${p => p.theme.fontFamily.SFText};
+  
+  ${media('phone')} {
+    font-size: 2em;
+    margin-top: 0.8em;
+    float: right
+  }
+
+  ${media('desktop')} {
+    font-size: 3em;
+  }
 `;
 
 const AboutMe = memo(() => {
@@ -41,6 +77,8 @@ const AboutMe = memo(() => {
     }
     return acc;
   }, []).length;
+  const { t } = useTranslation(i18nNamespace.Issuer);
+
 
   const typeCountProps = useSpring({
     number: typeCount,
@@ -53,33 +91,25 @@ const AboutMe = memo(() => {
 
   const icons = [
     {
-      name: '證書種類',
+      name: t('AboutMe.icon1'),
       props: typeCountProps,
     },
     {
-      name: '已發出數量',
+      name: t('AboutMe.icon2'),
       props: certsProps,
     },
   ];
   return (
-    <AboutMeWrapper title="發證單位">
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        {icons.map(icon => (
-          <IconWrapper key={icon.name}>
-            <p>{icon.name}</p>
-            <AnimatedNumber>
-              {icon.props.number.interpolate(x => x.toFixed(0))}
-            </AnimatedNumber>
-          </IconWrapper>
-        ))}
-      </div>
-    </AboutMeWrapper>
+    <AboutMeWrapperExtend title={t('AboutMe.title')}>
+      {icons.map(icon => (
+        <IconWrapper key={icon.name}>
+          <p>{icon.name}</p>
+          <AnimatedNumber>
+            {icon.props.number.interpolate(x => x.toFixed(0))}
+          </AnimatedNumber>
+        </IconWrapper>
+      ))}
+    </AboutMeWrapperExtend>
   );
 });
 

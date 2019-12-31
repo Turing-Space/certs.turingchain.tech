@@ -12,6 +12,8 @@ import InputFile from '../InputFile';
 import Button from '../Button';
 import notify from '@/utils/notify';
 import { scrollToID } from '@/utils';
+import { useTranslation } from 'react-i18next';
+import { i18nNamespace } from '@/constants';
 
 const StyledBackPage = styled(BackPage)`
   margin-top: 7%;
@@ -57,14 +59,17 @@ const IssuePage1: FC<TRenderComponentProps> = ({ value, setValue }) => {
     t => setValue(v => ({ ...v, template: t })),
     [],
   );
+
+  const { t } = useTranslation(i18nNamespace.Issuer);
+
   const onFileChange = useCallback(f => setValue(v => ({ ...v, csv: f })), []);
   const onNextPage = useCallback(() => {
     if (!value.type) {
-      notify.error({ msg: '請填寫證書名稱！' });
+      notify.error({ msg: t('Issue.step1.errorName') });
       scrollToID('issue-cert-type-column');
       return;
     } else if (!value.csv) {
-      notify.error({ msg: '請上傳您的 csv 檔案，以利系統進行發證作業！' });
+      notify.error({ msg: t('Issue.step1.errorCSV') });
       scrollToID('issue-cert-csv-column');
       return;
     }
@@ -84,43 +89,42 @@ const IssuePage1: FC<TRenderComponentProps> = ({ value, setValue }) => {
     <>
       <StyledBackPage />
       <Step>STEP 1</Step>
-      <IssueTitleSection title="證書名稱" id="issue-cert-type-column">
+      <IssueTitleSection title={t('Issue.step1.certName')} id="issue-cert-type-column">
         <StyledTextInput
-          placeholder="請輸入證書名稱"
+          placeholder={t('Issue.step1.enterName')}
           value={value.type}
           onChange={onNameChange}
         />
       </IssueTitleSection>
-      <IssueTitleSection title="選擇證書樣式">
+      <IssueTitleSection title={t('Issue.step1.certKind')}>
         <TemplateStyles
           selected={value.template}
           onChange={onTemplateStyleChange}
         />
       </IssueTitleSection>
       <Step>STEP 2</Step>
-      <IssueTitleSection title="欄位內容">
+      <IssueTitleSection title={t('Issue.step2.content')}>
         <SectionWrapper>
           <SectionTitle>
-            issuer（發證機關） / type（證書名稱） / holder（名字）/
-            email（電子信箱）
+            {t('Issue.step2.csvCol')}
           </SectionTitle>
         </SectionWrapper>
       </IssueTitleSection>
-      <IssueTitleSection title="上傳資料" id="issue-cert-csv-column">
+      <IssueTitleSection title={t('Issue.step2.upload1')} id="issue-cert-csv-column">
         <SectionWrapper>
-          <SectionTitle>CSV 檔</SectionTitle>
+          <SectionTitle>{t('Issue.step2.csv')}</SectionTitle>
           <InputFile
             file={value.csv}
             onChange={onFileChange}
-            buttonText="上傳檔案"
+            buttonText={t('Issue.step2.upload2')}
             accept=".csv"
           />
           <Reminder>
-            * 請檢查您的證書名稱是否與 csv 檔案裡的 type 欄位相同
+            * {t('Issue.step2.notice')}
           </Reminder>
         </SectionWrapper>
       </IssueTitleSection>
-      <StyledButton onClick={onNextPage}>下一步</StyledButton>
+      <StyledButton onClick={onNextPage}>{t('Issue.next')}</StyledButton>
     </>
   );
 };

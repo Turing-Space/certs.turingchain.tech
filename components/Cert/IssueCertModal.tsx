@@ -60,7 +60,7 @@ const IssueCertModal: FC<TProps> = ({ visible, onClose }) => {
   const [file, setFile] = useState<File | null>(null);
   const [certUri, setCertUri] = useState<string>('');
   const { updateCerts } = useContext(CertsContext);
-  const { t } = useTranslation(i18nNamespace.Product);
+  const { t } = useTranslation(i18nNamespace.Issuer);
 
   const onCancel = useCallback(() => {
     setIssuer('');
@@ -119,7 +119,7 @@ const IssueCertModal: FC<TProps> = ({ visible, onClose }) => {
           placeholder="國立高雄科技大學"
         />
         <TextInput
-          label="證書名稱"
+          label={t('Issue.step1.certName')}
           value={certName}
           onChange={value => setCertName(value)}
           placeholder="區塊鏈集訓證書"

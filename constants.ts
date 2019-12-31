@@ -38,11 +38,11 @@ export const templateStyles = [
   {
     key: CertTemplate.Activity,
     uri: require('./static/certificate/template/turingCertsPioneer.png?inline'),
-    name: '活動證書',
+    name: 'eventCert',
   },
   {
     key: CertTemplate.Completion,
     uri: require('./static/certificate/template/turingScholarship.jpg?inline'),
-    name: '結業證書',
+    name: 'completeCert',
   },
 ];
