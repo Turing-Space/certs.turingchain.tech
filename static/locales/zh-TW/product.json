@@ -1,0 +1,14 @@
+{
+    "AboutMe": {
+        "title": "關於我",
+        "icon1": "證書量",
+        "icon2": "已認證",
+        "icon3": "認證中"
+    },
+    "MyCerts": {
+        "title": "我的證書"
+    },
+    "CertModal": {
+        "addCert": "新增證書"
+    }
+}
