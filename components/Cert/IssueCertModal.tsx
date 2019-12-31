@@ -12,6 +12,8 @@ import Title from '@/components/Cert/Title';
 
 import TextInput from '../TextInput';
 import InputFile from '../InputFile';
+import { useTranslation } from 'react-i18next';
+import { i18nNamespace } from '@/constants';
 
 const Wrapper = styled.div`
   width: calc(100vw - 6em);
@@ -58,6 +60,7 @@ const IssueCertModal: FC<TProps> = ({ visible, onClose }) => {
   const [file, setFile] = useState<File | null>(null);
   const [certUri, setCertUri] = useState<string>('');
   const { updateCerts } = useContext(CertsContext);
+  const { t } = useTranslation(i18nNamespace.Product);
 
   const onCancel = useCallback(() => {
     setIssuer('');
@@ -108,7 +111,7 @@ const IssueCertModal: FC<TProps> = ({ visible, onClose }) => {
       }}
     >
       <Wrapper>
-        <Title style={{ marginBottom: '1em' }}>新增證書</Title>
+        <Title style={{ marginBottom: '1em' }}>{t('CertModal.addCert')}</Title>
         <TextInput
           label="發證單位"
           value={issuer}

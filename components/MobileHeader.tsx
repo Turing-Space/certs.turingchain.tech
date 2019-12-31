@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import { scrollToID, getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
+import { Router } from '@/i18n';
 import { i18nNamespace } from '@/constants';
 
 const Wrapper = styled.div`
@@ -197,7 +198,7 @@ const MobileHeader: FC<TProps> = ({ open, setOpen }) => {
             </li>
           </>
         )}
-        <li className="red" onClick={() => alert(t('alertText'))}>
+        <li className="red" onClick={() => Router.push('/auth/login')}>
           {t('start')}
         </li>
       </MobileList>

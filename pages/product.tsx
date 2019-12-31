@@ -1,6 +1,7 @@
 import { NextFC } from 'next';
 import ProductLayout from '@/layouts/Product';
 import { SITE_TITLE, i18nNamespace } from '@/constants';
+import { useTranslation } from 'react-i18next';
 import AboutMe from '@/components/product/AboutMe';
 import MyCertsTitleRight from '@/components/product/MyCertsTitleRight';
 import MyCerts from '@/components/Cert/MyCerts';
@@ -20,7 +21,7 @@ const ProductPage: NextFC = () => {
   const { user } = useContext(UserContext);
   const { updateUser } = useContext(UserContext);
   const { updateCerts } = useContext(CertsContext);
-
+  const { t } = useTranslation(i18nNamespace.Product);
 
   useEffect(() => {
     const value = queryString.parse(window.location.search);
@@ -77,7 +78,7 @@ const ProductPage: NextFC = () => {
     <ProductLayout title={'Demo | ' + SITE_TITLE} routePath="/product">
       <AboutMe />
       <MyCerts
-        title="我的證書"
+        title={t('MyCerts.title')}
         Empty={CertsNull}
         TitleRight={MyCertsTitleRight}
         Modal={IssueCertModal}
@@ -87,9 +88,9 @@ const ProductPage: NextFC = () => {
 };
 
 ProductPage.getInitialProps = async () => ({
-  namespacesRequired: [i18nNamespace.Common, i18nNamespace.Demo],
+  namespacesRequired: [i18nNamespace.Common, i18nNamespace.Product],
 });
 
 export default withAuth('user', () => {
-  return { namespacesRequired: [i18nNamespace.Common, i18nNamespace.Demo] };
+  return { namespacesRequired: [i18nNamespace.Common, i18nNamespace.Product] };
 })(ProductPage);

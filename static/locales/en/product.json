@@ -1,0 +1,14 @@
+{
+    "AboutMe": {
+        "title": "Profile",
+        "icon1": "Total",
+        "icon2": "Verified",
+        "icon3": "Requested"
+    },
+    "MyCerts": {
+        "title": "My Certificates"
+    },
+    "CertModal": {
+        "addCert": "Upload Certs"
+    }
+}

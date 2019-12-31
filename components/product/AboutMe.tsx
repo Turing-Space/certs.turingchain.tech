@@ -4,6 +4,8 @@ import { useContext } from 'react';
 import { CertsContext } from '@/contexts/certs';
 import AboutMeWrapper from '@/components/AboutMeWrapper';
 import { media } from '@/utils/theme';
+import { useTranslation } from 'react-i18next';
+import { i18nNamespace } from '@/constants';
 
 const AboutMeWrapperExtend = styled(AboutMeWrapper)`
   justify-content: center;
@@ -70,6 +72,7 @@ const AboutMe = () => {
   const { certs } = useContext(CertsContext);
   const certificatedCount = certs.filter(d => !!d.verified).length;
   const certificatingCount = certs.length - certificatedCount;
+  const { t } = useTranslation(i18nNamespace.Product);
 
   const certsProps = useSpring({
     number: certs.length,
@@ -86,23 +89,23 @@ const AboutMe = () => {
 
   const icons = [
     {
-      name: '認證量',
+      name: t('AboutMe.icon1'),
       count: certs.length,
       props: certsProps,
     },
     {
-      name: '已認證',
+      name: t('AboutMe.icon2'),
       count: certificatedCount,
       props: certificatedProps,
     },
     {
-      name: '認證中',
+      name: t('AboutMe.icon3'),
       count: certificatingCount,
       props: certificatingProps,
     },
   ];
   return (
-    <AboutMeWrapperExtend title={'關於我'}>
+    <AboutMeWrapperExtend title={t('AboutMe.title')}>
       {/* <div
         style={{
           display: 'flex',
@@ -122,5 +125,6 @@ const AboutMe = () => {
     </AboutMeWrapperExtend>
   );
 };
+
 
 export default AboutMe;
