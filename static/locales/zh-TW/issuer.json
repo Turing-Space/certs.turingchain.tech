@@ -1,1 +1,53 @@
-{}
+{
+    "AboutMe": {
+        "title": "發證單位",
+        "icon1": "證書種類",
+        "icon2": "發證數量"
+    },
+    "MyCerts": {
+        "title": "已發行證書"
+    },
+    "Issue": {
+        "issue": "發行證書",
+        "notice": {
+            "0": "你尚未發行證書，請先完成基本資料填寫，",
+            "1": "即可開始發證！"
+        },
+        "step1": {
+            "certName": "證書名稱",
+            "enterName": "請輸入證書名稱",
+            "certKind": "選擇證書樣式",
+            "eventCert": "活動證書",
+            "completeCert": "結業證書",
+            "errorName": "請填寫證書名稱！",
+            "errorCSV": "請上傳您的 csv 檔案，以利系統進行發證作業！"
+        },
+        "step2": {
+            "content": "欄位內容",
+            "csvCol": "emailHolder（收證 email） / holder（收證人姓名）/ issuer（發證單位名）/ emailIssuer（發證單位 email）/ type（證書種類）/ issuerWebsite（發證單位官網）",
+            "upload1": "上傳資料",
+            "csv": "CSV 檔",
+            "upload2": "上傳檔案",
+            "notice": "請檢查您的證書名稱是否與 csv 檔案裡的 type 欄位相同"
+        },
+        "next": "下一步",
+        "step3": {
+            "preview": "預覽證書",
+            "edit": "修改證書"
+        },
+        "step4": {
+            "enterPwd": "輸入發證密碼",
+            "pwd": "發證密碼",
+            "pwdFormat": "6 ~ 12 位英文數字密碼",
+            "notice0": "發證密碼錯誤",
+            "notice1": "次。答錯 3 次請洽詢服務人員重新設定密碼",
+            "error": "發證密碼錯誤",
+            "issue": "發行證書",
+            "success0": "恭喜成功！",
+            "success1": "已發證",
+            "issuing": "發證中..."
+        },
+        "errorPwd": "密碼錯誤 3 次，請洽詢服務人員重新設定...",
+        "uploadTemplate": "上傳模板..."
+    }
+}

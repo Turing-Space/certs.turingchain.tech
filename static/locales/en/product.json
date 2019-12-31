@@ -3,7 +3,8 @@
         "title": "Profile",
         "icon1": "Total",
         "icon2": "Verified",
-        "icon3": "Requested"
+        "icon3": "Requested",
+        "logout": "Logout"
     },
     "MyCerts": {
         "title": "My Certificates"
