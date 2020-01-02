@@ -6,5 +6,17 @@
   },
   "back": "Back",
   "sort": "Sort",
-  "byTime": "by Time"
+  "byTime": "by Time",
+  "backToHome": "Back to Home",
+  "auth": {
+    "enterAcc": "Account",
+    "enterPwd": "Password",
+    "login": "Login",
+    "register": "Register"
+  },
+  "error": {
+    "empty": "* Account / Password Required",
+    "email": "* Invalid Email",
+    "noAcc": "* Account Does Not Exist"
+  }
 }
