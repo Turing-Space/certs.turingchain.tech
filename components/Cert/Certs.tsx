@@ -9,6 +9,9 @@ import theme from '@/themes/theme';
 import VerifiedProgressChart from './VerifiedProgressChart';
 import ViewCertModal from './ViewCertModal';
 import Spinner from '../Spinner';
+import { useTranslation } from 'react-i18next';
+import { i18nNamespace } from '@/constants';
+import { timeConverter } from '@/utils';
 
 const Wrapper = styled.div`
   display: flex;
@@ -113,22 +116,10 @@ type TProps = {
   certs: TCert[];
 };
 
-function timeConverter(UNIX_timestamp: number) {
-  var a = new Date(UNIX_timestamp * 1000);
-  var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  var year = a.getFullYear();
-  var month = months[a.getMonth()];
-  var date = a.getDate();
-  // var hour = a.getHours();
-  // var min = a.getMinutes();
-  // var sec = a.getSeconds();
-  var time = date + ' ' + month + ' ' + year;
-  return time;
-}
-
 const Certs: FC<TProps> = ({ certs }) => {
   const [openIdx, setOpenIdx] = useState<number>(-1);
   const onCloseViewCertModal = useCallback(() => setOpenIdx(-1), []);
+  const { t } = useTranslation(i18nNamespace.Issuer);
 
   return (
     <Wrapper>
@@ -156,7 +147,7 @@ const Certs: FC<TProps> = ({ certs }) => {
             {cert.issuing && (
               <IssuingMask>
                 <Spinner color={theme.colors.primary} scale={2} />
-                <p style={{ marginTop: '1rem' }}>發證中...</p>
+                <p style={{ marginTop: '1rem' }}>{t('Issuer.issuing')}</p>
               </IssuingMask>
             )}
           </CertWrapper>

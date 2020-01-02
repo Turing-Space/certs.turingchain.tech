@@ -13,6 +13,8 @@ import { UserContext } from '@/contexts/user';
 import { signIn } from '@/utils/api';
 import { preparedUser } from '@/utils/user';
 import notify from '@/utils/notify';
+import { useTranslation } from 'react-i18next';
+import { i18nNamespace } from '@/constants';
 
 import Loading from '../Loading';
 
@@ -114,6 +116,7 @@ const Login: FC = () => {
   const [password, setPassword] = useState<string>('');
   const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
+  const { t } = useTranslation(i18nNamespace.Common);
 
   // SignIn Button
   const onRegister = () => {
@@ -123,10 +126,10 @@ const Login: FC = () => {
   const onLogin = useCallback(async () => {
     const validate = () => {
       if (!account || !password) {
-        setError('帳號密碼不可為空');
+        setError(t('auth.error.empty'));
         return false;
       } else if (!emailValidator(account)) {
-        setError('信箱有誤');
+        setError(t('auth.error.email'));
         return false;
       }
       return true;
@@ -141,7 +144,7 @@ const Login: FC = () => {
         },
       });
       if (!user) {
-        notify.error({ msg: err || '此帳號並不存在' });
+        notify.error({ msg: err || t('auth.error.noAcc') });
       }
       // else if (mode === 'issuer' && !user.isIssuer) {
       //   notify.error({ msg: '此帳號並不是發證機關帳號，請確認使用帳號' });
@@ -180,12 +183,12 @@ const Login: FC = () => {
       <MobileWrapper>
         <Logo src={require('../../static/logo/logo-new.svg')} />
         <StyledTextInput
-          placeholder="輸入帳號"
+          placeholder={t('auth.enterAcc')}
           value={account}
           onChange={setAccount}
         />
         <StyledTextInput
-          placeholder="輸入密碼"
+          placeholder={t('auth.enterPwd')}
           value={password}
           onChange={setPassword}
           input={{
@@ -195,14 +198,14 @@ const Login: FC = () => {
         />
         <ErrorMessage>{error}</ErrorMessage>
         <StyledButton disabled={loading} onClick={onLogin}>
-          {loading ? <Loading /> : '登入'}
+          {loading ? <Loading /> : t('auth.login')}
         </StyledButton>
         <StyledButton disabled={loading} onClick={onRegister}>
-          {loading ? <Loading /> : '註冊'}
+          {loading ? <Loading /> : t('auth.register')}
         </StyledButton>
         <a href='https://certs.turingchain.tech'>
           <StyledLink>
-            &lt;&lt; 回到首頁
+            &lt;&lt; {t('backToHome')}
           </StyledLink>
         </a>
       </MobileWrapper>

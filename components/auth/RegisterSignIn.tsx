@@ -7,6 +7,8 @@ import TextInput from '@/components/TextInput';
 import Button from '@/components/Button';
 import Loading from '../Loading';
 import { RegisterPageState } from './Register';
+import { useTranslation } from 'react-i18next';
+import { i18nNamespace } from '@/constants';
 
 const StyledSection = styled(Section)`
   position: absolute;
@@ -58,6 +60,14 @@ const InfoWrapper = styled.div`
     width: 100%;
     margin-bottom: 64px;
   }
+
+  ${media('desktop')} {
+    margin-bottom: 100px;
+  }
+
+  ${media('phone')} {
+    margin-bottom: 0px;
+  }
 `;
 
 const ErrorMessage = styled.p`
@@ -77,14 +87,15 @@ const SignIn: FC<TProps> = ({ userName, onChangePageState }) => {
   const [account, setAccount] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [checkPassword, setCheckPassword] = useState<string>('');
+  const { t } = useTranslation(i18nNamespace.Register);
 
   const onRegister = async () => {
     const validate = () => {
       if (!account || !password) {
-        setError('帳號密碼不可為空');
+        setError(t('Error.empty'));
         return false;
       } else if (password !== checkPassword) {
-        setError('密碼不一致');
+        setError(t('Error.notMatch'));
         return false;
       }
       return true;
@@ -99,7 +110,7 @@ const SignIn: FC<TProps> = ({ userName, onChangePageState }) => {
         account,
         password,
       };
-      alert(JSON.stringify(userInfo));
+      // alert(JSON.stringify(userInfo));
 
       // if success
       onChangePageState(RegisterPageState.FinishPage);
@@ -127,32 +138,32 @@ const SignIn: FC<TProps> = ({ userName, onChangePageState }) => {
     <StyledSection width="100vw" justifyContent="flex-start" row fullscreen>
       <RegisterWrapper>
         <InfoWrapper>
-          <p style={{ fontSize: '24px' }}>接下來，設定一組帳號與密碼吧！</p>
+          <p style={{ fontSize: '24px' }}>{t('Set.ask')}</p>
           <StyledTextInput
-            placeholder="登入帳號"
+            placeholder="xxx@gmail.com"
             value={account}
             onChange={setAccount}
-            label="登入帳號"
+            label={t('Set.acc')}
             input={{
               type: 'text',
               onKeyDown,
             }}
           />
           <StyledTextInput
-            placeholder="登入密碼"
+            placeholder="awesomepwd"
             value={password}
             onChange={setPassword}
-            label="登入密碼"
+            label={t('Set.pwd')}
             input={{
               type: 'password',
               onKeyDown,
             }}
           />
           <StyledTextInput
-            placeholder="再輸入一次密碼"
+            placeholder="awesomepwd"
             value={checkPassword}
             onChange={setCheckPassword}
-            label="再輸入一次密碼"
+            label={t('Set.enterAgain')}
             input={{
               type: 'password',
               onKeyDown,
@@ -160,7 +171,7 @@ const SignIn: FC<TProps> = ({ userName, onChangePageState }) => {
           />
           <ErrorMessage>{error}</ErrorMessage>
           <StyledButton disabled={loading} onClick={onRegister}>
-            {loading ? <Loading /> : '下一步'}
+            {loading ? <Loading /> : t('Set.next')}
           </StyledButton>
         </InfoWrapper>
       </RegisterWrapper>

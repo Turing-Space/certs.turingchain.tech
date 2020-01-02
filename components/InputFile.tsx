@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { FC } from 'react';
+import { useTranslation } from 'react-i18next';
+import { i18nNamespace } from '@/constants';
 
 const Wrapper = styled.div`
   display: flex;
@@ -42,6 +44,8 @@ const InputFile: FC<TProps> = ({
   description,
   accept,
 }) => {
+  const { t } = useTranslation(i18nNamespace.Issuer);
+
   return (
     <Wrapper>
       <InputWrapper>
@@ -61,7 +65,7 @@ const InputFile: FC<TProps> = ({
           // @ts-ignore
           onChange={e => onChange(e.target.files[0])}
         />
-        {buttonText || '上傳圖檔'}
+        {buttonText || t('CertModal.uploadPic')}
       </InputWrapper>
       {description && <p>{description}</p>}
       {file && <p>( {file.name} )</p>}

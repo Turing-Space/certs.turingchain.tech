@@ -7,5 +7,6 @@ export function preparedUser(user: TAPIUser): TUser {
     name: user.displayName,
     email: user.email,
     avatarUri: 'https://source.unsplash.com/300x300/?baby',
+    timestamp: user.timestamp
   };
 }

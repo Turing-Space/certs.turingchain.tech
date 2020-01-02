@@ -4,11 +4,12 @@ import { useSprings, animated } from 'react-spring';
 import { FaShareSquare, FaCheck } from 'react-icons/fa';
 import { TiPin } from 'react-icons/ti';
 import Modal from 'react-modal';
-
 import theme from '@/themes/theme';
-
 import VerifiedProgressChart from './VerifiedProgressChart';
 import { TCert, CertsContext } from '@/contexts/certs';
+import { useTranslation } from 'react-i18next';
+import { i18nNamespace } from '@/constants';
+import { timeConverter } from '@/utils';
 
 const CertCover = styled.div<{ src: string }>`
   width: 100%;
@@ -172,6 +173,7 @@ const ViewCertModal: FC<TProps> = ({ cert, isOpen, onClose }) => {
     textColor: '#bdbdbd',
     iconBgColor: '#bdbdbd',
   }));
+  const { t } = useTranslation(i18nNamespace.Issuer);
 
   useEffect(() => {
     // @ts-ignore
@@ -221,10 +223,10 @@ const ViewCertModal: FC<TProps> = ({ cert, isOpen, onClose }) => {
         <p className="issuer">{cert.issuer}</p>
         <p className="name">{cert.name}</p>
         <p className="smartLink"><a href={'https://certs.turingchain.tech/ipfs/?hash=' + cert.ipfs}>SmartLink</a></p>
-        <p className="create-data">June 2019</p>
+        <p className="create-data">{timeConverter(cert.timestamp)}</p>
         <Divider />
         <ModalProgressTitleWrapper>
-          <p className="title">認證進度</p>
+          <p className="title">{t('CertModal.progress')}</p>
           <div className="icon-wrapper">
             <StyledModalIcon pin={cert.pin} onClick={onClickPin}>
               <TiPin size="1.3em" color={theme.colors.darkGrey} />

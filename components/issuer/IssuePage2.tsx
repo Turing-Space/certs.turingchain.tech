@@ -103,7 +103,7 @@ const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
       await uploadCertTemplate(templateFormData);
       if (value.csv) {
         // issue cert by csv
-        setLoadingText(t('Issue.step4.issuing'));
+        setLoadingText(t('Issue.issuing'));
         const formData = new FormData();
         formData.append('issueFile', value.csv);
         await issueCertByCSV(formData);

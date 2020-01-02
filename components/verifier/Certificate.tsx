@@ -7,7 +7,7 @@ import PDFViewer from 'mgr-pdf-viewer-react';
 import { getRelativePath } from '@/utils';
 
 const logoIcon = '/static/icon/logo-product-normal.svg';
-const shareIcon = '/static/icon/icon-share-grey.svg';
+// const shareIcon = '/static/icon/icon-share-grey.svg';
 
 const Root = styled.div`
   display: inline-block;

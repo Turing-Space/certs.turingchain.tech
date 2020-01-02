@@ -1,11 +1,11 @@
 {
     "AboutMe": {
         "title": "Issuer",
-        "icon1": "Types",
+        "icon1": "Type",
         "icon2": "Total"
     },
     "MyCerts": {
-        "title": "Past Issuance"
+        "title": "Certificates"
     },
     "Issue": {
         "issue": "Issue",
@@ -14,8 +14,8 @@
             "1": "Please fill in the profile information to proceed."
         },
         "step1": {
-            "certName": "Certificate Name",
-            "enterName": "Please Enter Certificate Name",
+            "certName": "Enter Certificate Name",
+            "enterName": "Certificate Name",
             "certKind": "Select Certificate Type",
             "eventCert": "Event",
             "completeCert": "Course",
@@ -23,9 +23,9 @@
             "errorCSV": "Please Upload CSV File to Proceed!"
         },
         "step2": {
-            "content": "Column Name",
+            "content": "CSV Column Name",
             "csvCol": "emailHolder / holder / issuer / emailIssuer / type / issuerWebsite",
-            "upload1": "Upload",
+            "upload1": "Upload CSV",
             "csv": "CSV File",
             "upload2": "Upload",
             "notice": "Please double check if your certificate type is the same as that of in the csv file."
@@ -44,10 +44,23 @@
             "error": "Invalid Password",
             "issue": "Submit",
             "success0": "Congradulations!",
-            "success1": "has been issued successfully.",
-            "issuing": "Issuing..."
+            "success1": "has been issued successfully."
         },
         "errorPwd": "Failed to input valid password in 3 attempts. Please contact us to reset password.",
-        "uploadTemplate": "Uploading Template..."
-    }
+        "uploadTemplate": "Uploading Template...",
+        "issuing": "Issuing..."
+    },
+    "CertModal": {
+        "issuer": "Issuer",
+        "issuerName": "UC Berkeley",
+        "certName": "Graduation Diploma",
+        "date": "Date",
+        "upload": "Certificate Scanned Copy",
+        "limit": "* Maximum File Size 1 MB",
+        "uploadPic": "Upload",
+        "discard": "Discard",
+        "add": "Submit",
+        "progress": "Verification Progress"
+    },
+    "addCert": "Upload"
 }

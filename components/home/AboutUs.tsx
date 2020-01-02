@@ -6,6 +6,8 @@ import H2 from '@/components/H2';
 import ScrollInfo from '@/components/ScrollInfo';
 import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
+import { useTranslation } from 'react-i18next';
+import { i18nNamespace } from '@/constants';
 
 const Title = styled(H2)`
   margin-top: 18vh;
@@ -42,6 +44,8 @@ const Text = styled.p`
 `;
 
 const AboutUs: FC<{ id: string }> = ({ id }) => {
+  const { t } = useTranslation(i18nNamespace.Home);
+
   return (
     <Section id={id} justifyContent="flex-start" fullscreen>
       <Title>ABOUT US</Title>
@@ -56,12 +60,10 @@ const AboutUs: FC<{ id: string }> = ({ id }) => {
       <Divider />
       <ScrollAnimation animateIn="fadeInUp" delay={400} offset={0}>
         <Text className="cn">
-          圖靈鏈是一個屢獲殊榮，敏捷且國際化的團隊，主導開發區塊鏈項目，囊括紐約新聞媒體、台灣電影產業、與俄羅斯及澳門博彩集團。
+          {t('home.description.cn')}
         </Text>
         <Text className="en">
-          Turing Chain is an award-winning, agile, and international team. We
-          developed blockchains for New York news media, Taiwanese movie
-          production, and Russia & Macao-based casinos.
+          {t('home.description.en')}
         </Text>
       </ScrollAnimation>
       <ScrollInfo />

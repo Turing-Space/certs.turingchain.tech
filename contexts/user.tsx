@@ -5,6 +5,7 @@ export type TUser = {
   name: string;
   email: string;
   avatarUri: string;
+  timestamp: number;
 };
 
 type TUserContext = {
@@ -17,6 +18,7 @@ const defaultUser: TUser = {
   name: '',
   email: '',
   avatarUri: 'https://source.unsplash.com/300x300/?baby',
+  timestamp: Date.now()
 };
 
 export const UserContext = createContext<TUserContext>({

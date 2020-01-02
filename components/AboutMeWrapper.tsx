@@ -7,6 +7,7 @@ import { media } from '@/utils/theme';
 import Title from './Cert/Title';
 import { useTranslation } from 'react-i18next';
 import { i18nNamespace } from '@/constants';
+import { timeConverter } from '@/utils';
 
 const Wrapper = styled.div`
   margin-top: 10%;
@@ -94,7 +95,7 @@ const AboutMeWrapper: FC<TProps> = ({ children, title }) => {
           <Avatar src={user.avatarUri} />
           <NameWrapper>
             <p className="name">{user.name}</p>
-            <p className="join-date">Join at Jan 2019</p>
+            <p className="join-date">{user.timestamp ? "Joined at " + timeConverter(user.timestamp) : ""}</p>
           </NameWrapper>
         </UserWrapper>
         {children}

@@ -4,7 +4,8 @@ import Section from '@/components/Section';
 import { media } from '@/utils/theme';
 import TextInput from '@/components/TextInput';
 import Button from '@/components/Button';
-
+import { useTranslation } from 'react-i18next';
+import { i18nNamespace } from '@/constants';
 import { RegisterPageState } from './Register';
 
 const StyledSection = styled(Section)`
@@ -64,6 +65,15 @@ const InfoWrapper = styled.div`
       font-size: 24px;
     }
   }
+
+  ${media('desktop')} {
+    margin-bottom: 100px;
+  }
+
+  ${media('phone')} {
+    margin-bottom: 0px;
+  }
+
 `;
 
 type TProps = {
@@ -73,6 +83,8 @@ type TProps = {
 };
 
 const InputName: FC<TProps> = props => {
+  const { t } = useTranslation(i18nNamespace.Register);
+
   const onInputName = () => {
     if (props.userName) {
       props.onChangePageState(RegisterPageState.SignIn);
@@ -96,9 +108,9 @@ const InputName: FC<TProps> = props => {
     <StyledSection width="100vw" justifyContent="flex-start" row fullscreen>
       <RegisterWrapper>
         <InfoWrapper>
-          <p>你好，請問您的真實姓名是？</p>
+          <p>{t('InputName.ask')}</p>
           <StyledTextInput
-            placeholder="請輸入真實姓名"
+            placeholder={t('InputName.enter')}
             value={props.userName}
             onChange={props.onChangeUserName}
             input={{
@@ -107,7 +119,7 @@ const InputName: FC<TProps> = props => {
             }}
           />
           <StyledButton disabled={!props.userName} onClick={onInputName}>
-            下一步
+            {t('Set.next')}
           </StyledButton>
         </InfoWrapper>
       </RegisterWrapper>

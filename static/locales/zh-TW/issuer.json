@@ -44,10 +44,23 @@
             "error": "發證密碼錯誤",
             "issue": "發行證書",
             "success0": "恭喜成功！",
-            "success1": "已發證",
-            "issuing": "發證中..."
+            "success1": "已發證"
         },
         "errorPwd": "密碼錯誤 3 次，請洽詢服務人員重新設定...",
-        "uploadTemplate": "上傳模板..."
-    }
+        "uploadTemplate": "上傳模板...",
+        "issuing": "發證中..."
+    },
+    "CertModal": {
+        "issuer": "發證單位",
+        "issuerName": "國立高雄科技大學",
+        "certName": "區塊鏈集訓證書",
+        "date": "發證日期",
+        "upload": "證書圖檔",
+        "limit": "* 檔案限制 1 MB",
+        "uploadPic": "上傳",
+        "discard": "取消",
+        "add": "新增",
+        "progress": "認證進度"
+    },
+    "addCert": "新增證書"
 }

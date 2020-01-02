@@ -111,22 +111,22 @@ const IssueCertModal: FC<TProps> = ({ visible, onClose }) => {
       }}
     >
       <Wrapper>
-        <Title style={{ marginBottom: '1em' }}>{t('CertModal.addCert')}</Title>
+        <Title style={{ marginBottom: '1em' }}>{t('addCert')}</Title>
         <TextInput
-          label="發證單位"
+          label={t('CertModal.issuer')}
           value={issuer}
           onChange={value => setIssuer(value)}
-          placeholder="國立高雄科技大學"
+          placeholder={t('CertModal.issuerName')}
         />
         <TextInput
           label={t('Issue.step1.certName')}
           value={certName}
           onChange={value => setCertName(value)}
-          placeholder="區塊鏈集訓證書"
+          placeholder={t('CertModal.certName')}
         />
         <ItemWrapper>
           <LabelWrapper>
-            <label>發證日期</label>
+            <label>{t('CertModal.date')}</label>
           </LabelWrapper>
           <DayPickerInput
             format="YYYY-MM-DD"
@@ -140,7 +140,7 @@ const IssueCertModal: FC<TProps> = ({ visible, onClose }) => {
         </ItemWrapper>
         <ItemWrapper>
           <LabelWrapper>
-            <label>上傳證書</label>
+            <label>{t('CertModal.upload')}</label>
           </LabelWrapper>
           <InputFile
             file={file}
@@ -158,8 +158,8 @@ const IssueCertModal: FC<TProps> = ({ visible, onClose }) => {
                 reader.readAsDataURL(f);
               }
             }}
-            description="* 檔案限制 1 M"
-            buttonText={'上傳圖檔'}
+            description={t('CertModal.limit')}
+            buttonText={t('CertModal.uploadPic')}
             accept=".png,.jpg,.jpeg"
           />
         </ItemWrapper>
@@ -169,9 +169,9 @@ const IssueCertModal: FC<TProps> = ({ visible, onClose }) => {
 
         <Row>
           <Button mode="white" onClick={onCancel}>
-            取消
+            {t('CertModal.discard')}
           </Button>
-          <Button onClick={onAddCert}>新增</Button>
+          <Button onClick={onAddCert}>{t('CertModal.add')}</Button>
         </Row>
       </Wrapper>
     </Modal>

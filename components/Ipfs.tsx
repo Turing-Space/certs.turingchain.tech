@@ -8,19 +8,7 @@ import queryString from 'query-string';
 import Head from 'next/head';
 import Side from '@/components/verifier/Proof';
 import Certificate from '@/components/verifier/Certificate';
-
-function timeConverter(UNIX_timestamp: number) {
-  var a = new Date(UNIX_timestamp * 1000);
-  var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  var year = a.getFullYear();
-  var month = months[a.getMonth()];
-  var date = a.getDate();
-  var hour = a.getHours();
-  var min = a.getMinutes();
-  var sec = a.getSeconds();
-  var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec;
-  return time;
-}
+import { timeConverter } from '@/utils';
 
 let Root = styled.div`
   width: 100%;
@@ -56,7 +44,7 @@ const Ipfs: NextFC = () => {
       await fetch(`https://x1certificate-aqkcbxdduq-uc.a.run.app/v1/view/certs?ipfs=${hash}`)
         .then(res => res.json())
         .then((returnData) => {
-          setDate(timeConverter(returnData.content.timestamp));
+          setDate(timeConverter(returnData.content.timestamp, true));
           setIssuerName(returnData.content.issuerName);
           setType(returnData.content.type);
           setIPFS(returnData.content.ipfs);

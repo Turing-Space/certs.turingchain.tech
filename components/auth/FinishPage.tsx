@@ -5,6 +5,8 @@ import { media } from '@/utils/theme';
 import { getRelativePath } from '@/utils';
 import Button from '@/components/Button';
 import { Router } from '@/i18n';
+import { useTranslation } from 'react-i18next';
+import { i18nNamespace } from '@/constants';
 
 const StyledSection = styled(Section)`
   position: absolute;
@@ -74,6 +76,7 @@ const InfoWrapper = styled.div`
 `;
 
 const FinishPage: FC = () => {
+  const { t } = useTranslation(i18nNamespace.Product);
 
   // change product page button
   const onConfirm = () => {
@@ -84,17 +87,17 @@ const FinishPage: FC = () => {
     <StyledSection width="100vw" justifyContent="flex-start" row fullscreen>
       <RegisterWrapper>
         <InfoWrapper>
-        <Logo
-          src={getRelativePath('/static/logo/image-new-get.png')}
-          srcSet={`${getRelativePath(
-            '/static/logo/image-new-get@2x.png',
-          )} 2x, ${getRelativePath('/static/logo/image-new-get@3x.png')} 3x`}
-        />
-        <div className="textBox">
-          <p>獲得<span>「創世玩家證書」</span></p>
-          <p>—歡迎加入Turing Certs！</p>
-        </div>
-          <StyledButton onClick={onConfirm}>確認</StyledButton>
+          <Logo
+            src={getRelativePath('/static/logo/image-new-get.png')}
+            srcSet={`${getRelativePath(
+              '/static/logo/image-new-get@2x.png',
+            )} 2x, ${getRelativePath('/static/logo/image-new-get@3x.png')} 3x`}
+          />
+          <div className="textBox">
+            <p>{t('Finish.pioneer.0')}<span>{t('Finish.pioneer.1')}</span></p>
+            <p>{t('Finish.pioneer.2')}</p>
+          </div>
+          <StyledButton onClick={onConfirm}>{t('Finish.pioneer.ok')}</StyledButton>
         </InfoWrapper>
       </RegisterWrapper>
     </StyledSection>

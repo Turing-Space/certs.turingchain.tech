@@ -2,6 +2,8 @@ import { FC } from 'react';
 import styled from 'styled-components';
 import Button from '@/components/Button';
 import { TMyCertsRenderComponentProps } from '@/components/Cert/MyCerts';
+import { useTranslation } from 'react-i18next';
+import { i18nNamespace } from '@/constants';
 
 const Wrapper = styled.div`
   display: flex;
@@ -22,13 +24,15 @@ const StyledButton = styled(Button)`
 `;
 
 const CertsNull: FC<TMyCertsRenderComponentProps> = ({ openModal }) => {
+  const { t } = useTranslation(i18nNamespace.Product);
+
   return (
     <Wrapper>
       <NUllImg src={require('../../static/bg/bg-certs-empty.svg')} />
-      <p>Oops！你的證書還沒有受到保障</p>
-      <p>讓我們開始吧！</p>
+      <p>{t('Null.notice0')}</p>
+      <p>{t('Null.notice1')}</p>
       <StyledButton mode="white" onClick={openModal}>
-        新增證書
+        {t('Null.add')}
       </StyledButton>
     </Wrapper>
   );

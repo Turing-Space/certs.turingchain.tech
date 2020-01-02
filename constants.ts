@@ -16,7 +16,8 @@ export enum i18nNamespace {
   Home = 'home',
   Demo = 'demo',
   Issuer = 'issuer',
-  Product = 'product'
+  Product = 'product',
+  Register = 'register'
 }
 
 export enum CertTemplate {

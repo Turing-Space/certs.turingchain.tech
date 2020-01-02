@@ -1,6 +1,6 @@
 // 全局声明svg component定义
 declare interface SvgrComponent
-  extends React.StatelessComponent<React.SVGAttributes<SVGElement>> {}
+  extends React.StatelessComponent<React.SVGAttributes<SVGElement>> { }
 
 declare module '*.svg' {
   const content: SvgrComponent;
@@ -8,6 +8,7 @@ declare module '*.svg' {
 }
 
 declare module 'react-lazy-load-image-component';
+declare module 'mgr-pdf-viewer-react';
 
 type TResponsiveImage = {
   toString: () => string;
