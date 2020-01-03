@@ -30,7 +30,8 @@ const InfoWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: ${p => p.theme.colors.white};
-  padding: 2em 5%;
+  padding: 1.5em 0.5em;
+  margin-top: 10px;
 
   ${media('largeDesktop')} {
     padding: 2em 8%;

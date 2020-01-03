@@ -3,10 +3,12 @@ import styled from 'styled-components';
 
 const Wrapper = styled.footer`
   position: relative;
-  height: 20vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
+  text-align: center;
+  bottom: 15px;
+  margin-top: 20px;
 `;
 
 const Divider = styled.div`

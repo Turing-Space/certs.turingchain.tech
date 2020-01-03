@@ -50,6 +50,7 @@ export default createGlobalStyle`
   html {
     font-size: 14px;
     font-weight: 300;
+    height: 100vh;
 
     /**
      * use apple system for default

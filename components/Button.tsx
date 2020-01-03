@@ -19,6 +19,7 @@ const Button = styled.button<TButtonProps>`
   letter-spacing: 0.92px;
   padding: 1em;
   transition: all 0.1s ease-in;
+  margin-top: 2.2vh;
 
   ${p =>
     p.disabled

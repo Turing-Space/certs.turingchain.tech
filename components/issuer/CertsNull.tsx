@@ -16,8 +16,7 @@ const Wrapper = styled.div`
 `;
 
 const NUllImg = styled.img`
-  width: 400px;
-  height: 400px;
+  height: 25vh;
 `;
 
 const StyledButton = styled(Button)`
