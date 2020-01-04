@@ -153,6 +153,17 @@ const Proof: FC<TProps> = props => {
         <a href={'https://thetangle.org/transaction/' + props.iota}>
           <InfoContent>{props.iota}</InfoContent>
         </a>
+        <a
+          href={`https://www.linkedin.com/profile/add?startTask=TuringCerts"`}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            src={getRelativePath('/static/logo/linkedin.png')}
+            alt="LinkedIn Add to Profile button"
+            style={{ "width": "60%", "marginTop": "15px" }}
+          />
+        </a>
       </Info>
     </Root>
   );

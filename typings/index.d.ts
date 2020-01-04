@@ -9,6 +9,7 @@ declare module '*.svg' {
 
 declare module 'react-lazy-load-image-component';
 declare module 'mgr-pdf-viewer-react';
+declare module 'react-linkedin-certification';
 
 type TResponsiveImage = {
   toString: () => string;
