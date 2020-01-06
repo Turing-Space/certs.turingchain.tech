@@ -217,12 +217,12 @@ const ViewCertModal: FC<TProps> = ({ cert, isOpen, onClose }) => {
       }}
     >
       <ModalWrapper>
-        {/* <a href={'https://certs.turingchain.tech/ipfs/?hash=' + cert.ipfs}> */}
+        {/* <a href={'https://certs.turingchain.tech/ipfs?hash=' + cert.ipfs}> */}
         <CertCover src={'https://ipfs.certs.turingchain.tech/ipfs/' + cert.ipfs} />
         {/* </a> */}
         <p className="issuer">{cert.issuer}</p>
         <p className="name">{cert.name}</p>
-        <p className="smartLink"><a href={'https://certs.turingchain.tech/ipfs/?hash=' + cert.ipfs}>SmartLink</a></p>
+        <p className="smartLink"><a href={'https://certs.turingchain.tech/ipfs?hash=' + cert.ipfs}>SmartLink</a></p>
         <p className="create-data">{timeConverter(cert.timestamp)}</p>
         <Divider />
         <ModalProgressTitleWrapper>

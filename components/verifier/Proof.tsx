@@ -1,8 +1,10 @@
 import React from 'react';
-import { FC, useState, useCallback } from 'react';
+import { FC, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { getRelativePath } from '@/utils';
-import LinkedinModal from '../Cert/LinkedinModal';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCopy } from '@fortawesome/free-regular-svg-icons';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const certicheckDoneIcon = '/static/icon/icon-certicheck.svg';
 // const hideIcon = '/static/icon/icon-hide.svg';
@@ -109,70 +111,133 @@ type TProps = {
 };
 
 const Proof: FC<TProps> = props => {
-  const [openIdx, setOpenIdx] = useState<number>(-1);
-  const onCloseViewCertModal = useCallback(() => setOpenIdx(-1), []);
+  const [copyName, setCopyName] = useState<Boolean>(false);
+  const [copyOrg, setCopyOrg] = useState<Boolean>(false);
+  const [copyDate, setCopyDate] = useState<Boolean>(false);
+  const [copyID, setCopyID] = useState<Boolean>(false);
+  const [copyURL, setCopyURL] = useState<Boolean>(false);
+  const [loading, setLoading] = useState<Boolean>(true);
 
-  return (
-    <Root>
-      <TitleBox>
-        <Title>CERTIFICATION</Title>
-      </TitleBox>
-      <Hide>
-        {/* <span>收起</span>
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 30);
+  }, []);
+
+  if (loading)
+    return null;
+  else
+    return (
+      <Root>
+        <TitleBox>
+          <Title>CERTIFICATION</Title>
+        </TitleBox>
+        <Hide>
+          {/* <span>收起</span>
         <img src={getRelativePath(hideIcon)} alt="" /> */}
-      </Hide>
-      <Status>
-        <Rectangle />
-        <img src={getRelativePath(certicheckDoneIcon)} alt="" />
-        <VSA>Verified Source Authenticity</VSA>
+        </Hide>
+        <Status>
+          <Rectangle />
+          <img src={getRelativePath(certicheckDoneIcon)} alt="" />
+          <VSA>Verified Source Authenticity</VSA>
 
-        <a href={'https://thetangle.org/transaction/' + props.iota}>
-          <More>More</More>
-        </a>
-      </Status>
-      <Info>
-        <InfoH1>ISSUER</InfoH1>
-        <InfoH2>Date</InfoH2>
-        <InfoContent>{props.date}</InfoContent>
-        <InfoH2>Name</InfoH2>
-        <a href={props.issuerWebsite}>
-          <InfoContent>{props.issuerName}</InfoContent>
-        </a>
-        <InfoH2>Type</InfoH2>
-        <InfoContent>{props.type}</InfoContent>
-        <InfoH1>HOLDER</InfoH1>
-        <InfoH2>Name</InfoH2>
-        <a href={'https://certs.turingchain.tech/product?id=' + props.holderId}>
-          <InfoContent>{props.holderName}</InfoContent>
-        </a>
-        {/* <InfoH2>E-mail</InfoH2>
-        <InfoContent>{props.holderEmail}</InfoContent> */}
-        <InfoH1>Blockchain Footprint</InfoH1>
-        <InfoH2>IPFS</InfoH2>
-        <a href={'https://ipfs.certs.turingchain.tech/ipfs/' + props.ipfs}>
-          <InfoContent>{props.ipfs}</InfoContent>
-        </a>
-        <InfoH2>IOTA</InfoH2>
-        <a href={'https://thetangle.org/transaction/' + props.iota}>
-          <InfoContent>{props.iota}</InfoContent>
-        </a>
-        <img
-          src={getRelativePath('/static/logo/linkedin.png')}
-          alt="LinkedIn Add to Profile button"
-          style={{ width: '60%', marginTop: '15px', marginBottom: '20px' }}
-          onClick={() => {
-            // setOpenIdx(1)
-            window.open(
-              'https://www.linkedin.com/profile/add?startTask=TuringCerts',
-              'popup',
-              'width=800,height=750',
-            );
-            return false;
-          }}
-        />
-      </Info>
-    </Root>
-  );
+          <a href={'https://thetangle.org/transaction/' + props.iota}>
+            <More>More</More>
+          </a>
+        </Status>
+        <Info>
+          <InfoH1>RECIPIENT</InfoH1>
+          <InfoH2>Name</InfoH2>
+          <a href={'https://certs.turingchain.tech/product?id=' + props.holderId}>
+            <InfoContent>{props.holderName}</InfoContent>
+          </a>
+
+          <InfoH1>TESTIMONY</InfoH1>
+          <InfoH2>Name
+        <CopyToClipboard text={props.type} style={{ margin: '0 10px' }}
+              onCopy={() => {
+                setCopyName(true)
+                setTimeout(() => setCopyName(false), 1700);
+              }}>
+              <FontAwesomeIcon icon={faCopy} size="xs" />
+            </CopyToClipboard>
+            {copyName ? <span style={{ color: '#2867B2' }}>Copied!</span> : null}
+          </InfoH2>
+
+
+          <InfoContent>{props.type}</InfoContent>
+          <InfoH2>Issuing Organization
+        <CopyToClipboard text={props.issuerName} style={{ margin: '0 10px' }}
+              onCopy={() => {
+                setCopyOrg(true)
+                setTimeout(() => setCopyOrg(false), 1700);
+              }}>
+              <FontAwesomeIcon icon={faCopy} size="xs" />
+            </CopyToClipboard>
+            {copyOrg ? <span style={{ color: '#2867B2' }}>Copied!</span> : null}
+          </InfoH2>
+          <a href={props.issuerWebsite}>
+            <InfoContent>{props.issuerName}</InfoContent>
+          </a>
+          <InfoH2>Issue Date
+        <CopyToClipboard text={props.date} style={{ margin: '0 10px' }}
+              onCopy={() => {
+                setCopyDate(true)
+                setTimeout(() => setCopyDate(false), 1700);
+              }}>
+              <FontAwesomeIcon icon={faCopy} size="xs" />
+            </CopyToClipboard>
+            {copyDate ? <span style={{ color: '#2867B2' }}>Copied!</span> : null}
+          </InfoH2>
+          <InfoContent>{props.date}</InfoContent>
+
+          <InfoH1>CREDENTIAL</InfoH1>
+          <InfoH2>Credential ID
+        <CopyToClipboard text={props.ipfs} style={{ margin: '0 10px' }}
+              onCopy={() => {
+                setCopyID(true)
+                setTimeout(() => setCopyID(false), 1700);
+              }}>
+              <FontAwesomeIcon icon={faCopy} size="xs" />
+            </CopyToClipboard>
+            {copyID ? <span style={{ color: '#2867B2' }}>Copied!</span> : null}
+          </InfoH2>
+          <a href={'https://ipfs.certs.turingchain.tech/ipfs/' + props.ipfs}>
+            <InfoContent>{props.ipfs}</InfoContent>
+          </a>
+          <InfoH2>Credential URL
+        <CopyToClipboard text={'https://certs.turingchain.tech/ipfs?hash=' + props.ipfs} style={{ margin: '0 10px' }}
+              onCopy={() => {
+                setCopyURL(true)
+                setTimeout(() => setCopyURL(false), 1700);
+              }}>
+              <FontAwesomeIcon icon={faCopy} size="xs" />
+            </CopyToClipboard>
+            {copyURL ? <span style={{ color: '#2867B2' }}>Copied!</span> : null}
+          </InfoH2>
+          <a href={'https://certs.turingchain.tech/ipfs?hash=' + props.ipfs}>
+            <InfoContent>{'https://certs.turingchain.tech/ipfs?hash=' + props.ipfs}</InfoContent>
+          </a>
+          <InfoH2>Credential Hash</InfoH2>
+          <a href={'https://thetangle.org/transaction/' + props.iota}>
+            <InfoContent>{props.iota}</InfoContent>
+          </a>
+          <img
+            src={getRelativePath('/static/logo/linkedin.png')}
+            alt="LinkedIn Add to Profile button"
+            style={{ width: '60%', marginTop: '15px', marginBottom: '20px' }}
+            onClick={() => {
+              window.open(
+                'https://www.linkedin.com/profile/add?startTask=TuringCerts',
+                'popup',
+                'width=800,height=750,left=380,top=110',
+              );
+              return false;
+            }}
+          />
+        </Info>
+      </Root>
+    );
 };
 
 export default Proof;

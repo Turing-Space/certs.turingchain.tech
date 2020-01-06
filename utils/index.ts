@@ -40,7 +40,7 @@ export function dataURItoBlob(dataURI: string) {
   return new Blob([ia], { type: mimeString });
 }
 
-export function timeConverter(UNIX_timestamp: number, full: boolean = false) {
+export function timeConverter(UNIX_timestamp: number) {
   if (UNIX_timestamp.toString().length < 13) UNIX_timestamp = UNIX_timestamp * 1000; // convert to ms
 
   var a = new Date(UNIX_timestamp);
@@ -48,15 +48,9 @@ export function timeConverter(UNIX_timestamp: number, full: boolean = false) {
   var year = a.getFullYear();
   var month = months[a.getMonth()];
   var date = a.getDate();
-  var hour = a.getHours();
-  var min = a.getMinutes();
-  var sec = a.getSeconds();
   var time;
 
-  if (full)
-    time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec;
-  else
-    time = date + ' ' + month + ' ' + year;
+  time = date + ' ' + month + ' ' + year;
 
   return time;
 }

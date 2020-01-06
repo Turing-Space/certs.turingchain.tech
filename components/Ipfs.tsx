@@ -44,7 +44,7 @@ const Ipfs: NextFC = () => {
       await fetch(`https://x1certificate-aqkcbxdduq-uc.a.run.app/v1/view/certs?ipfs=${hash}`)
         .then(res => res.json())
         .then((returnData) => {
-          setDate(timeConverter(returnData.content.timestamp, true));
+          setDate(timeConverter(returnData.content.timestamp));
           setIssuerName(returnData.content.issuerName);
           setType(returnData.content.type);
           setIPFS(returnData.content.ipfs);
