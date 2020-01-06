@@ -97,6 +97,12 @@ const InfoContent = styled.div`
   padding: 0px 0px 24px 0px;
   word-break: break-all;
 `;
+
+const CopyToClipboardWrapper = styled(CopyToClipboard)`
+  margin: 0 10px;
+  cursor: pointer;
+`;
+
 type TProps = {
   ipfs: string;
   iota: string;
@@ -154,65 +160,65 @@ const Proof: FC<TProps> = props => {
 
           <InfoH1>TESTIMONY</InfoH1>
           <InfoH2>Name
-        <CopyToClipboard text={props.type} style={{ margin: '0 10px' }}
+        <CopyToClipboardWrapper text={props.type}
               onCopy={() => {
                 setCopyName(true)
                 setTimeout(() => setCopyName(false), 1700);
               }}>
               <FontAwesomeIcon icon={faCopy} size="xs" />
-            </CopyToClipboard>
+            </CopyToClipboardWrapper>
             {copyName ? <span style={{ color: '#2867B2' }}>Copied!</span> : null}
           </InfoH2>
 
 
           <InfoContent>{props.type}</InfoContent>
           <InfoH2>Issuing Organization
-        <CopyToClipboard text={props.issuerName} style={{ margin: '0 10px' }}
+        <CopyToClipboardWrapper text={props.issuerName}
               onCopy={() => {
                 setCopyOrg(true)
                 setTimeout(() => setCopyOrg(false), 1700);
               }}>
               <FontAwesomeIcon icon={faCopy} size="xs" />
-            </CopyToClipboard>
+            </CopyToClipboardWrapper>
             {copyOrg ? <span style={{ color: '#2867B2' }}>Copied!</span> : null}
           </InfoH2>
           <a href={props.issuerWebsite}>
             <InfoContent>{props.issuerName}</InfoContent>
           </a>
           <InfoH2>Issue Date
-        <CopyToClipboard text={props.date} style={{ margin: '0 10px' }}
+        <CopyToClipboardWrapper text={props.date}
               onCopy={() => {
                 setCopyDate(true)
                 setTimeout(() => setCopyDate(false), 1700);
               }}>
               <FontAwesomeIcon icon={faCopy} size="xs" />
-            </CopyToClipboard>
+            </CopyToClipboardWrapper>
             {copyDate ? <span style={{ color: '#2867B2' }}>Copied!</span> : null}
           </InfoH2>
           <InfoContent>{props.date}</InfoContent>
 
           <InfoH1>CREDENTIAL</InfoH1>
           <InfoH2>Credential ID
-        <CopyToClipboard text={props.ipfs} style={{ margin: '0 10px' }}
+        <CopyToClipboardWrapper text={props.ipfs}
               onCopy={() => {
                 setCopyID(true)
                 setTimeout(() => setCopyID(false), 1700);
               }}>
               <FontAwesomeIcon icon={faCopy} size="xs" />
-            </CopyToClipboard>
+            </CopyToClipboardWrapper>
             {copyID ? <span style={{ color: '#2867B2' }}>Copied!</span> : null}
           </InfoH2>
           <a href={'https://ipfs.certs.turingchain.tech/ipfs/' + props.ipfs}>
             <InfoContent>{props.ipfs}</InfoContent>
           </a>
           <InfoH2>Credential URL
-        <CopyToClipboard text={'https://certs.turingchain.tech/ipfs?hash=' + props.ipfs} style={{ margin: '0 10px' }}
+        <CopyToClipboardWrapper text={'https://certs.turingchain.tech/ipfs?hash=' + props.ipfs}
               onCopy={() => {
                 setCopyURL(true)
                 setTimeout(() => setCopyURL(false), 1700);
               }}>
               <FontAwesomeIcon icon={faCopy} size="xs" />
-            </CopyToClipboard>
+            </CopyToClipboardWrapper>
             {copyURL ? <span style={{ color: '#2867B2' }}>Copied!</span> : null}
           </InfoH2>
           <a href={'https://certs.turingchain.tech/ipfs?hash=' + props.ipfs}>
@@ -236,7 +242,7 @@ const Proof: FC<TProps> = props => {
             }}
           />
         </Info>
-      </Root>
+      </Root >
     );
 };
 
