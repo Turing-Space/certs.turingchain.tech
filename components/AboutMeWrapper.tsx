@@ -40,6 +40,7 @@ const InfoWrapper = styled.div`
 
 const UserWrapper = styled.div`
   display: flex;
+  flex-direction: column;
 `;
 
 const Avatar = styled.div<{ src: string }>`
@@ -56,6 +57,8 @@ const NameWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
+  margin-top: 15px;
 
   .name {
     white-space: nowrap;
@@ -96,8 +99,8 @@ const AboutMeWrapper: FC<TProps> = ({ children, title }) => {
         <UserWrapper>
           <Avatar src={user.avatarUri} />
           <NameWrapper>
-            <p className="name">{user.name}</p>
-            <p className="join-date">{user.timestamp ? "Joined at " + timeConverter(user.timestamp) : ""}</p>
+            <p className="name">{user.name || "Me"}</p>
+            {/* <p className="join-date">{user.timestamp ? "Joined at " + timeConverter(user.timestamp) : ""}</p> */}
           </NameWrapper>
         </UserWrapper>
         {children}
