@@ -65,7 +65,14 @@ const LogoWrapper = styled.div`
 `;
 
 const Logo = styled.div<{ src: string; size: number }>`
-  background: url(${p => p.src}) center no-repeat/contain;
+  background: url(${p => p.src});
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: contain; 
+
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
 
   ${media('phone')} {
     width: ${p => `calc(80px * ${p.size})`};
