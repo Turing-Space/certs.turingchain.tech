@@ -1,4 +1,4 @@
-# 0x1cert.turingchain.tech
+# certs.turingchain.tech
 
 [![Build Status](https://travis-ci.org/Turing-Chain/certs.turingchain.tech.svg?branch=master)](https://travis-ci.org/Turing-Chain/certs.turingchain.tech)
 
@@ -14,4 +14,7 @@ $ yarn install
 
 ```
 $ yarn dev
+$ git add .
+$ git commit -m "commit msg" --no-verify
+$ git push
 ```
