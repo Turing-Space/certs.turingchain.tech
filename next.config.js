@@ -29,7 +29,7 @@ module.exports = withBundleAnalyzer(
             '/product': { page: '/product', query: { lng: '', id: '' } },
             '/ipfs': { page: '/ipfs', query: { hash: '' } },
             '/auth/login': { page: '/auth/login', query: { mode: '' } },
-            '/issuer': { page: '/issuer', query: { lng: '' } },
+            '/issuer': { page: '/issuer', query: { lng: '', id: '' } },
             '/issuer/issue-cert/1': {
               page: '/issuer/issue-cert/[page]',
               query: { page: '1' },
@@ -44,6 +44,8 @@ module.exports = withBundleAnalyzer(
             '/en': { page: '/', query: { lng: 'en' } },
             '/en/product': { page: '/product', query: { lng: 'en', id: '' } },
             '/en/ipfs': { page: '/ipfs', query: { hash: '' } },
+            '/en/issuer': { page: '/issuer', query: { lng: '', id: '' } },
+            'en/auth/login': { page: '/auth/login', query: { mode: '' } },
           };
         },
         assetPrefix: GITHUB ? `/${PROJ_NAME}/` : '',

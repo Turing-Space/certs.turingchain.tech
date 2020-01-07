@@ -123,7 +123,7 @@ const Certs: FC<TProps> = ({ certs }) => {
 
   return (
     <Wrapper>
-      {certs.map(async (cert, idx) => {
+      {certs.map((cert, idx) => {
         console.log(cert.issuer, idx)
         const ipfsImg = 'https://ipfs.certs.turingchain.tech/ipfs/' + cert.ipfs;
         const progressPercent = Math.round(

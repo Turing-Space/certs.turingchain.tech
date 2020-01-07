@@ -27,28 +27,17 @@ const IconWrapper = styled.div`
   flex-direction: column;
   width: 8.2em;
   height: 8.2em;
-  border-radius: 50%;
-  margin-left: 2em;
+  
   > p {
     letter-spacing: 0.67px;
   }
-
-  ${media('largeDesktop')} {
-    width: 8.5em;
-    height: 8.5em;
-    border: solid 6px ${p => p.theme.colors.primary};
+  ${media('phone')} {
+    font-size: 1em;
+    float: right
   }
 
   ${media('desktop')} {
-    width: 8.2em;
-    height: 8.2em;
-    border: solid 6px ${p => p.theme.colors.primary};
-  }
-
-  ${media('phone')} {
-    width: 7em;
-    height: 7em;
-    font-size: 0.61em;
+    font-size: 1.2em;
   }
 `;
 
@@ -64,7 +53,7 @@ const AnimatedNumber = styled(animated.p)`
   }
 
   ${media('desktop')} {
-    font-size: 3em;
+    font-size: 2em;
   }
 `;
 
@@ -82,10 +71,10 @@ const AboutMe = () => {
     number: certificatedCount,
     from: { number: 0 },
   });
-  const certificatingProps = useSpring({
-    number: certificatingCount,
-    from: { number: 0 },
-  });
+  // const certificatingProps = useSpring({
+  //   number: certificatingCount,
+  //   from: { number: 0 },
+  // });
 
   const icons = [
     {
@@ -97,12 +86,13 @@ const AboutMe = () => {
       name: t('AboutMe.icon2'),
       count: certificatedCount,
       props: certificatedProps,
-    },
-    {
-      name: t('AboutMe.icon3'),
-      count: certificatingCount,
-      props: certificatingProps,
-    },
+    }
+    // ,
+    // {
+    //   name: t('AboutMe.icon3'),
+    //   count: certificatingCount,
+    //   props: certificatingProps,
+    // },
   ];
   return (
     <AboutMeWrapperExtend title={t('AboutMe.title')}>

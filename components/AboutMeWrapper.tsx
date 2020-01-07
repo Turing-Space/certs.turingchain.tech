@@ -48,6 +48,7 @@ const Avatar = styled.div<{ src: string }>`
   border: solid 1px #e6e6e6;
   background: url(${p => p.src}) center no-repeat/cover;
   margin-right: 1em;
+  margin-left: 1.5em; 
   border-radius: 50%;
 `;
 

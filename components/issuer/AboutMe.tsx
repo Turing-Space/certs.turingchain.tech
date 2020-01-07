@@ -54,7 +54,6 @@ const IconWrapper = styled.div`
 
 const AnimatedNumber = styled(animated.p)`
   color: ${p => p.theme.colors.primary};
-  margin-top: 3px;
   font-weight: bold;
   font-family: ${p => p.theme.fontFamily.SFText};
   
@@ -66,6 +65,7 @@ const AnimatedNumber = styled(animated.p)`
 
   ${media('desktop')} {
     font-size: 3em;
+    margin-top: 3px;
   }
 `;
 

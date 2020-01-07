@@ -84,6 +84,7 @@ const IssueCertModal: FC<TProps> = ({ visible, onClose }) => {
           timestamp: date.getTime(),
           pin: false,
           progress: [true, false, false, false, false],
+          issuing: true
         },
       ]);
       onClose();
