@@ -67,9 +67,6 @@ const LogoWrapper = styled.div`
 const Logo = styled.div<{ src: string; size: number }>`
   background: url(${p => p.src}) center no-repeat/contain;
 
-  width: ${p => `calc(65px * ${p.size})`};
-  height: ${p => `calc(65px * ${p.size})`};
-
   ${media('phone')} {
     width: ${p => `calc(80px * ${p.size})`};
     height: ${p => `calc(80px * ${p.size})`};
@@ -92,7 +89,7 @@ const Logo = styled.div<{ src: string; size: number }>`
 
 const logos = [
   {
-    name: '',
+    name: 'Stanford',
     src: getRelativePath('/static/partners/stanford.svg'),
     scale: 1,
   },
@@ -107,7 +104,7 @@ const logos = [
     scale: 1,
   },
   {
-    name: '',
+    name: 'Clemson',
     src: getRelativePath('/static/partners/clemson.svg'),
     scale: 1,
   },
@@ -127,7 +124,7 @@ const logos = [
     scale: 1,
   },
   {
-    name: '',
+    name: 'NCKU',
     src: getRelativePath('/static/partners/NCKU.svg'),
     scale: 1,
   },
@@ -137,62 +134,62 @@ const logos = [
     scale: 1.1,
   },
   {
-    name: '',
+    name: 'foreign',
     src: getRelativePath('/static/partners/foreign.svg'),
     scale: 1.1,
   },
   {
-    name: '',
+    name: 'min',
     src: getRelativePath('/static/partners/min.svg'),
     scale: 0.8,
   },
   {
-    name: '',
+    name: 'sichiu',
     src: getRelativePath('/static/partners/sichiu.svg'),
     scale: 0.8,
   },
   {
-    name: '',
+    name: 'business',
     src: getRelativePath('/static/partners/business.png'),
     scale: 0.8,
   },
   {
-    name: '',
+    name: 'chimin',
     src: getRelativePath('/static/partners/chimin.svg'),
     scale: 1.2,
   },
   {
-    name: '',
+    name: 'ABC-Blockchain',
     src: getRelativePath('/static/partners/ABC-Blockchain.png'),
     scale: 1,
   },
   {
-    name: '',
+    name: 'ACER',
     src: getRelativePath('/static/partners/ACER.png'),
     scale: 1,
   },
   {
-    name: '',
+    name: 'angelhack',
     src: getRelativePath('/static/partners/angelhack.png'),
     scale: 1,
   },
   {
-    name: '',
+    name: 'BASF',
     src: getRelativePath('/static/partners/BASF.png'),
     scale: 1,
   },
   {
-    name: '',
+    name: 'KPMG',
     src: getRelativePath('/static/partners/KPMG.png'),
     scale: 1,
   },
   {
-    name: '',
+    name: 'Maincoin',
     src: getRelativePath('/static/partners/Maincoin.png'),
     scale: 1,
   },
   {
-    name: '',
+    name: 'yanmin',
     src: getRelativePath('/static/partners/yanmin.png'),
     scale: 1.1,
   },
@@ -203,7 +200,7 @@ const logos = [
   //   scale: 1.1,
   // },
   {
-    name: '',
+    name: 'sin',
     src: getRelativePath('/static/partners/sin.png'),
     scale: 1,
   },
