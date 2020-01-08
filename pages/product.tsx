@@ -10,11 +10,12 @@ import CertsNull from '@/components/product/CertsNull';
 import { useEffect, useContext } from 'react';
 import { UserContext } from '@/contexts/user';
 import notify from '@/utils/notify';
-import { getCerts } from '@/utils/api';
+import { getCerts, getUsers } from '@/utils/api';
 import { CertsContext } from '@/contexts/certs';
 import withAuth from '@/hoc/withAuth';
 import { preparedCerts } from '@/utils/certs';
 import queryString from 'query-string';
+import { preparedUser } from '@/utils/user';
 
 
 const ProductPage: NextFC = () => {
@@ -25,18 +26,56 @@ const ProductPage: NextFC = () => {
 
   useEffect(() => {
     const value = queryString.parse(window.location.search);
+    const id = user.uid || String(value.id)
+
     updateUser(u => ({
       ...u,
-      id: user.id || String(value.id),
+      id: id,
       name: user.name,
     }));
 
     const fetch = async () => {
-      const [err, certs] = await getCerts({ holder: user.id || String(value.id) });
+      const [err, certs] = await getCerts({ holder: id });
       if (!certs) {
         notify.error({ msg: err });
       } else {
         updateCerts(preparedCerts(certs));
+      }
+
+      if (!user.uid) {
+        const [err2, newUser] = await getUsers({ uid: id });
+        if (!newUser) {
+          notify.error({ msg: err2 });
+        } else {
+          updateUser(preparedUser(newUser));
+        }
+      }
+
+    };
+    fetch();
+  }, []);
+
+  return (
+    <ProductLayout title={'TuringCerts'} routePath="/product">
+      <AboutMe />
+      <MyCerts
+        title={t('MyCerts.title')}
+        Empty={CertsNull}
+        TitleRight={MyCertsTitleRight}
+        Modal={IssueCertModal}
+      />
+    </ProductLayout>
+  );
+};
+
+ProductPage.getInitialProps = async () => ({
+  namespacesRequired: [i18nNamespace.Common, i18nNamespace.Product],
+});
+
+export default withAuth('user', () => {
+  return { namespacesRequired: [i18nNamespace.Common, i18nNamespace.Product] };
+})(ProductPage);
+
 
         // updateCerts([
         //   {
@@ -73,29 +112,3 @@ const ProductPage: NextFC = () => {
         //     issuing: false
         //   },
         // ]);
-      }
-    };
-    fetch();
-  }, []);
-
-  // }, []);
-  return (
-    <ProductLayout title={'TuringCerts'} routePath="/product">
-      <AboutMe />
-      <MyCerts
-        title={t('MyCerts.title')}
-        Empty={CertsNull}
-        TitleRight={MyCertsTitleRight}
-        Modal={IssueCertModal}
-      />
-    </ProductLayout>
-  );
-};
-
-ProductPage.getInitialProps = async () => ({
-  namespacesRequired: [i18nNamespace.Common, i18nNamespace.Product],
-});
-
-export default withAuth('user', () => {
-  return { namespacesRequired: [i18nNamespace.Common, i18nNamespace.Product] };
-})(ProductPage);

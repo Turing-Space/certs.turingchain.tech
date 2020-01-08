@@ -1,7 +1,8 @@
 import { FC, useContext, useCallback, useEffect } from 'react';
 import styled, { css } from 'styled-components';
 import { useSprings, animated } from 'react-spring';
-import { FaShareSquare, FaCheck } from 'react-icons/fa';
+import { FacebookShareButton } from 'react-share';
+import { FaShareSquare, FaCheck, FaTrash } from 'react-icons/fa';
 import { TiPin } from 'react-icons/ti';
 import Modal from 'react-modal';
 import theme from '@/themes/theme';
@@ -91,7 +92,8 @@ const StyledModalIcon = styled.div<{ pin?: boolean }>`
   height: 2em;
   background-color: #eeeeee;
   border-radius: 50%;
-  margin-right: 1em;
+  margin-left: 1em;
+  
   &:hover {
     background-color: ${p => p.theme.colors.primary};
 
@@ -232,7 +234,14 @@ const ViewCertModal: FC<TProps> = ({ cert, isOpen, onClose }) => {
               <TiPin size="1.3em" color={theme.colors.darkGrey} />
             </StyledModalIcon>
             <StyledModalIcon>
-              <FaShareSquare size="1.1em" color={theme.colors.darkGrey} />
+              <FacebookShareButton
+                url={'https://certs.turingchain.tech/ipfs?hash=' + cert.ipfs}
+                quote={'TuringCerts'}>
+                <FaShareSquare size="1.1em" color={theme.colors.darkGrey} />
+              </FacebookShareButton>
+            </StyledModalIcon>
+            <StyledModalIcon>
+              <FaTrash size="1.1em" color={theme.colors.darkGrey} />
             </StyledModalIcon>
           </div>
         </ModalProgressTitleWrapper>

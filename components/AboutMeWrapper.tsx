@@ -66,6 +66,7 @@ const NameWrapper = styled.div`
     letter-spacing: 1px;
     font-size: ${p => p.theme.fontSize.bigger};
     margin-bottom: 2px;
+    margin-left: 0.5em; 
   }
 
   .join-date {

@@ -58,7 +58,7 @@ export const getCerts = async (d?: TGetCertsParams) => {
 };
 
 type TGetUsersParams = {
-  displayName: string;
+  displayName?: string;
   uid?: string;
   email?: string;
   did?: string;
@@ -79,7 +79,7 @@ export const getUsers = async (d?: TGetUsersParams) => {
       params: d,
     }),
   );
-  return formatAPIRes<TAPIUser[]>(res);
+  return formatAPIRes<TAPIUser>(res);
 };
 
 type TSignInParams = {

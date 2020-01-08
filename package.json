@@ -39,6 +39,7 @@
     "react-modal": "^3.9.1",
     "react-responsive": "^8.0.1",
     "react-scroll": "^1.7.12",
+    "react-share": "^4.0.1",
     "react-spring": "^8.0.27",
     "recharts": "^1.6.2",
     "styled-components": "^4.3.2"

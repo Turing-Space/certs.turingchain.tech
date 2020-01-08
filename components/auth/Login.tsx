@@ -153,7 +153,7 @@ const Login: FC = () => {
         updateUser({
           ...preparedUser(user)
         });
-        Router.push(user.isIssuer == 'true' ? '/issuer' : '/product');
+        Router.push(user.isIssuer == 'true' ? '/issuer?id=' + user.uid : '/product?id=' + user.uid);
       }
       setLoading(false);
     }

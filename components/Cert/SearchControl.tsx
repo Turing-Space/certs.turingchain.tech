@@ -5,6 +5,7 @@ import { useState, useCallback, FC } from 'react';
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
+  margin-top: 10px;
   &:hover {
     cursor: pointer;
   }
