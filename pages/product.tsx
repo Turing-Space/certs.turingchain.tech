@@ -30,8 +30,7 @@ const ProductPage: NextFC = () => {
 
     updateUser(u => ({
       ...u,
-      id: id,
-      name: user.name,
+      id: id
     }));
 
     const fetch = async () => {
