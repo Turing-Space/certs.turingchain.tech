@@ -11,6 +11,7 @@ import { TCert, CertsContext } from '@/contexts/certs';
 import { useTranslation } from 'react-i18next';
 import { i18nNamespace } from '@/constants';
 import { timeConverter } from '@/utils';
+import { delCerts } from '@/utils/api';
 
 const CertCover = styled.div<{ src: string }>`
   width: 100%;
@@ -198,6 +199,12 @@ const ViewCertModal: FC<TProps> = ({ cert, isOpen, onClose }) => {
     });
   }, [cert]);
 
+  // const onClickTrash = useCallback(() => {
+  //   console.log("delete " + cert.ipfs)
+  //   delCerts({ ipfs: cert.ipfs });
+  //   isOpen = false;
+  // }, [cert]);
+
   return (
     <Modal
       className="ReactModal__Custom_Content"
@@ -240,9 +247,9 @@ const ViewCertModal: FC<TProps> = ({ cert, isOpen, onClose }) => {
                 <FaShareSquare size="1.1em" color={theme.colors.darkGrey} />
               </FacebookShareButton>
             </StyledModalIcon>
-            <StyledModalIcon>
+            {/* <StyledModalIcon onClick={onClickTrash}>
               <FaTrash size="1.1em" color={theme.colors.darkGrey} />
-            </StyledModalIcon>
+            </StyledModalIcon> */}
           </div>
         </ModalProgressTitleWrapper>
         <div>

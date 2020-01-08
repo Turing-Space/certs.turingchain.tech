@@ -54,7 +54,7 @@ const MyCerts: FC<TProps> = ({ title, Modal, TitleRight, Empty }) => {
   const [modalVisible, setModalVisible] = useState(false);
 
   const filteredCerts = useMemo(
-    () => (searchText ? certs.filter(c => c.name.includes(searchText)) : certs),
+    () => (searchText ? certs.filter(c => c.name.toUpperCase().includes(searchText.toUpperCase())) : certs),
     [certs, searchText],
   );
 

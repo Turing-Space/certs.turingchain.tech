@@ -57,6 +57,18 @@ export const getCerts = async (d?: TGetCertsParams) => {
   return formatAPIRes<TAPICert[]>(res);
 };
 
+type TDelCertsParams = {
+  ipfs: string
+};
+
+export const delCerts = async (d?: TDelCertsParams) => {
+  await call(
+    axios.delete('/issue', {
+      params: d,
+    })
+  );
+};
+
 type TGetUsersParams = {
   displayName?: string;
   uid?: string;

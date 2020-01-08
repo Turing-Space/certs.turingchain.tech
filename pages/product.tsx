@@ -60,7 +60,7 @@ const ProductPage: NextFC = () => {
       <MyCerts
         title={t('MyCerts.title')}
         Empty={CertsNull}
-        TitleRight={MyCertsTitleRight}
+        // TitleRight={MyCertsTitleRight}
         Modal={IssueCertModal}
       />
     </ProductLayout>
