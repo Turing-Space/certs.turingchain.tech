@@ -10,7 +10,7 @@ import ScrollInfo from '@/components/ScrollInfo';
 import { i18nNamespace } from '@/constants';
 // import Button from '@/components/Button';
 
-const Title = styled(H2)`
+const Title = styled(H2) `
   margin-top: 18vh;
   width: 80vw;
   margin-left: 10vw;
@@ -31,7 +31,7 @@ const Title = styled(H2)`
 //   }
 // `;
 
-const AnimatedWrapper = styled(ScrollAnimation)`
+const AnimatedWrapper = styled(ScrollAnimation) `
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -64,7 +64,7 @@ const LogoWrapper = styled.div`
   }
 `;
 
-const Logo = styled.div<{ src: string; size: number }>`
+const Logo = styled.div < { src: string; size: number } > `
   background: url(${p => p.src}) center no-repeat/contain;
 
   width: ${p => `calc(65px * ${p.size})`};
@@ -92,47 +92,52 @@ const Logo = styled.div<{ src: string; size: number }>`
 
 const logos = [
   {
-    name: '',
+    name: 'Stanford',
     src: getRelativePath('/static/partners/stanford.svg'),
     scale: 1,
   },
   {
-    name: '加州大學柏克萊分校',
+    name: 'University of California, Berkeley',
     src: getRelativePath('/static/partners/ucberkeley.svg'),
     scale: 1,
   },
   {
-    name: '聖荷西州立大學',
+    name: 'UC Berkeley Master of Engineering',
+    src: getRelativePath('/static/partners/BerkeleyMEng.svg'),
+    scale: 1,
+  },
+  {
+    name: 'San Jose State University',
     src: getRelativePath('/static/partners/san.png'),
     scale: 1,
   },
   {
-    name: '',
+    name: 'Clemson University',
     src: getRelativePath('/static/partners/clemson.svg'),
     scale: 1,
   },
   {
-    name: '內華達大學拉斯維加斯分校',
+    name: 'University of Nevada, Las Vegas',
     src: getRelativePath('/static/partners/unlv.svg'),
     scale: 1,
   },
   {
-    name: '香港科技大學',
+    name: 'The Hong Kong University of Science and Technology',
     src: getRelativePath('/static/partners/HKUST.svg'),
     scale: 1,
   },
   {
-    name: '國立台灣大學',
+    name: 'National Taiwan University',
     src: getRelativePath('/static/partners/NTU.svg'),
     scale: 1,
   },
   {
-    name: '',
+    name: 'National Cheng Kung University',
     src: getRelativePath('/static/partners/NCKU.svg'),
     scale: 1,
   },
   {
-    name: '國立臺北科技大學',
+    name: 'National Taipei University of Technology',
     src: getRelativePath('/static/partners/taipei-tech.svg'),
     scale: 1.1,
   },
