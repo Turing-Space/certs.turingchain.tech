@@ -17,6 +17,7 @@ type TCertsContext = {
   certs: TCert[];
   updateCert: (ipfs: string, cert: TCert) => void;
   updateCerts: React.Dispatch<React.SetStateAction<TCert[]>>;
+  moveCertToFront: (ipfs: string, pin: boolean) => void;
 };
 
 const defaultCerts: TCert[] = [
@@ -56,10 +57,42 @@ export const CertsContext = createContext<TCertsContext>({
   certs: [],
   updateCert: noop,
   updateCerts: noop,
+  moveCertToFront: noop
 });
 
 export const CertsProvider: FC = ({ children }) => {
   const [certs, setCerts] = useState<TCert[]>(defaultCerts);
+
+  const moveCertToFront = function (ipfs: string, pin: boolean) {
+    if (!pin) {
+      certs.forEach(function (cert, i) {
+        if (cert.ipfs === ipfs) {
+          certs.splice(i, 1);
+          certs.unshift(cert);
+        }
+      });
+    }
+    else {
+      certs.forEach(function (cert, i) {
+        if (cert.ipfs === ipfs) {
+          certs.push(certs.splice(i, 1)[0]);
+        }
+      });
+    }
+    // var result = [];
+    // for (var i = 0; i < certs.length; i++) {
+    //   if (certs[i].pin) {
+    //     result.push(certs[i]);
+    //   }
+    // }
+    // for (var i = 0; i < certs.length; i++) {
+    //   if (!certs[i].pin) {
+    //     result.push(certs[i]);
+    //   }
+    // }
+
+    setCerts(certs)
+  }
 
   const updateCert = useCallback(
     (ipfs: string, cert: TCert) =>
@@ -80,6 +113,7 @@ export const CertsProvider: FC = ({ children }) => {
         certs,
         updateCert,
         updateCerts: setCerts,
+        moveCertToFront
       }}
     >
       {children}

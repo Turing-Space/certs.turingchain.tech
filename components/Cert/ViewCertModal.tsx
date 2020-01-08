@@ -171,7 +171,7 @@ const progressMap = [
 ];
 
 const ViewCertModal: FC<TProps> = ({ cert, isOpen, onClose }) => {
-  const { updateCert } = useContext(CertsContext);
+  const { updateCert, moveCertToFront } = useContext(CertsContext);
   const [springs, set] = useSprings(progressMap.length, () => ({
     textColor: '#bdbdbd',
     iconBgColor: '#bdbdbd',
@@ -197,6 +197,7 @@ const ViewCertModal: FC<TProps> = ({ cert, isOpen, onClose }) => {
       ...cert,
       pin: !cert.pin,
     });
+    moveCertToFront(cert.ipfs, cert.pin)
   }, [cert]);
 
   // const onClickTrash = useCallback(() => {
