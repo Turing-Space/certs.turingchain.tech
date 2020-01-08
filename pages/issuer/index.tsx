@@ -6,13 +6,15 @@ import MyCertsTitleRight from '@/components/issuer/MyCertsTitleRight';
 import MyCerts from '@/components/Cert/MyCerts';
 import CertsNull from '@/components/issuer/CertsNull';
 import { CertsContext } from '@/contexts/certs';
-import { getCerts } from '@/utils/api';
+import { getCerts, getUsers } from '@/utils/api';
 import notify from '@/utils/notify';
 import { preparedCerts } from '@/utils/certs';
 import withAuth from '@/hoc/withAuth';
 import { UserContext } from '@/contexts/user';
 import { useTranslation } from 'react-i18next';
 import { i18nNamespace } from '@/constants';
+import queryString from 'query-string';
+import { preparedUser } from '@/utils/user';
 
 
 type TProps = {
@@ -22,19 +24,40 @@ type TProps = {
 const IssuerPage: FC<TProps> = () => {
   const { user } = useContext(UserContext);
   const { updateCerts } = useContext(CertsContext);
-  const { t } = useTranslation(i18nNamespace.Issuer);
+  const { updateUser } = useContext(UserContext);
+  const { t } = useTranslation(i18nNamespace.Product);
 
   useEffect(() => {
+    const value = queryString.parse(window.location.search);
+    const id = user.uid || String(value.id)
+
+    updateUser(u => ({
+      ...u,
+      id: id
+    }));
+
     const fetch = async () => {
-      const [err, certs] = await getCerts({ issuer: user.id });
+      console.log(id);
+      const [err, certs] = await getCerts({ issuer: id });
       if (!certs) {
         notify.error({ msg: err });
       } else {
         updateCerts(preparedCerts(certs));
       }
+
+      if (!user.uid) {
+        const [err2, newUser] = await getUsers({ uid: id });
+        if (!newUser) {
+          notify.error({ msg: err2 });
+        } else {
+          updateUser(preparedUser(newUser));
+        }
+      }
+
     };
     fetch();
   }, []);
+
   return (
     <ProductLayout routePath="/issuer">
       <AboutMe />

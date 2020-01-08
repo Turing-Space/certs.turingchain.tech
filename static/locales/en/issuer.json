@@ -38,7 +38,7 @@
         "step4": {
             "enterPwd": "Enter Security Password",
             "pwd": "Security Password",
-            "pwdFormat": "6 ~ 12 chars",
+            "pwdFormat": "6 ~ 12 characters",
             "notice0": "Invalid Password.",
             "notice1": "Attempts left. Contact us to reset password after 3 failed trials.",
             "error": "Invalid Password",

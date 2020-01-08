@@ -148,7 +148,7 @@ const Certs: FC<TProps> = ({ certs }) => {
               {cert.issuing && (
                 <IssuingMask>
                   <Spinner color={theme.colors.primary} scale={2} />
-                  <p style={{ marginTop: '1rem' }}>{t('Issuer.issuing')}</p>
+                  <p style={{ marginTop: '1rem' }}>{t('Issue.issuing')}</p>
                 </IssuingMask>
               )}
             </CertWrapper>

@@ -9,8 +9,6 @@ import { uploadCertTemplate, issueCertByCSV } from '@/utils/api';
 import { dataURItoBlob } from '@/utils';
 import { UserContext } from '@/contexts/user';
 import notify from '@/utils/notify';
-import { CertsContext } from '@/contexts/certs';
-
 import BackPage from '../BackPage';
 import IssueTitleSection from './TitleSection';
 import Button from '../Button';
@@ -70,7 +68,6 @@ const LoadingText = styled.p`
 
 const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
   const { user } = useContext(UserContext);
-  const { updateCerts } = useContext(CertsContext);
   const [loadingText, setLoadingText] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState({
@@ -88,49 +85,30 @@ const IssuePage2: FC<TRenderComponentProps> = ({ value }) => {
       Router.push('/issuer');
       return;
     } else if (password === runtimeEnv.MVP.issuePassword) {
-      setLoadingText(t('Issue.uploadTemplate'));
-      // upload template cert
-      const templateFormData = new FormData();
-      templateFormData.append('issuer', user.name);
-      templateFormData.append('type', value.type);
-      templateFormData.append('itemsCount', '1');
-      templateFormData.append('fontFamily[0]', 'Georgia');
-      templateFormData.append('fontSize[0]', '60');
-      templateFormData.append('color[0]', 'black');
-      templateFormData.append('height[0]', '460');
-      templateFormData.append('width[0]', '450');
-      templateFormData.append('certFile', dataURItoBlob(cert!.uri));
-      await uploadCertTemplate(templateFormData);
       if (value.csv) {
+
+        // upload template cert
+        // setLoadingText(t('Issue.uploadTemplate'));
+        // const templateFormData = new FormData();
+        // templateFormData.append('issuer', user.name);
+        // templateFormData.append('type', value.type);
+        // templateFormData.append('itemsCount', '1');
+        // templateFormData.append('fontFamily[0]', 'Georgia');
+        // templateFormData.append('fontSize[0]', '60');
+        // templateFormData.append('color[0]', 'black');
+        // templateFormData.append('height[0]', '460');
+        // templateFormData.append('width[0]', '450');
+        // templateFormData.append('certFile', dataURItoBlob(cert!.uri));
+        // await uploadCertTemplate(templateFormData);
+
         // issue cert by csv
         setLoadingText(t('Issue.issuing'));
         const formData = new FormData();
         formData.append('issueFile', value.csv);
         await issueCertByCSV(formData);
-
-        // FIXME: temporary use setTimeout to add new cert
-        setTimeout(
-          () =>
-            updateCerts(certs => [
-              ...certs,
-              {
-                type: value.type,
-                ipfs: '',
-                issuer: user.name,
-                name: value.type,
-                timestamp: 0,
-                coverUri: cert!.uri,
-                verified: false,
-                pin: false,
-                progress: [true, false, false, false, false],
-                issuing: true,
-              },
-            ]),
-          2000,
-        );
       }
       notify.success({ msg: `${t('Issue.step4.success0')} ${value.type} ${t('Issue.step4.success1')}` });
-      Router.push('/issuer');
+      Router.push('/issuer?id=' + user.uid);
     } else {
       setError({
         message: `${t('Issue.step4.notice0')} ${3 - error.count} ${t('Issue.step4.notice1')}`,

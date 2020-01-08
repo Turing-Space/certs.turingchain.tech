@@ -60,7 +60,7 @@ const AnimatedNumber = styled(animated.p)`
 const AboutMe = () => {
   const { certs } = useContext(CertsContext);
   const certificatedCount = certs.filter(d => !!d.verified).length;
-  const certificatingCount = certs.length - certificatedCount;
+  // const certificatingCount = certs.length - certificatedCount;
   const { t } = useTranslation(i18nNamespace.Product);
 
   const certsProps = useSpring({
