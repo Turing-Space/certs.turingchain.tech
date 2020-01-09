@@ -195,7 +195,7 @@ const Demo: FC<{ id?: string }> = ({ id }) => {
             </StyledButton>
             <IconWrapper>
               <img
-                onClick={() => t('alertText')}
+                onClick={() => alert(t('alertText'))}
                 src={getRelativePath('/static/elements/logo-app-store.png')}
                 srcSet={`${getRelativePath(
                   '/static/elements/logo-app-store@2x.png',
@@ -204,7 +204,7 @@ const Demo: FC<{ id?: string }> = ({ id }) => {
                 )} 3x`}
               />
               <img
-                onClick={() => t('alertText')}
+                onClick={() => alert(t('alertText'))}
                 src={getRelativePath('/static/elements/logo-google-play.png')}
                 srcSet={`${getRelativePath(
                   '/static/elements/logo-google-play@2x.png',
@@ -236,8 +236,8 @@ const Demo: FC<{ id?: string }> = ({ id }) => {
           <StyledButton
             shadow
             onClick={() => {
-              t('alertText');
-              // Router.push('/product');
+              // t('alertText');
+              Router.push('/auth/login');
             }}
           >
             {t('demo.start')}
@@ -245,7 +245,7 @@ const Demo: FC<{ id?: string }> = ({ id }) => {
 
           <IconWrapper>
             <img
-              onClick={() => t('alertText')}
+              onClick={() => alert(t('alertText'))}
               src={getRelativePath('/static/elements/logo-app-store.png')}
               srcSet={`${getRelativePath(
                 '/static/elements/logo-app-store@2x.png',
@@ -254,7 +254,7 @@ const Demo: FC<{ id?: string }> = ({ id }) => {
               )} 3x`}
             />
             <img
-              onClick={() => t('alertText')}
+              onClick={() => alert(t('alertText'))}
               src={getRelativePath('/static/elements/logo-google-play.png')}
               srcSet={`${getRelativePath(
                 '/static/elements/logo-google-play@2x.png',
