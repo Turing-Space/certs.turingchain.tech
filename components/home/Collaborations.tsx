@@ -19,45 +19,27 @@ const Title = styled(H2)`
     margin-top: 20vh;
   }
 `;
-
-// const Wrapper = styled.div`
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: flex-start;
-//   width: 720px;
-//   margin: 5% auto 0;
-//   ${media('largeDesktop')} {
-//     width: 840px;
-//   }
-// `;
-
 const AnimatedWrapper = styled(ScrollAnimation)`
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 90%;
-  margin: 5% auto 10%;
+  margin: 5% auto 10%; // top right bottom
 
   ${media('tablet')} {
-    width: 720px;
+    width: 1000px;
   }
   ${media('largeDesktop')} {
-    width: 840px;
+    width: 1200px;
   }
 `;
-
-// const MoreInfoWrapper = styled(Wrapper)<{ open: boolean }>`
-//   margin: 0;
-//   overflow: hidden;
-//   max-height: ${p => (p.open ? '100vh' : 0)};
-//   transition: max-height ease-in 0.3s;
-// `;
 
 const LogoWrapper = styled.div`
   width: 25%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: -50px;
 
   ${media('tablet')} {
     width: 20%;
@@ -90,127 +72,144 @@ const Logo = styled.div<{ src: string; size: number }>`
   }
 `;
 
-// const StyledButton = styled(Button)`
-//   margin: 3% 0 5%;
-// `;
+let ssmall = 2.3;
+let small = 1.7;
+let normal = 1.3;
+let large = 0.95;
 
 const logos = [
   {
     name: 'Stanford',
     src: getRelativePath('/static/partners/stanford.svg'),
-    scale: 1,
+    scale: normal,
   },
   {
     name: '加州大學柏克萊分校',
     src: getRelativePath('/static/partners/ucberkeley.svg'),
-    scale: 1,
+    scale: normal,
   },
   {
-    name: '聖荷西州立大學',
-    src: getRelativePath('/static/partners/san.png'),
-    scale: 1,
+    name: 'Berkeley MEng',
+    src: getRelativePath('/static/partners/BerkeleyMEng.svg'),
+    scale: ssmall,
   },
   {
     name: 'Clemson',
     src: getRelativePath('/static/partners/clemson.svg'),
-    scale: 1,
+    scale: normal,
   },
+  {
+    name: '聖荷西州立大學',
+    src: getRelativePath('/static/partners/san.png'),
+    scale: small,
+  },
+
   {
     name: '內華達大學拉斯維加斯分校',
     src: getRelativePath('/static/partners/unlv.svg'),
-    scale: 1,
+    scale: normal,
   },
   {
     name: '香港科技大學',
     src: getRelativePath('/static/partners/HKUST.svg'),
-    scale: 1,
+    scale: small,
   },
   {
     name: '國立台灣大學',
     src: getRelativePath('/static/partners/NTU.svg'),
-    scale: 1,
+    scale: small,
+  },
+  {
+    name: '國立清華大學',
+    src: getRelativePath('/static/partners/清大NTHU.svg'),
+    scale: small,
   },
   {
     name: 'NCKU',
     src: getRelativePath('/static/partners/NCKU.svg'),
-    scale: 1,
-  },
-  {
-    name: '國立臺北科技大學',
-    src: getRelativePath('/static/partners/taipei-tech.svg'),
-    scale: 1.1,
-  },
-  {
-    name: 'foreign',
-    src: getRelativePath('/static/partners/foreign.svg'),
-    scale: 1.1,
-  },
-  {
-    name: 'min',
-    src: getRelativePath('/static/partners/min.svg'),
-    scale: 0.8,
-  },
-  {
-    name: 'sichiu',
-    src: getRelativePath('/static/partners/sichiu.svg'),
-    scale: 0.8,
-  },
-  {
-    name: 'business',
-    src: getRelativePath('/static/partners/business.png'),
-    scale: 0.8,
-  },
-  {
-    name: 'chimin',
-    src: getRelativePath('/static/partners/chimin.svg'),
-    scale: 1.2,
-  },
-  {
-    name: 'ABC-Blockchain',
-    src: getRelativePath('/static/partners/ABC-Blockchain.png'),
-    scale: 1,
-  },
-  {
-    name: 'ACER',
-    src: getRelativePath('/static/partners/ACER.png'),
-    scale: 1,
-  },
-  {
-    name: 'angelhack',
-    src: getRelativePath('/static/partners/angelhack.png'),
-    scale: 1,
-  },
-  {
-    name: 'BASF',
-    src: getRelativePath('/static/partners/BASF.png'),
-    scale: 1,
-  },
-  {
-    name: 'KPMG',
-    src: getRelativePath('/static/partners/KPMG.png'),
-    scale: 1,
-  },
-  {
-    name: 'Maincoin',
-    src: getRelativePath('/static/partners/Maincoin.png'),
-    scale: 1,
+    scale: small,
   },
   {
     name: 'yanmin',
     src: getRelativePath('/static/partners/yanmin.png'),
-    scale: 1.1,
+    scale: small,
   },
-  // 金融研訓院
   // {
-  //   name: '',
-  //   src: getRelativePath('/static/partners/TABF.svg'),
-  //   scale: 1.1,
+  //   name: 'min',
+  //   src: getRelativePath('/static/partners/min.svg'),
+  //   scale: large,
+  // },
+  // {
+  //   name: 'sichiu',
+  //   src: getRelativePath('/static/partners/sichiu.svg'),
+  //   scale: large,
+  // },
+  // {
+  //   name: 'business',
+  //   src: getRelativePath('/static/partners/business.png'),
+  //   scale: large,
   // },
   {
     name: 'sin',
     src: getRelativePath('/static/partners/sin.png'),
-    scale: 1,
+    scale: small,
   },
+
+  {
+    name: 'foreign',
+    src: getRelativePath('/static/partners/foreign.svg'),
+    scale: small,
+  },
+  {
+    name: '國立臺北科技大學',
+    src: getRelativePath('/static/partners/taipei-tech.svg'),
+    scale: small,
+  },
+  {
+    name: 'minS',
+    src: getRelativePath('/static/partners/銘傳金融科技學院學程.svg'),
+    scale: ssmall,
+  },
+  {
+    name: 'ACER',
+    src: getRelativePath('/static/partners/ACER.png'),
+    scale: normal,
+  },
+  {
+    name: 'KPMG',
+    src: getRelativePath('/static/partners/KPMG.png'),
+    scale: normal,
+  },
+  {
+    name: 'BASF',
+    src: getRelativePath('/static/partners/BASF.png'),
+    scale: normal,
+  },
+  {
+    name: 'Maincoin',
+    src: getRelativePath('/static/partners/Maincoin.png'),
+    scale: normal,
+  },
+  {
+    name: 'sfbw',
+    src: getRelativePath('/static/partners/SFBlockchainWeek.svg'),
+    scale: small,
+  },
+  {
+    name: 'angelhack',
+    src: getRelativePath('/static/partners/angelhack.png'),
+    scale: small,
+  },
+  {
+    name: 'ABC-Blockchain',
+    src: getRelativePath('/static/partners/ABC-Blockchain.png'),
+    scale: normal,
+  },
+  {
+    name: 'Alphacamp',
+    src: getRelativePath('/static/partners/ALPHACamp-w.svg'),
+    scale: small,
+  }
 ];
 
 const Collaborations: FC<{ id: string }> = ({ id }) => {
