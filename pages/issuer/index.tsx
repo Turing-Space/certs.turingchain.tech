@@ -15,6 +15,7 @@ import { useTranslation } from 'react-i18next';
 import { i18nNamespace } from '@/constants';
 import queryString from 'query-string';
 import { preparedUser } from '@/utils/user';
+import { Router } from '@/i18n';
 
 
 type TProps = {
@@ -46,11 +47,19 @@ const IssuerPage: FC<TProps> = () => {
       }
 
       if (!user.uid) {
-        const [err2, newUser] = await getUsers({ uid: id });
-        if (!newUser) {
-          notify.error({ msg: err2 });
-        } else {
-          updateUser(preparedUser(newUser));
+        if (id == 'undefined') {
+          notify.error({ msg: 'Please login.' });
+          setTimeout(() => {
+            Router.push('/auth/login')
+          }, 3000);
+        }
+        else {
+          const [err2, newUser] = await getUsers({ uid: id });
+          if (!newUser) {
+            notify.error({ msg: err2 });
+          } else {
+            updateUser(preparedUser(newUser));
+          }
         }
       }
 

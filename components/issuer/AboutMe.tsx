@@ -60,8 +60,8 @@ const AnimatedNumber = styled(animated.p)`
 const AboutMe = memo(() => {
   const { certs } = useContext(CertsContext);
   const typeCount = certs.reduce<string[]>((acc, c) => {
-    if (!acc.includes(c.name)) {
-      acc.push(c.name);
+    if (!acc.includes(c.name + c.issuer)) {
+      acc.push(c.name + c.issuer);
     }
     return acc;
   }, []).length;

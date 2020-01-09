@@ -16,6 +16,7 @@ import withAuth from '@/hoc/withAuth';
 import { preparedCerts } from '@/utils/certs';
 import queryString from 'query-string';
 import { preparedUser } from '@/utils/user';
+import { Router } from '@/i18n';
 
 
 const ProductPage: NextFC = () => {
@@ -42,11 +43,19 @@ const ProductPage: NextFC = () => {
       }
 
       if (!user.uid) {
-        const [err2, newUser] = await getUsers({ uid: id });
-        if (!newUser) {
-          notify.error({ msg: err2 });
-        } else {
-          updateUser(preparedUser(newUser));
+        if (id == 'undefined') {
+          notify.error({ msg: 'Please login.' });
+          setTimeout(() => {
+            Router.push('/auth/login')
+          }, 3000);
+        }
+        else {
+          const [err2, newUser] = await getUsers({ uid: id });
+          if (!newUser) {
+            notify.error({ msg: err2 });
+          } else {
+            updateUser(preparedUser(newUser));
+          }
         }
       }
 
