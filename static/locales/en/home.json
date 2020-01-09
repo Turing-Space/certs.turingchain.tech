@@ -63,6 +63,34 @@
       "2": {
         "title": "(3) How to sustain TuringCerts's footprint as the global leader?",
         "content": "TuringCerts is afiliated with the Xccelerator from UC Berkeley Blockchain Lab, from whom will continuously on-board and integrate the latest technical breakthroughs in Silicon Valley. This collaboration enables TuringCerts to maintain its industry-leading technology evolutions and security characteristics. Finally, TuringCerts is being supported by its geographical advantage and relevant user pool to conduct social experiments in Hong Kong and Taiwan campuses."
+      },
+      "3": {
+        "title": "(4) Why certificates need blockchain?",
+        "content": "1. Certificates are usually used at a large scale, and there are many cross-domain information transfers. If everyone uses the same agreement, they can communicate seamlessly. This is generally difficult to achieve due to trust factors, and the advent of blockchain has provided the possibility of unifying these standards. \n2. No one can easily paralyze the database, and the possibility of losing or tampering with identity data is extremely low. This is an incorruptible system with no single point of failure. \n3. After integrating the blockchain, the time cost of certificate verification can be greatly reduced."
+      },
+      "4": {
+        "title": "(5) If the blockchain technology (IOTA, IPFS) we adopt disappears, will the certificate issuer be affected?",
+        "content": "We will ensure that there are one or more fully backed up nodes that are sufficient for data transfer to the new main chain."
+      },
+      "5": {
+        "title": "(6) Why utilizing IOTA instead of Ethereum?",
+        "content": "1. Fast, no commission, we have set up a full node to quickly issue certificates. \n2. The design of Ethereum itself is expected to become a world computer, but the certificate does not need these additional computing functions. It only needs lightweight decentralized information storage, and IOTA can properly complete this task."
+      },
+      "6": {
+        "title": "(7) How to ensure that the certificate cannot be forged?",
+        "content": "We adopt asymmetric encryption and cryptographic hash to achieve immutable information and identity."
+      },
+      "7": {
+        "title": "(8) What is the account recovery mechanism?",
+        "content": "The best case is all users remember their account password. We also have an account recovery mechanism as a back-up solution, and we are constantly exploring better ways to achieve the best privacy protection."
+      },
+      "8": {
+        "title": "(9) How to bind real identity with virtual identity?",
+        "content": "At present, face-to-face authentication is still required. In the future, the government can issue a digital endorsement certificate in our system for identity binding."
+      },
+      "9": {
+        "title": "(10) How to meet current GDPR requirements?",
+        "content": "The minimum disclosure principle guaranteed in the GDPR will be reflected by our zero-knowledge proof, allowing information owners to complete the certification without revealing the details of the target information."
       }
     }
   },
@@ -83,18 +111,18 @@
     "showcases": "showcases",
     "title": "Showcases",
     "certificates": {
-      "0": "國際 GBP 區塊鏈能力考核證書",
-      "1": "加州柏克萊 X 香港科大 X Flowchain 區塊鏈集訓",
-      "2": "國際駭客松競賽 AngelHack 舊金山場 2019",
-      "3": "德國柏林 IOTA 基金會區塊鏈論壇 - 臺北場 2019",
-      "4": "矽谷最大區塊鏈社群 ABC Crypto Night",
-      "5": "臺北科技大學 區塊鏈微學分課程 2019",
-      "6": "美國矽谷德屬化工巨頭 BASF 區塊鏈論壇 2019",
-      "7": "圖靈鏈科技 區塊鏈教育獎助學金計畫 2019",
-      "8": "臺灣大學 進階軟體開發專題課程 (CSX 5001)",
-      "9": "史丹佛大學 美國創業哲學論壇 2019",
-      "10": "柏克萊大學",
-      "11": "商總會證書"
+      "0": "International GBP (General Blockchain Proficiency) Exam 2019",
+      "1": "UC Berkeley X HKUST X Flowchain Blockchain Hands-on Course 2019",
+      "2": "AngelHack Global Hackathon @ San Francisco 2019",
+      "3": "IOTA Foundation Community Conference @ Taipei 2019",
+      "4": "One of the Largest San Francisco Blockchain Community - ABC Crypto Night 2019",
+      "5": "Blockchain Minor-Credit Course @ National Taipei University of Technology 2019",
+      "6": "Corporate Training on Blockchain @ BASF",
+      "7": "Turing Chain Limited Scholarship Programme 2019",
+      "8": "Advanced Software Engineering Course @ National Taiwan University (CSX 5001)",
+      "9": "Entrepreneurship Conference @ Stanford 2019",
+      "10": "UC Berkeley Blockchain Xcelerator Batch 2019",
+      "11": "Corporate Training on Blockchain @ General Chamber of Commerce of the Republic of China 2019"
     }
   }
 }

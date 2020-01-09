@@ -24,14 +24,14 @@ const Title = styled(H2)`
 `;
 
 const StyledDescription = styled(Description)`
-  width: 70%;
+  width: 90%;
   text-align: center;
   letter-spacing: 0.5px;
   line-height: 2em;
   margin: 0 auto;
 
   ${media('desktop')} {
-    width: 47%;
+    width: 70%;
   }
 `;
 
