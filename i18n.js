@@ -1,9 +1,9 @@
 const NextI18Next = require('next-i18next').default;
 
 const NextI18NextInstance = new NextI18Next({
-  defaultLanguage: 'zh-TW',
-  otherLanguages: ['en'],
-  fallbackLng: 'zh-TW',
+  defaultLanguage: 'en',
+  otherLanguages: ['zh-TW'],
+  fallbackLng: 'en',
   localeSubpaths: 'foreign',
   react: {
     wait: true,
