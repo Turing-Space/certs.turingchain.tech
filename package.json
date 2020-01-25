@@ -2,7 +2,7 @@
   "name": "certs.turingchain.tech",
   "version": "0.0.1",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "NODE_ENV=development node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "export": "next build && next export",
@@ -24,7 +24,7 @@
     "lodash": "^4.17.14",
     "mgr-pdf-viewer-react": "^1.0.3",
     "next": "^8.1.0",
-    "next-i18next": "^0.52.0",
+    "next-i18next": "^4.1.0",
     "qs": "^6.8.0",
     "query-string": "^6.9.0",
     "react": "^16.8.6",

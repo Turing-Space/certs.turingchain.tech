@@ -4,7 +4,9 @@ const NextI18NextInstance = new NextI18Next({
   defaultLanguage: 'en',
   otherLanguages: ['zh-TW'],
   fallbackLng: 'en',
-  localeSubpaths: 'foreign',
+  localeSubpaths: {
+    'zh-TW': 'zh-TW',
+  },
   react: {
     wait: true,
     useSuspense: false,

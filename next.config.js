@@ -16,37 +16,61 @@ const { GITHUB, PROJ_NAME } = publicRuntimeConfig;
 
 // fix: prevents error when .less files are required by node
 if (typeof require !== 'undefined') {
-  require.extensions['.less'] = file => { };
+  require.extensions['.less'] = file => {};
+}
+
+const defaultLng = 'en';
+
+function exportWithLocalePath(config) {
+  const locales = ['zh-TW', 'en'];
+  const configWithEn = { ...config };
+  Object.keys(config).forEach(key => {
+    for (const lng of locales) {
+      const payloadWithQueryEn = {
+        ...config[key],
+        query: {
+          ...config[key].query,
+          lng,
+        },
+      };
+      Object.assign(configWithEn, {
+        [`/${lng}/${key}`]: payloadWithQueryEn,
+      });
+    }
+  });
+  return configWithEn;
 }
 
 module.exports = withBundleAnalyzer(
   withTypescript(
     withCSS(
       withOptimizedImages({
-        exportPathMap: function () {
-          return {
-            '/': { page: '/', query: { lng: '' } },
-            '/product': { page: '/product', query: { lng: '', id: '' } },
-            '/ipfs': { page: '/ipfs', query: { hash: '' } },
-            '/auth/login': { page: '/auth/login', query: { mode: '' } },
+        exportPathMap: function() {
+          const pathConfig = {
+            '/': { page: '/', query: { lng: defaultLng } },
+            '/product': {
+              page: '/product',
+              query: { lng: defaultLng, id: '' },
+            },
+            '/ipfs': { page: '/ipfs', query: { lng: defaultLng, hash: '' } },
+            '/auth/login': {
+              page: '/auth/login',
+              query: { lng: defaultLng, mode: '' },
+            },
             '/issuer': { page: '/issuer', query: { lng: '', id: '' } },
             '/issuer/issue-cert/1': {
               page: '/issuer/issue-cert/[page]',
-              query: { page: '1' },
+              query: { lng: defaultLng, page: '1' },
             },
             '/issuer/issue-cert/2': {
               page: '/issuer/issue-cert/[page]',
-              query: { page: '2' },
+              query: { lng: defaultLng, page: '2' },
             },
-
-            '/zh-TW': { page: '/', query: { lng: 'zh-TW' } },
-            '/zh-TW/product': { page: '/product', query: { lng: 'zh-TW' } },
-            '/en': { page: '/', query: { lng: 'en' } },
-            '/en/product': { page: '/product', query: { lng: 'en', id: '' } },
-            '/en/ipfs': { page: '/ipfs', query: { hash: '' } },
-            '/en/issuer': { page: '/issuer', query: { lng: '', id: '' } },
-            'en/auth/login': { page: '/auth/login', query: { mode: '' } },
           };
+
+          return process.env.NODE_ENV === 'development'
+            ? pathConfig
+            : exportWithLocalePath(pathConfig);
         },
         assetPrefix: GITHUB ? `/${PROJ_NAME}/` : '',
         analyzeServer: ['server', 'both'].includes(process.env.BUNDLE_ANALYZE),

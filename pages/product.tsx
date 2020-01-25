@@ -18,7 +18,6 @@ import queryString from 'query-string';
 import { preparedUser } from '@/utils/user';
 import { Router } from '@/i18n';
 
-
 const ProductPage: NextFC = () => {
   const { user } = useContext(UserContext);
   const { updateUser } = useContext(UserContext);
@@ -27,11 +26,11 @@ const ProductPage: NextFC = () => {
 
   useEffect(() => {
     const value = queryString.parse(window.location.search);
-    const id = user.uid || String(value.id)
+    const id = user.uid || String(value.id);
 
     updateUser(u => ({
       ...u,
-      id: id
+      id,
     }));
 
     const fetch = async () => {
@@ -43,13 +42,12 @@ const ProductPage: NextFC = () => {
       }
 
       if (!user.uid) {
-        if (id == 'undefined') {
+        if (id === 'undefined') {
           notify.error({ msg: 'Please login.' });
           setTimeout(() => {
-            Router.push('/auth/login')
+            Router.push('/auth/login');
           }, 3000);
-        }
-        else {
+        } else {
           const [err2, newUser] = await getUsers({ uid: id });
           if (!newUser) {
             notify.error({ msg: err2 });
@@ -58,7 +56,6 @@ const ProductPage: NextFC = () => {
           }
         }
       }
-
     };
     fetch();
   }, []);
@@ -84,39 +81,38 @@ export default withAuth('user', () => {
   return { namespacesRequired: [i18nNamespace.Common, i18nNamespace.Product] };
 })(ProductPage);
 
-
-        // updateCerts([
-        //   {
-        //     issuer: 'UC Berkeley',
-        //     name: '國際 GBP 區塊鏈能力考核證書',
-        //     coverUri: '/static/certificate/GBP.png',
-        //     verified: true,
-        //     pin: true,
-        //     ipfs: '1',
-        //     timestamp: 1564133361,
-        //     progress: [true, true, true, true, true],
-        //     issuing: false
-        //   },
-        //   {
-        //     issuer: '國立臺灣大學',
-        //     name: '德國柏林 IOTA 基金會區塊鏈論壇 - 臺北場 2019',
-        //     coverUri: '/static/certificate/ABC_Crypto_Night.png',
-        //     verified: false,
-        //     pin: false,
-        //     ipfs: '2',
-        //     timestamp: 1564133361,
-        //     progress: [true, false, false, false, false],
-        //     issuing: false
-        //   },
-        //   {
-        //     issuer: '國立臺北科技大學',
-        //     name: '臺北科技大學 區塊鏈微學分課程 2019',
-        //     coverUri: '/static/certificate/0x1Academy.jpg',
-        //     verified: false,
-        //     ipfs: '3',
-        //     timestamp: 1564133361,
-        //     pin: false,
-        //     progress: [true, false, false, false, false],
-        //     issuing: false
-        //   },
-        // ]);
+// updateCerts([
+//   {
+//     issuer: 'UC Berkeley',
+//     name: '國際 GBP 區塊鏈能力考核證書',
+//     coverUri: '/static/certificate/GBP.png',
+//     verified: true,
+//     pin: true,
+//     ipfs: '1',
+//     timestamp: 1564133361,
+//     progress: [true, true, true, true, true],
+//     issuing: false
+//   },
+//   {
+//     issuer: '國立臺灣大學',
+//     name: '德國柏林 IOTA 基金會區塊鏈論壇 - 臺北場 2019',
+//     coverUri: '/static/certificate/ABC_Crypto_Night.png',
+//     verified: false,
+//     pin: false,
+//     ipfs: '2',
+//     timestamp: 1564133361,
+//     progress: [true, false, false, false, false],
+//     issuing: false
+//   },
+//   {
+//     issuer: '國立臺北科技大學',
+//     name: '臺北科技大學 區塊鏈微學分課程 2019',
+//     coverUri: '/static/certificate/0x1Academy.jpg',
+//     verified: false,
+//     ipfs: '3',
+//     timestamp: 1564133361,
+//     pin: false,
+//     progress: [true, false, false, false, false],
+//     issuing: false
+//   },
+// ]);
