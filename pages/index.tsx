@@ -5,6 +5,7 @@ import Service from '@/components/home/Service';
 import Demo from '@/components/home/Demo';
 import Technology from '@/components/home/Technology';
 import Collaborations from '@/components/home/Collaborations';
+import BackedBy from '@/components/home/BackedBy';
 import Examples from '@/components/home/Examples';
 // import DemoVideo from '@/components/home/DemoVideo';
 
@@ -19,6 +20,7 @@ const Index: NextFC = () => {
       {/* <DemoVideo id="section-product" /> */}
       <Demo />
       <Collaborations id="section-collaborations" />
+      <BackedBy id="section-backedBy" />
       <Examples id="section-examples" />
       {/* <AboutUs id="section-about" />
       <Team id="section-team" /> */}

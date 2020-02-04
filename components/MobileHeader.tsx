@@ -148,6 +148,14 @@ const MobileHeader: FC<TProps> = ({ open, setOpen }) => {
         </li>
         <li
           onClick={() => {
+            scrollToID('section-backedBy');
+            setOpen(false);
+          }}
+        >
+          {t('header.backedBy')}
+        </li>
+        <li
+          onClick={() => {
             scrollToID('section-examples');
             setOpen(false);
           }}
