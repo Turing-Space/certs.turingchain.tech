@@ -12,6 +12,7 @@ const logoIcon = '/static/icon/logo-product-normal.svg';
 const Root = styled.div`
   display: inline-block;
   vertical-align: top;
+  background: white;
 `;
 const TitleBar = styled.div`
   display: flex;
@@ -39,7 +40,6 @@ const Title = styled.div`
   font-family: ${p => p.theme.fontFamily.SFProText};
   font-size: 24px;
   font-weight: 600;
-  color: #a80100;
   color: #a80100;
   align-items: right;
   display: flex;

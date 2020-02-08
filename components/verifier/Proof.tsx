@@ -2,7 +2,7 @@ import React from 'react';
 import { FC, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { getRelativePath } from '@/utils';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopy } from '@fortawesome/free-regular-svg-icons';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
@@ -71,6 +71,14 @@ const More = styled.span`
   border-bottom: 1px solid #bdbdbd;
   margin-right: 10px;
 `;
+const Home = styled.span`
+  font-family: ${p => p.theme.fontFamily.SFProText};
+  font-size: 16px;
+  font-weight: 500;
+  color: #0035ad;
+  border-bottom: 1px solid #0035ad;
+  float: right;
+`;
 const Info = styled.div`
   width: 360px;
   margin: 20px 60px;
@@ -130,8 +138,7 @@ const Proof: FC<TProps> = props => {
     }, 30);
   }, []);
 
-  if (loading)
-    return null;
+  if (loading) return null;
   else
     return (
       <Root>
@@ -154,30 +161,44 @@ const Proof: FC<TProps> = props => {
         <Info>
           <InfoH1>RECIPIENT</InfoH1>
           <InfoH2>Name</InfoH2>
-          <a href={'https://certs.turingchain.tech/product?id=' + props.holderId}>
-            <InfoContent>{props.holderName}</InfoContent>
-          </a>
+          <InfoContent>
+            {props.holderName}
+            <a
+              href={
+                'https://certs.turingchain.tech/product?id=' + props.holderId
+              }
+            >
+              <Home>Home</Home>
+            </a>
+          </InfoContent>
 
           <InfoH1>TESTIMONY</InfoH1>
-          <InfoH2>Name
-        <CopyToClipboardWrapper text={props.type}
+          <InfoH2>
+            Name
+            <CopyToClipboardWrapper
+              text={props.type}
               onCopy={() => {
-                setCopyName(true)
+                setCopyName(true);
                 setTimeout(() => setCopyName(false), 1700);
-              }}>
+              }}
+            >
               <FontAwesomeIcon icon={faCopy} size="xs" />
             </CopyToClipboardWrapper>
-            {copyName ? <span style={{ color: '#2867B2' }}>Copied!</span> : null}
+            {copyName ? (
+              <span style={{ color: '#2867B2' }}>Copied!</span>
+            ) : null}
           </InfoH2>
 
-
           <InfoContent>{props.type}</InfoContent>
-          <InfoH2>Issuing Organization
-        <CopyToClipboardWrapper text={props.issuerName}
+          <InfoH2>
+            Issuing Organization
+            <CopyToClipboardWrapper
+              text={props.issuerName}
               onCopy={() => {
-                setCopyOrg(true)
+                setCopyOrg(true);
                 setTimeout(() => setCopyOrg(false), 1700);
-              }}>
+              }}
+            >
               <FontAwesomeIcon icon={faCopy} size="xs" />
             </CopyToClipboardWrapper>
             {copyOrg ? <span style={{ color: '#2867B2' }}>Copied!</span> : null}
@@ -185,25 +206,33 @@ const Proof: FC<TProps> = props => {
           <a href={props.issuerWebsite}>
             <InfoContent>{props.issuerName}</InfoContent>
           </a>
-          <InfoH2>Issue Date
-        <CopyToClipboardWrapper text={props.date}
+          <InfoH2>
+            Issue Date
+            <CopyToClipboardWrapper
+              text={props.date}
               onCopy={() => {
-                setCopyDate(true)
+                setCopyDate(true);
                 setTimeout(() => setCopyDate(false), 1700);
-              }}>
+              }}
+            >
               <FontAwesomeIcon icon={faCopy} size="xs" />
             </CopyToClipboardWrapper>
-            {copyDate ? <span style={{ color: '#2867B2' }}>Copied!</span> : null}
+            {copyDate ? (
+              <span style={{ color: '#2867B2' }}>Copied!</span>
+            ) : null}
           </InfoH2>
           <InfoContent>{props.date}</InfoContent>
 
           <InfoH1>CREDENTIAL</InfoH1>
-          <InfoH2>Credential ID
-        <CopyToClipboardWrapper text={props.ipfs}
+          <InfoH2>
+            Credential ID
+            <CopyToClipboardWrapper
+              text={props.ipfs}
               onCopy={() => {
-                setCopyID(true)
+                setCopyID(true);
                 setTimeout(() => setCopyID(false), 1700);
-              }}>
+              }}
+            >
               <FontAwesomeIcon icon={faCopy} size="xs" />
             </CopyToClipboardWrapper>
             {copyID ? <span style={{ color: '#2867B2' }}>Copied!</span> : null}
@@ -211,18 +240,23 @@ const Proof: FC<TProps> = props => {
           <a href={'https://ipfs.certs.turingchain.tech/ipfs/' + props.ipfs}>
             <InfoContent>{props.ipfs}</InfoContent>
           </a>
-          <InfoH2>Credential URL
-        <CopyToClipboardWrapper text={'https://certs.turingchain.tech/ipfs?hash=' + props.ipfs}
+          <InfoH2>
+            Credential URL
+            <CopyToClipboardWrapper
+              text={'https://certs.turingchain.tech/ipfs?hash=' + props.ipfs}
               onCopy={() => {
-                setCopyURL(true)
+                setCopyURL(true);
                 setTimeout(() => setCopyURL(false), 1700);
-              }}>
+              }}
+            >
               <FontAwesomeIcon icon={faCopy} size="xs" />
             </CopyToClipboardWrapper>
             {copyURL ? <span style={{ color: '#2867B2' }}>Copied!</span> : null}
           </InfoH2>
           <a href={'https://certs.turingchain.tech/ipfs?hash=' + props.ipfs}>
-            <InfoContent>{'https://certs.turingchain.tech/ipfs?hash=' + props.ipfs}</InfoContent>
+            <InfoContent>
+              {'https://certs.turingchain.tech/ipfs?hash=' + props.ipfs}
+            </InfoContent>
           </a>
           <InfoH2>Credential Hash</InfoH2>
           <a href={'https://thetangle.org/transaction/' + props.iota}>
@@ -231,7 +265,12 @@ const Proof: FC<TProps> = props => {
           <img
             src={getRelativePath('/static/logo/linkedin.png')}
             alt="LinkedIn Add to Profile button"
-            style={{ width: '60%', marginTop: '15px', marginBottom: '20px' }}
+            style={{
+              width: '60%',
+              marginTop: '15px',
+              marginBottom: '20px',
+              cursor: 'pointer',
+            }}
             onClick={() => {
               window.open(
                 'https://www.linkedin.com/profile/add?startTask=TuringCerts',
@@ -242,7 +281,7 @@ const Proof: FC<TProps> = props => {
             }}
           />
         </Info>
-      </Root >
+      </Root>
     );
 };
 
