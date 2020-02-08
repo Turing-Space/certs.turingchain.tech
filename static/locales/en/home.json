@@ -5,6 +5,7 @@
     "service": "Service",
     "technology": "Technology",
     "collaborations": "Collaborations",
+    "backedBy": "Backed By",
     "examples": "Showcases",
     "contact": "Contact",
     "product": "Product"
@@ -19,9 +20,9 @@
     },
     "subTitle": {
       "cn": "圖靈區塊鏈證書生態系",
-      "en": "Blockchain Certificate Ecosystem"
+      "en": "Your Blockchain-based Resume for One-click Verify."
     },
-    "mobileSubTitle": "Blockchain Certificate Ecosystem",
+    "mobileSubTitle": "Your Blockchain-based Resume for One-click Verify.",
     "description": {
       "cn": "圖靈鏈是一個屢獲殊榮，敏捷且國際化的團隊，主導開發區塊鏈項目，囊括紐約新聞媒體、台灣電影產業、與俄羅斯及澳門博彩集團。",
       "en": "Turing Chain is an award-winning, agile, and international team. We developed blockchains for New York news media, Taiwanese movie production, and Russia & Macao-based casinos."
@@ -104,6 +105,9 @@
   },
   "collaborations": {
     "title": "Collaboration Issuer"
+  },
+  "backedBy": {
+    "title": "Backed By"
   },
   "examples": {
     "hidden": "Hidden ",

@@ -5,6 +5,7 @@
     "service": "區塊鏈成就履歷",
     "technology": "技術架構",
     "collaborations": "已發證機構",
+    "backedBy": "培育致謝",
     "examples": "案例展示",
     "contact": "合作洽談",
     "product": "產品演示"
@@ -19,7 +20,7 @@
     },
     "subTitle": {
       "cn": "圖靈區塊鏈證書生態系",
-      "en": "Blockchain Certificate Ecosystem"
+      "en": "Your Blockchain-based Resume for One-click Verify."
     },
     "mobileSubTitle": "圖靈區塊鏈證書生態系",
     "description": {
@@ -104,6 +105,9 @@
   },
   "collaborations": {
     "title": "已協助發證機構"
+  },
+  "backedBy": {
+    "title": "培育致謝"
   },
   "examples": {
     "hidden": "隱藏",
