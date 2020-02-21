@@ -142,11 +142,6 @@ const logos = [
     scale: small,
   },
   {
-    name: 'HSBC',
-    src: getRelativePath('/static/backedBy/HSBC.png'),
-    scale: small,
-  },
-  {
     name: 'Jumpstarter',
     src: getRelativePath('/static/backedBy/Jumpstarter.png'),
     scale: small,
@@ -165,6 +160,11 @@ const logos = [
     name: 'TTA',
     src: getRelativePath('/static/backedBy/TTA.png'),
     scale: small,
+  },
+  {
+    name: 'CITRIS Foundry',
+    src: getRelativePath('/static/backedBy/CITRIS-Foundry.png'),
+    scale: ssmall,
   },
 ];
 

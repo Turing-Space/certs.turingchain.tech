@@ -41,9 +41,9 @@ const LogoWrapper = styled.div`
 
 const Logo = styled.div<{ src: string; size: number }>`
   background: url(${p => p.src});
-  background-position: center; 
-  background-repeat: no-repeat; 
-  background-size: contain; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 
   -webkit-background-size: contain;
   -moz-background-size: contain;
@@ -207,7 +207,12 @@ const logos = [
     name: 'Alphacamp',
     src: getRelativePath('/static/partners/ALPHACamp-w.svg'),
     scale: small,
-  }
+  },
+  {
+    name: 'OUTLIERS',
+    src: getRelativePath('/static/partners/OUTLIERS-HASHED.png'),
+    scale: ssmall,
+  },
 ];
 
 const Collaborations: FC<{ id: string }> = ({ id }) => {
