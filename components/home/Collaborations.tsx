@@ -210,7 +210,7 @@ const logos = [
   },
   {
     name: 'OUTLIERS',
-    src: getRelativePath('/static/partners/OUTLIERS-HASHED.png'),
+    src: getRelativePath('/static/partners/OUTLIERS_landscape.png'),
     scale: ssmall,
   },
 ];
