@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
+import Button from '@/components/Button';
 import Section from '@/components/Section';
 import H2 from '@/components/H2';
 import ScrollInfo from '@/components/ScrollInfo';
@@ -10,16 +11,31 @@ import { media } from '@/utils/theme';
 import { i18nNamespace } from '@/constants';
 import { useTranslation } from 'react-i18next';
 
+const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 7.5em 0 0 0;
+  ${media('pad')} {
+    justify-content: space-between;
+  }
+
+  ${media('desktop')} {
+    width: 35%;
+  }
+`;
+
 const AnimatedWrapper = styled(ScrollAnimation)`
   width: 100%;
   text-align: center;
 `;
 
 const Title = styled(H2)`
-  margin-top: 18vh;
+  margin-top: 8vh;
 
   ${media('largeDesktop')} {
-    margin-top: 20vh;
+    margin-top: 10vh;
   }
 `;
 
@@ -94,6 +110,16 @@ const Service: FC<{ id: string }> = ({ id }) => {
   const isEn = i18n.language === 'en';
   return (
     <Section justifyContent="flex-start" id={id} fullscreen>
+      <ButtonWrapper>
+        <Button onClick={() => window.open('http://bit.ly/turingcerts-issuer')}>
+          {t('service.issue')}
+        </Button>
+        <Button
+          onClick={() => window.open('http://bit.ly/turingcerts-verifier')}
+        >
+          {t('service.verify')}
+        </Button>
+      </ButtonWrapper>
       <AnimatedWrapper animateIn="fadeInUp" animateOnce>
         <Title>{t('service.title')}</Title>
         <StyledDescription>{t('service.description')}</StyledDescription>

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Section from '@/components/Section';
 import H2 from '@/components/H2';
+import Button from '@/components/Button';
 import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
 import ScrollInfo from '@/components/ScrollInfo';
@@ -23,7 +24,7 @@ const AnimatedWrapper = styled(ScrollAnimation)`
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 85%;
-  margin: 5% auto 15%; // top right bottom
+  margin: 5% auto 10%; // top right bottom
 `;
 
 const LogoWrapper = styled.div`
@@ -35,6 +36,21 @@ const LogoWrapper = styled.div`
 
   ${media('tablet')} {
     width: 20%;
+  }
+`;
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-bottom: 10%;
+  ${media('pad')} {
+    justify-content: space-between;
+  }
+
+  ${media('desktop')} {
+    width: 35%;
   }
 `;
 
@@ -186,6 +202,16 @@ const BackedBy: FC<{ id: string }> = ({ id }) => {
           </LogoWrapper>
         ))}
       </AnimatedWrapper>
+      <ButtonWrapper>
+        <Button onClick={() => window.open('http://bit.ly/turingcerts-issuer')}>
+          {t('backedBy.issue')}
+        </Button>
+        <Button
+          onClick={() => window.open('http://bit.ly/turingcerts-verifier')}
+        >
+          {t('backedBy.verify')}
+        </Button>
+      </ButtonWrapper>
       <ScrollInfo />
     </Section>
   );
