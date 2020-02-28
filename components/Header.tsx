@@ -190,7 +190,9 @@ const Header: SFC = () => {
           </li>
 
           <li>
-            <StyledButton onClick={() => Router.push('/auth/login')}>
+            <StyledButton
+              onClick={() => window.open('http://bit.ly/turingcerts-issuer')}
+            >
               {t('start')}
             </StyledButton>
           </li>
