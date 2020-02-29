@@ -213,6 +213,11 @@ const logos = [
     src: getRelativePath('/static/partners/OUTLIERS_landscape.png'),
     scale: ssmall,
   },
+  {
+    name: 'SBMITB',
+    src: getRelativePath('/static/partners/SBMITB.png'),
+    scale: small,
+  },
 ];
 
 const Collaborations: FC<{ id: string }> = ({ id }) => {
