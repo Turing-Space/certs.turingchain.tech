@@ -29,7 +29,7 @@
     }
   },
   "service": {
-    "issue": "Issue Right Now",
+    "issue": "Start Issuing",
     "verify": "Apply for Verify",
     "title": "Certified Blockchain Achievement Resume",
     "description": "By leveraging the incorruptible, traceable, cost-effective, and borderless characteristics of blockchain technology, TuringCerts is capable of redefining traditional educational certificates and eventually enabling unified and sustainable records tracking for educational industry. TuringCerts not only ensures full data coverage, control, and maintenance for users, but also promises a rigorous privacy policy and upholds highest trust of source as well as the dignity of authorized certificates.",
@@ -110,7 +110,7 @@
   },
   "backedBy": {
     "title": "Backed By",
-    "issue": "Issue Right Now",
+    "issue": "Start Issuing",
     "verify": "Apply for Verify"
   },
   "examples": {
