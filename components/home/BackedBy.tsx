@@ -24,7 +24,7 @@ const AnimatedWrapper = styled(ScrollAnimation)`
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 85%;
-  margin: 5% auto 10%; // top right bottom
+  margin: 5% auto 15%; // top right bottom
 `;
 
 const LogoWrapper = styled.div`
@@ -202,6 +202,7 @@ const BackedBy: FC<{ id: string }> = ({ id }) => {
           </LogoWrapper>
         ))}
       </AnimatedWrapper>
+      {/*
       <ButtonWrapper>
         <Button onClick={() => window.open('http://bit.ly/turingcerts-issuer')}>
           {t('backedBy.issue')}
@@ -212,6 +213,7 @@ const BackedBy: FC<{ id: string }> = ({ id }) => {
           {t('backedBy.verify')}
         </Button>
       </ButtonWrapper>
+      */}
       <ScrollInfo />
     </Section>
   );

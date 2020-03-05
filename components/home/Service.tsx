@@ -32,10 +32,10 @@ const AnimatedWrapper = styled(ScrollAnimation)`
 `;
 
 const Title = styled(H2)`
-  margin-top: 8vh;
+  margin-top: 18vh;
 
   ${media('largeDesktop')} {
-    margin-top: 10vh;
+    margin-top: 20vh;
   }
 `;
 
@@ -110,6 +110,7 @@ const Service: FC<{ id: string }> = ({ id }) => {
   const isEn = i18n.language === 'en';
   return (
     <Section justifyContent="flex-start" id={id} fullscreen>
+      {/*
       <ButtonWrapper>
         <Button onClick={() => window.open('http://bit.ly/turingcerts-issuer')}>
           {t('service.issue')}
@@ -120,6 +121,7 @@ const Service: FC<{ id: string }> = ({ id }) => {
           {t('service.verify')}
         </Button>
       </ButtonWrapper>
+      */}
       <AnimatedWrapper animateIn="fadeInUp" animateOnce>
         <Title>{t('service.title')}</Title>
         <StyledDescription>{t('service.description')}</StyledDescription>
