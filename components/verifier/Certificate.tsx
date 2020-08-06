@@ -89,7 +89,7 @@ const PDFF: FC<TProps> = props => {
               hideNavbar
               scale={
                 window.innerWidth > 700
-                  ? window.innerWidth / 1600
+                  ? window.innerWidth / 1800
                   : window.innerWidth / (1152 + 630)
               }
             />
