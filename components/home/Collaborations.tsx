@@ -117,11 +117,11 @@ const logos = [
     src: getRelativePath('/static/partners/NTU.svg'),
     scale: small,
   },
-  {
+  /*{
     name: '國立清華大學',
     src: getRelativePath('/static/partners/清大NTHU.svg'),
     scale: small,
-  },
+  },*/
   {
     name: 'NCKU',
     src: getRelativePath('/static/partners/NCKU.svg'),
