@@ -42,7 +42,7 @@ const AnimatedWrapper = styled(ScrollAnimation)`
   }
 `;
 
-const MoreInfoWrapper = styled(Wrapper) <{ open: boolean }>`
+const MoreInfoWrapper = styled(Wrapper)<{ open: boolean }>`
   overflow: hidden;
   max-height: ${p => (p.open ? '700vh' : 0)};
   transition: max-height ease-in 0.3s;
@@ -170,7 +170,7 @@ const Technology: FC<{ id: string }> = ({ id }) => {
         {open ? t('technology.hidden') : t('technology.more')}
         {t('technology.info')}
       </StyledButton>
-      {/* <ScrollInfo /> */}
+      <ScrollInfo />
     </Section>
   );
 };
