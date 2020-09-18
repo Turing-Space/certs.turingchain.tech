@@ -21,7 +21,7 @@
     "dayjs": "^1.8.15",
     "dotenv": "^8.0.0",
     "express": "^4.16.4",
-    "lodash": "^4.17.14",
+    "lodash": "^4.17.19",
     "mgr-pdf-viewer-react": "^1.0.3",
     "next": "^8.1.0",
     "next-i18next": "^4.1.0",
