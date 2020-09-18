@@ -64,7 +64,6 @@ const IconWrapper = styled.div`
 `;
 
 const CompanyWrapper = styled.div`
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,10 +79,6 @@ const CompanyWrapper = styled.div`
     font-weight: 500;
     letter-spacing: 1px;
     font-family: ${p => p.theme.fontFamily.SFText};
-  }
-
-  &:hover {
-    opacity: 0.75;
   }
 
   ${media('tablet')} {
@@ -118,7 +113,7 @@ const Footer: FC = () => {
       <InfoWrapper>
         <Title>{t('footer.title')}</Title>
         <IconWrapper>
-          <a href="mailto:berkeley@turingchain.tech?subject=[Collaboration]">
+          <a href="mailto:apac@turingchain.tech?subject=[Collaboration]">
             <img
               src={getRelativePath('/static/icon/icon-mail.png')}
               srcSet={`${getRelativePath(
@@ -127,10 +122,10 @@ const Footer: FC = () => {
             />
           </a>
           <a
-            href="https://www.facebook.com/tci.works/"
+            href="https://www.facebook.com/turingcerts"
             target="_blank"
             onClick={() =>
-              trackOutboundLink('https://www.facebook.com/tci.works/')
+              trackOutboundLink('https://www.facebook.com/turingcerts')
             }
           >
             <img
@@ -159,9 +154,7 @@ const Footer: FC = () => {
             />
           </a>
         </IconWrapper>
-        <CompanyWrapper
-          onClick={() => window.open('https://turingchain.tech/')}
-        >
+        <CompanyWrapper>
           <img
             src={getRelativePath('/static/logo/logo-tc-light.png')}
             srcSet={`${getRelativePath(
