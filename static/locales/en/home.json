@@ -4,7 +4,7 @@
   "header": {
     "service": "Service",
     "technology": "Technology",
-    "collaborations": "Collaborations",
+    "collaborations": "Friends",
     "backedBy": "Backed By",
     "examples": "Showcases",
     "contact": "Contact",
@@ -106,7 +106,7 @@
     }
   },
   "collaborations": {
-    "title": "Collaboration Issuer"
+    "title": "Friends in ePortfolio Alliance"
   },
   "backedBy": {
     "title": "Backed By",

@@ -4,7 +4,7 @@
   "header": {
     "service": "區塊鏈成就履歷",
     "technology": "技術架構",
-    "collaborations": "已發證機構",
+    "collaborations": "數位學習履歷夥伴",
     "backedBy": "培育致謝",
     "examples": "案例展示",
     "contact": "合作洽談",
@@ -106,7 +106,7 @@
     }
   },
   "collaborations": {
-    "title": "已協助發證機構"
+    "title": "數位學習履歷夥伴"
   },
   "backedBy": {
     "title": "培育致謝",
