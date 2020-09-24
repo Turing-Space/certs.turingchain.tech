@@ -152,12 +152,13 @@ const logos = [
     src: getRelativePath('/static/partners/sin.png'),
     scale: small,
   },
-
+  /*
   {
     name: 'foreign',
     src: getRelativePath('/static/partners/foreign.svg'),
     scale: small,
   },
+  */
   {
     name: '國立臺北科技大學',
     src: getRelativePath('/static/partners/taipei-tech.svg'),
