@@ -154,7 +154,9 @@ const Proof: FC<TProps> = props => {
           <img src={getRelativePath(certicheckDoneIcon)} alt="" />
           <VSA>Verified Source Authenticity</VSA>
 
-          <a href={'https://utils.iota.org/transaction/' + props.iota}>
+          <a
+            href={'https://explorer.iota.org/mainnet/transaction/' + props.iota}
+          >
             <More>More</More>
           </a>
         </Status>
@@ -259,7 +261,9 @@ const Proof: FC<TProps> = props => {
             </InfoContent>
           </a>
           <InfoH2>Credential Hash</InfoH2>
-          <a href={'https://utils.iota.org/transaction/' + props.iota}>
+          <a
+            href={'https://explorer.iota.org/mainnet/transaction/' + props.iota}
+          >
             <InfoContent>{props.iota}</InfoContent>
           </a>
           <img
