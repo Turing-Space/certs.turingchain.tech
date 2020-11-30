@@ -182,6 +182,11 @@ const logos = [
     src: getRelativePath('/static/backedBy/CITRIS-Foundry.png'),
     scale: ssmall,
   },
+  {
+    name: 'AWS EdStart',
+    src: getRelativePath('/static/backedBy/AWS-Innovator.png'),
+    scale: small,
+  },
 ];
 
 const BackedBy: FC<{ id: string }> = ({ id }) => {
