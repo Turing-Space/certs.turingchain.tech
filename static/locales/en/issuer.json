@@ -1,66 +1,32 @@
 {
-    "AboutMe": {
-        "title": "Profile",
-        "icon1": "Type",
-        "icon2": "Total"
+  "AboutMe": {
+    "title": "Profile",
+    "icon1": "Type",
+    "icon2": "Total"
+  },
+  "MyCerts": {
+    "title": "Certificates"
+  },
+  "Issue": {
+    "notice": {
+      "0": "You haven't issued any certificate yet.",
+      "1": "Please fill in the profile information to proceed."
     },
-    "MyCerts": {
-        "title": "Certificates"
-    },
-    "Issue": {
-        "issue": "Issue",
-        "notice": {
-            "0": "You haven't issued any certificate yet.",
-            "1": "Please fill in the profile information to proceed."
-        },
-        "step1": {
-            "certName": "Enter Certificate Name",
-            "enterName": "Certificate Name",
-            "certKind": "Select Certificate Type",
-            "eventCert": "Event",
-            "completeCert": "Course",
-            "errorName": "Please Enter Certificate Name!",
-            "errorCSV": "Please Upload CSV File to Proceed!"
-        },
-        "step2": {
-            "content": "CSV Column Name",
-            "csvCol": "emailHolder / holder / issuer / emailIssuer / type / issuerWebsite",
-            "upload1": "Upload CSV",
-            "csv": "CSV File",
-            "upload2": "Upload",
-            "notice": "Please double check if your certificate type is the same as that of in the csv file."
-        },
-        "next": "Next",
-        "step3": {
-            "preview": "Preview",
-            "edit": "Edit"
-        },
-        "step4": {
-            "enterPwd": "Enter Security Password",
-            "pwd": "Security Password",
-            "pwdFormat": "6 ~ 12 characters",
-            "notice0": "Invalid Password.",
-            "notice1": "Attempts left. Contact us to reset password after 3 failed trials.",
-            "error": "Invalid Password",
-            "issue": "Submit",
-            "success0": "Congradulations!",
-            "success1": "has been issued successfully."
-        },
-        "errorPwd": "Failed to input valid password in 3 attempts. Please contact us to reset password.",
-        "uploadTemplate": "Uploading Template...",
-        "issuing": "Issuing..."
-    },
-    "CertModal": {
-        "issuer": "Issuer",
-        "issuerName": "UC Berkeley",
-        "certName": "Graduation Diploma",
-        "date": "Date",
-        "upload": "Certificate Scanned Copy",
-        "limit": "* Maximum File Size 1 MB",
-        "uploadPic": "Upload",
-        "discard": "Discard",
-        "add": "Submit",
-        "progress": "Verification Progress"
-    },
-    "addCert": "Upload"
+    "step1": {
+      "certName": "Enter Certificate Name"
+    }
+  },
+  "CertModal": {
+    "issuer": "Issuer",
+    "issuerName": "UC Berkeley",
+    "certName": "Graduation Diploma",
+    "date": "Date",
+    "upload": "Certificate Scanned Copy",
+    "limit": "* Maximum File Size 1 MB",
+    "uploadPic": "Upload",
+    "discard": "Discard",
+    "add": "Submit",
+    "progress": "Verification Progress"
+  },
+  "addCert": "Upload"
 }

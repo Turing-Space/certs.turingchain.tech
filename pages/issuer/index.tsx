@@ -2,7 +2,6 @@ import { useEffect, FC, useContext } from 'react';
 
 import ProductLayout from '@/layouts/Product';
 import AboutMe from '@/components/issuer/AboutMe';
-import MyCertsTitleRight from '@/components/issuer/MyCertsTitleRight';
 import MyCerts from '@/components/Cert/MyCerts';
 import CertsNull from '@/components/issuer/CertsNull';
 import { CertsContext } from '@/contexts/certs';
@@ -17,7 +16,6 @@ import queryString from 'query-string';
 import { preparedUser } from '@/utils/user';
 import { Router } from '@/i18n';
 
-
 type TProps = {
   syncTrigger: number;
 };
@@ -30,11 +28,11 @@ const IssuerPage: FC<TProps> = () => {
 
   useEffect(() => {
     const value = queryString.parse(window.location.search);
-    const id = user.uid || String(value.id)
+    const id = user.uid || String(value.id);
 
     updateUser(u => ({
       ...u,
-      id: id
+      id: id,
     }));
 
     const fetch = async () => {
@@ -50,10 +48,9 @@ const IssuerPage: FC<TProps> = () => {
         if (id == 'undefined') {
           notify.error({ msg: 'Please login.' });
           setTimeout(() => {
-            Router.push('/auth/login')
+            Router.push('/auth/login');
           }, 3000);
-        }
-        else {
+        } else {
           const [err2, newUser] = await getUsers({ uid: id });
           if (!newUser) {
             notify.error({ msg: err2 });
@@ -62,7 +59,6 @@ const IssuerPage: FC<TProps> = () => {
           }
         }
       }
-
     };
     fetch();
   }, []);
@@ -70,11 +66,7 @@ const IssuerPage: FC<TProps> = () => {
   return (
     <ProductLayout routePath="/issuer">
       <AboutMe />
-      <MyCerts
-        title={t('MyCerts.title')}
-        TitleRight={MyCertsTitleRight}
-        Empty={CertsNull}
-      />
+      <MyCerts title={t('MyCerts.title')} Empty={CertsNull} />
     </ProductLayout>
   );
 };

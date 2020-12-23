@@ -58,14 +58,14 @@ export const getCerts = async (d?: TGetCertsParams) => {
 };
 
 type TDelCertsParams = {
-  ipfs: string
+  ipfs: string;
 };
 
 export const delCerts = async (d?: TDelCertsParams) => {
   await call(
     axios.delete('/issue', {
       params: d,
-    })
+    }),
   );
 };
 
@@ -104,26 +104,4 @@ type TSignInParams = {
 export const signIn = async (body: TSignInParams) => {
   const res = await call(axios.post('/authorization/signin', body));
   return formatAPIRes<TAPIUser>(res);
-};
-
-export const uploadCertTemplate = async (body: FormData) => {
-  const res = await call(
-    axios.post('/upload', body, {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-      },
-    }),
-  );
-  return formatAPIRes<any>(res);
-};
-
-export const issueCertByCSV = async (body: FormData) => {
-  const res = await call(
-    axios.post('/issue/csv', body, {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-      },
-    }),
-  );
-  return formatAPIRes<any>(res);
 };
