@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 
 import { scrollToID, getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
-import { Router } from '@/i18n';
 import { i18nNamespace } from '@/constants';
 
 const Wrapper = styled.div`
@@ -206,7 +205,10 @@ const MobileHeader: FC<TProps> = ({ open, setOpen }) => {
             </li>
           </>
         )}
-        <li className="red" onClick={() => Router.push('/auth/login')}>
+        <li
+          className="red"
+          onClick={() => window.open('http://bit.ly/turingcerts-issuer')}
+        >
           {t('start')}
         </li>
       </MobileList>
