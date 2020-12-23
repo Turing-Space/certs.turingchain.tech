@@ -17,15 +17,6 @@
     }
   },
   "CertModal": {
-    "issuer": "發證單位",
-    "issuerName": "國立高雄科技大學",
-    "certName": "區塊鏈集訓證書",
-    "date": "發證日期",
-    "upload": "證書圖檔",
-    "limit": "* 檔案限制 1 MB",
-    "uploadPic": "上傳",
-    "discard": "取消",
-    "add": "新增",
     "progress": "認證進度"
   },
   "addCert": "新增證書"
