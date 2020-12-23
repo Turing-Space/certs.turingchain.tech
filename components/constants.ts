@@ -18,11 +18,6 @@ export enum i18nNamespace {
   Issuer = 'issuer',
 }
 
-export enum CertTemplate {
-  Activity = 'ACTIVITY',
-  Completion = 'COMPLETION',
-}
-
 export enum PageState {
   RegisterInput = 'REGISTER_INPUT',
   RegisterSignIn = 'REGISTER_SIGNIN',
@@ -41,16 +36,3 @@ export const langsMap: { [key: string]: boolean } = {
   'zh-TW': true,
   en: true,
 };
-
-export const templateStyles = [
-  {
-    key: CertTemplate.Activity,
-    uri: require('./static/certificate/template/turingCertsPioneer.png?inline'),
-    name: 'eventCert',
-  },
-  {
-    key: CertTemplate.Completion,
-    uri: require('./static/certificate/template/turingScholarship.jpg?inline'),
-    name: 'completeCert',
-  },
-];

@@ -57,15 +57,6 @@ module.exports = withBundleAnalyzer(
               page: '/auth/login',
               query: { lng: defaultLng, mode: '' },
             },
-            '/issuer': { page: '/issuer', query: { lng: '', id: '' } },
-            '/issuer/issue-cert/1': {
-              page: '/issuer/issue-cert/[page]',
-              query: { lng: defaultLng, page: '1' },
-            },
-            '/issuer/issue-cert/2': {
-              page: '/issuer/issue-cert/[page]',
-              query: { lng: defaultLng, page: '2' },
-            },
           };
 
           return process.env.NODE_ENV === 'development'

@@ -17,12 +17,7 @@ export enum i18nNamespace {
   Demo = 'demo',
   Issuer = 'issuer',
   Product = 'product',
-  Register = 'register'
-}
-
-export enum CertTemplate {
-  Activity = 'ACTIVITY',
-  Completion = 'COMPLETION',
+  Register = 'register',
 }
 
 export const GA_ID = process.env.GA_ID;
@@ -34,16 +29,3 @@ export const langsMap: { [key: string]: boolean } = {
   'zh-TW': true,
   en: true,
 };
-
-export const templateStyles = [
-  {
-    key: CertTemplate.Activity,
-    uri: require('./static/certificate/template/turingCertsPioneer.png?inline'),
-    name: 'eventCert',
-  },
-  {
-    key: CertTemplate.Completion,
-    uri: require('./static/certificate/template/turingScholarship.jpg?inline'),
-    name: 'completeCert',
-  },
-];
