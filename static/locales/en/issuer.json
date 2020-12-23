@@ -17,15 +17,6 @@
     }
   },
   "CertModal": {
-    "issuer": "Issuer",
-    "issuerName": "UC Berkeley",
-    "certName": "Graduation Diploma",
-    "date": "Date",
-    "upload": "Certificate Scanned Copy",
-    "limit": "* Maximum File Size 1 MB",
-    "uploadPic": "Upload",
-    "discard": "Discard",
-    "add": "Submit",
     "progress": "Verification Progress"
   },
   "addCert": "Upload"

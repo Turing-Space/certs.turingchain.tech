@@ -1,26 +1,25 @@
 {
-    "AboutMe": {
-        "title": "Profile",
-        "icon1": "Total",
-        "icon2": "Verified",
-        "icon3": "Requested",
-        "logout": "Logout"
-    },
-    "MyCerts": {
-        "title": "My Certificates"
-    },
-    "Finish": {
-        "pioneer": {
-            "0": "You just got a ",
-            "1": "\"Pioneer Certificate\"",
-            "2": "— Welcome to TuringCerts!",
-            "ok": "Start Exploring"
-        }
-    },
-    "Null": {
-        "notice0": "Oops! No verified certificates here yet.",
-        "notice1": "Let's start!",
-        "add": "Upload"
-    },
-    "addCert": "Upload"
+  "AboutMe": {
+    "title": "Profile",
+    "icon1": "Total",
+    "icon2": "Verified",
+    "icon3": "Requested",
+    "logout": "Logout"
+  },
+  "MyCerts": {
+    "title": "My Certificates"
+  },
+  "Finish": {
+    "pioneer": {
+      "0": "You just got a ",
+      "1": "\"Pioneer Certificate\"",
+      "2": "— Welcome to TuringCerts!",
+      "ok": "Start Exploring"
+    }
+  },
+  "Null": {
+    "notice0": "Oops! No verified certificates here yet.",
+    "notice1": "Let's start!",
+    "add": "Upload"
+  }
 }

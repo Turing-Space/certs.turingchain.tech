@@ -44,22 +44,25 @@ export type TMyCertsRenderComponentProps = {
 type TProps = {
   title: string;
   Empty?: ComponentType<TMyCertsRenderComponentProps>;
-  TitleRight?: ComponentType<TMyCertsRenderComponentProps>;
-  Modal?: ComponentType<{ visible: boolean; onClose: () => void }>;
 };
 
-const MyCerts: FC<TProps> = ({ title, Modal, TitleRight, Empty }) => {
+const MyCerts: FC<TProps> = ({ title, Empty }) => {
   const { certs } = useContext(CertsContext);
   const [searchText, setSearchText] = useState('');
-  const [modalVisible, setModalVisible] = useState(false);
+  const [, setModalVisible] = useState(false);
 
   const filteredCerts = useMemo(
-    () => (searchText ? certs.filter(c => c.name.toUpperCase().includes(searchText.toUpperCase())) : certs),
+    () =>
+      searchText
+        ? certs.filter(c =>
+            c.name.toUpperCase().includes(searchText.toUpperCase()),
+          )
+        : certs,
     [certs, searchText],
   );
 
   const openModal = useCallback(() => setModalVisible(true), []);
-  const closeModal = useCallback(() => setModalVisible(false), []);
+  // const closeModal = useCallback(() => setModalVisible(false), []);
   const EmptyComponent = useMemo(
     () => (Empty ? <Empty openModal={openModal} /> : null),
     [],
@@ -69,7 +72,6 @@ const MyCerts: FC<TProps> = ({ title, Modal, TitleRight, Empty }) => {
     <Wrapper>
       <TitleWrapper>
         <Title>{title}</Title>
-        {TitleRight && <TitleRight openModal={openModal} />}
       </TitleWrapper>
       <div>
         <ControlWrapper>
@@ -81,7 +83,6 @@ const MyCerts: FC<TProps> = ({ title, Modal, TitleRight, Empty }) => {
         </ControlWrapper>
         {certs.length === 0 ? EmptyComponent : <Certs certs={filteredCerts} />}
       </div>
-      {Modal && <Modal visible={modalVisible} onClose={closeModal} />}
     </Wrapper>
   );
 };
