@@ -20,11 +20,6 @@ export enum i18nNamespace {
 
 export enum PageState {
   RegisterInput = 'REGISTER_INPUT',
-  RegisterSignIn = 'REGISTER_SIGNIN',
-  RegisterEmail = 'REGISTER_EMAIL',
-  RegisterEmailVerify = 'REGISTER_EMAIL_VERIFY',
-  RegisterPhone = 'REGISTER_PHONE',
-  RegisterPhoneVerify = 'REGISTER_PHONE_VERIFY',
 }
 
 export const GA_ID = process.env.GA_ID;

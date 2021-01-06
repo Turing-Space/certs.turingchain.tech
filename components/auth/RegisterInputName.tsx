@@ -73,7 +73,6 @@ const InfoWrapper = styled.div`
   ${media('phone')} {
     margin-bottom: 0px;
   }
-
 `;
 
 type TProps = {
@@ -87,7 +86,6 @@ const InputName: FC<TProps> = props => {
 
   const onInputName = () => {
     if (props.userName) {
-      props.onChangePageState(RegisterPageState.SignIn);
     }
   };
 
