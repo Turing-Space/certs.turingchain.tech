@@ -9,14 +9,6 @@
   "MyCerts": {
     "title": "我的證書"
   },
-  "Finish": {
-    "pioneer": {
-      "0": "獲得",
-      "1": "「創世玩家證書」",
-      "2": "— 歡迎加入Turing Certs！",
-      "ok": "確認"
-    }
-  },
   "Null": {
     "notice0": "Oops！你的證書還沒有受到保障",
     "notice1": "讓我們開始吧！",

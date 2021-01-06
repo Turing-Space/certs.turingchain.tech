@@ -112,9 +112,6 @@ const SignIn: FC<TProps> = ({ userName, onChangePageState }) => {
       };
       // alert(JSON.stringify(userInfo));
 
-      // if success
-      onChangePageState(RegisterPageState.FinishPage);
-
       // if error
       // setError(err.message);
       setLoading(false);

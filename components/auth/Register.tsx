@@ -5,7 +5,6 @@ import { media } from '@/utils/theme';
 // page component
 import RegisterInputName from '@/components/auth/RegisterInputName';
 import RegisterSignIn from '@/components/auth/RegisterSignIn';
-import FinishPage from '@/components/auth/FinishPage';
 
 const StyledSection = styled(Section)`
   position: absolute;
@@ -38,14 +37,12 @@ const RegisterWrapper = styled.div`
 export enum RegisterPageState {
   InputName = 'REGISTER_INPUT_NAME',
   SignIn = 'REGISTER_SIGNIN',
-  FinishPage = 'REGISTER_FINISHPAGE',
 }
 
 // page component routes
 const routes: any = {
   [RegisterPageState.InputName]: RegisterInputName,
   [RegisterPageState.SignIn]: RegisterSignIn,
-  [RegisterPageState.FinishPage]: FinishPage,
 };
 
 const Register: FC = () => {
