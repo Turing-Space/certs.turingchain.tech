@@ -104,11 +104,11 @@ const StyledLink = styled.span`
   margin-left: 2em;
   margin-bottom: 2em;
   cursor: pointer;
-  
-  position:absolute;
-  bottom:0;
-  left:0;
-`
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+`;
 
 const Login: FC = () => {
   const { updateUser } = useContext(UserContext);
@@ -117,11 +117,6 @@ const Login: FC = () => {
   const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const { t } = useTranslation(i18nNamespace.Common);
-
-  // SignIn Button
-  const onRegister = () => {
-    Router.push('/auth/register');
-  };
 
   const onLogin = useCallback(async () => {
     const validate = () => {
@@ -148,12 +143,16 @@ const Login: FC = () => {
       }
       // else if (mode === 'issuer' && !user.isIssuer) {
       //   notify.error({ msg: '此帳號並不是發證機關帳號，請確認使用帳號' });
-      // } 
+      // }
       else {
         updateUser({
-          ...preparedUser(user)
+          ...preparedUser(user),
         });
-        Router.push(user.isIssuer == 'true' ? '/issuer?id=' + user.uid : '/product?id=' + user.uid);
+        Router.push(
+          user.isIssuer == 'true'
+            ? '/issuer?id=' + user.uid
+            : '/product?id=' + user.uid,
+        );
       }
       setLoading(false);
     }
@@ -200,13 +199,8 @@ const Login: FC = () => {
         <StyledButton disabled={loading} onClick={onLogin}>
           {loading ? <Loading /> : t('auth.login')}
         </StyledButton>
-        <StyledButton disabled={loading} onClick={onRegister}>
-          {loading ? <Loading /> : t('auth.register')}
-        </StyledButton>
-        <a href='https://certs.turingchain.tech'>
-          <StyledLink>
-            &lt;&lt; {t('backToHome')}
-          </StyledLink>
+        <a href="https://certs.turingchain.tech">
+          <StyledLink>&lt;&lt; {t('backToHome')}</StyledLink>
         </a>
       </MobileWrapper>
       <InfoWrapper>

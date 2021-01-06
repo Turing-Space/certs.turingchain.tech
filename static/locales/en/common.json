@@ -10,8 +10,7 @@
   "auth": {
     "enterAcc": "Account",
     "enterPwd": "Password",
-    "login": "Login",
-    "register": "Register"
+    "login": "Login"
   },
   "error": {
     "empty": "* Account / Password Required",

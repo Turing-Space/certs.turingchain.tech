@@ -17,7 +17,6 @@ export enum i18nNamespace {
   Demo = 'demo',
   Issuer = 'issuer',
   Product = 'product',
-  Register = 'register',
 }
 
 export const GA_ID = process.env.GA_ID;

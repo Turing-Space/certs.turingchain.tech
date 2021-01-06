@@ -18,10 +18,6 @@ export enum i18nNamespace {
   Issuer = 'issuer',
 }
 
-export enum PageState {
-  RegisterInput = 'REGISTER_INPUT',
-}
-
 export const GA_ID = process.env.GA_ID;
 
 export const API_ENDPOINT = 'https://x1certificate-aqkcbxdduq-uc.a.run.app/v1';

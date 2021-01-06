@@ -14,7 +14,7 @@ const LoginPage: NextFC = () => {
 
 LoginPage.getInitialProps = () => {
   return {
-    namespacesRequired: [i18nNamespace.Common, i18nNamespace.Issuer, i18nNamespace.Register],
+    namespacesRequired: [i18nNamespace.Common, i18nNamespace.Issuer],
   };
 };
 
