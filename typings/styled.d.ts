@@ -14,9 +14,18 @@ export interface Theme {
     backgroundBlack: string;
     backgroundWhite: string;
     blue: string;
-    greyV2: string;
-    gold: string;
     backgroundGrey: string;
+    backgroundShapeGold: string;
+    backgroundIconGrey: string;
+    backgroundWordDarkGrey: string;
+    backgroundJoinDarkGold: string;
+    backgroundJoinLightGold: string;
+    backgroundTranslationGrey: string;
+    logoRightShieldRed: string;
+    logoLefttShieldRed: string;
+    logoOutsideRed: string;
+    websiteScrollGrey: string;
+    websiteCatelogWordGold: string;
   };
 
   borderRadius: string;
