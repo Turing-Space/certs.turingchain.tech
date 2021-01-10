@@ -14,6 +14,9 @@ export interface Theme {
     backgroundBlack: string;
     backgroundWhite: string;
     blue: string;
+    greyV2: string;
+    gold: string;
+    backgroundGrey: string;
   };
 
   borderRadius: string;

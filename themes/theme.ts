@@ -14,6 +14,9 @@ const theme: Theme = {
     backgroundBlack: '#161616',
     backgroundWhite: '#fbfbfb',
     blue: '#0035ad',
+    greyV2: '#00000029',
+    gold: '#dfa659',
+    backgroundGrey: '#f0f2f5',
   },
 
   borderRadius: '6px',
