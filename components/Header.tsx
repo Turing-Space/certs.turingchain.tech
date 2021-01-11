@@ -23,7 +23,7 @@ const Wrapper = styled.header<{ hideUp?: boolean; openMobile: boolean }>`
   height: 50px;
   padding: 0.3em 2.5rem;
   background-color: ${p =>
-    p.openMobile ? 'rgb(33, 33, 33)' : p.theme.colors.backgroundBlack};
+    p.openMobile ? 'rgb(33, 33, 33)' : p.theme.colors.white};
   z-index: ${p => p.theme.z.high};
   transform: translateY(0);
   transition: all 0.3s ease-in;

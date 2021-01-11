@@ -87,7 +87,7 @@ const IconWrapper = styled.div`
 `;
 
 const InfoTitle = styled(H2)`
-  color: ${p => p.theme.colors.backgroundJoinLightGold};
+  color: ${p => p.theme.colors.primary};
   letter-spacing: 1.5px;
 
   ${media('tablet')} {
