@@ -15,8 +15,9 @@ const Index: NextFC = () => {
   return (
     <HomeLayout title={'TuringCerts | ' + SITE_TITLE}>
       <Home id="section-home" />
-      {/*}
+
       <Service id="section-service" />
+      {/*}
       <Technology id="section-technology" />
       }
       {/* <DemoVideo id="section-product" /> 
