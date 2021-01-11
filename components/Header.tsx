@@ -54,7 +54,7 @@ const Wrapper = styled.header<{ hideUp?: boolean; openMobile: boolean }>`
     text-decoration: none;
   }
 `;
-
+//Icon press color
 const SectionWrapper = styled.ul`
   display: none;
   align-items: center;
@@ -90,7 +90,7 @@ const LanguageWrapper = styled.div<{ open: boolean }>`
   color: #9e9e9e;
   cursor: pointer;
   transition: color 0.1s ease-in;
-  background-color: ${p => p.theme.colors.backgroundBlack};
+  background-color: ${p => p.theme.colors.white};
 
   > img {
     width: 20px;
