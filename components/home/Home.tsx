@@ -9,6 +9,7 @@ import ScrollInfo from '@/components/ScrollInfo';
 import { media } from '@/utils/theme';
 import { i18nNamespace } from '@/constants';
 
+//Home Icon Words
 const Text = styled.p`
   margin-bottom: 8px;
   font-size: ${p => p.theme.fontSize.bigger};
@@ -26,6 +27,7 @@ const Logo = styled.img`
   }
 `;
 
+//Home TuringCerts Words
 const Title = styled(H1)`
   color: ${p => p.theme.colors.backgroundWordDarkGrey};
   margin: 0.6em 0 0.3em 0;
