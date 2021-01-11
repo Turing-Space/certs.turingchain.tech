@@ -12,7 +12,7 @@ import { i18nNamespace } from '@/constants';
 const Text = styled.p`
   margin-bottom: 8px;
   font-size: ${p => p.theme.fontSize.bigger};
-  color: ${p => p.theme.colors.grey};
+  color: ${p => p.theme.colors.backgroundWordDarkGrey};
 `;
 
 const CNText = styled(Text)`
@@ -27,7 +27,7 @@ const Logo = styled.img`
 `;
 
 const Title = styled(H1)`
-  color: ${p => p.theme.colors.primary};
+  color: ${p => p.theme.colors.backgroundWordDarkGrey};
   margin: 0.6em 0 0.3em 0;
   white-space: pre-line;
 `;
