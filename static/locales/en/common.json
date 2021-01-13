@@ -11,11 +11,10 @@
     "enterAcc": "Account",
     "enterPwd": "Password",
     "login": "Login",
-    "register": "Register"
-  },
-  "error": {
-    "empty": "* Account / Password Required",
-    "email": "* Invalid Email",
-    "noAcc": "* Account Does Not Exist"
+    "error": {
+      "empty": "* Account / Password Required",
+      "email": "* Invalid Email",
+      "noAcc": "* Account Does Not Exist"
+    }
   }
 }

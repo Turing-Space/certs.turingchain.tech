@@ -5,7 +5,7 @@ import isFunction from 'lodash/isFunction';
 import { Router } from '@/i18n';
 
 function withAuth<P = {}>(
-  mode: 'user' | 'issuer' | 'register',
+  mode: 'user' | 'issuer',
   getInitialProps?: GetInitialProps<any, any>,
 ) {
   return (Component: React.ComponentType<P>) =>
@@ -31,7 +31,7 @@ function withAuth<P = {}>(
         //   <Component {...this.props} />
         // ) : null;
 
-        return <Component {...this.props} />
+        return <Component {...this.props} />;
       }
     };
 }

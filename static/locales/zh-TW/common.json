@@ -11,7 +11,6 @@
     "enterAcc": "輸入帳號",
     "enterPwd": "輸入密碼",
     "login": "登入",
-    "register": "註冊",
     "error": {
       "empty": "* 帳號密碼不可為空",
       "email": "* 信箱有誤",
