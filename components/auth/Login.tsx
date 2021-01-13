@@ -112,15 +112,16 @@ const StyledLink = styled.span`
 
 const Login: FC = () => {
   const { updateUser } = useContext(UserContext);
-  const [account, setAccount] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
+  const [account, setAccount] = useState<string>('service@turingchain.tech');
+  //const [password, setPassword] = useState<string>('');
   const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const { t } = useTranslation(i18nNamespace.Common);
 
   const onLogin = useCallback(async () => {
     const validate = () => {
-      if (!account || !password) {
+      if (!account) {
+        //|| !password) {
         setError(t('auth.error.empty'));
         return false;
       } else if (!emailValidator(account)) {
@@ -135,7 +136,7 @@ const Login: FC = () => {
       const [err, user] = await signIn({
         userInfo: {
           email: account,
-          password,
+          //password,
         },
       });
       if (!user) {
@@ -156,7 +157,7 @@ const Login: FC = () => {
       }
       setLoading(false);
     }
-  }, [account, password]);
+  }, [account]); //, password]);
 
   const onKeyDown = useCallback(
     (e: KeyboardEvent<HTMLInputElement>) => {
@@ -186,6 +187,7 @@ const Login: FC = () => {
           value={account}
           onChange={setAccount}
         />
+        {/*}
         <StyledTextInput
           placeholder={t('auth.enterPwd')}
           value={password}
@@ -195,6 +197,7 @@ const Login: FC = () => {
             onKeyDown,
           }}
         />
+        {*/}
         <ErrorMessage>{error}</ErrorMessage>
         <StyledButton disabled={loading} onClick={onLogin}>
           {loading ? <Loading /> : t('auth.login')}
