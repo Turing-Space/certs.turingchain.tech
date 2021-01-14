@@ -112,7 +112,7 @@ const StyledLink = styled.span`
 
 const Login: FC = () => {
   const { updateUser } = useContext(UserContext);
-  const [account, setAccount] = useState<string>('service@turingchain.tech');
+  const [account, setAccount] = useState<string>('');
   const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const { t } = useTranslation(i18nNamespace.Common);
