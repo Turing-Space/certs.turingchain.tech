@@ -134,6 +134,7 @@ const Login: FC = () => {
       const [err, user] = await signIn({
         userInfo: {
           email: account,
+          password: 'test',
         },
       });
       if (!user) {
