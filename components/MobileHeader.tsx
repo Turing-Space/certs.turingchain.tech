@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   > div {
     width: 2em;
     height: 3px;
-    background: ${p => p.theme.colors.white};
+    background: ${p => p.theme.colors.darkGrey};
   }
 
   ${media('desktop')} {
@@ -42,7 +42,7 @@ const LanguageWrapper = styled.li<{ open: boolean }>`
     height: 0;
     border-style: solid;
     border-width: 8px 4px 0px 4px;
-    border-color: #9e9e9e transparent transparent;
+    border-color: ${p => p.theme.colors.darkGrey} transparent transparent;
     line-height: 0px;
     margin-top: 2px;
     margin-left: 0.5em;
@@ -61,14 +61,14 @@ const MobileList = styled(animated.ul)`
   left: 0;
   padding-left: 0;
   margin: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: ${p => p.theme.colors.white};
   z-index: -1;
 
   > li {
     cursor: pointer;
     padding: 1em 4em;
     font-size: ${p => p.theme.fontSize.bigger};
-    background: rgb(33, 33, 33);
+    background: ${p => p.theme.colors.white};
 
     &.red {
       background: ${p => p.theme.colors.primary};
@@ -87,7 +87,7 @@ const MobileList = styled(animated.ul)`
 
     &:focus,
     &:active {
-      background: rgb(26, 26, 26);
+      background: ${p => p.theme.colors.primary};
     }
   }
 `;

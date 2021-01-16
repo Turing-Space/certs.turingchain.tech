@@ -13,7 +13,7 @@ const Button = styled.button<TButtonProps>`
   align-items: center;
   width: 100%;
   max-width: 12em;
-  background-color: ${p => p.theme.colors.primary};
+  background-color: ${p => p.theme.colors.backgroundJoinDarkGold};
   color: ${p => p.theme.colors.white};
   border-radius: 40px;
   letter-spacing: 0.92px;

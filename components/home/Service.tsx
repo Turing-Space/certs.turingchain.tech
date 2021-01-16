@@ -87,7 +87,7 @@ const Icon = styled.div`
   width: 10em;
   height: 10em;
   border-radius: 50%;
-  background-color: ${p => p.theme.colors.primary};
+  background-color: ${p => p.theme.colors.backgroundShapeGold};
   margin-bottom: 2em;
 
   > img {

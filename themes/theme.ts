@@ -11,9 +11,19 @@ const theme: Theme = {
     darkGrey: '#9e9e9e',
     white: '#ffffff',
     smokyBlack: '#424242',
-    backgroundBlack: '#161616',
     backgroundWhite: '#fbfbfb',
     blue: '#0035ad',
+    backgroundGrey: '#F0F2F5',
+    backgroundShapeGold: '#DFA659',
+    backgroundWordDarkGrey: '#505050',
+    backgroundJoinDarkGold: '#CE893A',
+    backgroundJoinLightGold: '#F3C77C',
+    backgroundTranslationGrey: '#767676',
+    logoRightShieldRed: '#72151A',
+    logoLefttShieldRed: '#9D1F24',
+    logoOutsideRed: '#C4171E',
+    websiteScrollGrey: '#707070',
+    websiteCatelogWordGold: '#CE8B3D',
   },
 
   borderRadius: '6px',
@@ -29,9 +39,11 @@ const theme: Theme = {
     SFText: "-apple-system, BlinkMacSystemFont, 'SF Text', sans-serif",
     NotoSansTC: "'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif",
     SFProText: "-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif",
-    SFCompactText: "-apple-system, BlinkMacSystemFont, 'SF Compact Text', sans-serif",
+    SFCompactText:
+      "-apple-system, BlinkMacSystemFont, 'SF Compact Text', sans-serif",
     PingFangSC: "-apple-system, BlinkMacSystemFont, 'Ping Fang SC', sans-serif",
-    SFCompactDisplay: "-apple-system, BlinkMacSystemFont, 'SF Compact Display', sans-serif"
+    SFCompactDisplay:
+      "-apple-system, BlinkMacSystemFont, 'SF Compact Display', sans-serif",
   },
 
   fontSize: {

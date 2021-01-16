@@ -9,10 +9,11 @@ import ScrollInfo from '@/components/ScrollInfo';
 import { media } from '@/utils/theme';
 import { i18nNamespace } from '@/constants';
 
+//Home Icon Words
 const Text = styled.p`
   margin-bottom: 8px;
   font-size: ${p => p.theme.fontSize.bigger};
-  color: ${p => p.theme.colors.grey};
+  color: ${p => p.theme.colors.backgroundWordDarkGrey};
 `;
 
 const CNText = styled(Text)`
@@ -26,8 +27,9 @@ const Logo = styled.img`
   }
 `;
 
+//Home TuringCerts Words
 const Title = styled(H1)`
-  color: ${p => p.theme.colors.primary};
+  color: ${p => p.theme.colors.backgroundWordDarkGrey};
   margin: 0.6em 0 0.3em 0;
   white-space: pre-line;
 `;
@@ -44,21 +46,6 @@ const CircleRight = styled.img`
   right: 0;
   top: 0;
   width: 45vw;
-`;
-
-const SubLogo = styled.div<{ src: string }>`
-  background: url(${p => p.src}) no-repeat center/contain;
-  width: 15vw;
-  height: 5em;
-  margin-left: 1em;
-
-  &:first-child {
-    margin-left: 0;
-  }
-
-  ${media('desktop')} {
-    width: 7vw;
-  }
 `;
 
 const TitleWrapper = styled(ScrollAnimation)`
@@ -80,19 +67,6 @@ const MobileTitleWrapper = styled(TitleWrapper)`
   }
   ${media('desktop')} {
     display: none;
-  }
-`;
-
-const BottomLogoWrapper = styled(ScrollAnimation)`
-  position: absolute;
-  bottom: 8vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  ${media('tablet')} {
-    bottom: 12vh;
   }
 `;
 
@@ -134,10 +108,6 @@ const Home: FC<{ id: string }> = ({ id }) => {
         </Title>
         <CNText>{t('home.mobileSubTitle')}</CNText>
       </MobileTitleWrapper>
-      <BottomLogoWrapper animateIn="fadeInUp" delay={600} offset={0}>
-        <SubLogo src={require('../../static/partners/Berkeley.png')} />
-        <SubLogo src={require('../../static/partners/Scet_white.png')} />
-      </BottomLogoWrapper>
       <ScrollInfo />
     </Section>
   );

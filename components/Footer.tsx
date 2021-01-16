@@ -18,7 +18,7 @@ const Wrapper = styled.footer`
 
 const Bg = styled.div`
   position: absolute;
-  background: ${p => p.theme.colors.primary};
+  background: ${p => p.theme.colors.backgroundShapeGold};
   transform: skewY(-3deg);
   height: 100%;
   bottom: -10%;

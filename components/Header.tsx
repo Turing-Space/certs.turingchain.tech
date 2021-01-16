@@ -22,11 +22,11 @@ const Wrapper = styled.header<{ hideUp?: boolean; openMobile: boolean }>`
   justify-content: space-between;
   height: 50px;
   padding: 0.3em 2.5rem;
-  background-color: ${p =>
-    p.openMobile ? 'rgb(33, 33, 33)' : p.theme.colors.backgroundBlack};
+  background-color: ${p => p.theme.colors.white};
   z-index: ${p => p.theme.z.high};
   transform: translateY(0);
   transition: all 0.3s ease-in;
+  box-shadow: 0px 3px 6px #00000029;
 
   ${p =>
     p.hideUp &&
@@ -54,7 +54,7 @@ const Wrapper = styled.header<{ hideUp?: boolean; openMobile: boolean }>`
     text-decoration: none;
   }
 `;
-
+//Icon press color
 const SectionWrapper = styled.ul`
   display: none;
   align-items: center;
@@ -87,10 +87,10 @@ const LanguageWrapper = styled.div<{ open: boolean }>`
   font-size: ${p => p.theme.fontSize.smaller};
   border-left: solid 1px #424242;
   padding: 0 2.5rem 0 1.5rem;
-  color: #9e9e9e;
+  color: ${p => p.theme.colors.backgroundTranslationGrey};
   cursor: pointer;
   transition: color 0.1s ease-in;
-  background-color: ${p => p.theme.colors.backgroundBlack};
+  background-color: ${p => p.theme.colors.white};
 
   > img {
     width: 20px;
@@ -104,7 +104,8 @@ const LanguageWrapper = styled.div<{ open: boolean }>`
     height: 0;
     border-style: solid;
     border-width: 9px 5px 0px 5px;
-    border-color: #9e9e9e transparent transparent;
+    border-color: ${p => p.theme.colors.backgroundTranslationGrey} transparent
+      transparent;
     line-height: 0px;
     margin-top: 2px;
     margin-left: 0.5em;
@@ -122,7 +123,7 @@ const LanguageChooseWrapper = styled(animated.div)`
   justify-content: center;
   align-items: center;
   border: solid 1px #424242;
-  color: #9e9e9e;
+  color: ${p => p.theme.colors.backgroundTranslationGrey};
   z-index: -1;
   background: ${p => p.theme.background};
 

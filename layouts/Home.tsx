@@ -23,8 +23,8 @@ const HomeLayout: React.FunctionComponent<TProps> = ({
     <ThemeProvider
       theme={theme => {
         // dark theme
-        theme.color = theme.colors.white;
-        theme.background = theme.colors.backgroundBlack;
+        theme.color = theme.colors.backgroundWordDarkGrey;
+        theme.background = theme.colors.white;
 
         // language
         theme.font =

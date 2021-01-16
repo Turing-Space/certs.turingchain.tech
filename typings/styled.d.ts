@@ -11,9 +11,19 @@ export interface Theme {
     grey: string;
     darkGrey: string;
     smokyBlack: string;
-    backgroundBlack: string;
     backgroundWhite: string;
     blue: string;
+    backgroundGrey: string;
+    backgroundShapeGold: string;
+    backgroundWordDarkGrey: string;
+    backgroundJoinDarkGold: string;
+    backgroundJoinLightGold: string;
+    backgroundTranslationGrey: string;
+    logoRightShieldRed: string;
+    logoLefttShieldRed: string;
+    logoOutsideRed: string;
+    websiteScrollGrey: string;
+    websiteCatelogWordGold: string;
   };
 
   borderRadius: string;
@@ -31,7 +41,7 @@ export interface Theme {
     SFProText: string;
     SFCompactText: string;
     PingFangSC: string;
-    SFCompactDisplay: string
+    SFCompactDisplay: string;
   };
 
   fontSize: {
@@ -46,5 +56,5 @@ export interface Theme {
 
 // and extend them!
 declare module 'styled-components' {
-  export interface DefaultTheme extends Theme { }
+  export interface DefaultTheme extends Theme {}
 }
