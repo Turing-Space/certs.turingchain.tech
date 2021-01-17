@@ -48,21 +48,6 @@ const CircleRight = styled.img`
   width: 45vw;
 `;
 
-const SubLogo = styled.div<{ src: string }>`
-  background: url(${p => p.src}) no-repeat center/contain;
-  width: 15vw;
-  height: 5em;
-  margin-left: 1em;
-
-  &:first-child {
-    margin-left: 0;
-  }
-
-  ${media('desktop')} {
-    width: 7vw;
-  }
-`;
-
 const TitleWrapper = styled(ScrollAnimation)`
   display: none;
   width: 80%;
@@ -84,20 +69,7 @@ const MobileTitleWrapper = styled(TitleWrapper)`
     display: none;
   }
 `;
-/*
-const BottomLogoWrapper = styled(ScrollAnimation)`
-  position: absolute;
-  bottom: 8vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 
-  ${media('tablet')} {
-    bottom: 12vh;
-  }
-`;
-*/
 const Home: FC<{ id: string }> = ({ id }) => {
   const { t, i18n } = useTranslation(i18nNamespace.Home);
   return (
@@ -136,13 +108,6 @@ const Home: FC<{ id: string }> = ({ id }) => {
         </Title>
         <CNText>{t('home.mobileSubTitle')}</CNText>
       </MobileTitleWrapper>
-      {/*}
-      <BottomLogoWrapper animateIn="fadeInUp" delay={600} offset={0}>
-        <SubLogo src={require('../../static/partners/Berkeley.png')} />
-        <SubLogo src={require('../../static/partners/Scet_white.png')} />
-      </BottomLogoWrapper>
-      <ScrollInfo />
-          {*/}
     </Section>
   );
 };

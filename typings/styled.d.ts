@@ -11,7 +11,6 @@ export interface Theme {
     grey: string;
     darkGrey: string;
     smokyBlack: string;
-    backgroundBlack: string;
     backgroundWhite: string;
     blue: string;
     backgroundGrey: string;
