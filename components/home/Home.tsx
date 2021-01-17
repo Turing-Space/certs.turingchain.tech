@@ -108,6 +108,7 @@ const Home: FC<{ id: string }> = ({ id }) => {
         </Title>
         <CNText>{t('home.mobileSubTitle')}</CNText>
       </MobileTitleWrapper>
+      <ScrollInfo />
     </Section>
   );
 };
