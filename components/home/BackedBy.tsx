@@ -7,7 +7,7 @@ import H2 from '@/components/H2';
 import Button from '@/components/Button';
 import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
-import ScrollInfo from '@/components/ScrollInfo';
+//import ScrollInfo from '@/components/ScrollInfo';
 import { i18nNamespace } from '@/constants';
 
 const Title = styled(H2)`
@@ -219,7 +219,9 @@ const BackedBy: FC<{ id: string }> = ({ id }) => {
         </Button>
       </ButtonWrapper>
       */}
+      {/*}
       <ScrollInfo />
+    {*/}
     </Section>
   );
 };
