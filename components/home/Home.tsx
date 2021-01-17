@@ -5,7 +5,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import Section from '@/components/Section';
 import { getRelativePath } from '@/utils';
 import H1 from '@/components/H1';
-import ScrollInfo from '@/components/ScrollInfo';
+//import ScrollInfo from '@/components/ScrollInfo';
 import { media } from '@/utils/theme';
 import { i18nNamespace } from '@/constants';
 
@@ -84,7 +84,7 @@ const MobileTitleWrapper = styled(TitleWrapper)`
     display: none;
   }
 `;
-
+/*
 const BottomLogoWrapper = styled(ScrollAnimation)`
   position: absolute;
   bottom: 8vh;
@@ -97,7 +97,7 @@ const BottomLogoWrapper = styled(ScrollAnimation)`
     bottom: 12vh;
   }
 `;
-
+*/
 const Home: FC<{ id: string }> = ({ id }) => {
   const { t, i18n } = useTranslation(i18nNamespace.Home);
   return (
@@ -136,11 +136,13 @@ const Home: FC<{ id: string }> = ({ id }) => {
         </Title>
         <CNText>{t('home.mobileSubTitle')}</CNText>
       </MobileTitleWrapper>
+      {/*}
       <BottomLogoWrapper animateIn="fadeInUp" delay={600} offset={0}>
         <SubLogo src={require('../../static/partners/Berkeley.png')} />
         <SubLogo src={require('../../static/partners/Scet_white.png')} />
       </BottomLogoWrapper>
       <ScrollInfo />
+          {*/}
     </Section>
   );
 };
