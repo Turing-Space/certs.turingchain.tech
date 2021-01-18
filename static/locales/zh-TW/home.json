@@ -3,6 +3,7 @@
   "start": "申請使用 →",
   "header": {
     "service": "區塊鏈成就履歷",
+    "characteristic": "產品特點",
     "technology": "技術架構",
     "collaborations": "數位學習履歷夥伴",
     "backedBy": "培育致謝",
@@ -26,6 +27,17 @@
     "description": {
       "cn": "圖靈鏈是一個屢獲殊榮，敏捷且國際化的團隊，主導開發區塊鏈項目，囊括紐約新聞媒體、台灣電影產業、與俄羅斯及澳門博彩集團。",
       "en": "Turing Chain is an award-winning, agile, and international team. We developed blockchains for New York news media, Taiwanese movie production, and Russia & Macao-based casinos."
+    }
+  },
+  "characteristic": {
+    "issue": "馬上發證",
+    "verify": "申請驗證",
+    "title": "區塊鏈成就履歷",
+    "description": "透過區塊鏈不可篡改、可追溯、成本節省、跨國界的優勢，重新定義傳統教育認證，創造穩定永續的學習旅程追蹤，保證用戶絕對資料掌控權與隱私優先策略，強化官方權威證書的最高信任與真實價值。",
+    "icons": {
+      "0": "個人學習成就歷程追溯",
+      "1": "W3C DID 去中心身份協定",
+      "2": "GDPR 最高隱私保留演算法"
     }
   },
   "service": {

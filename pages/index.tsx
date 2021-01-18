@@ -1,6 +1,7 @@
 import { NextFC } from 'next';
 import HomeLayout from '@/layouts/Home';
 import Home from '@/components/home/Home';
+import Characteristic from '@/components/home/Characteristic';
 import Service from '@/components/home/Service';
 //import Demo from '@/components/home/Demo';
 import Technology from '@/components/home/Technology';
@@ -16,17 +17,20 @@ const Index: NextFC = () => {
     <HomeLayout title={'TuringCerts | ' + SITE_TITLE}>
       <Home id="section-home" />
 
+      <Characteristic id="section-characteristic" />
+      {/*}
       <Service id="section-service" />
-
+  {*/}
+      {/*}
       <Technology id="section-technology" />
-
+  {*/}
       {/* <DemoVideo id="section-product" /> 
       <Demo /> */}
-
+      {/*}
       <Collaborations id="section-collaborations" />
       <BackedBy id="section-backedBy" />
       <Examples id="section-examples" />
-
+    {*/}
       {/* <AboutUs id="section-about" />
       <Team id="section-team" /> */}
     </HomeLayout>
