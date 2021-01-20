@@ -5,6 +5,7 @@
     "service": "Service",
     "characteristic": "Characteristic",
     "technology": "Technology",
+    "comparison": "Comparison",
     "collaborations": "Friends",
     "backedBy": "Backed By",
     "examples": "Showcases",
@@ -109,6 +110,17 @@
         "content": "The minimum disclosure principle guaranteed in the GDPR will be reflected by our zero-knowledge proof, allowing information owners to complete the certification without revealing the details of the target information."
       }
     }
+  },
+  "comparison": {
+    "title": "Traditional/Digital Comparison",
+    "description": "By leveraging the incorruptible, traceable, cost-effective, and borderless characteristics of blockchain technology, TuringCerts is capable of redefining traditional educational certificates and eventually enabling unified and sustainable records tracking for educational industry. TuringCerts not only ensures full data coverage, control, and maintenance for users, but also promises a rigorous privacy policy and upholds highest trust of source as well as the dignity of authorized certificates.",
+    "hidden": "Hidden ",
+    "subtitle1": "教育機構",
+    "subtitle2": "學生",
+    "subtitle3": "查驗單位",
+    "subdiscription1": "aaa",
+    "subdiscription2": "bbb",
+    "subdiscription3": "ccc"
   },
   "demo": {
     "title": "The New Era of Resumes!",

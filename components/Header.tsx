@@ -175,9 +175,12 @@ const Header: SFC = () => {
           <li onClick={() => scrollToID('section-service')}>
             {t('header.service')}
           </li>
-  {*/}
           <li onClick={() => scrollToID('section-technology')}>
             {t('header.technology')}
+          </li>
+  {*/}
+          <li onClick={() => scrollToID('section-comparison')}>
+            {t('header.comparison')}
           </li>
           {/*
           <li onClick={() => scrollToID('section-product')}>
