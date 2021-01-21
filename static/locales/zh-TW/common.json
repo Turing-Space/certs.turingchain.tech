@@ -9,7 +9,6 @@
   "backToHome": "回到首頁",
   "auth": {
     "enterAcc": "service@turingchain.tech",
-    "enterPwd": "輸入密碼",
     "login": "登入",
     "error": {
       "empty": "* 帳號密碼不可為空",

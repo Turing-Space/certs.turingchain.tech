@@ -9,7 +9,6 @@
   "backToHome": "Back to Home",
   "auth": {
     "enterAcc": "service@turingchain.tech",
-    "enterPwd": "Password",
     "login": "Login",
     "error": {
       "empty": "* Account / Password Required",
