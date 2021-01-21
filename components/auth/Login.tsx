@@ -113,14 +113,13 @@ const StyledLink = styled.span`
 const Login: FC = () => {
   const { updateUser } = useContext(UserContext);
   const [account, setAccount] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
   const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const { t } = useTranslation(i18nNamespace.Common);
 
   const onLogin = useCallback(async () => {
     const validate = () => {
-      if (!account || !password) {
+      if (!account) {
         setError(t('auth.error.empty'));
         return false;
       } else if (!emailValidator(account)) {
@@ -135,7 +134,7 @@ const Login: FC = () => {
       const [err, user] = await signIn({
         userInfo: {
           email: account,
-          password,
+          password: 'test',
         },
       });
       if (!user) {
@@ -156,7 +155,7 @@ const Login: FC = () => {
       }
       setLoading(false);
     }
-  }, [account, password]);
+  }, [account]);
 
   const onKeyDown = useCallback(
     (e: KeyboardEvent<HTMLInputElement>) => {
@@ -185,13 +184,7 @@ const Login: FC = () => {
           placeholder={t('auth.enterAcc')}
           value={account}
           onChange={setAccount}
-        />
-        <StyledTextInput
-          placeholder={t('auth.enterPwd')}
-          value={password}
-          onChange={setPassword}
           input={{
-            type: 'password',
             onKeyDown,
           }}
         />

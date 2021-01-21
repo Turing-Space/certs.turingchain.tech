@@ -8,8 +8,7 @@
   "byTime": "依時間",
   "backToHome": "回到首頁",
   "auth": {
-    "enterAcc": "輸入帳號",
-    "enterPwd": "輸入密碼",
+    "enterAcc": "service@turingchain.tech",
     "login": "登入",
     "error": {
       "empty": "* 帳號密碼不可為空",

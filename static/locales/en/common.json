@@ -8,8 +8,7 @@
   "byTime": "by Time",
   "backToHome": "Back to Home",
   "auth": {
-    "enterAcc": "Account",
-    "enterPwd": "Password",
+    "enterAcc": "service@turingchain.tech",
     "login": "Login",
     "error": {
       "empty": "* Account / Password Required",
