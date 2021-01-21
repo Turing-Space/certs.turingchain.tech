@@ -184,6 +184,9 @@ const Login: FC = () => {
           placeholder={t('auth.enterAcc')}
           value={account}
           onChange={setAccount}
+          input={{
+            onKeyDown,
+          }}
         />
         <ErrorMessage>{error}</ErrorMessage>
         <StyledButton disabled={loading} onClick={onLogin}>
