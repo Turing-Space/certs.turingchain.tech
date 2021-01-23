@@ -40,18 +40,6 @@ const Title = styled(H2)`
   }
 `;
 
-const StyledDescription = styled(Description)`
-  width: 90%;
-  text-align: center;
-  letter-spacing: 0.5px;
-  line-height: 2em;
-  margin: 0 auto;
-
-  ${media('desktop')} {
-    width: 70%;
-  }
-`;
-
 const IconGroupWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -72,7 +60,7 @@ const IconWrapper = styled(ScrollAnimation)`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-bottom: 3em;
+  margin-bottom: 10em;
   ${media('pad')} {
     width: 50%;
   }
@@ -104,6 +92,19 @@ const IconDescription = styled.p<{ isEn: boolean }>`
   line-height: 1.2;
   letter-spacing: 1px;
   text-align: center;
+  margin-bottom: 1em;
+`;
+
+const IconSubDescription = styled(Description)`
+  width: 90%;
+  text-align: center;
+  letter-spacing: 0.5px;
+  line-height: 1em;
+  margin: 0 auto;
+
+  ${media('desktop')} {
+    width: 80%;
+  }
 `;
 
 const Characteristic: FC<{ id: string }> = ({ id }) => {
@@ -144,6 +145,9 @@ const Characteristic: FC<{ id: string }> = ({ id }) => {
           <IconDescription isEn={isEn}>
             {t('characteristic.icons.0')}
           </IconDescription>
+          <IconSubDescription>
+            {t('characteristic.subdescriptions.0')}
+          </IconSubDescription>
         </IconWrapper>
         <IconWrapper animateIn="zoomIn" duration={0.5} animateOnce delay={300}>
           <Icon>
@@ -157,6 +161,9 @@ const Characteristic: FC<{ id: string }> = ({ id }) => {
           <IconDescription isEn={isEn}>
             {t('characteristic.icons.1')}
           </IconDescription>
+          <IconSubDescription>
+            {t('characteristic.subdescriptions.1')}
+          </IconSubDescription>
         </IconWrapper>
         <IconWrapper animateIn="zoomIn" duration={0.5} animateOnce delay={600}>
           <Icon>
@@ -172,6 +179,9 @@ const Characteristic: FC<{ id: string }> = ({ id }) => {
           <IconDescription isEn={isEn}>
             {t('characteristic.icons.2')}
           </IconDescription>
+          <IconSubDescription>
+            {t('characteristic.subdescriptions.2')}
+          </IconSubDescription>
         </IconWrapper>
       </IconGroupWrapper>
       {/*}
