@@ -111,14 +111,31 @@
     }
   },
   "comparison": {
-    "title": "矽谷 X 柏克萊頂尖技術架構",
-    "description": "透過區塊鏈不可篡改、可追溯、成本節省、跨國界的優勢，重新定義傳統教育認證，創造穩定永續的學習旅程追蹤，保證用戶絕對資料掌控權與隱私優先策略，強化官方權威證書的最高信任與真實價值。",
+    "title": "Turing Certs",
+    "description1": "逾30所大專院校、教育機構採用圖靈證書發證",
+    "description2": "累計發出超過3,000張證書",
+    "description3": "促使3,000位學生擁有國際防偽數位歷程",
+    "hidden": "Hidden ",
     "subtitle1": "教育機構",
     "subtitle2": "學生",
     "subtitle3": "查驗單位",
-    "subdiscription1": "aaa",
-    "subdiscription2": "bbb",
-    "subdiscription3": "ccc"
+    "subs": {
+      "0": {
+        "title": "教育機構",
+        "content1": "國際趨勢",
+        "content2": "更可靠",
+        "content3": "更高效",
+        "content4": "更受信任"
+      },
+      "1": {
+        "title": "學生",
+        "content": "bbb"
+      },
+      "2": {
+        "title": "查驗單位",
+        "content": "ccc"
+      }
+    }
   },
   "demo": {
     "title": "開啟新履歷世代！",

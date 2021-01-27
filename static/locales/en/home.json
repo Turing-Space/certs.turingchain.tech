@@ -117,15 +117,31 @@
     }
   },
   "comparison": {
-    "title": "Traditional/Digital Comparison",
-    "description": "By leveraging the incorruptible, traceable, cost-effective, and borderless characteristics of blockchain technology, TuringCerts is capable of redefining traditional educational certificates and eventually enabling unified and sustainable records tracking for educational industry. TuringCerts not only ensures full data coverage, control, and maintenance for users, but also promises a rigorous privacy policy and upholds highest trust of source as well as the dignity of authorized certificates.",
+    "title": "Turing Certs",
+    "description1": "逾30所大專院校、教育機構採用圖靈證書發證",
+    "description2": "累計發出超過3,000張證書",
+    "description3": "促使3,000位學生擁有國際防偽數位歷程",
     "hidden": "Hidden ",
     "subtitle1": "教育機構",
     "subtitle2": "學生",
     "subtitle3": "查驗單位",
-    "subdiscription1": "aaa",
-    "subdiscription2": "bbb",
-    "subdiscription3": "ccc"
+    "subs": {
+      "0": {
+        "title": "教育機構",
+        "content1": "國際趨勢",
+        "content2": "更可靠",
+        "content3": "更高效",
+        "content4": "更受信任"
+      },
+      "1": {
+        "title": "學生",
+        "content": "bbb"
+      },
+      "2": {
+        "title": "查驗單位",
+        "content": "ccc"
+      }
+    }
   },
   "demo": {
     "title": "The New Era of Resumes!",

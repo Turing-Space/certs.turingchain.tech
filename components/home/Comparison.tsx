@@ -12,6 +12,16 @@ import Button from '@/components/Button';
 import { i18nNamespace } from '@/constants';
 //import ScrollInfo from '../ScrollInfo';
 
+const Bg = styled.div`
+  position: absolute;
+  background: ${p => p.theme.colors.backgroundGrey};
+
+  height: 100%;
+  bottom: -10%;
+  width: 100%;
+  opacity: 0.9;
+`;
+
 const Title = styled(H2)`
   margin: 18vh auto 0;
   max-width: 70vw;
@@ -39,89 +49,79 @@ const ButtonGroupWrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 80%;
+  width: 100%;
   margin: 3.5em 10;
   ${media('pad')} {
     justify-content: space-between;
   }
 
   ${media('desktop')} {
-    width: 55%;
+    width: 100%;
   }
 `;
 
-const ButtonWrapper = styled(ScrollAnimation)`
+const StyledButton = styled(Button)`
+  margin: 5% 0 8%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 30em;
-  ${media('pad')} {
-    width: 50%;
+
+  color: ${p => p.theme.colors.backgroundJoinDarkGold};
+  background: ${p => p.theme.colors.white};
+
+  opacity: 1;
+
+  ${media('tablet')} {
+    width: 100%;
   }
+`;
+
+const StyledSubDescription = styled(Description)`
+  width: 90%;
+  text-align: center;
+  letter-spacing: 0.5px;
+  line-height: 2em;
+  margin: 0 auto;
+  color: ${p => p.theme.colors.backgroundWordDarkGrey};
+
   ${media('desktop')} {
-    width: 30%;
+    width: 70%;
   }
 `;
 
-const StyledButton1 = styled(Button)`
-  margin: 5% 0 8%;
-  display: flex;
-
-  width: 140px;
-  height: 44px;
-  background: transparent linear-gradient(90deg, #ce893a 0%, #f3c77c 100%) 0% 0%
-    no-repeat padding-box;
-  border-radius: 22px;
-  opacity: 1;
-
-  ${media('tablet')} {
-    width: 50%;
-  }
-`;
-
-const StyledButton2 = styled(Button)`
-  margin: 5% 0 8%;
-  display: flex;
-
-  width: 140px;
-  height: 44px;
-  background: transparent linear-gradient(90deg, #ce893a 0%, #f3c77c 100%) 0% 0%
-    no-repeat padding-box;
-  border-radius: 22px;
-  opacity: 1;
-
-  ${media('tablet')} {
-    width: 50%;
-  }
-`;
-
-const StyledButton3 = styled(Button)`
-  margin: 5% 0 8%;
-  display: flex;
-
-  width: 140px;
-  height: 44px;
-  background: transparent linear-gradient(90deg, #ce893a 0%, #f3c77c 100%) 0% 0%
-    no-repeat padding-box;
-  border-radius: 22px;
-  opacity: 1;
-
-  ${media('tablet')} {
-    width: 50%;
-  }
-`;
-
-const StyledSubDiscription = styled(Button)`
-  margin: 20% 0 -500%;
-  display: flex;
-
-  width: 1165px;
-  height: 402px;
-  background: transparent linear-gradient(90deg, #ce893a 0%, #f3c77c 100%) 0% 0%
-    no-repeat padding-box;
+const WhiteBox = styled.div`
+  position: relative;
+  margin-top: 3%;
+  width: 75%;
+  height: 480px;
+  margin-bottom: 20em;
+  background-color: #f0f2f5;
   border-radius: 30px;
   opacity: 1;
+
+  ${media('desktop')} {
+    width: 60%;
+  }
+`;
+
+const Wrapper = styled.div`
+  position: relative;
+  margin-top: 3%;
+  width: 75%;
+
+  ${media('desktop')} {
+    width: 50%;
+  }
+`;
+
+const MoreInfoWrapper = styled(Wrapper)<{ open: boolean }>`
+  overflow: hidden;
+  max-height: ${p => (p.open ? '700vh' : 0)};
+  transition: max-height ease-in 0s;
+`;
+
+const InfoWrapper = styled.div`
+  position: relative;
+  margin-top: 3%;
+  width: 100%;
 `;
 
 const Comparison: FC<{ id: string }> = ({ id }) => {
@@ -137,43 +137,79 @@ const Comparison: FC<{ id: string }> = ({ id }) => {
         style={{ width: '100%', textAlign: 'center' }}
       >
         <Title>{t('comparison.title')}</Title>
-        <StyledDescription>{t('comparison.description')}</StyledDescription>
+        <StyledDescription>{t('comparison.description1')}</StyledDescription>
+        <StyledDescription>{t('comparison.description2')}</StyledDescription>
+        <StyledDescription>{t('comparison.description3')}</StyledDescription>
       </ScrollAnimation>
-      <ButtonGroupWrapper>
-        <ButtonWrapper animateIn="fadeIn" animateOnce delay={300}>
-          <StyledButton1 onClick={() => setOpen1(p => !p)}>
-            {open1 ? (
-              <StyledSubDiscription>
-                {t('comparison.subdiscription1')}
-              </StyledSubDiscription>
-            ) : (
-              t('comparison.subtitle1')
-            )}
-          </StyledButton1>
-        </ButtonWrapper>
-        <ButtonWrapper animateIn="fadeIn" animateOnce delay={300}>
-          <StyledButton2 onClick={() => setOpen2(p => !p)}>
-            {open2 ? (
-              <StyledSubDiscription>
-                {t('comparison.subdiscription2')}
-              </StyledSubDiscription>
-            ) : (
-              t('comparison.subtitle2')
-            )}
-          </StyledButton2>
-        </ButtonWrapper>
-        <ButtonWrapper animateIn="fadeIn" animateOnce delay={300}>
-          <StyledButton3 onClick={() => setOpen3(p => !p)}>
-            {open3 ? (
-              <StyledSubDiscription>
-                {t('comparison.subdiscription3')}
-              </StyledSubDiscription>
-            ) : (
-              t('comparison.subtitle3')
-            )}
-          </StyledButton3>
-        </ButtonWrapper>
-      </ButtonGroupWrapper>
+      <WhiteBox>
+        <ButtonGroupWrapper>
+          <StyledButton
+            onClick={() => {
+              setOpen1(p => !p), setOpen2(false), setOpen3(false);
+            }}
+          >
+            {t('comparison.subtitle1')}
+          </StyledButton>
+
+          <StyledButton
+            onClick={() => {
+              setOpen2(p => !p), setOpen1(false), setOpen3(false);
+            }}
+          >
+            {t('comparison.subtitle2')}
+          </StyledButton>
+
+          <StyledButton
+            onClick={() => {
+              setOpen3(p => !p), setOpen1(false), setOpen2(false);
+            }}
+          >
+            {t('comparison.subtitle3')}
+          </StyledButton>
+        </ButtonGroupWrapper>
+        {
+          <MoreInfoWrapper open={open1}>
+            {[0].map(k => (
+              <InfoWrapper key={k}>
+                <StyledSubDescription>
+                  {t(`comparison.subs.${k}.content1`)}
+                </StyledSubDescription>
+                <StyledSubDescription>
+                  {t(`comparison.subs.${k}.content2`)}
+                </StyledSubDescription>
+                <StyledSubDescription>
+                  {t(`comparison.subs.${k}.content3`)}
+                </StyledSubDescription>
+                <StyledSubDescription>
+                  {t(`comparison.subs.${k}.content4`)}
+                </StyledSubDescription>
+              </InfoWrapper>
+            ))}
+          </MoreInfoWrapper>
+        }
+        {
+          <MoreInfoWrapper open={open2}>
+            {[1].map(k => (
+              <InfoWrapper key={k}>
+                <StyledSubDescription>
+                  {t(`comparison.subs.${k}.content`)}
+                </StyledSubDescription>
+              </InfoWrapper>
+            ))}
+          </MoreInfoWrapper>
+        }
+        {
+          <MoreInfoWrapper open={open3}>
+            {[2].map(k => (
+              <InfoWrapper key={k}>
+                <StyledSubDescription>
+                  {t(`comparison.subs.${k}.content`)}
+                </StyledSubDescription>
+              </InfoWrapper>
+            ))}
+          </MoreInfoWrapper>
+        }
+      </WhiteBox>
     </Section>
   );
 };
