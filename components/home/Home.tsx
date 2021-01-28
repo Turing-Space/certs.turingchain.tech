@@ -34,18 +34,10 @@ const Title = styled(H1)`
   white-space: pre-line;
 `;
 
-const CircleLeft = styled.img`
+const Bg = styled.img`
   position: absolute;
-  left: -15vw;
-  width: 50vw;
-  bottom: -20vw;
-`;
-
-const CircleRight = styled.img`
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 45vw;
+  bottom: 0%;
+  width: 100%;
 `;
 
 const TitleWrapper = styled(ScrollAnimation)`
@@ -74,17 +66,11 @@ const Home: FC<{ id: string }> = ({ id }) => {
   const { t, i18n } = useTranslation(i18nNamespace.Home);
   return (
     <Section fullscreen id={id}>
-      <CircleLeft
-        src={getRelativePath('/static/bg/bg-home-cover-circle.png')}
+      <Bg
+        src={getRelativePath('/static/bg/bg.png')}
         srcSet={`${getRelativePath(
-          '/static/bg/bg-home-cover-circle@2x.png',
-        )} 2x, ${getRelativePath('/static/bg/bg-home-cover-circle@3x.png')} 3x`}
-      />
-      <CircleRight
-        src={getRelativePath('/static/bg/bg-home-cover-right.png')}
-        srcSet={`${getRelativePath(
-          '/static/bg/bg-home-cover-right@2x.png',
-        )} 2x, ${getRelativePath('/static/bg/bg-home-cover-right@3x.png')} 3x`}
+          '/static/bg/bg@2x.png',
+        )} 2x, ${getRelativePath('/static/bg/bg@3x.png')} 3x`}
       />
       <ScrollAnimation animateIn="fadeInUp">
         <Logo src={require('../../static/logo/logo-new.svg')} />
@@ -108,6 +94,7 @@ const Home: FC<{ id: string }> = ({ id }) => {
         </Title>
         <CNText>{t('home.mobileSubTitle')}</CNText>
       </MobileTitleWrapper>
+
       {/*}
       <ScrollInfo />
           {*/}
