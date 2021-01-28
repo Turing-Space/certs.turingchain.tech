@@ -137,6 +137,29 @@
       }
     }
   },
+  "awards": {
+    "title": "Awards",
+    "subs": {
+      "0": {
+        "content": "2020 微軟創夢盃 Microsoft Imagine Cup 國際賽 美洲組第三名"
+      },
+      "1": {
+        "content": "2020 國研院 500 Startups 遇見新創最高榮譽與新加坡國家代表隊資格"
+      },
+      "2": {
+        "content": "2019 科技部 FITI 創業傑出獎台灣創業高榮譽 200 萬元獎金"
+      },
+      "3": {
+        "content": "美國阿里巴巴創業者基金 X 匯豐國際賽美國總決賽冠軍與最佳科技創新獎"
+      },
+      "4": {
+        "content": "UC Berkeley Free Ventures 美國僅五家加速器新創公司 Batch XIII"
+      },
+      "5": {
+        "content": "Google SingularityU APAC Global Impact Challenge 2019 全球前四強"
+      }
+    }
+  },
   "demo": {
     "title": "開啟新履歷世代！",
     "description": "一機裝載所有教育相關證書，從在學成績、能力認證、線上課程、競賽獎項、至所有成就紀錄，完善區塊鏈秒速認證體驗，防偽真實，溯源查證，零學習曲線。",
