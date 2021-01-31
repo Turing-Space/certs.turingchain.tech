@@ -3,7 +3,10 @@
   "start": "Join",
   "header": {
     "service": "Service",
+    "characteristic": "Characteristic",
     "technology": "Technology",
+    "comparison": "Comparison",
+    "awards": "Awards",
     "collaborations": "Friends",
     "backedBy": "Backed By",
     "examples": "Showcases",
@@ -19,7 +22,7 @@
       "cn": "圖靈證書"
     },
     "subTitle": {
-      "cn": "一鍵驗證你的區塊鏈履歷與證書",
+      "cn": "屬於每個人的國際防偽數位歷程",
       "en": "Your Blockchain-based Resume for One-click Verify."
     },
     "mobileSubTitle": "Your Blockchain-based Resume for One-click Verify.",
@@ -28,6 +31,23 @@
       "en": "Turing Chain is an award-winning, agile, and international team. We developed blockchains for New York news media, Taiwanese movie production, and Russia & Macao-based casinos."
     }
   },
+  "characteristic": {
+    "issue": "Start Issuing",
+    "verify": "Apply for Verify",
+    "title": "Product Characteristics",
+    "description": "By leveraging the incorruptible, traceable, cost-effective, and borderless characteristics of blockchain technology, TuringCerts is capable of redefining traditional educational certificates and eventually enabling unified and sustainable records tracking for educational industry. TuringCerts not only ensures full data coverage, control, and maintenance for users, but also promises a rigorous privacy policy and upholds highest trust of source as well as the dignity of authorized certificates.",
+    "icons": {
+      "0": "防止偽造",
+      "1": "快速查驗",
+      "2": "永久保存"
+    },
+    "subdescriptions": {
+      "0": "使用不可篡改、安全，以及可信任的區塊鏈技術，確保每一份證書100%真實性。",
+      "1": "學生可透過分享連結，讓人資單位隨時隨地一鍵驗證真偽，使人才篩選更便利、快捷。",
+      "2": "讓學生的學習歷程被妥善保存，並省去紙本作業的不便，更減少資料保存之人力成本。"
+    }
+  },
+
   "service": {
     "issue": "Start Issuing",
     "verify": "Apply for Verify",
@@ -94,6 +114,56 @@
       "9": {
         "title": "(10) How to meet current GDPR requirements?",
         "content": "The minimum disclosure principle guaranteed in the GDPR will be reflected by our zero-knowledge proof, allowing information owners to complete the certification without revealing the details of the target information."
+      }
+    }
+  },
+  "comparison": {
+    "title": "Turing Certs",
+    "description1": "逾30所大專院校、教育機構採用圖靈證書發證",
+    "description2": "累計發出超過3,000張證書",
+    "description3": "促使3,000位學生擁有國際防偽數位歷程",
+    "hidden": "Hidden ",
+    "subtitle1": "教育機構",
+    "subtitle2": "學生",
+    "subtitle3": "查驗單位",
+    "subs": {
+      "0": {
+        "title": "教育機構",
+        "content1": "國際趨勢",
+        "content2": "更可靠",
+        "content3": "更高效",
+        "content4": "更受信任"
+      },
+      "1": {
+        "title": "學生",
+        "content": "bbb"
+      },
+      "2": {
+        "title": "查驗單位",
+        "content": "ccc"
+      }
+    }
+  },
+  "awards": {
+    "title": "Awards",
+    "subs": {
+      "0": {
+        "content": "2020 微軟創夢盃 Microsoft Imagine Cup 國際賽 美洲組第三名"
+      },
+      "1": {
+        "content": "2020 國研院 500 Startups 遇見新創最高榮譽與新加坡國家代表隊資格"
+      },
+      "2": {
+        "content": "2019 科技部 FITI 創業傑出獎台灣創業高榮譽 200 萬元獎金"
+      },
+      "3": {
+        "content": "美國阿里巴巴創業者基金 X 匯豐國際賽美國總決賽冠軍與最佳科技創新獎"
+      },
+      "4": {
+        "content": "UC Berkeley Free Ventures 美國僅五家加速器新創公司 Batch XIII"
+      },
+      "5": {
+        "content": "Google SingularityU APAC Global Impact Challenge 2019 全球前四強"
       }
     }
   },

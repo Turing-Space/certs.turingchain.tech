@@ -3,7 +3,9 @@
   "start": "申請使用 →",
   "header": {
     "service": "區塊鏈成就履歷",
+    "characteristic": "產品特點",
     "technology": "技術架構",
+    "comparison": "傳統/數位",
     "collaborations": "數位學習履歷夥伴",
     "backedBy": "培育致謝",
     "examples": "案例展示",
@@ -26,6 +28,17 @@
     "description": {
       "cn": "圖靈鏈是一個屢獲殊榮，敏捷且國際化的團隊，主導開發區塊鏈項目，囊括紐約新聞媒體、台灣電影產業、與俄羅斯及澳門博彩集團。",
       "en": "Turing Chain is an award-winning, agile, and international team. We developed blockchains for New York news media, Taiwanese movie production, and Russia & Macao-based casinos."
+    }
+  },
+  "characteristic": {
+    "issue": "馬上發證",
+    "verify": "申請驗證",
+    "title": "區塊鏈成就履歷",
+    "description": "透過區塊鏈不可篡改、可追溯、成本節省、跨國界的優勢，重新定義傳統教育認證，創造穩定永續的學習旅程追蹤，保證用戶絕對資料掌控權與隱私優先策略，強化官方權威證書的最高信任與真實價值。",
+    "icons": {
+      "0": "個人學習成就歷程追溯",
+      "1": "W3C DID 去中心身份協定",
+      "2": "GDPR 最高隱私保留演算法"
     }
   },
   "service": {
@@ -94,6 +107,56 @@
       "9": {
         "title": "(10) 如何符合目前 GDPR 的要求?",
         "content": "GDPR 中保障的最小揭露原則將被我們以零知識證明體現，允許資訊擁有者在不揭露目標資訊細節下，讓認證者得以完成認證。"
+      }
+    }
+  },
+  "comparison": {
+    "title": "Turing Certs",
+    "description1": "逾30所大專院校、教育機構採用圖靈證書發證",
+    "description2": "累計發出超過3,000張證書",
+    "description3": "促使3,000位學生擁有國際防偽數位歷程",
+    "hidden": "Hidden ",
+    "subtitle1": "教育機構",
+    "subtitle2": "學生",
+    "subtitle3": "查驗單位",
+    "subs": {
+      "0": {
+        "title": "教育機構",
+        "content1": "國際趨勢",
+        "content2": "更可靠",
+        "content3": "更高效",
+        "content4": "更受信任"
+      },
+      "1": {
+        "title": "學生",
+        "content": "bbb"
+      },
+      "2": {
+        "title": "查驗單位",
+        "content": "ccc"
+      }
+    }
+  },
+  "awards": {
+    "title": "Awards",
+    "subs": {
+      "0": {
+        "content": "2020 微軟創夢盃 Microsoft Imagine Cup 國際賽 美洲組第三名"
+      },
+      "1": {
+        "content": "2020 國研院 500 Startups 遇見新創最高榮譽與新加坡國家代表隊資格"
+      },
+      "2": {
+        "content": "2019 科技部 FITI 創業傑出獎台灣創業高榮譽 200 萬元獎金"
+      },
+      "3": {
+        "content": "美國阿里巴巴創業者基金 X 匯豐國際賽美國總決賽冠軍與最佳科技創新獎"
+      },
+      "4": {
+        "content": "UC Berkeley Free Ventures 美國僅五家加速器新創公司 Batch XIII"
+      },
+      "5": {
+        "content": "Google SingularityU APAC Global Impact Challenge 2019 全球前四強"
       }
     }
   },

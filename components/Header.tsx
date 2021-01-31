@@ -168,11 +168,22 @@ const Header: SFC = () => {
       <Wrapper hideUp={y > 0 && y > oldY} openMobile={openMobileList}>
         <HeaderLogo onClick={onHeaderLogoClick} />
         <SectionWrapper>
+          <li onClick={() => scrollToID('section-characteristic')}>
+            {t('header.characteristic')}
+          </li>
+          {/*}
           <li onClick={() => scrollToID('section-service')}>
             {t('header.service')}
           </li>
           <li onClick={() => scrollToID('section-technology')}>
             {t('header.technology')}
+          </li>
+  {*/}
+          <li onClick={() => scrollToID('section-comparison')}>
+            {t('header.comparison')}
+          </li>
+          <li onClick={() => scrollToID('section-awards')}>
+            {t('header.awards')}
           </li>
           {/*
           <li onClick={() => scrollToID('section-product')}>

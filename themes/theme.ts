@@ -15,6 +15,7 @@ const theme: Theme = {
     blue: '#0035ad',
     backgroundGrey: '#F0F2F5',
     backgroundShapeGold: '#DFA659',
+    //backgroundIconGrey: '#00000029',
     backgroundWordDarkGrey: '#505050',
     backgroundJoinDarkGold: '#CE893A',
     backgroundJoinLightGold: '#F3C77C',

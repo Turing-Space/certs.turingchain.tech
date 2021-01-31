@@ -13,7 +13,8 @@ const Button = styled.button<TButtonProps>`
   align-items: center;
   width: 100%;
   max-width: 12em;
-  background-color: ${p => p.theme.colors.backgroundJoinDarkGold};
+  background: transparent linear-gradient(90deg, #ce893a 0%, #f3c77c 100%) 0% 0%
+    no-repeat padding-box;
   color: ${p => p.theme.colors.white};
   border-radius: 40px;
   letter-spacing: 0.92px;

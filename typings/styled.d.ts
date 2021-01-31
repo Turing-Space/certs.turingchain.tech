@@ -15,6 +15,7 @@ export interface Theme {
     blue: string;
     backgroundGrey: string;
     backgroundShapeGold: string;
+    //backgroundIconGrey: string;
     backgroundWordDarkGrey: string;
     backgroundJoinDarkGold: string;
     backgroundJoinLightGold: string;
