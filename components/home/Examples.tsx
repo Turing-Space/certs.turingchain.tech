@@ -92,6 +92,7 @@ const Certificate = styled.div`
   overflow: hidden;
   transform: scale(1);
   transition: transform 0.2s ease-in-out;
+  border-radius: 2vh;
 
   &:hover {
     ${Name} {
