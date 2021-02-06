@@ -104,12 +104,7 @@ const WhiteBox = styled.div`
 
 const Wrapper = styled.div`
   position: relative;
-  margin-top: 3%;
-  width: 75%;
-
-  ${media('desktop')} {
-    width: 50%;
-  }
+  margin-top: 0;
 `;
 
 const MoreInfoWrapper = styled(Wrapper)<{ open: boolean }>`
@@ -176,12 +171,6 @@ const Comparison: FC<{ id: string }> = ({ id }) => {
                 </StyledSubDescription>
                 <StyledSubDescription>
                   {t(`comparison.subs.${k}.content2`)}
-                </StyledSubDescription>
-                <StyledSubDescription>
-                  {t(`comparison.subs.${k}.content3`)}
-                </StyledSubDescription>
-                <StyledSubDescription>
-                  {t(`comparison.subs.${k}.content4`)}
                 </StyledSubDescription>
               </InfoWrapper>
             ))}

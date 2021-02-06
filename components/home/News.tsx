@@ -8,7 +8,7 @@ import H2 from '@/components/H2';
 import { media } from '@/utils/theme';
 import Description from '@/components/Description';
 import Button from '@/components/Button';
-//import { getRelativePath } from '@/utils';
+import { getRelativePath } from '@/utils';
 import { i18nNamespace } from '@/constants';
 //import ScrollInfo from '../ScrollInfo';
 const Bg = styled.div`
@@ -68,6 +68,25 @@ const StyledButton = styled(Button)`
   background: ${p => p.theme.colors.backgroundJoinDarkGold};
 `;
 
+const IconWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0% 0;
+
+  img {
+    width: 2.5em;
+    transition: opacity ease-in 0.1s;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+  ${media('tablet')} {
+    margin: -3% 0;
+  }
+`;
+
 const StyledSubDescription = styled(Description)`
   width: 90%;
   text-align: center;
@@ -99,10 +118,11 @@ const WhiteBox = styled.div`
 const BlackBox = styled.div`
   position: relative;
   margin-top: 3%;
+  top: 18%;
   width: 75%;
   height: 200px;
-  left: 15vw;
-  margin-bottom: 20em;
+  left: 17vw;
+
   background-color: #424242;
   border-radius: 30px;
   opacity: 1;
@@ -148,20 +168,44 @@ const News: FC<{ id: string }> = ({ id }) => {
         <Title>{t('news.title')}</Title>
       </ScrollAnimation>
       <WhiteBox>
-        <ButtonGroupWrapper>
+        <BlackBox></BlackBox>
+        <IconWrapper>
+          <img
+            src={getRelativePath('/static/icon/icon_left.svg')}
+            srcSet={`${getRelativePath(
+              '/static/icon/icon_left@2x.svg',
+            )} 2x, ${getRelativePath('/static/icon/icon_left@3x.svg')} 3x`}
+          />
+          <img
+            src={getRelativePath('/static/icon/icon_right.svg')}
+            srcSet={`${getRelativePath(
+              '/static/icon/icon_right@2x.svg',
+            )} 2x, ${getRelativePath('/static/icon/icon_right@3x.svg')} 3x`}
+          />
+        </IconWrapper>
+        {/*}  
           <StyledButton
             onClick={() => {
               setOpen1(p => !p), setOpen2(false);
             }}
-          ></StyledButton>
+          >
+            
+            <img
+              src={getRelativePath('/static/icon/icon_left.svg')}
+              srcSet={`${getRelativePath(
+              '/static/icon/icon_left@2x.svg',
+              )} 2x, ${getRelativePath('/static/icon/icon_left@3x.svg')} 3x`}
+            />
+              
+          </StyledButton>
+              
 
           <StyledButton
             onClick={() => {
               setOpen2(p => !p), setOpen1(false);
             }}
           ></StyledButton>
-        </ButtonGroupWrapper>
-        <BlackBox></BlackBox>
+          {*/}
       </WhiteBox>
     </Section>
   );
