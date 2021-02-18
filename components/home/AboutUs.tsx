@@ -30,15 +30,6 @@ const Profile = styled.img`
 
 const TextBox = styled.div``;
 
-{
-  /*const Divider = styled.div`
-  width: 62.5%;
-  height: 1px;
-  opacity: 0.1;
-  background-color: #fff;
-  margin: 3% auto;
-`;*/
-}
 const Quote = styled.p`
   font-size: 16px;
   margin-top: 1em;
@@ -70,7 +61,6 @@ const AboutUs: FC<{ id: string }> = ({ id }) => {
             srcSet={`${getRelativePath('/static/img/CEO@2x.png')} 2x`}
           />
         </ScrollAnimation>
-        {/*<Divider />*/}
         <TextBox>
           <ScrollAnimation animateIn="fadeInUp" delay={400} offset={0}>
             <Quote className="cn">{t('home.quote')}</Quote>
