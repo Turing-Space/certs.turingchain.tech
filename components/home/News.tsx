@@ -10,6 +10,7 @@ import Description from '@/components/Description';
 import Button from '@/components/Button';
 import { getRelativePath } from '@/utils';
 import { i18nNamespace } from '@/constants';
+import { trackOutboundLink } from '@/utils/gtag';
 //import ScrollInfo from '../ScrollInfo';
 const Bg = styled.div`
   position: absolute;
@@ -170,12 +171,14 @@ const News: FC<{ id: string }> = ({ id }) => {
       <WhiteBox>
         <BlackBox></BlackBox>
         <IconWrapper>
-          <img
-            src={getRelativePath('/static/icon/icon_left.svg')}
-            srcSet={`${getRelativePath(
-              '/static/icon/icon_left@2x.svg',
-            )} 2x, ${getRelativePath('/static/icon/icon_left@3x.svg')} 3x`}
-          />
+          <a onClick={() => $('.single-item').slick()}>
+            <img
+              src={getRelativePath('/static/icon/icon_left.svg')}
+              srcSet={`${getRelativePath(
+                '/static/icon/icon_left@2x.svg',
+              )} 2x, ${getRelativePath('/static/icon/icon_left@3x.svg')} 3x`}
+            />
+          </a>
           <img
             src={getRelativePath('/static/icon/icon_right.svg')}
             srcSet={`${getRelativePath(
