@@ -23,7 +23,7 @@ const Bg = styled.div`
 `;
 
 const Title = styled(H2)`
-  margin: 18vh auto 0;
+  margin: 0 auto 0;
   max-width: 70vw;
   color: ${p => p.theme.colors.websiteCatelogWordGold};
 
@@ -91,8 +91,7 @@ const WhiteBox = styled.div`
   position: relative;
   margin-top: 3%;
   width: 75%;
-  margin-bottom: 20em;
-  background-color: #ffffff;
+  background-color: ${p => p.theme.colors.white};
   border-radius: 30px;
   opacity: 1;
 
