@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Section from '@/components/Section';
 import H2 from '@/components/H2';
-import ScrollInfo from '@/components/ScrollInfo';
 import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
 import { useTranslation } from 'react-i18next';
@@ -77,7 +76,6 @@ const AboutUs: FC<{ id: string }> = ({ id }) => {
         </Text>
         */}
           </ScrollAnimation>
-          <ScrollInfo />
         </TextBox>
       </Content>
     </Section>
