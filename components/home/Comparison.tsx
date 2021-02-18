@@ -29,7 +29,7 @@ const Title = styled(H2)`
 
   ${media('largeDesktop')} {
     max-width: 55vw;
-    margin: 20vh auto 0;
+    margin: 0 auto 0;
   }
 `;
 const StyledDescription = styled(Description)`
