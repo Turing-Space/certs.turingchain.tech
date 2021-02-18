@@ -2,7 +2,7 @@ import { FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
-import Section from '@/components/Section';
+import { SectionGrey } from '@/components/Section';
 import H2 from '@/components/H2';
 //import H3 from '@/components/H3';
 import { media } from '@/utils/theme';
@@ -91,9 +91,8 @@ const WhiteBox = styled.div`
   position: relative;
   margin-top: 3%;
   width: 75%;
-  height: 480px;
   margin-bottom: 20em;
-  background-color: #f0f2f5;
+  background-color: #ffffff;
   border-radius: 30px;
   opacity: 1;
 
@@ -130,7 +129,7 @@ const Comparison: FC<{ id: string }> = ({ id }) => {
   const [open3, setOpen3] = useState<boolean>(false);
   const { t } = useTranslation(i18nNamespace.Home);
   return (
-    <Section id={id}>
+    <SectionGrey id={id} fullscreen>
       <ScrollAnimation
         animateOnce
         animateIn="fadeInUp"
@@ -210,7 +209,7 @@ const Comparison: FC<{ id: string }> = ({ id }) => {
           </MoreInfoWrapper>
         }
       </WhiteBox>
-    </Section>
+    </SectionGrey>
   );
 };
 
