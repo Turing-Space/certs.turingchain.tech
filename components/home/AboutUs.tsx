@@ -66,10 +66,8 @@ const AboutUs: FC<{ id: string }> = ({ id }) => {
       <Content>
         <ScrollAnimation animateIn="fadeInUp">
           <Profile
-            src={getRelativePath('/static/logo/logo-tc-title.png')}
-            srcSet={`${getRelativePath(
-              '/static/logo/logo-tc-title@2x.png',
-            )} 2x, ${getRelativePath('/static/logo/logo-tc-title@3x.png')} 3x`}
+            src={getRelativePath('/static/img/CEO.png')}
+            srcSet={`${getRelativePath('/static/img/CEO@2x.png')} 2x`}
           />
         </ScrollAnimation>
         {/*<Divider />*/}

@@ -12,7 +12,6 @@ import BackedBy from '@/components/home/BackedBy';
 import Examples from '@/components/home/Examples';
 import AboutUs from '@/components/home/AboutUs';
 // import DemoVideo from '@/components/home/DemoVideo';
-
 import { SITE_TITLE, i18nNamespace } from '@/constants';
 
 const Index: NextFC = () => {
