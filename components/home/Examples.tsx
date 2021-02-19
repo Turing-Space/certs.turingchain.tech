@@ -4,7 +4,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import Lightbox from 'react-image-lightbox';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useTranslation } from 'react-i18next';
-import Section from '@/components/Section';
+import { SectionGrey } from '@/components/Section';
 import Button from '@/components/Button';
 import H2 from '@/components/H2';
 import { media } from '@/utils/theme';
@@ -92,6 +92,7 @@ const Certificate = styled.div`
   overflow: hidden;
   transform: scale(1);
   transition: transform 0.2s ease-in-out;
+  border-radius: 2vh;
 
   &:hover {
     ${Name} {
@@ -195,7 +196,7 @@ const Examples: FC<{ id: string }> = ({ id }) => {
   const [photoIdx, setPhotoIdx] = useState<number>(0);
   const { t } = useTranslation(i18nNamespace.Home);
   return (
-    <Section id={id}>
+    <SectionGrey id={id}>
       <ScrollAnimation
         animateIn="fadeInUp"
         animateOnce
@@ -308,7 +309,7 @@ const Examples: FC<{ id: string }> = ({ id }) => {
           }
         />
       )}
-    </Section>
+    </SectionGrey>
   );
 };
 

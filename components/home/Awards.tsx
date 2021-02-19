@@ -12,7 +12,7 @@ import { i18nNamespace } from '@/constants';
 //import ScrollInfo from '../ScrollInfo';
 
 const Title = styled(H2)`
-  margin: 18vh auto 0;
+  margin: 0 auto 0;
   max-width: 70vw;
   color: ${p => p.theme.colors.backgroundJoinDarkGold};
 
@@ -63,7 +63,7 @@ const IPFSIcon = styled.img`
 const Awards: FC<{ id: string }> = ({ id }) => {
   const { t } = useTranslation(i18nNamespace.Home);
   return (
-    <Section id={id}>
+    <Section id={id} fullscreen>
       <ScrollAnimation
         animateOnce
         animateIn="fadeInUp"

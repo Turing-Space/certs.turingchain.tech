@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Section from '@/components/Section';
 import H2 from '@/components/H2';
-import ScrollInfo from '@/components/ScrollInfo';
 import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
 import { useTranslation } from 'react-i18next';
@@ -17,23 +16,28 @@ const Title = styled(H2)`
   }
 `;
 
-const Logo = styled.img`
+const Content = styled.div`
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+`;
+
+const Profile = styled.img`
   width: 21vw;
   margin-top: 2%;
 `;
 
-const Divider = styled.div`
-  width: 62.5%;
-  height: 1px;
-  opacity: 0.1;
-  background-color: #fff;
-  margin: 3% auto;
-`;
+const TextBox = styled.div``;
 
+const Quote = styled.p`
+  font-size: 16px;
+  margin-top: 1em;
+  margin-bottom: 2em;
+`;
 const Text = styled.p`
   width: 40vw;
   margin-bottom: 1em;
-  text-align: center;
+  text-align: left;
   line-height: 1.5;
   letter-spacing: 0.56px;
 
@@ -48,25 +52,32 @@ const AboutUs: FC<{ id: string }> = ({ id }) => {
 
   return (
     <Section id={id} justifyContent="flex-start" fullscreen>
-      <Title>ABOUT US</Title>
-      <ScrollAnimation animateIn="fadeInUp">
-        <Logo
-          src={getRelativePath('/static/logo/logo-tc-title.png')}
-          srcSet={`${getRelativePath(
-            '/static/logo/logo-tc-title@2x.png',
-          )} 2x, ${getRelativePath('/static/logo/logo-tc-title@3x.png')} 3x`}
-        />
-      </ScrollAnimation>
-      <Divider />
-      <ScrollAnimation animateIn="fadeInUp" delay={400} offset={0}>
-        <Text className="cn">
-          {t('home.description.cn')}
-        </Text>
+      <Title>關於我們</Title>
+      <Content>
+        <ScrollAnimation animateIn="fadeInUp">
+          <Profile
+            src={getRelativePath('/static/img/CEO.png')}
+            srcSet={`${getRelativePath('/static/img/CEO@2x.png')} 2x`}
+          />
+        </ScrollAnimation>
+        <TextBox>
+          <ScrollAnimation animateIn="fadeInUp" delay={400} offset={0}>
+            <Quote className="cn">{t('home.quote')}</Quote>
+            <Text className="cn">{t('home.descriptionP1.cn')}</Text>
+            <p></p>
+            <Text className="cn">{t('home.descriptionP2.cn')}</Text>
+            <p></p>
+            <Text className="cn">{t('home.descriptionP3.cn')}</Text>
+            <p></p>
+            <Text className="cn">{t('home.descriptionP4.cn')}</Text>
+            {/*
         <Text className="en">
           {t('home.description.en')}
         </Text>
-      </ScrollAnimation>
-      <ScrollInfo />
+        */}
+          </ScrollAnimation>
+        </TextBox>
+      </Content>
     </Section>
   );
 };

@@ -10,8 +10,8 @@ import Awards from '@/components/home/Awards';
 import Collaborations from '@/components/home/Collaborations';
 import BackedBy from '@/components/home/BackedBy';
 import Examples from '@/components/home/Examples';
+import AboutUs from '@/components/home/AboutUs';
 // import DemoVideo from '@/components/home/DemoVideo';
-
 import { SITE_TITLE, i18nNamespace } from '@/constants';
 
 const Index: NextFC = () => {
@@ -30,13 +30,13 @@ const Index: NextFC = () => {
       <Awards id="section-awards" />
       {/* <DemoVideo id="section-product" /> 
       <Demo /> */}
-      {/*}
-      <Collaborations id="section-collaborations" />
-      <BackedBy id="section-backedBy" />
+
+      {/*<Collaborations id="section-collaborations" />*/}
+      {/*<BackedBy id="section-backedBy" />*/}
       <Examples id="section-examples" />
-    {*/}
-      {/* <AboutUs id="section-about" />
-      <Team id="section-team" /> */}
+
+      <AboutUs id="section-about" />
+      {/*<Team id="section-team" /> */}
     </HomeLayout>
   );
 };
