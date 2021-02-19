@@ -7,6 +7,7 @@
     "technology": "Technology",
     "comparison": "Comparison",
     "awards": "Awards",
+    "news": "News",
     "collaborations": "Friends",
     "backedBy": "Backed By",
     "examples": "Showcases",
@@ -143,10 +144,8 @@
     "subs": {
       "0": {
         "title": "教育機構",
-        "content1": "國際趨勢",
-        "content2": "更可靠",
-        "content3": "更高效",
-        "content4": "更受信任"
+        "content1": "遵循W3C國際標準，更有保障",
+        "content2": "個人歷程全面紀錄，更完備"
       },
       "1": {
         "title": "學生",
@@ -180,6 +179,9 @@
         "content": "Google SingularityU APAC Global Impact Challenge 2019 全球前四強"
       }
     }
+  },
+  "news": {
+    "title": "News"
   },
   "demo": {
     "title": "The New Era of Resumes!",

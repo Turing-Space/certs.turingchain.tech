@@ -2,16 +2,16 @@ import { FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
-import { SectionGrey } from '@/components/Section';
+import Section from '@/components/Section';
 import H2 from '@/components/H2';
 //import H3 from '@/components/H3';
 import { media } from '@/utils/theme';
 import Description from '@/components/Description';
 import Button from '@/components/Button';
-//import { getRelativePath } from '@/utils';
+import { getRelativePath } from '@/utils';
 import { i18nNamespace } from '@/constants';
+import { trackOutboundLink } from '@/utils/gtag';
 //import ScrollInfo from '../ScrollInfo';
-
 const Bg = styled.div`
   position: absolute;
   background: ${p => p.theme.colors.backgroundGrey};
@@ -23,13 +23,13 @@ const Bg = styled.div`
 `;
 
 const Title = styled(H2)`
-  margin: 0 auto 0;
+  margin: 18vh auto 0;
   max-width: 70vw;
   color: ${p => p.theme.colors.websiteCatelogWordGold};
 
   ${media('largeDesktop')} {
     max-width: 55vw;
-    margin: 0 auto 0;
+    margin: 20vh auto 0;
   }
 `;
 const StyledDescription = styled(Description)`
@@ -61,16 +61,30 @@ const ButtonGroupWrapper = styled.div`
 `;
 
 const StyledButton = styled(Button)`
-  margin: 5% 0 8%;
+  position: relative;
+  border-radius: 0;
+  margin: 20px;
+  width: 0;
+  height: 0;
+  background: ${p => p.theme.colors.backgroundJoinDarkGold};
+`;
+
+const IconWrapper = styled.div`
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0% 0;
 
-  color: ${p => p.theme.colors.backgroundJoinDarkGold};
-  background: ${p => p.theme.colors.white};
+  img {
+    width: 2.5em;
+    transition: opacity ease-in 0.1s;
 
-  opacity: 1;
-
+    &:hover {
+      opacity: 0.75;
+    }
+  }
   ${media('tablet')} {
-    width: 100%;
+    margin: -3% 0;
   }
 `;
 
@@ -91,18 +105,42 @@ const WhiteBox = styled.div`
   position: relative;
   margin-top: 3%;
   width: 75%;
-  background-color: ${p => p.theme.colors.white};
+  height: 480px;
+  margin-bottom: 20em;
+  background-color: #f0f2f5;
   border-radius: 30px;
   opacity: 1;
 
   ${media('desktop')} {
-    width: 60%;
+    width: 70%;
+  }
+`;
+
+const BlackBox = styled.div`
+  position: relative;
+  margin-top: 3%;
+  top: 18%;
+  width: 75%;
+  height: 200px;
+  left: 17vw;
+
+  background-color: #424242;
+  border-radius: 30px;
+  opacity: 1;
+
+  ${media('desktop')} {
+    width: 50%;
   }
 `;
 
 const Wrapper = styled.div`
   position: relative;
-  margin-top: 0;
+  margin-top: 3%;
+  width: 75%;
+
+  ${media('desktop')} {
+    width: 50%;
+  }
 `;
 
 const MoreInfoWrapper = styled(Wrapper)<{ open: boolean }>`
@@ -117,88 +155,63 @@ const InfoWrapper = styled.div`
   width: 100%;
 `;
 
-const Comparison: FC<{ id: string }> = ({ id }) => {
+const News: FC<{ id: string }> = ({ id }) => {
   const [open1, setOpen1] = useState<boolean>(false);
   const [open2, setOpen2] = useState<boolean>(false);
-  const [open3, setOpen3] = useState<boolean>(false);
   const { t } = useTranslation(i18nNamespace.Home);
   return (
-    <SectionGrey id={id} fullscreen>
+    <Section id={id}>
       <ScrollAnimation
         animateOnce
         animateIn="fadeInUp"
         style={{ width: '100%', textAlign: 'center' }}
       >
-        <Title>{t('comparison.title')}</Title>
-        <StyledDescription>{t('comparison.description1')}</StyledDescription>
-        <StyledDescription>{t('comparison.description2')}</StyledDescription>
-        <StyledDescription>{t('comparison.description3')}</StyledDescription>
+        <Title>{t('news.title')}</Title>
       </ScrollAnimation>
       <WhiteBox>
-        <ButtonGroupWrapper>
+        <BlackBox></BlackBox>
+        <IconWrapper>
+          <a onClick={() => $('.single-item').slick()}>
+            <img
+              src={getRelativePath('/static/icon/icon_left.svg')}
+              srcSet={`${getRelativePath(
+                '/static/icon/icon_left@2x.svg',
+              )} 2x, ${getRelativePath('/static/icon/icon_left@3x.svg')} 3x`}
+            />
+          </a>
+          <img
+            src={getRelativePath('/static/icon/icon_right.svg')}
+            srcSet={`${getRelativePath(
+              '/static/icon/icon_right@2x.svg',
+            )} 2x, ${getRelativePath('/static/icon/icon_right@3x.svg')} 3x`}
+          />
+        </IconWrapper>
+        {/*}  
           <StyledButton
             onClick={() => {
-              setOpen1(p => !p), setOpen2(false), setOpen3(false);
+              setOpen1(p => !p), setOpen2(false);
             }}
           >
-            {t('comparison.subtitle1')}
+            
+            <img
+              src={getRelativePath('/static/icon/icon_left.svg')}
+              srcSet={`${getRelativePath(
+              '/static/icon/icon_left@2x.svg',
+              )} 2x, ${getRelativePath('/static/icon/icon_left@3x.svg')} 3x`}
+            />
+              
           </StyledButton>
+              
 
           <StyledButton
             onClick={() => {
-              setOpen2(p => !p), setOpen1(false), setOpen3(false);
+              setOpen2(p => !p), setOpen1(false);
             }}
-          >
-            {t('comparison.subtitle2')}
-          </StyledButton>
-
-          <StyledButton
-            onClick={() => {
-              setOpen3(p => !p), setOpen1(false), setOpen2(false);
-            }}
-          >
-            {t('comparison.subtitle3')}
-          </StyledButton>
-        </ButtonGroupWrapper>
-        {
-          <MoreInfoWrapper open={open1}>
-            {[0].map(k => (
-              <InfoWrapper key={k}>
-                <StyledSubDescription>
-                  {t(`comparison.subs.${k}.content1`)}
-                </StyledSubDescription>
-                <StyledSubDescription>
-                  {t(`comparison.subs.${k}.content2`)}
-                </StyledSubDescription>
-              </InfoWrapper>
-            ))}
-          </MoreInfoWrapper>
-        }
-        {
-          <MoreInfoWrapper open={open2}>
-            {[1].map(k => (
-              <InfoWrapper key={k}>
-                <StyledSubDescription>
-                  {t(`comparison.subs.${k}.content`)}
-                </StyledSubDescription>
-              </InfoWrapper>
-            ))}
-          </MoreInfoWrapper>
-        }
-        {
-          <MoreInfoWrapper open={open3}>
-            {[2].map(k => (
-              <InfoWrapper key={k}>
-                <StyledSubDescription>
-                  {t(`comparison.subs.${k}.content`)}
-                </StyledSubDescription>
-              </InfoWrapper>
-            ))}
-          </MoreInfoWrapper>
-        }
+          ></StyledButton>
+          {*/}
       </WhiteBox>
-    </SectionGrey>
+    </Section>
   );
 };
 
-export default Comparison;
+export default News;
