@@ -142,11 +142,14 @@
       },
       "1": {
         "title": "學生",
-        "content": "bbb"
+        "content1": "單一平台整合，更簡易",
+        "content2": "終身保存，更長久",
+        "content3": "一鍵分享，更省時"
       },
       "2": {
         "title": "查驗單位",
-        "content": "ccc"
+        "content1": "發證方直接核發，更可靠",
+        "content2": "一鍵驗證，更高效"
       }
     }
   },
