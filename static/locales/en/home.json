@@ -143,17 +143,20 @@
     "subtitle3": "查驗單位",
     "subs": {
       "0": {
-        "title": "教育機構",
-        "content1": "遵循W3C國際標準，更有保障",
-        "content2": "個人歷程全面紀錄，更完備"
+        "title": "Educational Institutions",
+        "content1": "Abide by W3C international standard, which makes certificates more secure",
+        "content2": "Full record of personal journey, which makes certificates more complete"
       },
       "1": {
-        "title": "學生",
-        "content": "bbb"
+        "title": "Students",
+        "content1": "Integrated in a single platform, easier to use",
+        "content2": "Preserved lifelong, more durable",
+        "content3": "Share by one click, less time-consuming"
       },
       "2": {
-        "title": "查驗單位",
-        "content": "ccc"
+        "title": "Examinational Institutions",
+        "content1": "Certificates authorized and issued directly by issuers, more reliable",
+        "content2": "Verify by one click, more efficient"
       }
     }
   },

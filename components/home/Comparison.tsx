@@ -179,7 +179,13 @@ const Comparison: FC<{ id: string }> = ({ id }) => {
             {[1].map(k => (
               <InfoWrapper key={k}>
                 <StyledSubDescription>
-                  {t(`comparison.subs.${k}.content`)}
+                  {t(`comparison.subs.${k}.content1`)}
+                </StyledSubDescription>
+                <StyledSubDescription>
+                  {t(`comparison.subs.${k}.content2`)}
+                </StyledSubDescription>
+                <StyledSubDescription>
+                  {t(`comparison.subs.${k}.content3`)}
                 </StyledSubDescription>
               </InfoWrapper>
             ))}
@@ -190,7 +196,10 @@ const Comparison: FC<{ id: string }> = ({ id }) => {
             {[2].map(k => (
               <InfoWrapper key={k}>
                 <StyledSubDescription>
-                  {t(`comparison.subs.${k}.content`)}
+                  {t(`comparison.subs.${k}.content1`)}
+                </StyledSubDescription>
+                <StyledSubDescription>
+                  {t(`comparison.subs.${k}.content2`)}
                 </StyledSubDescription>
               </InfoWrapper>
             ))}
