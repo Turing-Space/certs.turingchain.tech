@@ -7,6 +7,7 @@ import Service from '@/components/home/Service';
 import Technology from '@/components/home/Technology';
 import Comparison from '@/components/home/Comparison';
 import Awards from '@/components/home/Awards';
+import Process from '@/components/home/Process';
 import Collaborations from '@/components/home/Collaborations';
 import BackedBy from '@/components/home/BackedBy';
 import Examples from '@/components/home/Examples';
@@ -28,6 +29,7 @@ const Index: NextFC = () => {
   {*/}
       <Comparison id="section-comparison" />
       <Awards id="section-awards" />
+      <Process id="section-process" />
       {/* <DemoVideo id="section-product" /> 
       <Demo /> */}
 

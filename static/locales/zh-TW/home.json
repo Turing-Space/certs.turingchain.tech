@@ -7,6 +7,8 @@
     "technology": "技術架構",
     "comparison": "傳統/數位",
     "awards": "獲獎經歷",
+    "news": "新聞快訊",
+    "process": "使用流程",
     "collaborations": "數位學習履歷夥伴",
     "backedBy": "培育致謝",
     "examples": "案例展示",
@@ -173,6 +175,26 @@
       "5": {
         "content": "Google SingularityU APAC Global Impact Challenge 2019 全球前四強"
       }
+    }
+  },
+  "process": {
+    "title": "發證流程",
+
+    "1": {
+      "description": "製作證書模板",
+      "subdescription": "匯入底圖與欄位"
+    },
+    "2": {
+      "description": "匯入收證者名單",
+      "subdescription": "上傳CSV檔案"
+    },
+    "3": {
+      "description": "證書上鏈",
+      "subdescription": "發證中"
+    },
+    "4": {
+      "description": "發證完成",
+      "subdescription": "可自動寄至收件者信箱"
     }
   },
   "demo": {
