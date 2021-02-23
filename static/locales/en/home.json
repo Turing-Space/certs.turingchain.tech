@@ -52,14 +52,14 @@
     "title": "Product Characteristics",
     "description": "By leveraging the incorruptible, traceable, cost-effective, and borderless characteristics of blockchain technology, TuringCerts is capable of redefining traditional educational certificates and eventually enabling unified and sustainable records tracking for educational industry. TuringCerts not only ensures full data coverage, control, and maintenance for users, but also promises a rigorous privacy policy and upholds highest trust of source as well as the dignity of authorized certificates.",
     "icons": {
-      "0": "防止偽造",
-      "1": "快速查驗",
-      "2": "永久保存"
+      "0": "Prevent Forge",
+      "1": "Quick Examination",
+      "2": "Saved Forever"
     },
     "subdescriptions": {
-      "0": "使用不可篡改、安全，以及可信任的區塊鏈技術，確保每一份證書100%真實性。",
-      "1": "學生可透過分享連結，讓人資單位隨時隨地一鍵驗證真偽，使人才篩選更便利、快捷。",
-      "2": "讓學生的學習歷程被妥善保存，並省去紙本作業的不便，更減少資料保存之人力成本。"
+      "0": "Adopted incorruptible, secure, and trustworthy blockchain technology to ensure 100% authenticity for every certificate.",
+      "1": "HR departments can verify authenticity anytime at anywhere via links shared by students to make personnel screening more convenient and time saving.",
+      "2": "Let students' learning portfolio be saved properly, and omit the incovenience for doing paper work, additionally, reduce the human cost for preserving data."
     }
   },
 
