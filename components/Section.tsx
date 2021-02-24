@@ -26,5 +26,5 @@ export const SectionGrey = styled.section<TSectionProps>`
   justify-content: ${p => p.justifyContent || 'center'};
   align-items: ${p => p.alignItems || 'center'};
   min-height: ${p => (p.fullscreen ? '100vh' : 'initial')};
-  background-color: ${p => p.theme.colors.backgroundGrey};
+  background-color: co ${p => p.theme.colors.backgroundGrey};
 `;
