@@ -1,5 +1,6 @@
 import React, { FC, Component, useState } from 'react';
 import styled from 'styled-components';
+import { Transition } from 'react-transition-group';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Section from '@/components/Section';
 import H2 from '@/components/H2';
@@ -21,6 +22,7 @@ const CardSlider = styled.div`
 
 const CardSliderWrapper = styled.div`
   position: absolute;
+  transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
   overflow-x: hidden;
   overflow-y: hidden;
   display: flex;
@@ -31,14 +33,15 @@ const Card = styled.div`
   height: 200px;
   object-fit: contain;
   border: 10px;
-  border-radius: 50%;
   border-color: black;
   background-color: white;
+  transition: transform 300ms linear;
 `;
 
 const NewsImage = styled.img`
   width: 100%;
   height: 100%;
+  border-radius: 10%;
   object-fit: contain;
 `;
 
@@ -70,28 +73,51 @@ const Cards: NewsData[] = [
 ];
 
 const Carousel: React.FC<{ newsNumber: number }> = ({ newsNumber }) => {
-  const [count, setCount] = useState(0);
+  const [index, setIndex] = useState(0);
+  const [isMoving, setIsMoving] = useState(false);
   function previousNews() {
-    if (count > 0) {
-      setCount(prevCount => prevCount - 1);
+    if (index > 0) {
+      setIndex(prevIndex => prevIndex - 1);
+      setIsMoving(true);
     }
   }
   function nextNews() {
-    if (count < newsNumber - 1) {
-      setCount(prevCount => prevCount + 1);
+    if (index < newsNumber - 1) {
+      setIndex(prevIndex => prevIndex + 1);
+      setIsMoving(true);
     }
   }
+
   return (
     <div>
-      <button onClick={() => previousNews()}>Previous</button>
-      <button onClick={() => nextNews()}>Next</button>
+      <button
+        onClick={() => {
+          previousNews();
+        }}
+      >
+        Previous
+      </button>
+      <button
+        onClick={() => {
+          nextNews();
+        }}
+      >
+        Next
+      </button>
       <CardSlider>
         <CardSliderWrapper
-          style={{ transform: `translateX(-${(count * 100) / newsNumber}%) ` }}
+          style={{ transform: `translateX(-${(index * 100) / newsNumber}%)` }}
         >
-          {Cards.map(property => {
+          {Cards.map((property, idx) => {
+            let ratio = 0.7;
+            if (idx === index) {
+              ratio = 1;
+            }
             return (
-              <Card>
+              <Card
+                className={`news-card-${idx}`}
+                style={{ transform: `scale(${ratio})` }}
+              >
                 <a href={property.link} target="_blank">
                   <NewsImage src={property.source} />
                 </a>
@@ -100,7 +126,6 @@ const Carousel: React.FC<{ newsNumber: number }> = ({ newsNumber }) => {
           })}
         </CardSliderWrapper>
       </CardSlider>
-      <p>{count}</p>
     </div>
   );
 };

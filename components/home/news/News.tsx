@@ -11,19 +11,6 @@ import { i18nNamespace } from '@/constants';
 import { useTranslation } from 'react-i18next';
 import Carousel from '@/components/home/news/Carousel';
 
-type NewsData = {
-  source: string;
-};
-
-const NewsItems: NewsData[] = [
-  {
-    source: 'hcmj',
-  },
-  {
-    source: 'jch',
-  },
-];
-
 const News: FC<{ id: string }> = ({ id }) => {
   return (
     <SectionGrey justifyContent="flex-start" id={id} fullscreen>
