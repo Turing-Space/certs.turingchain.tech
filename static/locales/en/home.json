@@ -134,13 +134,13 @@
   },
   "comparison": {
     "title": "Turing Certs",
-    "description1": "逾30所大專院校、教育機構採用圖靈證書發證",
-    "description2": "累計發出超過3,000張證書",
-    "description3": "促使3,000位學生擁有國際防偽數位歷程",
+    "description1": "Around 30 colleges and educational institutions have been using TuringCerts to issue certificates",
+    "description2": "Over 3,000 certificates issued",
+    "description3": "Induced 3,000 students to own an international anti-counterfeiting digital learning portfolio",
     "hidden": "Hidden ",
-    "subtitle1": "教育機構",
-    "subtitle2": "學生",
-    "subtitle3": "查驗單位",
+    "subtitle1": "Educational Institutions",
+    "subtitle2": "Students",
+    "subtitle3": "Examinational Institutions",
     "subs": {
       "0": {
         "title": "Educational Institutions",
