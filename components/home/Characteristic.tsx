@@ -84,6 +84,13 @@ const Icon = styled.div`
   }
 `;
 
+const Bookmark = styled.img`
+  position: absolute;
+  left: 10%;
+  top: -3%;
+  width: 7%;
+`;
+
 const IconDescription = styled.p<{ isEn: boolean }>`
   white-space: ${p => (p.isEn ? 'pre-line' : 'nowrap')};
   font-size: ${p => p.theme.fontSize.bigger};
@@ -124,6 +131,10 @@ const Characteristic: FC<{ id: string }> = ({ id }) => {
         </Button>
       </ButtonWrapper>
       */}
+      <Bookmark
+        src={getRelativePath('/static/icon/bookmark.png')}
+        srcSet={`${getRelativePath('/static/icon/bookmark@2x.png')} 2x`}
+      />
       <AnimatedWrapper animateIn="fadeInUp" animateOnce>
         <Title>{t('characteristic.title')}</Title>
         {/*}
