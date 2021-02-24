@@ -48,7 +48,7 @@ const Text = styled.p`
 `;
 
 const AboutUs: FC<{ id: string }> = ({ id }) => {
-  const { t } = useTranslation(i18nNamespace.Home);
+  const { t, i18n } = useTranslation(i18nNamespace.Home);
 
   return (
     <Section id={id} justifyContent="flex-start" fullscreen>
@@ -63,13 +63,29 @@ const AboutUs: FC<{ id: string }> = ({ id }) => {
         <TextBox>
           <ScrollAnimation animateIn="fadeInUp" delay={400} offset={0}>
             <Quote className="cn">{t('home.quote')}</Quote>
-            <Text className="cn">{t('home.descriptionP1.cn')}</Text>
+            <Text className="cn">
+              {i18n.language === 'zh-TW'
+                ? ` ${t('home.descriptionP1.cn')}`
+                : `${t('home.descriptionP1.en')}`}
+            </Text>
             <p></p>
-            <Text className="cn">{t('home.descriptionP2.cn')}</Text>
+            <Text className="cn">
+              {i18n.language === 'zh-TW'
+                ? ` ${t('home.descriptionP2.cn')}`
+                : `${t('home.descriptionP2.en')}`}
+            </Text>
             <p></p>
-            <Text className="cn">{t('home.descriptionP3.cn')}</Text>
+            <Text className="cn">
+              {i18n.language === 'zh-TW'
+                ? ` ${t('home.descriptionP3.cn')}`
+                : `${t('home.descriptionP3.en')}`}
+            </Text>
             <p></p>
-            <Text className="cn">{t('home.descriptionP4.cn')}</Text>
+            <Text className="cn">
+              {i18n.language === 'zh-TW'
+                ? ` ${t('home.descriptionP4.cn')}`
+                : `${t('home.descriptionP4.en')}`}
+            </Text>
             {/*
         <Text className="en">
           {t('home.description.en')}
