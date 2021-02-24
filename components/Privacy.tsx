@@ -28,31 +28,22 @@ const Title = styled(H2)`
 `;
 
 const DescriptionTitle = styled(Description)`
-  width: 70%;
+  width: 60%;
   font-size: ${p => p.theme.fontSize.bigger};
   font-weight: 500;
-  margin: 0 auto;
+  margin: 0 auto 1em;
   text-align: left;
   line-height: 1.2;
   letter-spacing: 1px;
-  margin-bottom: 1em;
-
-  ${media('desktop')} {
-    width: 60%;
-  }
 `;
 
 const StyledDescription = styled(Description)<{ right?: boolean }>`
-  width: 70%;
+  width: 60%;
   text-align: ${p => (p.right ? 'right' : 'left')};
   letter-spacing: 0.5px;
   line-height: 2em;
   margin: 0 auto;
   color: ${p => p.theme.colors.backgroundWordDarkGrey};
-
-  ${media('desktop')} {
-    width: 60%;
-  }
 `;
 
 const Privacy: FC = () => {
