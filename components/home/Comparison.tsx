@@ -140,7 +140,7 @@ const Comparison: FC<{ id: string }> = ({ id }) => {
         <ButtonGroupWrapper>
           <StyledButton
             onClick={() => {
-              setOpen1(p => !p), setOpen2(false), setOpen3(false);
+              setOpen1(true), setOpen2(false), setOpen3(false);
             }}
             open={open1}
           >
@@ -149,7 +149,7 @@ const Comparison: FC<{ id: string }> = ({ id }) => {
 
           <StyledButton
             onClick={() => {
-              setOpen2(p => !p), setOpen1(false), setOpen3(false);
+              setOpen2(true), setOpen1(false), setOpen3(false);
             }}
             open={open2}
           >
@@ -158,7 +158,7 @@ const Comparison: FC<{ id: string }> = ({ id }) => {
 
           <StyledButton
             onClick={() => {
-              setOpen3(p => !p), setOpen1(false), setOpen2(false);
+              setOpen3(true), setOpen1(false), setOpen2(false);
             }}
             open={open3}
           >
