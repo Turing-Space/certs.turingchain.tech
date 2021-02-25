@@ -3,15 +3,23 @@
   "start": "Join",
   "header": {
     "service": "Service",
+    "characteristic": "Characteristic",
     "technology": "Technology",
+    "comparison": "Comparison",
+    "awards": "Awards",
+    "news": "News",
+    "process": "Process",
     "collaborations": "Friends",
     "backedBy": "Backed By",
     "examples": "Showcases",
+    "aboutUs": "About Us",
     "contact": "Contact",
     "product": "Product"
   },
   "footer": {
-    "title": "Contact Us"
+    "title": "Contact Us",
+    "security": "Information Security Policy",
+    "privacy": "Privacy Policy"
   },
   "home": {
     "title": {
@@ -19,15 +27,36 @@
       "cn": "圖靈證書"
     },
     "subTitle": {
-      "cn": "一鍵驗證你的區塊鏈履歷與證書",
+      "cn": "屬於每個人的國際防偽數位歷程",
       "en": "Your Blockchain-based Resume for One-click Verify."
     },
     "mobileSubTitle": "Your Blockchain-based Resume for One-click Verify.",
-    "description": {
-      "cn": "圖靈鏈是一個屢獲殊榮，敏捷且國際化的團隊，主導開發區塊鏈項目，囊括紐約新聞媒體、台灣電影產業、與俄羅斯及澳門博彩集團。",
-      "en": "Turing Chain is an award-winning, agile, and international team. We developed blockchains for New York news media, Taiwanese movie production, and Russia & Macao-based casinos."
+    "quote": "“We are the sum total of our experiences.”",
+    "descriptionP1": "You may have the habit of keeping a diary, taking down your daily exquisite dribs and drabs by pencils and paper. Nevertheless, things don’t turn out the way we wish as our stories are forgotten easily, and the world thus forgets us.",
+    "descriptionP2": "Still, we firmly believe our every footstep counts - since all are worth recording. This is why Turing Certs has been dedicating to setting up a career portfolio from your 1st-grade to your graduation, even from your 1st occupation through your ultimate success. Seeking authenticity by e-signature, protecting our Mother Nature by going paperless, and guarding your personal data by digital identification are our missions. Seeking authenticity by e-signature, protecting our Mother Nature by going paperless, and guarding your personal data by digital identification are our missions.",
+    "descriptionP3": "The 1st-quarter of the 21st-century is coming to an end, and Turing Certs still centers around every individual. Connecting every piece of virtual and real-world you together, we outline and shape people in detail by what they have gone through.",
+    "descriptionP4": "“You are also the sum total of your experiences.” Turing Certs will be your best e-experience."
+  },
+  "aboutUs": {
+    "title": "About Us"
+  },
+  "characteristic": {
+    "issue": "Start Issuing",
+    "verify": "Apply for Verify",
+    "title": "Product Characteristics",
+    "description": "By leveraging the incorruptible, traceable, cost-effective, and borderless characteristics of blockchain technology, TuringCerts is capable of redefining traditional educational certificates and eventually enabling unified and sustainable records tracking for educational industry. TuringCerts not only ensures full data coverage, control, and maintenance for users, but also promises a rigorous privacy policy and upholds highest trust of source as well as the dignity of authorized certificates.",
+    "icons": {
+      "0": "Prevent Forge",
+      "1": "Quick Examination",
+      "2": "Saved Forever"
+    },
+    "subdescriptions": {
+      "0": "Adopted incorruptible, secure, and trustworthy blockchain technology to ensure 100% authenticity for every certificate.",
+      "1": "HR departments can verify authenticity anytime at anywhere via links shared by students to make personnel screening more convenient and time saving.",
+      "2": "Let students' learning portfolio be saved properly, and omit the incovenience for doing paper work, additionally, reduce the human cost for preserving data."
     }
   },
+
   "service": {
     "issue": "Start Issuing",
     "verify": "Apply for Verify",
@@ -96,6 +125,75 @@
         "content": "The minimum disclosure principle guaranteed in the GDPR will be reflected by our zero-knowledge proof, allowing information owners to complete the certification without revealing the details of the target information."
       }
     }
+  },
+  "comparison": {
+    "title": "Turing Certs",
+    "description1": "Around 30 colleges and educational institutions have been using TuringCerts to issue certificates",
+    "description2": "Over 3,000 certificates issued",
+    "description3": "Induced 3,000 students to own an international anti-counterfeiting digital learning portfolio",
+    "hidden": "Hidden ",
+    "subtitle1": "Educational Institutions",
+    "subtitle2": "Students",
+    "subtitle3": "Examinational Institutions",
+    "subs": {
+      "0": {
+        "title": "Educational Institutions",
+        "content1": "Abide by W3C international standard, which makes certificates more secure",
+        "content2": "Full record of personal journey, which makes certificates more complete"
+      },
+      "1": {
+        "title": "Students",
+        "content1": "Integrated in a single platform, easier to use",
+        "content2": "Preserved lifelong, more durable",
+        "content3": "Share by one click, less time-consuming"
+      },
+      "2": {
+        "title": "Examinational Institutions",
+        "content1": "Certificates authorized and issued directly by issuers, more reliable",
+        "content2": "Verify by one click, more efficient"
+      }
+    }
+  },
+  "awards": {
+    "title": "Awards",
+    "subs": {
+      "0": {
+        "content": "2020 微軟創夢盃 Microsoft Imagine Cup 國際賽 美洲組第三名"
+      },
+      "1": {
+        "content": "2020 國研院 500 Startups 遇見新創最高榮譽與新加坡國家代表隊資格"
+      },
+      "2": {
+        "content": "2019 科技部 FITI 創業傑出獎台灣創業高榮譽 200 萬元獎金"
+      },
+      "3": {
+        "content": "美國阿里巴巴創業者基金 X 匯豐國際賽美國總決賽冠軍與最佳科技創新獎"
+      },
+      "4": {
+        "content": "UC Berkeley Free Ventures 美國僅五家加速器新創公司 Batch XIII"
+      },
+      "5": {
+        "content": "Google SingularityU APAC Global Impact Challenge 2019 全球前四強"
+      }
+    }
+  },
+  "process": {
+    "title": "Issuance Process",
+    "description": {
+      "1": "Create Certificate Template",
+      "2": "Enter Receipient Information",
+      "3": "Certificate on Blockchain",
+      "4": "Issuance Completed"
+    },
+    "subdescription": {
+      "1": "Import Background Image and Information Filed",
+      "2": "Upload CSV File",
+      "3": "Issuing",
+      "4": "Send to Recepient Email Automatically"
+    }
+  },
+  "news": {
+    "title": "News"
   },
   "demo": {
     "title": "The New Era of Resumes!",
