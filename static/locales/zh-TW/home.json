@@ -15,7 +15,9 @@
     "product": "產品演示"
   },
   "footer": {
-    "title": "合作洽談"
+    "title": "合作洽談",
+    "security": "資訊安全政策",
+    "privacy": "隱私權政策"
   },
   "home": {
     "title": {

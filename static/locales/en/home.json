@@ -16,7 +16,9 @@
     "product": "Product"
   },
   "footer": {
-    "title": "Contact Us"
+    "title": "Contact Us",
+    "security": "Information Security Policy",
+    "privacy": "Privacy Policy"
   },
   "home": {
     "title": {
