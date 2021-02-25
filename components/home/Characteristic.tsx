@@ -80,8 +80,15 @@ const Icon = styled.div`
   margin-bottom: 2em;
 
   > img {
-    width: 50%;
+    width: 100%;
   }
+`;
+
+const Bookmark = styled.img`
+  position: absolute;
+  left: 10%;
+  top: -3%;
+  width: 7%;
 `;
 
 const IconDescription = styled.p<{ isEn: boolean }>`
@@ -97,7 +104,7 @@ const IconDescription = styled.p<{ isEn: boolean }>`
 
 const IconSubDescription = styled(Description)`
   width: 90%;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.5px;
   line-height: 1em;
   margin: 0 auto;
@@ -124,6 +131,10 @@ const Characteristic: FC<{ id: string }> = ({ id }) => {
         </Button>
       </ButtonWrapper>
       */}
+      <Bookmark
+        src={getRelativePath('/static/icon/bookmark.png')}
+        srcSet={`${getRelativePath('/static/icon/bookmark@2x.png')} 2x`}
+      />
       <AnimatedWrapper animateIn="fadeInUp" animateOnce>
         <Title>{t('characteristic.title')}</Title>
         {/*}
@@ -134,12 +145,8 @@ const Characteristic: FC<{ id: string }> = ({ id }) => {
         <IconWrapper animateIn="zoomIn" duration={0.5} animateOnce>
           <Icon>
             <img
-              src={getRelativePath('/static/icon/icon-contract.png')}
-              srcSet={`${getRelativePath(
-                '/static/icon/icon-contract@2x.png',
-              )} 2x, ${getRelativePath(
-                '/static/icon/icon-contract@3x.png',
-              )} 3x`}
+              src={getRelativePath('/static/icon/icon_1.png')}
+              srcSet={`${getRelativePath('/static/icon/icon_1@2x.png')} 2x`}
             />
           </Icon>
           <IconDescription isEn={isEn}>
@@ -152,10 +159,8 @@ const Characteristic: FC<{ id: string }> = ({ id }) => {
         <IconWrapper animateIn="zoomIn" duration={0.5} animateOnce delay={300}>
           <Icon>
             <img
-              src={getRelativePath('/static/icon/icon-secure.png')}
-              srcSet={`${getRelativePath(
-                '/static/icon/icon-secure@2x.png',
-              )} 2x, ${getRelativePath('/static/icon/icon-secure@3x.png')} 3x`}
+              src={getRelativePath('/static/icon/icon_2.png')}
+              srcSet={`${getRelativePath('/static/icon/icon_2@2x.png')} 2x`}
             />
           </Icon>
           <IconDescription isEn={isEn}>
@@ -168,12 +173,8 @@ const Characteristic: FC<{ id: string }> = ({ id }) => {
         <IconWrapper animateIn="zoomIn" duration={0.5} animateOnce delay={600}>
           <Icon>
             <img
-              src={getRelativePath('/static/icon/icon-infinite.png')}
-              srcSet={`${getRelativePath(
-                '/static/icon/icon-infinite@2x.png',
-              )} 2x, ${getRelativePath(
-                '/static/icon/icon-infinite@3x.png',
-              )} 3x`}
+              src={getRelativePath('/static/icon/icon_3.png')}
+              srcSet={`${getRelativePath('/static/icon/icon_3@2x.png')} 2x`}
             />
           </Icon>
           <IconDescription isEn={isEn}>

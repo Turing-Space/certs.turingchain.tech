@@ -65,7 +65,7 @@ const SectionWrapper = styled.ul`
     margin-right: 2em;
     transition: color 0.2s ease-in;
     &:hover {
-      color: ${p => p.theme.colors.primary};
+      color: ${p => p.theme.colors.websiteCatelogWordGold};
     }
   }
 
@@ -132,7 +132,7 @@ const LanguageChooseWrapper = styled(animated.div)`
     width: 100%;
     padding: 0.5rem;
     &:hover {
-      color: ${p => p.theme.colors.white};
+      color: ${p => p.theme.colors.websiteCatelogWordGold};
     }
   }
 
@@ -185,6 +185,7 @@ const Header: SFC = () => {
           <li onClick={() => scrollToID('section-awards')}>
             {t('header.awards')}
           </li>
+          <li onClick={() => scrollToID('section-news')}>{t('header.news')}</li>
           {/*
           <li onClick={() => scrollToID('section-product')}>
             {t('header.product')}

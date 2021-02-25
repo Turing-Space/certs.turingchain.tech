@@ -32,6 +32,7 @@ const Index: NextFC = () => {
       <Awards id="section-awards" />
       <News id="section-news" />
       <Process id="section-process" />
+
       {/* <DemoVideo id="section-product" /> 
       <Demo /> */}
 
