@@ -177,6 +177,21 @@
       }
     }
   },
+  "process": {
+    "title": "Issuance Process",
+    "description": {
+      "1": "Create Certificate Template",
+      "2": "Enter Receipient Information",
+      "3": "Certificate on Blockchain",
+      "4": "Issuance Completed"
+    },
+    "subdescription": {
+      "1": "Import Background Image and Information Filed",
+      "2": "Upload CSV File",
+      "3": "Issuing",
+      "4": "Send to Recepient Email Automatically"
+    }
+  },
   "news": {
     "title": "News"
   },
