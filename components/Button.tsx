@@ -13,12 +13,35 @@ const Button = styled.button<TButtonProps>`
   align-items: center;
   width: 100%;
   max-width: 12em;
-  background-color: ${p => p.theme.colors.primary};
+
   color: ${p => p.theme.colors.white};
   border-radius: 40px;
   letter-spacing: 0.92px;
   padding: 1em;
   transition: all 0.1s ease-in;
+
+  border-radius: $border-rounded;
+  margin: 10px;
+  padding: 1em 3em;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  background-image: linear-gradient(
+    to right,
+    #ce893a 0%,
+    #f3c77c 50%,
+    #f3c77c 100%
+  );
+  transition: 0.5s;
+  &:hover {
+    background-position: right center;
+    background-image: linear-gradient(
+      to left,
+      #ce893a 0%,
+      #f3c77c 50%,
+      #f3c77c 100%
+    );
+  }
 
   ${p =>
     p.disabled
@@ -27,9 +50,7 @@ const Button = styled.button<TButtonProps>`
   `
       : `
     opacity: 1;
-    &:hover {
-      background-color: rgb(193, 76, 76);
-    }
+
   `}
 
   ${p =>

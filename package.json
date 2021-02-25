@@ -14,6 +14,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.12.0",
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@fortawesome/react-fontawesome": "^0.1.8",
+    "@types/react-transition-group": "^4.4.1",
     "axios": "^0.21.1",
     "clipboard": "^2.0.4",
     "cogo-toast": "^3.2.1",
@@ -38,6 +39,7 @@
     "react-scroll": "^1.7.12",
     "react-share": "^4.0.1",
     "react-spring": "^8.0.27",
+    "react-transition-group": "^4.4.1",
     "recharts": "^1.6.2",
     "styled-components": "^4.3.2"
   },

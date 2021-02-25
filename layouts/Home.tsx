@@ -12,19 +12,23 @@ import { getRelativePath } from '@/utils';
 type TProps = {
   title?: string;
   children: React.ReactNode;
+  backgroundIsGrey?: boolean;
 };
 
 const HomeLayout: React.FunctionComponent<TProps> = ({
   children,
   title = SITE_TITLE,
+  backgroundIsGrey = false,
 }) => {
   const { i18n } = useTranslation();
   return (
     <ThemeProvider
       theme={theme => {
         // dark theme
-        theme.color = theme.colors.white;
-        theme.background = theme.colors.backgroundBlack;
+        theme.color = theme.colors.backgroundWordDarkGrey;
+        theme.background = backgroundIsGrey
+          ? theme.colors.backgroundGrey
+          : theme.colors.white;
 
         // language
         theme.font =

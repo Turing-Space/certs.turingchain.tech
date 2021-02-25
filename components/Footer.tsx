@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useCallback } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import H2 from '@/components/H2';
@@ -6,6 +6,7 @@ import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
 import { i18nNamespace } from '@/constants';
 import { trackOutboundLink } from '@/utils/gtag';
+import { Router } from '@/i18n';
 
 const Wrapper = styled.footer`
   position: relative;
@@ -18,7 +19,7 @@ const Wrapper = styled.footer`
 
 const Bg = styled.div`
   position: absolute;
-  background: ${p => p.theme.colors.primary};
+  background: ${p => p.theme.colors.backgroundShapeGold};
   transform: skewY(-3deg);
   height: 100%;
   bottom: -10%;
@@ -95,6 +96,21 @@ const Divider = styled.div`
   margin: 5% 0;
 `;
 
+const Temp = styled.p`
+  cursor: pointer;
+  margin-bottom: 2%;
+  font-size: 1em;
+
+  ${media('tablet')} {
+    margin-top: 0;
+    font-size: ${p => p.theme.fontSize.smaller};
+  }
+
+  &:hover {
+    opacity: 0.75;
+  }
+`;
+
 const CopyRight = styled.p`
   margin-top: 10%;
   font-size: 1em;
@@ -107,6 +123,12 @@ const CopyRight = styled.p`
 
 const Footer: FC = () => {
   const { t } = useTranslation(i18nNamespace.Home);
+
+  const onPageClick = useCallback((route: string) => {
+    Router.push(route);
+    scrollTo(0, 0);
+  }, []);
+
   return (
     <Wrapper id="section-contact">
       <Bg />
@@ -164,6 +186,12 @@ const Footer: FC = () => {
           <p>TURING CHAIN LIMITED</p>
         </CompanyWrapper>
         <Divider />
+        <Temp onClick={() => onPageClick('/security')}>
+          {t('footer.security')}
+        </Temp>
+        <Temp onClick={() => onPageClick('/privacy')}>
+          {t('footer.privacy')}
+        </Temp>
         <CopyRight>© Turing Chain Limited. All rights reserved</CopyRight>
       </InfoWrapper>
     </Wrapper>

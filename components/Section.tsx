@@ -17,3 +17,14 @@ export default styled.section<TSectionProps>`
   align-items: ${p => p.alignItems || 'center'};
   min-height: ${p => (p.fullscreen ? '100vh' : 'initial')};
 `;
+
+export const SectionGrey = styled.section<TSectionProps>`
+  position: relative;
+  width: ${p => p.width || '100%'};
+  display: flex;
+  flex-direction: ${({ row = false }) => (row ? 'row' : 'column')};
+  justify-content: ${p => p.justifyContent || 'center'};
+  align-items: ${p => p.alignItems || 'center'};
+  min-height: ${p => (p.fullscreen ? '100vh' : 'initial')};
+  background-color: ${p => p.theme.colors.backgroundGrey};
+`;

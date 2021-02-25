@@ -4,7 +4,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import Button from '@/components/Button';
 import Section from '@/components/Section';
 import H2 from '@/components/H2';
-import ScrollInfo from '@/components/ScrollInfo';
+//import ScrollInfo from '@/components/ScrollInfo';
 import Description from '@/components/Description';
 import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
@@ -87,7 +87,7 @@ const Icon = styled.div`
   width: 10em;
   height: 10em;
   border-radius: 50%;
-  background-color: ${p => p.theme.colors.primary};
+  background-color: ${p => p.theme.colors.backgroundShapeGold};
   margin-bottom: 2em;
 
   > img {
@@ -165,7 +165,9 @@ const Service: FC<{ id: string }> = ({ id }) => {
           <IconDescription isEn={isEn}>{t('service.icons.2')}</IconDescription>
         </IconWrapper>
       </IconGroupWrapper>
+      {/*}
       <ScrollInfo />
+              {*/}
     </Section>
   );
 };

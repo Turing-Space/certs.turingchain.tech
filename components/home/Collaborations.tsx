@@ -2,11 +2,11 @@ import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
-import Section from '@/components/Section';
+import { SectionGrey } from '@/components/Section';
 import H2 from '@/components/H2';
 import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
-import ScrollInfo from '@/components/ScrollInfo';
+//import ScrollInfo from '@/components/ScrollInfo';
 import { i18nNamespace } from '@/constants';
 // import Button from '@/components/Button';
 
@@ -225,7 +225,7 @@ const Collaborations: FC<{ id: string }> = ({ id }) => {
   // const [open, setOpen] = useState<boolean>(false);
   const { t } = useTranslation(i18nNamespace.Home);
   return (
-    <Section id={id} justifyContent="flex-start" fullscreen>
+    <SectionGrey id={id} justifyContent="flex-start" fullscreen>
       <ScrollAnimation
         animateIn="fadeInUp"
         animateOnce
@@ -250,8 +250,10 @@ const Collaborations: FC<{ id: string }> = ({ id }) => {
       <StyledButton onClick={() => setOpen(p => !p)}>
         {open ? '隱藏' : '更多'}
       </StyledButton> */}
+      {/*}
       <ScrollInfo />
-    </Section>
+    {*/}
+    </SectionGrey>
   );
 };
 

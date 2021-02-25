@@ -22,11 +22,11 @@ const Wrapper = styled.header<{ hideUp?: boolean; openMobile: boolean }>`
   justify-content: space-between;
   height: 50px;
   padding: 0.3em 2.5rem;
-  background-color: ${p =>
-    p.openMobile ? 'rgb(33, 33, 33)' : p.theme.colors.backgroundBlack};
+  background-color: ${p => p.theme.colors.white};
   z-index: ${p => p.theme.z.high};
   transform: translateY(0);
   transition: all 0.3s ease-in;
+  box-shadow: 0px 3px 6px #00000029;
 
   ${p =>
     p.hideUp &&
@@ -54,7 +54,7 @@ const Wrapper = styled.header<{ hideUp?: boolean; openMobile: boolean }>`
     text-decoration: none;
   }
 `;
-
+//Icon press color
 const SectionWrapper = styled.ul`
   display: none;
   align-items: center;
@@ -65,7 +65,7 @@ const SectionWrapper = styled.ul`
     margin-right: 2em;
     transition: color 0.2s ease-in;
     &:hover {
-      color: ${p => p.theme.colors.primary};
+      color: ${p => p.theme.colors.websiteCatelogWordGold};
     }
   }
 
@@ -87,10 +87,10 @@ const LanguageWrapper = styled.div<{ open: boolean }>`
   font-size: ${p => p.theme.fontSize.smaller};
   border-left: solid 1px #424242;
   padding: 0 2.5rem 0 1.5rem;
-  color: #9e9e9e;
+  color: ${p => p.theme.colors.backgroundTranslationGrey};
   cursor: pointer;
   transition: color 0.1s ease-in;
-  background-color: ${p => p.theme.colors.backgroundBlack};
+  background-color: ${p => p.theme.colors.white};
 
   > img {
     width: 20px;
@@ -104,7 +104,8 @@ const LanguageWrapper = styled.div<{ open: boolean }>`
     height: 0;
     border-style: solid;
     border-width: 9px 5px 0px 5px;
-    border-color: #9e9e9e transparent transparent;
+    border-color: ${p => p.theme.colors.backgroundTranslationGrey} transparent
+      transparent;
     line-height: 0px;
     margin-top: 2px;
     margin-left: 0.5em;
@@ -122,7 +123,7 @@ const LanguageChooseWrapper = styled(animated.div)`
   justify-content: center;
   align-items: center;
   border: solid 1px #424242;
-  color: #9e9e9e;
+  color: ${p => p.theme.colors.backgroundTranslationGrey};
   z-index: -1;
   background: ${p => p.theme.background};
 
@@ -131,7 +132,7 @@ const LanguageChooseWrapper = styled(animated.div)`
     width: 100%;
     padding: 0.5rem;
     &:hover {
-      color: ${p => p.theme.colors.white};
+      color: ${p => p.theme.colors.websiteCatelogWordGold};
     }
   }
 
@@ -167,25 +168,47 @@ const Header: SFC = () => {
       <Wrapper hideUp={y > 0 && y > oldY} openMobile={openMobileList}>
         <HeaderLogo onClick={onHeaderLogoClick} />
         <SectionWrapper>
+          <li onClick={() => scrollToID('section-characteristic')}>
+            {t('header.characteristic')}
+          </li>
+          {/*}
           <li onClick={() => scrollToID('section-service')}>
             {t('header.service')}
           </li>
           <li onClick={() => scrollToID('section-technology')}>
             {t('header.technology')}
           </li>
+  {*/}
+          <li onClick={() => scrollToID('section-comparison')}>
+            {t('header.comparison')}
+          </li>
+          <li onClick={() => scrollToID('section-awards')}>
+            {t('header.awards')}
+          </li>
+          {/*
+          <li onClick={() => scrollToID('section-news')}>{t('header.news')}</li>
+          */}
+          <li onClick={() => scrollToID('section-process')}>
+            {t('header.process')}
+          </li>
           {/*
           <li onClick={() => scrollToID('section-product')}>
             {t('header.product')}
           </li>
           */}
+          {/*
           <li onClick={() => scrollToID('section-collaborations')}>
             {t('header.collaborations')}
           </li>
           <li onClick={() => scrollToID('section-backedBy')}>
             {t('header.backedBy')}
           </li>
+          */}
           <li onClick={() => scrollToID('section-examples')}>
             {t('header.examples')}
+          </li>
+          <li onClick={() => scrollToID('section-about')}>
+            {t('header.aboutUs')}
           </li>
           <li onClick={() => scrollToID('section-contact')}>
             {t('header.contact')}
