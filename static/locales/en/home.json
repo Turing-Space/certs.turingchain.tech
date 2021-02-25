@@ -29,22 +29,13 @@
     },
     "mobileSubTitle": "Your Blockchain-based Resume for One-click Verify.",
     "quote": "“We are the sum total of our experiences.”",
-    "descriptionP1": {
-      "cn": "也許你也有寫日記的習慣，用紙筆記載日月的點滴。可意外的，一個時間點後，我們卻容易將故事忘記，而世界也這麼將我們忘記。",
-      "en": "You may have the habit of keeping a diary, taking down your daily exquisite dribs and drabs by pencils and paper. Nevertheless, things don’t turn out the way we wish as our stories are forgotten easily, and the world thus forgets us."
-    },
-    "descriptionP2": {
-      "cn": "我深深相信每個人的一生都值得被記載，因此圖靈證書致力建構一個從幼童始至大學畢業再至工作求職的歷程，由無紙回饋自然，由電子簽章追尋真實，由數位身份保守個資，最後由圖靈的志向讓每個人過往成就的數據，都能被分析萃取建模，擬定最適合的未來藍圖。",
-      "en": "Still, we firmly believe our every footstep counts - since all are worth recording. This is why Turing Certs has been dedicating to setting up a career portfolio from your 1st-grade to your graduation, even from your 1st occupation through your ultimate success. Seeking authenticity by e-signature, protecting our Mother Nature by going paperless, and guarding your personal data by digital identification are our missions. Seeking authenticity by e-signature, protecting our Mother Nature by going paperless, and guarding your personal data by digital identification are our missions."
-    },
-    "descriptionP3": {
-      "cn": "在 21 世紀進入第一季的尾聲，圖靈證書以每個人為軸，連結虛擬與現實所有離散的資料與身份，將一個人的形狀由他的經歷，鉅細靡遺的勾勒出來。",
-      "en": "The 1st-quarter of the 21st-century is coming to an end, and Turing Certs still centers around every individual. Connecting every piece of virtual and real-world you together, we outline and shape people in detail by what they have gone through."
-    },
-    "descriptionP4": {
-      "cn": "你也是你經歷的總和，而圖靈證書將擔任你的日記本。",
-      "en": "“You are also the sum total of your experiences.” Turing Certs will be your best e-experience."
-    }
+    "descriptionP1": "You may have the habit of keeping a diary, taking down your daily exquisite dribs and drabs by pencils and paper. Nevertheless, things don’t turn out the way we wish as our stories are forgotten easily, and the world thus forgets us.",
+    "descriptionP2": "Still, we firmly believe our every footstep counts - since all are worth recording. This is why Turing Certs has been dedicating to setting up a career portfolio from your 1st-grade to your graduation, even from your 1st occupation through your ultimate success. Seeking authenticity by e-signature, protecting our Mother Nature by going paperless, and guarding your personal data by digital identification are our missions. Seeking authenticity by e-signature, protecting our Mother Nature by going paperless, and guarding your personal data by digital identification are our missions.",
+    "descriptionP3": "The 1st-quarter of the 21st-century is coming to an end, and Turing Certs still centers around every individual. Connecting every piece of virtual and real-world you together, we outline and shape people in detail by what they have gone through.",
+    "descriptionP4": "“You are also the sum total of your experiences.” Turing Certs will be your best e-experience."
+  },
+  "aboutUs": {
+    "title": "About Us"
   },
   "characteristic": {
     "issue": "Start Issuing",
