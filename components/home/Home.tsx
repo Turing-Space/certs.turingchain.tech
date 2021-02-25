@@ -40,6 +40,19 @@ const Bg = styled.img`
   width: 100%;
 `;
 
+const Icon = styled.img`
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+  width: 15%;
+`;
+
+const Divider = styled.div`
+  width: 68%;
+  height: 1px;
+  background-color: ${p => p.theme.colors.backgroundJoinLightGold};
+`;
+
 const TitleWrapper = styled(ScrollAnimation)`
   display: none;
   width: 80%;
@@ -71,6 +84,10 @@ const Home: FC<{ id: string }> = ({ id }) => {
         srcSet={`${getRelativePath(
           '/static/bg/bg@2x.png',
         )} 2x, ${getRelativePath('/static/bg/bg@3x.png')} 3x`}
+      />
+      <Icon
+        src={getRelativePath('/static/icon/Path 24.png')}
+        srcSet={`${getRelativePath('/static/icon/Path 24@2x.png')} 2x`}
       />
       <ScrollAnimation animateIn="fadeInUp">
         <Logo src={require('../../static/logo/logo-new.svg')} />

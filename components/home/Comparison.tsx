@@ -60,12 +60,14 @@ const ButtonGroupWrapper = styled.div`
   }
 `;
 
-const StyledButton = styled(Button)`
+const StyledButton = styled(Button)<{ open: boolean }>`
   margin: 5% 0 8%;
   display: flex;
 
-  color: ${p => p.theme.colors.backgroundJoinDarkGold};
-  background: ${p => p.theme.colors.white};
+  color: ${p =>
+    p.open ? p.theme.colors.white : p.theme.colors.backgroundJoinDarkGold};
+  background: ${p =>
+    p.open ? p.theme.colors.backgroundJoinDarkGold : p.theme.colors.white};
 
   opacity: 1;
 
@@ -118,7 +120,7 @@ const InfoWrapper = styled.div`
 `;
 
 const Comparison: FC<{ id: string }> = ({ id }) => {
-  const [open1, setOpen1] = useState<boolean>(false);
+  const [open1, setOpen1] = useState<boolean>(true);
   const [open2, setOpen2] = useState<boolean>(false);
   const [open3, setOpen3] = useState<boolean>(false);
   const { t } = useTranslation(i18nNamespace.Home);
@@ -138,24 +140,27 @@ const Comparison: FC<{ id: string }> = ({ id }) => {
         <ButtonGroupWrapper>
           <StyledButton
             onClick={() => {
-              setOpen1(p => !p), setOpen2(false), setOpen3(false);
+              setOpen1(true), setOpen2(false), setOpen3(false);
             }}
+            open={open1}
           >
             {t('comparison.subtitle1')}
           </StyledButton>
 
           <StyledButton
             onClick={() => {
-              setOpen2(p => !p), setOpen1(false), setOpen3(false);
+              setOpen2(true), setOpen1(false), setOpen3(false);
             }}
+            open={open2}
           >
             {t('comparison.subtitle2')}
           </StyledButton>
 
           <StyledButton
             onClick={() => {
-              setOpen3(p => !p), setOpen1(false), setOpen2(false);
+              setOpen3(true), setOpen1(false), setOpen2(false);
             }}
+            open={open3}
           >
             {t('comparison.subtitle3')}
           </StyledButton>

@@ -7,6 +7,7 @@
     "technology": "技術架構",
     "comparison": "傳統/數位",
     "awards": "獲獎經歷",
+    "news": "新聞快訊",
     "collaborations": "數位學習履歷夥伴",
     "backedBy": "培育致謝",
     "examples": "案例展示",
@@ -30,22 +31,13 @@
     },
     "mobileSubTitle": "一鍵驗證你的區塊鏈履歷與證書",
     "quote": "「我們都是自己經歷的總和。」",
-    "descriptionP1": {
-      "cn": "也許你也有寫日記的習慣，用紙筆記載日月的點滴。可意外的，一個時間點後，我們卻容易將故事忘記，而世界也這麼將我們忘記。",
-      "en": "Turing Chain is an award-winning, agile, and international team. We developed blockchains for New York news media, Taiwanese movie production, and Russia & Macao-based casinos."
-    },
-    "descriptionP2": {
-      "cn": "我深深相信每個人的一生都值得被記載，因此圖靈證書致力建構一個從幼童始至大學畢業再至工作求職的歷程，由無紙回饋自然，由電子簽章追尋真實，由數位身份保守個資，最後由圖靈的志向讓每個人過往成就的數據，都能被分析萃取建模，擬定最適合的未來藍圖。",
-      "en": "Turing Chain is an award-winning, agile, and international team. We developed blockchains for New York news media, Taiwanese movie production, and Russia & Macao-based casinos."
-    },
-    "descriptionP3": {
-      "cn": "在 21 世紀進入第一季的尾聲，圖靈證書以每個人為軸，連結虛擬與現實所有離散的資料與身份，將一個人的形狀由他的經歷，鉅細靡遺的勾勒出來。",
-      "en": "Turing Chain is an award-winning, agile, and international team. We developed blockchains for New York news media, Taiwanese movie production, and Russia & Macao-based casinos."
-    },
-    "descriptionP4": {
-      "cn": "你也是你經歷的總和，而圖靈證書將擔任你的日記本。",
-      "en": "Turing Chain is an award-winning, agile, and international team. We developed blockchains for New York news media, Taiwanese movie production, and Russia & Macao-based casinos."
-    }
+    "descriptionP1": "也許你也有寫日記的習慣，用紙筆記載日月的點滴。可意外的，一個時間點後，我們卻容易將故事忘記，而世界也這麼將我們忘記。",
+    "descriptionP2": "我深深相信每個人的一生都值得被記載，因此圖靈證書致力建構一個從幼童始至大學畢業再至工作求職的歷程，由無紙回饋自然，由電子簽章追尋真實，由數位身份保守個資，最後由圖靈的志向讓每個人過往成就的數據，都能被分析萃取建模，擬定最適合的未來藍圖。",
+    "descriptionP3": "在 21 世紀進入第一季的尾聲，圖靈證書以每個人為軸，連結虛擬與現實所有離散的資料與身份，將一個人的形狀由他的經歷，鉅細靡遺的勾勒出來。",
+    "descriptionP4": "你也是你經歷的總和，而圖靈證書將擔任你的日記本。"
+  },
+  "aboutUs": {
+    "title": "關於我們"
   },
   "characteristic": {
     "issue": "馬上發證",
@@ -53,9 +45,14 @@
     "title": "區塊鏈成就履歷",
     "description": "透過區塊鏈不可篡改、可追溯、成本節省、跨國界的優勢，重新定義傳統教育認證，創造穩定永續的學習旅程追蹤，保證用戶絕對資料掌控權與隱私優先策略，強化官方權威證書的最高信任與真實價值。",
     "icons": {
-      "0": "個人學習成就歷程追溯",
-      "1": "W3C DID 去中心身份協定",
-      "2": "GDPR 最高隱私保留演算法"
+      "0": "防止偽造",
+      "1": "快速查驗",
+      "2": "永久保存"
+    },
+    "subdescriptions": {
+      "0": "使用不可篡改、安全，以及可信任的區塊鏈技術，確保每一份證書100%真實性。",
+      "1": "學生可透過分享連結，讓人資單位隨時隨地一鍵驗證真偽，使人才篩選更便利、快捷。",
+      "2": "讓學生的學習歷程被妥善保存，並省去紙本作業的不便，更減少資料保存之人力成本。"
     }
   },
   "service": {
@@ -128,7 +125,7 @@
     }
   },
   "comparison": {
-    "title": "Turing Certs",
+    "title": "圖靈證書",
     "description1": "逾30所大專院校、教育機構採用圖靈證書發證",
     "description2": "累計發出超過3,000張證書",
     "description3": "促使3,000位學生擁有國際防偽數位歷程",
@@ -156,7 +153,7 @@
     }
   },
   "awards": {
-    "title": "Awards",
+    "title": "獲獎經歷",
     "subs": {
       "0": {
         "content": "2020 微軟創夢盃 Microsoft Imagine Cup 國際賽 美洲組第三名"
