@@ -8,6 +8,7 @@
     "comparison": "Comparison",
     "awards": "Awards",
     "news": "News",
+    "process": "Process",
     "collaborations": "Friends",
     "backedBy": "Backed By",
     "examples": "Showcases",
@@ -174,6 +175,21 @@
       "5": {
         "content": "Google SingularityU APAC Global Impact Challenge 2019 全球前四強"
       }
+    }
+  },
+  "process": {
+    "title": "Issuance Process",
+    "description": {
+      "1": "Create Certificate Template",
+      "2": "Enter Receipient Information",
+      "3": "Certificate on Blockchain",
+      "4": "Issuance Completed"
+    },
+    "subdescription": {
+      "1": "Import Background Image and Information Filed",
+      "2": "Upload CSV File",
+      "3": "Issuing",
+      "4": "Send to Recepient Email Automatically"
     }
   },
   "news": {
