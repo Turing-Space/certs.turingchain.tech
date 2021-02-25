@@ -32,7 +32,7 @@ const IconGroupWrapper = styled.div`
   width: 80%;
   margin: 7.5em 0;
   ${media('pad')} {
-    justify-content: space-between;
+    justify-content: center;
   }
 
   ${media('desktop')} {
@@ -45,12 +45,14 @@ const IconWrapper = styled(ScrollAnimation)`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
   margin-bottom: 10em;
   ${media('pad')} {
     width: 50%;
   }
   ${media('desktop')} {
-    width: 12%;
+    width: 20%;
   }
 `;
 
@@ -96,24 +98,9 @@ const Process: FC<{ id: string }> = ({ id }) => {
   const { t, i18n } = useTranslation(i18nNamespace.Home);
   const isEn = i18n.language === 'en';
   return (
-    <Section justifyContent="flex-start" id={id} fullscreen>
-      {/*
-      <ButtonWrapper>
-        <Button onClick={() => window.open('http://bit.ly/turingcerts-issuer')}>
-          {t('service.issue')}
-        </Button>
-        <Button
-          onClick={() => window.open('http://bit.ly/turingcerts-verifier')}
-        >
-          {t('service.verify')}
-        </Button>
-      </ButtonWrapper>
-      */}
+    <Section justifyContent="center" id={id} fullscreen>
       <AnimatedWrapper animateIn="fadeInUp" animateOnce>
         <Title>{t('process.title')}</Title>
-        {/*}
-        <StyledDescription>{t('characteristic.description')}</StyledDescription>
-    {*/}
       </AnimatedWrapper>
       <IconGroupWrapper>
         <IconWrapper animateIn="zoomIn" duration={0.5} animateOnce>

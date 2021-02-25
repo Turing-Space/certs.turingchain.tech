@@ -1,9 +1,6 @@
 import React, { FC, Component, useState } from 'react';
 import styled from 'styled-components';
-import { Transition } from 'react-transition-group';
 import ScrollAnimation from 'react-animate-on-scroll';
-import Section from '@/components/Section';
-import H2 from '@/components/H2';
 //import ScrollInfo from '@/components/ScrollInfo';
 import Description from '@/components/Description';
 import { getRelativePath } from '@/utils';
@@ -18,23 +15,33 @@ type NewsData = {
 
 const CardSlider = styled.div`
   position: relative;
+  height: 60vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const CardSliderWrapper = styled.div`
   position: absolute;
   transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  overflow-x: hidden;
+  overflow-x: visible;
   overflow-y: hidden;
   display: flex;
+  height: 60vh;
+  left: 50%;
+  align-items: center;
+  justify-content: center;
 `;
 
+const cardProp = {
+  width: 300,
+  height: 200,
+};
+
 const Card = styled.div`
-  width: 300px;
-  height: 200px;
-  object-fit: contain;
-  border: 10px;
-  border-color: black;
-  background-color: white;
+  width: ${cardProp.width}px;
+  height: ${cardProp.height}px;
   transition: transform 300ms linear;
 `;
 
@@ -45,7 +52,7 @@ const NewsImage = styled.img`
   object-fit: contain;
 `;
 
-const Cards: NewsData[] = [
+const cards: NewsData[] = [
   {
     source: getRelativePath('/static/certificate/Examples_Certificate1.png'),
     link: 'https://www.youtube.com/?gl=TW&hl=zh-TW',
@@ -72,19 +79,16 @@ const Cards: NewsData[] = [
   },
 ];
 
-const Carousel: React.FC<{ newsNumber: number }> = ({ newsNumber }) => {
+const Carousel: FC<{ newsNumber: number }> = ({ newsNumber }) => {
   const [index, setIndex] = useState(0);
-  const [isMoving, setIsMoving] = useState(false);
   function previousNews() {
     if (index > 0) {
       setIndex(prevIndex => prevIndex - 1);
-      setIsMoving(true);
     }
   }
   function nextNews() {
     if (index < newsNumber - 1) {
       setIndex(prevIndex => prevIndex + 1);
-      setIsMoving(true);
     }
   }
 
@@ -106,23 +110,41 @@ const Carousel: React.FC<{ newsNumber: number }> = ({ newsNumber }) => {
       </button>
       <CardSlider>
         <CardSliderWrapper
-          style={{ transform: `translateX(-${(index * 100) / newsNumber}%)` }}
+          style={{
+            transform: `translateX(${-((index + 1.5) * 100) /
+              (newsNumber + 2)}%)`,
+            width: `${cardProp.width * (newsNumber + 2)}px`,
+          }}
         >
-          {Cards.map((property, idx) => {
-            let ratio = 0.7;
+          {cards.map((property, idx) => {
+            let ratio = 1.2;
+            let zIndex = 0;
             if (idx === index) {
-              ratio = 1;
+              ratio = 2;
+              zIndex = 1;
             }
-            return (
-              <Card
-                className={`news-card-${idx}`}
-                style={{ transform: `scale(${ratio})` }}
-              >
-                <a href={property.link} target="_blank">
-                  <NewsImage src={property.source} />
-                </a>
-              </Card>
-            );
+            if (idx === index - 1 || idx === index || idx === index + 1) {
+              return (
+                <Card
+                  className={`news-card-${idx}`}
+                  style={{
+                    transform: `scale(${ratio})`,
+                    zIndex: zIndex,
+                  }}
+                >
+                  <a href={property.link} target="_blank">
+                    <NewsImage src={property.source} />
+                  </a>
+                </Card>
+              );
+            } else {
+              return (
+                <Card
+                  className={`news-card-${idx}`}
+                  style={{ transform: `scale(${ratio})` }}
+                ></Card>
+              );
+            }
           })}
         </CardSliderWrapper>
       </CardSlider>

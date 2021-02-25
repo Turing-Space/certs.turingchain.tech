@@ -179,22 +179,17 @@
   },
   "process": {
     "title": "發證流程",
-
-    "1": {
-      "description": "製作證書模板",
-      "subdescription": "匯入底圖與欄位"
+    "description": {
+      "1": "製作證書模板",
+      "2": "匯入收證者名單",
+      "3": "證書上鏈",
+      "4": "發證完成"
     },
-    "2": {
-      "description": "匯入收證者名單",
-      "subdescription": "上傳CSV檔案"
-    },
-    "3": {
-      "description": "證書上鏈",
-      "subdescription": "發證中"
-    },
-    "4": {
-      "description": "發證完成",
-      "subdescription": "可自動寄至收件者信箱"
+    "subdescription": {
+      "1": "匯入底圖與欄位",
+      "2": "上傳CSV檔案",
+      "3": "發證中",
+      "4": "可自動寄至收件者信箱"
     }
   },
   "demo": {
