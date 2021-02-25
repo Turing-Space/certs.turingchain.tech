@@ -123,7 +123,7 @@
     }
   },
   "comparison": {
-    "title": "Turing Certs",
+    "title": "圖靈證書",
     "description1": "逾30所大專院校、教育機構採用圖靈證書發證",
     "description2": "累計發出超過3,000張證書",
     "description3": "促使3,000位學生擁有國際防偽數位歷程",
@@ -151,7 +151,7 @@
     }
   },
   "awards": {
-    "title": "Awards",
+    "title": "獲獎經歷",
     "subs": {
       "0": {
         "content": "2020 微軟創夢盃 Microsoft Imagine Cup 國際賽 美洲組第三名"
