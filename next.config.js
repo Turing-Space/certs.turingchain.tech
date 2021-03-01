@@ -57,6 +57,14 @@ module.exports = withBundleAnalyzer(
               page: '/auth/login',
               query: { lng: defaultLng, mode: '' },
             },
+            '/security': {
+              page: '/security',
+              query: { lng: defaultLng, mode: '' },
+            },
+            '/privacy': {
+              page: '/privacy',
+              query: { lng: defaultLng, mode: '' },
+            },
           };
 
           return process.env.NODE_ENV === 'development'
