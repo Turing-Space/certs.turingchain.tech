@@ -139,11 +139,7 @@ const Login: FC = () => {
       });
       if (!user) {
         notify.error({ msg: err || t('auth.error.noAcc') });
-      }
-      // else if (mode === 'issuer' && !user.isIssuer) {
-      //   notify.error({ msg: '此帳號並不是發證機關帳號，請確認使用帳號' });
-      // }
-      else {
+      } else {
         updateUser({
           ...preparedUser(user),
         });
@@ -160,7 +156,6 @@ const Login: FC = () => {
   const onKeyDown = useCallback(
     (e: KeyboardEvent<HTMLInputElement>) => {
       switch (e.keyCode) {
-        // press enter
         case 13: {
           onLogin();
           break;
