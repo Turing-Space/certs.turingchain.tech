@@ -2,7 +2,6 @@
   "alertText": "In Private Beta Now. Coming soon!",
   "start": "Join",
   "header": {
-    "service": "Service",
     "characteristic": "Characteristic",
     "technology": "Technology",
     "comparison": "Comparison",
@@ -48,18 +47,6 @@
       "0": "Adopted incorruptible, secure, and trustworthy blockchain technology to ensure 100% authenticity for every certificate.",
       "1": "HR departments can verify authenticity anytime at anywhere via links shared by students to make personnel screening more convenient and time saving.",
       "2": "Let students' learning portfolio be saved properly, and omit the incovenience for doing paper work, additionally, reduce the human cost for preserving data."
-    }
-  },
-
-  "service": {
-    "issue": "Start Issuing",
-    "verify": "Apply for Verify",
-    "title": "Certified Blockchain Achievement Resume",
-    "description": "By leveraging the incorruptible, traceable, cost-effective, and borderless characteristics of blockchain technology, TuringCerts is capable of redefining traditional educational certificates and eventually enabling unified and sustainable records tracking for educational industry. TuringCerts not only ensures full data coverage, control, and maintenance for users, but also promises a rigorous privacy policy and upholds highest trust of source as well as the dignity of authorized certificates.",
-    "icons": {
-      "0": "Personal Milestone Book-keeping",
-      "1": "W3C DID Protocol",
-      "2": "GDPR Principle of Least Privilege"
     }
   },
   "technology": {
