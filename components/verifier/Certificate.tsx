@@ -7,7 +7,6 @@ import PDFViewer from 'mgr-pdf-viewer-react';
 import { getRelativePath } from '@/utils';
 
 const logoIcon = '/static/icon/logo-product-normal.svg';
-// const shareIcon = '/static/icon/icon-share-grey.svg';
 
 const Root = styled.div`
   display: inline-block;
@@ -66,9 +65,6 @@ const Certificate: FC<TProps> = props => {
           <a href={'http://certs.turingchain.tech'}>
             <Title>TuringCerts</Title>
           </a>
-          {/* <a href={'https://ipfs.certs.turingchain.tech/ipfs/' + props.ipfs} target="_blank" rel="noopener noreferrer">
-                        <img src={getRelativePath(shareIcon)} alt="" style={{ paddingLeft: '1000px' }} />
-                    </a> */}
         </TitleInfo>
       </TitleBar>
       {PDFF(props)}
