@@ -10,7 +10,6 @@
     "news": "新聞快訊",
     "process": "使用流程",
     "collaborations": "數位學習履歷夥伴",
-    "backedBy": "培育致謝",
     "examples": "案例展示",
     "aboutUs": "關於我們",
     "contact": "合作洽談",
@@ -204,11 +203,6 @@
   },
   "collaborations": {
     "title": "數位學習履歷夥伴"
-  },
-  "backedBy": {
-    "title": "培育致謝",
-    "issue": "馬上發證",
-    "verify": "申請驗證"
   },
   "examples": {
     "hidden": "隱藏",

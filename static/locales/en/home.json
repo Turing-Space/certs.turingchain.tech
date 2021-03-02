@@ -10,7 +10,6 @@
     "news": "News",
     "process": "Process",
     "collaborations": "Friends",
-    "backedBy": "Backed By",
     "examples": "Showcases",
     "aboutUs": "About Us",
     "contact": "Contact",
@@ -205,11 +204,6 @@
   },
   "collaborations": {
     "title": "Friends in ePortfolio Alliance"
-  },
-  "backedBy": {
-    "title": "Backed By",
-    "issue": "Start Issuing",
-    "verify": "Apply for Verify"
   },
   "examples": {
     "hidden": "Hidden ",
