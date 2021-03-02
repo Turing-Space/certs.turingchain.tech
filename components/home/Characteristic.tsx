@@ -1,30 +1,13 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
-import Button from '@/components/Button';
 import Section from '@/components/Section';
 import H2 from '@/components/H2';
-//import ScrollInfo from '@/components/ScrollInfo';
 import Description from '@/components/Description';
 import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
 import { i18nNamespace } from '@/constants';
 import { useTranslation } from 'react-i18next';
-
-const ButtonWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 80%;
-  margin: 7.5em 0 0 0;
-  ${media('pad')} {
-    justify-content: space-between;
-  }
-
-  ${media('desktop')} {
-    width: 35%;
-  }
-`;
 
 const AnimatedWrapper = styled(ScrollAnimation)`
   width: 100%;
@@ -119,27 +102,12 @@ const Characteristic: FC<{ id: string }> = ({ id }) => {
   const isEn = i18n.language === 'en';
   return (
     <Section justifyContent="flex-start" id={id} fullscreen>
-      {/*
-      <ButtonWrapper>
-        <Button onClick={() => window.open('http://bit.ly/turingcerts-issuer')}>
-          {t('service.issue')}
-        </Button>
-        <Button
-          onClick={() => window.open('http://bit.ly/turingcerts-verifier')}
-        >
-          {t('service.verify')}
-        </Button>
-      </ButtonWrapper>
-      */}
       <Bookmark
         src={getRelativePath('/static/icon/bookmark.png')}
         srcSet={`${getRelativePath('/static/icon/bookmark@2x.png')} 2x`}
       />
       <AnimatedWrapper animateIn="fadeInUp" animateOnce>
         <Title>{t('characteristic.title')}</Title>
-        {/*}
-        <StyledDescription>{t('characteristic.description')}</StyledDescription>
-    {*/}
       </AnimatedWrapper>
       <IconGroupWrapper>
         <IconWrapper animateIn="zoomIn" duration={0.5} animateOnce>
@@ -185,9 +153,6 @@ const Characteristic: FC<{ id: string }> = ({ id }) => {
           </IconSubDescription>
         </IconWrapper>
       </IconGroupWrapper>
-      {/*}
-      <ScrollInfo />
-              {*/}
     </Section>
   );
 };
