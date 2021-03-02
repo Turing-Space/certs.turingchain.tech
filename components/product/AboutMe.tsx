@@ -27,13 +27,13 @@ const IconWrapper = styled.div`
   flex-direction: column;
   width: 8.2em;
   height: 8.2em;
-  
+
   > p {
     letter-spacing: 0.67px;
   }
   ${media('phone')} {
     font-size: 1em;
-    float: right
+    float: right;
   }
 
   ${media('desktop')} {
@@ -46,10 +46,10 @@ const AnimatedNumber = styled(animated.p)`
   margin-top: 3px;
   font-weight: bold;
   font-family: ${p => p.theme.fontFamily.SFText};
-  
+
   ${media('phone')} {
     font-size: 2em;
-    float: right
+    float: right;
   }
 
   ${media('desktop')} {
@@ -60,7 +60,6 @@ const AnimatedNumber = styled(animated.p)`
 const AboutMe = () => {
   const { certs } = useContext(CertsContext);
   const certificatedCount = certs.filter(d => !!d.verified).length;
-  // const certificatingCount = certs.length - certificatedCount;
   const { t } = useTranslation(i18nNamespace.Product);
 
   const certsProps = useSpring({
@@ -71,11 +70,6 @@ const AboutMe = () => {
     number: certificatedCount,
     from: { number: 0 },
   });
-  // const certificatingProps = useSpring({
-  //   number: certificatingCount,
-  //   from: { number: 0 },
-  // });
-
   const icons = [
     {
       name: t('AboutMe.icon1'),
@@ -86,13 +80,7 @@ const AboutMe = () => {
       name: t('AboutMe.icon2'),
       count: certificatedCount,
       props: certificatedProps,
-    }
-    // ,
-    // {
-    //   name: t('AboutMe.icon3'),
-    //   count: certificatingCount,
-    //   props: certificatingProps,
-    // },
+    },
   ];
   return (
     <AboutMeWrapperExtend title={t('AboutMe.title')}>
@@ -107,6 +95,5 @@ const AboutMe = () => {
     </AboutMeWrapperExtend>
   );
 };
-
 
 export default AboutMe;
