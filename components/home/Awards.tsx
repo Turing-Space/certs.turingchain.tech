@@ -4,12 +4,10 @@ import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Section from '@/components/Section';
 import H2 from '@/components/H2';
-import H3 from '@/components/H3';
 import { media } from '@/utils/theme';
 import Description from '@/components/Description';
 import { getRelativePath } from '@/utils';
 import { i18nNamespace } from '@/constants';
-//import ScrollInfo from '../ScrollInfo';
 
 const Title = styled(H2)`
   margin: 0 auto 0;
@@ -19,16 +17,6 @@ const Title = styled(H2)`
   ${media('largeDesktop')} {
     max-width: 55vw;
     margin: 20vh auto 0;
-  }
-`;
-
-const Wrapper = styled.div`
-  position: relative;
-  margin-top: 3%;
-  width: 75%;
-
-  ${media('desktop')} {
-    width: 50%;
   }
 `;
 
@@ -72,9 +60,7 @@ const Awards: FC<{ id: string }> = ({ id }) => {
         <Title>{t('awards.title')}</Title>
         <IPFSIcon
           src={getRelativePath('/static/bg/circle.svg')}
-          srcSet={`${getRelativePath(
-            '/static/bg/circle@2x.svg',
-          )} 2x, ${getRelativePath('/static/bg/circle@3x.svg')} 3x`}
+          srcSet={`${getRelativePath('/static/bg/circle@2x.svg')} 2x`}
         />
       </ScrollAnimation>
       <AnimatedWrapper animateOnce animateIn="fadeInUp" delay={300} offset={0}>
@@ -101,10 +87,6 @@ const Awards: FC<{ id: string }> = ({ id }) => {
         <Divider />
         <Content>{t('awards.subs.5.content')}</Content>
       </AnimatedWrapper>
-
-      {/*}
-      <ScrollInfo />
-    {*/}
     </Section>
   );
 };
