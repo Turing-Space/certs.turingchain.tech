@@ -9,7 +9,6 @@
     "awards": "獲獎經歷",
     "news": "新聞快訊",
     "process": "使用流程",
-    "collaborations": "數位學習履歷夥伴",
     "examples": "案例展示",
     "aboutUs": "關於我們",
     "contact": "合作洽談",
@@ -197,9 +196,6 @@
     "video": {
       "title": "產品演示"
     }
-  },
-  "collaborations": {
-    "title": "數位學習履歷夥伴"
   },
   "examples": {
     "hidden": "隱藏",

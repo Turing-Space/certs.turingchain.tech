@@ -9,7 +9,6 @@
     "awards": "Awards",
     "news": "News",
     "process": "Process",
-    "collaborations": "Friends",
     "examples": "Showcases",
     "aboutUs": "About Us",
     "contact": "Contact",
@@ -198,9 +197,6 @@
     "video": {
       "title": "Product"
     }
-  },
-  "collaborations": {
-    "title": "Friends in ePortfolio Alliance"
   },
   "examples": {
     "hidden": "Hidden ",
