@@ -7,7 +7,6 @@ import { faCopy } from '@fortawesome/free-regular-svg-icons';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const certicheckDoneIcon = '/static/icon/icon-certicheck.svg';
-// const hideIcon = '/static/icon/icon-hide.svg';
 
 const Root = styled.div`
   width: 480px;
@@ -145,10 +144,7 @@ const Proof: FC<TProps> = props => {
         <TitleBox>
           <Title>CERTIFICATION</Title>
         </TitleBox>
-        <Hide>
-          {/* <span>收起</span>
-        <img src={getRelativePath(hideIcon)} alt="" /> */}
-        </Hide>
+        <Hide></Hide>
         <Status>
           <Rectangle />
           <img src={getRelativePath(certicheckDoneIcon)} alt="" />
