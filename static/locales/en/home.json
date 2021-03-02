@@ -7,7 +7,6 @@
     "technology": "Technology",
     "comparison": "Comparison",
     "awards": "Awards",
-    "news": "News",
     "process": "Process",
     "examples": "Showcases",
     "aboutUs": "About Us",
@@ -186,9 +185,6 @@
       "3": "Issuing",
       "4": "Send to Recepient Email Automatically"
     }
-  },
-  "news": {
-    "title": "News"
   },
   "demo": {
     "title": "The New Era of Resumes!",
