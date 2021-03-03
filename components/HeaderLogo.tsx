@@ -1,10 +1,6 @@
 import { FC } from 'react';
 import styled from 'styled-components';
-
-import { scrollToID } from '@/utils';
 import { media } from '@/utils/theme';
-import { Router } from '@/i18n';
-
 import RedLogo from '@/static/logo/logo-new.svg';
 import PrimaryWhiteLogo from '@/static/logo/logo-new-white.svg';
 
@@ -46,11 +42,7 @@ const HeaderLogo: FC<{ mode?: 'primary' | 'dark'; onClick: () => void }> = ({
   return (
     <LogoWrapper onClick={onClick}>
       <Logo src={modeSrcMap[mode] as any} />
-      <p className="en">
-        {/* <a href={'http://certs.turingchain.tech'}> */}
-        TuringCerts
-        {/* </a> */}
-      </p>
+      <p className="en">TuringCerts</p>
     </LogoWrapper>
   );
 };
