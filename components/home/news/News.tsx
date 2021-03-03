@@ -26,7 +26,7 @@ const News: FC<{ id: string }> = ({ id }) => {
   return (
     <SectionGrey justifyContent="center" id={id} fullscreen>
       <Title>{t('news.title')}</Title>
-      <Carousel newsNumber={6} />
+      <Carousel newsNumber={4} />
     </SectionGrey>
   );
 };

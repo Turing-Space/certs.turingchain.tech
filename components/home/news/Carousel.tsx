@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next';
 type NewsData = {
   source: string;
   link: string;
+  text: string;
 };
 
 const CardSlider = styled.div`
@@ -55,27 +56,28 @@ const NewsImage = styled.img`
 const cards: NewsData[] = [
   {
     source: getRelativePath('/static/certificate/Examples_Certificate1.png'),
-    link: 'https://www.youtube.com/?gl=TW&hl=zh-TW',
+    link: 'https://meet.bnext.com.tw/articles/view/46687',
+    text:
+      '大學四年都在連續創業！24歲胡耀傑打造圖靈鏈走上區塊鏈應用的冒險之路｜Meet 創業小聚 20200728',
   },
   {
     source: getRelativePath('/static/certificate/Examples_Certificate2.png'),
-    link: 'https://www.google.com/?hl=zh_tw',
+    link: 'https://www.bnext.com.tw/article/60313/fiti0',
+    text:
+      '創新創業激勵計畫FITI引路 點亮學研團隊的創業路｜數位時代 Meet Taipei 20201203',
   },
   {
     source: getRelativePath('/static/certificate/Examples_Certificate3.png'),
-    link: 'https://www.google.com/?hl=zh_tw',
+    link:
+      'https://blockcast.it/2020/11/25/iii-digital-education-badi-ai-fintech-asso-and-turing-chain-join-force-to-form-taiwan-e-portfolio-alliance/',
+    text:
+      '資策會攜圖靈鏈、全國商業總會及 AI 金融科技協會共組「臺灣學習履歷聯盟」藉防偽認證技術推廣區塊鏈證書｜區塊客 20201125',
   },
   {
     source: getRelativePath('/static/certificate/Examples_Certificate4.png'),
-    link: 'https://www.google.com/?hl=zh_tw',
-  },
-  {
-    source: getRelativePath('/static/certificate/Examples_Certificate5.png'),
-    link: 'https://www.google.com/?hl=zh_tw',
-  },
-  {
-    source: getRelativePath('/static/certificate/Examples_Certificate6.png'),
-    link: 'https://www.google.com/?hl=zh_tw',
+    link: 'https://becomingaces.com/article/161',
+    text:
+      '19世紀發明電話、20世紀造飛機、那21世紀呢？圖靈證書發明者胡耀傑：用科技打造更好的未來社會！｜未來大人物 20201229',
   },
 ];
 
