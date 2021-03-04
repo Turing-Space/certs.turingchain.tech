@@ -71,7 +71,7 @@ const Text = styled.div`
 `;
 
 const Card = styled.div`
-  width: ${cardProp.width} ${cardProp.widthUnit};
+  width: ${cardProp.width.toString() + cardProp.widthUnit};
   height: fit-content;
   transition: transform 300ms linear;
   overflow: hidden;
@@ -86,7 +86,6 @@ const Card = styled.div`
 
 const NewsImage = styled.img`
   width: 100%;
-  height: 200%;
 `;
 
 const cards: NewsData[] = [
