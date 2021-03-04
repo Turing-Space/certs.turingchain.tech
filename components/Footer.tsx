@@ -10,7 +10,7 @@ import { Router } from '@/i18n';
 
 const Wrapper = styled.footer`
   position: relative;
-  height: 70vh;
+  height: 50vh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -29,8 +29,12 @@ const Bg = styled.div`
 
 const InfoWrapper = styled.div`
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 80%;
-  height: 60%;
+  height: 80%;
 
   ${media('tablet')} {
     width: 62.5%;
@@ -40,6 +44,7 @@ const InfoWrapper = styled.div`
 const Title = styled(H2)`
   margin-bottom: 1em;
   text-align: center;
+  color: ${p => p.theme.colors.white};
   ${media('tablet')} {
     text-align: left;
   }
@@ -91,18 +96,30 @@ const CompanyWrapper = styled.div`
 const Divider = styled.div`
   width: 100%;
   height: 1px;
-  background-color: #d8d8d8;
-  opacity: 0.4;
+  background-color: ${p => p.theme.colors.white};
   margin: 5% 0;
 `;
 
-const Temp = styled.p`
+const StatementWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const StatementDevider = styled.div`
+  height: 100%;
+  width: 1px;
+  background-color: ${p => p.theme.colors.white};
+  margin: 0 1em;
+`;
+
+const TextLink = styled.p`
   cursor: pointer;
-  margin-bottom: 2%;
+  margin-top: 1%;
+  margin-bottom: 1%;
   font-size: 1em;
+  color: ${p => p.theme.colors.white};
 
   ${media('tablet')} {
-    margin-top: 0;
     font-size: ${p => p.theme.fontSize.smaller};
   }
 
@@ -112,11 +129,11 @@ const Temp = styled.p`
 `;
 
 const CopyRight = styled.p`
-  margin-top: 10%;
+  margin-top: 1%;
+  margin-bottom: 1%;
   font-size: 1em;
-
+  color: ${p => p.theme.colors.white};
   ${media('tablet')} {
-    margin-top: 0;
     font-size: ${p => p.theme.fontSize.smaller};
   }
 `;
@@ -136,12 +153,7 @@ const Footer: FC = () => {
         <Title>{t('footer.title')}</Title>
         <IconWrapper>
           <a href="mailto:apac@turingchain.tech?subject=[Collaboration]">
-            <img
-              src={getRelativePath('/static/icon/icon-mail.png')}
-              srcSet={`${getRelativePath(
-                '/static/icon/icon-mail@2x.png',
-              )} 2x, ${getRelativePath('/static/icon/icon-mail@3x.png')} 3x`}
-            />
+            <img src={getRelativePath('/static/icon/icon_mail.svg')} />
           </a>
           <a
             href="https://www.facebook.com/turingcerts"
@@ -150,12 +162,7 @@ const Footer: FC = () => {
               trackOutboundLink('https://www.facebook.com/turingcerts')
             }
           >
-            <img
-              src={getRelativePath('/static/icon/icon-fb.png')}
-              srcSet={`${getRelativePath(
-                '/static/icon/icon-fb@2x.png',
-              )} 2x, ${getRelativePath('/static/icon/icon-fb@3x.png')} 3x`}
-            />
+            <img src={getRelativePath('/static/icon/icon_fb.svg')} />
           </a>
           <a
             href="https://www.linkedin.com/company/turing-chain-limited/"
@@ -166,17 +173,10 @@ const Footer: FC = () => {
               )
             }
           >
-            <img
-              src={getRelativePath('/static/icon/icon-linkedin.png')}
-              srcSet={`${getRelativePath(
-                '/static/icon/icon-linkedin@2x.png',
-              )} 2x, ${getRelativePath(
-                '/static/icon/icon-linkedin@3x.png',
-              )} 3x`}
-            />
+            <img src={getRelativePath('/static/icon/icon_linkedin.svg')} />
           </a>
         </IconWrapper>
-        <CompanyWrapper>
+        {/*<CompanyWrapper>
           <img
             src={getRelativePath('/static/logo/logo-tc-light.png')}
             srcSet={`${getRelativePath(
@@ -184,15 +184,19 @@ const Footer: FC = () => {
             )} 2x, ${getRelativePath('/static/logo/logo-tc-light@3x.png')} 3x`}
           />
           <p>TURING CHAIN LIMITED</p>
-        </CompanyWrapper>
+            </CompanyWrapper>*/}
         <Divider />
-        <Temp onClick={() => onPageClick('/security')}>
-          {t('footer.security')}
-        </Temp>
-        <Temp onClick={() => onPageClick('/privacy')}>
-          {t('footer.privacy')}
-        </Temp>
-        <CopyRight>© Turing Chain Limited. All rights reserved</CopyRight>
+        <StatementWrapper>
+          <TextLink onClick={() => onPageClick('/security')}>
+            {t('footer.security')}
+          </TextLink>
+          <StatementDevider />
+          <TextLink onClick={() => onPageClick('/privacy')}>
+            {t('footer.privacy')}
+          </TextLink>
+          <StatementDevider />
+          <CopyRight>© Turing Chain Limited. All rights reserved</CopyRight>
+        </StatementWrapper>
       </InfoWrapper>
     </Wrapper>
   );

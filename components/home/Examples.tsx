@@ -19,6 +19,7 @@ type TData = {
 
 const Title = styled(H2)`
   margin-top: 14vh;
+  color: ${p => p.theme.colors.websiteCatelogWordGold};
 `;
 
 const Wrapper = styled.div`
@@ -196,7 +197,7 @@ const Examples: FC<{ id: string }> = ({ id }) => {
   const [photoIdx, setPhotoIdx] = useState<number>(0);
   const { t } = useTranslation(i18nNamespace.Home);
   return (
-    <SectionGrey id={id}>
+    <SectionGrey id={id} justifyContent="center" fullscreen>
       <ScrollAnimation
         animateIn="fadeInUp"
         animateOnce
