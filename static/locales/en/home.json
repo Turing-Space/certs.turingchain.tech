@@ -27,7 +27,6 @@
     },
     "mobileSubTitle": "Your Blockchain-based Resume for One-click Verify."
   },
-
   "aboutUs": {
     "title": "About Us",
     "quote": "“We are the sum total of our experiences.”",
@@ -36,7 +35,6 @@
     "descriptionP3": "The 1st-quarter of the 21st-century is coming to an end, and Turing Certs still centers around every individual. Connecting every piece of virtual and real-world you together, we outline and shape people in detail by what they have gone through.",
     "descriptionP4": "“You are also the sum total of your experiences.” Turing Certs will be your best e-experience."
   },
-
   "characteristic": {
     "title": "Product Characteristics",
     "icons": {
@@ -100,6 +98,9 @@
         "content": "Google SingularityU APAC Global Impact Challenge 2019 全球前四強"
       }
     }
+  },
+  "news": {
+    "title": "News"
   },
   "process": {
     "title": "Issuance Process",

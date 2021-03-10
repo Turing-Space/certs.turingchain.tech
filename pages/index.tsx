@@ -4,6 +4,7 @@ import Home from '@/components/home/Home';
 import Characteristic from '@/components/home/Characteristic';
 import Comparison from '@/components/home/Comparison';
 import Awards from '@/components/home/Awards';
+import News from '@/components/home/news/News';
 import Process from '@/components/home/Process';
 import Examples from '@/components/home/Examples';
 import AboutUs from '@/components/home/AboutUs';
@@ -13,7 +14,6 @@ const Index: NextFC = () => {
   return (
     <HomeLayout title={'TuringCerts | ' + SITE_TITLE}>
       <Home id="section-home" />
-
       <Characteristic id="section-characteristic" />
       <Comparison id="section-comparison" />
       <Awards id="section-awards" />

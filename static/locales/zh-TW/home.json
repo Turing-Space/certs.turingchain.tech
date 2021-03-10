@@ -27,7 +27,6 @@
     },
     "mobileSubTitle": "一鍵驗證你的區塊鏈履歷與證書"
   },
-
   "aboutUs": {
     "title": "關於我們",
     "quote": "「我們都是自己經歷的總和。」",
@@ -36,7 +35,6 @@
     "descriptionP3": "在 21 世紀進入第一季的尾聲，圖靈證書以每個人為軸，連結虛擬與現實所有離散的資料與身份，將一個人的形狀由他的經歷，鉅細靡遺的勾勒出來。",
     "descriptionP4": "你也是你經歷的總和，而圖靈證書將擔任你的日記本。"
   },
-
   "characteristic": {
     "title": "區塊鏈成就履歷",
     "icons": {
@@ -100,6 +98,9 @@
         "content": "Google SingularityU APAC Global Impact Challenge 2019 全球前四強"
       }
     }
+  },
+  "news": {
+    "title": "新聞快訊"
   },
   "process": {
     "title": "發證流程",
