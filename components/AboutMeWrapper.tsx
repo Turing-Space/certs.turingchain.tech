@@ -7,7 +7,6 @@ import { media } from '@/utils/theme';
 import Title from './Cert/Title';
 import { useTranslation } from 'react-i18next';
 import { i18nNamespace } from '@/constants';
-import { timeConverter } from '@/utils';
 
 const Wrapper = styled.div`
   margin-top: 10%;
@@ -49,7 +48,7 @@ const Avatar = styled.div<{ src: string }>`
   border: solid 1px #e6e6e6;
   background: url(${p => p.src}) center no-repeat/cover;
   margin-right: 1em;
-  margin-left: 1.5em; 
+  margin-left: 1.5em;
   border-radius: 50%;
 `;
 
@@ -66,7 +65,7 @@ const NameWrapper = styled.div`
     letter-spacing: 1px;
     font-size: ${p => p.theme.fontSize.bigger};
     margin-bottom: 2px;
-    margin-left: 0.5em; 
+    margin-left: 0.5em;
   }
 
   .join-date {
@@ -87,12 +86,7 @@ const AboutMeWrapper: FC<TProps> = ({ children, title }) => {
     <Wrapper>
       <TitleWrapper>
         <Title>{title}</Title>
-        <Button
-          mode="white"
-          onClick={() =>
-            Router.push('/auth/login')
-          }
-        >
+        <Button mode="white" onClick={() => Router.push('/auth/login')}>
           {t('AboutMe.logout')}
         </Button>
       </TitleWrapper>
@@ -100,13 +94,11 @@ const AboutMeWrapper: FC<TProps> = ({ children, title }) => {
         <UserWrapper>
           <Avatar src={user.avatarUri} />
           <NameWrapper>
-            <p className="name">{user.name || "Me"}</p>
-            {/* <p className="join-date">{user.timestamp ? "Joined at " + timeConverter(user.timestamp) : ""}</p> */}
+            <p className="name">{user.name || 'Me'}</p>
           </NameWrapper>
         </UserWrapper>
         {children}
       </InfoWrapper>
-
     </Wrapper>
   );
 };

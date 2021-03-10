@@ -62,7 +62,6 @@ const MyCerts: FC<TProps> = ({ title, Empty }) => {
   );
 
   const openModal = useCallback(() => setModalVisible(true), []);
-  // const closeModal = useCallback(() => setModalVisible(false), []);
   const EmptyComponent = useMemo(
     () => (Empty ? <Empty openModal={openModal} /> : null),
     [],

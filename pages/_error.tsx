@@ -1,13 +1,12 @@
 import { NextFC } from 'next';
 import HomeLayout from '@/layouts/Home';
 import Home from '@/components/home/Home';
-import Service from '@/components/home/Service';
-import Demo from '@/components/home/Demo';
-import Technology from '@/components/home/Technology';
-import Collaborations from '@/components/home/Collaborations';
-import BackedBy from '@/components/home/BackedBy';
+import Characteristic from '@/components/home/Characteristic';
+import Comparison from '@/components/home/Comparison';
+import Awards from '@/components/home/Awards';
+import Process from '@/components/home/Process';
 import Examples from '@/components/home/Examples';
-// import DemoVideo from '@/components/home/DemoVideo';
+import AboutUs from '@/components/home/AboutUs';
 
 import { SITE_TITLE, i18nNamespace } from '@/constants';
 
@@ -15,15 +14,12 @@ const ErrorPage: NextFC = () => {
   return (
     <HomeLayout title={'TuringCerts | ' + SITE_TITLE}>
       <Home id="section-home" />
-      <Service id="section-service" />
-      <Technology id="section-technology" />
-      {/* <DemoVideo id="section-product" /> */}
-      <Demo />
-      <Collaborations id="section-collaborations" />
-      <BackedBy id="section-backedBy" />
+      <Characteristic id="section-characteristic" />
+      <Comparison id="section-comparison" />
+      <Awards id="section-awards" />
+      <Process id="section-process" />
       <Examples id="section-examples" />
-      {/* <AboutUs id="section-about" />
-      <Team id="section-team" /> */}
+      <AboutUs id="section-aboutUs" />
     </HomeLayout>
   );
 };
