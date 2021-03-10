@@ -2,7 +2,7 @@ import { FC, useContext, useCallback, useEffect } from 'react';
 import styled, { css } from 'styled-components';
 import { useSprings, animated } from 'react-spring';
 import { FacebookShareButton } from 'react-share';
-import { FaShareSquare, FaCheck, FaTrash } from 'react-icons/fa';
+import { FaShareSquare, FaCheck } from 'react-icons/fa';
 import { TiPin } from 'react-icons/ti';
 import Modal from 'react-modal';
 import theme from '@/themes/theme';
@@ -11,7 +11,6 @@ import { TCert, CertsContext } from '@/contexts/certs';
 import { useTranslation } from 'react-i18next';
 import { i18nNamespace } from '@/constants';
 import { timeConverter } from '@/utils';
-import { delCerts } from '@/utils/api';
 
 const CertCover = styled.div<{ src: string }>`
   width: 100%;
@@ -94,7 +93,7 @@ const StyledModalIcon = styled.div<{ pin?: boolean }>`
   background-color: #eeeeee;
   border-radius: 50%;
   margin-left: 1em;
-  
+
   &:hover {
     background-color: ${p => p.theme.colors.primary};
 
@@ -197,14 +196,8 @@ const ViewCertModal: FC<TProps> = ({ cert, isOpen, onClose }) => {
       ...cert,
       pin: !cert.pin,
     });
-    moveCertToFront(cert.ipfs, cert.pin)
+    moveCertToFront(cert.ipfs, cert.pin);
   }, [cert]);
-
-  // const onClickTrash = useCallback(() => {
-  //   console.log("delete " + cert.ipfs)
-  //   delCerts({ ipfs: cert.ipfs });
-  //   isOpen = false;
-  // }, [cert]);
 
   return (
     <Modal
@@ -227,12 +220,16 @@ const ViewCertModal: FC<TProps> = ({ cert, isOpen, onClose }) => {
       }}
     >
       <ModalWrapper>
-        {/* <a href={'https://certs.turingchain.tech/ipfs?hash=' + cert.ipfs}> */}
-        <CertCover src={'https://ipfs.certs.turingchain.tech/ipfs/' + cert.ipfs} />
-        {/* </a> */}
+        <CertCover
+          src={'https://ipfs.certs.turingchain.tech/ipfs/' + cert.ipfs}
+        />
         <p className="issuer">{cert.issuer}</p>
         <p className="name">{cert.name}</p>
-        <p className="smartLink"><a href={'https://certs.turingchain.tech/ipfs?hash=' + cert.ipfs}>SmartLink</a></p>
+        <p className="smartLink">
+          <a href={'https://certs.turingchain.tech/ipfs?hash=' + cert.ipfs}>
+            SmartLink
+          </a>
+        </p>
         <p className="create-data">{timeConverter(cert.timestamp)}</p>
         <Divider />
         <ModalProgressTitleWrapper>
@@ -244,13 +241,11 @@ const ViewCertModal: FC<TProps> = ({ cert, isOpen, onClose }) => {
             <StyledModalIcon>
               <FacebookShareButton
                 url={'https://certs.turingchain.tech/ipfs?hash=' + cert.ipfs}
-                quote={'TuringCerts'}>
+                quote={'TuringCerts'}
+              >
                 <FaShareSquare size="1.1em" color={theme.colors.darkGrey} />
               </FacebookShareButton>
             </StyledModalIcon>
-            {/* <StyledModalIcon onClick={onClickTrash}>
-              <FaTrash size="1.1em" color={theme.colors.darkGrey} />
-            </StyledModalIcon> */}
           </div>
         </ModalProgressTitleWrapper>
         <div>

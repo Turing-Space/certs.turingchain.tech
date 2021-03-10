@@ -70,11 +70,6 @@ const AboutUs: FC<{ id: string }> = ({ id }) => {
             <Text>{t('home.descriptionP3')}</Text>
             <p></p>
             <Text>{t('home.descriptionP4')}</Text>
-            {/*
-        <Text className="en">
-          {t('home.description.en')}
-        </Text>
-        */}
           </ScrollAnimation>
         </TextBox>
       </Content>

@@ -54,7 +54,7 @@ const Wrapper = styled.header<{ hideUp?: boolean; openMobile: boolean }>`
     text-decoration: none;
   }
 `;
-//Icon press color
+
 const SectionWrapper = styled.ul`
   display: none;
   align-items: center;
@@ -171,39 +171,15 @@ const Header: SFC = () => {
           <li onClick={() => scrollToID('section-characteristic')}>
             {t('header.characteristic')}
           </li>
-          {/*}
-          <li onClick={() => scrollToID('section-service')}>
-            {t('header.service')}
-          </li>
-          <li onClick={() => scrollToID('section-technology')}>
-            {t('header.technology')}
-          </li>
-  {*/}
           <li onClick={() => scrollToID('section-comparison')}>
             {t('header.comparison')}
           </li>
           <li onClick={() => scrollToID('section-awards')}>
             {t('header.awards')}
           </li>
-          {/*
-          <li onClick={() => scrollToID('section-news')}>{t('header.news')}</li>
-          */}
           <li onClick={() => scrollToID('section-process')}>
             {t('header.process')}
           </li>
-          {/*
-          <li onClick={() => scrollToID('section-product')}>
-            {t('header.product')}
-          </li>
-          */}
-          {/*
-          <li onClick={() => scrollToID('section-collaborations')}>
-            {t('header.collaborations')}
-          </li>
-          <li onClick={() => scrollToID('section-backedBy')}>
-            {t('header.backedBy')}
-          </li>
-          */}
           <li onClick={() => scrollToID('section-examples')}>
             {t('header.examples')}
           </li>

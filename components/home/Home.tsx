@@ -5,11 +5,9 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import Section from '@/components/Section';
 import { getRelativePath } from '@/utils';
 import H1 from '@/components/H1';
-//import ScrollInfo from '@/components/ScrollInfo';
 import { media } from '@/utils/theme';
 import { i18nNamespace } from '@/constants';
 
-//Home Icon Words
 const Text = styled.p`
   margin-bottom: 8px;
   font-size: ${p => p.theme.fontSize.bigger};
@@ -27,7 +25,6 @@ const Logo = styled.img`
   }
 `;
 
-//Home TuringCerts Words
 const Title = styled(H1)`
   color: ${p => p.theme.colors.backgroundWordDarkGrey};
   margin: 0.6em 0 0.3em 0;
@@ -45,12 +42,6 @@ const Icon = styled.img`
   right: 5%;
   bottom: 10%;
   width: 15%;
-`;
-
-const Divider = styled.div`
-  width: 68%;
-  height: 1px;
-  background-color: ${p => p.theme.colors.backgroundJoinLightGold};
 `;
 
 const TitleWrapper = styled(ScrollAnimation)`
@@ -111,10 +102,6 @@ const Home: FC<{ id: string }> = ({ id }) => {
         </Title>
         <CNText>{t('home.mobileSubTitle')}</CNText>
       </MobileTitleWrapper>
-
-      {/*}
-      <ScrollInfo />
-          {*/}
     </Section>
   );
 };
