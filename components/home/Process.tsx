@@ -15,11 +15,9 @@ const AnimatedWrapper = styled(ScrollAnimation)`
 `;
 
 const Title = styled(H2)`
-  margin-top: 18vh;
   color: ${p => p.theme.colors.websiteCatelogWordGold};
 
   ${media('largeDesktop')} {
-    margin-top: 20vh;
   }
 `;
 
@@ -46,7 +44,6 @@ const IconWrapper = styled(ScrollAnimation)`
   width: 100%;
   margin-left: 2.5%;
   margin-right: 2.5%;
-  margin-bottom: 10em;
   ${media('pad')} {
     width: 50%;
   }

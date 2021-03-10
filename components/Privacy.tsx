@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -7,10 +7,25 @@ import H2 from '@/components/H2';
 import { media } from '@/utils/theme';
 import Description from '@/components/Description';
 import { i18nNamespace } from '@/constants';
+import { Router } from '@/i18n';
 
 const AnimatedWrapper = styled(ScrollAnimation)`
   width: 100%;
   text-align: center;
+`;
+
+const PreviousPage = styled.p`
+  position: absolute;
+  left: 0;
+  top: 20vh;
+  left: 10vh;
+  z-index: 10;
+  cursor: pointer;
+  font-size: 1em;
+  color: ${p => p.theme.colors.websiteCatelogWordGold};
+  &:hover {
+    opacity: 0.75;
+  }
 `;
 
 const Paragraph = styled.div`
@@ -48,8 +63,14 @@ const StyledDescription = styled(Description)<{ right?: boolean }>`
 
 const Privacy: FC = () => {
   const { t } = useTranslation(i18nNamespace.Home);
+  const onPageClick = useCallback((route: string) => {
+    Router.push(route);
+    scrollTo(0, 0);
+  }, []);
+
   return (
     <Section>
+      <PreviousPage onClick={() => onPageClick('/..')}>回上一頁</PreviousPage>
       <ScrollAnimation
         animateOnce
         animateIn="fadeInUp"
