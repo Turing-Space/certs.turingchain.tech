@@ -20,6 +20,8 @@ const Content = styled.div`
   width: 70%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 const CEO = styled.div`
@@ -38,12 +40,18 @@ const CEOposition = styled.p`
 
 const Profile = styled.img`
   width: 21vw;
+  min-width: 200px;
   margin-top: 5%;
   margin-bottom: 5%;
 `;
 
 const TextBox = styled.div`
-  margin-left: 5em;
+  ${media('pad')} {
+    margin-left: 2em;
+  }
+  ${media('tablet')} {
+    margin-left: 5em;
+  }
 `;
 
 const Quote = styled.p`
@@ -53,6 +61,7 @@ const Quote = styled.p`
 `;
 const Text = styled.p`
   width: 40vw;
+  min-width: 250px;
   margin-bottom: 1em;
   text-align: left;
   line-height: 1.5;

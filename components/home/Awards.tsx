@@ -13,12 +13,12 @@ import { i18nNamespace } from '@/constants';
 
 const Title = styled(H2)`
   margin: 0 auto 0;
-  max-width: 70vw;
+  width: 75%;
   color: ${p => p.theme.colors.backgroundJoinDarkGold};
 
-  ${media('largeDesktop')} {
-    max-width: 55vw;
-    margin: 20vh auto 0;
+  ${media('desktop')} {
+    width: 55%;
+    margin: 0 auto 0;
   }
 `;
 
@@ -28,18 +28,32 @@ const Wrapper = styled.div`
   width: 75%;
 
   ${media('desktop')} {
-    width: 50%;
+    width: 55%;
   }
 `;
 
 const AnimatedWrapper = styled(ScrollAnimation)`
   position: relative;
   margin-top: 3%;
+`;
+
+const AwardWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   width: 75%;
 
   ${media('desktop')} {
     width: 55%;
   }
+`;
+
+const SingleAwardWrapper = styled.div`
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: ${p => p.theme.colors.backgroundJoinLightGold};
+  margin-bottom: 0.5em;
+  width: 85%;
 `;
 
 const Divider = styled.div`
@@ -50,14 +64,22 @@ const Divider = styled.div`
 
 const Content = styled(Description)`
   letter-spacing: 1.67px;
-  margin: -3% 0;
+  white-space: pre-line;
+  margin: 0.5em 0;
+  &.cn {
+    font-family: ${p => p.theme.fontFamily.NotoSansTC};
+    font-weight: 400;
+  }
 `;
 
 const IPFSIcon = styled.img`
   position: absolute;
   left: 70vw;
   width: 10vw;
-  bottom: -18vw;
+
+  ${media('pad')} {
+    bottom: -18vw;
+  }
 `;
 
 const Awards: FC<{ id: string }> = ({ id }) => {
@@ -77,31 +99,32 @@ const Awards: FC<{ id: string }> = ({ id }) => {
           )} 2x, ${getRelativePath('/static/bg/circle@3x.svg')} 3x`}
         />
       </ScrollAnimation>
-      <AnimatedWrapper animateOnce animateIn="fadeInUp" delay={300} offset={0}>
-        <Divider />
-        <Content>{t('awards.subs.0.content')}</Content>
-      </AnimatedWrapper>
-      <AnimatedWrapper animateOnce animateIn="fadeInUp" delay={600} offset={0}>
-        <Divider />
-        <Content>{t('awards.subs.1.content')}</Content>
-      </AnimatedWrapper>
-      <AnimatedWrapper animateOnce animateIn="fadeInUp" delay={600} offset={0}>
-        <Divider />
-        <Content>{t('awards.subs.2.content')}</Content>
-      </AnimatedWrapper>
-      <AnimatedWrapper animateOnce animateIn="fadeInUp" delay={600} offset={0}>
-        <Divider />
-        <Content>{t('awards.subs.3.content')}</Content>
-      </AnimatedWrapper>
-      <AnimatedWrapper animateOnce animateIn="fadeInUp" delay={600} offset={0}>
-        <Divider />
-        <Content>{t('awards.subs.4.content')}</Content>
-      </AnimatedWrapper>
-      <AnimatedWrapper animateOnce animateIn="fadeInUp" delay={600} offset={0}>
-        <Divider />
-        <Content>{t('awards.subs.5.content')}</Content>
-      </AnimatedWrapper>
-
+      <AnimatedWrapper
+        animateOnce
+        animateIn="fadeInUp"
+        delay={300}
+        offset={0}
+      ></AnimatedWrapper>
+      <AwardWrapper>
+        <SingleAwardWrapper>
+          <Content>{t('awards.subs.0.content')}</Content>
+        </SingleAwardWrapper>
+        <SingleAwardWrapper>
+          <Content>{t('awards.subs.1.content')}</Content>
+        </SingleAwardWrapper>
+        <SingleAwardWrapper>
+          <Content>{t('awards.subs.2.content')}</Content>
+        </SingleAwardWrapper>
+        <SingleAwardWrapper>
+          <Content>{t('awards.subs.3.content')}</Content>
+        </SingleAwardWrapper>
+        <SingleAwardWrapper>
+          <Content>{t('awards.subs.4.content')}</Content>
+        </SingleAwardWrapper>
+        <SingleAwardWrapper>
+          <Content>{t('awards.subs.5.content')}</Content>
+        </SingleAwardWrapper>
+      </AwardWrapper>
       {/*}
       <ScrollInfo />
     {*/}

@@ -14,6 +14,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: space-around;
   height: 70%;
+  z-index: 10;
 
   > div {
     width: 2em;
@@ -56,13 +57,13 @@ const MobileList = styled(animated.ul)`
   flex-direction: column;
   justify-content: flex-start;
   width: 100vw;
-  height: calc(100vh - 50px);
+  max-height: calc(100vh - 50px);
   top: 50px;
   left: 0;
   padding-left: 0;
   margin: 0;
   background: ${p => p.theme.colors.white};
-  z-index: -1;
+  z-index: 1;
 
   > li {
     cursor: pointer;
@@ -71,13 +72,9 @@ const MobileList = styled(animated.ul)`
     background: ${p => p.theme.colors.white};
 
     &.red {
-      background: ${p => p.theme.colors.primary};
+      background: ${p => p.theme.colors.websiteCatelogWordGold};
       color: ${p => p.theme.colors.white};
       text-align: center;
-
-      &:focus {
-        background: #a80100;
-      }
     }
 
     &.small {
@@ -87,7 +84,7 @@ const MobileList = styled(animated.ul)`
 
     &:focus,
     &:active {
-      background: ${p => p.theme.colors.primary};
+      background: ${p => p.theme.colors.backgroundJoinDarkGold};
     }
   }
 `;
@@ -100,7 +97,7 @@ type TProps = {
 const MobileHeader: FC<TProps> = ({ open, setOpen }) => {
   const { t, i18n } = useTranslation(i18nNamespace.Home);
   const style = useSpring({
-    transform: `translate3d(0, ${open ? '0%' : '100vh'}, 0)`,
+    transform: `translate3d(0, ${open ? '0%' : '-100vh'}, 0)`,
     opacity: open ? 1 : 0,
   });
 
@@ -115,43 +112,43 @@ const MobileHeader: FC<TProps> = ({ open, setOpen }) => {
       <MobileList style={style}>
         <li
           onClick={() => {
-            scrollToID('section-service');
+            scrollToID('section-characteristic');
             setOpen(false);
           }}
         >
-          {t('header.service')}
+          {t('header.characteristic')}
         </li>
         <li
           onClick={() => {
-            scrollToID('section-technology');
+            scrollToID('section-comparison');
             setOpen(false);
           }}
         >
-          {t('header.technology')}
+          {t('header.comparison')}
         </li>
         <li
           onClick={() => {
-            scrollToID('section-product');
+            scrollToID('section-awards');
             setOpen(false);
           }}
         >
-          {t('header.product')}
+          {t('header.awards')}
         </li>
         <li
           onClick={() => {
-            scrollToID('section-collaborations');
+            scrollToID('section-news');
             setOpen(false);
           }}
         >
-          {t('header.collaborations')}
+          {t('header.news')}
         </li>
         <li
           onClick={() => {
-            scrollToID('section-backedBy');
+            scrollToID('section-process');
             setOpen(false);
           }}
         >
-          {t('header.backedBy')}
+          {t('header.process')}
         </li>
         <li
           onClick={() => {
