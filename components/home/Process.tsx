@@ -44,8 +44,9 @@ const IconWrapper = styled(ScrollAnimation)`
   width: 100%;
   margin-left: 2.5%;
   margin-right: 2.5%;
+  margin-bottom: 7vh;
   ${media('pad')} {
-    width: 50%;
+    width: 30%;
   }
   ${media('desktop')} {
     width: 20%;
