@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { media } from '@/utils/theme';
 import RedLogo from '@/static/logo/logo-new.svg';
 import PrimaryWhiteLogo from '@/static/logo/logo-new-white.svg';
+import { i18nNamespace } from '@/constants';
+import { useTranslation } from 'react-i18next';
 
 const LogoWrapper = styled.div`
   cursor: pointer;
@@ -11,12 +13,12 @@ const LogoWrapper = styled.div`
   height: 100%;
   > p {
     font-size: ${p => p.theme.fontSize.bigger};
-    font-weight: 500;
+    font-weight: 600;
   }
 
   ${media('desktop')} {
     > p {
-      font-size: 1em;
+      font-size: ${p => p.theme.fontSize.bigger};
     }
   }
 `;
@@ -39,10 +41,12 @@ const HeaderLogo: FC<{ mode?: 'primary' | 'dark'; onClick: () => void }> = ({
   mode = 'dark',
   onClick,
 }) => {
+  const { t } = useTranslation(i18nNamespace.Home);
+
   return (
     <LogoWrapper onClick={onClick}>
       <Logo src={modeSrcMap[mode] as any} />
-      <p className="en">TuringCerts</p>
+      <p className="en">{t('header.title')}</p>
     </LogoWrapper>
   );
 };

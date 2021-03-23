@@ -2,6 +2,7 @@
   "alertText": "現正封測中，敬請期待！",
   "start": "申請使用 →",
   "header": {
+    "title": "圖靈證書",
     "characteristic": "產品特點",
     "comparison": "傳統/數位",
     "awards": "獲獎經歷",
@@ -22,10 +23,7 @@
       "en": "TuringCerts",
       "cn": "圖靈證書"
     },
-    "subTitle": {
-      "cn": "一鍵驗證你的區塊鏈履歷與證書",
-      "en": "Your Blockchain-based Resume for One-click Verify."
-    },
+    "subTitle": "一鍵驗證你的區塊鏈履歷與證書",
     "mobileSubTitle": "一鍵驗證你的區塊鏈履歷與證書"
   },
   "aboutUs": {

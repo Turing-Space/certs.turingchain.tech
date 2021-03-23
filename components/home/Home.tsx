@@ -34,7 +34,8 @@ const Title = styled(H1)`
 const Bg = styled.img`
   position: absolute;
   bottom: 0%;
-  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
 `;
 
 const Icon = styled.img`
@@ -88,10 +89,7 @@ const Home: FC<{ id: string }> = ({ id }) => {
           {t('home.title.en')}
           {i18n.language === 'zh-TW' ? ` ${t('home.title.cn')}` : ''}
         </Title>
-        <Text className="en">{t('home.subTitle.en')}</Text>
-        {i18n.language === 'zh-TW' && (
-          <CNText className="cn">{t('home.subTitle.cn')}</CNText>
-        )}
+        <Text className="en">{t('home.subTitle')}</Text>
       </TitleWrapper>
       <MobileTitleWrapper animateIn="fadeInUp" delay={400} offset={0}>
         <Title>

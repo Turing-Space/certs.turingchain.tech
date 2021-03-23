@@ -51,7 +51,7 @@ const ButtonGroupWrapper = styled.div`
   width: 100%;
   margin: 3.5em 10;
   ${media('pad')} {
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   ${media('desktop')} {

@@ -83,7 +83,7 @@ const IconSubDescription = styled(Description)`
   width: 90%;
   text-align: center;
   letter-spacing: 0.5px;
-  line-height: 1em;
+  line-height: 1.2;
   margin: 0 auto;
 
   ${media('desktop')} {
