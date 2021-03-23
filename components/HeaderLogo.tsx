@@ -14,11 +14,13 @@ const LogoWrapper = styled.div`
   > p {
     font-size: ${p => p.theme.fontSize.bigger};
     font-weight: 600;
+    word-break: keep-all;
   }
 
   ${media('desktop')} {
     > p {
       font-size: ${p => p.theme.fontSize.bigger};
+      word-break: keep-all;
     }
   }
 `;
@@ -46,7 +48,7 @@ const HeaderLogo: FC<{ mode?: 'primary' | 'dark'; onClick: () => void }> = ({
   return (
     <LogoWrapper onClick={onClick}>
       <Logo src={modeSrcMap[mode] as any} />
-      <p className="en">{t('header.title')}</p>
+      <p>{t('header.title')}</p>
     </LogoWrapper>
   );
 };
