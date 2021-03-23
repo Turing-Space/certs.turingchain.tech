@@ -23,13 +23,12 @@ const Bg = styled.div`
 `;
 
 const Title = styled(H2)`
-  margin: 0 auto 0;
+  margin: 0 auto 0.5em;
   max-width: 70vw;
   color: ${p => p.theme.colors.websiteCatelogWordGold};
 
   ${media('largeDesktop')} {
     max-width: 55vw;
-    margin: 0 auto 0;
   }
 `;
 const StyledDescription = styled(Description)`
@@ -52,7 +51,7 @@ const ButtonGroupWrapper = styled.div`
   width: 100%;
   margin: 3.5em 10;
   ${media('pad')} {
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   ${media('desktop')} {
@@ -61,7 +60,7 @@ const ButtonGroupWrapper = styled.div`
 `;
 
 const StyledButton = styled(Button)<{ open: boolean }>`
-  margin: 5% 0 8%;
+  margin: 5% 0;
   display: flex;
 
   color: ${p =>
@@ -78,6 +77,7 @@ const StyledButton = styled(Button)<{ open: boolean }>`
 
 const StyledSubDescription = styled(Description)`
   width: 90%;
+  font-size: 1.2em;
   text-align: center;
   letter-spacing: 0.5px;
   line-height: 2em;
@@ -93,6 +93,7 @@ const WhiteBox = styled.div`
   position: relative;
   margin-top: 3%;
   width: 75%;
+  min-height: 300px;
   background-color: ${p => p.theme.colors.white};
   border-radius: 30px;
   opacity: 1;

@@ -30,7 +30,7 @@ const IconGroupWrapper = styled.div`
   width: 80%;
   margin: 7.5em 0;
   ${media('pad')} {
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   ${media('desktop')} {
@@ -89,8 +89,8 @@ const IconSubDescription = styled(Description)`
   width: 90%;
   text-align: left;
   letter-spacing: 0.5px;
-  line-height: 1em;
-  margin: 0 auto;
+  line-height: 1.4;
+  margin: 0 1em;
 
   ${media('desktop')} {
     width: 80%;

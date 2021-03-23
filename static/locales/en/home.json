@@ -2,6 +2,7 @@
   "alertText": "In Private Beta Now. Coming soon!",
   "start": "Join",
   "header": {
+    "title": "TuringCerts",
     "characteristic": "Characteristic",
     "comparison": "Comparison",
     "awards": "Awards",
@@ -22,10 +23,7 @@
       "en": "TuringCerts",
       "cn": "圖靈證書"
     },
-    "subTitle": {
-      "cn": "屬於每個人的國際防偽數位歷程",
-      "en": "Your Blockchain-based Resume for One-click Verify."
-    },
+    "subTitle": "Your Blockchain-based Resume for One-click Verify.",
     "mobileSubTitle": "Your Blockchain-based Resume for One-click Verify."
   },
   "aboutUs": {

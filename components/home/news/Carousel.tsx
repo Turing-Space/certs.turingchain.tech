@@ -41,7 +41,7 @@ const CardSlider = styled.div`
 
 const CardSliderWrapper = styled.div`
   position: absolute;
-  transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: transform 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
   overflow-x: visible;
   overflow-y: hidden;
   display: flex;
@@ -52,7 +52,7 @@ const CardSliderWrapper = styled.div`
 `;
 
 const cardProp = {
-  width: 25,
+  width: 20,
   widthUnit: 'vw',
 };
 
@@ -65,7 +65,7 @@ const Text = styled.div`
   padding: 0.75em 1em;
   color: ${p => p.theme.colors.white};
   background: rgba(0, 0, 0, 0.8);
-  font-size: ${p => p.theme.fontSize.smaller};
+  font-size: 0.5rem;
   transform: translate3d(0, 100%, 0);
   transition: transform 0.2s ease-in;
 `;
