@@ -24,6 +24,8 @@
       "cn": "圖靈證書"
     },
     "subTitle": "一鍵驗證你的區塊鏈履歷與證書",
+    "login": "登入",
+    "loginLink": "https://global.turingcerts.com/zh-TW/login",
     "mobileSubTitle": "一鍵驗證你的區塊鏈履歷與證書"
   },
   "aboutUs": {

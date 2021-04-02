@@ -5,6 +5,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import Section from '@/components/Section';
 import { getRelativePath } from '@/utils';
 import H1 from '@/components/H1';
+import Button from '@/components/Button';
 import { media } from '@/utils/theme';
 import { i18nNamespace } from '@/constants';
 
@@ -67,6 +68,13 @@ const MobileTitleWrapper = styled(TitleWrapper)`
   }
 `;
 
+const StyledButton = styled(Button)`
+  a {
+    text-decoration: none;
+    color: white;
+  }
+`;
+
 const Home: FC<{ id: string }> = ({ id }) => {
   const { t, i18n } = useTranslation(i18nNamespace.Home);
   return (
@@ -100,6 +108,13 @@ const Home: FC<{ id: string }> = ({ id }) => {
         </Title>
         <CNText>{t('home.mobileSubTitle')}</CNText>
       </MobileTitleWrapper>
+      <ScrollAnimation animateIn="fadeInUp" delay={400} offset={0}>
+        <StyledButton>
+          <a href={t('home.loginLink')} target="_blank">
+            {t('home.login')}
+          </a>
+        </StyledButton>
+      </ScrollAnimation>
     </Section>
   );
 };
