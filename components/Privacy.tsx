@@ -81,9 +81,9 @@ const Privacy: FC = () => {
       <AnimatedWrapper animateIn="fadeInUp" animateOnce delay={300}>
         <Paragraph>
           <StyledDescription right>
-            版本：v1.0
+            版本：v1.1
             <br />
-            發行日期：2021/02/08
+            發行日期：2021/05/05
           </StyledDescription>
         </Paragraph>
 
@@ -187,7 +187,7 @@ const Privacy: FC = () => {
           <StyledDescription>
             期間：您要求停止使用或本公司服務停止之日止。
             <br />
-            地區：您的個人資料將用於台灣地區及香港地區與日本地區(GCP region)。
+            地區：您的個人資料將用於任何本公司服務所及之地區。
             <br />
             對象：
             <br />
