@@ -81,18 +81,18 @@ const Privacy: FC = () => {
       <AnimatedWrapper animateIn="fadeInUp" animateOnce delay={300}>
         <Paragraph>
           <StyledDescription right>
-            版本：v1.1
+            版本：v1.2
             <br />
-            發行日期：2021/05/05
+            發行日期：2021/05/11
           </StyledDescription>
         </Paragraph>
 
         <Paragraph>
           <DescriptionTitle>台灣圖靈鏈隱私權政策</DescriptionTitle>
           <StyledDescription>
-            歡迎使用台灣圖靈鏈股份有限公司(以下簡稱「本公司」)所提供之服務。服務之內容包含：Turing
-            Chain
-            區塊鏈履歷服務及本網站(以下簡稱「本公司服務」)。為了保障您的權益及提供更好的使用者體驗，在您同意使用本網站及相關服務之前，請詳閱本隱私權政策(以下簡稱「本政策」)；您在了解本政策後開始使用本公司之各項服務，將視為您已閱讀、了解並同意本政策內容。
+            歡迎使用台灣圖靈鏈股份有限公司(以下簡稱「本公司」)所提供之服務。服務之內容包含：TuringCerts
+            Blockchain-based Resume
+            圖靈證書區塊鏈履歷服務及本網站(以下簡稱「本公司服務」)。為了保障您的權益及提供更好的使用者體驗，在您同意使用本網站及相關服務之前，請詳閱本隱私權政策(以下簡稱「本政策」)；您在了解本政策後開始使用本公司之各項服務，將視為您已閱讀、了解並同意本政策內容。
           </StyledDescription>
         </Paragraph>
 
@@ -112,15 +112,17 @@ const Privacy: FC = () => {
             <br />
             ● 蒐集來源
             <br />
-            使用Turing Chain 區塊鏈履歷服務之發證方(本公司為資料處理者)
+            使用TuringCerts Blockchain-based Resume
+            圖靈證書區塊鏈履歷服務之發證方(本公司為資料處理者)
             <br />
             本公司
             <br />
             ● 本公司服務
             <br />
-            Turing Chain 區塊鏈履歷服務
+            TuringCerts Blockchain-based Resume 圖靈證書區塊鏈履歷服務
             <br />
-            使用Turing Chain 區塊鏈履歷服務之發證方與本公司簽訂合約
+            使用TuringCerts Blockchain-based Resume
+            圖靈證書區塊鏈履歷服務之發證方與本公司簽訂合約
             <br />
             網站
             <br />
@@ -187,14 +189,15 @@ const Privacy: FC = () => {
           <StyledDescription>
             期間：您要求停止使用或本公司服務停止之日止。
             <br />
-            地區：您的個人資料將用於任何本公司服務所及之地區。
+            地區：您的個人資料將用於任何您授權使用的地區。
             <br />
             對象：
             <br />
-            1. 本公司：依使用Turing Chain
-            區塊鏈履歷服務之發證方需求，處理及保護個人資料。
+            1. 本公司：依使用TuringCerts Blockchain-based Resume
+            圖靈證書區塊鏈履歷服務之發證方需求，處理及保護個人資料。
             <br />
-            2. 發證方：使用Turing Chain 區塊鏈履歷服務之發證方管理其證照資料。
+            2. 發證方：使用TuringCerts Blockchain-based Resume
+            圖靈證書區塊鏈履歷服務之發證方管理其證照資料。
             <br />
             3. 收證方：查詢發證方核發之其個人證書。
             <br />

@@ -81,9 +81,9 @@ const Security: FC = () => {
       <AnimatedWrapper animateIn="fadeInUp" animateOnce delay={300}>
         <Paragraph>
           <StyledDescription right>
-            版本：v1.0
+            版本：v1.1
             <br />
-            發行日期：2021/02/05
+            發行日期：2021/05/11
           </StyledDescription>
         </Paragraph>
 
@@ -104,9 +104,9 @@ const Security: FC = () => {
         <Paragraph>
           <DescriptionTitle>3. 適用範圍</DescriptionTitle>
           <StyledDescription>
-            本ISMS考量本公司內部及外部議題、關注方之需要及期望，以及本公司活動與其他組織活動間之介面及相依性，適用範圍為：Turing
-            Chain
-            區塊鏈履歷服務之軟體開發、測試、營運及作業環境，包括：實體辦公室區域、雲端系統、開發人員、軟體、營運資料、系統管理單位及相關作業流程。
+            本ISMS考量本公司內部及外部議題、關注方之需要及期望，以及本公司活動與其他組織活動間之介面及相依性，適用範圍為：TuringCerts
+            Blockchain-based Resume
+            圖靈證書區塊鏈履歷服務之軟體開發、測試、營運及作業環境，包括：實體辦公室區域、雲端系統、開發人員、軟體、營運資料、系統管理單位及相關作業流程。
           </StyledDescription>
         </Paragraph>
 
