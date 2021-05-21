@@ -61,19 +61,19 @@
     "subs": {
       "0": {
         "title": "Educational Institutions",
-        "content1": "Abide by W3C international standard, which makes certificates more secure",
-        "content2": "Full record of personal journey, which makes certificates more complete"
+        "content1": "Abide by W3C international standard, which makes certificates more secure.",
+        "content2": "Full record of personal journey, which makes certificates more complete."
       },
       "1": {
         "title": "Students",
-        "content1": "Integrated in a single platform, easier to use",
-        "content2": "Preserved lifelong, more durable",
-        "content3": "Share by one click, less time-consuming"
+        "content1": "Integrated in a single platform, easier to use.",
+        "content2": "Preserved lifelong, more durable.",
+        "content3": "Share by one click, less time-consuming."
       },
       "2": {
         "title": "Examinational Institutions",
-        "content1": "Certificates authorized and issued directly by issuers, more reliable",
-        "content2": "Verify by one click, more efficient"
+        "content1": "Certificates authorized and issued directly by issuers, more reliable.",
+        "content2": "Verify by one click, more efficient."
       }
     }
   },

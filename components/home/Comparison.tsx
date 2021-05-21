@@ -85,7 +85,7 @@ const StyledSubDescription = styled(Description)`
   color: ${p => p.theme.colors.backgroundWordDarkGrey};
 
   ${media('desktop')} {
-    width: 70%;
+    width: 80%;
   }
 `;
 
@@ -93,7 +93,7 @@ const WhiteBox = styled.div`
   position: relative;
   margin-top: 3%;
   width: 75%;
-  min-height: 300px;
+  min-height: 350px;
   background-color: ${p => p.theme.colors.white};
   border-radius: 30px;
   opacity: 1;
