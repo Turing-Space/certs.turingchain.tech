@@ -120,6 +120,7 @@ const TextLink = styled.p`
   color: ${p => p.theme.colors.white};
 
   ${media('tablet')} {
+    margin-top: 0;
     font-size: ${p => p.theme.fontSize.smaller};
   }
 
