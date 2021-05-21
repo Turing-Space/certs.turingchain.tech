@@ -54,11 +54,12 @@ const TextBox = styled.div`
   }
 `;
 
-const Quote = styled.p`
-  font-size: 16px;
+const Quote = styled(H3)`
+  font-size: 20px;
   margin-top: 1em;
   margin-bottom: 2em;
 `;
+
 const Text = styled.p`
   width: 40vw;
   min-width: 250px;
@@ -87,7 +88,7 @@ const AboutUs: FC<{ id: string }> = ({ id }) => {
               srcSet={`${getRelativePath('/static/img/CEO@2x.png')} 2x`}
             />
             <CEOName>Jeff Hu</CEOName>
-            <CEOposition>TuringChain CEO</CEOposition>
+            <CEOposition>Turing Certs CEO</CEOposition>
           </CEO>
         </ScrollAnimation>
         <TextBox>
