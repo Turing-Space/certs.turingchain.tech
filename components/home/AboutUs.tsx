@@ -75,7 +75,7 @@ const Text = styled.p`
 `;
 
 const AboutUs: FC<{ id: string }> = ({ id }) => {
-  const { t } = useTranslation(i18nNamespace.Home);
+  const { t, i18n } = useTranslation(i18nNamespace.Home);
 
   return (
     <Section id={id} justifyContent="center" fullscreen>
@@ -98,7 +98,10 @@ const AboutUs: FC<{ id: string }> = ({ id }) => {
             <p></p>
             <Text>{t('aboutUs.descriptionP2')}</Text>
             <p></p>
-            <Text>{t('aboutUs.descriptionP3')}</Text>
+            {/* delete en version by Jeff */}
+            {i18n.language === 'zh-TW' ? (
+              <Text>{t('aboutUs.descriptionP3')}</Text>
+            ) : null}
             <p></p>
             <Text>{t('aboutUs.descriptionP4')}</Text>
           </ScrollAnimation>
