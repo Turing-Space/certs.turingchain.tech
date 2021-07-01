@@ -10,7 +10,7 @@ import VerifiedProgressChart from './VerifiedProgressChart';
 import ViewCertModal from './ViewCertModal';
 import Spinner from '../Spinner';
 import { useTranslation } from 'react-i18next';
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 import { timeConverter } from '@/utils';
 
 const Wrapper = styled.div`
@@ -76,7 +76,6 @@ const CertWrapper = styled.div`
       text-overflow: ellipsis;
     }
   }
-
 `;
 
 const CertCover = styled.div<{ src: string }>`
@@ -123,37 +122,36 @@ const Certs: FC<TProps> = ({ certs }) => {
 
   return (
     <Wrapper>
-      {
-        certs.map((cert, idx) => {
-          console.log(cert.issuer, idx)
-          const ipfsImg = 'https://ipfs.certs.turingchain.tech/ipfs/' + cert.ipfs;
-          const progressPercent = Math.round(
-            (cert.progress.reduce((acc, cur) => Number(cur) + acc, 0) / 5) * 100,
-          )
-          return (
-            <CertWrapper
-              key={cert.ipfs}
-              onClick={() => !cert.issuing && setOpenIdx(idx)}
-            >
-              <CertCover src={ipfsImg} />
-              <p className="issuer">{cert.issuer}</p>
-              <p className="name">{cert.name}</p>
-              <p className="create-data">{timeConverter(cert.timestamp)}</p>
-              <SmallVerifiedProgressChart
-                size={50}
-                verified={cert.verified}
-                progress={progressPercent}
-              />
-              {cert.pin && <PinIcon color={theme.colors.primary} size="1.3em" />}
-              {cert.issuing && (
-                <IssuingMask>
-                  <Spinner color={theme.colors.primary} scale={2} />
-                  <p style={{ marginTop: '1rem' }}>{t('Issue.issuing')}</p>
-                </IssuingMask>
-              )}
-            </CertWrapper>
-          );
-        })}
+      {certs.map((cert, idx) => {
+        console.log(cert.issuer, idx);
+        const ipfsImg = 'https://ipfs.certs.turingchain.tech/ipfs/' + cert.ipfs;
+        const progressPercent = Math.round(
+          (cert.progress.reduce((acc, cur) => Number(cur) + acc, 0) / 5) * 100,
+        );
+        return (
+          <CertWrapper
+            key={cert.ipfs}
+            onClick={() => !cert.issuing && setOpenIdx(idx)}
+          >
+            <CertCover src={ipfsImg} />
+            <p className="issuer">{cert.issuer}</p>
+            <p className="name">{cert.name}</p>
+            <p className="create-data">{timeConverter(cert.timestamp)}</p>
+            <SmallVerifiedProgressChart
+              size={50}
+              verified={cert.verified}
+              progress={progressPercent}
+            />
+            {cert.pin && <PinIcon color={theme.colors.primary} size="1.3em" />}
+            {cert.issuing && (
+              <IssuingMask>
+                <Spinner color={theme.colors.primary} scale={2} />
+                <p style={{ marginTop: '1rem' }}>{t('Issue.issuing')}</p>
+              </IssuingMask>
+            )}
+          </CertWrapper>
+        );
+      })}
       {openIdx >= 0 && (
         <ViewCertModal
           cert={certs[openIdx]}

@@ -7,7 +7,7 @@ import HeaderLogo from '@/components/HeaderLogo';
 import useWindowScroll from '@/hooks/useWindowScroll';
 import { scrollToID, getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 import { Router } from '@/i18n';
 
 import MobileHeader from './MobileHeader';

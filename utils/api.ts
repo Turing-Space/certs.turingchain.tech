@@ -1,4 +1,4 @@
-import { API_ENDPOINT } from '@/constants';
+import { API_ENDPOINT } from '@/utils/constants';
 import axios, { AxiosResponse } from 'axios';
 
 // default axios config

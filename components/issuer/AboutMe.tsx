@@ -5,7 +5,7 @@ import { CertsContext } from '@/contexts/certs';
 import AboutMeWrapper from '@/components/AboutMeWrapper';
 import { media } from '@/utils/theme';
 import { useTranslation } from 'react-i18next';
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 
 const AboutMeWrapperExtend = styled(AboutMeWrapper)`
   justify-content: center;
@@ -27,13 +27,13 @@ const IconWrapper = styled.div`
   flex-direction: column;
   width: 8.2em;
   height: 8.2em;
-  
+
   > p {
     letter-spacing: 0.67px;
   }
   ${media('phone')} {
     font-size: 1em;
-    float: right
+    float: right;
   }
 
   ${media('desktop')} {
@@ -46,10 +46,10 @@ const AnimatedNumber = styled(animated.p)`
   margin-top: 3px;
   font-weight: bold;
   font-family: ${p => p.theme.fontFamily.SFText};
-  
+
   ${media('phone')} {
     font-size: 2em;
-    float: right
+    float: right;
   }
 
   ${media('desktop')} {
@@ -66,7 +66,6 @@ const AboutMe = memo(() => {
     return acc;
   }, []).length;
   const { t } = useTranslation(i18nNamespace.Issuer);
-
 
   const typeCountProps = useSpring({
     number: typeCount,

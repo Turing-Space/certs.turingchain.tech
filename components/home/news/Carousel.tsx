@@ -5,7 +5,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import Description from '@/components/Description';
 import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 import { useTranslation } from 'react-i18next';
 
 type NewsData = {

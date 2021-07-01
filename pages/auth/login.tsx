@@ -1,6 +1,6 @@
 import { NextFC } from 'next';
 
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 import AuthLayout from '@/layouts/Auth';
 import Login from '@/components/auth/Login';
 

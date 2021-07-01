@@ -14,7 +14,7 @@ import { signIn } from '@/utils/api';
 import { preparedUser } from '@/utils/user';
 import notify from '@/utils/notify';
 import { useTranslation } from 'react-i18next';
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 
 import Loading from '../Loading';
 

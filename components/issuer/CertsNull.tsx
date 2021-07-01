@@ -2,7 +2,7 @@ import { FC } from 'react';
 import styled from 'styled-components';
 import { TMyCertsRenderComponentProps } from '@/components/Cert/MyCerts';
 import { useTranslation } from 'react-i18next';
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 
 const Wrapper = styled.div`
   display: flex;

@@ -1,6 +1,6 @@
 import { NextFC } from 'next';
 import ProductLayout from '@/layouts/Product';
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 import { useTranslation } from 'react-i18next';
 import AboutMe from '@/components/product/AboutMe';
 import MyCerts from '@/components/Cert/MyCerts';

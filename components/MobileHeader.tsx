@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import { scrollToID, getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 
 const Wrapper = styled.div`
   cursor: pointer;

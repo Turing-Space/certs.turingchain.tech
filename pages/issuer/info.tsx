@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 import ProductLayout from '@/layouts/Product';
 import withAuth from '@/hoc/withAuth';
 

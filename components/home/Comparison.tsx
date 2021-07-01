@@ -9,7 +9,7 @@ import { media } from '@/utils/theme';
 import Description from '@/components/Description';
 import Button from '@/components/Button';
 //import { getRelativePath } from '@/utils';
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 //import ScrollInfo from '../ScrollInfo';
 
 const Bg = styled.div`

@@ -3,7 +3,7 @@ import styled, { ThemeProvider } from 'styled-components';
 
 import GlobalStyles from '@/themes/GlobalStyles';
 import NormalizeStyles from '@/themes/NormalizeStyles';
-import { SITE_TITLE } from '@/constants';
+import { SITE_TITLE } from '@/utils/constants';
 import Header from '@/components/ProductHeader';
 import Footer from '@/components/product/Footer';
 import { media } from '@/utils/theme';

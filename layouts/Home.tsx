@@ -6,7 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import GlobalStyles from '@/themes/GlobalStyles';
 import NormalizeStyles from '@/themes/NormalizeStyles';
-import { SITE_TITLE } from '@/constants';
+import { SITE_TITLE } from '@/utils/constants';
 import { getRelativePath } from '@/utils';
 
 type TProps = {

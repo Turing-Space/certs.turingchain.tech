@@ -1,7 +1,7 @@
 import { NextFC } from 'next';
 import HomeLayout from '@/layouts/Home';
 import Privacy from '@/components/Privacy';
-import { SITE_TITLE, i18nNamespace } from '@/constants';
+import { SITE_TITLE, i18nNamespace } from '@/utils/constants';
 
 const Index: NextFC = () => {
   return (
