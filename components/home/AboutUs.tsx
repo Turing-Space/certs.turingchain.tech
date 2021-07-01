@@ -7,7 +7,7 @@ import H3 from '@/components/H3';
 import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
 import { useTranslation } from 'react-i18next';
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 
 const Title = styled(H2)`
   margin-bottom: 10vh;

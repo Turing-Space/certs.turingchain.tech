@@ -5,7 +5,7 @@ import { CertsContext } from '@/contexts/certs';
 import AboutMeWrapper from '@/components/AboutMeWrapper';
 import { media } from '@/utils/theme';
 import { useTranslation } from 'react-i18next';
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 
 const AboutMeWrapperExtend = styled(AboutMeWrapper)`
   justify-content: center;

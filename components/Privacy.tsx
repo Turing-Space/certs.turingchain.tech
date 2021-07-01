@@ -6,7 +6,7 @@ import Section from '@/components/Section';
 import H2 from '@/components/H2';
 import { media } from '@/utils/theme';
 import Description from '@/components/Description';
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 import { Router } from '@/i18n';
 
 const AnimatedWrapper = styled(ScrollAnimation)`

@@ -8,7 +8,7 @@ import News from '@/components/home/news/News';
 import Process from '@/components/home/Process';
 import Examples from '@/components/home/Examples';
 import AboutUs from '@/components/home/AboutUs';
-import { SITE_TITLE, i18nNamespace } from '@/constants';
+import { SITE_TITLE, i18nNamespace } from '@/utils/constants';
 
 const Index: NextFC = () => {
   return (

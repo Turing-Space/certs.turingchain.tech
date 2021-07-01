@@ -9,7 +9,7 @@ import theme from '@/themes/theme';
 import { trackPageView } from '@/utils/gtag';
 
 import { appWithTranslation, i18n } from '@/i18n';
-import { langsMap } from '@/constants';
+import { langsMap } from '@/utils/constants';
 
 Modal.setAppElement('#__next');
 

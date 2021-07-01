@@ -9,7 +9,7 @@ import theme from '@/themes/theme';
 import VerifiedProgressChart from './VerifiedProgressChart';
 import { TCert, CertsContext } from '@/contexts/certs';
 import { useTranslation } from 'react-i18next';
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 import { timeConverter } from '@/utils';
 
 const CertCover = styled.div<{ src: string }>`

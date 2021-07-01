@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 
 const Wrapper = styled.div`
   display: flex;

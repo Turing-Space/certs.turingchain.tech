@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { media } from '@/utils/theme';
 import RedLogo from '@/static/logo/logo-new.svg';
 import PrimaryWhiteLogo from '@/static/logo/logo-new-white.svg';
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 import { useTranslation } from 'react-i18next';
 
 const LogoWrapper = styled.div`

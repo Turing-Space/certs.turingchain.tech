@@ -7,7 +7,7 @@ import { getRelativePath } from '@/utils';
 import H1 from '@/components/H1';
 import Button from '@/components/Button';
 import { media } from '@/utils/theme';
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 
 const Text = styled.p`
   margin-bottom: 8px;

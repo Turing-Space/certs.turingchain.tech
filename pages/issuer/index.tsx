@@ -11,7 +11,7 @@ import { preparedCerts } from '@/utils/certs';
 import withAuth from '@/hoc/withAuth';
 import { UserContext } from '@/contexts/user';
 import { useTranslation } from 'react-i18next';
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 import queryString from 'query-string';
 import { preparedUser } from '@/utils/user';
 import { Router } from '@/i18n';

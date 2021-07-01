@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Ipfs from '@/components/Ipfs';
 
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 
 const Root = styled.div`
   background: #fafafa;

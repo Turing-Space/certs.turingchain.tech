@@ -1,4 +1,4 @@
-import { GA_ID } from '@/constants';
+import { GA_ID } from '@/utils/constants';
 import { PRODUCTION } from '@/environment';
 
 export function trackPageView(url: string) {

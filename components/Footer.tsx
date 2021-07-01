@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import H2 from '@/components/H2';
 import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 import { trackOutboundLink } from '@/utils/gtag';
 import { Router } from '@/i18n';
 

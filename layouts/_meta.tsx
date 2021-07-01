@@ -4,7 +4,7 @@ import {
   FAVICON_PATH,
   LARGE_ICON_PATH,
   SITE_URL,
-} from '@/constants';
+} from '@/utils/constants';
 
 import { getRelativePath } from '@/utils';
 

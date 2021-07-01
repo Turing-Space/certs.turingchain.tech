@@ -6,7 +6,7 @@ import { UserContext } from '@/contexts/user';
 import { media } from '@/utils/theme';
 import Title from './Cert/Title';
 import { useTranslation } from 'react-i18next';
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 
 const Wrapper = styled.div`
   margin-top: 10%;

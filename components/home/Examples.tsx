@@ -8,7 +8,7 @@ import { SectionGrey } from '@/components/Section';
 import Button from '@/components/Button';
 import H2 from '@/components/H2';
 import { media } from '@/utils/theme';
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 
 import 'react-lazy-load-image-component/src/effects/blur.css';
 

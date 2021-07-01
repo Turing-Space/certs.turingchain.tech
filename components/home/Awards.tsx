@@ -7,7 +7,7 @@ import H2 from '@/components/H2';
 import { media } from '@/utils/theme';
 import Description from '@/components/Description';
 import { getRelativePath } from '@/utils';
-import { i18nNamespace } from '@/constants';
+import { i18nNamespace } from '@/utils/constants';
 
 const Title = styled(H2)`
   margin: 0 auto 0;
