@@ -37,16 +37,16 @@
     "descriptionP4": "“You are also the sum total of your experiences.” Turing Certs will be your best e-experience."
   },
   "characteristic": {
-    "title": "Product Characteristics",
+    "title": "Turing Certsの特徴",
     "icons": {
-      "0": "Prevent Forge",
-      "1": "Quick Examination",
-      "2": "Saved Forever"
+      "0": "改ざん防止",
+      "1": "高速認証",
+      "2": "永久保存"
     },
     "subdescriptions": {
-      "0": "Adopted incorruptible, secure, and trustworthy blockchain technology to ensure 100% authenticity for every certificate.",
-      "1": "HR departments can verify authenticity anytime at anywhere via links shared by students to make personnel screening more convenient and time saving.",
-      "2": "Let students' learning portfolio be saved properly, and omit the incovenience for doing paper work, additionally, reduce the human cost for preserving data."
+      "0": "優れた改ざん耐性と、安全且つ高い信頼性を装備したブロックチェーン技術を使用していることで、1枚1枚全ての証明書に100%の信憑性確保を実現します。",
+      "1": "Turing Certs証明書のリンクを共有してもらうだけでワンクリックで経歴の信憑性を特定可能です。特に人事部の方々は、採用者選定をより速やかに効率的に行うことが可能です。",
+      "2": "あらゆる証明書をデジタル化し、データを適切に保存できるため、証明書の印刷など書面での証明書発行にかかる手間やコストの低減を実現できます。"
     }
   },
   "comparison": {
