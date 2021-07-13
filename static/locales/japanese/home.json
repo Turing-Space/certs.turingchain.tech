@@ -25,7 +25,7 @@
     },
     "subTitle": "ワンクリック認証であなたのブロックチェーン証明書を",
     "login": "ログイン",
-    "loginLink": "https://global.turingcerts.com/en/login",
+    "loginLink": "https://global.turingcerts.com/japanese/login",
     "mobileSubTitle": "Your Blockchain-based Resume for One-click Verify."
   },
   "aboutUs": {
@@ -50,30 +50,30 @@
     }
   },
   "comparison": {
-    "title": "Turing Certs",
-    "description1": "Around 30 colleges and educational institutions have been using TuringCerts to issue certificates",
-    "description2": "Over 3,000 certificates issued",
-    "description3": "Induced 3,000 students to own an international anti-counterfeiting digital learning portfolio",
+    "title": "Turing Certs の利用メリット",
+    "description1": "現在30以上の大学と教育機関がTuring Certsを利用を通して、",
+    "description2": "3000部以上の証書を発行しており、",
+    "description3": "3000人以上の学生の方々へ国際的に改ざん耐性のある学歴証明書の発行を実現しております。",
     "hidden": "Hidden ",
-    "subtitle1": "Educational Institutions",
-    "subtitle2": "Students",
-    "subtitle3": "Examinational Institutions",
+    "subtitle1": "証明書発行者",
+    "subtitle2": "証明書利用者",
+    "subtitle3": "証明書確認者",
     "subs": {
       "0": {
-        "title": "Educational Institutions",
-        "content1": "Abide by W3C international standard, which makes certificates more secure",
-        "content2": "Full record of personal journey, which makes certificates more complete"
+        "title": "証明書発行者",
+        "content1": "W3C国際スタンダードに則り、よりセキュリティの高い安全な証明書発行を実現可能。",
+        "content2": "全ての個人経歴を記録することが可能なためより精度の高い証明書の発行が可能。"
       },
       "1": {
-        "title": "Students",
-        "content1": "Integrated in a single platform, easier to use",
-        "content2": "Preserved lifelong, more durable",
-        "content3": "Share by one click, less time-consuming"
+        "title": "証明書利用者",
+        "content1": "１つのプラットフォームにデータが統合されるので簡単に使用可能。",
+        "content2": "永久保存ができるので永続的に使用可能。",
+        "content3": "ワンクリックでリンクを共有できるので、効率的。"
       },
       "2": {
-        "title": "Examinational Institutions",
-        "content1": "Certificates authorized and issued directly by issuers, more reliable",
-        "content2": "Verify by one click, more efficient"
+        "title": "証明書確認者",
+        "content1": "Turing Certsのシステムを利用している発行者より直接証明書が発行されるので高い信頼性を実現。",
+        "content2": "ワンクリックで信憑性の特定もスピーディーに。"
       }
     }
   },
