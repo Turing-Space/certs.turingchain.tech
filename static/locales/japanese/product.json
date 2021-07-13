@@ -1,0 +1,17 @@
+{
+  "AboutMe": {
+    "title": "Profile",
+    "icon1": "Total",
+    "icon2": "Verified",
+    "icon3": "Requested",
+    "logout": "Logout"
+  },
+  "MyCerts": {
+    "title": "My Certificates"
+  },
+  "Null": {
+    "notice0": "Oops! No verified certificates here yet.",
+    "notice1": "Let's start!",
+    "add": "Upload"
+  }
+}

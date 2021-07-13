@@ -1,0 +1,23 @@
+{
+  "AboutMe": {
+    "title": "Profile",
+    "icon1": "Type",
+    "icon2": "Total"
+  },
+  "MyCerts": {
+    "title": "Certificates"
+  },
+  "Issue": {
+    "notice": {
+      "0": "You haven't issued any certificate yet.",
+      "1": "Please fill in the profile information to proceed."
+    },
+    "step1": {
+      "certName": "Enter Certificate Name"
+    }
+  },
+  "CertModal": {
+    "progress": "Verification Progress"
+  },
+  "addCert": "Upload"
+}

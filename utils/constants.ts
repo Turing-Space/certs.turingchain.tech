@@ -26,4 +26,5 @@ export const API_ENDPOINT = 'https://x1certificate-aqkcbxdduq-uc.a.run.app/v1';
 export const langsMap: { [key: string]: boolean } = {
   'zh-TW': true,
   en: true,
+  japanese: true,
 };
