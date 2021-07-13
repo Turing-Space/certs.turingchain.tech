@@ -104,18 +104,18 @@
     "title": "ニュース"
   },
   "process": {
-    "title": "Issuance Process",
+    "title": "Turing Certs証明書発行までの流れ",
     "description": {
-      "1": "Create Certificate Template",
-      "2": "Enter Receipient Information",
-      "3": "Certificate on Blockchain",
-      "4": "Issuance Completed"
+      "1": "テンプレート作成",
+      "2": "証明書発行先リスト作成",
+      "3": "ブロックチェーン証明書作成",
+      "4": "発行完了"
     },
     "subdescription": {
-      "1": "Import Background Image and Information Filed",
-      "2": "Upload CSV File",
-      "3": "Issuing",
-      "4": "Send to Recepient Email Automatically"
+      "1": "背景画像のインポートと情報記入",
+      "2": "CSV ファイルをアップロード",
+      "3": "証明書発行",
+      "4": "発行先へ自動で証明書データをメール送信"
     }
   },
   "demo": {
