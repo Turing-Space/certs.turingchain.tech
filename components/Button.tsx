@@ -12,7 +12,7 @@ const Button = styled.button<TButtonProps>`
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 12em;
+  max-width: 12.4em;
 
   color: ${p => p.theme.colors.white};
   border-radius: 40px;
