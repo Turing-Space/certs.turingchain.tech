@@ -85,7 +85,7 @@ const StyledSubDescription = styled(Description)`
   color: ${p => p.theme.colors.backgroundWordDarkGrey};
 
   ${media('desktop')} {
-    width: 80%;
+    width: 90%;
   }
 `;
 

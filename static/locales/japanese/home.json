@@ -15,15 +15,15 @@
   },
   "footer": {
     "title": "お問い合わせ",
-    "security": "Information Security Policy",
-    "privacy": "Privacy Policy"
+    "security": "情報セキュリティーポリシー",
+    "privacy": "プライバシーポリシー"
   },
   "home": {
     "title": {
       "en": "TuringCerts",
       "cn": "圖靈證書"
     },
-    "subTitle": "ワンクリック認証であなたのブロックチェーン証明書を",
+    "subTitle": "ワンクリック認証で、あなたのブロックチェーン証明書を",
     "login": "ログイン",
     "loginLink": "https://global.turingcerts.com/japanese/login",
     "mobileSubTitle": "Your Blockchain-based Resume for One-click Verify."
@@ -32,8 +32,8 @@
     "title": "会社案内",
     "quote": "「私達は各メンバーの経験の集約から成る組織です。」",
     "descriptionP1": "もしかすると皆さんにも日記を書く習慣があるかもしれない、紙に日々の出来事を書き残しておくような。私達は皆一定の時間が過ぎれば自分の身に起きた物語を忘れやすくなる、そして世界もそうして私たちのことを忘れていく。",
-    "descriptionP2": "私は各個人の一生は全て記録するに値すほど価値のあるものだと信じています。そこでTuringCerts証明書に児童から大学卒業、そして就職までの全ての経歴を組み込むことにしました。ペーパーレス証明書により環境保護に取り組み、電子署名により信憑性を追求し、そしてデジタル証明書データにより個人情報の保護に努めていくのが私たちの任務です。",
-    "descriptionP3": "The 1st-quarter of the 21st-century is coming to an end, and Turing Certs still centers around every individual. Connecting every piece of virtual and real-world you together, we outline and shape people in detail by what they have gone through.",
+    "descriptionP2": "私は各個人の一生は、全て記録するに値するほど価値のあるものだと信じています。そこで、TuringCertsに児童から大学卒業、そして就職までの全ての経歴を組み入れられるようにしました。ペーパーレスなデジタル証明書により環境保護を取り組み、デジタル署名による情報の信憑性を追求し、デジタルIDを用いて個人情報の保護に努めていくことが私たちの任務です。",
+    "descriptionP3": "21世紀の第1四半期が終わりを迎える中、Turing Certsは各個人を軸として、バーチャルとリアルの世界に散らばってしまっている各々の情報や資料を一つ一つ繋ぎ合わせます。一人一人が歩んできた経歴の詳細から個人をアウトライン化し、象ります。",
     "descriptionP4": "「皆さんも皆さん自身の経験の集約から成る存在です。」Turing Certsが皆さんの電子日記の役割を果たします。"
   },
   "characteristic": {
@@ -44,9 +44,9 @@
       "2": "永久保存"
     },
     "subdescriptions": {
-      "0": "優れた改ざん耐性と、安全且つ高い信頼性を装備したブロックチェーン技術を使用していることで、1枚1枚全ての証明書に100%の信憑性確保を実現します。",
-      "1": "Turing Certs証明書のリンクを共有してもらうだけでワンクリックで経歴の信憑性を特定可能です。特に人事部の方々は、採用者選定をより速やかに効率的に行うことが可能です。",
-      "2": "あらゆる証明書をデジタル化し、データを適切に保存できるため、証明書の印刷など書面での証明書発行にかかる手間やコストの低減を実現できます。"
+      "0": "優れた改ざん耐性と、高い安全性と信頼性を装備したブロックチェーン技術を使用。1枚1枚全ての証明書に100%の信憑性を確保可能。",
+      "1": "Turing Certs証明書の リンク共有のみで,経歴の信憑性を特定可能。特に人事事務における採用者選定では、よりスピーディ且つ高い効率化も実現可能。",
+      "2": "あらゆる証明書のデジタル化と、高セキュリティによりデータの適切な保存を実現。書面での証明書発行にかかる印刷の手間やコストの低減が可能。"
     }
   },
   "comparison": {
@@ -61,18 +61,18 @@
     "subs": {
       "0": {
         "title": "証明書発行者",
-        "content1": "W3C国際スタンダードに則り、よりセキュリティの高い安全な証明書発行を実現可能。",
+        "content1": "W3C国際スタンダードに則り、更にセキュリティの高い安全な証明書発行を実現可能。",
         "content2": "全ての個人経歴を記録することが可能なためより精度の高い証明書の発行が可能。"
       },
       "1": {
         "title": "証明書利用者",
         "content1": "１つのプラットフォームにデータが統合されるので簡単に使用可能。",
-        "content2": "永久保存ができるので永続的に使用可能。",
+        "content2": "永久保存の実現による永続的な使用が可能。",
         "content3": "ワンクリックでリンクを共有できるので、効率的。"
       },
       "2": {
         "title": "証明書確認者",
-        "content1": "Turing Certsのシステムを利用している発行者より直接証明書が発行されるので高い信頼性を実現。",
+        "content1": "発行者がTuring Certsを利用して直接証明書を発行するので、高い信憑性を実現。",
         "content2": "ワンクリックで信憑性の特定もスピーディーに。"
       }
     }
@@ -81,22 +81,22 @@
     "title": "受賞歴",
     "subs": {
       "0": {
-        "content": "Microsoft Imagine Cup 2020 - 北アメリカ3位"
+        "content": "Microsoft Imagine Cup 2020 - 北アメリカエリア第5位"
       },
       "1": {
-        "content": "2020 國研院 500 Startups 遇見新創最高榮譽與新加坡國家代表隊資格"
+        "content": "Taiwan National Applied Research Laboratories' Vision Program Awards 2020 - トップ１０選出＆シンガポール代表チームへ抜擢"
       },
       "2": {
-        "content": "Taiwan Ministry of Science and Tchnology's National FITI Startup Awards 2019 - ベストスタートアップ＆懸賞金200万ニュー台湾ドル"
+        "content": "Taiwan Ministry of Science and Tchnology's National FITI Startup Awards 2019 - ベストスタートアップ賞受賞＆懸賞金200万ニュー台湾ドル獲得"
       },
       "3": {
-        "content": "美國阿里巴巴創業者基金 X 匯豐國際賽美國總決賽冠軍與最佳科技創新獎"
+        "content": "Alibaba Entrepreneurship Fund X HSBC JUMPSTARTER 2020 - ベストイノベーションアワード賞受賞＆総合優勝"
       },
       "4": {
-        "content": "UC Berkeley Free Ventures Batch XIII 2019 - 選抜５組スタートアップへ選出"
+        "content": "UC Berkeley Free Ventures Batch XIII 2019 - 選抜スタートアップ５組へ選出"
       },
       "5": {
-        "content": "Google SingularityU APAC Global Impact Challenge 2019 - トップ４スタートアップ"
+        "content": "Google SingularityU APAC Global Impact Challenge 2019 - 世界トップ４"
       }
     }
   },
@@ -106,16 +106,16 @@
   "process": {
     "title": "Turing Certs証明書発行までの流れ",
     "description": {
-      "1": "テンプレート作成",
-      "2": "証明書発行先リスト作成",
-      "3": "ブロックチェーン証明書作成",
+      "1": "証明書のテンプレート作成",
+      "2": "証明書発行対象者のリスト作成",
+      "3": "ブロックチェーン証明書の発行",
       "4": "発行完了"
     },
     "subdescription": {
-      "1": "背景画像のインポートと情報記入",
+      "1": "背景画像の選択と情報記入欄を設定",
       "2": "CSV ファイルをアップロード",
-      "3": "証明書発行",
-      "4": "発行先へ自動で証明書データをメール送信"
+      "3": "証明書の発行スタート",
+      "4": "発行後は対象者へ自動で証明書データをメール送信"
     }
   },
   "demo": {
