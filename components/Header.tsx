@@ -85,7 +85,7 @@ const LanguageWrapper = styled.div<{ open: boolean }>`
   align-items: center;
   height: 100%;
   width: 15%;
-  margin-right: -3%;
+  margin-right: -2.3%;
   font-size: ${p => p.theme.fontSize.smaller};
   border-left: solid 1px #424242;
   padding: 0 2.5rem 0 1.5rem;
