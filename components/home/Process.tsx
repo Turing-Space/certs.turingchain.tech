@@ -68,8 +68,8 @@ const Icon = styled.div`
   }
 `;
 
-const IconDescription = styled.p<{ isEn: boolean }>`
-  white-space: ${p => (p.isEn ? 'pre-line' : 'nowrap')};
+const IconDescription = styled.p<{ isEn: boolean; isJp: boolean }>`
+  white-space: ${p => (p.isEn || p.isJp ? 'pre-line' : 'nowrap')};
   font-size: ${p => p.theme.fontSize.bigger};
   font-family: ${p => p.theme.fontFamily.NotoSansTC};
   font-weight: 500;
@@ -94,6 +94,7 @@ const IconSubDescription = styled(Description)`
 const Process: FC<{ id: string }> = ({ id }) => {
   const { t, i18n } = useTranslation(i18nNamespace.Home);
   const isEn = i18n.language === 'en';
+  const isJp = i18n.language === 'japanese';
   return (
     <Section justifyContent="center" id={id} fullscreen>
       <AnimatedWrapper animateIn="fadeInUp" animateOnce>
@@ -104,7 +105,7 @@ const Process: FC<{ id: string }> = ({ id }) => {
           <Icon>
             <img src={getRelativePath('/static/process/icon_process_1.svg')} />
           </Icon>
-          <IconDescription isEn={isEn}>
+          <IconDescription isEn={isEn} isJp={isJp}>
             {t('process.description.1')}
           </IconDescription>
           <IconSubDescription>
@@ -115,7 +116,7 @@ const Process: FC<{ id: string }> = ({ id }) => {
           <Icon>
             <img src={getRelativePath('/static/process/icon_process_2.svg')} />
           </Icon>
-          <IconDescription isEn={isEn}>
+          <IconDescription isEn={isEn} isJp={isJp}>
             {t('process.description.2')}
           </IconDescription>
           <IconSubDescription>
@@ -126,7 +127,7 @@ const Process: FC<{ id: string }> = ({ id }) => {
           <Icon>
             <img src={getRelativePath('/static/process/icon_process_3.svg')} />
           </Icon>
-          <IconDescription isEn={isEn}>
+          <IconDescription isEn={isEn} isJp={isJp}>
             {t('process.description.3')}
           </IconDescription>
           <IconSubDescription>
@@ -137,7 +138,7 @@ const Process: FC<{ id: string }> = ({ id }) => {
           <Icon>
             <img src={getRelativePath('/static/process/icon_process_4.svg')} />
           </Icon>
-          <IconDescription isEn={isEn}>
+          <IconDescription isEn={isEn} isJp={isJp}>
             {t('process.description.4')}
           </IconDescription>
           <IconSubDescription>

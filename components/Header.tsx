@@ -75,7 +75,7 @@ const SectionWrapper = styled.ul`
 `;
 
 const StyledButton = styled(Button)`
-  width: 8em;
+  width: 8.5em;
   padding: 0.7em 1em;
 `;
 
@@ -84,6 +84,8 @@ const LanguageWrapper = styled.div<{ open: boolean }>`
   display: flex;
   align-items: center;
   height: 100%;
+  width: 15%;
+  margin-right: -2.3%;
   font-size: ${p => p.theme.fontSize.smaller};
   border-left: solid 1px #424242;
   padding: 0 2.5rem 0 1.5rem;
@@ -224,6 +226,12 @@ const Header: SFC = () => {
                   <p>(EN)</p>
                 </div>
                 <p>English</p>
+              </div>
+              <div onClick={() => i18n.changeLanguage('japanese')}>
+                <div className="lang-prefix">
+                  <p>(JP)</p>
+                </div>
+                <p>日本語</p>
               </div>
             </LanguageChooseWrapper>
           </LanguageWrapper>
