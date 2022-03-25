@@ -84,6 +84,23 @@ body {
 .benefits-img img{
   width: 100px;
   height: 100px;
+  
+}
+
+.iota-img img{
+  height: 100px;
+  max-height: 100px;
+  text-align: center;
+}
+
+.eu img{
+  height: 36px;
+  max-height: 36px;
+  text-align: center;
+}
+
+.iota-img span{
+  font-size: 1em;
 }
 
 .span-no {
@@ -425,6 +442,10 @@ div[class^='bg-black'] pre, div[class*=' bg-black'] pre, div[class^='bg-dark'] p
 @media (max-width: 767.98px) {
   .blockquote {
     padding: 16px 20px;
+  }
+  .iota-img img{
+    height: 100%;
+    text-align: center;
   }
 }
 
