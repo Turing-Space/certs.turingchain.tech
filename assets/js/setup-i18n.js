@@ -5,9 +5,6 @@ i18n
     resource: "assets/i18n.json",
     locale: "en",
   })
-  .init(function (dict) {
-    console.log(dict);
-  });
 
 function onChangeLanguage() {
   const value = document.getElementById("language-selector").value;
