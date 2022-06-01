@@ -5,6 +5,7 @@ i18n
     resource: "assets/i18n.json",
     locale: "en",
   })
+  .init(() => i18n.translate());
 
 function onChangeLanguage() {
   const value = document.getElementById("language-selector").value;
