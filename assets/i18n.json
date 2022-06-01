@@ -1,8 +1,166 @@
 {
   "en": {
-    "slogan": "Zero Fraud, Zero Paper, Sustainable Society"
+    "intro": {
+      "slogan": "Zero Fraud, Zero Paper, <br>Sustainable Society",
+      "slogan-description": "One-stop service to issue, manage, and verify digital credentials on blockchain for everyone.",
+      "login": "Login"
+    },
+    "benefits": {
+      "title": "Benefits",
+      "cost": {
+        "before-highlight": "Save cost by",
+        "highlight": "86%"
+      },
+      "privacy": {
+        "before-highlight": "Prioritize privacy with ",
+        "highlight": "GDPR",
+        "after-highlight": "compliance"
+      },
+      "reduce-paper-usage": {
+        "before-highlight": "Reduce paper usage by ",
+        "highlight": "100%"
+      },
+      "efficient": {
+        "before-highlight": "Save time by ",
+        "highlight": "50%"
+      },
+      "license": {
+        "before-highlight": "Protect confidentiality with ",
+        "highlight": "ISO 27001",
+        "after-highlight": " license"
+      },
+      "reduce-carbon-emission": {
+        "before-highlight": "Reduce carbon emission by ",
+        "highlight": "98%"
+      }
+    },
+    "impact": {
+      "plus": "+",
+      "title": "Impact",
+      "case1": {
+        "count": "32000",
+        "unit": "Certificates"
+      },
+      "case2": {
+        "count": "35",
+        "unit": "Universities"
+      },
+      "case3": {
+        "count": "42",
+        "unit": "Institutes"
+      },
+      "case4": {
+        "count": "9",
+        "unit": "Countries/Regions"
+      }
+    },
+    "whom-we-can-help": {
+      "title": "Whom we can help",
+      "learn-more-button-text": "Learn More",
+      "case1": {
+        "name": "University",
+        "description": "Transcript, Diploma, Offer of Admission, Award Certificate, etc."
+      },
+      "case2": {
+        "name": "Educational Institution",
+        "description": "Course Certificate, Proof of Completion, Event Certificate, etc."
+      },
+      "case3": {
+        "name": "Real Estate",
+        "description": "E-contract, Transaction Record, Business Cards, House History, etc."
+      },
+      "case4": {
+        "name": "Agriculture",
+        "description": "Proof of Origin, Organic Labels, Fairtrade Certification, etc."
+      },
+      "case5": {
+        "name": "Arts",
+        "description": "Ownership Certificate, Evidence of Creation, Auction Record, etc."
+      }
+    },
+    "our-clients": "Our Clients",
+    "recognition": "Recognition"
   },
-  "tr": {
-    "slogan": "Sıfır Sahtecilik, Sıfır kağıt tüketimi, Sürdürülebilir Toplum"
+  "zh-TW": {
+    "intro": {
+      "slogan": "零詐欺，零紙張，<br>可持續社會",
+      "slogan-description": "為所有人在區塊鏈上簽發、管理和驗證數字憑證的一站式服務。",
+      "login": "登入"
+    },
+    "benefits": {
+      "title": "好處",
+      "cost": {
+        "before-highlight": "節省成本 ",
+        "highlight": "86%"
+      },
+      "privacy": {
+        "before-highlight": "優先考慮隱私，符合 ",
+        "highlight": "GDPR",
+        "after-highlight": ""
+      },
+      "reduce-paper-usage": {
+        "before-highlight": "減少紙張使用量 ",
+        "highlight": "100%"
+      },
+      "efficient": {
+        "before-highlight": "節省時間 ",
+        "highlight": "50%"
+      },
+      "license": {
+        "before-highlight": "保護機密 ",
+        "highlight": "ISO 27001",
+        "after-highlight": " 執照"
+      },
+      "reduce-carbon-emission": {
+        "before-highlight": "減少碳排放 ",
+        "highlight": "98%"
+      }
+    },
+    "impact": {
+      "plus": "+",
+      "title": "影響力",
+      "case1": {
+        "count": "32000",
+        "unit": "證書"
+      },
+      "case2": {
+        "count": "35",
+        "unit": "大學"
+      },
+      "case3": {
+        "count": "42",
+        "unit": "研究所"
+      },
+      "case4": {
+        "count": "9",
+        "unit": "國家/地區"
+      }
+    },
+    "whom-we-can-help": {
+      "title": "我們可以幫助誰",
+      "learn-more-button-text": "了解更多",
+      "case1": {
+        "name": "大學",
+        "description": "成績單、文憑、錄取通知書、獲獎證書等。"
+      },
+      "case2": {
+        "name": "教育機構",
+        "description": "課程證書、結業證明、活動證書等"
+      },
+      "case3": {
+        "name": "房地產",
+        "description": "電子合約、交易記錄、名片、房屋歷史等"
+      },
+      "case4": {
+        "name": "農業",
+        "description": "原產地證明、有機標籤、公平貿易認證等"
+      },
+      "case5": {
+        "name": "藝術",
+        "description": "所有權證書、創作證據、拍賣記錄等"
+      }
+    },
+    "our-clients": "我們的客戶",
+    "recognition": "認可"
   }
 }
