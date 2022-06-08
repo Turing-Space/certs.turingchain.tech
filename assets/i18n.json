@@ -89,6 +89,32 @@
       "security-policy": "Information Security Policy",
       "privacy-policy": "Privacy Policy",
       "address": "7F.-10, No. 335, Ruiguang Rd., Neihu Dist., Taipei City 11492 , Taiwan"
+    },
+    "aboutUs": {
+      "title": "About Us",
+      "first-subtitle": "“We are the sum total of our experiences.”",
+      "first-paragraph": "You may have the habit of keeping a diary, taking down your daily exquisite dribs and drabs by pencils and paper. Nevertheless, things don’t turn out the way we wish as our stories are forgotten easily, and the world thus forgets us. Still, we firmly believe our every footstep counts - since all are worth recording. This is why Turing Certs has been dedicating to setting up a career portfolio from your 1st-grade to your graduation, even from your 1st occupation through your ultimate success. Seeking authenticity by e-signature, protecting our Mother Nature by going paperless, and guarding your personal data by digital identification are our missions. “You are also the sum total of your experiences.” Turing Certs will be your best e-experience.",
+      "our-team": "Our Team",
+      "our-team-paragraph": "We are a team of CISSP security experts, ACM/IEEE blockchain researchers, and experienced product designers from UC Berkeley, NTU Singapore, HKUST, and National Taiwan University.",
+      "team-member-CEO": "Jeff Hu",
+      "team-member-CEO-description": "Founder & CEO",
+      "team-member-product": "Yuffie Hsu",
+      "team-member-product-description": "Head of Product",
+      "team-member-tech": "Henry Hang",
+      "team-member-tech-description": "Tech Lead",
+      "team-member-security": "Jacky Pan",
+      "team-member-security-description": "Security Expert",
+      "team-member-BD-SA": "Yiwei Lin",
+      "team-member-BD-SA-description": "Head of BD, Southeast Asia",
+      "team-member-BD-Japan": "Mari Ishikawa",
+      "team-member-BD-Japan-description": "Head of BD, Japan",
+      "what-people-say": "What People Say",
+      "johnny-wu": "Johnny C.J. Wu",
+      "johnny-wu-title": "Head of Office of International Affairs, National Taiwan University",
+      "johnny-wu-description": "“Turing Certs is the best blockchain certification provider out there. Thanks to its security, convenience and innovative functions such as its connection to LinkedIn, it truly bridges the gap for the university to help students create their own digital learning footprints.”",
+      "professor-liao": "Professor G.Z. Liao",
+      "professor-liao-title": "Dean of Institute of Learning Sciences and Technologies, National Tsing Hua University",
+      "professor-liao-description": "“Learning begins with the Turing Certs and ends in an endless future.”"
     }
   },
   "zh-TW": {
@@ -181,6 +207,32 @@
       "security-policy": "資訊安全政策",
       "privacy-policy": "保密政策",
       "address": "台灣台北市內湖區瑞光路335號7樓之10<br>"
+    },
+    "aboutUs": {
+      "title": "關於我們",
+      "first-subtitle": "“我們是所有人經驗的總和。”",
+      "first-paragraph": "你也許有寫日記的習慣，用紙跟筆寫下你日常精緻的點點滴滴。然而，事情並不像我們期望的發展因為我們的故事很容易被遺忘，接著被世界所遺忘。但我們依然堅定的相信我們所走的每一步都有它的意義 - 每一步都值得被記錄。這就是為什麼圖靈鏈一直在致力於從國小一年級到畢業，甚至到你第一次的成功去設定一個你的生涯檔案。透過電子簽名尋求透過電子簽名尋求真實性，透過無紙化保護我們的大自然，並透過數位身分認證守護你的個人資料是我們的任務。“你也是你的經驗的總和。” 圖靈鏈會是你最佳的數位經驗。",
+      "our-team": "我們的團隊",
+      "our-team-paragraph": "我們的團隊是由 CISSP 資安專家，ACM/IEEE 區塊鏈研究員，以及從加州柏克萊、南洋理工大學、香港科技大學、台灣大學畢業擁有豐富經驗的產品設計師所組成。",
+      "team-member-CEO": "胡耀傑",
+      "team-member-CEO-description": "創辦人 & 執行長",
+      "team-member-product": "徐靖雅",
+      "team-member-product-description": "產品主管",
+      "team-member-tech": "杭孟澤",
+      "team-member-tech-description": "技術主管",
+      "team-member-security": "潘子維",
+      "team-member-security-description": "資安專家",
+      "team-member-BD-SA": "林奕葳",
+      "team-member-BD-SA-description": "西南亞業務主管",
+      "team-member-BD-Japan": "Mari Ishikawa",
+      "team-member-BD-Japan-description": "日本業務主管",
+      "what-people-say": "其他人怎麼說",
+      "johnny-wu": "吳霽儒",
+      "johnny-wu-title": "國立台灣大學國際合作總監兼股長",
+      "johnny-wu-description": "“圖靈鏈是市面上最好的區塊鏈證書提供者。多虧於它的安全、便利及創新的功能像是連接到 LinkedIn，它確實彌補了大學幫助學生創造他們自己的數位學習履歷的不足。”",
+      "professor-liao": "廖冠智教授",
+      "professor-liao-title": "國立清華大學學習科學與科技研究所所長",
+      "professor-liao-description": "“學習開始於圖靈鏈並在無盡的未來結束。”"
     }
   }
 }
