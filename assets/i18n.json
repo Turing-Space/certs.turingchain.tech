@@ -60,7 +60,7 @@
       }
     },
     "whom-we-can-help": {
-      "title": "Whom we can help",
+      "title": "Whom We Can Help",
       "learn-more-button-text": "Learn More",
       "case1": {
         "name": "University",
@@ -180,7 +180,7 @@
     "footer": {
       "security-policy": "資訊安全政策",
       "privacy-policy": "保密政策",
-      "address": "台灣台北市內湖區瑞光路335號7樓之10"
+      "address": "台灣台北市內湖區瑞光路335號7樓之10<br>"
     }
   }
 }
