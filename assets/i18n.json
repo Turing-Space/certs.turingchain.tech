@@ -1,5 +1,10 @@
 {
   "en": {
+    "header": {
+      "about-us": "About Us",
+      "news": "News",
+      "sign-up": "Sign Up As Issuer"
+    },
     "intro": {
       "slogan": "Zero Fraud, Zero Paper, <br>Sustainable Society",
       "slogan-description": "One-stop service to issue, manage, and verify digital credentials on blockchain for everyone.",
@@ -79,9 +84,19 @@
       }
     },
     "our-clients": "Our Clients",
-    "recognition": "Recognition"
+    "recognition": "Recognition",
+    "footer": {
+      "security-policy": "Information Security Policy",
+      "privacy-policy": "Privacy Policy",
+      "address": "7F.-10, No. 335, Ruiguang Rd., Neihu Dist., Taipei City 11492 , Taiwan"
+    }
   },
   "zh-TW": {
+    "header": {
+      "about-us": "關於我們",
+      "news": "新聞",
+      "sign-up": "申請成為發證者"
+    },
     "intro": {
       "slogan": "零詐欺，零紙張，<br>可持續社會",
       "slogan-description": "為所有人在區塊鏈上簽發、管理和驗證數字憑證的一站式服務。",
@@ -161,6 +176,11 @@
       }
     },
     "our-clients": "我們的客戶",
-    "recognition": "認可"
+    "recognition": "認可",
+    "footer": {
+      "security-policy": "資訊安全政策",
+      "privacy-policy": "保密政策",
+      "address": "台灣台北市內湖區瑞光路335號7樓之10"
+    }
   }
 }
