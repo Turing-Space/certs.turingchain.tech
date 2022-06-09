@@ -127,7 +127,6 @@
       "professor-liao-description": "“Learning begins with the Turing Certs and ends in an endless future.”"
     },
     "news": {
-      "title": "News",
       "berkeley-innovators": {
         "description": "Upon meeting at a blockchain conference in San Francisco, Taiwanese entrepreneur Yao-Chieh (Jeff) Hu so impressed several Berkeley thought leaders in attendance that they invited him to become a research scholar in the UC Berkeley Blockchain Lab."
       }
@@ -301,7 +300,6 @@
       "professor-liao-description": "“學習開始於圖靈鏈並在無盡的未來結束。”"
     },
     "news": {
-      "title": "新聞",
       "berkeley-innovators": {
         "description": "在一個舊金山舉辦的區塊鏈會議見面時，台灣創業家胡耀傑 (Jeff) 讓許多參加會議的加州大學柏克萊分校思想領袖留下深刻印象，甚至邀請他成為加州大學柏克萊分校區塊鏈實驗室的其中一位研究學者。"
       }
