@@ -123,6 +123,23 @@
       "berkeley-innovators": {
         "description": "Upon meeting at a blockchain conference in San Francisco, Taiwanese entrepreneur Yao-Chieh (Jeff) Hu so impressed several Berkeley thought leaders in attendance that they invited him to become a research scholar in the UC Berkeley Blockchain Lab."
       }
+    },
+    "information-security-policy": {
+      "date": "April 11, 2022",
+      "purpose-title": "1. Purpose",
+      "purpose-description": "As information security is the basis for maintaining the safe operation of our service, to ensure the security of personnel, data, information systems, equipment, and networks of Turing Chain Taiwan Limited (refer to as Our Company in the following), we have stipulated the Information Security Policy (refer to as this document in the following) as the highest guiding principle of our Company's Information Security Management System (refer to as ISMS in the following).",
+      "objectives-title": "2. Objectives",
+      "objectives-description": "Our Company's information security objectives are to ensure the confidentiality, integrity, availability, and compliance of critical information and service. We define and measure the quantitative indicators of information security performance according to respective competency to confirm the implementation status of ISMS and whether the information security objectives are achieved.",
+      "scope-of-application-title": "3. Scope of Application",
+      "scope-of-application-description": "The ISMS takes into account internal and external issues, the needs and expectations of interested parties, the interfaces, and dependencies between our Company's activities, and those of other organizations. The scope of application is service software development, testing, operations, and operating environments of Turing Certs Blockchain-based Resume, including physical office areas, cloud systems, developers, software Turing Certs Blockchain-based Resume is applied to Turing Certs Blockchain-based Resume software development, testing, operation, and operation environment, including physical office area, cloud system, developers, software, operation data, system management department and related operation process.",
+      "contents-covered-title": "4. Contents covered",
+      "contents-covered-description": "The ISMS includes the following contents, and the relevant departments and personnel shall stipulate management regulations or implementation plans for the following matters, put in to practice, and evaluate the effectiveness of the implementation regularly.</br>● Information security organization and management inspection</br>● Risk management</br>● Document and record management</br>● Internal auditing of information security</br>● Human resource security management</br>● Asset management</br>● Access control management</br>● Physical and environmental security management</br>● Operational security and cryptography</br>● Communication security management</br>● System acquisition, development, and maintenance management</br>● Vendor relationship management</br>● Information security incident management</br>● Business continuity management</br>● Compliance management</br>",
+      "organization-and-authority-title": "5. Organization and Authority",
+      "organization-and-authority-description": "To ensure the effective operation of the ISMS, the information security organization and authority should be clearly defined to promote and maintain various management, implementation, inspection, etc.",
+      "implementation-principles-title": "6. Implementation Principles",
+      "implementation-principles-description": "The implementation of ISMS shall be based on the process of Plan, Do, Check, and Act to ensure the effectiveness and continuous improvement of information business operation.",
+      "review-and-evaluation-title": "7. Review and Evaluation",
+      "review-and-evaluation-description": "7.1. This document shall be evaluated and reviewed when encountering major changes or at least once a year to ensure the effectiveness of the latest development of laws, technology, and related departments of information security practices.</br>7.2. This document shall be revised based on the results of the review, and shall take effect after it is signed and published by the person in charge of our Company.</br>7.3. This document shall be sent to the interested parties, such as partners, employees, suppliers, etc. via document, e-mail, or document managing system after it is stipulated or revised."
     }
   },
   "zh-TW": {
@@ -249,6 +266,23 @@
       "berkeley-innovators": {
         "description": "在一個舊金山舉辦的區塊鏈會議見面時，台灣創業家胡耀傑 (Jeff) 讓許多參加會議的加州大學柏克萊分校思想領袖留下深刻印象，甚至邀請他成為加州大學柏克萊分校區塊鏈實驗室的其中一位研究學者。"
       }
+    },
+    "information-security-policy": {
+      "date": "2022年4月11日",
+      "purpose-title": "1. 目的",
+      "purpose-description": "鑑於資訊安全乃維繫各項服務安全運作之基礎，為確保台灣圖靈鏈股份有限公司（以下簡稱本公司）人員、資料、資訊系統、設備及網路之安全，特訂定資訊安全政策（以下簡稱本文件），作為本公司資訊安全管理系統(以下簡稱ISMS)的最高指導原則。",
+      "objectives-title": "2. 目標",
+      "objectives-description": "本公司資訊安全目標為：確保重要資訊及服務之機密性（Confidentiality）、完整性（Integrity）、可用性（Availability）與遵循性（Compliance）。並依各階層與職能定義及量測資訊安全績效之量化指標，以確認ISMS實施狀況及是否達成資訊安全目標。",
+      "scope-of-application-title": "3. 適用範圍",
+      "scope-of-application-description": "本ISMS考量本公司內部及外部議題、關注方之需要及期望，以及本公司活動與其他組織活動間之介面及相依性，適用範圍為：TuringCerts Blockchain-based Resume 圖靈證書區塊鏈履歷服務之軟體開發、測試、營運及作業環境，包括：實體辦公室區域、雲端系統、開發人員、軟體、營運資料、系統管理單位及相關作業流程。",
+      "contents-covered-title": "4. 涵蓋內容",
+      "contents-covered-description": "ISMS包括內容如下，有關單位及人員就下列事項，應訂定對應之管理規範或實施計畫，並據以實施及定期評估實施成效：</br>● 資訊安全組織與管理審查</br>● 風險管理</br>● 文件與記錄管理</br>● 資訊安全內部稽核</br>● 人力資源安全管理</br>● 資產管理</br>● 存取控制管理</br>● 實體與環境安全管理</br>● 運作安全與密碼學</br>● 通訊安全管理</br>● 系統獲取、發展與維護管理</br>● 供應商關係管理</br>● 資訊安全事故管理</br>● 營運持續管理</br>● 遵循性管理</br>",
+      "organization-and-authority-title": "5. 組織與權責",
+      "organization-and-authority-description": "為確保ISMS能有效運作，應明定資訊安全組織及權責，以推動及維持各類管理、執行與查核等工作之進行。",
+      "implementation-principles-title": "6. 實施原則",
+      "implementation-principles-description": "ISMS之實施應依據規劃（Plan）、執行（Do）、查核（Check）及改善（Act）流程模式，以週而復始、循序漸進的精神，確保資訊業務運作之有效性及持續改善。",
+      "review-and-evaluation-title": "7. 審查與評估",
+      "review-and-evaluation-description": "7.1. 本文件應於重大變更或至少每年評估審查一次，以反映相關法令法規、技術、業務及相關部門等最新發展現況，確保資訊安全實務作業之有效性。</br>7.2. 本文件應依據審查結果進行修訂，並經本公司負責人簽核發佈後始生效。</br>7.3. 本文件訂定或修訂後應以書面、電子郵件、文件管理系統或其他方式告知關注方，如：合作夥伴、所屬員工、供應商等。"
     }
   }
 }
