@@ -29,6 +29,7 @@
 
 		gtag('config', 'G-2M60DR7KSW');
 	</script>
+	<script type="module" src="assets/js/setup-i18n.js" ></script>
 </head>
 
 <body data-preloader="1">
@@ -49,18 +50,24 @@
 			<div class="header-menu">
 				<ul class="nav">
 					<li class="nav-item">
-						<a class="nav-link" href="https://certs.turingchain.tech/about-us">About Us</a>
+						<a class="nav-link" href="https://certs.turingchain.tech/about-us" data-i18n="header.about-us">About Us</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="https://certs.turingchain.tech/news">News</a>
+						<a class="nav-link" href="https://certs.turingchain.tech/news" data-i18n="header.news">News</a>
 						<!--<ul class="nav-dropdown">
 								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="media.html">Media</a></li>
 								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="https://medium.com/turing-chain">Blog</a></li>
 							</ul>-->
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="https://global.turingcerts.com/en/login?role=cc-apply">Sign up as
+						<a class="nav-link" href="https://global.turingcerts.com/en/login?role=cc-apply" data-i18n="header.sign-up">Sign up as
 							Issuer</a>
+					</li>
+					<li class="nav-item">
+						<select id="language-selector">
+							<option value="en">English</option>
+							<option value="zh-TW">繁體中文</option>
+					  	</select>
 					</li>
 				</ul>
 			</div>
@@ -84,25 +91,25 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-10 offset-md-1">
-					<h2 class="font-weight-normal">Information Security Policy</h2>
+					<h2 class="font-weight-normal" data-i18n="footer.security-policy">Information Security Policy</h2>
 					<ul class="list-inline-dash">
 						<li><a>V 1.2</a></li>
-						<li><a>April 11, 2022</a></li>
+						<li><a data-i18n="information-security-policy.date">April 11, 2022</a></li>
 					</ul>
 				</div>
 				<!-- Post Content -->
 				<div class="col-12 col-md-10 offset-md-1 info">
-					<h5>1. Purpose</h5>
-					<p>As information security is the basis for maintaining the safe operation of our service, to ensure the security of personnel, data, information systems, equipment, and networks of Turing Chain Taiwan Limited (refer to as Our Company in the following), we have stipulated the Information Security Policy (refer to as this document in the following) as the highest guiding principle of our Company's Information Security Management System (refer to as ISMS in the following).
+					<h5 data-i18n="information-security-policy.purpose-title">1. Purpose</h5>
+					<p data-i18n="information-security-policy.purpose-description">As information security is the basis for maintaining the safe operation of our service, to ensure the security of personnel, data, information systems, equipment, and networks of Turing Chain Taiwan Limited (refer to as Our Company in the following), we have stipulated the Information Security Policy (refer to as this document in the following) as the highest guiding principle of our Company's Information Security Management System (refer to as ISMS in the following).
 					</p>
-					<h5>2. Objectives</h5>
-					<p>Our Company's information security objectives are to ensure the confidentiality, integrity, availability, and compliance of critical information and service. We define and measure the quantitative indicators of information security performance according to respective competency to confirm the implementation status of ISMS and whether the information security objectives are achieved.
+					<h5 data-i18n="information-security-policy.objectives-title">2. Objectives</h5>
+					<p data-i18n="information-security-policy.objectives-description">Our Company's information security objectives are to ensure the confidentiality, integrity, availability, and compliance of critical information and service. We define and measure the quantitative indicators of information security performance according to respective competency to confirm the implementation status of ISMS and whether the information security objectives are achieved.
 					</p>
-					<h5>3. Scope of Application</h5>
-					<p>The ISMS takes into account internal and external issues, the needs and expectations of interested parties, the interfaces, and dependencies between our Company's activities, and those of other organizations. The scope of application is service software development, testing, operations, and operating environments of Turing Certs Blockchain-based Resume, including physical office areas, cloud systems, developers, software Turing Certs Blockchain-based Resume is applied to Turing Certs Blockchain-based Resume software development, testing, operation, and operation environment, including physical office area, cloud system, developers, software, operation data, system management department and related operation process.
+					<h5 data-i18n="information-security-policy.scope-of-application-title">3. Scope of Application</h5>
+					<p data-i18n="information-security-policy.scope-of-application-description">The ISMS takes into account internal and external issues, the needs and expectations of interested parties, the interfaces, and dependencies between our Company's activities, and those of other organizations. The scope of application is service software development, testing, operations, and operating environments of Turing Certs Blockchain-based Resume, including physical office areas, cloud systems, developers, software Turing Certs Blockchain-based Resume is applied to Turing Certs Blockchain-based Resume software development, testing, operation, and operation environment, including physical office area, cloud system, developers, software, operation data, system management department and related operation process.
 					</p>
-					<h5>4. Contents covered</h5>
-					<p>The ISMS includes the following contents, and the relevant departments and personnel shall stipulate management regulations or implementation plans for the following matters, put in to practice, and evaluate the effectiveness of the implementation regularly.</br>
+					<h5 data-i18n="information-security-policy.contents-covered-title">4. Contents covered</h5>
+					<p data-i18n="information-security-policy.contents-covered-description">The ISMS includes the following contents, and the relevant departments and personnel shall stipulate management regulations or implementation plans for the following matters, put in to practice, and evaluate the effectiveness of the implementation regularly.</br>
 						● Information security organization and management inspection</br>
 						● Risk management</br>
 						● Document and record management</br>
@@ -120,25 +127,25 @@
 						● Compliance management</br>
 
 					</p>
-					<h5>5. Organization and Authority </h5>
-					<p>To ensure the effective operation of the ISMS, the information security organization and authority should be clearly defined to promote and maintain various management, implementation, inspection, etc.</p>
-					<h5>6. Implementation Principles</h5>
-					<p>The implementation of ISMS shall be based on the process of Plan, Do, Check, and Act to ensure the effectiveness and continuous improvement of information business operation.</p>
-					<h5>7. Review and Evaluation</h5>
-					<p>7.1. This document shall be evaluated and reviewed when encountering major changes or at least once a year to ensure the effectiveness of the latest development of laws, technology, and related departments of information security practices.</br>
+					<h5 data-i18n="information-security-policy.organization-and-authority-title">5. Organization and Authority </h5>
+					<p data-i18n="information-security-policy.organization-and-authority-description">To ensure the effective operation of the ISMS, the information security organization and authority should be clearly defined to promote and maintain various management, implementation, inspection, etc.</p>
+					<h5 data-i18n="information-security-policy.implementation-principles-title">6. Implementation Principles</h5>
+					<p data-i18n="information-security-policy.implementation-principles-description">The implementation of ISMS shall be based on the process of Plan, Do, Check, and Act to ensure the effectiveness and continuous improvement of information business operation.</p>
+					<h5 data-i18n="information-security-policy.review-and-evaluation-title">7. Review and Evaluation</h5>
+					<p data-i18n="information-security-policy.review-and-evaluation-description">7.1. This document shall be evaluated and reviewed when encountering major changes or at least once a year to ensure the effectiveness of the latest development of laws, technology, and related departments of information security practices.</br>
 						7.2. This document shall be revised based on the results of the review, and shall take effect after it is signed and published by the person in charge of our Company.</br>
 						7.3. This document shall be sent to the interested parties, such as partners, employees, suppliers, etc. via document, e-mail, or document managing system after it is stipulated or revised.</p>
 				</div>
-				<div class="col-12 col-md-10 offset-md-1">
+				<!-- <div class="col-12 col-md-10 offset-md-1">
 				</br>
 					<h2 class="font-weight-normal">資訊安全政策</h2>
 					<ul class="list-inline-dash">
 						<li><a>V 1.2</a></li>
 						<li><a>April 11, 2022</a></li>
 					</ul>
-				</div>
+				</div> -->
 				<!-- Post Content -->
-				<div class="col-12 col-md-10 offset-md-1 info">
+				<!-- <div class="col-12 col-md-10 offset-md-1 info">
 					<h5>1. 目的</h5>
 					<p>鑑於資訊安全乃維繫各項服務安全運作之基礎，為確保台灣圖靈鏈股份有限公司（以下簡稱本公司）人員、資料、資訊系統、設備及網路之安全，特訂定資訊安全政策（以下簡稱本文件），作為本公司資訊安全管理系統(以下簡稱ISMS)的最高指導原則。
 					</p>
@@ -175,7 +182,7 @@
 					<p>7.1. 本文件應於重大變更或至少每年評估審查一次，以反映相關法令法規、技術、業務及相關部門等最新發展現況，確保資訊安全實務作業之有效性。</br>
 						7.2. 本文件應依據審查結果進行修訂，並經本公司負責人簽核發佈後始生效。</br>
 						7.3. 本文件訂定或修訂後應以書面、電子郵件、文件管理系統或其他方式告知關注方，如：合作夥伴、所屬員工、供應商等。</p>
-				</div>
+				</div> -->
 
 				<!-- end Post Content -->
 
@@ -193,9 +200,9 @@
 						<!--<h2>Turing Chain Ltd.</h2>-->
 						<h2>Turing Certs</h2>
 						<ul class="list-inline-dash margin-top-30">
-							<li><a href="https://certs.turingchain.tech/information-security-policy">Information
+							<li><a href="https://certs.turingchain.tech/information-security-policy" data-i18n="footer.security-policy">Information
 									Security Policy</a></li>
-							<li><a href="https://certs.turingchain.tech/privacy-policy">Privacy Policy</a></li>
+							<li><a href="https://certs.turingchain.tech/privacy-policy" data-i18n="footer.privacy-policy">Privacy Policy</a></li>
 						</ul>
 						<p class="margin-top-10">&copy; 2022 Turing Chain Limited, All Rights Reserved.</p>
 					</div>
@@ -204,7 +211,7 @@
 							<!--
 								<li>7F.-10, No. 335, Ruiguang Rd., Neihu Dist., Taipei City 11492 , Taiwan</li>
 								-->
-							<a href="https://g.page/TuringCerts?share">7F.-10, No. 335, Ruiguang Rd., Neihu Dist.,
+							<a href="https://g.page/TuringCerts?share" data-i18n="footer.address">7F.-10, No. 335, Ruiguang Rd., Neihu Dist.,
 								Taipei City 11492 , Taiwan</a>
 							<a href="mailto: apac@turingchain.tech">apac@turingchain.tech</a>
 						</ul>

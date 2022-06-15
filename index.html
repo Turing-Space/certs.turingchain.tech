@@ -30,6 +30,7 @@
 
 		gtag('config', 'G-2M60DR7KSW');
 	</script>
+	<script type="module" src="assets/js/setup-i18n.js" ></script>
 </head>
 
 <body data-preloader="1">
@@ -54,18 +55,24 @@
 			<div class="header-menu">
 				<ul class="nav">
 					<li class="nav-item">
-						<a class="nav-link" href="https://certs.turingchain.tech/about-us">About Us</a>
+						<a class="nav-link" href="https://certs.turingchain.tech/about-us" data-i18n="header.about-us">About Us</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="https://certs.turingchain.tech/news">News</a>
+						<a class="nav-link" href="https://certs.turingchain.tech/news" data-i18n="header.news">News</a>
 						<!--<ul class="nav-dropdown">
 								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="media.html">Media</a></li>
 								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="https://medium.com/turing-chain">Blog</a></li>
 							</ul>-->
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="https://global.turingcerts.com/en/login?role=cc-apply">Sign up as
+						<a class="nav-link" href="https://global.turingcerts.com/en/login?role=cc-apply" data-i18n="header.sign-up">Sign Up As
 							Issuer</a>
+					</li>
+					<li class="nav-item">
+						<select id="language-selector">
+							<option value="en">English</option>
+							<option value="zh-TW">繁體中文</option>
+					  	</select>
 					</li>
 				</ul>
 			</div>
@@ -94,12 +101,11 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-md-10 offset-md-2 col-lg-8 offset-lg-4 text-md-right">
-						<h1 class="display-6 font-weight-semi-bold margin-0">Zero Fraud, Zero Paper, <br>Sustainable
-							Society</h1>
-						<p>One-stop service to issue, manage, and verify digital credentials on blockchain for everyone.
+						<h1 class="display-6 font-weight-semi-bold margin-0" data-i18n="intro.slogan">Zero Fraud, Zero Paper, <br>Sustainable Society</h1>
+						<p data-i18n="intro.slogan-description">One-stop service to issue, manage, and verify digital credentials on blockchain for everyone.
 						</p>
 						<div class="buttons buttons-center"><a href="https://global.turingcerts.com/en/login">
-								<button class="btn-hover color-1">Login</button></a>
+								<button class="btn-hover color-1" data-i18n="intro.login">Login</button></a>
 						</div>
 					</div>
 					<div class="banner-logo col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
@@ -116,7 +122,7 @@
 			<div class="text-center">
 				<div class="row">
 					<div class="col-12 col-sm-12 col-md-12 col-lg-12">
-						<h2 class="font-weight-light margin-bottom-60">Benefits</h2>
+						<h2 class="font-weight-light margin-bottom-60" data-i18n="benefits.title">Benefits</h2>
 					</div>
 				</div>
 			</div><!-- end row -->
@@ -129,8 +135,8 @@
 						<img src="assets/images/Benefits-01.png" alt="">
 					</div>
 					<div class="margin-top-20">
-						<span class="span-no">Save cost by </span>
-						<span class="span-xl">86%</span>
+						<span class="span-no" data-i18n="benefits.cost.before-highlight">Save cost by </span>
+						<span class="span-xl" data-i18n="benefits.cost.highlight">86%</span>
 					</div>
 				</div>
 				<!-- Icon text box 2 -->
@@ -139,9 +145,9 @@
 						<img src="assets/images/Benefits-04.png" alt="">
 					</div>
 					<div class="margin-top-20">
-						<span class="span-no">Prioritize privacy with </span>
-						<span class="span-xl">GDPR</span>
-						<span class="span-no"> compliance</span>
+						<span class="span-no" data-i18n="benefits.privacy.before-highlight">Prioritize privacy with </span>
+						<span class="span-xl" data-i18n="benefits.privacy.highlight">GDPR</span>
+						<span class="span-no" data-i18n="benefits.privacy.after-highlight"> compliance</span>
 					</div>
 				</div>
 				<!-- Icon text box 3 -->
@@ -150,8 +156,8 @@
 						<img src="assets/images/Benefits-05.png" alt="">
 					</div>
 					<div class="margin-top-20">
-						<span class="span-no">Reduce paper usage by </span>
-						<span class="span-xl">100%</span>
+						<span class="span-no" data-i18n="benefits.reduce-paper-usage.before-highlight">Reduce paper usage by </span>
+						<span class="span-xl" data-i18n="benefits.reduce-paper-usage.highlight">100%</span>
 					</div>
 				</div>
 				<!-- Icon text box 4 -->
@@ -160,8 +166,8 @@
 						<img src="assets/images/Benefits-02.png" alt="">
 					</div>
 					<div class="margin-top-20">
-						<span class="span-no">Save time by </span>
-						<span class="span-xl">50%</span>
+						<span class="span-no" data-i18n="benefits.efficient.before-highlight">Save time by </span>
+						<span class="span-xl" data-i18n="benefits.efficient.highlight">50%</span>
 					</div>
 				</div>
 				<!-- Icon text box 5 -->
@@ -170,9 +176,9 @@
 						<img src="assets/images/Benefits-03.png" alt="">
 					</div>
 					<div class="margin-top-20">
-						<span class="span-no">Protect confidentiality with </span></br>
-						<span class="span-xl">ISO 27001</span>
-						<span class="span-no"> license</span>
+						<span class="span-no" data-i18n="benefits.license.before-highlight">Protect confidentiality with </span></br>
+						<span class="span-xl" data-i18n="benefits.license.highlight">ISO 27001</span>
+						<span class="span-no" data-i18n="benefits.license.after-highlight"> license</span>
 					</div>
 				</div>
 				<!-- Icon text box 6 -->
@@ -181,8 +187,8 @@
 						<img src="assets/images/Benefits-06.png" alt="">
 					</div>
 					<div class="margin-top-20">
-						<span class="span-no">Reduce carbon emission by </span>
-						<span class="span-xl">98%</span>
+						<span class="span-no" data-i18n="benefits.reduce-carbon-emission.before-highlight">Reduce carbon emission by </span>
+						<span class="span-xl" data-i18n="benefits.reduce-carbon-emission.highlight">98%</span>
 					</div>
 				</div>
 			</div><!-- end row -->
@@ -196,7 +202,7 @@
 			<div class="text-center">
 				<div class="row">
 					<div class="col-12 col-sm-12 col-md-12 col-lg-12">
-						<h2 class="font-weight-light margin-bottom-50">Impact</h2>
+						<h2 class="font-weight-light margin-bottom-50" data-i18n="impact.title">Impact</h2>
 					</div>
 				</div>
 			</div>
@@ -206,25 +212,25 @@
 			<div class="row row-space-between margin-top-20">
 				<!-- Counter box 1 -->
 				<div class="col-12 col-sm-6 col-md-4 col-lg-2 text-center">
-					<span class="font-weight-light counter margin-0 span-h2">32000</span>
-					<span class="font-weight-light margin-0 span-h2">+</span>
-					<h6 class="font-small font-weight-normal uppercase">Certificates</h6>
+					<span class="font-weight-light counter margin-0 span-h2" data-i18n="impact.case1.count">32000</span>
+					<span class="font-weight-light margin-0 span-h2" data-i18n="impact.plus">+</span>
+					<h6 class="font-small font-weight-normal uppercase"  data-i18n="impact.case1.unit">Certificates</h6>
 				</div>
 				<!-- Counter box 2 -->
 				<div class="col-12 col-sm-6 col-md-4 col-lg-2 text-center">
-					<h2 class="font-weight-light counter margin-0">35</h2>
-					<h6 class="font-small font-weight-normal uppercase">Universities</h6>
+					<h2 class="font-weight-light counter margin-0" data-i18n="impact.case2.count">35</h2>
+					<h6 class="font-small font-weight-normal uppercase" data-i18n="impact.case2.unit">Universities</h6>
 				</div>
 				<!-- Counter box 3 -->
 				<div class="col-12 col-sm-6 col-md-4 col-lg-2 text-center">
-					<h2 class="font-weight-light counter margin-0">42</h2>
-					<h6 class="font-small font-weight-normal uppercase">Institutes</h6>
+					<h2 class="font-weight-light counter margin-0" data-i18n="impact.case3.count">42</h2>
+					<h6 class="font-small font-weight-normal uppercase" data-i18n="impact.case3.unit">Institutes</h6>
 				</div>
 				<!-- Counter box 4 -->
 				<div class="col-12 col-sm-6 col-md-4 col-lg-2 text-center">
-					<span class="font-weight-light counter margin-0 span-h2">9</span>
+					<span class="font-weight-light counter margin-0 span-h2" data-i18n="impact.case4.count">9</span>
 					<!--<span class="font-weight-light margin-0 span-h2">+</span>-->
-					<h6 class="font-small font-weight-normal uppercase">Countries/Regions</h6>
+					<h6 class="font-small font-weight-normal uppercase" data-i18n="impact.case4.unit">Countries/Regions</h6>
 				</div>
 			</div><!-- end row -->
 		</div><!-- end container -->
@@ -251,7 +257,7 @@
 			<div class="text-center">
 				<div class="row">
 					<div class="col-12 col-sm-12 col-md-12 col-lg-12">
-						<h2 class="font-weight-light margin-0">Whom we can help</h2>
+						<h2 class="font-weight-light margin-0" data-i18n="whom-we-can-help.title">Whom we can help</h2>
 					</div>
 				</div>
 			</div>
@@ -261,12 +267,12 @@
 					<div class="hoverbox-6 border-radius-0375">
 						<img src="assets/images/vasily-koloda-8CqDvPuo_kI-unsplash.jpg" alt="">
 						<div class="content">
-							<h5>University</h5>
-							<p>Transcript, Diploma, Offer of Admission, Award Certificate, etc.</p>
+							<h5 data-i18n="whom-we-can-help.case1.name">University</h5>
+							<p data-i18n="whom-we-can-help.case1.description">Transcript, Diploma, Offer of Admission, Award Certificate, etc.</p>
 						</div>
 						<div class="hover-content">
 							<a class="button button-lg button-outline-white-2 button-rounded"
-								href="https://e27.co/turingcerts-combats-fraud-with-blockchain-powered-certificate-validation-20210330/">Learn
+								href="https://e27.co/turingcerts-combats-fraud-with-blockchain-powered-certificate-validation-20210330/" data-i18n="whom-we-can-help.learn-more-button-text">Learn
 								More</a>
 						</div>
 					</div>
@@ -276,12 +282,12 @@
 						<img src="assets/images/pexels-max-fischer-5212345.jpg" alt="">
 						<!--<img src="assets/images/pexels-timur-saglambilek-87223.jpg" alt="">-->
 						<div class="content">
-							<h5>Educational Institution</h5>
-							<p>Course Certificate, Proof of Completion, Event Certificate, etc.</p>
+							<h5 data-i18n="whom-we-can-help.case2.name">Educational Institution</h5>
+							<p data-i18n="whom-we-can-help.case2.description">Course Certificate, Proof of Completion, Event Certificate, etc.</p>
 						</div>
 						<div class="hover-content">
 							<a class="button button-lg button-outline-white-2 button-rounded"
-								href="https://meet-global.bnext.com.tw/articles/view/47423">Learn More</a>
+								href="https://meet-global.bnext.com.tw/articles/view/47423" data-i18n="whom-we-can-help.learn-more-button-text">Learn More</a>
 						</div>
 					</div>
 				</div>
@@ -289,12 +295,12 @@
 					<div class="hoverbox-6 border-radius-0375">
 						<img src="assets/images/pexels-david-mcbee-1546168.jpg" alt="">
 						<div class="content">
-							<h5>Real Estate</h5>
-							<p>E-contract, Transaction Record, Business Cards, House History, etc.</p>
+							<h5 data-i18n="whom-we-can-help.case3.name">Real Estate</h5>
+							<p data-i18n="whom-we-can-help.case3.description">E-contract, Transaction Record, Business Cards, House History, etc.</p>
 						</div>
 						<div class="hover-content">
 							<a class="button button-lg button-outline-white-2 button-rounded"
-								href="https://www.prestigeonline.com/tw/people-events/people/connecting-life-from-technology/">Learn
+								href="https://www.prestigeonline.com/tw/people-events/people/connecting-life-from-technology/" data-i18n="whom-we-can-help.learn-more-button-text">Learn
 								More</a>
 						</div>
 					</div>
@@ -303,12 +309,12 @@
 					<div class="hoverbox-6 border-radius-0375">
 						<img src="assets/images/pexels-zen-chung-5529604.jpg" alt="">
 						<div class="content">
-							<h5>Agriculture</h5>
-							<p>Proof of Origin, Organic Labels, Fairtrade Certification, etc.</p>
+							<h5 data-i18n="whom-we-can-help.case4.name">Agriculture</h5>
+							<p data-i18n="whom-we-can-help.case4.description">Proof of Origin, Organic Labels, Fairtrade Certification, etc.</p>
 						</div>
 						<div class="hover-content">
 							<a class="button button-lg button-outline-white-2 button-rounded"
-								href="https://life.taiwan368.com.tw/article/4/0/107414">Learn More</a>
+								href="https://life.taiwan368.com.tw/article/4/0/107414" data-i18n="whom-we-can-help.learn-more-button-text">Learn More</a>
 						</div>
 					</div>
 				</div>
@@ -316,12 +322,12 @@
 					<div class="hoverbox-6 border-radius-0375">
 						<img src="assets/images/pexels-daian-gan-102127.jpg" alt="">
 						<div class="content">
-							<h5>Arts</h5>
-							<p>Ownership Certificate, Evidence of Creation, Auction Record, etc.</p>
+							<h5 data-i18n="whom-we-can-help.case5.name">Arts</h5>
+							<p data-i18n="whom-we-can-help.case5.description">Ownership Certificate, Evidence of Creation, Auction Record, etc.</p>
 						</div>
 						<div class="hover-content">
 							<a class="button button-lg button-outline-white-2 button-rounded"
-								href="https://www.itokimiko.com/post/2021092802">Learn More</a>
+								href="https://www.itokimiko.com/post/2021092802" data-i18n="whom-we-can-help.learn-more-button-text">Learn More</a>
 						</div>
 					</div>
 				</div>
@@ -337,7 +343,7 @@
 			<div class="margin-bottom-70">
 				<div class="row text-center">
 					<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-						<h2 class="font-weight-light">Our Clients</h2>
+						<h2 class="font-weight-light" data-i18n="our-clients">Our Clients</h2>
 
 					</div>
 				</div>
@@ -465,7 +471,7 @@
 			<div class="text-center">
 				<div class="row">
 					<div class="col-12 col-sm-12 col-md-12 col-lg-12">
-						<h2 class="font-weight-light margin-0">Recognition</h2>
+						<h2 class="font-weight-light margin-0" data-i18n="recognition.title">Recognition</h2>
 					</div>
 				</div>
 			</div><!-- end row -->
@@ -478,7 +484,7 @@
 					<div class="testimonial-content">
 						<h5 class="font-weight-normal margin-top-10">Alibaba Entrepreneurship Fund X HSBC JUMPSTARTER |
 							2020</h5>
-						<p class="margin-bottom-10">National Top 5 Startups in the United States & Best Innovation
+						<p class="margin-bottom-10" data-i18n="recognition.alibaba-description">National Top 5 Startups in the United States & Best Innovation
 							Awards</p>
 					</div>
 				</div>
@@ -489,7 +495,7 @@
 					</div>
 					<div class="testimonial-content">
 						<h5 class="font-weight-normal margin-top-10">Google Hatcher | 2021</h5>
-						<p class="margin-bottom-10">Selected Startups in the Incubator of Google</p>
+						<p class="margin-bottom-10" data-i18n="recognition.google-hatcher-description">Selected Startups in the Incubator of Google</p>
 					</div>
 				</div>
 				<!-- Testimonial box 3 -->
@@ -499,7 +505,7 @@
 					</div>
 					<div class="testimonial-content">
 						<h5 class="font-weight-normal margin-top-10">Draper University | 2021</h5>
-						<p class="margin-bottom-10">International 3rd Place</p>
+						<p class="margin-bottom-10" data-i18n="recognition.draper-description">International 3rd Place</p>
 					</div>
 				</div>
 				<!-- Testimonial box 4 -->
@@ -509,7 +515,7 @@
 					</div>
 					<div class="testimonial-content">
 						<h5 class="font-weight-normal margin-top-10">E27 | 2020</h5>
-						<p class="margin-bottom-10">Selected Startups in the Singapore Programme</p>
+						<p class="margin-bottom-10" data-i18n="recognition.e27-description">Selected Startups in the Singapore Programme</p>
 					</div>
 				</div>
 				<!-- Testimonial box 5 -->
@@ -519,7 +525,7 @@
 					</div>
 					<div class="testimonial-content">
 						<h5 class="font-weight-normal margin-top-10">SkyDeck | 2020</h5>
-						<p class="margin-bottom-10">Selected Startups in SkyDeck HotDesk Incubator</p>
+						<p class="margin-bottom-10" data-i18n="recognition.skydeck-description">Selected Startups in SkyDeck HotDesk Incubator</p>
 					</div>
 				</div>
 				<!-- Testimonial box 6 -->
@@ -529,7 +535,7 @@
 					</div>
 					<div class="testimonial-content">
 						<h5 class="font-weight-normal margin-top-10">JETRO | 2021</h5>
-						<p class="margin-bottom-10">Enterprise Partnership Programme in Japan</p>
+						<p class="margin-bottom-10" data-i18n="recognition.jetro-description">Enterprise Partnership Programme in Japan</p>
 					</div>
 				</div>
 
@@ -557,7 +563,7 @@
 						<img src="assets/images/Iota_logo.png" alt="">
 					</div>
 					<div class="margin-top-20 text-center iota-img eu">
-						<span class="span-no">Secured by the Public Blockchain - IOTA</br>European Blockchain Services
+						<span class="span-no" data-i18n="iota-description">Secured by the Public Blockchain - IOTA</br>European Blockchain Services
 							Infrastructure by </span><a><img src="assets/images/european-union.png" alt="" width="40px" height="40px" ></a>
 					</div>
 				</div>
@@ -567,7 +573,7 @@
 						<img src="assets/images/ISO27001.png" alt="">
 					</div>
 					<div class="margin-top-20 text-center iota-img">
-						<span class="span-no">Certified as ISO/IEC 27001 compliant</span>
+						<span class="span-no" data-i18n="iso-description">Certified as ISO/IEC 27001 compliant</span>
 					</div>
 				</div>
 			</div>
@@ -584,9 +590,9 @@
 						<!--<h2>Turing Chain Ltd.</h2>-->
 						<h2>Turing Certs</h2>
 						<ul class="list-inline-dash margin-top-30">
-							<li><a href="https://certs.turingchain.tech/information-security-policy">Information
+							<li><a href="https://certs.turingchain.tech/information-security-policy" data-i18n="footer.security-policy">Information
 									Security Policy</a></li>
-							<li><a href="https://certs.turingchain.tech/privacy-policy">Privacy Policy</a></li>
+							<li><a href="https://certs.turingchain.tech/privacy-policy" data-i18n="footer.privacy-policy">Privacy Policy</a></li>
 						</ul>
 						<p class="margin-top-10">&copy; 2022 Turing Chain Limited, All Rights Reserved.</p>
 					</div>
@@ -595,7 +601,7 @@
 							<!--
 								<li>7F.-10, No. 335, Ruiguang Rd., Neihu Dist., Taipei City 11492 , Taiwan</li>
 								-->
-							<a href="https://g.page/TuringCerts?share">7F.-10, No. 335, Ruiguang Rd., Neihu Dist., Taipei City 11492 , Taiwan</a>
+							<a href="https://g.page/TuringCerts?share" data-i18n="footer.address">7F.-10, No. 335, Ruiguang Rd., Neihu Dist., Taipei City 11492 , Taiwan</a>
 							<a href="mailto: apac@turingchain.tech">apac@turingchain.tech</a>
 						</ul>
 						<ul class="list-inline-sm icon-sm margin-top-30">
