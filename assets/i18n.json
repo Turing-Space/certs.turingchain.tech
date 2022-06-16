@@ -83,7 +83,15 @@
         "description": "Ownership Certificate, Evidence of Creation, Auction Record, etc."
       }
     },
-    "our-clients": "Our Clients",
+    "our-clients": {
+      "title": "Our Clients",
+      "ntu": "Office of International Affairs, National Taiwan University",
+      "nthu": "National Tsing Hua University",
+      "ocac": "Overseas Community Affairs Council of Taiwan",
+      "cch": "Changhua Christian Hospital Online Medical Education",
+      "iii": "Institute for Information Industry Award Certificate",
+      "tcgya": "Taoyuan City Government Youth Affair"
+    },
     "recognition": {
       "title": "Recognition",
       "alibaba-description": "National Top 5 Startups in the United States & Best Innovation Awards",
@@ -306,7 +314,15 @@
         "description": "所有權證書、創作證據、拍賣記錄等"
       }
     },
-    "our-clients": "我們的客戶",
+    "our-clients": {
+      "title": "我們的客戶",
+      "ntu": "國立台灣大學國際事務處",
+      "nthu": "國立清華大學",
+      "ocac": "中華民國僑務委員會",
+      "cch": "彰化基督教醫院線上醫療教育課程",
+      "iii": "財團法人資訊工業策進會",
+      "tcgya": "桃園市政府青年事務局"
+    },
     "recognition": {
       "title": "認可",
       "alibaba-description": "美國前五名新創公司 & 最佳創新獎",
@@ -320,7 +336,7 @@
     "iso-description": "通過 ISO/IEC 27001 認證",
     "footer": {
       "security-policy": "資訊安全政策",
-      "privacy-policy": "保密政策",
+      "privacy-policy": "隱私權政策",
       "address": "台灣台北市內湖區瑞光路335號7樓之10<br>"
     },
     "aboutUs": {
