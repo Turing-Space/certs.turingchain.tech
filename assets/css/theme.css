@@ -7740,6 +7740,10 @@ div[class^='bg-black'].fullscreen-menu .fm-wrapper .fm-close span:before, div[cl
   text-align: left;
 }
 
+.header .header-menu .nav .nav-item .language-select {
+  font-family: "Poppins", sans-serif;
+}
+
 .header .header-menu .nav .nav-item .nav-link {
   padding: 0;
   font-family: "Poppins", sans-serif;
