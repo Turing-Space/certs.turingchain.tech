@@ -7868,6 +7868,12 @@ div[class^='bg-black'].fullscreen-menu .fm-wrapper .fm-close span:before, div[cl
   .header.absolute-light .header-menu .nav .nav-item .nav-link:hover, .header.absolute-light .header-menu .nav .nav-item .nav-link:focus, .header.absolute-light .header-menu .nav .nav-item .nav-link.active, .header.absolute-light .header-menu .nav .nav-item .nav-dropdown-toggle:hover, .header.absolute-light .header-menu .nav .nav-item .nav-dropdown-toggle:focus, .header.absolute-light .header-menu .nav .nav-item .nav-dropdown-toggle.active {
     color: #fff;
   }
+  .header.absolute-light .header-menu .nav .nav-item .fa-globe, .header.absolute-light .header-menu .nav .nav-item .nav-dropdown-toggle {
+    color: #fff;
+  }
+  .header.absolute-light .header-menu .nav .nav-item .language-select, .header.absolute-light .header-menu .nav .nav-item .nav-dropdown-toggle {
+    color: #fff;
+  }
   .header.absolute-light .header-menu .nav .nav-item .nav-link:before {
     background: rgba(255, 255, 255, 0.15);
   }
