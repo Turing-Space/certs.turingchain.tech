@@ -33,7 +33,7 @@
 	<script type="module" src="assets/js/setup-i18n.js" ></script>
 </head>
 
-<body data-preloader="1">
+<body data-preloader="1" onchange="update()">
 	<!-- Header -->
 	<div class="header right absolute-light sticky-autohide">
 		<div class="container">
@@ -65,7 +65,7 @@
 							</ul>-->
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="https://global.turingcerts.com/en/login?role=cc-apply" data-i18n="header.sign-up">Sign Up As
+						<a class="nav-link" href="https://global.turingcerts.com/en/login?role=cc-apply" data-i18n="header.sign-up" id="issuerApply">Sign Up As
 							Issuer</a>
 					</li>
 					<li class="nav-item">
@@ -105,9 +105,22 @@
 						<h1 class="display-6 font-weight-semi-bold margin-0" data-i18n="intro.slogan">Zero Fraud, Zero Paper, <br>Sustainable Society</h1>
 						<p data-i18n="intro.slogan-description">One-stop service to issue, manage, and verify digital credentials on blockchain for everyone.
 						</p>
-						<div class="buttons buttons-center"><a href="https://global.turingcerts.com/en/login">
-								<button class="btn-hover color-1" data-i18n="intro.login">Login</button></a>
+						<div class="buttons buttons-center"><a href="https://global.turingcerts.com/en/login" id="loginUrl">
+							<button class="btn-hover color-1" data-i18n="intro.login">Login</button></a>
 						</div>
+						<script type="text/javascript">
+							function update() {
+								var select = document.getElementById('language-selector');
+								var option = select.options[select.selectedIndex];
+								if (option.value === 'en') {
+									document.getElementById('loginUrl').href = "https://global.turingcerts.com/en/login";
+									document.getElementById('issuerApply').href = "https://global.turingcerts.com/en/login?role=cc-apply";
+								} else {
+									document.getElementById('loginUrl').href = "https://global.turingcerts.com/zh-TW/login";
+									document.getElementById('issuerApply').href = "https://global.turingcerts.com/zh-TW/login?role=cc-apply";
+								}
+							}
+						</script>
 					</div>
 					<div class="banner-logo col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
 						<img src="assets/images/banner-logo.png" alt="">
