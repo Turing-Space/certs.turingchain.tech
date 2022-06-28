@@ -7744,6 +7744,10 @@ div[class^='bg-black'].fullscreen-menu .fm-wrapper .fm-close span:before, div[cl
   font-family: "Poppins", sans-serif;
 }
 
+.header.dark:not(.absolute-dark) .header-menu .nav .nav-item .language-select {
+  font-family: "Poppins", sans-serif;
+}
+
 .header .header-menu .nav .nav-item .nav-link {
   padding: 0;
   font-family: "Poppins", sans-serif;
@@ -7876,6 +7880,12 @@ div[class^='bg-black'].fullscreen-menu .fm-wrapper .fm-close span:before, div[cl
     color: #fff;
   }
   .header.absolute-light .header-menu .nav .nav-item .language-select, .header.absolute-light .header-menu .nav .nav-item .nav-dropdown-toggle {
+    color: #fff;
+  }
+  .header.dark:not(.absolute-dark) .header-menu .nav .nav-item .fa-globe, .header.absolute-light .header-menu .nav .nav-item .nav-dropdown-toggle {
+    color: #fff;
+  }
+  .header.dark:not(.absolute-dark) .header-menu .nav .nav-item .language-select, .header.absolute-light .header-menu .nav .nav-item .nav-dropdown-toggle {
     color: #fff;
   }
   .header.absolute-light .header-menu .nav .nav-item .nav-link:before {

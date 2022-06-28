@@ -252,6 +252,17 @@ if ($(".nav-dropdown").length) {
 //
 $body.scrollspy({ target: '.header-menu' });
 
+function update () {
+  var select = document.getElementById('language-selector');
+  var option = select.options[select.selectedIndex];
+  if (option.value === 'en') {
+    document.getElementById('loginUrl').href = "https://global.turingcerts.com/en/login";
+    document.getElementById('issuerApply').href = "https://global.turingcerts.com/en/login?role=cc-apply";
+  } else {
+    document.getElementById('loginUrl').href = "https://global.turingcerts.com/zh-TW/login";
+    document.getElementById('issuerApply').href = "https://global.turingcerts.com/zh-TW/login?role=cc-apply";
+  }
+};
 
 /*===============================================
   5. Fullscreen Menu
