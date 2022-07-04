@@ -252,6 +252,10 @@ if ($(".nav-dropdown").length) {
 //
 $body.scrollspy({ target: '.header-menu' });
 
+//
+// Update Language //
+//
+
 function update () {
   var select = document.getElementById('language-selector');
   var option = select.options[select.selectedIndex];
