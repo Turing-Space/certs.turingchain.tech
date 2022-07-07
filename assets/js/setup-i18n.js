@@ -20,7 +20,6 @@ function getLanguage() {
   var langString = langCookie[2];
   var lang = langString.split('=');
   var language = lang[1];
-  console.log(language);
   if (language === 'en') {
     $('#language-selector option[value="en"]').prop('selected', true);
   } else {
