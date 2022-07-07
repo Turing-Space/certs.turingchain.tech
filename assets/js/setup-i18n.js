@@ -16,10 +16,15 @@ function onChangeLanguage() {
 }
 
 function getLanguage() {
-  var langCookie = document.cookie.split(';');
-  var langString = langCookie[2];
-  var lang = langString.split('=');
-  var language = lang[1];
+  var cookieArray = document.cookie.split(';');
+  var language = '';
+  for (var i = 0; i < cookieArray.length; i++) {
+    var cookieKey = cookieArray[i].split('=')[0];
+    var cookieValue = cookieArray[i].split('=')[1];
+    if (cookieKey == ' language' && (cookieValue == 'en' || cookieValue == 'zh-TW')) {
+      language = cookieValue;
+    }
+  }
   if (language === 'en') {
     $('#language-selector option[value="en"]').prop('selected', true);
   } else {
