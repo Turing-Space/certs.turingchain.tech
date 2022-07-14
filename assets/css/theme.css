@@ -18,6 +18,70 @@ body {
   overflow-x: hidden;
 }
 
+.cookie-reminder {
+  width: 100%;
+  height: 120px;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed; 
+  bottom: 0%; 
+  display: flex;
+  z-index: 99;
+}
+
+.cookie-reminder .cookie-icon {
+  margin-left: 10%; 
+  transform: scale(0.35)
+}
+
+.cookie-reminder .cookie-reminder-wordings {
+  display: grid;
+}
+
+.cookie-reminder .cookie-reminder-wordings h6 {
+  color: #ffffff;
+  margin-top: 30px;
+}
+
+.cookie-reminder .cookie-reminder-wordings div {
+  display: flex;
+}
+
+.cookie-reminder .cookie-reminder-wordings p {
+  color: #ffffff;
+  margin-top: -35px;
+}
+
+.cookie-reminder .cookie-reminder-wordings p a {
+  color: #ffffff;
+  text-decoration: underline; 
+  margin-left: 10px;
+}
+
+.cookie-reminder div img {
+  margin-bottom: 10px; 
+  transform: scale(0.15); 
+  cursor: pointer;
+}
+
+.cookie-reminder .cookie-button {
+  display: flex; 
+  margin-left: 100px;
+  margin-top: 3px;
+}
+
+.cookie-reminder .cookie-button button {
+  width: 160px; 
+  height: 48px; 
+  background: #ffffff; 
+  border-radius: 10px; 
+  margin-top: 30px;
+}
+
+.cookie-reminder .cookie-button button h6 {
+  color: black; 
+  margin-top: 10px;
+}
+
 .container, .container-fluid {
   position: relative;
   padding: 0 30px;

@@ -35,20 +35,26 @@
 
 <body data-preloader="1" onchange="update()">
 	<!-- Header -->
-	<div id="cookieReminder" style="width: 100%; height: 120px; background: rgba(0, 0, 0, 0.7); position: fixed; bottom: 0%; display: flex;">
-		<img src="/static/icon/icon-cookie.svg" alt="" style="margin-left: 10%; transform: scale(0.35)">
-		<div style="display: grid;">
-			<h6 style="color: white; margin-left: 10px; margin-top: 30px;" data-i18n="cookie.description1">We use cookies</h6>
-			<p style="color: white; margin-left: 10px; margin-top: -35px;" data-i18n="cookie.description2">
-				This website uses cookies to help personalize content and provide a safer experience.
-				<a href="privacy-policy.html#cookie-description" style="color: white; text-decoration: underline; margin-left: 5px;" data-i18n="footer.privacy-policy">Privacy Policy</a>
-			</p>
+	<div class="cookie-reminder" id="cookieReminder">
+		<img class="cookie-icon" src="/static/icon/icon-cookie.svg" alt="">
+		<div class="cookie-reminder-wordings">
+			<h6 data-i18n="cookie.description1">We use cookies</h6>
+			<div style="display: flex;">
+				<p data-i18n="cookie.description2">
+					This website uses cookies to help personalize content and provide a safer experience.
+					<p>
+						<a href="privacy-policy.html#cookie-description" data-i18n="footer.privacy-policy">
+							Privacy Policy
+						</a>
+					</p>
+				</p>
+			</div>
 		</div>
-		<div style="display: flex; margin-left: 100px;">
-			<button style="width: 160px; height: 48px; background: #ffffff; border-radius: 10px; margin-top: 30px;" onclick="closeCookieReminder()">
-				<h6 style="color: black; margin-top: 10px;" data-i18n="cookie.button-content">Okay</h6>
+		<div class="cookie-button">
+			<button onclick="closeCookieReminder()">
+				<h6 data-i18n="cookie.button-content">Okay</h6>
 			</button>
-			<img src="/static/icon/icon-cross.svg" alt="" style="margin-bottom: 10px; transform: scale(0.15); cursor: pointer;" onclick="closeCookieReminder()">
+			<img class="cross-icon" src="/static/icon/icon-cross.svg" alt="" onclick="closeCookieReminder()">
 		</div>
 	</div>
 	<div class="header right absolute-light sticky-autohide">
