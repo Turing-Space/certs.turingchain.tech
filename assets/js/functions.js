@@ -274,6 +274,14 @@ function update () {
 function closeCookieReminder() {
   document.getElementById('cookieReminder').style.display = 'none';
 }
+function closeCookieReminderMobile() {
+  document.getElementById('cookieReminderMobile').style.display = 'none';
+}
+if (window.innerWidth >= 768) {
+  closeCookieReminderMobile();
+} else {
+  closeCookieReminder();
+}
 
 /*===============================================
   5. Fullscreen Menu

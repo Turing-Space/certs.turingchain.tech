@@ -57,6 +57,26 @@
 			<img class="cross-icon" src="/static/icon/icon-cross.svg" alt="" onclick="closeCookieReminder()" />
 		</div>
 	</div>
+	<div class="cookie-reminder-mobile" id="cookieReminderMobile">
+		<img class="cross-icon" src="/static/icon/icon-cross.svg" alt="" onclick="closeCookieReminderMobile()" />
+		<img class="cookie-icon" src="/static/icon/icon-cookie.svg" alt="" />
+		<div class="cookie-reminder-wordings">
+			<h6 data-i18n="cookie.description1">We use cookies</h6>
+			<p data-i18n="cookie.description2">
+				This website uses cookies to help 
+				personalize content and provide a
+				safer experience.
+				<p>
+					<a href="privacy-policy.html#cookie-description" data-i18n="footer.privacy-policy">
+						Privacy Policy
+					</a>
+				</p>
+			</p>
+		</div>
+		<button onclick="closeCookieReminderMobile()">
+			<h6 data-i18n="cookie.button-content">Okay</h6>
+		</button>
+	</div>
 	<div class="header right absolute-light sticky-autohide">
 		<div class="container">
 			<!-- Logo -->

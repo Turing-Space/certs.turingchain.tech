@@ -82,6 +82,64 @@ body {
   margin-top: 10px;
 }
 
+.cookie-reminder-mobile {
+  width: 100%;
+  height: 216px;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed; 
+  bottom: 0%; 
+  display: flex;
+  z-index: 99;
+}
+
+.cookie-reminder-mobile .cross-icon {
+  position: absolute;
+  left: 92%;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.cookie-reminder-mobile .cookie-icon {
+  margin-left: -80px;
+  margin-top: -50px; 
+  transform: scale(0.15);
+}
+
+.cookie-reminder-mobile .cookie-reminder-wordings {
+  margin-left: -80px;
+  margin-top: 40px;
+  color: #ffffff;
+}
+
+.cookie-reminder-mobile .cookie-reminder-wordings h6 {
+  color: #ffffff;
+}
+
+.cookie-reminder-mobile .cookie-reminder-wordings p {
+  display: inline;
+}
+
+.cookie-reminder-mobile .cookie-reminder-wordings p a {
+  color: #ffffff;
+  text-decoration: underline; 
+  margin-left: 7px;
+}
+
+.cookie-reminder-mobile button {
+  width: 80%;
+  height: 44px;
+  background: #ffffff;
+  border-radius: 10px; 
+  position: absolute;
+  bottom: 8%;
+  margin-left: 10%;
+}
+
+.cookie-reminder-mobile button h6 {
+  color: black;
+  margin-top: 8px;
+}
+
 .container, .container-fluid {
   position: relative;
   padding: 0 30px;
