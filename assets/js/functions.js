@@ -268,6 +268,13 @@ function update () {
   }
 };
 
+//
+// Close Cookie Reminder Window //
+//
+function closeCookieReminder() {
+  document.getElementById('cookieReminder').style.display = 'none';
+}
+
 /*===============================================
   5. Fullscreen Menu
 ===============================================*/

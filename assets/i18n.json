@@ -228,6 +228,11 @@
       "rights-of-the-parties-description": "Under the Personal Information Protection Law, you may contact our company (please refer to our company's website) to request the following rights:</br>1. Make inquiries or requests for access.</br>2. Ask for a copy.</br>3. Make additions or corrections.</br>4. Request to stop collecting, processing, or using.</br>5. Request for deletion.</br>6. Requests for the rights above, our company may charge the necessary costs, but may not be able to confirm your request if it does not comply with the application procedures, legal requirements, the preservation obligations of the website under the law, or other regulations according to the law.",
       "amendments-title": "9. Amendments to the Privacy Policy",
       "amendments-description": "Our company will revise and update the Terms of User Privacy Policy from time to time according to the actual needs and will announce them on the website without sending notifications to users, you are encouraged to be aware of the terms and conditions of the website to protect your safety and related rights of browsing the website; if you do not agree with our company's revision or update, please terminate our company’s service immediately, if you continue to use the website and the related services, you are deemed to have agreed to the amendments or updates. If you have any questions or suggestions about the content above or the website, please contact our customer service immediately.</br>Email: apac@turingchain.tech."
+    },
+    "cookie": {
+      "description1": "We use cookies",
+      "description2": "This website uses cookies to help personalize content and provide a safer experience.",
+      "button-content": "Okay"
     }
   },
   "zh-TW": {
@@ -459,6 +464,11 @@
       "rights-of-the-parties-description": "依個人資料保護法，您可以與本公司聯絡（請參考本公司網站）請求行使以下權利：</br>1. 查詢或請求閱覽。</br>2. 製給複製本。</br>3. 補充或更正。</br>4. 請求停止蒐集、處理或利用。</br>5. 請求刪除。</br>6. 上述權利之行使，本公司可能依法酌收必要成本費用，若因不符合申請程序、法律規定、本網站依法負有保存義務或法律另有規定之情況者，則可能無法依您的要求辦理。",
       "amendments-title": "9. 隱私權政策之修正",
       "amendments-description": "本公司將視實際需求隨時修改並更新使用者條款及隱私權政策，並公告於本網站中，不會另外個別通知使用者，建議您隨時注意並確認本網站之條款，以維護您瀏覽本網站之安全及相關權益；如不同意本公司之修正或更新，請即時向本公司終止服務，惟若繼續使用本網站及相關服務，則視同已接受條款之修正及更新。如您對上述內容或本網站有任何不明瞭之處或意見，請立即與服務人員聯繫</br>Email: apac@turingchain.tech。"
+    },
+    "cookie": {
+      "description1": "我們使用 cookies",
+      "description2": "這個網站使用 cookies 去幫助個人化內容及提供一個更安全的環境。",
+      "button-content": "確定"
     }
   }
 }
