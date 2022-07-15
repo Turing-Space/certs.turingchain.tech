@@ -29,7 +29,7 @@ body {
 }
 
 .cookie-reminder .cookie-icon {
-  margin-left: 10%; 
+  margin-left: 5%; 
   transform: scale(0.35)
 }
 
@@ -40,21 +40,41 @@ body {
 .cookie-reminder .cookie-reminder-wordings h6 {
   color: #ffffff;
   margin-top: 30px;
+  margin-bottom: -5%;
 }
 
 .cookie-reminder .cookie-reminder-wordings div {
-  display: flex;
+  width: 120%;
 }
 
 .cookie-reminder .cookie-reminder-wordings p {
   color: #ffffff;
-  margin-top: -35px;
+  display: inline-block;
 }
 
 .cookie-reminder .cookie-reminder-wordings p a {
   color: #ffffff;
-  text-decoration: underline; 
+  text-decoration: underline;
   margin-left: 10px;
+  overflow: hidden;
+}
+
+.cookie-reminder .cookie-reminder-wordings p a:after {
+  content: "";
+  position: absolute;
+  width: 96px;
+  transform: scaleX(0);
+  height: 2px;
+  margin-top: 20px;
+  margin-left: -95px;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cookie-reminder .cookie-reminder-wordings p a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .cookie-reminder div img {
@@ -75,11 +95,21 @@ body {
   background: #ffffff; 
   border-radius: 10px; 
   margin-top: 30px;
+  border: solid;
+  border-color: #ffffff;
+}
+
+.cookie-reminder .cookie-button button:hover {
+  background: black;
 }
 
 .cookie-reminder .cookie-button button h6 {
   color: black; 
-  margin-top: 10px;
+  margin-top: 8px;
+}
+
+.cookie-reminder .cookie-button button:hover h6 {
+  color: #ffffff; 
 }
 
 .cookie-reminder-mobile {
@@ -125,6 +155,24 @@ body {
   margin-left: 7px;
 }
 
+.cookie-reminder-mobile .cookie-reminder-wordings p a:after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  transform: scaleX(0);
+  height: 2px;
+  margin-top: 18px;
+  margin-left: -89px;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cookie-reminder-mobile .cookie-reminder-wordings p a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 .cookie-reminder-mobile button {
   width: 80%;
   height: 44px;
@@ -133,11 +181,21 @@ body {
   position: absolute;
   bottom: 8%;
   margin-left: 10%;
+  border: solid;
+  border-color: #ffffff;
+}
+
+.cookie-reminder-mobile button:hover {
+  background: black;
 }
 
 .cookie-reminder-mobile button h6 {
   color: black;
   margin-top: 8px;
+}
+
+.cookie-reminder-mobile button:hover h6 {
+  color: #ffffff
 }
 
 .container, .container-fluid {

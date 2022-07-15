@@ -277,7 +277,7 @@ function closeCookieReminder() {
 function closeCookieReminderMobile() {
   document.getElementById('cookieReminderMobile').style.display = 'none';
 }
-if (window.innerWidth >= 768) {
+if (window.innerWidth >= 812) {
   closeCookieReminderMobile();
 } else {
   closeCookieReminder();
