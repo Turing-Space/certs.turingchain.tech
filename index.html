@@ -36,25 +36,27 @@
 <body data-preloader="1" onchange="update()">
 	<!-- Header -->
 	<div class="cookie-reminder" id="cookieReminder">
-		<img class="cookie-icon" src="/static/icon/icon-cookie.svg" alt="" />
-		<div class="cookie-reminder-wordings">
-			<h6 data-i18n="cookie.description1">We use cookies</h6>
-			<div>
-				<p data-i18n="cookie.description2">
-					This website uses cookies to help personalize content and provide a safer experience.
-					<p>
-						<a href="privacy-policy.html#cookie-description" data-i18n="footer.privacy-policy">
-							Privacy Policy
-						</a>
+		<div class="cookie-reminder-div">
+			<img class="cookie-icon" src="/static/icon/icon-cookie.svg" alt="" />
+			<div class="cookie-reminder-wordings">
+				<h6 data-i18n="cookie.description1">We use cookies</h6>
+				<div>
+					<p data-i18n="cookie.description2">
+						This website uses cookies to help personalize content and provide a safer experience.
+						<p>
+							<a href="privacy-policy.html#cookie-description" data-i18n="footer.privacy-policy">
+								Privacy Policy
+							</a>
+						</p>
 					</p>
-				</p>
+				</div>
 			</div>
-		</div>
-		<div class="cookie-button">
-			<button onclick="closeCookieReminder()">
-				<h6 data-i18n="cookie.button-content">Okay</h6>
-			</button>
-			<img class="cross-icon" src="/static/icon/icon-cross.svg" alt="" onclick="closeCookieReminder()" />
+			<div class="cookie-button">
+				<button onclick="closeCookieReminder()">
+					<h6 data-i18n="cookie.button-content">Okay</h6>
+				</button>
+				<img class="cross-icon" src="/static/icon/icon-cross.svg" alt="" onclick="closeCookieReminder()" />
+			</div>
 		</div>
 	</div>
 	<div class="cookie-reminder-mobile" id="cookieReminderMobile">
