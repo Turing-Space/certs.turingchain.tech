@@ -28,7 +28,7 @@ body {
   z-index: 99;
 }
 
-.cookie-reminder .cookie-reminder-div {
+.cookie-reminder .cookie-reminder-container {
   display: flex;
   width: 80%;
   margin-left: 11%;
@@ -137,15 +137,20 @@ body {
   cursor: pointer;
 }
 
+.cookie-reminder-mobile .cookie-reminder-mobile-container {
+  width: 80%;
+  display: flex;
+}
+
 .cookie-reminder-mobile .cookie-icon {
-  margin-left: -80px;
+  margin-left: -40px;
   margin-top: -50px; 
-  transform: scale(0.15);
+  transform: scale(0.2);
 }
 
 .cookie-reminder-mobile .cookie-reminder-wordings {
-  margin-left: -80px;
-  margin-top: 40px;
+  margin-left: -60px;
+  margin-top: 25px;
   color: #ffffff;
 }
 
