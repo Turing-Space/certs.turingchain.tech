@@ -120,6 +120,20 @@ body {
   color: #ffffff; 
 }
 
+.cookie-reminder .cookie-button .cross-icon-pseudo {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  margin-left: 30px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.cookie-reminder .cookie-button .cross-icon {
+  transform: scale(1.0);
+  margin: auto;
+}
+
 .cookie-reminder-mobile {
   width: 100%;
   height: 216px;
