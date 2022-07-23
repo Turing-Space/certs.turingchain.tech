@@ -30,13 +30,17 @@ body {
 
 .cookie-reminder .cookie-reminder-container {
   display: flex;
-  width: 80%;
-  margin-left: 11%;
+  position: relative;
+  width: 84%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .cookie-reminder .cookie-icon {
   transform: scale(0.4);
   margin-top: 5px;
+  /* margin-left: -17px; */
 }
 
 .cookie-reminder .cookie-reminder-wordings {
@@ -95,6 +99,7 @@ body {
   display: flex; 
   margin-top: 3px;
   width: 30%;
+  margin-right: -5px;
 }
 
 .cookie-reminder .cookie-button button {
@@ -105,6 +110,7 @@ body {
   margin-top: 30px;
   border: solid;
   border-color: #ffffff;
+  margin-right: -15px;
 }
 
 .cookie-reminder .cookie-button button:hover {
@@ -124,7 +130,7 @@ body {
   width: 50px;
   height: 50px;
   display: flex;
-  margin-left: 30px;
+  margin-left: 25px;
   margin-top: 30px;
   cursor: pointer;
 }
@@ -152,34 +158,37 @@ body {
 }
 
 .cookie-reminder-mobile .cookie-reminder-mobile-container {
-  width: 80%;
+  width: 85%;
   display: flex;
 }
 
 .cookie-reminder-mobile .cookie-icon {
-  margin-left: -40px;
-  margin-top: -50px; 
+  margin-left: -50px;
+  margin-top: -50px;
+  margin-right: -25px; 
   transform: scale(0.2);
 }
 
 .cookie-reminder-mobile .cookie-reminder-wordings {
   margin-left: -60px;
-  margin-top: 25px;
+  margin-top: 35px;
   color: #ffffff;
 }
 
 .cookie-reminder-mobile .cookie-reminder-wordings h6 {
   color: #ffffff;
+  margin-bottom: 3px;
 }
 
 .cookie-reminder-mobile .cookie-reminder-wordings p {
   display: inline;
+  line-height: 0.5;
 }
 
 .cookie-reminder-mobile .cookie-reminder-wordings p a {
   color: #ffffff;
   text-decoration: underline; 
-  margin-left: 7px;
+  margin-left: 5px;
 }
 
 .cookie-reminder-mobile .cookie-reminder-wordings p a:after {
