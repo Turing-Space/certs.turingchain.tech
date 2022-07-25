@@ -18,6 +18,223 @@ body {
   overflow-x: hidden;
 }
 
+.cookie-reminder {
+  width: 100%;
+  height: 120px;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed; 
+  bottom: 0%; 
+  display: flex;
+  z-index: 99;
+}
+
+.cookie-reminder .cookie-reminder-container {
+  display: flex;
+  position: relative;
+  width: 84%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cookie-reminder .cookie-icon {
+  transform: scale(0.4);
+  margin-top: 5px;
+  /* margin-left: -17px; */
+}
+
+.cookie-reminder .cookie-reminder-wordings {
+  display: grid;
+  width: 100%;
+}
+
+.cookie-reminder .cookie-reminder-wordings h6 {
+  color: #ffffff;
+  margin-top: 30px;
+  margin-bottom: -5%;
+}
+
+.cookie-reminder .cookie-reminder-wordings div {
+  width: 100%;
+}
+
+.cookie-reminder .cookie-reminder-wordings p {
+  color: #ffffff;
+  display: inline-block;
+  margin-top: 1%;
+}
+
+.cookie-reminder .cookie-reminder-wordings p a {
+  color: #ffffff;
+  text-decoration: underline;
+  margin-left: 10px;
+  overflow: hidden;
+}
+
+.cookie-reminder .cookie-reminder-wordings p a:after {
+  content: "";
+  position: absolute;
+  width: 96px;
+  transform: scaleX(0);
+  height: 2px;
+  margin-top: 20px;
+  margin-left: -95px;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cookie-reminder .cookie-reminder-wordings p a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.cookie-reminder div img {
+  margin-bottom: 10px; 
+  transform: scale(0.15); 
+  cursor: pointer;
+}
+
+.cookie-reminder .cookie-button {
+  display: flex; 
+  margin-top: 3px;
+  width: 30%;
+  margin-right: -5px;
+}
+
+.cookie-reminder .cookie-button button {
+  width: 160px; 
+  height: 48px; 
+  background: #ffffff; 
+  border-radius: 10px; 
+  margin-top: 30px;
+  border: solid;
+  border-color: #ffffff;
+  margin-right: -15px;
+}
+
+.cookie-reminder .cookie-button button:hover {
+  background: black;
+}
+
+.cookie-reminder .cookie-button button h6 {
+  color: black; 
+  margin-top: 8px;
+}
+
+.cookie-reminder .cookie-button button:hover h6 {
+  color: #ffffff; 
+}
+
+.cookie-reminder .cookie-button .cross-icon-pseudo {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  margin-left: 25px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.cookie-reminder .cookie-button .cross-icon {
+  transform: scale(1.0);
+  margin: auto;
+}
+
+.cookie-reminder-mobile {
+  width: 100%;
+  height: 216px;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed; 
+  bottom: 0%; 
+  display: flex;
+  z-index: 99;
+}
+
+.cookie-reminder-mobile .cross-icon {
+  position: absolute;
+  left: 92%;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.cookie-reminder-mobile .cookie-reminder-mobile-container {
+  width: 85%;
+  display: flex;
+}
+
+.cookie-reminder-mobile .cookie-icon {
+  position: absolute;
+  left: 10%;
+  top: 28%;
+}
+
+.cookie-reminder-mobile .cookie-reminder-wordings {
+  color: #ffffff;
+  width: 60%;
+  position: absolute;
+  left: 28%;
+  top: 17%;
+}
+
+.cookie-reminder-mobile .cookie-reminder-wordings h6 {
+  color: #ffffff;
+  margin-bottom: 3px;
+}
+
+.cookie-reminder-mobile .cookie-reminder-wordings p {
+  display: inline;
+  line-height: 0.5;
+}
+
+.cookie-reminder-mobile .cookie-reminder-wordings p a {
+  color: #ffffff;
+  text-decoration: underline; 
+  margin-left: 5px;
+}
+
+.cookie-reminder-mobile .cookie-reminder-wordings p a:after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  transform: scaleX(0);
+  height: 2px;
+  margin-top: 18px;
+  margin-left: -89px;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cookie-reminder-mobile .cookie-reminder-wordings p a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.cookie-reminder-mobile button {
+  width: 80%;
+  height: 44px;
+  background: #ffffff;
+  border-radius: 10px; 
+  position: absolute;
+  bottom: 8%;
+  margin-left: 10%;
+  border: solid;
+  border-color: #ffffff;
+}
+
+.cookie-reminder-mobile button:hover {
+  background: black;
+}
+
+.cookie-reminder-mobile button h6 {
+  color: black;
+  margin-top: 8px;
+}
+
+.cookie-reminder-mobile button:hover h6 {
+  color: #ffffff
+}
+
 .container, .container-fluid {
   position: relative;
   padding: 0 30px;
@@ -7740,6 +7957,14 @@ div[class^='bg-black'].fullscreen-menu .fm-wrapper .fm-close span:before, div[cl
   text-align: left;
 }
 
+.header .header-menu .nav .nav-item .language-select {
+  font-family: "Poppins", sans-serif;
+}
+
+.header.dark:not(.absolute-dark) .header-menu .nav .nav-item .language-select {
+  font-family: "Poppins", sans-serif;
+}
+
 .header .header-menu .nav .nav-item .nav-link {
   padding: 0;
   font-family: "Poppins", sans-serif;
@@ -7866,6 +8091,18 @@ div[class^='bg-black'].fullscreen-menu .fm-wrapper .fm-close span:before, div[cl
     color: #fff;
   }
   .header.absolute-light .header-menu .nav .nav-item .nav-link:hover, .header.absolute-light .header-menu .nav .nav-item .nav-link:focus, .header.absolute-light .header-menu .nav .nav-item .nav-link.active, .header.absolute-light .header-menu .nav .nav-item .nav-dropdown-toggle:hover, .header.absolute-light .header-menu .nav .nav-item .nav-dropdown-toggle:focus, .header.absolute-light .header-menu .nav .nav-item .nav-dropdown-toggle.active {
+    color: #fff;
+  }
+  .header.absolute-light .header-menu .nav .nav-item .fa-globe, .header.absolute-light .header-menu .nav .nav-item .nav-dropdown-toggle {
+    color: #fff;
+  }
+  .header.absolute-light .header-menu .nav .nav-item .language-select, .header.absolute-light .header-menu .nav .nav-item .nav-dropdown-toggle {
+    color: #fff;
+  }
+  .header.dark:not(.absolute-dark) .header-menu .nav .nav-item .fa-globe, .header.absolute-light .header-menu .nav .nav-item .nav-dropdown-toggle {
+    color: #fff;
+  }
+  .header.dark:not(.absolute-dark) .header-menu .nav .nav-item .language-select, .header.absolute-light .header-menu .nav .nav-item .nav-dropdown-toggle {
     color: #fff;
   }
   .header.absolute-light .header-menu .nav .nav-item .nav-link:before {

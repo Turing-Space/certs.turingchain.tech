@@ -1,0 +1,474 @@
+{
+  "en": {
+    "header": {
+      "about-us": "About Us",
+      "news": "News",
+      "sign-up": "Sign Up As Issuer"
+    },
+    "intro": {
+      "slogan": "Zero Fraud, Zero Paper, <br>Sustainable Society",
+      "slogan-description": "One-stop service to issue, manage, and verify digital credentials on blockchain for everyone.",
+      "login": "Login"
+    },
+    "benefits": {
+      "title": "Benefits",
+      "cost": {
+        "before-highlight": "Save cost by",
+        "highlight": "86%"
+      },
+      "privacy": {
+        "before-highlight": "Prioritize privacy with ",
+        "highlight": "GDPR",
+        "after-highlight": "compliance"
+      },
+      "reduce-paper-usage": {
+        "before-highlight": "Reduce paper usage by ",
+        "highlight": "100%"
+      },
+      "efficient": {
+        "before-highlight": "Save time by ",
+        "highlight": "50%"
+      },
+      "license": {
+        "before-highlight": "Protect confidentiality with ",
+        "highlight": "ISO 27001",
+        "after-highlight": " license"
+      },
+      "reduce-carbon-emission": {
+        "before-highlight": "Reduce carbon emission by ",
+        "highlight": "98%"
+      }
+    },
+    "impact": {
+      "plus": "+",
+      "title": "Impact",
+      "case1": {
+        "count": "32000",
+        "unit": "Certificates"
+      },
+      "case2": {
+        "count": "35",
+        "unit": "Universities"
+      },
+      "case3": {
+        "count": "42",
+        "unit": "Institutes"
+      },
+      "case4": {
+        "count": "9",
+        "unit": "Countries/Regions"
+      }
+    },
+    "whom-we-can-help": {
+      "title": "Whom We Can Help",
+      "learn-more-button-text": "Learn More",
+      "case1": {
+        "name": "University",
+        "description": "Transcript, Diploma, Offer of Admission, Award Certificate, etc."
+      },
+      "case2": {
+        "name": "Educational Institution",
+        "description": "Course Certificate, Proof of Completion, Event Certificate, etc."
+      },
+      "case3": {
+        "name": "Real Estate",
+        "description": "E-contract, Transaction Record, Business Cards, House History, etc."
+      },
+      "case4": {
+        "name": "Agriculture",
+        "description": "Proof of Origin, Organic Labels, Fairtrade Certification, etc."
+      },
+      "case5": {
+        "name": "Arts",
+        "description": "Ownership Certificate, Evidence of Creation, Auction Record, etc."
+      }
+    },
+    "our-clients": {
+      "title": "Our Clients",
+      "ntu": "Office of International Affairs, National Taiwan University",
+      "nthu": "National Tsing Hua University",
+      "ocac": "Overseas Community Affairs Council of Taiwan",
+      "cch": "Changhua Christian Hospital Online Medical Education",
+      "iii": "Institute for Information Industry Award Certificate",
+      "tcgya": "Taoyuan City Government Youth Affair"
+    },
+    "recognition": {
+      "title": "Recognition",
+      "alibaba-description": "National Top 5 Startups in the United States & Best Innovation Awards",
+      "google-hatcher-description": "Selected Startups in the Incubator of Google",
+      "draper-description": "International 3rd Place",
+      "e27-description": "Selected Startups in the Singapore Programme",
+      "skydeck-description": "Selected Startups in SkyDeck HotDesk Incubator",
+      "jetro-description": "Enterprise Partnership Programme in Japan"
+    },
+    "iota-description": "Secured by the Public Blockchain - IOTA</br>European Blockchain Services Infrastructure by",
+    "iso-description": "Certified as ISO/IEC 27001 compliant",
+    "footer": {
+      "security-policy": "Information Security Policy",
+      "privacy-policy": "Privacy Policy",
+      "address": "7F.-10, No. 335, Ruiguang Rd., Neihu Dist., Taipei City 11492 , Taiwan"
+    },
+    "aboutUs": {
+      "first-subtitle": "“We are the sum total of our experiences.”",
+      "first-paragraph": "You may have the habit of keeping a diary, taking down your daily exquisite dribs and drabs by pencils and paper. Nevertheless, things don’t turn out the way we wish as our stories are forgotten easily, and the world thus forgets us. Still, we firmly believe our every footstep counts - since all are worth recording. This is why Turing Certs has been dedicating to setting up a career portfolio from your 1st-grade to your graduation, even from your 1st occupation through your ultimate success. Seeking authenticity by e-signature, protecting our Mother Nature by going paperless, and guarding your personal data by digital identification are our missions. “You are also the sum total of your experiences.” Turing Certs will be your best e-experience.",
+      "our-team": "Our Team",
+      "our-team-paragraph": "We are a team of CISSP security experts, ACM/IEEE blockchain researchers, and experienced product designers from UC Berkeley, NTU Singapore, HKUST, and National Taiwan University.",
+      "team-member-CEO": "Jeff Hu",
+      "team-member-CEO-description": "Founder & CEO",
+      "team-member-product": "Yuffie Hsu",
+      "team-member-product-description": "Head of Product",
+      "team-member-tech": "Henry Hang",
+      "team-member-tech-description": "Tech Lead",
+      "team-member-security": "Jacky Pan",
+      "team-member-security-description": "Security Expert",
+      "team-member-BD-SA": "Yiwei Lin",
+      "team-member-BD-SA-description": "Head of BD, Southeast Asia",
+      "team-member-BD-Japan": "Mari Ishikawa",
+      "team-member-BD-Japan-description": "Head of BD, Japan",
+      "what-people-say": "What People Say",
+      "johnny-wu": "Johnny C.J. Wu",
+      "johnny-wu-title": "Head of Office of International Affairs, National Taiwan University",
+      "johnny-wu-description": "“Turing Certs is the best blockchain certification provider out there. Thanks to its security, convenience and innovative functions such as its connection to LinkedIn, it truly bridges the gap for the university to help students create their own digital learning footprints.”",
+      "professor-liao": "Professor G.Z. Liao",
+      "professor-liao-title": "Dean of Institute of Learning Sciences and Technologies, National Tsing Hua University",
+      "professor-liao-description": "“Learning begins with the Turing Certs and ends in an endless future.”"
+    },
+    "news": {
+      "berkeley-innovators": {
+        "description": "Upon meeting at a blockchain conference in San Francisco, Taiwanese entrepreneur Yao-Chieh (Jeff) Hu so impressed several Berkeley thought leaders in attendance that they invited him to become a research scholar in the UC Berkeley Blockchain Lab."
+      },
+      "unesco": {
+        "description": "Taiwanese startup TuringChain offers educational institutions, students, and companies a new method of certification and authentication based on its Turing Certs blockchain solution."
+      },
+      "e27": {
+        "description": "Turing Certs is a product by the whitehat hackers and programmers behind Turing Chain that uses blockchain to create tamper-proof e-portfolios."
+      },
+      "berkeley": {
+        "description": "Yao-Chieh Hu, MEng ’20 (IEOR/FinTech), shares his journey to Berkeley Master of Engineering (MEng), from competing in the World Robotics Olympiad to working at J.P. Morgan to founding TuringCerts and TuringChain."
+      },
+      "draper": {
+        "description": "Zero fraud & zero paper solution that helps 80+ schools adopt tamper-proof Blockchain Credentials, including Berkeley Law."
+      },
+      "manila-bulletin": {
+        "description": "SEBI Technologies, Inc. (SEBI Tech), a spin-off company of the Technological Institute of the Philippines (T.I.P.), has pioneered the development of blockchain-encrypted digital certificates in the Philippines."
+      },
+      "meet-global": {
+        "description": "Turing Certs issued the first blockchain diploma with National Tsinghua University, one of Taiwan's top-tier universities. With eyes set on the global market, Turing Certs is currently undergoing proof of concept (POC) with European University, meaning that they are testing product feasibility in the European market."
+      },
+      "digital-journal": {
+        "description": "Turing Chain envisions a world completely without fake data. Evolving from HKUST and UC Berkeley, the company has launched a smart city network called Turing Certs for Credential Endorsements and Proof of Evidence. The company is currently focused on targeting the education and real estate markets."
+      },
+      "ted": {
+        "description": "Can you imagine a world where fake degrees, fake news, and fake deals are all gone and wiped out? “Blockchain” is leading mankind to a completely authentic future without any sham."
+      },
+      "bnext": {
+        "description": "National Tsinghua University announced today that it will cooperate with Turing Chain to issue the first digital diploma in the country with blockchain encryption and seal. Even if hackers invade the system, they cannot tamper with forgery, which is inline with international standards."
+      },
+      "udn": {
+        "description": "Chinese Culture University signed a letter of intent for cooperation on the 26th with the start-up company “Turing Chain”. Through international standardized certificate system, 7000 Ph.D. and master students graduating this year can apply for a digital graduation certificate."
+      },
+      "ltn-jinan": {
+        "description": "National Jinan University has recently cooperated with a multinational technology start-up company, Turing Chain. They have continuously integrated various certificate documents such as foreign student's study permit and admission notice into blockchain. Through the key technology of Turing Certs, the link of verifying certificates can be shortened to 15 seconds. At the same time, it can eliminate fake certificates, the high cost of verification, and the trouble of losing paper documents, which further increased the students' employment competitiveness and data protection."
+      },
+      "cio": {
+        "description": "Turing Chain utilizes blockchain technology in learning portfolios. At present, more than 30 colleges and universities and educational institutions have adopted Turing Certs to issue certificates. There are more than 3000 certificates issued cumulatively, enabling 3000 students to have an international anti-counterfeiting digital portfolios."
+      },
+      "gcamp": {
+        "description": "In order to assist Taiwan's start-ups to inject international energy, the SME Division of the Ministry of Economic Affairs has been promoting the “International Innovation and Entrepreneurship Training Camp”（hereinafter referred to as G Camp）since 2018, and has successfully cultivated more than 55 start-up teams to enter the global market, which accumulatively created NT$70 million business opportunities."
+      },
+      "cna": {
+        "description": "Affected by the pandemic, students cannot go to school to receive their graduation certificates. Therefore, National Taipei University of Business and Turing Chain Co., Ltd. announced the official adoption of blockchain certificates. As the second college in Taiwan to adopt blockchain electronic graduation certificates, they will start issuing electronic graduation certificates to class of 2020 from July 30th this year. It is estimated that the number of recipients will reach 2200 (including day and continuing education)."
+      },
+      "ltn-hchs": {
+        "description": "In response to the digitalization and internationalization of the 108 new syllabus learning portfolios, Hsinchu High School became the first high school to adopt blockchain certificates. The school signed a contract with the industry yesterday. Principal Lee, Ming-Chao said that in the future, students' blockchain certificates will digitize the entire high school learning portfolios, presenting the learning portfolios completely and avoid data loss."
+      },
+      "tnl": {
+        "description": "In addition to Bitcoin, how can blockchain change our lives? Hu, Yao-Chieh invented “Turing Certs” with blockchain technology, which completely changed the certificate system in the system of education."
+      },
+      "gvm": {
+        "description": "Digital portfolios are trending! In June this year, a start-up named “Turing Chain” with only 13 employees, an average age of 23, and established in just 3 years, was able to cooperate with more than 30 schools, foreign education, and government units issuing various blockchain encrypted certificates. How did they do it?"
+      }
+    },
+    "information-security-policy": {
+      "date": "April 11, 2022",
+      "purpose-title": "1. Purpose",
+      "purpose-description": "As information security is the basis for maintaining the safe operation of our service, to ensure the security of personnel, data, information systems, equipment, and networks of Turing Chain Taiwan Limited (refer to as Our Company in the following), we have stipulated the Information Security Policy (refer to as this document in the following) as the highest guiding principle of our Company's Information Security Management System (refer to as ISMS in the following).",
+      "objectives-title": "2. Objectives",
+      "objectives-description": "Our Company's information security objectives are to ensure the confidentiality, integrity, availability, and compliance of critical information and service. We define and measure the quantitative indicators of information security performance according to respective competency to confirm the implementation status of ISMS and whether the information security objectives are achieved.",
+      "scope-of-application-title": "3. Scope of Application",
+      "scope-of-application-description": "The ISMS takes into account internal and external issues, the needs and expectations of interested parties, the interfaces, and dependencies between our Company's activities, and those of other organizations. The scope of application is service software development, testing, operations, and operating environments of Turing Certs Blockchain-based Resume, including physical office areas, cloud systems, developers, software Turing Certs Blockchain-based Resume is applied to Turing Certs Blockchain-based Resume software development, testing, operation, and operation environment, including physical office area, cloud system, developers, software, operation data, system management department and related operation process.",
+      "contents-covered-title": "4. Contents covered",
+      "contents-covered-description": "The ISMS includes the following contents, and the relevant departments and personnel shall stipulate management regulations or implementation plans for the following matters, put in to practice, and evaluate the effectiveness of the implementation regularly.</br>● Information security organization and management inspection</br>● Risk management</br>● Document and record management</br>● Internal auditing of information security</br>● Human resource security management</br>● Asset management</br>● Access control management</br>● Physical and environmental security management</br>● Operational security and cryptography</br>● Communication security management</br>● System acquisition, development, and maintenance management</br>● Vendor relationship management</br>● Information security incident management</br>● Business continuity management</br>● Compliance management</br>",
+      "organization-and-authority-title": "5. Organization and Authority",
+      "organization-and-authority-description": "To ensure the effective operation of the ISMS, the information security organization and authority should be clearly defined to promote and maintain various management, implementation, inspection, etc.",
+      "implementation-principles-title": "6. Implementation Principles",
+      "implementation-principles-description": "The implementation of ISMS shall be based on the process of Plan, Do, Check, and Act to ensure the effectiveness and continuous improvement of information business operation.",
+      "review-and-evaluation-title": "7. Review and Evaluation",
+      "review-and-evaluation-description": "7.1. This document shall be evaluated and reviewed when encountering major changes or at least once a year to ensure the effectiveness of the latest development of laws, technology, and related departments of information security practices.</br>7.2. This document shall be revised based on the results of the review, and shall take effect after it is signed and published by the person in charge of our Company.</br>7.3. This document shall be sent to the interested parties, such as partners, employees, suppliers, etc. via document, e-mail, or document managing system after it is stipulated or revised."
+    },
+    "privacy-policy": {
+      "date": "April 11, 2022",
+      "title": "Privacy Policy of Turing Certs",
+      "description": "Welcome to Turing Certs (refer to as “Our Company” in the following). Our service includes Turing Certs Blockchain-based Resume Service and the website (refer to as “Company Service” in the following). To protect your rights and provide a better user experience, please read this Privacy Policy (refer to as “this policy” in the following) before you agree to use the website and related services; you will be deemed to have read, understood, and agreed to the contents of this Policy if you start using our service.",
+      "scope-title": "1. Scope",
+      "scope-description": "This Privacy Policy applies to the personal information you provide when you use this website (certs.turingchain.tech and the subdomains including turingchain.tech) and the personal information we provide during our service (global.turingcerts.com and subdomains including turingcerts.com). You may be able to access other websites through the links provided on this website, but the privacy policies of these linked websites may differ from this policy, and this policy will not apply to other linked websites.",
+      "purpose-title": "2. Purpose, Types, and Sources of Personal Information Collection",
+      "purpose-description": "While using our service, the purpose, types, and sources of personal information collected are based on the following criteria</br>● Sources of collection</br>The issuer using Turing Certs Blockchain-based Resume service (Our Company is responsible for information processing.)</br>● Our service</br>Turing Certs Blockchain-based Resume Service.</br>The website that the issuer using Turing Certs Blockchain-based Resume Service who has signed a contract with Turing Certs.</br>● Legal Specific Purpose</br>1. 119 Issuing Certificates and Registration</br>2. 154 Credit Checking</br>3. C102 Agreement or Contract</br>4. 152 Advertising or Business Conduct Management</br>5. 090 Consumer, customer management and services</br>6. 040 Marketing (including financial co-marketing)</br>7. 157 Surveys, Statistics, and Research Analysis</br>8. 148 Internet Shopping and Other E-Commerce Service</br>● Personal Information Collection</br>I. Name, e-mail address, mobile phone number, and address;</br>ii. Identification number;</br>iii. License number;</br>iv. School number, school, grades;</br>v. Company of employment;</br>vi. Real estate information;</br>vii. E-mail address, phone number, organization name;</br>viii. Cookies</br>● Legal Personal Information Categories</br>1. C001 Personal identifier</br>2. C003 Identifiers in government data</br>3. C051 School records</br>4. C052 Qualifications or skills</br>5. C061 Current Employment Status</br>6. C032 Property</br>7. C001 Personal identifiers</br>8. C132 Unclassified information",
+      "usage-title": "3. Usage of Personal Information",
+      "usage-description": "Timespan:</br>The date you request to stop using or until the cessation of our service.</br>Location:</br>Your personal information will be used in any location where you have authorized the use of your personal information.</br>Object:</br>1. Our Company: Process and protect personal information as required by the issuer using the Turing Certs Blockchain-based Resume Service.</br>2. Issuer: The institution using Turing Certs Blockchain-based Resume Service to issue and manage the information of the certificates.</br>3. Receiver: Enquire about the personal certificates issued by the issuer.</br>Approach:</br>Our Company complies with the Personal Information Protection Law and this Policy for personal information collection. Our Company will not actively provide the information you have provided to our Company to third parties, except in the following circumstances or in compliance with the Personal Information Law:</br>I. To cooperate with the investigation of judicial authorities.</br>ii. To cooperate with investigations by relevant government agencies as required by law or by their duties.</br>iii. With your consent.</br>iv. Complies the law.</br>v. For internal analysis and research purposes.</br>vi. Necessary outsourcing business.</br>Cookies:</br>To better user experience, our company's related websites may use cookie technology, including the IP address of your connected device, timespan, the browser you use, browsing and clicking data records, etc., for our website to analyze website activities, information collection, and provide service that meets user’s personal need; this record is for our company's internal analysis and research purposes only. If you do not wish to accept the use of cookies on our company's website, please go to your browser settings to disable the cookie tracking function, but this may result in restrictions on the usage of the Company's website or participation in activities.",
+      "responsibility-title": "4. Responsibility for Personal Information Not Directly Collected by Our Company",
+      "responsibility-description": "You are responsible for ensuring that the information you provide and store in our service is collected, processed, and used by the relevant provisions of the Personal Information Law when it involves the personal information of third parties. You shall be responsible for any damage to our Company, its operators, its personnel, or other third parties due to a breach of the law.",
+      "information-protection-title": "5. Information Protection",
+      "information-protection-description": "Our Company will do our best to protect your personal information within reasonable technical limits. The host of the website is equipped with firewalls and other related information security equipment and necessary security measures to prevent personal information from being stolen, tampered with, damaged, destroyed, or leaked, and only authorized personnel will have access to your personal information, relevant personnel is obliged to keep confidential. Any violation will be handled under relevant laws and regulations. If outsourcing business is necessary, our company will strictly require them to comply with the confidentiality obligations and take necessary measures to ensure that they do so.",
+      "self-protection-title": "6. User’s Self-Protection Measures",
+      "self-protection-description": "Please keep your information secure and avoid providing personal information, account, and password information to others. Use the website and related services through a secure or encrypted network, and remember to log out after using. If you’re sharing computers with others or using a public computer, please remember to close the browser and delete viewed history to prevent others from stealing or knowing the information you provided.",
+      "solutions-title": "7. Solutions for Fraudulent Use of Accounts or Passwords",
+      "solutions-description": "If you find out that your account or password is hacked, please inform our customer service as soon as possible. We have access to suspend the transactions generated by the account and we  will discuss the solution with you. However, the measure above shall not be considered as a promise or an implication that our company has any form of compensation or responsibility to the user.",
+      "rights-of-the-parties-title": "8. Rights of the Parties",
+      "rights-of-the-parties-description": "Under the Personal Information Protection Law, you may contact our company (please refer to our company's website) to request the following rights:</br>1. Make inquiries or requests for access.</br>2. Ask for a copy.</br>3. Make additions or corrections.</br>4. Request to stop collecting, processing, or using.</br>5. Request for deletion.</br>6. Requests for the rights above, our company may charge the necessary costs, but may not be able to confirm your request if it does not comply with the application procedures, legal requirements, the preservation obligations of the website under the law, or other regulations according to the law.",
+      "amendments-title": "9. Amendments to the Privacy Policy",
+      "amendments-description": "Our company will revise and update the Terms of User Privacy Policy from time to time according to the actual needs and will announce them on the website without sending notifications to users, you are encouraged to be aware of the terms and conditions of the website to protect your safety and related rights of browsing the website; if you do not agree with our company's revision or update, please terminate our company’s service immediately, if you continue to use the website and the related services, you are deemed to have agreed to the amendments or updates. If you have any questions or suggestions about the content above or the website, please contact our customer service immediately.</br>Email: apac@turingchain.tech."
+    },
+    "cookie": {
+      "description1": "We use cookies",
+      "description2": "This website uses cookies to help personalize content and provide a safer experience.",
+      "button-content": "Okay"
+    }
+  },
+  "zh-TW": {
+    "header": {
+      "about-us": "關於我們",
+      "news": "新聞",
+      "sign-up": "申請成為發證者"
+    },
+    "intro": {
+      "slogan": "零造假，零紙張，<br>永續社會",
+      "slogan-description": "以區塊鏈為基礎，全球通用的簽發、管理、數位驗證一站式服務。",
+      "login": "登入"
+    },
+    "benefits": {
+      "title": "好處",
+      "cost": {
+        "before-highlight": "節省成本 ",
+        "highlight": "86%"
+      },
+      "privacy": {
+        "before-highlight": "優先考慮隱私，符合 ",
+        "highlight": "GDPR",
+        "after-highlight": "承諾與規範"
+      },
+      "reduce-paper-usage": {
+        "before-highlight": "減少紙張使用量 ",
+        "highlight": "100%"
+      },
+      "efficient": {
+        "before-highlight": "節省時間 ",
+        "highlight": "50%"
+      },
+      "license": {
+        "before-highlight": "資安保護 ",
+        "highlight": "ISO 27001",
+        "after-highlight": " 證照"
+      },
+      "reduce-carbon-emission": {
+        "before-highlight": "減少碳排放 ",
+        "highlight": "98%"
+      }
+    },
+    "impact": {
+      "plus": "+",
+      "title": "影響力",
+      "case1": {
+        "count": "32000",
+        "unit": "證書"
+      },
+      "case2": {
+        "count": "35",
+        "unit": "大學"
+      },
+      "case3": {
+        "count": "42",
+        "unit": "研究所"
+      },
+      "case4": {
+        "count": "9",
+        "unit": "國家/地區"
+      }
+    },
+    "whom-we-can-help": {
+      "title": "我們可以幫助誰",
+      "learn-more-button-text": "了解更多",
+      "case1": {
+        "name": "大學",
+        "description": "成績單、文憑、錄取通知書、獲獎證書等。"
+      },
+      "case2": {
+        "name": "教育機構",
+        "description": "課程證書、結業證明、活動證書等"
+      },
+      "case3": {
+        "name": "房地產",
+        "description": "電子合約、交易記錄、名片、房屋歷史等"
+      },
+      "case4": {
+        "name": "農業",
+        "description": "原產地證明、有機標籤、公平貿易認證等"
+      },
+      "case5": {
+        "name": "藝術",
+        "description": "所有權證書、創作證據、拍賣記錄等"
+      }
+    },
+    "our-clients": {
+      "title": "我們的客戶",
+      "ntu": "國立台灣大學國際事務處",
+      "nthu": "國立清華大學",
+      "ocac": "中華民國僑務委員會",
+      "cch": "彰化基督教醫院線上醫療教育課程",
+      "iii": "財團法人資訊工業策進會",
+      "tcgya": "桃園市政府青年事務局"
+    },
+    "recognition": {
+      "title": "認可",
+      "alibaba-description": "美國前五名新創公司 & 最佳創新獎",
+      "google-hatcher-description": "Google 孵化器獲選新創公司",
+      "draper-description": "全球第三名",
+      "e27-description": "新加坡計畫獲選新創公司",
+      "skydeck-description": "SkyDeck HotDesk 孵化器獲選新創公司",
+      "jetro-description": "日本企業夥伴計畫"
+    },
+    "iota-description": "由公共區塊鏈 - IOTA 所保護</br>歐洲區塊鏈服務基礎建設",
+    "iso-description": "通過 ISO/IEC 27001 認證",
+    "footer": {
+      "security-policy": "資訊安全政策",
+      "privacy-policy": "隱私權政策",
+      "address": "台灣台北市內湖區瑞光路335號7樓之10<br>"
+    },
+    "aboutUs": {
+      "first-subtitle": "“人生經驗的總和成就了我們。”",
+      "first-paragraph": "你也許有寫日記的習慣，透過紙筆寫下生活的點滴。然而，我們的故事很容易被遺忘，而隨著時間的進展，最終被歷史長河淹沒。但我們依然堅信每個人所走的每一步都有它的意義 - 值得被記錄。這就是為什麼圖靈鏈一直致力於為你建立從國小一年級到畢業，甚至從第一份工作到達成人生目標的完整生涯檔案。透過電子簽名尋求真實性，透過無紙化保護自然環境，並透過數位身分認證守護你的個人資料是我們的任務。“你是你生命歷程的總和。” 圖靈鏈會是你最佳的數位體驗。",
+      "our-team": "我們的團隊",
+      "our-team-paragraph": "我們的團隊是由 CISSP 資安專家，ACM/IEEE 區塊鏈研究員，以及從加州大學柏克萊分校、南洋理工大學、香港科技大學、台灣大學畢業，擁有豐富經驗的產品設計師所組成。",
+      "team-member-CEO": "胡耀傑",
+      "team-member-CEO-description": "創辦人 & 執行長",
+      "team-member-product": "徐靖雅",
+      "team-member-product-description": "產品主管",
+      "team-member-tech": "杭孟澤",
+      "team-member-tech-description": "技術主管",
+      "team-member-security": "潘子維",
+      "team-member-security-description": "資安專家",
+      "team-member-BD-SA": "林奕葳",
+      "team-member-BD-SA-description": "西南亞業務主管",
+      "team-member-BD-Japan": "Mari Ishikawa",
+      "team-member-BD-Japan-description": "日本業務主管",
+      "what-people-say": "使用者反饋",
+      "johnny-wu": "吳霽儒",
+      "johnny-wu-title": "國立台灣大學國際合作 總監兼股長",
+      "johnny-wu-description": "“圖靈鏈是市面上最好的區塊鏈證書提供者。由於它的安全、便利及創新的功能——像連接到 LinkedIn——彌補了大學端協助學生打造數位學習履歷的不足。”",
+      "professor-liao": "廖冠智教授",
+      "professor-liao-title": "國立清華大學學習科學與科技研究所 所長",
+      "professor-liao-description": "“學習始於圖靈鏈並結束於無盡的未來。”"
+    },
+    "news": {
+      "berkeley-innovators": {
+        "description": "在一次舉辦於舊金山的區塊鏈會議中，台灣創業家胡耀傑 (Jeff) 讓許多參加會議的加州大學柏克萊分校思想領袖留下深刻印象，甚至邀請他成為加州大學柏克萊分校區塊鏈實驗室的其中一位研究學者。"
+      },
+      "unesco": {
+        "description": "台灣新創公司圖靈鏈根據圖靈證書區塊鏈解決方案為教育機構、學生和公司提供一種新的證書及認證方法。"
+      },
+      "e27": {
+        "description": "圖靈證書是圖靈鏈背後的白帽駭客跟工程師創造的產品，它使用區塊鏈創建防篡改的電子履歷。"
+      },
+      "berkeley": {
+        "description": "胡耀傑，工程碩士 ’20 (工業工程/金融科技)，分享他去加州大學柏克萊分校讀工程碩士的歷程，從參加世界機器人奧林匹克到摩根大通工作再到創立圖靈證書與圖靈鏈。"
+      },
+      "draper": {
+        "description": "零詐欺 & 零紙張的解決方案，幫助包括加州大學柏克萊分校法律學院在內超過 80 所學校採用防篡改區塊鏈證書。"
+      },
+      "manila-bulletin": {
+        "description": "SEBI Technologies, Inc. (SEBI Tech)，一個菲律賓技術學院 (T.I.P.) 的衍生公司，率先在菲律賓發展區塊鏈加密的數位證書。"
+      },
+      "meet-global": {
+        "description": "圖靈證書與台灣一流大學之一的國立清華大學發出了第一個區塊鏈文憑。放眼於國際市場，圖靈證書目前正在與歐洲大學進行概念驗證 (POC)，這也意味著他們正在測試產品在歐洲市場的可行性。"
+      },
+      "digital-journal": {
+        "description": "圖靈鏈展望一個完全沒有假數據的世界。該公司從香港科技大學和加州大學柏克萊分校發展，推出了一個名為圖靈證書的智慧城市網路作為證書背書及證據證明。該公司目前專注於瞄準教育和房地產市場。"
+      },
+      "ted": {
+        "description": "能夠想像一個假學歷、假新聞、假交易完全消失跟抹除的世界嗎？「區塊鏈」，正在帶領人類加速前往一個完全真實的未來，沒有任何虛假。"
+      },
+      "bnext": {
+        "description": "清華大學今天宣布，將與台灣圖靈鏈公司合作發出全國第一張區塊鏈加密簽章的數位學位證書，即使駭客入侵系統也無法竄改偽造，與國際接軌。"
+      },
+      "udn": {
+        "description": "文化大學與新創公司「圖靈鏈」26日簽署合作意向書，將透過國際標準化證書系統，讓今年文大應屆畢業的7000名博碩學士生，可申請到數位畢業證書。"
+      },
+      "ltn-jinan": {
+        "description": "國立暨南國際大學近期與跨國科技新創公司圖靈鏈合作，持續將外國學生人學許可及錄取通知書等多項證書文件資料整合至區塊鏈中，透過圖靈證書的關鍵技術，使驗證證書的環節能縮減至15秒內完成，同時能杜絕假證書、高成本驗證與紙本資料遺失的種種麻煩，進一步增加學生就業競爭力與資料保護力。"
+      },
+      "cio": {
+        "description": "圖靈鏈運用區塊鏈技術於學習履歷之中，目前已有逾30所大專院校、教育機構採用圖靈證書發證，累計發出超過3000張證書，促使3000位學生擁有國際防偽數位歷程。"
+      },
+      "gcamp": {
+        "description": "為協助臺灣新創企業挹注國際化能量，經濟部中小企業處自107年起推動「國際創新創業訓練營」（以下簡稱 G Camp），已成功培育超過55家以上新創團隊進軍國際市場、累計創造新臺幣7,000萬商機。"
+      },
+      "cna": {
+        "description": "受疫情影響，學生無法到校領取畢業證書，因此北商大攜手台灣圖靈鏈公司宣布正式採用區塊鏈電子證書，為全台第二所採用區塊鏈電子畢業證書的大專院校，將於今年 7 月 30 日起開始發放電子畢業證書予 109 年度應屆畢業生，預計發放人數將達2,200人 （包含日間和進修學制）。"
+      },
+      "ltn-hchs": {
+        "description": "因應108新課綱學習歷程檔案數位國際化，新竹高中成為台灣第一所採用區塊鏈證書的高中，校方昨與業者簽約。校長李明昭表示，未來學生的區塊鏈證書將把高中的學習歷程全部數位化，完整呈現學習過程並可避免資料遺失。"
+      },
+      "tnl": {
+        "description": "除了比特幣外，區塊鏈還能怎麼改變我們的生活？ 胡耀傑以區塊鏈技術發明「圖靈證書」，徹底改變教育體制內的證書系統。"
+      },
+      "gvm": {
+        "description": "數位履歷已成趨勢！今年6月，一家成立短短三年、全部員工僅有13人、平均年齡更只有23歲的新創公司「圖靈鏈」，竟能與30多所學校、國外教育與政府單位合作，發出各種區塊鏈加密證書。它如何做到？"
+      }
+    },
+    "information-security-policy": {
+      "date": "2022年4月11日",
+      "purpose-title": "1. 目的",
+      "purpose-description": "鑑於資訊安全乃維繫各項服務安全運作之基礎，為確保台灣圖靈鏈股份有限公司（以下簡稱本公司）人員、資料、資訊系統、設備及網路之安全，特訂定資訊安全政策（以下簡稱本文件），作為本公司資訊安全管理系統(以下簡稱ISMS)的最高指導原則。",
+      "objectives-title": "2. 目標",
+      "objectives-description": "本公司資訊安全目標為：確保重要資訊及服務之機密性（Confidentiality）、完整性（Integrity）、可用性（Availability）與遵循性（Compliance）。並依各階層與職能定義及量測資訊安全績效之量化指標，以確認ISMS實施狀況及是否達成資訊安全目標。",
+      "scope-of-application-title": "3. 適用範圍",
+      "scope-of-application-description": "本ISMS考量本公司內部及外部議題、關注方之需要及期望，以及本公司活動與其他組織活動間之介面及相依性，適用範圍為：TuringCerts Blockchain-based Resume 圖靈證書區塊鏈履歷服務之軟體開發、測試、營運及作業環境，包括：實體辦公室區域、雲端系統、開發人員、軟體、營運資料、系統管理單位及相關作業流程。",
+      "contents-covered-title": "4. 涵蓋內容",
+      "contents-covered-description": "ISMS包括內容如下，有關單位及人員就下列事項，應訂定對應之管理規範或實施計畫，並據以實施及定期評估實施成效：</br>● 資訊安全組織與管理審查</br>● 風險管理</br>● 文件與記錄管理</br>● 資訊安全內部稽核</br>● 人力資源安全管理</br>● 資產管理</br>● 存取控制管理</br>● 實體與環境安全管理</br>● 運作安全與密碼學</br>● 通訊安全管理</br>● 系統獲取、發展與維護管理</br>● 供應商關係管理</br>● 資訊安全事故管理</br>● 營運持續管理</br>● 遵循性管理</br>",
+      "organization-and-authority-title": "5. 組織與權責",
+      "organization-and-authority-description": "為確保ISMS能有效運作，應明定資訊安全組織及權責，以推動及維持各類管理、執行與查核等工作之進行。",
+      "implementation-principles-title": "6. 實施原則",
+      "implementation-principles-description": "ISMS之實施應依據規劃（Plan）、執行（Do）、查核（Check）及改善（Act）流程模式，以週而復始、循序漸進的精神，確保資訊業務運作之有效性及持續改善。",
+      "review-and-evaluation-title": "7. 審查與評估",
+      "review-and-evaluation-description": "7.1. 本文件應於重大變更或至少每年評估審查一次，以反映相關法令法規、技術、業務及相關部門等最新發展現況，確保資訊安全實務作業之有效性。</br>7.2. 本文件應依據審查結果進行修訂，並經本公司負責人簽核發佈後始生效。</br>7.3. 本文件訂定或修訂後應以書面、電子郵件、文件管理系統或其他方式告知關注方，如：合作夥伴、所屬員工、供應商等。"
+    },
+    "privacy-policy": {
+      "date": "2022年4月11日",
+      "title": "台灣圖靈鏈隱私權政策",
+      "description": "歡迎使用台灣圖靈鏈股份有限公司(以下簡稱「本公司」)所提供之服務。服務之內容包含：TuringCerts Blockchain-based Resume 圖靈證書區塊鏈履歷服務及本網站(以下簡稱「本公司服務」)。為了保障您的權益及提供更好的使用者體驗，在您同意使用本網站及相關服務之前，請詳閱本隱私權政策(以下簡稱「本政策」)；您在了解本政策後開始使用本公司之各項服務，將視為您已閱讀、了解並同意本政策內容。",
+      "scope-title": "1. 本政策的適用範圍",
+      "scope-description": "本隱私權政策之適用範圍，包括您使用本網站（certs.turingchain.tech及含有 turingchain.tech之子網域）及本公司服務（global.turingcerts.com及含有turingcerts.com子網域）時所提供之個人資料。您可能透過本網站所提供的連結，點選進入其他網站，但這些連結網站的隱私權政策與本政策可能不同，本政策並不適用於其他連結網站，建議您自行參考並仔細閱讀該連結網站中的隱私權政策。",
+      "purpose-title": "2. 個人資料蒐集之目的、類別與來源",
+      "purpose-description": "當您使用本公司服務時，你的個人資料蒐集之目的、類別與來源蒐集如下：</br>● 蒐集來源</br>使用TuringCerts Blockchain-based Resume 圖靈證書區塊鏈履歷服務之發證方(本公司為資料處理者)本公司</br>● 本公司服務</br>TuringCerts Blockchain-based Resume 圖靈證書區塊鏈履歷服務</br>使用TuringCerts Blockchain-based Resume 圖靈證書區塊鏈履歷服務之發證方與本公司簽訂合約網站</br>● 法定特定目的</br>1. 119 發照與登記</br>2. 154 徵信</br>3. C102 約定或契約</br>4. 152 廣告或商業行為管理</br>5. 090 消費者、客戶管理與服務</br>6. 040 行銷（包含金控共同行銷業務）</br>7. 157 調查、統計與研究分析</br>8. 148 網路購物及其他電子商務服務</br>● 蒐集個資</br>I. 姓名、電子郵遞地址、行動電話、地址；</br>ii. 身分證字號；</br>iii. 證照號碼；</br>iv. 學號、學校、成績；</br>v. 任職公司；</br>vi. 不動產資訊；</br>vii. 電子郵遞地址、電話號碼、機構名稱；</br>viii. cookies</br>● 法定個資類別</br>1. C001 辨識個人者</br>2. C003 政府資料中之辨識者</br>3. C051 學校紀錄</br>4. C052 資格或技術</br>5. C061 現行之受僱情形</br>6. C032 財產</br>7. C001 辨識個人者</br>8. C132 未分類之資料",
+      "usage-title": "3. 個人資料利用之期間、地區、對象及方式",
+      "usage-description": "期間：您要求停止使用或本公司服務停止之日止。</br>地區：您的個人資料將用於任何您授權使用的地區。</br>對象：</br>1. 本公司：依使用TuringCerts Blockchain-based Resume 圖靈證書區塊鏈履歷服務之發證方需求，處理及保護個人資料。</br>2. 發證方：使用TuringCerts Blockchain-based Resume 圖靈證書區塊鏈履歷服務之發證方管理其證照資料。</br>3. 收證方：查詢發證方核發之其個人證書。</br>方式：</br>本公司對於所蒐集之個人資料，均遵守個人資料保護法及本政策之規定，除有下列情形或符合個資法之規定外，本公司不會主動對第三人提供您於本公司所輸入之資訊：</br>I. 配合司法單位之調查；</br>ii. 配合相關政府機關依法律或職務需要之調查；</br>iii. 取得您的同意；</br>iv. 配合法律規定；</br>v. 內部分析與研究用途；</br>vi. 涉及委外業務而有必要時。</br>Cookies：</br>為了改善使用者體驗，本公司相關網站可能使用cookie技術，包括您使用連線設備的IP位址、使用時間之長短、使用的瀏覽器、瀏覽及點選資料記錄等，以利本網站進行網站活動之各種分析、資訊收集，並進而提供更適合使用者個人需要的服務；此記錄僅供本公司內部分析研究使用。如您不希望接受本公司相關網站使用cookie，請自行利用瀏覽器的設定，關閉cookie追蹤功能，但此舉可能造成使用者在使用本公司相關網站或參與活動時受到限制。",
+      "responsibility-title": "4. 非本公司直接蒐集之個資責任",
+      "responsibility-description": "您應擔保輸入及存放於本公司服務之資料，倘涉及第三人之個資時，已確實依照個資法相關規定蒐集、處理、利用。如有違反導致本公司及營運者、所屬人員或其他第三人受有任何損害，均應負責賠償。",
+      "information-protection-title": "5. 資料之保護",
+      "information-protection-description": "本公司將於合理之技術範圍內盡力保護您的個人資料，本網站主機均設有防火牆等相關的各項資訊安全設備及必要的安全防護措施，來防止個人資料被竊取、竄改、毀損、滅失或洩漏，只有經過授權之人員方能接觸您的個人資料，相關處理人員均負有保密義務，如有違反將依照相關法律規定處理。如因委外業務，有需要委託他人提供服務時，本公司亦會嚴格要求其遵守保密義務，並採取必要之措施以確定其確實遵守。",
+      "self-protection-title": "6. 使用者自我保護措施",
+      "self-protection-description": "請妥善保管您的資料，避免將個人資料及帳戶、密碼等資訊任意提供給他人，並請您透過安全或加密之網路使用本網站及相關服務，於使用完畢後，亦請您務必記得登出，若您使用公共電腦或與他人共享之電腦，亦切記關閉瀏覽器視窗、並清除瀏覽紀錄，以避免他人不法竊取或知悉您所輸入之訊息。",
+      "solutions-title": "7. 帳號或密碼被冒用之處理",
+      "solutions-description": "當您知悉帳號、密碼等個人資料遭人盜用時，請盡速通知客服人員，本公司有權暫停該帳號所生交易之處理及後續利用，並與您協商後續的處理方案。但前述因應措施不得解釋為本公司因此承諾或暗示對使用者負有任何形式之補償或賠償責任。",
+      "rights-of-the-parties-title": "8. 當事人權利",
+      "rights-of-the-parties-description": "依個人資料保護法，您可以與本公司聯絡（請參考本公司網站）請求行使以下權利：</br>1. 查詢或請求閱覽。</br>2. 製給複製本。</br>3. 補充或更正。</br>4. 請求停止蒐集、處理或利用。</br>5. 請求刪除。</br>6. 上述權利之行使，本公司可能依法酌收必要成本費用，若因不符合申請程序、法律規定、本網站依法負有保存義務或法律另有規定之情況者，則可能無法依您的要求辦理。",
+      "amendments-title": "9. 隱私權政策之修正",
+      "amendments-description": "本公司將視實際需求隨時修改並更新使用者條款及隱私權政策，並公告於本網站中，不會另外個別通知使用者，建議您隨時注意並確認本網站之條款，以維護您瀏覽本網站之安全及相關權益；如不同意本公司之修正或更新，請即時向本公司終止服務，惟若繼續使用本網站及相關服務，則視同已接受條款之修正及更新。如您對上述內容或本網站有任何不明瞭之處或意見，請立即與服務人員聯繫</br>Email: apac@turingchain.tech。"
+    },
+    "cookie": {
+      "description1": "我們使用 cookies",
+      "description2": "這個網站使用 cookies 去幫助個人化內容及提供一個更安全的環境。",
+      "button-content": "確定"
+    }
+  }
+}

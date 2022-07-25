@@ -29,6 +29,7 @@
 
 		gtag('config', 'G-2M60DR7KSW');
 	</script>
+	<script type="module" src="assets/js/setup-i18n.js" ></script>
 </head>
 
 <body data-preloader="1">
@@ -38,7 +39,7 @@
 		<div class="container">
 			<!-- Logo -->
 			<div class="header-logo">
-				<a href="https://certs.turingchain.tech/"><img class="logo-light" src="assets/images/Logo-640x160-w.svg"
+				<a href="/"><img class="logo-light" src="assets/images/Logo-640x160-w.svg"
 						alt=""></a>
 				<!-- 
 					<img class="logo-dark" src="assets/images/your-logo-dark.png" alt="">
@@ -49,18 +50,25 @@
 			<div class="header-menu">
 				<ul class="nav">
 					<li class="nav-item">
-						<a class="nav-link" href="https://certs.turingchain.tech/about-us">About Us</a>
+						<a class="nav-link" href="about-us.html" data-i18n="header.about-us">About Us</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="https://certs.turingchain.tech/news">News</a>
+						<a class="nav-link" href="news.html" data-i18n="header.news">News</a>
 						<!--<ul class="nav-dropdown">
 								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="media.html">Media</a></li>
 								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="https://medium.com/turing-chain">Blog</a></li>
 							</ul>-->
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="https://global.turingcerts.com/en/login?role=cc-apply">Sign up as
+						<a class="nav-link" href="https://global.turingcerts.com/en/login?role=cc-apply" data-i18n="header.sign-up">Sign up as
 							Issuer</a>
+					</li>
+					<li class="nav-item">
+						<i class="fa fa-globe"></i>
+						<select class="language-select" style="border: none; background: transparent" id="language-selector">
+							<option value="en">English</option>
+							<option value="zh-TW">繁體中文</option>
+					  	</select>
 					</li>
 				</ul>
 			</div>
@@ -83,7 +91,7 @@
 
 	<div class="section-sm bg-grey-lighter">
 		<div class="container text-center title-about">
-			<h3 class="font-family-primary">News</h3>
+			<h3 class="font-family-primary" data-i18n="header.news">News</h3>
 		</div><!-- end container -->
 	</div>
 
@@ -105,7 +113,7 @@
 					<h5 class="font-weight-normal"><a
 							href="https://innovators.berkeley.edu/spotlights/jeff-hu-co-founder-and-ceo-turing-chain/">Berkeley
 							Innovators: Jeff Hu, MEng ’20, Turing Chain</a></h5>
-					<p>Upon meeting at a blockchain conference in San Francisco, Taiwanese entrepreneur Yao-Chieh (Jeff)
+					<p data-i18n="news.berkeley-innovators.description">Upon meeting at a blockchain conference in San Francisco, Taiwanese entrepreneur Yao-Chieh (Jeff)
 						Hu so impressed several Berkeley thought leaders in attendance that they invited him to become a
 						research scholar in the UC Berkeley Blockchain Lab.</p>
 				</div>
@@ -124,7 +132,7 @@
 					<h5 class="font-weight-normal"><a
 							href="https://etico.iiep.unesco.org/fr/turingcerts-combat-la-fraude-en-validant-les-certificats-grace-la-blockchain">UNESCO:
 							Turing Certs combat la fraude en validant les certificats grâce à la blockchain</a></h5>
-					<p>La startup taïwanaise TuringChain propose aux établissements d’éducation, aux étudiants et aux
+					<p data-i18n="news.unesco.description">La startup taïwanaise TuringChain propose aux établissements d’éducation, aux étudiants et aux
 						entreprises une nouvelle méthode de certification et d’authentification qui repose sur sa
 						solution blockchain Turing Certs.</p>
 				</div>
@@ -144,7 +152,7 @@
 					<h5 class="font-weight-normal"><a
 							href="https://e27.co/turingcerts-combats-fraud-with-blockchain-powered-certificate-validation-20210330/">e27:
 							TuringCerts combats fraud with blockchain-powered certificate validation</a></h5>
-					<p>Turing Certs is a product by the whitehat hackers and programmers behind Turing Chain that uses
+					<p data-i18n="news.e27.description">Turing Certs is a product by the whitehat hackers and programmers behind Turing Chain that uses
 						blockchain to create tamper-proof e-portfolios.</p>
 				</div>
 				<!-- Masonry Item 5 -->
@@ -162,7 +170,7 @@
 							href="https://funginstitute.berkeley.edu/news/fung-feature-yao-chieh-hu-meng-20-ieor/">UC
 							Berkeley Fung Institute for Engineering Leadership: Yao-Chieh Hu, MEng ’20 (IEOR)
 						</a></h5>
-					<p>Yao-Chieh Hu, MEng ’20 (IEOR/FinTech), shares his journey to Berkeley Master of Engineering
+					<p data-i18n="news.berkeley.description">Yao-Chieh Hu, MEng ’20 (IEOR/FinTech), shares his journey to Berkeley Master of Engineering
 						(MEng), from competing in the World Robotics Olympiad to working at J.P. Morgan to founding
 						TuringCerts and TuringChain.</p>
 				</div>
@@ -182,7 +190,7 @@
 					<h5 class="font-weight-normal"><a
 							href="https://www.draperuniversity.com/blog/fundamentals-of-entrepreneurship-pre-accelerator-fall-2021-announces-demo-day-winners">Draper
 							University: Third place, Turing Certs (Jeff Hu)</a></h5>
-					<p>Zero fraud & zero paper solution that helps 80+ schools adopt tamper-proof Blockchain
+					<p data-i18n="news.draper.description">Zero fraud & zero paper solution that helps 80+ schools adopt tamper-proof Blockchain
 						Credentials, including Berkeley Law.</p>
 				</div>
 				<!-- Masonry Item 6 -->
@@ -202,7 +210,7 @@
 							href="https://mb.com.ph/2021/10/29/t-i-p-sebi-tech-pioneers-blockchain-powered-digital-certificates-for-schools/">Manila
 							Bulletin - Technology News: T.I.P. SEBI Tech pioneers blockchain-powered digital
 							certificates for schools</a></h5>
-					<p>SEBI Technologies, Inc. (SEBI Tech), a spin-off company of the Technological Institute of the
+					<p data-i18n="news.manila-bulletin.description">SEBI Technologies, Inc. (SEBI Tech), a spin-off company of the Technological Institute of the
 						Philippines (T.I.P.), has pioneered the development of blockchain-encrypted digital certificates
 						in the Philippines.</p>
 				</div>
@@ -221,7 +229,7 @@
 					<h5 class="font-weight-normal"><a href="https://meet-global.bnext.com.tw/articles/view/47423">Meet
 							Global: Taiwanese blockchain startup Turing Certs enters European campus, students can
 							expect to receive blockchain diplomas</a></h5>
-					<p>Turing Certs issued the first blockchain diploma with National Tsinghua University, one of
+					<p data-i18n="news.meet-global.description">Turing Certs issued the first blockchain diploma with National Tsinghua University, one of
 						Taiwan's top-tier universities. With eyes set on the global market, Turing Certs is currently
 						undergoing proof of concept (POC) with European University, meaning that they are testing
 						product feasibility in the European market.</p>
@@ -242,7 +250,7 @@
 					<h5 class="font-weight-normal"><a
 							href="https://www.digitaljournal.com/pr/turing-chain-paving-the-way-to-one-click-verification">DIGITAL
 							JOURNAL: Turing Chain: Paving the Way to One-Click Verification</a></h5>
-					<p>Turing Chain envisions a world completely without fake data. Evolving from HKUST and UC Berkeley,
+					<p data-i18n="news.digital-journal.description">Turing Chain envisions a world completely without fake data. Evolving from HKUST and UC Berkeley,
 						the company has launched a smart city network called Turing Certs for Credential Endorsements
 						and Proof of Evidence. The company is currently focused on targeting the education and real
 						estate markets.</p>
@@ -261,7 +269,7 @@
 					<h5 class="font-weight-normal"><a
 							href="https://www.ted.com/talks/feb_2021_7f6690dc-b628-4d6e-b6ab-579afd2d4751">TEDxAnping:
 							胡耀傑 - 用科技萃取世界的真實</a></h5>
-					<p>能夠想像一個假學歷、假新聞、假交易完全消失跟抹除的世界嗎？「區塊鏈」，正在帶領人類加速前往一個完全真實的未來，沒有任何虛假。</p>
+					<p data-i18n="news.ted.description">能夠想像一個假學歷、假新聞、假交易完全消失跟抹除的世界嗎？「區塊鏈」，正在帶領人類加速前往一個完全真實的未來，沒有任何虛假。</p>
 				</div>
 				<!-- Masonry Item 10 -->
 				<div class="masonry-item">
@@ -278,7 +286,7 @@
 					<h5 class="font-weight-normal"><a
 							href="https://www.bnext.com.tw/article/63554/nft-diploma">數位時代：把畢業證書存進區塊鏈！清大創全台首例推加密證書，校友也能申請</a>
 					</h5>
-					<p>清華大學今天宣布，將與台灣圖靈鏈公司合作發出全國第一張區塊鏈加密簽章的數位學位證書，即使駭客入侵系統也無法竄改偽造，與國際接軌。</p>
+					<p style="margin-bottom: 5em" data-i18n="news.bnext.description">清華大學今天宣布，將與台灣圖靈鏈公司合作發出全國第一張區塊鏈加密簽章的數位學位證書，即使駭客入侵系統也無法竄改偽造，與國際接軌。</p>
 				</div>
 				<!-- Masonry Item 11 -->
 				<div class="masonry-item">
@@ -294,7 +302,7 @@
 					</div>
 					<h5 class="font-weight-normal"><a href="https://udn.com/news/story/6928/5701539">聯合新聞網：文化大學推數位畢業證書
 							掃QR碼就能查</a></h5>
-					<p>文化大學與新創公司「圖靈鏈」26日簽署合作意向書，將透過國際標準化證書系統，讓今年文大應屆畢業的7000名博碩學士生，可申請到數位畢業證書。</p>
+					<p style="margin-bottom: 4em" data-i18n="news.udn.description">文化大學與新創公司「圖靈鏈」26日簽署合作意向書，將透過國際標準化證書系統，讓今年文大應屆畢業的7000名博碩學士生，可申請到數位畢業證書。</p>
 				</div>
 				<!-- Masonry Item 12 -->
 				<div class="masonry-item">
@@ -311,7 +319,7 @@
 					<h5 class="font-weight-normal"><a
 							href="https://news.ltn.com.tw/news/life/breakingnews/3768464">自由時報：假證書OUT ！
 							國立暨南國際大學進階區塊鏈證書認證</a></h5>
-					<p>國立暨南國際大學近期與跨國科技新創公司圖靈鏈合作，持續將外國學生人學許可及錄取通知書等多項證書文件資料整合至區塊鏈中，透過圖靈證書的關鍵技術，使驗證證書的環節能縮減至15秒內完成，同時能杜絕假證書、高成本驗證與紙本資料遺失的種種麻煩，進一步增加學生就業競爭力與資料保護力。
+					<p style="margin-bottom: 10em" data-i18n="news.ltn-jinan.description">國立暨南國際大學近期與跨國科技新創公司圖靈鏈合作，持續將外國學生人學許可及錄取通知書等多項證書文件資料整合至區塊鏈中，透過圖靈證書的關鍵技術，使驗證證書的環節能縮減至15秒內完成，同時能杜絕假證書、高成本驗證與紙本資料遺失的種種麻煩，進一步增加學生就業競爭力與資料保護力。
 					</p>
 				</div>
 				<!-- Masonry Item 13 -->
@@ -330,7 +338,7 @@
 					<h5 class="font-weight-normal"><a
 							href="https://www.cio.com.tw/lock-digital-education-turing-chain-with-blockchain-to-facilitate-tepa-formation/">CIO
 							Taiwan: 以區塊鏈鎖定數位學歷 圖靈鏈促成TEPA成立</a></h5>
-					<p>圖靈鏈運用區塊鏈技術於學習履歷之中，目前已有逾30所大專院校、教育機構採用圖靈證書發證，累計發出超過3000張證書，促使3000位學生擁有國際防偽數位歷程。</p>
+					<p style="margin-bottom: 6em" data-i18n="news.cio.description">圖靈鏈運用區塊鏈技術於學習履歷之中，目前已有逾30所大專院校、教育機構採用圖靈證書發證，累計發出超過3000張證書，促使3000位學生擁有國際防偽數位歷程。</p>
 				</div>
 				<!-- Masonry Item 14 -->
 				<div class="masonry-item">
@@ -347,7 +355,7 @@
 					<h5 class="font-weight-normal"><a
 							href="https://www.moea.gov.tw/MNS/populace/news/News.aspx?kind=1&menu_id=40&news_id=96447">經濟部：第5屆國際創新創業訓練營G
 							Camp，攜手10X Innovation Lab協助臺灣新創開拓國際市場</a></h5>
-					<p>為協助臺灣新創企業挹注國際化能量，經濟部中小企業處自107年起推動「國際創新創業訓練營」（以下簡稱 G Camp），已成功培育超過55家以上新創團隊進軍國際市場、累計創造新臺幣7,000萬商機。
+					<p style="margin-bottom: 6em" data-i18n="news.gcamp.description">為協助臺灣新創企業挹注國際化能量，經濟部中小企業處自107年起推動「國際創新創業訓練營」（以下簡稱 G Camp），已成功培育超過55家以上新創團隊進軍國際市場、累計創造新臺幣7,000萬商機。
 					</p>
 				</div>
 				<!-- Masonry Item 15 -->
@@ -365,7 +373,7 @@
 					<h5 class="font-weight-normal"><a
 							href="https://www.cna.com.tw/postwrite/detail/295292">中央社：北商大力拚數位轉型 攜手台灣圖靈鏈公司推出區塊鏈電子證書</a>
 					</h5>
-					<p>受疫情影響，學生無法到校領取畢業證書，因此北商大攜手台灣圖靈鏈公司宣布正式採用區塊鏈電子證書，為全台第二所採用區塊鏈電子畢業證書的大專院校，將於今年 7 月 30 日起開始發放電子畢業證書予
+					<p style="margin-bottom: 8em" data-i18n="news.cna.description">受疫情影響，學生無法到校領取畢業證書，因此北商大攜手台灣圖靈鏈公司宣布正式採用區塊鏈電子證書，為全台第二所採用區塊鏈電子畢業證書的大專院校，將於今年 7 月 30 日起開始發放電子畢業證書予
 						109 年度應屆畢業生，預計發放人數將達2,200人 （包含日間和進修學制）。</p>
 				</div>
 				<!-- Masonry Item 16 -->
@@ -382,7 +390,7 @@
 					</div>
 					<h5 class="font-weight-normal"><a
 							href="https://news.ltn.com.tw/news/life/paper/1435736">自由時報：竹中採用區塊鏈證書 全國第一所</a></h5>
-					<p>因應108新課綱學習歷程檔案數位國際化，新竹高中成為台灣第一所採用區塊鏈證書的高中，校方昨與業者簽約。校長李明昭表示，未來學生的區塊鏈證書將把高中的學習歷程全部數位化，完整呈現學習過程並可避免資料遺失。
+					<p data-i18n="news.ltn-hchs.description">因應108新課綱學習歷程檔案數位國際化，新竹高中成為台灣第一所採用區塊鏈證書的高中，校方昨與業者簽約。校長李明昭表示，未來學生的區塊鏈證書將把高中的學習歷程全部數位化，完整呈現學習過程並可避免資料遺失。
 					</p>
 				</div>
 				<!-- Masonry Item 17 -->
@@ -399,7 +407,7 @@
 					<h5 class="font-weight-normal"><a
 							href="https://becomingaces.com/article/161">關鍵評論網：19世紀發明電話、20世紀造飛機、那21世紀呢？圖靈證書發明者胡耀傑：用科技打造更好的未來社會！</a>
 					</h5>
-					<p>除了比特幣外，區塊鏈還能怎麼改變我們的生活？ 胡耀傑以區塊鏈技術發明「圖靈證書」，徹底改變教育體制內的證書系統。</p>
+					<p data-i18n="news.tnl.description">除了比特幣外，區塊鏈還能怎麼改變我們的生活？ 胡耀傑以區塊鏈技術發明「圖靈證書」，徹底改變教育體制內的證書系統。</p>
 				</div>
 				<!-- Masonry Item 18 -->
 				<div class="masonry-item">
@@ -415,7 +423,7 @@
 					</div>
 					<h5 class="font-weight-normal"><a
 							href="https://www.gvm.com.tw/article/83909">遠見雜誌：信任最貴！為何他發的「區塊鏈加密證書」30所學校都埋單？</a></h5>
-					<p>數位履歷已成趨勢！今年6月，一家成立短短三年、全部員工僅有13人、平均年齡更只有23歲的新創公司「圖靈鏈」，竟能與30多所學校、國外教育與政府單位合作，發出各種區塊鏈加密證書。它如何做到？
+					<p data-i18n="news.gvm.description">數位履歷已成趨勢！今年6月，一家成立短短三年、全部員工僅有13人、平均年齡更只有23歲的新創公司「圖靈鏈」，竟能與30多所學校、國外教育與政府單位合作，發出各種區塊鏈加密證書。它如何做到？
 					</p>
 				</div>
 
@@ -450,9 +458,9 @@
 						<!--<h2>Turing Chain Ltd.</h2>-->
 						<h2>Turing Certs</h2>
 						<ul class="list-inline-dash margin-top-30">
-							<li><a href="https://certs.turingchain.tech/information-security-policy">Information
+							<li><a href="information-security-policy.html" data-i18n="footer.security-policy">Information
 									Security Policy</a></li>
-							<li><a href="https://certs.turingchain.tech/privacy-policy">Privacy Policy</a></li>
+							<li><a href=privacy-policy.html" data-i18n="footer.privacy-policy">Privacy Policy</a></li>
 						</ul>
 						<p class="margin-top-10">&copy; 2022 Turing Chain Limited, All Rights Reserved.</p>
 					</div>
@@ -461,7 +469,7 @@
 							<!--
 								<li>7F.-10, No. 335, Ruiguang Rd., Neihu Dist., Taipei City 11492 , Taiwan</li>
 								-->
-							<a href="https://g.page/TuringCerts?share">7F.-10, No. 335, Ruiguang Rd., Neihu Dist.,
+							<a href="https://g.page/TuringCerts?share" data-i18n="footer.address">7F.-10, No. 335, Ruiguang Rd., Neihu Dist.,
 								Taipei City 11492 , Taiwan</a>
 							<a href="mailto: apac@turingchain.tech">apac@turingchain.tech</a>
 						</ul>
