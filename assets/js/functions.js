@@ -259,7 +259,7 @@ $body.scrollspy({ target: '.header-menu' });
 function update () {
   var select = document.getElementById('language-selector');
   var option = select.options[select.selectedIndex];
-  if (option.value === 'en') {
+  if (option.value === 'en' || option.value === 'tr') {
     document.getElementById('loginUrl').href = "https://global.turingcerts.com/en/login";
     document.getElementById('issuerApply').href = "https://global.turingcerts.com/en/login?role=cc-apply";
   } else {

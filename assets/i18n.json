@@ -470,5 +470,241 @@
       "description2": "這個網站使用 cookies 去幫助個人化內容及提供一個更安全的環境。",
       "button-content": "確定"
     }
+  },
+  "tr": {
+    "header": {
+      "about-us": "Hakkımızda",
+      "news": "Haberler",
+      "sign-up": "Yayımcı olarak kayıt"
+    },
+    "intro": {
+      "slogan": "Sıfır Sahtecilik, sıfır kağıt tüketimi, <br>sürdürülebilir toplum",
+      "slogan-description": "Belgelerinizi doğrudan Blokzincir üzerinde dijital  yayınlama, yönetme ve doğrulama  hizmeti.",
+      "login": "Giriş"
+    },
+    "benefits": {
+      "title": "Katkılar",
+      "cost": {
+        "before-highlight": "節省成本 ",
+        "highlight": "86%"
+      },
+      "privacy": {
+        "before-highlight": "優先考慮隱私，符合 ",
+        "highlight": "GDPR",
+        "after-highlight": "承諾與規範"
+      },
+      "reduce-paper-usage": {
+        "before-highlight": "減少紙張使用量 ",
+        "highlight": "100%"
+      },
+      "efficient": {
+        "before-highlight": "節省時間 ",
+        "highlight": "50%"
+      },
+      "license": {
+        "before-highlight": "資安保護 ",
+        "highlight": "ISO 27001",
+        "after-highlight": " 證照"
+      },
+      "reduce-carbon-emission": {
+        "before-highlight": "減少碳排放 ",
+        "highlight": "98%"
+      }
+    },
+    "impact": {
+      "plus": "+",
+      "title": "Etki",
+      "case1": {
+        "count": "32000",
+        "unit": "Sertifika"
+      },
+      "case2": {
+        "count": "35",
+        "unit": "Üniversite"
+      },
+      "case3": {
+        "count": "42",
+        "unit": "Enstitü"
+      },
+      "case4": {
+        "count": "9",
+        "unit": "Ülke/Bölge"
+      }
+    },
+    "whom-we-can-help": {
+      "title": "Kime yardım edebiliriz ",
+      "learn-more-button-text": "Fazlasını öğrenmek için",
+      "case1": {
+        "name": "Üniversite",
+        "description": "Diploma,Transkript,Onur belgesi, Kabul belgesi vb."
+      },
+      "case2": {
+        "name": "Kurumlar",
+        "description": "Bitirme , Katılım , Başarı belgesi,Takdir, Teşekkür, Onur belgesi, Karne vb."
+      },
+      "case3": {
+        "name": "Emlak",
+        "description": "E-sözleşme, İşlem kaydı, Kartvizitler, Ev geçmişi vb."
+      },
+      "case4": {
+        "name": "Tarım",
+        "description": "Organik etiketler, Adil ticaret sertifikası, Menşe kanıtı vb."
+      },
+      "case5": {
+        "name": "Sanat",
+        "description": "Müzayede kaydı, Mülkiyet belgesi vb."
+      }
+    },
+    "our-clients": {
+      "title": "Müşterilerimiz",
+      "ntu": "Office of International Affairs, National Taiwan University",
+      "nthu": "National Tsing Hua University",
+      "ocac": "Overseas Community Affairs Council of Taiwan",
+      "cch": "Changhua Christian Hospital Online Medical Education",
+      "iii": "Institute for Information Industry Award Certificate",
+      "tcgya": "Taoyuan City Government Youth Affair"
+    },
+    "recognition": {
+      "title": "Tanınma ve Ödüller",
+      "alibaba-description": "Amerika Birleşik Devletleri'nde ulusal en iyi 5 StartUp & en iyi yenilikçilik ödülleri",
+      "google-hatcher-description": "Google' ın Incubator'da seçilmiş StartUp'lar",
+      "draper-description": "Uluslararası 3.lük",
+      "e27-description": "Singapur programında seçilen StartUp'lar",
+      "skydeck-description": "Skydeck HotDesk Incubator'da seçilmiş StarUp'lar",
+      "jetro-description": "Japonya'da kurumsal ortaklık programı"
+    },
+    "iota-description": "Public Blockchain - IOTA güvenliği</br>Avrupa Blok Zinciri Hizmetleri Altyapısı",
+    "iso-description": "ISO/IEC 27001 uyum sertifikası",
+    "footer": {
+      "security-policy": "Bilgi Güvenliği Politikası",
+      "privacy-policy": "Gizlilik Politikası",
+      "address": "7F.-10, No. 335, Ruiguang Rd., Neihu Dist., Taipei City 11492, Taiwan<br>"
+    },
+    "aboutUs": {
+      "first-subtitle": "“Biz bilgi ve deneyimlerimizin toplamıyız.”",
+      "first-paragraph": "Günlük tutma alışkanlığımız olabilir, günlüklerde onu bunui kalem kağıtla not ederiz. Ne yazık her şey istediğimiz gibi olmuyor. Çünkü hikayelerimiz kolayca unutuluyor, dünya bizi unutuveriyor. Ama biz yine de atılan her adımın önemli olduğuna inanıyoruz - çünkü hepsi kayda değer. Bu nedenle Turing Certs; 1.sınıftan mezuniyete  bir eğitim portföyü, ilk işinizden nihai kariyerinize kadar bir kariyer portföyü oluşturmanız için geliştirilmiştir. E-imza doğrulaması yoluyla, kağıt kullandırmayarak Doğa Anayı korumak ve dijital kimlik ile kişisel verilerinizi korumak misyounumuzdur. “İnsan deneyimleriyle gelişir.” Turing Certs, en iyi e-deneyiminiz olacak.",
+      "our-team": "Takımız",
+      "our-team-paragraph": "Bizler; CISSP güvenlik uzmanları, ACM/IEEE blokzinciri araştırmacıları ve UC Berkeley, NTU Singapur, HKUST ve Ulusal Tayvan Üniversitesi'nden deneyimli ürün tasarımcılarından oluşan bir ekibiz.",
+      "team-member-CEO": "Jeff Hu",
+      "team-member-CEO-description": "Kurucu ve CEO",
+      "team-member-product": "Yuffie Hsu",
+      "team-member-product-description": "Ürün yöneticisi",
+      "team-member-tech": "Henry Hang",
+      "team-member-tech-description": "Teknik Lider",
+      "team-member-security": "Jacky Pan",
+      "team-member-security-description": "Güvenlik Uzmanı",
+      "team-member-BD-SA": "Yiwei Lin",
+      "team-member-BD-SA-description": "BD Başkanı, Güneydoğu Asya",
+      "team-member-BD-Japan": "Mari Ishikawa",
+      "team-member-BD-Japan-description": "BD Başkanı, Japonya",
+      "what-people-say": "Ne Diyorlar",
+      "johnny-wu": "Johnny C.J. Wu",
+      "johnny-wu-title": "Uluslararası İlişkiler Ofisi Başkanı, Ulusal Tayvan Üniversitesi",
+      "johnny-wu-description": "“Turing Certs, piyasadaki en iyi blokzincir sertifika sağlayıcısıdır. Güvenlik, uyum ve LinkedIn  bağlantısı gibi yenilikçi işlevleriyle, üniversite için, öğrencilerin kendi dijital öğrenme ayak izlerini yaratmalarında bir boşluğu dolduruyor.”",
+      "professor-liao": "Prof. G.Z. Liao",
+      "professor-liao-title": "Ulusal Tsing Hua Üniversitesi, Öğrenme Bilimleri ve Teknolojileri Enstitüsü Dekanı",
+      "professor-liao-description": "“Öğrenme Turing Certs'le başlar ve bitmeyen bir gelecekte biter.”"
+    },
+    "news": {
+      "berkeley-innovators": {
+        "description": "Tayvanlı girişimci Yao-Chieh (Jeff) Hu, San Francisco'daki bir blokzincir konferansında bir araya geldiği bazı Berkeley düşünce liderlerini o kadar etkiledi ki, onu UC Berkeley Blokzincir Laboratuvarı'nda araştırmacı  olmaya davet ettiler."
+      },
+      "unesco": {
+        "description": "Tayvanlı girişim TuringChain, eğitim kurumlarına, öğrencilere ve şirketlere kendi Turing Certs blokzinciri çözümüne dayalı sertifika ve kimlik doğrulama için yeni bir yöntemi sunuyor."
+      },
+      "e27": {
+        "description": "Turing Certs; kurcalamaya karşı korumalı e-portföyler oluşturmak için blokzincir teknolojisi kullanan akşapkalı bilgisayar korsanları ve programcılarının bir ürünüdür."
+      },
+      "berkeley": {
+        "description": "Yao-Chieh Hu, MEng '20 (IEOR/FinTech) 'de, Dünya Robotik Olimpiyatları'nda yarışmaktan J.P. Morgan'da çalışmaya, TuringCerts ve TuringChain'i kurmaya, Berkeley Mühendislik Master programına (MEng) olan yolculuğunu paylaşıyor."
+      },
+      "draper": {
+        "description": "Sıfır sahtecilik ve sıfır kağıt çözümü; Berkeley Hukuk'da dahil olmak üzere 80'den fazla okulun, saldırılara karşı korumalı Blokzincir uygulamasını benimsemesine yardımcı olur."
+      },
+      "manila-bulletin": {
+        "description": "Filipinler Teknoloji Enstitüsü'nün (T.I.P.) bir yan şirketi olan SEBI Technologies, Inc. (SEBI Tech), Filipinler'de blokzincirle şifrelenmiş dijital sertifikaların geliştirilmesine öncülük etti."
+      },
+      "meet-global": {
+        "description": "Turing Certs, Tayvan'ın en üst düzey üniversitelerinden biri olan National Tsinghua Üniversitesi ile ilk blokzincir diplomasını yayınladı. Gözlerini küresel pazara dikmiş olan Turing Certs, şu anda Avrupa Üniversitesi ile kavram kanıtı (POC) sürecinden geçiyor, yani Avrupa pazarında ürün uygunluğunu test ediyor."
+      },
+      "digital-journal": {
+        "description": "Turing Chain, tamamen sahte verilerin olmadığı bir dünya tasavvur ediyor. HKUST ve UC Berkeley'den gelişen şirket, Turing Certs for Credential Endorsements and Proof of Evidence adlı bir akıllı şehir ağı uygulaması üretti. Şirket şu anda eğitim ve emlak piyasalarını hedeflemeye odaklanmıştır."
+      },
+      "ted": {
+        "description": "能夠想像一個假學歷、假新聞、假交易完全消失跟抹除的世界嗎？「區塊鏈」，正在帶領人類加速前往一個完全真實的未來，沒有任何虛假。"
+      },
+      "bnext": {
+        "description": "清華大學今天宣布，將與台灣圖靈鏈公司合作發出全國第一張區塊鏈加密簽章的數位學位證書，即使駭客入侵系統也無法竄改偽造，與國際接軌。"
+      },
+      "udn": {
+        "description": "文化大學與新創公司「圖靈鏈」26日簽署合作意向書，將透過國際標準化證書系統，讓今年文大應屆畢業的7000名博碩學士生，可申請到數位畢業證書。"
+      },
+      "ltn-jinan": {
+        "description": "國立暨南國際大學近期與跨國科技新創公司圖靈鏈合作，持續將外國學生人學許可及錄取通知書等多項證書文件資料整合至區塊鏈中，透過圖靈證書的關鍵技術，使驗證證書的環節能縮減至15秒內完成，同時能杜絕假證書、高成本驗證與紙本資料遺失的種種麻煩，進一步增加學生就業競爭力與資料保護力。"
+      },
+      "cio": {
+        "description": "圖靈鏈運用區塊鏈技術於學習履歷之中，目前已有逾30所大專院校、教育機構採用圖靈證書發證，累計發出超過3000張證書，促使3000位學生擁有國際防偽數位歷程。"
+      },
+      "gcamp": {
+        "description": "為協助臺灣新創企業挹注國際化能量，經濟部中小企業處自107年起推動「國際創新創業訓練營」（以下簡稱 G Camp），已成功培育超過55家以上新創團隊進軍國際市場、累計創造新臺幣7,000萬商機。"
+      },
+      "cna": {
+        "description": "受疫情影響，學生無法到校領取畢業證書，因此北商大攜手台灣圖靈鏈公司宣布正式採用區塊鏈電子證書，為全台第二所採用區塊鏈電子畢業證書的大專院校，將於今年 7 月 30 日起開始發放電子畢業證書予 109 年度應屆畢業生，預計發放人數將達2,200人 （包含日間和進修學制）。"
+      },
+      "ltn-hchs": {
+        "description": "因應108新課綱學習歷程檔案數位國際化，新竹高中成為台灣第一所採用區塊鏈證書的高中，校方昨與業者簽約。校長李明昭表示，未來學生的區塊鏈證書將把高中的學習歷程全部數位化，完整呈現學習過程並可避免資料遺失。"
+      },
+      "tnl": {
+        "description": "除了比特幣外，區塊鏈還能怎麼改變我們的生活？ 胡耀傑以區塊鏈技術發明「圖靈證書」，徹底改變教育體制內的證書系統。"
+      },
+      "gvm": {
+        "description": "數位履歷已成趨勢！今年6月，一家成立短短三年、全部員工僅有13人、平均年齡更只有23歲的新創公司「圖靈鏈」，竟能與30多所學校、國外教育與政府單位合作，發出各種區塊鏈加密證書。它如何做到？"
+      }
+    },
+    "information-security-policy": {
+      "date": "April 11, 2022",
+      "purpose-title": "1. Amaç",
+      "purpose-description": "Turing Chain Taiwan Limited'in (aşağıda Şirketimiz olarak anılacaktır) personel, veri, bilgi sistemleri, ekipman ve ağlarının güvenliğini sağlamak, hizmetimizin güvenli çalışmasını sağlamak için bilgi güvenliği temel olduğundan, Şirketimizin Bilgi Güvenliği Yönetim Sisteminin (aşağıda BGYS olarak anılacaktır) en yüksek yol gösterici ilkesi olarak Bilgi Güvenliği Politikasını (aşağıda bu belge olarak anılacaktır) taahhüt ederiz.",
+      "objectives-title": "2. Hedefler",
+      "objectives-description": "Şirketimizin bilgi güvenliği hedefleri, kritik bilgi ve hizmetin gizliliğini, bütünlüğünü, kullanılabilirliğini ve uyumluluğunu sağlamaktır. BGYS'nin uygulama durumunu ve bilgi güvenliği hedeflerine ulaşılıp ulaşılmadığını doğrulamak için ilgili yeterliliğe göre bilgi güvenliği performansının nicel göstergelerini tanımlar ve ölçeriz.",
+      "scope-of-application-title": "3. Uygulama Kapsamı",
+      "scope-of-application-description": "BGYS, iç ve dış sorunları, ilgili tarafların ihtiyaç ve beklentilerini, Arayüzleri ve Şirketimizin faaliyetleri ile diğer kuruluşların faaliyetleri arasındaki bağımlılıkları dikkate alır.Uygulama kapsamı, fiziksel ofis alanları, bulut sistemleri, geliştiriciler, yazılım dahil olmak üzere Turing Certs Blockchain tabanlı Özgeçmişin hizmet yazılımı geliştirme, test etme, operasyonlar ve işletim ortamlarıdır. Turing Certs Blockchain tabanlı Özgeçmiş, fiziksel ofis alanı, bulut sistemi, geliştiriciler, yazılım, operasyon verileri, sistem yönetimi departmanı ve ilgili operasyon süreci dahil olmak üzere Turing Certs Blockchain tabanlı Özgeçmiş yazılımı geliştirme, test etme, çalıştırma ve operasyon ortamına uygulanır.",
+      "contents-covered-title": "4. Kapsanan İçerikler",
+      "contents-covered-description": "BGYS aşağıdaki içerikleri kapsar ve ilgili departmanlar ve personel aşağıdaki hususlara yönelik yönetim düzenlemeleri veya uygulama planları hazırlar, uygulamaya koyar ve uygulamanın etkinliğini düzenli olarak değerlendirir.</br>● Bilgi güvenliği organizasyonu ve yönetim denetimi. </br>● Risk yönetimi</br>● Belge ve kayıt yönetimi</br>● Bilgi güvenliğinin iç denetimi</br>● İnsan kaynakları güvenliği yönetimi</br>● Varlık yönetimi</br>● Erişim kontrolü yönetimi </br>● Fiziksel ve çevresel güvenlik yönetimi</br>● Operasyonel güvenlik ve kriptografi</br>● İletişim güvenliği yönetimi</br>● Sistem edinme, geliştirme ve bakım yönetimi</br>● Satıcı ilişkileri yönetimi</br> br>● Bilgi güvenliği olay yönetimi</br>● İş sürekliliği yönetimi</br>● Uyumluluk yönetimi</br>",
+      "organization-and-authority-title": "5. Organizasyon ve Yetki",
+      "organization-and-authority-description": "BGYS'nin etkin bir şekilde çalışmasını sağlamak için, bilgi güvenliği organizasyonu ve yetkisi, çeşitli yönetim, uygulama, denetim vb.'yi kurmak ve sürdürmek için açıkça tanımlanmalıdır.",
+      "implementation-principles-title": "6.Uygulama İlkeleri",
+      "implementation-principles-description": "BGYS'nin uygulanması, bilgi işi operasyonunun etkinliğini ve sürekli iyileştirilmesini sağlamak için Planla, Yap, Kontrol Et ve Önlem Al sürecini temel alacaktır.",
+      "review-and-evaluation-title": "7. İnceleme ve Değerlendirme",
+      "review-and-evaluation-description": "7.1. Bu belge, yasaların, teknolojinin ve ilgili bilgi güvenliği uygulamaları departmanlarının en son gelişmelerinin etkinliğini sağlamak için büyük değişikliklerle karşılaşıldığında veya yılda en az bir kez değerlendirilecek ve gözden geçirilecektir.</br>7.2. Bu doküman, inceleme sonuçlarına göre revize edilecek ve Şirketimizin sorumlu kişisi tarafından imzalanıp yayınlandıktan sonra yürürlüğe girecektir.</br>7.3. Bu doküman, öngörüldüğü veya revize edildikten sonra ortaklar, çalışanlar, tedarikçiler vb. ilgili taraflara doküman, e-posta veya doküman yönetim sistemi aracılığıyla iletilecektir."
+    },
+    "privacy-policy": {
+      "date": "April 11, 2022",
+      "title": "Turing Certs'in Gizlilik Politikası",
+      "description": "Turing Certs'e hoş geldiniz (aşağıda “Şirketimiz” olarak anılacaktır). Hizmetimiz, Turing Certs Blockchain tabanlı Özgeçmiş Hizmeti ve web sitesini (aşağıda “Şirket Hizmeti” olarak anılacaktır) içerir. Haklarınızı korumak ve daha iyi bir kullanıcı deneyimi sağlamak için lütfen bu Gizlilik Politikasını okuyun (aşağıda “bu politika” olarak anılacaktır). Web sitesini ve ilgili hizmetleri kullanmayı kabul etmeden önce; hizmetimizi kullanmaya başlarsanız, bu Politikanın içeriğini okumuş, anlamış ve kabul etmiş sayılacaksınız.",
+      "scope-title": "1. Kapsam",
+      "scope-description": "Bu Gizlilik Politikası, bu web sitesini kullandığınızda verdiğiniz kişisel bilgiler (certs.turingchain.tech ve turingchain.tech dahil alt alanlar) ve hizmetimiz sırasında sağladığımız kişisel bilgiler (global.turingcerts.com ve turingcerts.com dahil alt alanlar) için geçerlidir. Bu web sitesinde verilen bağlantılar aracılığıyla diğer web sitelerine erişebilirsiniz, ancak bu bağlantı ile verilen web sitelerinin gizlilik politikaları bu politikadan farklı olabilir ve bu politika; bağlantılı diğer web siteleri için geçerli olmayacaktır.",
+      "purpose-title": "2. Kişisel Bilgi Toplamanın Amacı, Türleri ve Kaynakları",
+      "purpose-description": "Hizmetimizi kullanırken, toplanan kişisel bilgilerin amacı, türleri ve kaynakları aşağıdaki kriterlere dayanmaktadır</br>● Toplama kaynakları</br>Turing Certs Blockchain tabanlı Özgeçmiş hizmetini kullanan yayımcı (Şirketimiz, bilgi işleme.)</br>● Hizmetimiz</br>Turing Certs Blok Zinciri Tabanlı Özgeçmiş Hizmeti.</br>Turing Certs Blok Zinciri tabanlı Özgeçmiş Hizmeti'ni kullanan ve Turing Certs ile sözleşme imzalamış olan yayımcının web sitesi.< /br>● Yasal Özel sebep</br>1. 119 Sertifika ve Tescil Verme</br>2. 154 Geçerlilik Kontrolü</br>3. C102 Anlaşma veya Sözleşmesi</br>4. 152 Reklamcılık veya İş Yönetimi< /br>5.090 Tüketici, müşteri yönetimi ve hizmetleri</br>6.040 Pazarlama (finansal ortak pazarlama dahil)</br>7. 157 Anketler, İstatistikler ve Araştırma Analizi</br>8. 148 İnternet Alışverişi ve Diğer E-Ticaret Hizmeti</br>● Kişisel Bilgi Toplama</br>I. Ad, e-posta adresi, cep telefonu numarası ve adres;</br>ii. Kimlik numarası;</br>iii. Ruhsat numarası;</br>iv. Okul numarası, okul notlar;</br>v. Çalışılan şirket;</br>vi. Gayrimenkul bilgileri;</br>vii . E-posta adresi, telefon numarası, kuruluş adı;</br>viii. Çerezler</br>● Yasal Kişisel Bilgi Kategorileri</br>1. C001 Kişisel tanımlayıcı</br>2. C003 Devlet verilerindeki tanımlayıcılar</br> br> br>3. C051 Okul kayıtları</br>4. C052 Nitelikler veya beceriler</br>5. C061 Mevcut İstihdam Durumu</br>6. C032 Mülk</br>7. C001 Kişisel tanımlayıcılar</br> 8. C132 Sınıflandırılmamış bilgiler",
+      "usage-title": "3. Kişisel Bilgilerin Kullanımı",
+      "usage-description": "Zaman aralığı:</br>Hizmetimizin kullanımına son vermeyi talep ettiğiniz tarih.</br>Konum:</br>Kişisel bilgileriniz, kişisel bilgilerinizin kullanımına izin verdiğiniz herhangi bir yerde kullanılacaktır. .</br>Amaç:</br>1. Şirketimiz: Kişisel bilgileri, yayımcı Turing Certs Blok Zinciri tabanlı Özgeçmiş Hizmetini kullanabilmesi gerektirdiğinden işler ve korur </br>2. Yayımcı: Sertifika bilgilerini düzenlemek ve yönetmek için Turing Certs Blok Zinciri Tabanlı Özgeçmiş Hizmetini kullanan kurum.</br>3. Alıcı: Yayımcı tarafından verilen kişisel sertifikaları sorgulayan.</br>Yaklaşım:</br>Şirketimiz, kişisel bilgi toplama konusunda Kişisel Bilgilerin Korunması Yasasına ve bu Politikaya uymaktadır. Şirketimiz, Şirketimize vermiş olduğunuz bilgileri aşağıdaki durumlar veya Kişisel Bilgiler Kanunu'na uygun olmadıkça aktif olarak üçüncü şahıslara vermeyecektir:</br>I. Adli makamların soruşturmasında işbirliği yapmak.</br>ii. Yasalar veya görevleri gereği ilgili devlet kurumları tarafından yürütülen soruşturmalarda işbirliği yapmak.</br>iii. Sizin rızanızla </br>iv. Yasalara uygun olarak.</br>v. Dahili analiz ve araştırma amaçları için.</br>vi. Gerekli dış kaynak kullanımı işi.</br>Çerezler:</br>Daha iyi kullanıcı deneyimi için şirketimizin ilgili web siteleri, bağlı cihazınızın IP adresi, zaman aralığı, kullandığınız tarayıcı, tarama ve tıklama veri kayıtları dahil olmak üzere çerez teknolojisini kullanabilir, vb., web sitemizin web sitesi faaliyetlerini analiz etmesi, bilgi toplaması ve kullanıcının kişisel ihtiyacını karşılayan hizmet sunması için; bu kayıt sadece şirketimizin dahili analiz ve araştırma amaçlıdır. Şirketimizin web sitesinde çerez kullanımını kabul etmek istemiyorsanız, çerez izleme işlevini devre dışı bırakmak için lütfen tarayıcı ayarlarınıza gidin, ancak bu, Şirketin web sitesinin kullanımında veya faaliyetlere katılımda kısıtlamalara neden olabilir.",
+      "responsibility-title": "4. Şirketimiz Tarafından Doğrudan Toplanmayan Kişisel Bilgilerin Sorumluluğu",
+      "responsibility-description": "Hizmetimizde sağladığınız ve sakladığınız bilgilerin, üçüncü kişilerin kişisel bilgilerini içermesi durumunda Kişisel Bilgiler Kanunu'nun ilgili hükümlerince toplanması, işlenmesi ve kullanılmasından siz sorumlusunuz. Yasaların ihlali nedeniyle Şirketimize, operatörlerine, personeline veya diğer üçüncü şahıslara verilen zararlardan da siz sorumlu olacaksınız.",
+      "information-protection-title": "5. Bilgi Koruması",
+      "information-protection-description": "Şirketimiz, kişisel bilgilerinizi makul teknik sınırlar içinde korumak için elimizden gelenin en iyisini yapacaktır. Web sitesi barındırıcısı, kişisel bilgilerin çalınmasını, kurcalanmasını, hasar görmesini, yok edilmesini veya sızdırılmasını önlemek için güvenlik duvarları ve diğer ilgili bilgi güvenliği ekipmanları ve gerekli güvenlik önlemleri ile donatılmıştır ve kişisel bilgilerinize yalnızca, bu bilgileri gizli tutmak yükümlüğü olan, yetkilendirilmiş personelin erişebilir. Herhangi bir ihlal, ilgili yasa ve yönetmelikler kapsamında ele alınacaktır. Dış kaynak kullanımı gerekli ise, şirketimiz onlardan kesinlikle gizlilik yükümlülüklerine uymalarını isteyecek ve bunu sağlamak için gerekli önlemleri alacaktır.",
+      "self-protection-title": "6. Kullanıcının Kendini Koruma Önlemleri",
+      "self-protection-description": "Lütfen bilgilerinizi güvende tutun ve başkalarına kişisel bilgi, hesap ve şifre bilgilerini vermekten kaçının. Web sitesini ve ilgili hizmetleri güvenli veya şifreli bir ağ üzerinden kullanın ve kullandıktan sonra oturumu kapatmayı unutmayın. Bilgisayarları başkalarıyla paylaşıyorsanız veya herkese açık bir bilgisayar kullanıyorsanız, başkalarının sağladığınız bilgileri çalmasını veya bilmesini önlemek için lütfen tarayıcıyı kapatmayı ve görüntülenen geçmişi silmeyi unutmayın.",
+      "solutions-title": "7. Hesapların veya Şifrelerin Hileli Kullanımına Yönelik Çözümler",
+      "solutions-description": "Hesabınızın veya şifrenizin ele geçirildiğini öğrenirseniz, lütfen en kısa sürede müşteri hizmetlerimizi bilgilendirin. Hesap tarafından oluşturulan işlemleri askıya alma erişimimiz var ve çözümü sizinle değerlendireceğiz. Ancak yukarıdaki tedbir, şirketimizin kullanıcıya herhangi bir şekilde tazminat veya sorumluluk taşıdığına dair bir taahhüt veya ima olarak kabul edilmeyecektir.",
+      "rights-of-the-parties-title": "8. Tarafların Hakları",
+      "rights-of-the-parties-description": "Kişisel Bilgilerin Korunması Kanunu kapsamında, aşağıdaki hakları talep etmek için şirketimizle iletişime geçebilirsiniz (lütfen şirketimizin web sitesine bakınız):</br>1. Erişim için sorular veya istekler yapın.</br>2. Bir kopyasını isteyin.</br>3. Eklemeler veya düzeltmeler yapın.</br>4. Toplama, işleme veya kullanmayı durdurma isteği.</br>5. Silme isteği.</br>6. Yukarıdaki haklara yönelik taleplerinizde, şirketimiz gerekli masrafları talep edebilir, ancak başvuru prosedürlerine, yasal gerekliliklere, web sitesinin kanunlar kapsamındaki saklama yükümlülüklerine veya diğer yasal düzenlemelere uygun olmadığı takdirde talebinizi karşılayamayabilir.",
+      "amendments-title": "9. Gizlilik Politikasında Değişiklikler",
+      "amendments-description": "Şirketimiz, Kullanıcı Gizlilik Politikası Şartları'nı gerçek ihtiyaçlara göre zaman zaman revize edecek ve güncelleyecek ve bunları kullanıcılara bildirimde bulunmadan web sitesinde ilan edecektir, web sitesinin hüküm ve koşullarından haberdar olmanızı öneririz. Güvenliğiniz ve web sitesinde gezinmeyle ilgili haklarınız; Şirketimizin revizyonunu veya güncellemesini kabul etmiyorsanız, lütfen şirketimizin hizmetini derhal sonlandırın. Web sitesini ve ilgili hizmetleri kullanmaya devam ederseniz, değişiklikleri veya güncellemeleri kabul etmiş sayılırsınız. Yukarıdaki içerik veya web sitesi hakkında herhangi bir sorunuz veya öneriniz varsa, lütfen hemen müşteri hizmetlerimizle iletişime geçin.</br>E-posta: apac@turingchain.tech."
+    },
+    "cookie": {
+      "description1": "我們使用 cookies",
+      "description2": "這個網站使用 cookies 去幫助個人化內容及提供一個更安全的環境。",
+      "button-content": "確定"
+    }
   }
 }
