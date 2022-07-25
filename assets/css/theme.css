@@ -163,16 +163,17 @@ body {
 }
 
 .cookie-reminder-mobile .cookie-icon {
-  margin-left: -50px;
-  margin-top: -50px;
-  margin-right: -25px; 
-  transform: scale(0.2);
+  position: absolute;
+  left: 10%;
+  top: 28%;
 }
 
 .cookie-reminder-mobile .cookie-reminder-wordings {
-  margin-left: -60px;
-  margin-top: 35px;
   color: #ffffff;
+  width: 60%;
+  position: absolute;
+  left: 28%;
+  top: 17%;
 }
 
 .cookie-reminder-mobile .cookie-reminder-wordings h6 {
