@@ -8666,11 +8666,14 @@ div[class^='bg-black'].fullscreen-menu .fm-wrapper .fm-close span:before, div[cl
 
 .masonry.masonry-spacing-40 {
   margin: 0 -20px -40px;
+  display: grid;
+  grid-template-columns: 373px 373px 373px;
 }
 
 .masonry.masonry-spacing-40 .masonry-item {
   margin-bottom: 40px;
   padding: 0 20px;
+  width: 100%;
 }
 
 .masonry.masonry-spacing-50 {
