@@ -252,37 +252,6 @@ if ($(".nav-dropdown").length) {
 //
 $body.scrollspy({ target: '.header-menu' });
 
-//
-// Update Language //
-//
-
-function update () {
-  var select = document.getElementById('language-selector');
-  var option = select.options[select.selectedIndex];
-  if (option.value === 'en') {
-    document.getElementById('loginUrl').href = "https://global.turingcerts.com/en/login";
-    document.getElementById('issuerApply').href = "https://global.turingcerts.com/en/login?role=cc-apply";
-  } else {
-    document.getElementById('loginUrl').href = "https://global.turingcerts.com/zh-TW/login";
-    document.getElementById('issuerApply').href = "https://global.turingcerts.com/zh-TW/login?role=cc-apply";
-  }
-};
-
-//
-// Close Cookie Reminder Window //
-//
-function closeCookieReminder() {
-  document.getElementById('cookieReminder').style.display = 'none';
-}
-function closeCookieReminderMobile() {
-  document.getElementById('cookieReminderMobile').style.display = 'none';
-}
-if (window.innerWidth >= 812) {
-  closeCookieReminderMobile();
-} else {
-  closeCookieReminder();
-}
-
 /*===============================================
   5. Fullscreen Menu
 ===============================================*/
