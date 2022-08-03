@@ -38,14 +38,16 @@ body {
 }
 
 .cookie-reminder .cookie-icon {
-  transform: scale(0.4);
-  margin-top: 5px;
-  /* margin-left: -17px; */
+  width: 40px;
+  height: 40px;
+  margin-top: 40px;
+  margin-right: 30px;
 }
 
 .cookie-reminder .cookie-reminder-wordings {
   display: grid;
   width: 100%;
+  margin-top: 3px;
 }
 
 .cookie-reminder .cookie-reminder-wordings h6 {
@@ -91,13 +93,13 @@ body {
 
 .cookie-reminder div img {
   margin-bottom: 10px; 
-  transform: scale(0.15); 
+  /* transform: scale(0.15);  */
   cursor: pointer;
 }
 
 .cookie-reminder .cookie-button {
   display: flex; 
-  margin-top: 3px;
+  margin-top: 7px;
   width: 30%;
   margin-right: -5px;
 }
