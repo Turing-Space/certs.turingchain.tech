@@ -53,17 +53,17 @@
 				</div>
 			</div>
 			<div class="cookie-button">
-				<button onclick="closeCookieReminder()">
+				<button id="cookieOkayButton">
 					<h6 data-i18n="cookie.button-content">Okay</h6>
 				</button>
-				<div class="cross-icon-pseudo" onclick="closeCookieReminder()">
+				<div class="cross-icon-pseudo" id="cookieCrossIcon">
 					<img class="cross-icon" src="/static/icon/icon-cross.svg" alt="" />
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="cookie-reminder-mobile" id="cookieReminderMobile">
-		<img class="cross-icon" src="/static/icon/icon-cross.svg" alt="" onclick="closeCookieReminderMobile()" />
+		<img class="cross-icon" src="/static/icon/icon-cross.svg" alt="" id="cookieCrossIconMobile" />
 		<div class="cookie-reminder-mobile-container">
 			<img class="cookie-icon" src="/static/icon/icon-cookie.svg" alt="" />
 			<div class="cookie-reminder-wordings">
@@ -80,7 +80,7 @@
 				</p>
 			</div>
 		</div>
-		<button onclick="closeCookieReminderMobile()">
+		<button id="cookieOkayButtonMobile">
 			<h6 data-i18n="cookie.button-content">Okay</h6>
 		</button>
 	</div>

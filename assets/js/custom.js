@@ -34,7 +34,11 @@
   }
   if (window.innerWidth >= DESKTOP_WIDTH) {
     closeCookieReminderMobile();
+    document.getElementById('cookieOkayButton').onclick = closeCookieReminder;
+    document.getElementById('cookieCrossIcon').onclick = closeCookieReminder;
   } else {
     closeCookieReminder();
+    document.getElementById('cookieOkayButtonMobile').onclick = closeCookieReminderMobile;
+    document.getElementById('cookieCrossIconMobile').onclick = closeCookieReminderMobile;
   }
 })()
