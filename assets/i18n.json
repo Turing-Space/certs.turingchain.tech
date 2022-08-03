@@ -3,6 +3,7 @@
     "header": {
       "about-us": "About Us",
       "news": "News",
+      "blog": "Blog",
       "sign-up": "Sign Up As Issuer"
     },
     "intro": {
@@ -239,6 +240,7 @@
     "header": {
       "about-us": "關於我們",
       "news": "新聞",
+      "blog": "部落格",
       "sign-up": "申請成為發證者"
     },
     "intro": {
