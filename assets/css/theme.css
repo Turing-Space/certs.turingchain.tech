@@ -604,6 +604,15 @@ mark {
   color: #131517;
 }
 
+mark-gold {
+  background: #ffffff;
+  color: #CE893A;
+}
+mark-bold {
+  font-weight: 700;
+}
+
+
 iframe {
   width: 100%;
   border: 0;
@@ -1894,6 +1903,14 @@ h1, h2, h3, h4, h5, h6 {
   color: #CE8B3D;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
+}
+
+.post h3, h4, h5{
+  color: #131517;
+}
+
+.post p{
+  color: #131517;
 }
 
 h1 {
