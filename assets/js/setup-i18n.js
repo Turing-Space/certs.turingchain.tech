@@ -21,14 +21,16 @@ function getLanguage() {
   for (var i = 0; i < cookieArray.length; i++) {
     var cookieKey = cookieArray[i].split('=')[0];
     var cookieValue = cookieArray[i].split('=')[1];
-    if (cookieKey == ' language' && (cookieValue == 'en' || cookieValue == 'zh-TW')) {
+    if (cookieKey == ' language' && (cookieValue == 'en' || cookieValue == 'zh-TW' || cookieValue == 'jp')) {
       language = cookieValue;
     }
   }
   if (language === 'en') {
     $('#language-selector option[value="en"]').prop('selected', true);
-  } else {
+  } else if (language === 'zh-TW') {
     $('#language-selector option[value="zh-TW"]').prop('selected', true);
+  } else {
+    $('#language-selector option[value="jp"]').prop('selected', true);
   }
   i18n.set("locale", language).init(function () {
     this.translate();
