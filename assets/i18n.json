@@ -104,6 +104,7 @@
     "iota-description": "Secured by the Public Blockchain - IOTA</br>European Blockchain Services Infrastructure by ",
     "iso-description": "Certified as ISO/IEC 27001 compliant",
     "footer": {
+      "subdescription": "",
       "security-policy": "Information Security Policy",
       "privacy-policy": "Privacy Policy",
       "address": "7F.-10, No. 335, Ruiguang Rd., Neihu Dist., Taipei City 11492 , Taiwan"
@@ -340,6 +341,7 @@
     "iota-description": "由公共區塊鏈 - IOTA 所保護</br>歐洲區塊鏈服務基礎建設 ",
     "iso-description": "通過 ISO/IEC 27001 認證",
     "footer": {
+      "subdescription": "",
       "security-policy": "資訊安全政策",
       "privacy-policy": "隱私權政策",
       "address": "台灣台北市內湖區瑞光路335號7樓之10<br>"
@@ -478,7 +480,7 @@
       "sign-up": "発行者としてサインアップ"
     },
     "intro": {
-      "slogan": "ゼロ偽造，ゼロペーパー，<br>持続可能な社会へ",
+      "slogan": "ゼロ偽造，ゼロペーパー、<br>持続可能な社会へ",
       "slogan-description": "ブロックチェーンを活用した電子証明書の発行・管理・認証をワンストップサービスで提供",
       "login": "ログイン"
     },
@@ -489,7 +491,7 @@
         "highlight": "86%"
       },
       "privacy": {
-        "before-highlight": "プライバシーの最優先を ",
+        "before-highlight": "プライバシーの最優先を</br>",
         "highlight": "GDPR",
         "after-highlight": "適合と共に"
       },
@@ -576,6 +578,7 @@
     "iota-description": "パブリックブロックチェーン - IOTA による安全性の確保</br>欧州ブロックチェーン・サービス基盤 ",
     "iso-description": "ISO/IEC 27001 認証取得",
     "footer": {
+      "subdescription": "チューリングサーツ",
       "security-policy": "セキュリティーポリシー",
       "privacy-policy": "プライバシーポリシー",
       "address": "台灣台北市內湖区瑞光路335号7階10番<br>"
@@ -664,7 +667,7 @@
     "information-security-policy": {
       "date": "2022年4月11日",
       "purpose-title": "1. 目的",
-      "purpose-description": "情報セキュリティはTuring Chain Taiwan Limited(以下、「弊社」という。）が提供するサービス（以下、「弊社サービス」という。）の安全なオペレーションを行う上で基本となり、個人情報、データ、情報システム、設備、弊社のネットワークの全てにおける安全性の確保を行うために「情報セキュリティーポリシー」（以下、「当ポリシー」という。）を弊社の情報セキュリティーマネジメントシステム（以下、「ISMS」という。)の最高指針として策定しました。",
+      "purpose-description": "情報セキュリティはTuring Chain Limited（以下、「弊社」という。）が提供するサービス（以下、「弊社サービス」という。）の安全なオペレーションを行う上で基本となり、個人情報、データ、情報システム、設備、弊社のネットワークの全てにおける安全性の確保を行うために「情報セキュリティーポリシー」（以下、「当ポリシー」という。）を弊社の情報セキュリティーマネジメントシステム（以下、「ISMS」という。)の最高指針として策定しました。",
       "objectives-title": "2. 目標",
       "objectives-description": "弊社の情報セキュリティーの目標は重要情報やサービスの守秘性、保全性、有用性やコンプライアンスを確保することです。私達は情報セキュリティーの定量指標をそれぞれのコンピタンシーによって明確に、そして測定しISMSの状況や情報セキュリティーの目標が達成されているかどうかを確認します。",
       "scope-of-application-title": "3. 適用範囲",
@@ -681,7 +684,7 @@
     "privacy-policy": {
       "date": "2022年4月11日",
       "title": "プライバシーポリシー",
-      "description": "Turing Chain Taiwan Limited（以下、「当社」という。）は，プライバシーポリシーがウェブサイト（以下、「本ウェブサイト」という。）上で提供するサービス（以下,「本サービス」といいう。）における安全なオペレーションの維持、ユーザーの個人情報の保護、情報システムの保護、設備の保護、ネットワーク保護のため、以下のとおりプライバシーポリシー（以下、「本ポリシー」という。）を定めます。本ポリシーは、当社の情報安全管理システム（以下。「ISMS」という。）の最高指導原則とする。",
+      "description": "Turing Chain Limited（以下、「当社」という。）は，プライバシーポリシーがウェブサイト（以下、「本ウェブサイト」という。）上で提供するサービス（以下,「本サービス」といいう。）における安全なオペレーションの維持、ユーザーの個人情報の保護、情報システムの保護、設備の保護、ネットワーク保護のため、以下のとおりプライバシーポリシー（以下、「本ポリシー」という。）を定めます。本ポリシーは、当社の情報安全管理システム（以下。「ISMS」という。）の最高指導原則とする。",
       "scope-title": "1. 本政策的適用範囲",
       "scope-description": "本ポリシーはユーザーが本ウェブサイト (certs.turingchain.tech and the subdomains including turingchain.tech)及び弊社サービス (global.turingcerts.com and subdomains including turingcerts.com)で提供した個人情報に提供されます。.ユーザーは本ウェブサイトに記載されているリンクより他のウェブサイトにアクセス可能ですが、プライバシーポリシーは本ウェブサイト以外のWebサイトでは異なり、本ポリシーは本ウェブサイト以外のウェブサイトでは適用されない。",
       "purpose-title": "2. 個人情報を収集・利用する目的",
