@@ -53,7 +53,7 @@ body {
 .cookie-reminder .cookie-reminder-wordings h6 {
   color: #ffffff;
   margin-top: 30px;
-  margin-bottom: -5%;
+  margin-bottom: -3.5%;
 }
 
 .cookie-reminder .cookie-reminder-wordings div {
@@ -62,8 +62,8 @@ body {
 
 .cookie-reminder .cookie-reminder-wordings p {
   color: #ffffff;
-  display: inline-block;
-  margin-top: 1%;
+  display: inline;
+  line-height: 0px;
 }
 
 .cookie-reminder .cookie-reminder-wordings p a {
