@@ -8115,6 +8115,9 @@ div[class^='bg-black'].fullscreen-menu .fm-wrapper .fm-close span:before, div[cl
     height: 54px;
     max-height: 100%;
   }
+  .header .header-menu .nav .nav-item .language-select option {
+    color: initial;
+  }
 }
 
 .header.absolute-light .header-menu-extra a:not(.button):not(.button-circle) {
