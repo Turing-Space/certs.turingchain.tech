@@ -43,20 +43,20 @@
       "plus": "+",
       "title": "Impact",
       "case1": {
-        "count": "32000",
-        "unit": "Certificates"
+        "count": "65000",
+        "unit": "CERTIFICATES"
       },
       "case2": {
-        "count": "35",
-        "unit": "Universities"
+        "count": "150",
+        "unit": "CERTIFYING AUTHORITIES"
       },
       "case3": {
-        "count": "42",
-        "unit": "Institutes"
+        "count": "15",
+        "unit": "ADOPTING GOVERNMENTS"
       },
       "case4": {
         "count": "9",
-        "unit": "Countries/Regions"
+        "unit": "COUNTRIES/REGIONS"
       }
     },
     "whom-we-can-help": {
@@ -280,16 +280,16 @@
       "plus": "+",
       "title": "影響力",
       "case1": {
-        "count": "32000",
+        "count": "65000",
         "unit": "證書"
       },
       "case2": {
-        "count": "35",
-        "unit": "大學"
+        "count": "150",
+        "unit": "發證單位"
       },
       "case3": {
-        "count": "42",
-        "unit": "研究所"
+        "count": "15",
+        "unit": "政府官方採用"
       },
       "case4": {
         "count": "9",
@@ -517,16 +517,16 @@
       "plus": "+",
       "title": "実績",
       "case1": {
-        "count": "32000",
+        "count": "65000",
         "unit": "証明書発行実績"
       },
       "case2": {
-        "count": "35",
-        "unit": "大学"
+        "count": "150",
+        "unit": "発行機関"
       },
       "case3": {
-        "count": "42",
-        "unit": "機関"
+        "count": "15",
+        "unit": "政府機関"
       },
       "case4": {
         "count": "9",
