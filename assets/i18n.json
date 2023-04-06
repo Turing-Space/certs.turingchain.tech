@@ -3,7 +3,8 @@
     "header": {
       "about-us": "About Us",
       "news": "News",
-      "sign-up": "Sign Up As Issuer"
+      "sign-up": "Sign Up As Issuer",
+      "pricing": "Pricing"
     },
     "intro": {
       "slogan": "Zero Fraud, Zero Paper, <br>Sustainable Society",
@@ -234,13 +235,17 @@
       "description1": "We use cookies",
       "description2": "This website uses cookies to help personalize content and provide a safer experience.",
       "button-content": "Okay"
+    },
+    "pricing": {
+      "basic": "Basic"
     }
   },
   "zh-TW": {
     "header": {
       "about-us": "關於我們",
       "news": "新聞",
-      "sign-up": "申請成為發證者"
+      "sign-up": "申請成為發證者",
+      "pricing": "價格方案"
     },
     "intro": {
       "slogan": "零造假，零紙張，<br>永續社會",
@@ -477,7 +482,8 @@
     "header": {
       "about-us": "Turing Certsについて",
       "news": "ニュース",
-      "sign-up": "発行者としてサインアップ"
+      "sign-up": "発行者としてサインアップ",
+      "pricing": "價格方案"
     },
     "intro": {
       "slogan": "ゼロ偽造，ゼロペーパー、<br>持続可能な社会へ",
