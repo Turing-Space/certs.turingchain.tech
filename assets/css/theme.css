@@ -2363,8 +2363,8 @@ i {
 }
 
 .accordion li.active .accordion-title {
-  border-color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.0);
+  background-color: rgba(0, 0, 0, 0.05);
   
 
 }
