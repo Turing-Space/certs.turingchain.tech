@@ -13,6 +13,31 @@
     },
     "benefits": {
       "title": "Benefits",
+      "cost-savings": {
+        "h4": "Cost savings, multiplied efficiency",
+        "p": "Rapid certificate issuance eliminates delivery and printing costs, streamlines operations, reduces human error and time cost, and accelerates digitalization."
+      },
+      "paperless": {
+        "h4": "Paperless certificates, sustainable practice",
+        "p": "Achieving 100% paper usage reduction and 98% carbon emissions reduction, eliminating reliance on trees, and building a sustainable green future."
+      },
+      "GDPR": {
+        "h4": "GDPR compliance, user data protection and privacy",
+        "p": "Compliant with the EU GDPR privacy regulations, ensuring certificate holders' rights to disclosure their information and rigorous user privacy protection."
+      },
+      "all-in-one": {
+        "h4": "All-in-one management, rigorous information security system and control measures",
+        "p": "One-stop certificate authentication and integration platform, compliant with ISO 27001 data protection standard for information stability and security."
+      },
+      "one-click": {
+        "h4": "One-click verification, enhanced anti-counterfeiting",
+        "p": "All certificates are securely stored on blockchain, enabling one-click verification and traceability, effectively preventing counterfeit, and enhancing convenience and transparency."
+      },
+      "contact": {
+        "h2": "Create your global digital certificate solution!",
+        "span": "Let us assist you every step of the way",
+        "button": "Contact Us"
+      },
       "cost": {
         "before-highlight": "Save cost by",
         "highlight": "86%"
@@ -86,12 +111,26 @@
     },
     "our-clients": {
       "title": "Our Clients",
-      "ntu": "Office of International Affairs, National Taiwan University",
-      "nthu": "National Tsing Hua University",
-      "ocac": "Overseas Community Affairs Council of Taiwan",
-      "cch": "Changhua Christian Hospital Online Medical Education",
-      "iii": "Institute for Information Industry Award Certificate",
-      "tcgya": "Taoyuan City Government Youth Affair"
+      "who": "World Health Organization (WHO)",
+      "apec": "Asia-Pacific Economic Cooperation (APEC)",
+      "erasmus": "Erasmus+ in Italy",
+      "hcap": "Harvard College In Asia Program (HCAP)",
+      "berkeley": "Berkeley Law Executive Education",
+      "dnb": "Dun & Bradstreet (D&B)",
+      "cfj": "Code for Japan",
+      "tii": "Technological Institute of the Philippines",
+      "line": "LINE TAIWAN PROTOSTAR",
+      "moda": "Ministry of Digital Development, Taiwan (MODA)",
+      "ocac": "Overseas Community Affairs Council, Taiwan",
+      "iii": "Institute for Information Industry, Taiwan",
+      "tedu": "Department of Education, Taipei City Government",
+      "tcgya": "Department of Youth Affairs, Taoyuan City Government",
+      "ntuoia": "Office of International Affairs, National Taiwan University (NTU OIA)",
+      "nthu": "National Tsing Hua University (NTHU)",
+      "ttmh": "Tungs' Taichung Metroharbor Hospital",
+      "cch": "Changhua Christian Hospital",
+      "tzuchi": "Buddhist Compassion Relief Tzu Chi Foundation",
+      "taisin": "台新青少年基金會 (Tai-Sin Youth Foundation)"
     },
     "recognition": {
       "title": "Recognition",
@@ -254,6 +293,31 @@
     },
     "benefits": {
       "title": "好處",
+      "cost-savings": {
+        "h4": "成本歸零，效率加乘",
+        "p": "大量證書迅速發行，寄件及印刷費用歸零，作業程序縮減，大幅降低人為失誤與時間成本， 加速數位化進程。"
+      },
+      "paperless": {
+        "h4": "證書無紙化，永續再實踐",
+        "p": "紙張使用量減少100%，碳排放減少98%，讓證書不再依賴樹木，實踐永續的綠色未來。"
+      },
+      "GDPR": {
+        "h4": "嚴守 GDPR，保障用戶個資",
+        "p": "符合歐盟 GDPR 資料保護，證書持有人擁有最高揭露權限，嚴謹保障用戶個資隱私。"
+      },
+      "all-in-one": {
+        "h4": "一站式管理，資安嚴格把關",
+        "p": "證書與各類憑證整合於一站式平台，通過國際認可 ISO 27001 資訊安全管理系統（ISMS）標準驗證，展現對資訊安全且高服務品質的承諾。"
+      },
+      "one-click": {
+        "h4": "一鍵驗證，防偽升級",
+        "p": "證書上鏈加密後永久保存，輕鬆一鍵即可快速查驗、溯源，徹底杜絕偽造，讓驗證更方便透明。"
+      },
+      "contact": {
+        "h2": "建立你的數位證書解決方案！",
+        "span": "讓我們來協助你",
+        "button": "聯絡我們"
+      },
       "cost": {
         "before-highlight": "節省成本 ",
         "highlight": "86%"
@@ -327,12 +391,26 @@
     },
     "our-clients": {
       "title": "我們的客戶",
-      "ntu": "國立台灣大學國際事務處",
-      "nthu": "國立清華大學",
+      "who": "世界衛生組織",
+      "apec": "亞太經濟合作組織",
+      "erasmus": "Erasmus+ in Italy",
+      "hcap": "Harvard College In Asia Program (HCAP)",
+      "berkeley": "Berkeley Law Executive Education",
+      "dnb": "美商鄧白氏",
+      "cfj": "Code for Japan",
+      "tii": "菲律賓科技學院",
+      "line": "LINE 新星計劃",
+      "moda": "中華民國數位發展部",
       "ocac": "中華民國僑務委員會",
-      "cch": "彰化基督教醫院線上醫療教育課程",
       "iii": "財團法人資訊工業策進會",
-      "tcgya": "桃園市政府青年事務局"
+      "tedu": "台北市教育局",
+      "tcgya": "桃園市政府青年事務局",
+      "ntuoia": "國立台灣大學國際事務處",
+      "nthu": "國立清華大學",
+      "ttmh": "童綜合醫院",
+      "cch": "彰化基督教醫院",
+      "tzuchi": "慈濟基金會",
+      "taisin": "台新青少年基金會"
     },
     "recognition": {
       "title": "認可",
@@ -492,6 +570,31 @@
     },
     "benefits": {
       "title": "メリット",
+      "cost-savings": {
+        "h4": "コストゼロ、効率アップ",
+        "p": "大量の証明書を迅速に発行し、郵送費や印刷費用をゼロに。発行手順を簡略化し、人為的な誤りや時間コストを大幅に削減し、DX化を加速させます。"
+      },
+      "paperless": {
+        "h4": "ペーパーレス証明書、持続可能な実践",
+        "p": "紙の使用量を100％抑え、二酸化炭素排出量を98％削減します。森林伐採に依存しない証明書で持続可能な緑の未来を実現します。"
+      },
+      "GDPR": {
+        "h4": "GDPRを厳密に遵守し、プライバシーの最優先",
+        "p": "EU GDPRプライバシー協定に準拠し、証明書所有者に公開設定権が与えられ、ユーザーのプライバシーを厳格に保護しています。"
+      },
+      "all-in-one": {
+        "h4": "証明書のワンストップ統合、厳格なセキュリティチェック",
+        "p": "証明書の発行から管理まで一元化されたプラットフォーム。国際的に認められたISO 27001個人情報保護規格に則り、情報の安定性とセキュリティを確保します。"
+      },
+      "one-click": {
+        "h4": "ワンクリック認証、偽造防止のアップグレード",
+        "p": "証明書は暗号化され、ブロックチェーンに紐付けられた後、永続的に保存されます。ワンクリックで迅速に検証およびトレース可能で、偽造を全面的に防止し、検証をより便利で透明にします。"
+      },
+      "contact": {
+        "h2": "デジタル証明書のソリューションは",
+        "span": "私たちにお任せください！",
+        "button": "お問い合わせ"
+      },
       "cost": {
         "before-highlight": "コスト削減率 ",
         "highlight": "86%"
@@ -565,12 +668,26 @@
     },
     "our-clients": {
       "title": "クライアント紹介",
-      "ntu": "国立台灣大學国際事務所",
+      "who": "World Health Organization (WHO)",
+      "apec": "Asia-Pacific Economic Cooperation (APEC)",
+      "erasmus": "Erasmus+ in Italy",
+      "hcap": "Harvard College In Asia Program (HCAP)",
+      "berkeley": "Berkeley Law Executive Education",
+      "dnb": "Dun & Bradstreet (D&B)",
+      "cfj": "Code for Japan",
+      "tii": "Technological Institute of the Philippines",
+      "line": "LINE 台湾 PROTOSTAR",
+      "moda": "中華民国デジタル開発部",
+      "ocac": "中華民国華僑委員会",
+      "iii": "財団法人資訊工業策進会",
+      "tedu": "台北市教育局",
+      "tcgya": "桃園市青少年局",
+      "ntuoia": "国立台湾大学国際事務所",
       "nthu": "国立清華大学",
-      "ocac": "中華民国僑務委員会",
-      "cch": "彰化基督教病院オンライン医療教育課程",
-      "iii": "財団法人情報工業策進会",
-      "tcgya": "桃園市政府青年事務局"
+      "ttmh": "童総合病院",
+      "cch": "彰化クリスチャン病院",
+      "tzuchi": "慈済財団法人",
+      "taisin": "台新青少年基金会"
     },
     "recognition": {
       "title": "功績",
