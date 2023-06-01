@@ -2,7 +2,7 @@ import i18n from "./i18n.es6.js";
 
 i18n
   .set({
-    resource: "assets/i18n.json",
+    resource: "/assets/i18n.json",
     locale: "en",
   })
   .init(() => {
@@ -12,7 +12,7 @@ i18n
 
 function onChangeLanguage() {
   const value = document.getElementById("language-selector").value;
-  document.cookie = 'language=' + value;
+  document.cookie = `language=${value}; path=/`;
   i18n.set("locale", value).init(function () {
     this.translate();
   });
