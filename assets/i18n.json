@@ -6,6 +6,7 @@
     "header": {
       "about-us": "About Us",
       "news": "News",
+      "contatc-us": "Contact Us",
       "sign-up": "Sign Up As Issuer",
       "pricing": "Pricing"
     },
@@ -292,6 +293,7 @@
     "header": {
       "about-us": "關於我們",
       "news": "新聞",
+      "contatc-us": "聯絡我們",
       "sign-up": "申請成為發證者",
       "pricing": "價格方案"
     },
@@ -575,6 +577,7 @@
     "header": {
       "about-us": "Turing Certsについて",
       "news": "ニュース",
+      "contatc-us": "お問い合わせ",
       "sign-up": "発行者としてサインアップ",
       "pricing": "價格方案"
     },
