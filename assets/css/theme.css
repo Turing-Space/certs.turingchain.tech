@@ -18,6 +18,10 @@ body {
   overflow-x: hidden;
 }
 
+.process-img img{
+  width: 200px;
+  height: auto;
+}
 
 .pricing-img img{
   width: 100px;

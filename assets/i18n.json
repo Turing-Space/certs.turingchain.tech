@@ -6,7 +6,7 @@
     "header": {
       "about-us": "About Us",
       "news": "News",
-      "contatc-us": "Contact Us",
+      "contact-us": "Contact Us",
       "sign-up": "Sign Up As Issuer",
       "pricing": "Pricing"
     },
@@ -135,6 +135,16 @@
       "cch": "Changhua Christian Hospital",
       "tzuchi": "Buddhist Compassion Relief Tzu Chi Foundation",
       "taisin": "台新青少年基金會 (Tai-Sin Youth Foundation)"
+    },
+    "process": {
+      "01-h6": "Customized certificates",
+      "01-p": "You can upload background images for editing or upload PDF files for encryption directly. We provide a variety of certificate templates and a comprehensive character set font to address design and rare character display issues.",
+      "02-h6": "Rapid winding",
+      "02-p": "We are certified to comply with GDPR and ISO/IEC 27001. We adapt the W3C DID standard and EU Sustainable Blockchain EBSI IOTA for sharing, enabling organizations to swiftly digitize their paper-based documents.",
+      "03-h6": "Certificate management",
+      "03-p": "You can easily manage certificate delivery status, set issuance dates and quantities for recipients in diverse groups, instantly revoke or reissue certificates for errors or content adjustments, all in real-time.",
+      "04-h6": "One-click verification",
+      "04-p": "You can verify the authenticity of the certificates with just one click through the LinkedIn link or QR code on the paper document. No need to worry about certificate counterfeiting or tampering and establish cross-border trust transmission."
     },
     "recognition": {
       "title": "Recognition",
@@ -293,7 +303,7 @@
     "header": {
       "about-us": "關於我們",
       "news": "新聞",
-      "contatc-us": "聯絡我們",
+      "contact-us": "聯絡我們",
       "sign-up": "申請成為發證者",
       "pricing": "價格方案"
     },
@@ -422,6 +432,16 @@
       "cch": "彰化基督教醫院",
       "tzuchi": "慈濟基金會",
       "taisin": "台新青少年基金會"
+    },
+    "process": {
+      "01-h6": "自製證書",
+      "01-p": "高彈性的證書格式，你可以自行上傳底圖製作證書，或直接將PDF文件上鏈。我們也提供多種證書模板及全字庫之字型，解決設計與罕用字顯示問題。",
+      "02-h6": "快速上鏈",
+      "02-p": "我們已通過 GDPR 與 ISO/IEC 27001 等國際資安標準的認證，並採用符合 W3C DID 標準和歐盟永續區塊鏈 EBSI IOTA 作為底層架構，快速實現紙本文件的數位化。",
+      "03-h6": "發證管理",
+      "03-p": "你可以管理所有證書的發證狀態，個別設定不同群組內各個收件對象的發證日期及數量，還能撤銷及加發證書，不論是錯發或內容調整都能即時更正。　",
+      "04-h6": "⼀鍵驗證",
+      "04-p": "透過 LinkedIn 連結或紙本文件上的 QR Code 進行一鍵驗證，即可確保證書的真實性。你不用擔心證書造假或遭竄改，建立跨國信任傳遞。"
     },
     "recognition": {
       "title": "認可",
@@ -577,7 +597,7 @@
     "header": {
       "about-us": "Turing Certsについて",
       "news": "ニュース",
-      "contatc-us": "お問い合わせ",
+      "contact-us": "お問い合わせ",
       "sign-up": "発行者としてサインアップ",
       "pricing": "價格方案"
     },
@@ -706,6 +726,16 @@
       "cch": "彰化クリスチャン病院",
       "tzuchi": "慈済財団法人",
       "taisin": "台新青少年基金会"
+    },
+    "process": {
+      "01-h6": "証明書の作成",
+      "01-p": "当社の証明書作成は非常に柔軟性が高いです。オリジナル背景画像をアップロードしてデザインから編集したり、PDFファイルをブロックチェーンに紐付けたりすることができます。また、多数のテンプレートオプションを提供し、テキストにはフルフォントセットを適応しており、レアな文字の表示にも対応しております。",
+      "02-h6": "迅速に紐付ける",
+      "02-p": "Turing Certsは、GDPR、ISO/IEC 27001やISO 27701 個人情報保護などの国際安全規格の認証を取得しました。また、W3C DIDとEUのサステナブルブロックチェーンEBSI IOTAを基礎として、紙媒体を迅速にデジタル化します。",
+      "03-h6": "証明書の管理",
+      "03-p": "全ての証明書の発行状態が管理でき、発行グループごとに受信者、発行日、発行枚数も全て個別に管理できます。さらに、証明書の撤回や再発行などといった発行内容の誤りや内容の訂正にもすぐに対応できます。",
+      "04-h6": "ワンクリック検証",
+      "04-p": "LinkedInリンク経由での検証や証明書を印刷して記載されているQRコードを読み取ることによりワンクリックで検証可能で、情報の信頼性も確保できます。偽造や改竄の不安なく、国境を越えた信頼を築きます。"
     },
     "recognition": {
       "title": "功績",
