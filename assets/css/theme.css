@@ -28,6 +28,11 @@ body {
   height: auto;
 }
 
+.faq .accordion li .accordion-title h6{
+  margin-bottom: 0px;
+  margin-right: 10px;
+}
+
 .pricing-img img {
   width: 100px;
   height: 100px;
@@ -48,9 +53,9 @@ body {
 .price .origin-price .pricing-slash {
   width: calc(100% + 10px);
   height: 1px;
-  background-color: #CE8B3D;
+  background-color: #7C7C7C;
   -webkit-transform: rotate(-10deg);
-  transform: rotate(-7deg);
+  transform: rotate(-0deg);
   position: absolute;
   left: -5px;
   top: 10px;
@@ -62,7 +67,7 @@ body {
 }
 
 .price .pricing-no span{
-  margin-top: 6px;
+  margin-top: 16px;
 }
 
 
@@ -2852,6 +2857,7 @@ i {
   display: block;
   width: 100%;
   height: 12px;
+  max-height: 100px;
 }
 
 .accordion li .accordion-content ul li,
@@ -7053,7 +7059,7 @@ button.mfp-close:hover {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  padding-left: 40px;
+  padding-left: 20px;
 }
 
 .prices-box .btn,
