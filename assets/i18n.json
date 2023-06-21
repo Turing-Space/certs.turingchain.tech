@@ -1,7 +1,7 @@
 {
   "en": {
     "contact-us": {
-      "iframe": "<iframe width=\"720px\" height=\"560px\" src=\"https://forms.office.com/Pages/ResponsePage.aspx?id=wWjl0kAT_Uiv9iYjNmZsH_XfNh7lKCJPqw7nmbGg99BURDVEMEpFWENaRkdaRVhGU0tZUlpITFhJNSQlQCN0PWcu&embed=true\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" style=\"border: none; max-width:100%; max-height:100vh\" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>"
+      "iframe": "<iframe width=\"720px\" height=\"560px\" src=\"ttps://forms.office.com/r/6i9bmkzdED?embed=true\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" style=\"border: none; max-width:100%; max-height:100vh\" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>"
     },
     "header": {
       "about-us": "About Us",
@@ -298,7 +298,7 @@
   },
   "zh-TW": {
     "contact-us": {
-      "iframe": "<iframe width=\"720px\" height=\"560px\" src=\"https://forms.office.com/Pages/ResponsePage.aspx?id=wWjl0kAT_Uiv9iYjNmZsH_XfNh7lKCJPqw7nmbGg99BUOTBTOEJGTkE1WFk0RTlCNVU1NjVRVkdCUiQlQCN0PWcu&embed=true\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" style=\"border: none; max-width:100%; max-height:100vh\" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>"
+      "iframe": "<iframe width=\"720px\" height=\"560px\" src=\"https://forms.office.com/r/kyy9DSmu0S?embed=true\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" style=\"border: none; max-width:100%; max-height:100vh\" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>"
     },
     "header": {
       "about-us": "關於我們",
@@ -592,7 +592,7 @@
   },
   "jp": {
     "contact-us": {
-      "iframe": "<iframe width=\"720px\" height=\"560px\" src=\"https://forms.office.com/Pages/ResponsePage.aspx?id=wWjl0kAT_Uiv9iYjNmZsH_XfNh7lKCJPqw7nmbGg99BUQzEzRzdBUTcxUkcyMERIUjNaVTBXRVlHOCQlQCN0PWcu&embed=true\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" style=\"border: none; max-width:100%; max-height:100vh\" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>"
+      "iframe": "<iframe width=\"720px\" height=\"560px\" src=\"https://forms.office.com/r/juPKAZ9Eba?embed=true\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" style=\"border: none; max-width:100%; max-height:100vh\" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>"
     },
     "header": {
       "about-us": "Turing Certsについて",

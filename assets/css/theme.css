@@ -20,7 +20,9 @@ body {
   overflow-x: hidden;
 }
 
-
+.p-medium p{
+  font-size: 18px;
+}
 .process-img img {
   width: 200px;
   height: auto;
@@ -48,7 +50,7 @@ body {
   height: 1px;
   background-color: #CE8B3D;
   -webkit-transform: rotate(-10deg);
-  transform: rotate(-10deg);
+  transform: rotate(-7deg);
   position: absolute;
   left: -5px;
   top: 10px;
@@ -66,7 +68,7 @@ body {
   color: #fff;
   text-align: center;
   border: none;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 8px;
   display: inline-block;
   background-size: 300% 100%;
