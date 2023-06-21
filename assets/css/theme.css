@@ -61,6 +61,11 @@ body {
   display: inline-block;
 }
 
+.price .pricing-no span{
+  margin-top: 6px;
+}
+
+
 .pricing-btn-hover {
   font: 400 13px "Poppins", sans-serif;
   letter-spacing: 1px;
