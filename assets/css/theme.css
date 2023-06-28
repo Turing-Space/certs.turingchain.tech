@@ -3465,6 +3465,7 @@ a.button-white-2 {
   background: #fff;
   border-color: #fff;
   color: #131517;
+  text-transform:none;
 }
 
 .button-white-2:hover,
@@ -10294,7 +10295,7 @@ div[class*=' bg-white'].fullscreen-menu .fm-wrapper .fm-close span:after {
 
   .header .header-menu-extra {
     display: inline-block;
-    margin-left: 30px;
+    margin-left: 20px;
   }
 
   .header .header-toggle {

@@ -6,6 +6,7 @@
     "header": {
       "about-us": "About Us",
       "news": "News",
+      "resoure-center": "Resource",
       "contact-us": "Contact Us",
       "sign-up": "Sign Up As Issuer",
       "pricing": "Pricing"
@@ -93,24 +94,36 @@
       "title": "Whom We Can Help",
       "learn-more-button-text": "Learn More",
       "case1": {
-        "name": "University",
-        "description": "Transcript, Diploma, Offer of Admission, Award Certificate, etc."
+        "name": "Medical",
+        "description": "Digital Health Screening, Medical Staff Training Certificate, Digital Prescription"
       },
       "case2": {
         "name": "Educational Institution",
-        "description": "Course Certificate, Proof of Completion, Event Certificate, etc."
+        "description": "Transcript, Diploma, Course Certificate, Proof of Completion, Event Certificate"
       },
       "case3": {
-        "name": "Real Estate",
-        "description": "E-contract, Transaction Record, Business Cards, House History, etc."
+        "name": "Governmental Units",
+        "description": "Proof of Awards, Government Documentary System, National Documents"
       },
       "case4": {
-        "name": "Agriculture",
-        "description": "Proof of Origin, Organic Labels, Fairtrade Certification, etc."
+        "name": "Sustainable Business (ESG)",
+        "description": "ESG Cooperate Report, Green Power Certificate, Renewable Energy Certificate"
       },
       "case5": {
+        "name": "Real Estate",
+        "description": "E-contract, Transaction, Business Cards, House History"
+      },
+      "case6": {
+        "name": "Agriculture",
+        "description": "Proof of Origin, Organic Labels, Fair-trade Certificate"
+      },
+      "case7": {
         "name": "Arts",
-        "description": "Ownership Certificate, Evidence of Creation, Auction Record, etc."
+        "description": "Ownership Certificate, Evidence of Creation, Auction Record"
+      },
+      "case8": {
+        "name": "Non-profit Organization",
+        "description": "Volunteer Certification, Scholarship Certificate, Volunteer Management System"
       }
     },
     "our-clients": {
@@ -293,6 +306,7 @@
       "button-content": "Okay"
     },
     "pricing": {
+      "contact-button": "Contact Us",
       "basic": "Basic",
       "basic-intro":"Start your digital certificate issuance journey with ease.",
       "basic-price":"NT$ 50,000 <span>/year</span>",
@@ -326,9 +340,9 @@
       "premium-p4":"<i class=\"fa fa-check text-gold\"></i>&nbsp;1 Administrator account",
       "premium-p5":"<i class=\"fa fa-check text-gold\"></i>&nbsp;Multi-page documents issuance module",
       "premium-p6":"<i class=\"fa fa-check text-gold\"></i>&nbsp;Customizable QR code module",
-      "enterprise-p1":"<i class=\"fa fa-check text-gold\"></i>&nbsp;Tell us about your custom plan",
-      "enterprise-p2":"<i class=\"fa fa-check text-gold\"></i>&nbsp;API connection",
-      "enterprise-p3":"<i class=\"fa fa-check text-gold\"></i>&nbsp;Customized certificate background design"
+      "enterprise-p1":"<i class=\"fa fa-comment-dots text-gold\"></i>&nbsp;Tell us about your custom plan",
+      "enterprise-p2":"<i class=\"fa fa-plus text-gold\"></i>&nbsp;API connection",
+      "enterprise-p3":"<i class=\"fa fa-plus text-gold\"></i>&nbsp;Customized certificate background design"
     },
     "faq": {
       "title": "Frequently Asked Questions",
@@ -349,6 +363,7 @@
     "header": {
       "about-us": "關於我們",
       "news": "新聞",
+      "resoure-center": "資源中心",
       "contact-us": "聯絡我們",
       "sign-up": "申請成為發證者",
       "pricing": "價格方案"
@@ -436,24 +451,36 @@
       "title": "我們可以幫助誰",
       "learn-more-button-text": "了解更多",
       "case1": {
-        "name": "大學",
-        "description": "成績單、文憑、錄取通知書、獲獎證書等"
+        "name": "醫療",
+        "description": "數位健檢報告、醫事人員培訓證書、電子處方簽"
       },
       "case2": {
         "name": "教育機構",
-        "description": "課程證書、結業證明、活動證書等"
+        "description": "成績單、文憑、課程證書、結業證明、活動證書"
       },
       "case3": {
-        "name": "房地產",
-        "description": "電子合約、交易記錄、名片、房屋歷史等"
+        "name": "政府單位",
+        "description": "獎項證明、政府書證系統、國民文件"
       },
       "case4": {
-        "name": "農業",
-        "description": "原產地證明、有機標籤、公平貿易認證等"
+        "name": "永續企業(ESG)",
+        "description": "ESG企業報告、綠電憑證、再生能源憑證"
       },
       "case5": {
+        "name": "房地產",
+        "description": "電子合約、交易紀錄、名片、房屋歷史"
+      },
+      "case6": {
+        "name": "農業",
+        "description": "原產地證明、有機標籤、公平貿易認證"
+      },
+      "case7": {
         "name": "藝術",
-        "description": "所有權證書、創作證據、拍賣記錄等"
+        "description": "所有權證書、創作證據、拍賣紀錄"
+      },
+      "case8": {
+        "name": "非營利組織",
+        "description": "志工認證、獎學金證明、志工管理系統"
       }
     },
     "our-clients": {
@@ -636,6 +663,7 @@
       "button-content": "確定"
     },
     "pricing": {
+      "contact-button": "洽詢專業顧問",
       "basic": "Basic",
       "basic-intro":"無痛開始您的數位證書發行之旅",
       "basic-price":"NT$ 50,000 <span>/年</span>",
@@ -692,9 +720,10 @@
     "header": {
       "about-us": "Turing Certsについて",
       "news": "ニュース",
-      "contact-us": "お問い合わせ",
+      "resoure-center": "リソースセンター",
+      "contact-us": "お問い合せ",
       "sign-up": "発行者としてサインアップ",
-      "pricing": "價格方案"
+      "pricing": "値段"
     },
     "intro": {
       "slogan": "ボーダーレスな電子証明書管理プラットフォーム",
@@ -779,24 +808,36 @@
       "title": "Turing Certsの導入例",
       "learn-more-button-text": "もっと詳しく",
       "case1": {
-        "name": "大学",
-        "description": "成績書、卒業証書、入学通知書、各種賞状等"
+        "name": "医療機関",
+        "description": "デジタル健康診断報告書、医療従事者の研修証明書、電子処方箋"
       },
       "case2": {
         "name": "教育機関",
-        "description": "受講証、修了書、活動証明書等"
+        "description": "成績証明書、卒業証書、受講証明書、修了証明書、イベント参加証明書"
       },
       "case3": {
-        "name": "不動産",
-        "description": "電子契約書、取引記録、名刺、物件情報等"
+        "name": "政府機関",
+        "description": "表彰状、政府機関発行の公的な書類、国家レベルの機密書類"
       },
       "case4": {
-        "name": "農業",
-        "description": "原產地照明、オーガニック認証、フェアトレード認証等"
+        "name": "持続可能なビジネス（ESG）",
+        "description": "ESG企業レポート、グリーン電力証書、再生可能エネルギー証書"
       },
       "case5": {
+        "name": "不動産",
+        "description": "電子契約書、取引記録、名刺、住宅履歴"
+      },
+      "case6": {
+        "name": "農業",
+        "description": "産地証明書、オーガンニック商品のラベル内容、フェアトレード認証"
+      },
+      "case7": {
         "name": "芸術",
-        "description": "所有権証明書、作品制作証明書、オークション記録等"
+        "description": "所有権証明書、作者や作品証明、オークションでの取引記録"
+      },
+      "case8": {
+        "name": "非営利団体",
+        "description": "ボランティア証明書、奨学金証明書、ボランティア管理システム"
       }
     },
     "our-clients": {
@@ -847,7 +888,7 @@
       "subdescription": "チューリングサーツ",
       "security-policy": "セキュリティーポリシー",
       "privacy-policy": "プライバシーポリシー",
-      "address": "台灣台北市內湖区瑞光路335号7階10番<br>"
+      "address": "〒150-0002 東京都渋谷区渋谷2-10-15<br>エキスパートオフィス渋谷<br>"
     },
     "aboutUs": {
       "first-subtitle": "「私達は皆、各人生経験の集約から成る存在。」",
@@ -979,6 +1020,7 @@
       "button-content": "同意します"
     },
     "pricing": {
+      "contact-button": "専門コンサルタントにお問合せ",
       "basic": "Basic",
       "basic-intro":"気軽に電子証明書の発行を始めよう",
       "basic-price":"263,300 円<span>/年</span>",
@@ -1012,9 +1054,9 @@
       "premium-p4":"<i class=\"fa fa-check text-gold\"></i>&nbsp;管理員アカウント１つ",
       "premium-p5":"<i class=\"fa fa-check text-gold\"></i>&nbsp;複数ページの文書ファイルの発行",
       "premium-p6":"<i class=\"fa fa-check text-gold\"></i>&nbsp;QRコードカスタマイズ機能",
-      "enterprise-p1":"<i class=\"fa fa-check text-gold\"></i>&nbsp;お考えのご使用予定についてお聞かせください。",
-      "enterprise-p2":"<i class=\"fa fa-check text-gold\"></i>&nbsp;API接続",
-      "enterprise-p3":"<i class=\"fa fa-check text-gold\"></i>&nbsp;カスタマイズされた証明書の背景デザイン"
+      "enterprise-p1":"<i class=\"fa fa-comment-dots  text-gold\"></i>&nbsp;お考えのご使用予定についてお聞かせください。",
+      "enterprise-p2":"<i class=\"fa fa-plus text-gold\"></i>&nbsp;API接続",
+      "enterprise-p3":"<i class=\"fa fa-plus text-gold\"></i>&nbsp;カスタマイズされた証明書の背景デザイン"
     },
     "faq": {
       "title": "よくある問題",
