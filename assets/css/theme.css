@@ -70,7 +70,6 @@ body {
   margin-top: 16px;
 }
 
-
 .pricing-btn-hover {
   font: 400 13px "Poppins", sans-serif;
   letter-spacing: 1px;
@@ -103,6 +102,11 @@ body {
 
 .pricing-btn-hover.color-1 {
   background-image: linear-gradient(to right, #CE893A, #F3C77C, #ffd792, #be7f36);
+}
+
+.button-text-18 {
+  font-size: 18px;
+  width: 240px;
 }
 
 .text-white {
@@ -413,8 +417,8 @@ body {
 }
 
 .iota-img img {
-  height: 100px;
-  max-height: 100px;
+  height: 120px;
+  max-height: 120px;
   text-align: center;
 }
 
