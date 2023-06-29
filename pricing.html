@@ -60,22 +60,27 @@
             <a class="nav-link" href="about-us.html" data-i18n="header.about-us">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pricing.html" data-i18n="header.pricing">Pricing</a>
+            <a class="nav-link" href="#" data-i18n="header.pricing">Pricing</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="news.html" data-i18n="header.news">News</a>
-            <!--<ul class="nav-dropdown">
-								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="media.html">Media</a></li>
-								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="https://medium.com/turing-chain">Blog</a></li>
-							</ul>-->
+            <a class="nav-link" data-i18n="header.resoure-center">Resource</a>
+            <ul class="nav-dropdown">
+              <li class="nav-dropdown-item"><a class="nav-dropdown-link" href="news.html"
+                  data-i18n="header.news">News</a></li>
+              <li class="nav-dropdown-item"><a class="nav-dropdown-link" href="https://medium.com/turing-chain"
+                  data-i18n="header.medium">Medium
+                </a></li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact-us.html" data-i18n="header.contact-us">Contact Us</a>
+            <a class="nav-link" href="https://global.turingcerts.com/en/login?role=cc-apply" data-i18n="header.sign-up"
+              id="issuerApply">Sign Up As
+              Issuer</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://global.turingcerts.com/en/login?role=cc-apply"
-              data-i18n="header.sign-up">Sign up as Issuer</a>
-          </li>
+          <div class="header-menu-extra">
+            <a class="button button-sm button-rounded button-white-2 align-middle" href="contact-us.html"
+              data-i18n="header.contact-us">Contact Us</a>
+          </div>
           <li class="nav-item">
             <i class="fa fa-globe"></i>
             <select class="language-select" style="border: none; background: transparent" id="language-selector">
@@ -146,7 +151,8 @@
               </div>
             </div>
             <div class="text-center margin-bottom-30">
-              <a href="contact-us.html" id=""><button class="pricing-btn-hover color-1 button-md" data-i18n="pricing.contact-button">Contact
+              <a href="contact-us.html" id=""><button class="pricing-btn-hover color-1 button-md"
+                  data-i18n="pricing.contact-button">Contact
                   Us</button></a>
             </div>
             <div class="price-features text-left">
@@ -229,7 +235,8 @@
               </div>
             </div>
             <div class="text-center margin-bottom-30">
-              <a href="contact-us.html" id=""><button class="pricing-btn-hover color-1 button-md" data-i18n="pricing.contact-button">Contact
+              <a href="contact-us.html" id=""><button class="pricing-btn-hover color-1 button-md"
+                  data-i18n="pricing.contact-button">Contact
                   Us</button></a>
             </div>
             <div class="price-features text-left">
@@ -295,7 +302,8 @@
               <h2 class="font-weight-normal line-height-130" data-i18n="pricing.enterprise-price">依需求計價</h2>
             </div>
             <div class="text-center margin-bottom-30">
-              <a href="contact-us.html" id=""><button class="pricing-btn-hover color-1 button-md" data-i18n="pricing.contact-button">Contact
+              <a href="contact-us.html" id=""><button class="pricing-btn-hover color-1 button-md"
+                  data-i18n="pricing.contact-button">Contact
                   Us</button></a>
             </div>
             <div class="price-features text-left">
@@ -376,34 +384,49 @@
           <ul class="accordion single-open rounded">
             <li class="active">
               <div class="accordion-title">
-                <h6 class="font-weight-normal text-darkgray uppercase" data-i18n="faq.q1-title">Why choose to use a Turing certificate? What are the differences from general digital certificates?</h6>
+                <h6 class="font-weight-normal text-darkgray uppercase" data-i18n="faq.q1-title">Why choose to use a
+                  Turing certificate? What are the differences from general digital certificates?</h6>
               </div>
               <div class="accordion-content" data-i18n="faq.q1-description">
-                <p>Turing Certs adopts the IOTA international public chain, which has high data governance and security. It also collaborates with many domestic and foreign government units, including the World Health Organization, the Asia-Pacific Economic Cooperation, and Taiwan's Ministry of Digital Development, all of whom are users of the Turing certificate.</p>
+                <p>Turing Certs adopts the IOTA international public chain, which has high data governance and security.
+                  It also collaborates with many domestic and foreign government units, including the World Health
+                  Organization, the Asia-Pacific Economic Cooperation, and Taiwan's Ministry of Digital Development, all
+                  of whom are users of the Turing certificate.</p>
               </div>
             </li>
             <li>
               <div class="accordion-title">
-                <h6 class="font-weight-normal text-darkgray uppercase" data-i18n="faq.q2-title">Do we have to authenticate on Turing Cert’s website? Can we customize it if there are special requirements?</h6>
+                <h6 class="font-weight-normal text-darkgray uppercase" data-i18n="faq.q2-title">Do we have to
+                  authenticate on Turing Cert’s website? Can we customize it if there are special requirements?</h6>
               </div>
               <div class="accordion-content" data-i18n="faq.q2-description">
-                <p>Yes, it is possible to authenticate and verify on the client interface. By using the Turing Certs API module, it is possible to achieve a streaming service for customized websites to meet high compatibility for issuance, revocation, and verification.</p>
+                <p>Yes, it is possible to authenticate and verify on the client interface. By using the Turing Certs API
+                  module, it is possible to achieve a streaming service for customized websites to meet high
+                  compatibility for issuance, revocation, and verification.</p>
               </div>
             </li>
             <li>
               <div class="accordion-title">
-                <h6 class="font-weight-normal text-darkgray uppercase" data-i18n="faq.q3-title">Is there a concern about personal information when uploading files to the Turing Certs website during the certificate issuance process?</h6>
+                <h6 class="font-weight-normal text-darkgray uppercase" data-i18n="faq.q3-title">Is there a concern about
+                  personal information when uploading files to the Turing Certs website during the certificate issuance
+                  process?</h6>
               </div>
               <div class="accordion-content" data-i18n="faq.q3-description">
-                <p>Turing Certs is compliant with ISO 27001:2013 security certification and the EU GDPR privacy regulations. It is also expected to pass ISO 27701 in May 2023, providing even higher standards of security to protect customer privacy.</p>
+                <p>Turing Certs is compliant with ISO 27001:2013 security certification and the EU GDPR privacy
+                  regulations. It is also expected to pass ISO 27701 in May 2023, providing even higher standards of
+                  security to protect customer privacy.</p>
               </div>
             </li>
             <li>
               <div class="accordion-title">
-                <h6 class="font-weight-normal text-darkgray uppercase" data-i18n="faq.q3-title">Is there any restriction on the template design for issuing certificates?</h6>
+                <h6 class="font-weight-normal text-darkgray uppercase" data-i18n="faq.q3-title">Is there any restriction
+                  on the template design for issuing certificates?</h6>
               </div>
               <div class="accordion-content" data-i18n="faq.q4-description">
-                <p>The certificate format is highly flexible and the file is in A4 size, which can be edited and created by uploading a PDF. Both portrait and landscape orientations are available, and the Turing Certs backend also provides template options. If there are specific requirements for customized design templates, further discussions can be arranged.</p>
+                <p>The certificate format is highly flexible and the file is in A4 size, which can be edited and created
+                  by uploading a PDF. Both portrait and landscape orientations are available, and the Turing Certs
+                  backend also provides template options. If there are specific requirements for customized design
+                  templates, further discussions can be arranged.</p>
               </div>
             </li>
           </ul>

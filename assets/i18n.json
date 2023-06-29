@@ -9,7 +9,8 @@
       "resoure-center": "Resource",
       "contact-us": "Contact Us",
       "sign-up": "Sign Up As Issuer",
-      "pricing": "Pricing"
+      "pricing": "Pricing",
+      "medium":"Medium"      
     },
     "intro": {
       "slogan": "Global Digital Certificate Management Platform",
@@ -366,7 +367,8 @@
       "resoure-center": "資源中心",
       "contact-us": "聯絡我們",
       "sign-up": "申請成為發證者",
-      "pricing": "價格方案"
+      "pricing": "價格方案",
+      "medium":"Medium"
     },
     "intro": {
       "slogan": "國際通用的一站式數位證書管理平台",
@@ -718,12 +720,13 @@
       "iframe": "<iframe width=\"720px\" height=\"560px\" src=\"https://forms.office.com/r/JZ5is8CBG5?embed=true\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" style=\"border: none; max-width:100%; max-height:100vh\" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>"
     },
     "header": {
-      "about-us": "Turing Certsについて",
+      "about-us": "会社概要",
       "news": "ニュース",
       "resoure-center": "リソースセンター",
-      "contact-us": "お問い合せ",
-      "sign-up": "発行者としてサインアップ",
-      "pricing": "値段"
+      "contact-us": "お問合せ",
+      "sign-up": "発行者新規登録",
+      "pricing": "利用料金",
+      "medium":"Medium"
     },
     "intro": {
       "slogan": "ボーダーレスな電子証明書管理プラットフォーム",
