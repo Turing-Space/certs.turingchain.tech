@@ -1,18 +1,49 @@
 {
   "en": {
+    "contact-us": {
+      "iframe": "<iframe width=\"720px\" height=\"560px\" src=\"https://forms.office.com/r/K6DAriykbA?embed=true\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" style=\"border: none; max-width:100%; max-height:100vh\" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>"
+    },
     "header": {
       "about-us": "About Us",
       "news": "News",
+      "resoure-center": "Resource",
+      "contact-us": "Contact Us",
       "sign-up": "Sign Up As Issuer",
-      "pricing": "Pricing"
+      "pricing": "Pricing",
+      "medium":"Medium"      
     },
     "intro": {
-      "slogan": "Zero Fraud, Zero Paper, <br>Sustainable Society",
-      "slogan-description": "One-stop service to issue, manage, and verify digital credentials on blockchain for everyone.",
+      "slogan": "Global Digital Certificate Management Platform",
+      "slogan-description": "Zero Fraud｜Zero Paper｜Sustainable Society",
       "login": "Login"
     },
     "benefits": {
       "title": "Benefits",
+      "cost-savings": {
+        "h4": "Cost savings, multiplied efficiency",
+        "p": "Rapid certificate issuance eliminates delivery and printing costs, streamlines operations, reduces human error and time cost, and accelerates digitalization."
+      },
+      "paperless": {
+        "h4": "Paperless certificates, sustainable practice",
+        "p": "Achieving 100% paper usage reduction and 98% carbon emissions reduction, eliminating reliance on trees, and building a sustainable green future."
+      },
+      "GDPR": {
+        "h4": "GDPR compliance, user data protection and privacy",
+        "p": "Compliant with the EU GDPR privacy regulations, ensuring certificate holders' rights to disclosure their information and rigorous user privacy protection."
+      },
+      "all-in-one": {
+        "h4": "All-in-one management, rigorous information security system and control measures",
+        "p": "One-stop certificate authentication and integration platform, compliant with ISO 27001 data protection standard for information stability and security."
+      },
+      "one-click": {
+        "h4": "One-click verification, enhanced anti-counterfeiting",
+        "p": "All certificates are securely stored on blockchain, enabling one-click verification and traceability, effectively preventing counterfeit, and enhancing convenience and transparency."
+      },
+      "contact": {
+        "h2": "Start your digital certificates issuance journey!",
+        "span": "We'll assist you every step of the way",
+        "button": "Contact Us"
+      },
       "cost": {
         "before-highlight": "Save cost by",
         "highlight": "86%"
@@ -64,34 +95,70 @@
       "title": "Whom We Can Help",
       "learn-more-button-text": "Learn More",
       "case1": {
-        "name": "University",
-        "description": "Transcript, Diploma, Offer of Admission, Award Certificate, etc."
+        "name": "Medical",
+        "description": "Digital Health Screening, Medical Staff Training Certificate, Digital Prescription"
       },
       "case2": {
         "name": "Educational Institution",
-        "description": "Course Certificate, Proof of Completion, Event Certificate, etc."
+        "description": "Transcript, Diploma, Course Certificate, Proof of Completion, Event Certificate"
       },
       "case3": {
-        "name": "Real Estate",
-        "description": "E-contract, Transaction Record, Business Cards, House History, etc."
+        "name": "Governmental Units",
+        "description": "Proof of Awards, Government Documentary System, National Documents"
       },
       "case4": {
-        "name": "Agriculture",
-        "description": "Proof of Origin, Organic Labels, Fairtrade Certification, etc."
+        "name": "Sustainable Business (ESG)",
+        "description": "ESG Cooperate Report, Green Power Certificate, Renewable Energy Certificate"
       },
       "case5": {
+        "name": "Real Estate",
+        "description": "E-contract, Transaction, Business Cards, House History"
+      },
+      "case6": {
+        "name": "Agriculture",
+        "description": "Proof of Origin, Organic Labels, Fair-trade Certificate"
+      },
+      "case7": {
         "name": "Arts",
-        "description": "Ownership Certificate, Evidence of Creation, Auction Record, etc."
+        "description": "Ownership Certificate, Evidence of Creation, Auction Record"
+      },
+      "case8": {
+        "name": "Non-profit Organization",
+        "description": "Volunteer Certification, Scholarship Certificate, Volunteer Management System"
       }
     },
     "our-clients": {
       "title": "Our Clients",
-      "ntu": "Office of International Affairs, National Taiwan University",
-      "nthu": "National Tsing Hua University",
-      "ocac": "Overseas Community Affairs Council of Taiwan",
-      "cch": "Changhua Christian Hospital Online Medical Education",
-      "iii": "Institute for Information Industry Award Certificate",
-      "tcgya": "Taoyuan City Government Youth Affair"
+      "who": "World Health Organization (WHO)",
+      "apec": "Asia-Pacific Economic Cooperation (APEC)",
+      "erasmus": "Erasmus+ in Italy",
+      "hcap": "Harvard College In Asia Program (HCAP)",
+      "berkeley": "Berkeley Law Executive Education",
+      "dnb": "Dun & Bradstreet (D&B)",
+      "cfj": "Code for Japan",
+      "tii": "Technological Institute of the Philippines",
+      "line": "LINE TAIWAN PROTOSTAR",
+      "moda": "Ministry of Digital Development, Taiwan (MODA)",
+      "ocac": "Overseas Community Affairs Council, Taiwan",
+      "iii": "Institute for Information Industry, Taiwan",
+      "tedu": "Department of Education, Taipei City Government",
+      "tcgya": "Department of Youth Affairs, Taoyuan City Government",
+      "ntuoia": "Office of International Affairs, National Taiwan University (NTU OIA)",
+      "nthu": "National Tsing Hua University (NTHU)",
+      "ttmh": "Tungs' Taichung Metroharbor Hospital",
+      "cch": "Changhua Christian Hospital",
+      "tzuchi": "Buddhist Compassion Relief Tzu Chi Foundation",
+      "taisin": "台新青少年基金會 (Tai-Sin Youth Foundation)"
+    },
+    "process": {
+      "01-h6": "Customized certificates",
+      "01-p": "You can upload background images for editing or upload PDF files for encryption directly. We provide a variety of certificate templates and a comprehensive character set font to address design and rare character display issues.",
+      "02-h6": "Rapid winding",
+      "02-p": "We are certified to comply with GDPR and ISO/IEC 27001. We adapt the W3C DID standard and EU Sustainable Blockchain EBSI IOTA for sharing, enabling organizations to swiftly digitize their paper-based documents.",
+      "03-h6": "Certificate management",
+      "03-p": "You can easily manage certificate delivery status, set issuance dates and quantities for recipients in diverse groups, instantly revoke or reissue certificates for errors or content adjustments, all in real-time.",
+      "04-h6": "One-click verification",
+      "04-p": "You can verify the authenticity of the certificates with just one click through the LinkedIn link or QR code on the paper document. No need to worry about certificate counterfeiting or tampering and establish cross-border trust transmission."
     },
     "recognition": {
       "title": "Recognition",
@@ -103,7 +170,9 @@
       "jetro-description": "Enterprise Partnership Programme in Japan"
     },
     "iota-description": "Secured by the Public Blockchain - IOTA</br>European Blockchain Services Infrastructure by ",
-    "iso-description": "Certified as ISO/IEC 27001 compliant",
+    "iso27001-description": "Certified as ISO/IEC 27001 compliant",
+    "iso27701-description": "Certified as ISO/IEC 27701 compliant",
+    "gdpr-description": "Compliant with the EU GDPR privacy regulations",
     "footer": {
       "subdescription": "",
       "security-policy": "Information Security Policy",
@@ -240,23 +309,101 @@
       "button-content": "Okay"
     },
     "pricing": {
-      "basic": "Basic"
+      "contact-button": "Contact Us",
+      "basic": "Basic",
+      "basic-intro":"Start your digital certificate issuance journey with ease.",
+      "basic-price":"NT$ 50,000 <span>/year</span>",
+      "basic-month":"Only NT$ 4,167 /month",
+      "basic-original":"Original price NT$ 55,000 /year <div class=\"pricing-slash\"></div>",
+      "premium": "Premium",
+      "premium-intro":"Extensive digital certificate management solutions.",
+      "premium-price":"NT$ 80,000 <span>/year</span>",
+      "premium-month":"Only NT$ 6,667 /month",
+      "premium-original":"Original price NT$ 95,500 /year <div class=\"pricing-slash\"></div>",
+      "enterprise": "Enterprise",
+      "enterprise-intro":"Tailored solutions for rapid and high-volume needs.",
+      "enterprise-price":"Pricing on Demand",
+      "enterprise-original":"Pricing on Demand",
+      "basic-p1":"<i class=\"fa fa-check text-gold\"></i>&nbsp;Free 100 pcs certificates",
+      "basic-p2":"<i class=\"fa fa-check text-gold\"></i>&nbsp;Free 30 pcs templates",
+      "basic-p3":"<i class=\"fa fa-check text-gold\"></i>&nbsp;1 Administrator account",
+      "basic-p4":"<i class=\"fa fa-check text-gold\"></i>&nbsp;Personalized template design",
+      "basic-p5":"<i class=\"fa fa-check text-gold\"></i>&nbsp;Designed template sharing",
+      "basic-p6":"<i class=\"fa fa-check text-gold\"></i>&nbsp;Testimonial module",
+      "basic-p7":"<i class=\"fa fa-check text-gold\"></i>&nbsp;Four-tier privacy permission module",
+      "basic-p8":"<i class=\"fa fa-check text-gold\"></i>&nbsp;Share on LinkedIn",
+      "basic-p9":"<i class=\"fa fa-check text-gold\"></i>&nbsp;Instant blockchain verification module",
+      "basic-p10":"<i class=\"fa fa-check text-gold\"></i>&nbsp;Multilingual support",
+      "basic-p11":"<i class=\"fa fa-check text-gold\"></i>&nbsp;Resume timeline module",
+      "basic-p12":"<i class=\"fa fa-check text-gold\"></i>&nbsp;Credentials revoked module",
+      "basic-p13":"<i class=\"fa fa-check text-gold\"></i>&nbsp;single-page certificate rapid issuance",
+      "premium-p1":"<i class=\"fa fa-check text-gold\"></i>&nbsp;Including all BASIC features",
+      "premium-p2":"<i class=\"fa fa-check text-gold\"></i>&nbsp;Free 500 pcs certificates",
+      "premium-p3":"<i class=\"fa fa-check text-gold\"></i>&nbsp;Free 100 pcs templates",
+      "premium-p4":"<i class=\"fa fa-check text-gold\"></i>&nbsp;1 Administrator account",
+      "premium-p5":"<i class=\"fa fa-check text-gold\"></i>&nbsp;Multi-page documents issuance module",
+      "premium-p6":"<i class=\"fa fa-check text-gold\"></i>&nbsp;Customizable QR code module",
+      "enterprise-p1":"<i class=\"fa fa-comment-dots text-gold\"></i>&nbsp;Tell us about your custom plan",
+      "enterprise-p2":"<i class=\"fa fa-plus text-gold\"></i>&nbsp;API connection",
+      "enterprise-p3":"<i class=\"fa fa-plus text-gold\"></i>&nbsp;Customized certificate background design"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1-title":"Why choose to use a Turing certificate? What are the differences from general digital certificates?",
+      "q1-description":"Turing Certs adopts the IOTA international public chain, which has high data governance and security. It also collaborates with many domestic and foreign government units, including the World Health Organization, the Asia-Pacific Economic Cooperation, and Taiwan's Ministry of Digital Development, all of whom are users of the Turing certificate.",
+      "q2-title":"Do we have to authenticate on Turing Cert’s website? Can we customize it if there are special requirements?",
+      "q2-description":"Yes, it is possible to authenticate and verify on the client interface. By using the Turing Certs API module, it is possible to achieve a streaming service for customized websites to meet high compatibility for issuance, revocation, and verification.",
+      "q3-title":"Is there a concern about personal information when uploading files to the Turing Certs website during the certificate issuance process?",
+      "q3-description":"Turing Certs is compliant with ISO 27001:2013 security certification and the EU GDPR privacy regulations. It is also expected to pass ISO 27701 in May 2023, providing even higher standards of security to protect customer privacy.",
+      "q4-title":"Is there any restriction on the template design for issuing certificates?",
+      "q4-description":"The certificate format is highly flexible and the file is in A4 size, which can be edited and created by uploading a PDF. Both portrait and landscape orientations are available, and the Turing Certs backend also provides template options. If there are specific requirements for customized design templates, further discussions can be arranged."
     }
   },
   "zh-TW": {
+    "contact-us": {
+      "iframe": "<iframe width=\"720px\" height=\"560px\" src=\"https://forms.office.com/r/Ybz9JQ4z5G?embed=true\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" style=\"border: none; max-width:100%; max-height:100vh\" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>"
+    },
     "header": {
       "about-us": "關於我們",
       "news": "新聞",
+      "resoure-center": "資源中心",
+      "contact-us": "聯絡我們",
       "sign-up": "申請成為發證者",
-      "pricing": "價格方案"
+      "pricing": "價格方案",
+      "medium":"Medium"
     },
     "intro": {
-      "slogan": "零造假，零紙張，<br>永續社會",
-      "slogan-description": "以區塊鏈為基礎，全球通用的簽發、管理、數位驗證一站式服務。",
+      "slogan": "國際通用的一站式數位證書管理平台",
+      "slogan-description": "零造假｜零紙張｜續社會",
       "login": "登入"
     },
     "benefits": {
       "title": "好處",
+      "cost-savings": {
+        "h4": "成本歸零，效率加乘",
+        "p": "大量證書迅速發行，寄件及印刷費用歸零，作業程序縮減，大幅降低人為失誤與時間成本， 加速數位化進程。"
+      },
+      "paperless": {
+        "h4": "證書無紙化，永續再實踐",
+        "p": "紙張使用量減少100%，碳排放減少98%，讓證書不再依賴樹木，實踐永續的綠色未來。"
+      },
+      "GDPR": {
+        "h4": "嚴守 GDPR，保障用戶個資",
+        "p": "符合歐盟 GDPR 資料保護，證書持有人擁有最高揭露權限，嚴謹保障用戶個資隱私。"
+      },
+      "all-in-one": {
+        "h4": "一站式管理，資安嚴格把關",
+        "p": "證書與各類憑證整合於一站式平台，通過國際認可 ISO 27001 資訊安全管理系統（ISMS）標準驗證，展現對資訊安全且高服務品質的承諾。"
+      },
+      "one-click": {
+        "h4": "一鍵驗證，防偽升級",
+        "p": "證書上鏈加密後永久保存，輕鬆一鍵即可快速查驗、溯源，徹底杜絕偽造，讓驗證更方便透明。"
+      },
+      "contact": {
+        "h2": "開始你的數位發證之旅！",
+        "span": "讓我們來協助你",
+        "button": "聯絡我們"
+      },
       "cost": {
         "before-highlight": "節省成本 ",
         "highlight": "86%"
@@ -308,34 +455,70 @@
       "title": "我們可以幫助誰",
       "learn-more-button-text": "了解更多",
       "case1": {
-        "name": "大學",
-        "description": "成績單、文憑、錄取通知書、獲獎證書等"
+        "name": "醫療",
+        "description": "數位健檢報告、醫事人員培訓證書、電子處方簽"
       },
       "case2": {
         "name": "教育機構",
-        "description": "課程證書、結業證明、活動證書等"
+        "description": "成績單、文憑、課程證書、結業證明、活動證書"
       },
       "case3": {
-        "name": "房地產",
-        "description": "電子合約、交易記錄、名片、房屋歷史等"
+        "name": "政府單位",
+        "description": "獎項證明、政府書證系統、國民文件"
       },
       "case4": {
-        "name": "農業",
-        "description": "原產地證明、有機標籤、公平貿易認證等"
+        "name": "永續企業(ESG)",
+        "description": "ESG企業報告、綠電憑證、再生能源憑證"
       },
       "case5": {
+        "name": "房地產",
+        "description": "電子合約、交易紀錄、名片、房屋歷史"
+      },
+      "case6": {
+        "name": "農業",
+        "description": "原產地證明、有機標籤、公平貿易認證"
+      },
+      "case7": {
         "name": "藝術",
-        "description": "所有權證書、創作證據、拍賣記錄等"
+        "description": "所有權證書、創作證據、拍賣紀錄"
+      },
+      "case8": {
+        "name": "非營利組織",
+        "description": "志工認證、獎學金證明、志工管理系統"
       }
     },
     "our-clients": {
       "title": "我們的客戶",
-      "ntu": "國立台灣大學國際事務處",
-      "nthu": "國立清華大學",
+      "who": "世界衛生組織",
+      "apec": "亞太經濟合作組織",
+      "erasmus": "Erasmus+ in Italy",
+      "hcap": "Harvard College In Asia Program (HCAP)",
+      "berkeley": "Berkeley Law Executive Education",
+      "dnb": "美商鄧白氏",
+      "cfj": "Code for Japan",
+      "tii": "菲律賓科技學院",
+      "line": "LINE 新星計劃",
+      "moda": "中華民國數位發展部",
       "ocac": "中華民國僑務委員會",
-      "cch": "彰化基督教醫院線上醫療教育課程",
       "iii": "財團法人資訊工業策進會",
-      "tcgya": "桃園市政府青年事務局"
+      "tedu": "台北市教育局",
+      "tcgya": "桃園市政府青年事務局",
+      "ntuoia": "國立台灣大學國際事務處",
+      "nthu": "國立清華大學",
+      "ttmh": "童綜合醫院",
+      "cch": "彰化基督教醫院",
+      "tzuchi": "慈濟基金會",
+      "taisin": "台新青少年基金會"
+    },
+    "process": {
+      "01-h6": "自製證書",
+      "01-p": "高彈性的證書格式，你可以自行上傳底圖製作證書，或直接將PDF文件上鏈。我們也提供多種證書模板及全字庫之字型，解決設計與罕用字顯示問題。",
+      "02-h6": "快速上鏈",
+      "02-p": "我們已通過 GDPR 與 ISO/IEC 27001 等國際資安標準的驗證，並採用符合 W3C DID 標準和歐盟永續區塊鏈 EBSI IOTA 作為底層架構，快速實現紙本文件的數位化。",
+      "03-h6": "發證管理",
+      "03-p": "你可以管理所有證書的發證狀態，個別設定不同群組內各個收件對象的發證日期及數量，還能撤銷及加發證書，不論是錯發或內容調整都能即時更正。　",
+      "04-h6": "⼀鍵驗證",
+      "04-p": "透過 LinkedIn 連結或紙本文件上的 QR Code 進行一鍵驗證，即可確保證書的真實性。你不用擔心證書造假或遭竄改，建立跨國信任傳遞。"
     },
     "recognition": {
       "title": "認可",
@@ -347,7 +530,9 @@
       "jetro-description": "日本企業夥伴計畫"
     },
     "iota-description": "由公共區塊鏈 - IOTA 所保護</br>歐洲區塊鏈服務基礎建設 ",
-    "iso-description": "通過 ISO/IEC 27001 認證",
+    "iso27001-description": "通過 ISO/IEC 27001 驗證",
+    "iso27701-description": "通過 ISO/IEC 27701 驗證",
+    "gdpr-description": "符合 GDPR 承諾與規範",
     "footer": {
       "subdescription": "",
       "security-policy": "資訊安全政策",
@@ -482,22 +667,103 @@
       "description1": "我們使用 cookies",
       "description2": "這個網站使用 cookies 去幫助個人化內容及提供一個更安全的環境。",
       "button-content": "確定"
+    },
+    "pricing": {
+      "contact-button": "洽詢專業顧問",
+      "basic": "Basic",
+      "basic-intro":"無痛開始您的數位證書發行之旅",
+      "basic-price":"NT$ 50,000 <span>/年</span>",
+      "basic-month":"每月只需 NT$ 4,167",
+      "basic-original":"原價 NT$ 55,000 /年 <div class=\"pricing-slash\"></div>",
+      "premium": "Premium",
+      "premium-intro":"全面數位證書管理的解決方案",
+      "premium-price":"NT$ 80,000 <span>/年</span>",
+      "premium-month":"每月只需 NT$ 6,667",
+      "premium-original":"原價 NT$ 95,500 /年 <div class=\"pricing-slash\"></div>",
+      "enterprise": "Enterprise",
+      "enterprise-intro":"量身定制的發證方案，滿足快速和高容量需求",
+      "enterprise-price":"依需求定價<br>",
+      "enterprise-original":"NT$ 依需求計價 /年",
+      "basic-p1":"<i class=\"fa fa-check text-gold\"></i>&nbsp;贈送 100 張證書",
+      "basic-p2":"<i class=\"fa fa-check text-gold\"></i>&nbsp;贈送 30 張模板",
+      "basic-p3":"<i class=\"fa fa-check text-gold\"></i>&nbsp;管理員帳號 1 席",
+      "basic-p4":"<i class=\"fa fa-check text-gold\"></i>&nbsp;自由模板設計",
+      "basic-p5":"<i class=\"fa fa-check text-gold\"></i>&nbsp;模板設計共享",
+      "basic-p6":"<i class=\"fa fa-check text-gold\"></i>&nbsp;測試信模組",
+      "basic-p7":"<i class=\"fa fa-check text-gold\"></i>&nbsp;四階隱私權限模組",
+      "basic-p8":"<i class=\"fa fa-check text-gold\"></i>&nbsp;LinkedIn 分享",
+      "basic-p9":"<i class=\"fa fa-check text-gold\"></i>&nbsp;區塊鏈即時驗證模組",
+      "basic-p10":"<i class=\"fa fa-check text-gold\"></i>&nbsp;多語言支援",
+      "basic-p11":"<i class=\"fa fa-check text-gold\"></i>&nbsp;履歷時間軸模組",
+      "basic-p12":"<i class=\"fa fa-check text-gold\"></i>&nbsp;撤銷證書模組",
+      "basic-p13":"<i class=\"fa fa-check text-gold\"></i>&nbsp;單頁憑證快速上鏈",
+      "premium-p1":"<i class=\"fa fa-check text-gold\"></i>&nbsp;已包含 BASIC 方案功能",
+      "premium-p2":"<i class=\"fa fa-check text-gold\"></i>&nbsp;贈送 500 張證書",
+      "premium-p3":"<i class=\"fa fa-check text-gold\"></i>&nbsp;贈送 100 張模板",
+      "premium-p4":"<i class=\"fa fa-check text-gold\"></i>&nbsp;管理員帳號 1 席",
+      "premium-p5":"<i class=\"fa fa-check text-gold\"></i>&nbsp;多頁文件檔案上鏈模組",
+      "premium-p6":"<i class=\"fa fa-check text-gold\"></i>&nbsp;QR code 自定義模組",
+      "enterprise-p1":"<i class=\"fa fa-comment-dots text-gold\"></i>&nbsp;請提出你的客製方案",
+      "enterprise-p2":"<i class=\"fa fa-plus text-gold\"></i>&nbsp;API 系統串接",
+      "enterprise-p3":"<i class=\"fa fa-plus text-gold\"></i>&nbsp;客製化底圖設計"
+    },
+    "faq": {
+      "title": "常見問題",
+      "q1-title":"為何選擇使用圖靈證書？ 和一般數位證書的不同是什麼？",
+      "q1-description":"圖靈證書採用 IOTA 國際公有鏈，公有鏈的數據治理與安全性高，且與許多國內外政府單位合作，包含世界衛生組織、亞太經合會、台灣的數位發展部都採用圖靈證書作為憑證信任解決方案。",
+      "q2-title":"一定要在圖靈證書的網頁上才能認證嗎？ 若有特殊需求能夠客製化嗎？",
+      "q2-description":"在客戶端介面也可以查看與驗證。只要採用圖靈證書 API 模組，就能達成客戶客製化網站的串流服務，以滿足發證、撤銷、驗證上的高相容性。",
+      "q3-title":"發證時將檔案上傳於圖靈證書網站，會不會有個資的疑慮？",
+      "q3-description":"圖靈證書符合 ISO 27001: 2013 安全驗證以及歐盟 GPDR 個資保護規範，並於 2023 通過 ISO 27701 個人資料隱私資訊管理系統，更高標準地保障用戶隱私。",
+      "q4-title":"對於發證的模板設計有限制性嗎？",
+      "q4-description":"高彈性的證書格式，A4 尺寸之 PDF 檔案即可上傳編輯製作，直橫式皆可，圖靈證書平台也有預設模板範本可選擇，亦提供客製版型設計服務，歡迎進一步討論需求。"
     }
   },
   "jp": {
+    "contact-us": {
+      "iframe": "<iframe width=\"720px\" height=\"560px\" src=\"https://forms.office.com/r/JZ5is8CBG5?embed=true\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" style=\"border: none; max-width:100%; max-height:100vh\" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>"
+    },
     "header": {
-      "about-us": "Turing Certsについて",
+      "about-us": "会社概要",
       "news": "ニュース",
-      "sign-up": "発行者としてサインアップ",
-      "pricing": "價格方案"
+      "resoure-center": "リソースセンター",
+      "contact-us": "お問合せ",
+      "sign-up": "発行者新規登録",
+      "pricing": "利用料金",
+      "medium":"Medium"
     },
     "intro": {
-      "slogan": "ゼロ偽造，ゼロペーパー、<br>持続可能な社会へ",
-      "slogan-description": "ブロックチェーンを活用した電子証明書の発行・管理・認証をワンストップサービスで提供",
+      "slogan": "ボーダーレスな電子証明書管理プラットフォーム",
+      "slogan-description": "ゼロ偽造｜ゼロペーパー｜持続可能な社会へ",
       "login": "ログイン"
     },
     "benefits": {
       "title": "メリット",
+      "cost-savings": {
+        "h4": "コストゼロ、効率アップ",
+        "p": "大量の証明書を迅速に発行し、郵送費や印刷費用をゼロに。発行手順を簡略化し、人為的な誤りや時間コストを大幅に削減し、DX化を加速させます。"
+      },
+      "paperless": {
+        "h4": "ペーパーレス証明書、持続可能な実践",
+        "p": "紙の使用量を100％抑え、二酸化炭素排出量を98％削減します。森林伐採に依存しない証明書で持続可能な緑の未来を実現します。"
+      },
+      "GDPR": {
+        "h4": "GDPRを厳密に遵守し、プライバシーの最優先",
+        "p": "EU GDPRプライバシー協定に準拠し、証明書所有者に公開設定権が与えられ、ユーザーのプライバシーを厳格に保護しています。"
+      },
+      "all-in-one": {
+        "h4": "証明書のワンストップ統合、厳格なセキュリティチェック",
+        "p": "証明書の発行から管理まで一元化されたプラットフォーム。国際的に認められたISO 27001個人情報保護規格に則り、情報の安定性とセキュリティを確保します。"
+      },
+      "one-click": {
+        "h4": "ワンクリック認証、偽造防止のアップグレード",
+        "p": "証明書は暗号化され、ブロックチェーンに紐付けられた後、永続的に保存されます。ワンクリックで迅速に検証およびトレース可能で、偽造を全面的に防止し、検証をより便利で透明にします。"
+      },
+      "contact": {
+        "h2": "デジタル発行を始めよう",
+        "span": "私たちにお任せください！",
+        "button": "お問い合わせ"
+      },
       "cost": {
         "before-highlight": "コスト削減率 ",
         "highlight": "86%"
@@ -549,34 +815,70 @@
       "title": "Turing Certsの導入例",
       "learn-more-button-text": "もっと詳しく",
       "case1": {
-        "name": "大学",
-        "description": "成績書、卒業証書、入学通知書、各種賞状等"
+        "name": "医療機関",
+        "description": "デジタル健康診断報告書、医療従事者の研修証明書、電子処方箋"
       },
       "case2": {
         "name": "教育機関",
-        "description": "受講証、修了書、活動証明書等"
+        "description": "成績証明書、卒業証書、受講証明書、修了証明書、イベント参加証明書"
       },
       "case3": {
-        "name": "不動産",
-        "description": "電子契約書、取引記録、名刺、物件情報等"
+        "name": "政府機関",
+        "description": "表彰状、政府機関発行の公的な書類、国家レベルの機密書類"
       },
       "case4": {
-        "name": "農業",
-        "description": "原產地照明、オーガニック認証、フェアトレード認証等"
+        "name": "持続可能なビジネス（ESG）",
+        "description": "ESG企業レポート、グリーン電力証書、再生可能エネルギー証書"
       },
       "case5": {
+        "name": "不動産",
+        "description": "電子契約書、取引記録、名刺、住宅履歴"
+      },
+      "case6": {
+        "name": "農業",
+        "description": "産地証明書、オーガンニック商品のラベル内容、フェアトレード認証"
+      },
+      "case7": {
         "name": "芸術",
-        "description": "所有権証明書、作品制作証明書、オークション記録等"
+        "description": "所有権証明書、作者や作品証明、オークションでの取引記録"
+      },
+      "case8": {
+        "name": "非営利団体",
+        "description": "ボランティア証明書、奨学金証明書、ボランティア管理システム"
       }
     },
     "our-clients": {
       "title": "クライアント紹介",
-      "ntu": "国立台灣大學国際事務所",
+      "who": "World Health Organization (WHO)",
+      "apec": "Asia-Pacific Economic Cooperation (APEC)",
+      "erasmus": "Erasmus+ in Italy",
+      "hcap": "Harvard College In Asia Program (HCAP)",
+      "berkeley": "Berkeley Law Executive Education",
+      "dnb": "Dun & Bradstreet (D&B)",
+      "cfj": "Code for Japan",
+      "tii": "Technological Institute of the Philippines",
+      "line": "LINE 台湾 PROTOSTAR",
+      "moda": "中華民国デジタル開発部",
+      "ocac": "中華民国華僑委員会",
+      "iii": "財団法人資訊工業策進会",
+      "tedu": "台北市教育局",
+      "tcgya": "桃園市青少年局",
+      "ntuoia": "国立台湾大学国際事務所",
       "nthu": "国立清華大学",
-      "ocac": "中華民国僑務委員会",
-      "cch": "彰化基督教病院オンライン医療教育課程",
-      "iii": "財団法人情報工業策進会",
-      "tcgya": "桃園市政府青年事務局"
+      "ttmh": "童総合病院",
+      "cch": "彰化クリスチャン病院",
+      "tzuchi": "慈済財団法人",
+      "taisin": "台新青少年基金会"
+    },
+    "process": {
+      "01-h6": "証明書の作成",
+      "01-p": "当社の証明書作成は非常に柔軟性が高いです。オリジナル背景画像をアップロードしてデザインから編集したり、PDFファイルをブロックチェーンに紐付けたりすることができます。また、多数のテンプレートオプションを提供し、テキストにはフルフォントセットを適応しており、レアな文字の表示にも対応しております。",
+      "02-h6": "迅速に紐付ける",
+      "02-p": "Turing Certsは、GDPR、ISO/IEC 27001やISO 27701 個人情報保護などの国際安全規格の確認を取得しました。また、W3C DIDとEUのサステナブルブロックチェーンEBSI IOTAを基礎として、紙媒体を迅速にデジタル化します。",
+      "03-h6": "証明書の管理",
+      "03-p": "全ての証明書の発行状態が管理でき、発行グループごとに受信者、発行日、発行枚数も全て個別に管理できます。さらに、証明書の撤回や再発行などといった発行内容の誤りや内容の訂正にもすぐに対応できます。",
+      "04-h6": "ワンクリック検証",
+      "04-p": "LinkedInリンク経由での検証や証明書を印刷して記載されているQRコードを読み取ることによりワンクリックで検証可能で、情報の信頼性も確保できます。偽造や改竄の不安なく、国境を越えた信頼を築きます。"
     },
     "recognition": {
       "title": "功績",
@@ -588,12 +890,14 @@
       "jetro-description": "日本企業パートナーシッププログラム"
     },
     "iota-description": "パブリックブロックチェーン - IOTA による安全性の確保</br>欧州ブロックチェーン・サービス基盤 ",
-    "iso-description": "ISO/IEC 27001 認証取得",
+    "iso27001-description": "ISO/IEC 27001 確認取得",
+    "iso27701-description": "ISO/IEC 27701 確認取得",
+    "gdpr-description": "EU GDPRプライバシー協定に準拠し",
     "footer": {
       "subdescription": "チューリングサーツ",
       "security-policy": "セキュリティーポリシー",
       "privacy-policy": "プライバシーポリシー",
-      "address": "台灣台北市內湖区瑞光路335号7階10番<br>"
+      "address": "〒150-0002 東京都渋谷区渋谷2-10-15<br>エキスパートオフィス渋谷<br>"
     },
     "aboutUs": {
       "first-subtitle": "「私達は皆、各人生経験の集約から成る存在。」",
@@ -723,6 +1027,56 @@
       "description1": "当サイトはcookiesを使用します",
       "description2": "当サイトはcookiesを使用し、皆様へ提供するサービス向上及びより安全な使用環境を提供いたします。",
       "button-content": "同意します"
+    },
+    "pricing": {
+      "contact-button": "専門コンサルタントにお問合せ",
+      "basic": "Basic",
+      "basic-intro":"気軽に電子証明書の発行を始めよう",
+      "basic-price":"263,300 円<span>/年</span>",
+      "basic-month":"毎月 22,000 円",
+      "basic-original":"定価 299,100 円 /年 <div class=\"pricing-slash\"></div>",
+      "premium": "Premium",
+      "premium-intro":"電子証明書の全面的な管理を実現可能",
+      "premium-price":"494,900 円<span>/年</span>",
+      "premium-month":"毎月 41,250 円",
+      "premium-original":"定価 534,900 円 /年<div class=\"pricing-slash\"></div>",
+      "enterprise": "Enterprise",
+      "enterprise-intro":"大量発行ニーズに対応できるカスタマイズサービス",
+      "enterprise-price":"オンデマンドの価格設定",
+      "enterprise-original":"オンデマンドの価格設定",
+      "basic-p1":"<i class=\"fa fa-check text-gold\"></i>&nbsp;証明書100 枚無料",
+      "basic-p2":"<i class=\"fa fa-check text-gold\"></i>&nbsp;テンプレート30 枚無料",
+      "basic-p3":"<i class=\"fa fa-check text-gold\"></i>&nbsp;管理員アカウント１つ",
+      "basic-p4":"<i class=\"fa fa-check text-gold\"></i>&nbsp;自分でテンプレートをデザイン可能",
+      "basic-p5":"<i class=\"fa fa-check text-gold\"></i>&nbsp;作成済みテンプレートのシェア",
+      "basic-p6":"<i class=\"fa fa-check text-gold\"></i>&nbsp;検証機能",
+      "basic-p7":"<i class=\"fa fa-check text-gold\"></i>&nbsp;４段階プライバシー権限機能",
+      "basic-p8":"<i class=\"fa fa-check text-gold\"></i>&nbsp;LinkedInシェア機能",
+      "basic-p9":"<i class=\"fa fa-check text-gold\"></i>&nbsp;ブロックチェーン検証機能",
+      "basic-p10":"<i class=\"fa fa-check text-gold\"></i>&nbsp;多言語対応",
+      "basic-p11":"<i class=\"fa fa-check text-gold\"></i>&nbsp;証明書のタイムライン管理機能",
+      "basic-p12":"<i class=\"fa fa-check text-gold\"></i>&nbsp;証明書の撤回機能",
+      "basic-p13":"<i class=\"fa fa-check text-gold\"></i>&nbsp;単ページ証明書発行機能",
+      "premium-p1":"<i class=\"fa fa-check text-gold\"></i>&nbsp;BASICプログラムの全機能を含む",
+      "premium-p2":"<i class=\"fa fa-check text-gold\"></i>&nbsp;証明書500 枚無料",
+      "premium-p3":"<i class=\"fa fa-check text-gold\"></i>&nbsp;テンプレート100 枚無料",
+      "premium-p4":"<i class=\"fa fa-check text-gold\"></i>&nbsp;管理員アカウント１つ",
+      "premium-p5":"<i class=\"fa fa-check text-gold\"></i>&nbsp;複数ページの文書ファイルの発行",
+      "premium-p6":"<i class=\"fa fa-check text-gold\"></i>&nbsp;QRコードカスタマイズ機能",
+      "enterprise-p1":"<i class=\"fa fa-comment-dots  text-gold\"></i>&nbsp;お考えのご使用予定についてお聞かせください。",
+      "enterprise-p2":"<i class=\"fa fa-plus text-gold\"></i>&nbsp;API接続",
+      "enterprise-p3":"<i class=\"fa fa-plus text-gold\"></i>&nbsp;カスタマイズされた証明書の背景デザイン"
+    },
+    "faq": {
+      "title": "よくある問題",
+      "q1-title":"なぜチューリング証明書を選びますか？一般的なデジタル証明書との違いは何ですか？",
+      "q1-description":"Turing Certsは、国際的なパブリックブロックチェーンであるIOTAを採用しています。パブリックブロックチェーンは、データガバナンスとセキュリティが高く、世界保健機関、アジア太平洋経済協力、台湾のデジタル開発部など、多くの国内外の政府機関がTuring Certsを採用しています。",
+      "q2-title":"チューリング証明書のウェブサイトで認証する必要がありますか？ 特別な要件がある場合になったら、カスタマイズできますか？",
+      "q2-description":"はい、クライアントインターフェイスで認証および検証することができます。Turing Certs APIモジュールを使用すると、発行、取り消し、検証に高い互換性を持たせるためにカスタマイズされたウェブサイトのストリーミングサービスを実現できます。",
+      "q3-title":"証明書の発行時、ファイルをTuring Certsのウェブサイトにアップロードする場合、個人情報への不安はありますか？",
+      "q3-description":"Turing CertsはISO 27001：2013のセキュリティ認証およびEU GDPRの個人情報保護規制に準拠しており、さらに2023年5月にISO 27701を取得する予定で、顧客のプライバシーを保護するためのより高いセキュリティ基準を提供します。",
+      "q4-title":"証明書の発行に関するテンプレートデザインには制限がありますか？",
+      "q4-description":"柔軟性が高い証明書フォーマット、ファイルはA4サイズで、PDFをアップロードして編集、作成することができます。縦横両方向に対応しており、Turing Certsのバックエンドにはテンプレートオプションも用意されています。特別な要件がある場合は、さらに議論することができます。"
     }
   }
 }

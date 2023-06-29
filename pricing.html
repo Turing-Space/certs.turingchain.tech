@@ -60,16 +60,27 @@
             <a class="nav-link" href="about-us.html" data-i18n="header.about-us">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="news.html" data-i18n="header.news">News</a>
-            <!--<ul class="nav-dropdown">
-								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="media.html">Media</a></li>
-								<li class="nav-dropdown-item"><a class="nav-dropdown-link" href="https://medium.com/turing-chain">Blog</a></li>
-							</ul>-->
+            <a class="nav-link" href="#" data-i18n="header.pricing">Pricing</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://global.turingcerts.com/en/login?role=cc-apply"
-              data-i18n="header.sign-up">Sign up as Issuer</a>
+            <a class="nav-link" data-i18n="header.resoure-center">Resource</a>
+            <ul class="nav-dropdown">
+              <li class="nav-dropdown-item"><a class="nav-dropdown-link" href="news.html"
+                  data-i18n="header.news">News</a></li>
+              <li class="nav-dropdown-item"><a class="nav-dropdown-link" href="https://medium.com/turing-chain"
+                  data-i18n="header.medium">Medium
+                </a></li>
+            </ul>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://global.turingcerts.com/en/login?role=cc-apply" data-i18n="header.sign-up"
+              id="issuerApply">Sign Up As
+              Issuer</a>
+          </li>
+          <div class="header-menu-extra">
+            <a class="button button-sm button-rounded button-white-2 align-middle" href="contact-us.html"
+              data-i18n="header.contact-us">Contact Us</a>
+          </div>
           <li class="nav-item">
             <i class="fa fa-globe"></i>
             <select class="language-select" style="border: none; background: transparent" id="language-selector">
@@ -113,6 +124,8 @@
   </div>
   <!-- End section-->
 
+
+
   <!-- Prices section -->
   <div class="section">
     <div class="container">
@@ -123,45 +136,80 @@
             <div class="pricing-img">
               <img src="assets/images/pricing_basic-cert.png" alt="">
             </div>
-            <h5 class="font-weight-normal">基礎</h5>
+            <h5 class="font-weight-normal" data-i18n="pricing.basic">Basic</h5>
+            <h6 class="font-weight-normal text-darkgray" data-i18n="pricing.basic-intro">無痛開始您的數位證書發行之旅</h6>
             <div class="price">
-              <h2 class="font-weight-normal">NT$2,500<span>/月</span></h2>
-              <span>年度收費</span>
+              <div>
+                <h2 class="font-weight-normal" data-i18n="pricing.basic-price">NT$ 50,000 <span>/年</span></h2>
+              </div>
+              <div class="p-medium">
+                <p class="font-weight-normal" data-i18n="pricing.basic-month">每月只需 NT$ 4,167</p>
+              </div>
+              <div class="origin-price" data-i18n="pricing.basic-original">
+                <span>原價 NT$ 55,000 /年</span>
+                <div class="pricing-slash"></div>
+              </div>
+            </div>
+            <div class="text-center margin-bottom-30">
+              <a href="contact-us.html" id=""><button class="pricing-btn-hover color-1 button-md"
+                  data-i18n="pricing.contact-button">Contact
+                  Us</button></a>
             </div>
             <div class="price-features text-left">
               <ul>
-                <li>
+                <li data-i18n="pricing.basic-p1">
                   <i class="fa fa-check text-gold"></i>
-                  證書上鏈​​
+                  贈送 100 張證書
                 </li>
-                <li>
+                <li data-i18n="pricing.basic-p2">
                   <i class="fa fa-check text-gold"></i>
-                  後台管理
+                  贈送 30 張模板
                 </li>
-                <li>
+                <li data-i18n="pricing.basic-p3">
                   <i class="fa fa-check text-gold"></i>
-                  匯入名單
+                  管理員帳號 1 席
                 </li>
-                <li>
+                <li data-i18n="pricing.basic-p4">
                   <i class="fa fa-check text-gold"></i>
-                  上傳底圖
+                  自由模板設計
                 </li>
-                <li class="text-gray">
-                  <i class="fa fa-check"></i>
-                  PDF上鏈
+                <li data-i18n="pricing.basic-p5">
+                  <i class="fa fa-check text-gold"></i>
+                  模板設計共享
                 </li>
-                <li class="text-gray">
-                  <i class="fa fa-check"></i>
-                  下載證書群組
+                <li data-i18n="pricing.basic-p6">
+                  <i class="fa fa-check text-gold"></i>
+                  測試信模組
                 </li>
-                <li class="text-gray">
-                  <i class="fa fa-check"></i>
-                  匯入模板
+                <li data-i18n="pricing.basic-p7">
+                  <i class="fa fa-check text-gold"></i>
+                  四階隱私權限模組
                 </li>
-                <li class="text-gray">
-                  <i class="fa fa-check"></i>
-                  專屬業務窗口
+                <li data-i18n="pricing.basic-p8">
+                  <i class="fa fa-check text-gold"></i>
+                  LinkedIn 分享
                 </li>
+                <li data-i18n="pricing.basic-p9">
+                  <i class="fa fa-check text-gold"></i>
+                  區塊鏈即時驗證模組
+                </li>
+                <li data-i18n="pricing.basic-p10">
+                  <i class="fa fa-check text-gold"></i>
+                  多語言支援
+                </li>
+                <li data-i18n="pricing.basic-p11">
+                  <i class="fa fa-check text-gold"></i>
+                  履歷時間軸模組
+                </li>
+                <li data-i18n="pricing.basic-p12">
+                  <i class="fa fa-check text-gold"></i>
+                  撤銷證書模組
+                </li>
+                <li data-i18n="pricing.basic-p13">
+                  <i class="fa fa-check text-gold"></i>
+                  單頁憑證快速上鏈
+                </li>
+
               </ul>
             </div>
           </div>
@@ -172,44 +220,71 @@
             <div class="pricing-img">
               <img src="assets/images/pricing_advanced-cert.png" alt="">
             </div>
-            <h5 class="font-weight-normal">進階</h5>
+            <h5 class="font-weight-normal" data-i18n="pricing.premium">Premium</h5>
+            <h6 class="font-weight-normal text-darkgray" data-i18n="pricing.premium-intro">全面數位證書管理的解決方案</h6>
             <div class="price">
-              <h2 class="font-weight-normal">NT$6,667<span>/月</span></h2>
-              <span>年度收費</span>
+              <div>
+                <h2 class="font-weight-normal" data-i18n="pricing.premium-price">NT$80,000<span>/年</span></h2>
+              </div>
+              <div class="p-medium">
+                <p class="font-weight-normal" data-i18n="pricing.premium-month">每月只需 NT$ 6,667</p>
+              </div>
+              <div class="origin-price" data-i18n="pricing.premium-original">
+                <span>原價 NT$ 95,500 /年</span>
+                <div class="pricing-slash"></div>
+              </div>
+            </div>
+            <div class="text-center margin-bottom-30">
+              <a href="contact-us.html" id=""><button class="pricing-btn-hover color-1 button-md"
+                  data-i18n="pricing.contact-button">Contact
+                  Us</button></a>
             </div>
             <div class="price-features text-left">
               <ul>
-                <li>
+                <li class="text-gold" data-i18n="pricing.premium-p1">
                   <i class="fa fa-check text-gold"></i>
-                  證書上鏈​​
+                  已包含 BASIC 方案功能
+                </li>
+                <li data-i18n="pricing.premium-p2">
+                  <i class="fa fa-check text-gold"></i>
+                  贈送 500 張證書
+                </li>
+                <li data-i18n="pricing.premium-p3">
+                  <i class="fa fa-check text-gold"></i>
+                  贈送 100 張模板
+                </li>
+                <li data-i18n="pricing.premium-p4">
+                  <i class="fa fa-check text-gold"></i>
+                  管理員帳號 1 席
+                </li>
+                <li data-i18n="pricing.premium-p5">
+                  <i class="fa fa-check text-gold"></i>
+                  多頁文件檔案上鏈模組
+                </li>
+                <li data-i18n="pricing.premium-p6">
+                  <i class="fa fa-check text-gold"></i>
+                  QR code 自定義模組
                 </li>
                 <li>
-                  <i class="fa fa-check text-gold"></i>
-                  後台管理
+                  <i class="fa fa-check text-white"></i>
                 </li>
                 <li>
-                  <i class="fa fa-check text-gold"></i>
-                  匯入名單
+                  <i class="fa fa-check text-white"></i>
                 </li>
                 <li>
-                  <i class="fa fa-check text-gold"></i>
-                  上傳底圖
+                  <i class="fa fa-check text-white"></i>
                 </li>
                 <li>
-                  <i class="fa fa-check text-gold"></i>
-                  PDF上鏈
+                  <i class="fa fa-check text-white"></i>
                 </li>
                 <li>
-                  <i class="fa fa-check text-gold"></i>
-                  下載證書群組
+                  <i class="fa fa-check text-white"></i>
                 </li>
-                <li class="text-gray">
-                  <i class="fa fa-check"></i>
-                  匯入模板
+                <li>
+                  <i class="fa fa-check text-white"></i>
                 </li>
-                <li class="text-gray">
-                  <i class="fa fa-check"></i>
-                  專屬業務窗口
+                <li>
+                  <i class="fa fa-check text-white"></i>
                 </li>
               </ul>
             </div>
@@ -221,44 +296,59 @@
             <div class="pricing-img">
               <img src="assets/images/pricing_pro-cert.png" alt="">
             </div>
-            <h5 class="font-weight-normal">專業</h5>
+            <h5 class="font-weight-normal" data-i18n="pricing.enterprise">Enterprise</h5>
+            <h6 class="font-weight-normal text-darkgray" data-i18n="pricing.enterprise-intro">量身定制的發證方案，滿足快速和高容量需求</h6>
             <div class="price">
-              <h2 class="font-weight-normal">NT$12,500<span>/月</span></h2>
-              <span>年度收費</span>
+              <h2 class="font-weight-normal line-height-130" data-i18n="pricing.enterprise-price">依需求計價</h2>
+            </div>
+            <div class="text-center margin-bottom-30">
+              <a href="contact-us.html" id=""><button class="pricing-btn-hover color-1 button-md"
+                  data-i18n="pricing.contact-button">Contact
+                  Us</button></a>
             </div>
             <div class="price-features text-left">
               <ul>
-                <li>
-                  <i class="fa fa-check text-gold"></i>
-                  證書上鏈​​
+                <li data-i18n="pricing.enterprise-p1">
+                  <i class="fa fa-comment-dots text-gold"></i>
+                  請提出你的客製方案
+                </li>
+                <li data-i18n="pricing.enterprise-p2">
+                  <i class="fa fa-plus text-gold"></i>
+                  API 系統串接
+                </li>
+                <li data-i18n="pricing.enterprise-p3">
+                  <i class="fa fa-plus text-gold"></i>
+                  客製化底圖設計
                 </li>
                 <li>
-                  <i class="fa fa-check text-gold"></i>
-                  後台管理
+                  <i class="fa fa-check text-white"></i>
                 </li>
                 <li>
-                  <i class="fa fa-check text-gold"></i>
-                  匯入名單
+                  <i class="fa fa-check text-white"></i>
                 </li>
                 <li>
-                  <i class="fa fa-check text-gold"></i>
-                  上傳底圖
+                  <i class="fa fa-check text-white"></i>
                 </li>
                 <li>
-                  <i class="fa fa-check text-gold"></i>
-                  PDF上鏈
+                  <i class="fa fa-check text-white"></i>
                 </li>
                 <li>
-                  <i class="fa fa-check text-gold"></i>
-                  下載證書群組
+                  <i class="fa fa-check text-white"></i>
                 </li>
                 <li>
-                  <i class="fa fa-check text-gold"></i>
-                  匯入模板
+                  <i class="fa fa-check text-white"></i>
                 </li>
                 <li>
-                  <i class="fa fa-check text-gold"></i>
-                  專屬業務窗口
+                  <i class="fa fa-check text-white"></i>
+                </li>
+                <li>
+                  <i class="fa fa-check text-white"></i>
+                </li>
+                <li>
+                  <i class="fa fa-check text-white"></i>
+                </li>
+                <li>
+                  <i class="fa fa-check text-white"></i>
                 </li>
               </ul>
             </div>
@@ -267,21 +357,24 @@
         <!-- end Prices box 3 -->
       </div><!-- end row -->
       <!-- contact button section-->
-      <div class="section-xs text-center padding-bottom-0">
-        <a href="#" id=""><button class="pricing-btn-hover color-1 button-xl margin-0">Contact Us</button></a>
-      </div> <!-- end contact button section-->
+
+      <!--<div class="section-xs text-center padding-bottom-0">
+        <a href="contact-us.html" id=""><button class="pricing-btn-hover color-1 button-xl margin-0">Contact our
+            professional consultant</button></a>
+
+      </div>--> <!-- end contact button section-->
+
     </div>
   </div><!-- end container -->
   </div>
   <!-- end Prices section -->
 
   <!-- FAQ section-->
-  <div class="section padding-top-0">
-    <div class="container">
-
-      <div class="row text-center margin-bottom-50">
+  <div class="section padding-top-0 faq">
+    <div class="container border-top">
+      <div class="row text-center margin-bottom-50 margin-top-70">
         <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
-          <h2 class="font-weight-light">
+          <h2 class="font-weight-light" data-i18n="faq.title">
             Frequently Asked Questions
           </h2>
         </div>
@@ -291,34 +384,49 @@
           <ul class="accordion single-open rounded">
             <li class="active">
               <div class="accordion-title">
-                <h6 class="font-weight-normal text-darkgray uppercase">為何選擇使用圖靈證書？ 和一般數位證書的不同是甚麼？</h6>
+                <h6 class="font-weight-normal text-darkgray uppercase" data-i18n="faq.q1-title">Why choose to use a
+                  Turing certificate? What are the differences from general digital certificates?</h6>
               </div>
-              <div class="accordion-content">
-                <p>圖靈證書採用 IOTA 國際公有鏈，公有鏈的數據治理與安全性高，且與許多國內外政府單位合作，獲得廣泛信任的合作關係。</p>
-              </div>
-            </li>
-            <li>
-              <div class="accordion-title">
-                <h6 class="font-weight-normal text-darkgray uppercase">一定要在圖靈證書的網頁上才能認證嗎？ 若有特殊需求能夠客製化嗎？</h6>
-              </div>
-              <div class="accordion-content">
-                <p>圖靈證書可適用於廣泛的開放 API 模組，達成客戶客製化網站的串流服務，以滿足發證、撤銷、驗證上的高相容性。</p>
+              <div class="accordion-content" data-i18n="faq.q1-description">
+                <p>Turing Certs adopts the IOTA international public chain, which has high data governance and security.
+                  It also collaborates with many domestic and foreign government units, including the World Health
+                  Organization, the Asia-Pacific Economic Cooperation, and Taiwan's Ministry of Digital Development, all
+                  of whom are users of the Turing certificate.</p>
               </div>
             </li>
             <li>
               <div class="accordion-title">
-                <h6 class="font-weight-normal text-darkgray uppercase">發證時將檔案上傳於圖靈證書網站，會不會有個資的疑慮？</h6>
+                <h6 class="font-weight-normal text-darkgray uppercase" data-i18n="faq.q2-title">Do we have to
+                  authenticate on Turing Cert’s website? Can we customize it if there are special requirements?</h6>
               </div>
-              <div class="accordion-content">
-                <p>圖靈證書符合 ISO 27001:2013 安全認證以及歐盟 GPDR 個資保護規範，並預計在 2033 年 5 月通過 ISO 27701，更高標準的安全性保障客戶隱私。</p>
+              <div class="accordion-content" data-i18n="faq.q2-description">
+                <p>Yes, it is possible to authenticate and verify on the client interface. By using the Turing Certs API
+                  module, it is possible to achieve a streaming service for customized websites to meet high
+                  compatibility for issuance, revocation, and verification.</p>
               </div>
             </li>
             <li>
               <div class="accordion-title">
-                <h6 class="font-weight-normal text-darkgray uppercase">對於發證的模板設計有限制性嗎？</h6>
+                <h6 class="font-weight-normal text-darkgray uppercase" data-i18n="faq.q3-title">Is there a concern about
+                  personal information when uploading files to the Turing Certs website during the certificate issuance
+                  process?</h6>
               </div>
-              <div class="accordion-content">
-                <p>高彈性化的證書格式，檔案為 A4，PDF 即可上傳編輯製作，直橫式皆可，圖靈證書後台也有提供模板選擇，若有客製版型設計需求，亦可進一步討論。</p>
+              <div class="accordion-content" data-i18n="faq.q3-description">
+                <p>Turing Certs is compliant with ISO 27001:2013 security certification and the EU GDPR privacy
+                  regulations. It is also expected to pass ISO 27701 in May 2023, providing even higher standards of
+                  security to protect customer privacy.</p>
+              </div>
+            </li>
+            <li>
+              <div class="accordion-title">
+                <h6 class="font-weight-normal text-darkgray uppercase" data-i18n="faq.q3-title">Is there any restriction
+                  on the template design for issuing certificates?</h6>
+              </div>
+              <div class="accordion-content" data-i18n="faq.q4-description">
+                <p>The certificate format is highly flexible and the file is in A4 size, which can be edited and created
+                  by uploading a PDF. Both portrait and landscape orientations are available, and the Turing Certs
+                  backend also provides template options. If there are specific requirements for customized design
+                  templates, further discussions can be arranged.</p>
               </div>
             </li>
           </ul>
@@ -336,48 +444,38 @@
         <div class="row align-items-center">
           <div class="col-12 col-md-6">
             <!--<h2>Turing Chain Ltd.</h2>-->
-            <h2>Turing Certs</h2>
+            <h2 style="display: inline;">Turing Certs </h2>
+            <h6 style="display: inline;" data-i18n="footer.subdescription"></h6>
             <ul class="list-inline-dash margin-top-30">
-              <li>
-                <a href="policies/information-security-policy.html" data-i18n="footer.security-policy">Information Security
-                  Policy</a>
-              </li>
-              <li>
-                <a href="policies/privacy-policy.html" data-i18n="footer.privacy-policy">Privacy Policy</a>
-              </li>
+              <li><a href="/policies/information-security-policy.html" data-i18n="footer.security-policy">Information
+                  Security Policy</a></li>
+              <li><a href="/policies/privacy-policy.html" data-i18n="footer.privacy-policy">Privacy Policy</a></li>
             </ul>
-            <p class="margin-top-10">
-              &copy; 2023 Turing Chain Limited, All Rights Reserved.
-            </p>
+            <p class="margin-top-10">&copy; 2023 Turing Chain Limited, All Rights Reserved.</p>
           </div>
           <div class="col-12 col-md-6 text-md-right">
             <ul class="list-unstyled">
               <!--
-							<li>7F.-10, No. 335, Ruiguang Rd., Neihu Dist., Taipei City 11492 , Taiwan</li>
-							-->
-              <a href="https://g.page/TuringCerts?share" data-i18n="footer.address">7F.-10, No. 335, Ruiguang Rd., Neihu
-                Dist., Taipei
-                City 11492 , Taiwan</a>
+              <li>7F.-10, No. 335, Ruiguang Rd., Neihu Dist., Taipei City 11492 , Taiwan</li>
+              -->
+              <a href="https://g.page/TuringCerts?share" data-i18n="footer.address">7F.-10, No. 335,
+                Ruiguang Rd., Neihu Dist., Taipei City 11492 , Taiwan</a>
               <a href="mailto: apac@turingchain.tech">apac@turingchain.tech</a>
             </ul>
             <ul class="list-inline-sm icon-sm margin-top-30">
-              <li>
-                <a class="button-circle button-circle-sm button-circle-white-3"
+              <li><a class="button-circle button-circle-sm button-circle-white-3"
                   href="https://www.facebook.com/turingcerts"><i class="fab fa-facebook-f"></i></a>
               </li>
-              <li>
-                <a class="button-circle button-circle-sm button-circle-white-3"
+              <li><a class="button-circle button-circle-sm button-circle-white-3"
                   href="https://www.linkedin.com/company/turing-chain-limited/"><i class="fab fa-linkedin-in"></i></a>
               </li>
               <!--
-								<li><a class="button-circle button-circle-sm button-circle-white-3" href="https://www.crunchbase.com/organization/turing-chain"><i class="fab fa-linkedin-in"></i></a></li>
-							-->
+                <li><a class="button-circle button-circle-sm button-circle-white-3" href="https://www.crunchbase.com/organization/turing-chain"><i class="fab fa-linkedin-in"></i></a></li>
+              -->
             </ul>
           </div>
-        </div>
-        <!-- end row -->
-      </div>
-      <!-- end container -->
+        </div><!-- end row -->
+      </div><!-- end container -->
     </div>
   </footer>
   <!-- End footer section -->
