@@ -1072,7 +1072,7 @@
       "enterprise-p1":"<i class=\"fa fa-comment-dots  text-gold\"></i>&nbsp;お考えのご使用予定についてお聞かせください。",
       "enterprise-p2":"<i class=\"fa fa-plus text-gold\"></i>&nbsp;API接続",
       "enterprise-p3":"<i class=\"fa fa-plus text-gold\"></i>&nbsp;カスタマイズされた証明書の背景デザイン",
-      "only-use-in-tw": "この特典は台湾のみでご利用いただけます。 </br> その他のニーズがある場合は、bd@turingchain.tech まで直接ご連絡ください。"
+      "only-use-in-tw": ""
     },
     "faq": {
       "title": "よくある問題",
