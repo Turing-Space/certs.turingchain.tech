@@ -347,7 +347,8 @@
       "premium-p6":"<i class=\"fa fa-check text-gold\"></i>&nbsp;Customizable QR code module",
       "enterprise-p1":"<i class=\"fa fa-comment-dots text-gold\"></i>&nbsp;Tell us about your custom plan",
       "enterprise-p2":"<i class=\"fa fa-plus text-gold\"></i>&nbsp;API connection",
-      "enterprise-p3":"<i class=\"fa fa-plus text-gold\"></i>&nbsp;Customized certificate background design"
+      "enterprise-p3":"<i class=\"fa fa-plus text-gold\"></i>&nbsp;Customized certificate background design",
+      "only-use-in-tw": "This quote is for using in Taiwan. </br> If you have any other requirements, please feel free to contact us at bd@turingchain.tech."
     },
     "faq": {
       "title": "Frequently Asked Questions",
@@ -708,7 +709,8 @@
       "premium-p6":"<i class=\"fa fa-check text-gold\"></i>&nbsp;QR code 自定義模組",
       "enterprise-p1":"<i class=\"fa fa-comment-dots text-gold\"></i>&nbsp;請提出你的客製方案",
       "enterprise-p2":"<i class=\"fa fa-plus text-gold\"></i>&nbsp;API 系統串接",
-      "enterprise-p3":"<i class=\"fa fa-plus text-gold\"></i>&nbsp;客製化底圖設計"
+      "enterprise-p3":"<i class=\"fa fa-plus text-gold\"></i>&nbsp;客製化底圖設計",
+      "only-use-in-tw": "此報價僅供台灣地區使用。</br> 如您有其他需求，歡迎直接與我們聯繫 bd@turingchain.tech"
     },
     "faq": {
       "title": "常見問題",
@@ -1069,7 +1071,8 @@
       "premium-p6":"<i class=\"fa fa-check text-gold\"></i>&nbsp;QRコードカスタマイズ機能",
       "enterprise-p1":"<i class=\"fa fa-comment-dots  text-gold\"></i>&nbsp;お考えのご使用予定についてお聞かせください。",
       "enterprise-p2":"<i class=\"fa fa-plus text-gold\"></i>&nbsp;API接続",
-      "enterprise-p3":"<i class=\"fa fa-plus text-gold\"></i>&nbsp;カスタマイズされた証明書の背景デザイン"
+      "enterprise-p3":"<i class=\"fa fa-plus text-gold\"></i>&nbsp;カスタマイズされた証明書の背景デザイン",
+      "only-use-in-tw": "この特典は台湾のみでご利用いただけます。 </br> その他のニーズがある場合は、bd@turingchain.tech まで直接ご連絡ください。"
     },
     "faq": {
       "title": "よくある問題",
