@@ -10,7 +10,8 @@
       "contact-us": "Contact Us",
       "sign-up": "Sign Up As Issuer",
       "pricing": "Pricing",
-      "medium":"Medium"      
+      "medium":"Medium",
+      "blog": "Blog"
     },
     "intro": {
       "slogan": "Global Digital Certificate Management Platform",
@@ -373,7 +374,8 @@
       "contact-us": "聯絡我們",
       "sign-up": "申請成為發證者",
       "pricing": "價格方案",
-      "medium":"Medium"
+      "medium":"Medium",
+      "blog": "部落格"
     },
     "intro": {
       "slogan": "無國界數位憑證管理平台",
@@ -735,7 +737,8 @@
       "contact-us": "お問合せ",
       "sign-up": "発行者新規登録",
       "pricing": "利用料金",
-      "medium":"Medium"
+      "medium":"Medium",
+      "blog": "ブログ"
     },
     "intro": {
       "slogan": "ボーダーレスな電子証明書管理プラットフォーム",
