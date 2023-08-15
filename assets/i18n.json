@@ -178,6 +178,7 @@
       "subdescription": "",
       "security-policy": "Information Security Policy",
       "privacy-policy": "Privacy Policy",
+      "terms-policy": "Terms",
       "address": "7F.-10, No. 335, Ruiguang Rd., Neihu Dist., Taipei City 11492 , Taiwan"
     },
     "aboutUs": {
@@ -542,6 +543,7 @@
       "subdescription": "",
       "security-policy": "資訊安全政策",
       "privacy-policy": "隱私權政策",
+      "terms-policy": "使用條例",
       "address": "台灣台北市內湖區瑞光路335號7樓之10<br>"
     },
     "aboutUs": {
@@ -905,6 +907,7 @@
       "subdescription": "チューリングサーツ",
       "security-policy": "セキュリティーポリシー",
       "privacy-policy": "プライバシーポリシー",
+      "terms-policy": "利用規約",
       "address": "〒150-0002 東京都渋谷区渋谷2-10-15<br>エキスパートオフィス渋谷<br>"
     },
     "aboutUs": {
