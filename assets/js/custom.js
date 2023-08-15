@@ -10,10 +10,10 @@
     var option = select.options[select.selectedIndex];
     if (option.value === 'zh-TW') {
       document.getElementById('loginUrl').href = "https://global.turingcerts.com/zh-TW/login";
-      document.getElementById('issuerApply').href = "https://global.turingcerts.com/zh-TW/login?role=cc-apply";
+      document.getElementById('issuerApply').href = "https://global.turingcerts.com/zh-TW/login?role=cc&method=register";
     } else {
       document.getElementById('loginUrl').href = "https://global.turingcerts.com/en/login";
-      document.getElementById('issuerApply').href = "https://global.turingcerts.com/en/login?role=cc-apply";
+      document.getElementById('issuerApply').href = "https://global.turingcerts.com/en/login?role=cc&method=register";
     }
   };
   
