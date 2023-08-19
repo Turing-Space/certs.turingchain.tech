@@ -17,7 +17,8 @@
     "intro": {
       "slogan": "Global Digital Certificate Management Platform",
       "slogan-description": "Zero Fraud｜Zero Paper｜Sustainable Society",
-      "login": "Login"
+      "login": "Login",
+      "contact-us": "Schedule a demo"
     },
     "benefits": {
       "title": "Benefits",
@@ -383,7 +384,8 @@
     "intro": {
       "slogan": "無國界數位憑證管理平台",
       "slogan-description": "零造假｜零紙張｜永續社會",
-      "login": "登入"
+      "login": "登入",
+      "contact-us": "立即洽詢"
     },
     "benefits": {
       "title": "好處",
@@ -739,7 +741,7 @@
       "news": "ニュース",
       "resoure-center": "リソースセンター",
       "contact-us": "お問合せ",
-      "sign-up": "発行者新規登録",
+      "sign-up": "今すぐ問い合わせる",
       "login": "ログイン",
       "pricing": "利用料金",
       "medium":"Medium",
@@ -748,7 +750,7 @@
     "intro": {
       "slogan": "ボーダーレスな電子証明書管理プラットフォーム",
       "slogan-description": "ゼロ偽造｜ゼロペーパー｜持続可能な社会へ",
-      "login": "ログイン"
+      "contact-us": "今すぐ問い合わせる"
     },
     "benefits": {
       "title": "メリット",
