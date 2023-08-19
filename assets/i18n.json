@@ -8,7 +8,8 @@
       "news": "News",
       "resoure-center": "Resource",
       "contact-us": "Contact Us",
-      "sign-up": "Sign Up As Issuer",
+      "sign-up": "Schedule a demo",
+      "login": "Login",
       "pricing": "Pricing",
       "medium":"Medium",
       "blog": "Blog"
@@ -373,7 +374,8 @@
       "news": "新聞",
       "resoure-center": "資源中心",
       "contact-us": "聯絡我們",
-      "sign-up": "申請成為發證者",
+      "sign-up": "立即洽詢",
+      "login": "登入",
       "pricing": "價格方案",
       "medium":"Medium",
       "blog": "部落格"
@@ -738,6 +740,7 @@
       "resoure-center": "リソースセンター",
       "contact-us": "お問合せ",
       "sign-up": "発行者新規登録",
+      "login": "ログイン",
       "pricing": "利用料金",
       "medium":"Medium",
       "blog": "ブログ"
