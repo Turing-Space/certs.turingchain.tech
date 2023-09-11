@@ -177,6 +177,7 @@
     "iso27701-description": "Certified as ISO/IEC 27701 compliant",
     "gdpr-description": "Compliant with the EU GDPR privacy regulations",
     "footer": {
+      "company": "",
       "subdescription": "",
       "security-policy": "Information Security Policy",
       "privacy-policy": "Privacy Policy",
@@ -544,6 +545,7 @@
     "iso27701-description": "通過 ISO/IEC 27701 驗證",
     "gdpr-description": "符合 GDPR 承諾與規範",
     "footer": {
+      "company": "",
       "subdescription": "",
       "security-policy": "資訊安全政策",
       "privacy-policy": "隱私權政策",
@@ -909,6 +911,7 @@
     "iso27701-description": "ISO/IEC 27701 確認取得",
     "gdpr-description": "EU GDPRプライバシー協定に準拠し",
     "footer": {
+      "company": "Turing  Japan 株式会社",
       "subdescription": "チューリングサーツ",
       "security-policy": "セキュリティーポリシー",
       "privacy-policy": "プライバシーポリシー",
