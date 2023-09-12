@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="台灣急診醫學會採用圖靈證書，以區塊鏈革新數位憑證管理，安全防偽、即時驗證，再創數位醫療里程碑。"
+    />
+    <meta
+      property="og:image"
+      content="https://certs.turingchain.tech/assets/images/blog/sem-digitalization/cover.jpeg"
+    />
+    <title>
+      智慧醫療：台灣急診醫學會借助區塊鏈技術，推動數位化轉型 | Turing Certs |
+      圖靈證書
+    </title>
+    <link rel="canonical" href="https://certs.turingchain.tech/" />
+    <!-- Favicon -->
+    <link href="/assets/images/Logo.svg" rel="shortcut icon" />
+    <!-- CSS -->
+    <link href="/assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="/assets/plugins/owl-carousel/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets/plugins/owl-carousel/owl.theme.default.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets/plugins/magnific-popup/magnific-popup.min.css"
+      rel="stylesheet"
+    />
+    <link href="/assets/plugins/sal/sal.min.css" rel="stylesheet" />
+    <link href="/assets/css/theme.css" rel="stylesheet" />
+    <!-- Fonts/Icons -->
+    <link href="/assets/plugins/font-awesome/css/all.css" rel="stylesheet" />
+    <link
+      href="/assets/plugins/themify/themify-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets/plugins/simple-line-icons/css/simple-line-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-2M60DR7KSW"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-2M60DR7KSW");
+    </script>
+    <script type="module" src="/assets/js/setup-i18n.js"></script>
+  </head>
+
+  <body data-preloader="1">
+    <!-- Header -->
+    <div class="header right dark">
+      <div class="container">
+        <!-- Logo -->
+        <div class="header-logo">
+          <a href="/"
+            ><img
+              class="logo-light"
+              src="/assets/images/Logo-640x160-w.svg"
+              alt=""
+          /></a>
+          <!-- 
+        <img class="logo-dark" src="assets/images/your-logo-dark.png" alt="">
+        <img class="logo-light" src="assets/images/your-logo-light.png" alt=""> 
+        --></div>
+        <!-- Menu -->
+        <div class="header-menu">
+          <ul class="nav">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="/about-us.html"
+                data-i18n="header.about-us"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="/pricing.html"
+                data-i18n="header.pricing"
+                >Pricing</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-i18n="header.resoure-center">Resource</a>
+              <ul class="nav-dropdown">
+                <li class="nav-dropdown-item">
+                  <a
+                    class="nav-dropdown-link"
+                    href="/news.html"
+                    data-i18n="header.news"
+                    >News</a
+                  >
+                </li>
+                <li class="nav-dropdown-item">
+                  <a
+                    class="nav-dropdown-link"
+                    href="/blog"
+                    data-i18n="header.blog"
+                    >Blog
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                target="_blank"
+                class="button button-sm button-rounded contact-us-button align-middle"
+                href="https://global.turingcerts.com/login"
+                data-i18n="header.login"
+                >Login</a
+              >
+            </li>
+            <div class="header-menu-extra contact-us-item">
+              <a
+                target="_blank"
+                class="button button-sm button-rounded contact-us-button align-middle"
+                href="https://global.turingcerts.com/login?role=cc&method=register"
+                style="
+                  background-image: linear-gradient(
+                    to right,
+                    #ce893a,
+                    #f3c77c,
+                    #ffd792,
+                    #be7f36
+                  );
+                  color: white;
+                  background-size: 300% 100%;
+                  border-color: transparent;
+                "
+                data-i18n="header.sign-up"
+                id="issuerApply"
+                >Scheduled a demo</a
+              >
+            </div>
+            <li class="nav-item">
+              <i class="fa fa-globe"></i>
+              <select
+                class="language-select"
+                style="border: none; background: transparent"
+                id="language-selector"
+              >
+                <option value="en">English</option>
+                <option value="zh-TW">繁體中文</option>
+                <option value="jp">日本語</option>
+              </select>
+            </li>
+            <div class="header-menu-extra media-item">
+              <ul class="list-inline">
+                <li>
+                  <a
+                    class="media-button"
+                    href="https://www.facebook.com/turingcerts"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    class="media-button"
+                    href="https://www.linkedin.com/company/turing-chain-limited/"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+
+        <!-- Menu Toggle -->
+        <button class="header-toggle">
+          <span></span>
+        </button>
+      </div>
+      <!-- end container -->
+    </div>
+    <!-- end Header -->
+
+    <div
+      class="section-xl bg-image parallax"
+      data-bg-src="/assets/images/blog/sem-digitalization/cover.jpeg"
+    >
+      <div class="bg-black-06">
+        <div class="container text-center">
+          <h1 class="font-weight-light">
+            智慧醫療：台灣急診醫學會借助區塊鏈技術，推動數位化轉型！
+          </h1>
+          <ul class="list-inline-dash">
+            <li>圖靈新聞室</li>
+            <li><span>Sep. 12, 2023</span></li>
+          </ul>
+        </div>
+        <!-- end container -->
+      </div>
+    </div>
+
+    <!-- Blog Post section -->
+    <div class="section post">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+            <h3>智慧醫療：台灣急診醫學會借助區塊鏈技術，推動數位化轉型！</h3>
+
+            <div class="margin-top-30 margin-bottom-30">
+              <img
+                src="/assets/images/blog/sem-digitalization/cover.jpeg"
+                alt=""
+              />
+              <p style="text-align: center; font-size: 10px">
+                台灣急診醫學會採用圖靈證書，以區塊鏈革新數位憑證管理，安全防偽、即時驗證，再創數位醫療里程碑。
+                <br />（圖片提供：台灣急診醫學會）
+              </p>
+            </div>
+
+            <p>
+              今年六月，台灣急診醫學會與美商新創圖靈鏈（Turing
+              Chain）攜手合作，利用「圖靈證書（Turing
+              Certs）」區塊鏈產品，將醫療專業證書及訓練證明數位化，進一步強化資訊安全，實現數位憑證管理、可追溯的驗證過程。這股數位潮流將重新塑造台灣醫療領域，引領醫療界邁向更智慧、高效的未來。
+            </p>
+
+            <div class="margin-top-30">
+              <p>
+                自 1994
+                年創立以來，台灣急診醫學會一直在災難救援、傳染病應變及救護體系建立等領域中，發揮領導作用，無論是九二一大地震抑或
+                SARS
+                疫情，學會始終站在第一線，陪伴民眾面對險境。這些經驗不僅培養出上千名急診專業人才，強化台灣在急診醫療方面的實力，並在全球急診醫學界發揮著重要影響。
+              </p>
+            </div>
+
+            <div class="margin-top-30">
+              <p>
+                本次學會使用的圖靈證書，運用區塊鏈技術，解決全球各產業的信任驗證問題。將數位憑證上鏈，如不動產契約、畢業證書及農產品產銷履歷，同時做加密簽章，實現
+                15 秒內的證書驗證，徹底消除了偽造和高成本驗證的障礙。
+              </p>
+            </div>
+
+            <div class="margin-top-30">
+              <p>
+                除了管理的便捷性，圖靈證書還提供第三方「真偽查驗」的功能。在醫療場合，專業人員能迅速出示證書，確認其持有者身分、發行日期等資訊，快速一鍵驗證。而醫療領域最重視的隱私問題，也是台灣急診醫學會在選用圖靈證書時的重要考量。過去醫療產業過去因資安、個資瓶頸，導致無法順利數位化，但此次區塊鏈的特性，則能為醫療產業打破這道屏障。
+              </p>
+            </div>
+
+            <div class="margin-top-30">
+              <p>
+                目前，台灣急診醫學會將圖靈證書其運用在高級兒童救命術（APLS+PALS）、急診外傷訓練課程（ETTC）、急性中毒救命術（AILS）、基本救命術（BLS）以及高級心臟救命術（ACLS）等課程的學員證書與指導員證書上，降低人工發證及驗證成本，同時加速醫療作業流程。
+              </p>
+            </div>
+
+            <div class="margin-top-30 margin-bottom-60">
+              <p>
+                圖靈證書以高規格歐盟 GDPR 隱私協定合規與 ISO 27001
+                資安標準，維護每筆重要資料。再者，透過區塊鏈的去中心化、透明性與可追溯性等優勢，更是讓資料在操作上更安全無虞，進一步保障文件的真實性。
+              </p>
+            </div>
+
+            <div class="margin-top-30 margin-bottom-30">
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                "
+              >
+                <img
+                  style="width: 49%; border: solid 1px gray;"
+                  src="/assets/images/blog/sem-digitalization/APLS+PALS.jpeg"
+                  alt=""
+                />
+                <img
+                  style="width: 49%; border: solid 1px gray;"
+                  src="/assets/images/blog/sem-digitalization/ETTC.jpeg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="margin-top-20"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                "
+              >
+                <img
+                  style="width: 49%; border: solid 1px gray;"
+                  src="/assets/images/blog/sem-digitalization/AILS.jpeg"
+                  alt=""
+                />
+                <img
+                  style="width: 49%; border: solid 1px gray;"
+                  src="/assets/images/blog/sem-digitalization/BLS.jpeg"
+                  alt=""
+                />
+              </div>
+              <p style="text-align: center; font-size: 10px">
+                台灣急診醫學會使用圖靈證書，運用於頒發訓練、授課證明。
+                <br />（圖片提供：台灣急診醫學會）
+              </p>
+            </div>
+
+            <h3>區塊鏈技術在醫療產業中的應用場景</h3>
+            <p>
+              近年來，隨著疫情的爆發，醫療產業數位化的路程備受矚目。在醫療技術不斷進步且需求日益增長的時代，如何運用科技改變傳統模式，提升醫療品質與效率，已成為極具前瞻性的產業趨勢。
+            </p>
+
+            <div class="margin-top-30">
+              <p>
+                在智慧醫療的範疇中，「數據管理」無疑是一環不可或缺的重要組成部分。在醫療領域，每個人的血壓、呼吸、心跳、體溫等生命指標不斷變動，已成為健康管理的不可或缺的關鍵參考。
+              </p>
+            </div>
+
+            <div class="margin-top-30">
+              <p>
+                在這樣容錯率極低的環境中，手術的執行、醫生的決策以及病人的健康狀況，都深深依賴著每筆數據的絕對可靠性。而隨著電子病歷的廣泛應用，透過科技來協助數據管理，更進一步提升了醫療效能的品質與效率。
+              </p>
+            </div>
+
+            <div class="margin-top-30">
+              <p>
+                以前述的數據管理為例，區塊鏈的特性能降低人為錯誤率，同時其不可竄改性保證了數據的真實性。一旦電子病歷上傳，病患即可自行查閱，實時了解自身健康狀況，並即時開始治療。此外，病歷資料經病患授權後，特定機構可以查閱，顯著降低了民眾在醫院、診所和保險公司之間的往返時間與交通成本，實現了雙贏局面。
+              </p>
+            </div>
+            <div class="margin-top-30">
+              <p>
+                本次台灣急診醫學會與圖靈鏈的合作，強調了科技與醫療的緊密結合，旨在提升效能和品質，引領醫療專業邁向更高的峰頂。展望前途，未來，兩者將持續深耕智慧醫療，不斷探索更多科技醫療的應用可能，為全球醫療專業發展創造新機會。
+              </p>
+            </div>
+            <!-- Post Tags / Share -->
+            <div class="row margin-top-50">
+              <!-- <div class="col-6">
+                <h6
+                  class="font-family-tertiary font-small font-weight-normal uppercase"
+                >
+                  日期
+                </h6>
+                <ul class="list-inline-sm">
+                  <li>圖靈新聞室 / Aug. 1, 2023</li>
+                </ul>
+              </div> -->
+              <!-- <div class="col-6 text-right">
+                <h6
+                  class="font-family-tertiary font-small font-weight-normal uppercase"
+                >
+                  Share On
+                </h6>
+                <ul class="list-inline">
+                  <li>
+                    <a
+                      href="https://www.facebook.com/sharer.php?u=https://certs.turingchain.tech/blogPost/post1.html"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/shareArticle?mini=true&url=https://certs.turingchain.tech/blogPost/post1.html"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div> -->
+            </div>
+            <!-- end Post Tags / Share -->
+          </div>
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+    </div>
+    <!-- end Blog Post section -->
+
+    <!-- footer section -->
+    <footer>
+      <div class="section bg-dark">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12 col-md-6">
+              <!--<h2>Turing Chain Ltd.</h2>-->
+              <h2>Turing Certs</h2>
+              <ul class="list-inline-dash margin-top-30">
+                <li>
+                  <a
+                    href="/policies/information-security-policy.html"
+                    data-i18n="footer.security-policy"
+                    >Information Security Policy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/policies/privacy-policy.html"
+                    data-i18n="footer.privacy-policy"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/policies/terms-policy.html"
+                    data-i18n="footer.terms-policy"
+                    >Terms</a
+                  >
+                </li>
+              </ul>
+              <p class="margin-top-10">
+                &copy; 2023 Turing Chain Limited, All Rights Reserved.
+              </p>
+            </div>
+            <div class="col-12 col-md-6 text-md-right">
+              <ul class="list-unstyled">
+                <p data-i18n="footer.company">Turing Space</p>
+                <!--
+								<li>7F.-10, No. 335, Ruiguang Rd., Neihu Dist., Taipei City 11492 , Taiwan</li>
+								-->
+                <a
+                  href="https://g.page/TuringCerts?share"
+                  data-i18n="footer.address"
+                  >7F.-10, No. 335, Ruiguang Rd., Neihu Dist., Taipei
+                  City 11492 , Taiwan</a
+                >
+                <a href="mailto: apac@turingchain.tech"
+                  >apac@turingchain.tech</a
+                >
+              </ul>
+              <ul class="list-inline-sm icon-sm margin-top-30">
+                <li>
+                  <a
+                    class="button-circle button-circle-sm button-circle-white-3"
+                    href="https://www.facebook.com/turingcerts"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    class="button-circle button-circle-sm button-circle-white-3"
+                    href="https://www.linkedin.com/company/turing-chain-limited/"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                </li>
+                <!--
+									<li><a class="button-circle button-circle-sm button-circle-white-3" href="https://www.crunchbase.com/organization/turing-chain"><i class="fab fa-linkedin-in"></i></a></li>
+								-->
+              </ul>
+            </div>
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- end container -->
+      </div>
+    </footer>
+    <!-- End footer section -->
+
+    <!-- Scroll to top button -->
+    <div class="scrolltotop">
+      <a class="button-circle button-circle-sm button-circle-dark" href="#"
+        ><i class="ti-arrow-up"></i
+      ></a>
+    </div>
+    <!-- end Scroll to top button -->
+
+    <!-- ***** JAVASCRIPTS ***** -->
+    <script src="/assets/plugins/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+    <script src="/assets/plugins/plugins.js"></script>
+    <script src="/assets/js/functions.js"></script>
+  </body>
+</html>
